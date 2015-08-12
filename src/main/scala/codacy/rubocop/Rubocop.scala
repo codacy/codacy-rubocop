@@ -31,13 +31,13 @@ object Rubocop extends Tool {
 
         val filesCmd = files.map(_.mkString(",")).getOrElse(path.toAbsolutePath.toString)
 
-        Seq("rubocop", "-d", filesCmd, "-f", "xml", "-o", outputFilePath.toAbsolutePath.toString) ++ configurationCmd
+        Seq("rubocop", "-d", filesCmd, "-f", "json", "-o", outputFilePath.toAbsolutePath.toString) ++ configurationCmd
     }
   }
 
   private[this] lazy val discardingLogger = ProcessLogger((_: String) => ())
 
-  private[this] lazy val resultFilePath = Paths.get(Properties.tmpDir, "rubocop-result.xml")
+  private[this] lazy val resultFilePath = Paths.get(Properties.tmpDir, "rubocop-result.json")
 
   private[this] def xmlLocation(ruleName: String, ruleSet: String): Option[String] = {
     RuleType.get(ruleSet).map { ruleString => 
@@ -84,6 +84,8 @@ object Rubocop extends Tool {
       pattern <- conf
       patternConfiguration <- generateRule(pattern.patternId, pattern.parameters)
     } yield patternConfiguration
+
+    val xmlConfiguration = 
 
     <ruleset name="All Java Rules"
              xmlns="http://pmd.sourceforge.net/ruleset/2.0.0"
@@ -140,6 +142,8 @@ object Rubocop extends Tool {
       "Rails/Validation" -> "rulesets_ruby_rails_validation.xml",
       "Style" -> "rulesets_ruby_style.xml"
       )
+
+    def get(value: String): Option[String] = values.get(value)
   }
 
 }
