@@ -4,19 +4,41 @@ import java.nio.charset.StandardCharsets
 import java.nio.file.{Files, Path, Paths, StandardOpenOption}
 
 import codacy.dockerApi._
-import play.api.libs.json.{JsString, Json}
+import play.api.libs.json.{JsValue, JsString, Json}
 
 import scala.sys.process._
 import scala.util.{Properties, Success, Try}
 import scala.xml.{Elem, XML}
+import java.io.File
 
 object Rubocop extends Tool {
 
   override def apply(path: Path, conf: Option[Seq[PatternDef]], files: Option[Set[Path]])(implicit spec: Spec): Try[Iterable[Result]] = {
     getCommandFor(path, conf, files, spec, resultFilePath).flatMap { case cmd =>
       cmd.!(discardingLogger)
-      Try(XML.loadFile(resultFilePath.toFile)).map(outputParsed)
+      val resultFromTool = getFileLines(resultFilePath.toFile)
+      Try(parseResult(resultFromTool))
     }
+  }
+
+  private[this] def getFileLines(filename: File): String = {
+    scala.io.Source.fromFile(filename).getLines().mkString
+  }
+
+  private[this] def getRubocopResult(jsonParsed: JsValue): Option[RubocopResult] = {
+    if(jsonParsed.validate[RubocopResult].isError) {
+      println("Could not validate json")
+      None
+    } else {
+      jsonParsed.as[RubocopResult]
+    }
+  }
+
+  private[this] def parseResult(resultFromTool: String): Iterable[Result] = {
+    val jsonParsed = Json.parse(resultFromTool)
+
+    val rubocopResult = getRubocopResult(jsonParsed).get //remove the get
+
   }
 
   private[this] lazy val ruleSetsDefault = Seq(
@@ -47,7 +69,7 @@ object Rubocop extends Tool {
   }
 
   private[this] lazy val outputParsed(outputJson: Elem)(implicit spec: Spec) = {
-    
+    val jsonText = Json.parse()
   }
 
   private[this] def patternIdByRuleNameAndRuleSet (ruleName: String, ruleSet: String)(implicit spec: Spec): Option[PatternId] = {
