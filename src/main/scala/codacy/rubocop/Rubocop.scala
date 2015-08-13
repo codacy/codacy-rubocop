@@ -8,8 +8,43 @@ import play.api.libs.json._
 
 import scala.sys.process._
 import scala.util.{Failure, Properties, Success, Try}
-import scala.xml.{Elem, XML}
 import java.io.File
+
+final class RuboResultColumn  (val value:Int    ) extends AnyVal{ override def toString = value.toString }
+final class RuboResultLength  (val value:Int    ) extends AnyVal{ override def toString = value.toString }
+final class ParameterName     (val value:String ) extends AnyVal{ override def toString = value.toString }
+final class Version           (val value:String ) extends AnyVal{ override def toString = value.toString }
+final class RubyEngine        (val value:String ) extends AnyVal{ override def toString = value.toString }
+final class RubyVersion       (val value:String ) extends AnyVal{ override def toString = value.toString }
+final class RubyPatchLevel    (val value:String ) extends AnyVal{ override def toString = value.toString }
+final class RubyPlatform      (val value:String ) extends AnyVal{ override def toString = value.toString }
+final class Severity          (val value:String ) extends AnyVal{ override def toString = value.toString }
+final class Corrected         (val value:Boolean) extends AnyVal{ override def toString = value.toString }
+final class OffenseCount      (val value:Int    ) extends AnyVal{ override def toString = value.toString }
+final class TrgtFileCount     (val value:Int    ) extends AnyVal{ override def toString = value.toString }
+final class InspFileCount     (val value:Int    ) extends AnyVal{ override def toString = value.toString }
+
+object ParameterName    extends Formats[ParameterName   , String ]( new ParameterName(_)   )
+object RuboResultColumn extends Formats[RuboResultColumn, Int    ]( new RuboResultColumn(_))
+object RuboResultLength extends Formats[RuboResultLength, Int    ]( new RuboResultLength(_))
+object Version          extends Formats[Version         , String ]( new Version(_)         )
+object RubyEngine       extends Formats[RubyEngine      , String ]( new RubyEngine(_)      )
+object RubyVersion      extends Formats[RubyVersion     , String ]( new RubyVersion(_)     )
+object RubyPatchLevel   extends Formats[RubyPatchLevel  , String ]( new RubyPatchLevel(_)  )
+object RubyPlatform     extends Formats[RubyPlatform    , String ]( new RubyPlatform(_)    )
+object Severity         extends Formats[Severity        , String ]( new Severity(_)        )
+object Corrected        extends Formats[Corrected       , Boolean]( new Corrected(_)       )
+object OffenseCount     extends Formats[OffenseCount    , Int    ]( new OffenseCount(_)    )
+object TrgtFileCount    extends Formats[TrgtFileCount   , Int    ]( new TrgtFileCount(_)   )
+object InspFileCount    extends Formats[InspFileCount   , Int    ]( new InspFileCount(_)   )
+
+
+case class RubocopLocation(line:ResultLine, column:RuboResultColumn, length:RuboResultLength)
+case class RubocopMetadata(rubocopVersion:Version, rubyEngine:RubyEngine, rubyVersion:RubyVersion, rubyPatchLevel:RubyPatchLevel, rubyPlatform:RubyPlatform)
+case class RubocopOffenses(severity:Severity, message:ResultMessage, copName:PatternId, corrected:Corrected, location:RubocopLocation)
+case class RubocopFiles(path:SourcePath, offenses:Option[Seq[RubocopOffenses]])
+case class RubocopSummary(offenseCount:OffenseCount, targetFileCount:TrgtFileCount, inspectedFileCount:InspFileCount)
+case class RubocopResult(metadata:RubocopMetadata, files:Option[Seq[RubocopFiles]], summary:RubocopSummary)
 
 object Rubocop extends Tool {
 
@@ -26,17 +61,12 @@ object Rubocop extends Tool {
   }
 
   private[this] def getRubocopResult(jsonParsed: JsValue): Option[RubocopResult] = {
-    if(jsonParsed.validate[RubocopResult].isError) {
-      println("Could not validate json")
-      None
-    } else {
-      jsonParsed.as[RubocopResult]
-    }
+    jsonParsed.asOpt[RubocopResult]
   }
 
   private[this] def parseResult(resultFromTool: String): Try[Iterable[Result]] = {
     Try(Json.parse(resultFromTool)).flatMap{ case json =>
-      json.validate[RubocopResult] match{
+      json.validate[RubocopResult] match {
         case JsSuccess(rubocopResult,_) =>
           Success(
             rubocopResult.files.getOrElse(Seq.empty).flatMap( ruboFileToResult )
@@ -50,9 +80,7 @@ object Rubocop extends Tool {
   private[this] def ruboFileToResult(rubocopResult:RubocopFiles): Iterable[Result] = {
     //transform the result into a list of results
       rubocopResult.offenses.getOrElse(Seq.empty).map{ case offense =>
-        val result:Result = ??? //turn offense into a result
-
-        result
+        Result(rubocopResult.path, offense.message, offense.copName, offense.location.line)
       }
   }
 
@@ -76,28 +104,6 @@ object Rubocop extends Tool {
   private[this] lazy val discardingLogger = ProcessLogger((_: String) => ())
 
   private[this] lazy val resultFilePath = Paths.get(Properties.tmpDir, "rubocop-result.json")
-
-  private[this] def xmlLocation(ruleName: String, ruleSet: String): Option[String] = {
-    RuleType.get(ruleSet).map { ruleString => 
-      s"$ruleString$ruleName" 
-    }
-  }
-
-  private[this] lazy val outputParsed(outputJson: Elem)(implicit spec: Spec) = {
-    val jsonText = Json.parse()
-  }
-
-  private[this] def patternIdByRuleNameAndRuleSet (ruleName: String, ruleSet: String)(implicit spec: Spec): Option[PatternId] = {
-    spec.patterns.collectFirst { case pattern if xmlLocation(ruleName, ruleSet).contains(pattern.patternId.value) =>
-      pattern.patternId 
-    }
-  }
-  
-  private[this] def patternIdByRuleNameAndRuleSet(ruleName: String, ruleSet: String)(implicit spec: Spec): Option[PatternId] = {
-    spec.patterns.collectFirst {case pattern if xmlLocation(ruleName, ruleSet).contains(pattern.patternId.value) =>
-      pattern.patternId 
-    }
-  }
 
   private[this] def getConfigFile(conf: Seq[PatternDef]): Try[Path] = {
     val rules = for {
@@ -137,7 +143,7 @@ object Rubocop extends Tool {
     fileForConfig(ymlConfiguration)
   }
 
-  private[this] def fileForConfig(config: String) = tmpFile(config.toString())
+  private[this] def fileForConfig(config: String) = tmpFile(config.toString)
 
   private[this] def tmpFile(content: String, prefix: String = "ruleset", suffix: String = ".xml"): Try[Path] = {
     Try(Files.write(
