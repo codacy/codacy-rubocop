@@ -1,7 +1,7 @@
 package codacy.rubocop
 
-import java.nio.charset.StandartCharsets
-import java.nio.file.{Files, Path, Paths, StandartOpenOption}
+import java.nio.charset.StandardCharsets
+import java.nio.file.{Files, Path, Paths, StandardOpenOption}
 
 import codacy.dockerApi._
 import play.api.libs.json.{JsString, Json}
@@ -11,9 +11,10 @@ import scala.util.{Properties, Success, Try}
 import scala.xml.{Elem, XML}
 
 object Rubocop extends Tool {
+
   override def apply(path: Path, conf: Option[Seq[PatternDef]], files: Option[Set[Path]])(implicit spec: Spec): Try[Iterable[Result]] = {
     getCommandFor(path, conf, files, spec, resultFilePath).flatMap { case cmd =>
-      cmd.lineStream_!(discardingLogger) 
+      cmd.!(discardingLogger)
       Try(XML.loadFile(resultFilePath.toFile)).map(outputParsed)
     }
   }
@@ -45,6 +46,10 @@ object Rubocop extends Tool {
     }
   }
 
+  private[this] lazy val outputParsed(outputJson: Elem)(implicit spec: Spec) = {
+    
+  }
+
   private[this] def patternIdByRuleNameAndRuleSet (ruleName: String, ruleSet: String)(implicit spec: Spec): Option[PatternId] = {
     spec.patterns.collectFirst { case pattern if xmlLocation(ruleName, ruleSet).contains(pattern.patternId.value) =>
       pattern.patternId 
@@ -52,30 +57,8 @@ object Rubocop extends Tool {
   }
   
   private[this] def patternIdByRuleNameAndRuleSet(ruleName: String, ruleSet: String)(implicit spec: Spec): Option[PatternId] = {
-    spec.patterns.collectFirst { case pattern if xmlLocation(ruleName, ruleSet).contains(pattern.patternId.value) =>
+    spec.patterns.collectFirst {case pattern if xmlLocation(ruleName, ruleSet).contains(pattern.patternId.value) =>
       pattern.patternId 
-    }
-  }
-
-  private[this] def outputParsed(outputXml: Elem)(implicit spec: Spec) = {
-    (outputXml \ "file").flatMap { case file =>
-      lazy val fileName = SourcePath(file \@ "name")  
-
-      (file \ "violation").flatMap { case violation =>
-        patternIdByRuleNameAndRuleSet(
-          ruleName = violation \@ "rule",
-          ruleSet = violation \@ "ruleset"
-      ).flatMap { case patternId =>
-        Try(
-          Result(
-            filename = fileName,
-            message = ResultMessage(violation.text.trim),
-            patternId = patternId,
-            line = ResultLine((violation \@ "beginline").toInt)
-            ) 
-          ).toOption
-        }
-      }
     }
   }
 
@@ -85,24 +68,44 @@ object Rubocop extends Tool {
       patternConfiguration <- generateRule(pattern.patternId, pattern.parameters)
     } yield patternConfiguration
 
-    val xmlConfiguration = 
+    val ymlConfiguration =
+      s""""
+         |AllCops:
+         |  Include:
+         |  - "**/*.gemspec"
+         |  - "**/*.podspec"
+         |  - "**/*.jbuilder"
+         |  - "**/*.rake"
+         |  - "**/*.opal"
+         |  - "**/Gemfile"
+         |  - "**/Rakefile"
+         |  - "**/Capfile"
+         |  - "**/Guardfile"
+         |  - "**/Podfile"
+         |  - "**/Thorfile"
+         |  - "**/Vagrantfile"
+         |  - "**/Berksfile"
+         |  - "**/Cheffile"
+         |  - "**/Vagabondfile"
+         |  Exclude:
+         |  - "vendor/**/*"
+         |  - "db/schema.rb"
+         |  RunRailsCops: false
+         |  DisplayCopNames: false
+         |  StyleGuideCopsOnly: false
+         |  ${rules}
+      """
 
-    <ruleset name="All Java Rules"
-             xmlns="http://pmd.sourceforge.net/ruleset/2.0.0"
-             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-             xsi:schemaLocation="http://pmd.sourceforge.net/ruleset/2.0.0 http://pmd.sourceforge.net/ruleset_2_0_0.xsd">
-            {rules}
-    </ruleset>
 
-    fileForConfig(xmlConfiguration)
+    fileForConfig(ymlConfiguration)
   }
 
-  private[this] def fileForConfig(config: Elem) = tmpFile(config.toString())
+  private[this] def fileForConfig(config: String) = tmpFile(config.toString())
 
   private[this] def tmpFile(content: String, prefix: String = "ruleset", suffix: String = ".xml"): Try[Path] = {
     Try(Files.write(
       Files.createTempFile(prefix, suffix),
-      content.getButes(StandartCharsets.UTF_8),
+      content.getBytes(StandardCharsets.UTF_8),
       StandardOpenOption.CREATE
       ))
   }
@@ -111,29 +114,29 @@ object Rubocop extends Tool {
     patternId.value.replace('_', '/')
   }
 
-  private[this] def generateRule(patternId: PatternId, parameters: Option[Set[ParameterDef]]): Elem = {
-    val xmlProperties = parameters.map(_.map(generateParameter)).getOrElse(Seq.empty)
+  private[this] def generateRule(patternId: PatternId, parameters: Option[Set[ParameterDef]]): String = {
+    val ymlProperties = parameters.map(_.map(generateParameter)).getOrElse(Seq.empty)
 
-    <rule ref={getPatternNameById(patternId)}>
-      <properties>
-        {xmlProperties}
-      </properties>
-    </rule>
+    s"""
+      |${getPatternNameById(patternId)}
+      |  ${ymlProperties}
+    """
   }
 
-  private[this] def generateParameter(parameter: ParameterDef): Elem = {
-    val parameterValue = parameter.value.match {
+  private[this] def generateParameter(parameter: ParameterDef): String = {
+    val parameterValue = parameter.value match {
       case JsString(value) => value
       case other => Json.stringify(other)
     }
+    s"${parameter.name}: ${parameterValue}"
   }
 
   private object RuleType {
     val values = Map(
-      "Lint" -> "rulesets_ruby_linter.xml",
-      "Metrics" -> "rulesets_ruby_metrics.xml",
-      "Metrics/LineLength" -> "rulesets_ruby_metrics_linelength.xml",
-      "Performance" -> "rulesets_ruby_performance.xml",
+      "Lint" -> "rulesets_ruby_linter.json",
+      "Metrics" -> "rulesets_ruby_metrics.json",
+      "Metrics/LineLength" -> "rulesets_ruby_metrics_linelength.json",
+      "Performance" -> "rulesets_ruby_performance.json",
       "Rails" -> "rulesets_ruby_rails.xml",
       "Rails/ActionFilter" -> "rulesets_ruby_rails_actionfilter.xml",
       "Rails/Delegate" -> "rulesets_ruby_rails_delegate.xml",

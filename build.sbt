@@ -4,7 +4,7 @@ resolvers += "Tyopesafe Repo" at "http://repo.typesafe.com/typesafe/releases/"
 
 name := """codacy-engine-rubocop"""
 
-varsion := "1.0-SNAPSHOT"
+version := "1.0-SNAPSHOT"
 
 val languageVersion = "2.11.7"
 
@@ -15,7 +15,7 @@ libraryDependencies ++= Seq(
   "org.scala-lang.modules" %% "scala-xml" % "1.0.4" withSources()
 )
 
-enablePlugins(RubyAppPackaging)
+enablePlugins(JavaAppPackaging)
 
 enablePlugins(DockerPlugin)
 
@@ -23,7 +23,10 @@ version in Docker := "1.0"
 
 val installAll =
   s"""apk update && apk add bash curl &&
+      |apk add --update ruby ruby-bundler &&
+      |rm /var/cache/apk/* &&
       |gem install rubocop""".stripMargin.replaceAll(System.lineSeparator(), " ")
+
 
 mappings in Universal <++= (resourceDirectory in Compile) map { (resourceDir: File) =>
   val src = resourceDir / "docs"
@@ -37,7 +40,7 @@ mappings in Universal <++= (resourceDirectory in Compile) map { (resourceDir: Fi
 
 daemonUser in Docker := "docker"
 
-dockerBaseImage := "frolvlad/alpine-ruby"
+dockerBaseImage := "frolvlad/alpine-oraclejdk8"
 
 dockerCommands := dockerCommands.value.take(3) ++
   List(Cmd("RUN", installAll), Cmd("RUN", "mv /opt/docker/docs /docs")) ++
