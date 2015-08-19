@@ -28,5 +28,21 @@
     "title": "Block Alignment",
     "description": "Checks whether the end keyword is properly aligned with for and do blocks",
     "timeToFix": 5
+  },
+  {
+    "patternId": "Lint_DefEndAlignment",
+    "title": "Def End Alignment",
+    "description": "Checks the alignment of the end keyword",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "AlignWith",
+        "description": "You can whether align with the start of the line or inline with the def keyword"
+      },
+      {
+        "name": "SupportedStyles",
+        "description": "Specifies the styles of you end keyword (inline with def or at the beggining of line)"
+      }
+    ]
   }
 ]
