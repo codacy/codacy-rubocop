@@ -160,11 +160,17 @@ object Rubocop extends Tool {
           pattern => generateParameter(pattern)
         }
     }.getOrElse(Set.empty)
-    s"""
+    val patternConfig = s"""
           |${getPatternNameById(patternId)}:
           |  Enabled: true
           |  ${ymlProperties.mkString(s"${Properties.lineSeparator}  ")}
     """.stripMargin
+
+    if (parameters.nonEmpty) {
+      patternConfig
+    } else {
+      ""
+    }
   }
 
 

@@ -23,22 +23,17 @@
       ]
     },
     {
-      "patternId": "Lint_BlockAlignment",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "Lint_DefEndAlignment",
+      "patternId": "Style_VariableName",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [
         {
-          "name": "AlignWith",
-          "default": "start_of_line"
+          "name": "EnforcedStyle",
+          "default": "snake_case"
         },
         {
           "name": "SupportedStyles",
-          "default": ["start_of_line", "def"]
+          "default": ["snake_case", "camelCase"]
         }
       ]
     }
