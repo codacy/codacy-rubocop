@@ -1,0 +1,46 @@
+{
+  "name": "Rubocop",
+  "patterns": [
+    {
+      "patternId": "Lint_AmbiguousOperator",
+      "level": "Warning",
+      "category": "ErrorProne"
+    },
+    {
+      "patternId": "Lint_AmbiguousRegexpLiteral",
+      "level": "Warning",
+      "category": "ErrorProne"
+    },
+    {
+      "patternId": "Lint_AssignmentInCondition",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "AllowSafeAssignment",
+          "default": true
+        }
+      ]
+    },
+    {
+      "patternId": "Lint_BlockAlignment",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "Lint_DefEndAlignment",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "AlignWith",
+          "default": "start_of_line"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": ["start_of_line", "def"]
+        }
+      ]
+    }
+  ]
+}

@@ -1,6 +1,7 @@
 import com.typesafe.sbt.packager.docker._
+import com.typesafe.sbt.packager.docker.DockerPlugin.autoImport.Docker
 
-resolvers += "Tyopesafe Repo" at "http://repo.typesafe.com/typesafe/releases/"
+resolvers += "Typesafe Repo" at "http://repo.typesafe.com/typesafe/releases/"
 
 name := """codacy-engine-rubocop"""
 
@@ -23,7 +24,7 @@ version in Docker := "1.0"
 
 val installAll =
   s"""apk update && apk add bash curl &&
-      |apk add --update ruby ruby-bundler &&
+      |apk add --update ruby ruby-bundler ruby-dev &&
       |rm /var/cache/apk/* &&
       |gem install rubocop""".stripMargin.replaceAll(System.lineSeparator(), " ")
 

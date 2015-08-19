@@ -1,0 +1,32 @@
+[
+  {
+    "patternId": "Lint_AmbiguousOperator",
+    "title": "Ambiguous Operator",
+    "description": "Checks for ambiguous operators in the first argument of a method invocation without parentheses",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Lint_AmbiguousRegexpLiteral",
+    "title": "Ambiguous Regexp Literal",
+    "description": "Checks for ambiguous regexp literals in thge first argument of a method invocation without parentheses.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Lint_AssignmentInCondition",
+    "title": "Assignment in Condition",
+    "description": "Checks for assignments in the conditions of if/while/until",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "AllowSafeAssignment",
+        "description": "putting parentheses around assignment to indicate that it actually is your intention to assign the value to a variable"
+      }
+    ]
+  },
+  {
+    "patternId": "Lint_BlockAlignment",
+    "title": "Block Alignment",
+    "description": "Checks whether the end keyword is properly aligned with for and do blocks",
+    "timeToFix": 5
+  }
+]
