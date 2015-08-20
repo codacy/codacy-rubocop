@@ -1,5 +1,4 @@
 import com.typesafe.sbt.packager.docker._
-import com.typesafe.sbt.packager.docker.DockerPlugin.autoImport.Docker
 
 resolvers += "Typesafe Repo" at "http://repo.typesafe.com/typesafe/releases/"
 
@@ -27,7 +26,6 @@ val installAll =
      |apk add --update ruby ruby-bundler ruby-dev &&
      |rm /var/cache/apk/* &&
      |gem install rubocop""".stripMargin.replaceAll(System.lineSeparator(), " ")
-
 
 mappings in Universal <++= (resourceDirectory in Compile) map { (resourceDir: File) =>
   val src = resourceDir / "docs"
