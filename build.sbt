@@ -9,7 +9,7 @@ version := "1.0-SNAPSHOT"
 
 val languageVersion = "2.11.7"
 
-scalaVersion  := languageVersion
+scalaVersion := languageVersion
 
 libraryDependencies ++= Seq(
   "com.typesafe.play" %% "play-json" % "2.3.8" withSources(),
@@ -24,9 +24,9 @@ version in Docker := "1.0"
 
 val installAll =
   s"""apk update && apk add bash curl &&
-      |apk add --update ruby ruby-bundler ruby-dev &&
-      |rm /var/cache/apk/* &&
-      |gem install rubocop""".stripMargin.replaceAll(System.lineSeparator(), " ")
+     |apk add --update ruby ruby-bundler ruby-dev &&
+     |rm /var/cache/apk/* &&
+     |gem install rubocop""".stripMargin.replaceAll(System.lineSeparator(), " ")
 
 
 mappings in Universal <++= (resourceDirectory in Compile) map { (resourceDir: File) =>
@@ -43,7 +43,13 @@ daemonUser in Docker := "docker"
 
 dockerBaseImage := "frolvlad/alpine-oraclejdk8"
 
-dockerCommands := dockerCommands.value.take(3) ++
-  List(Cmd("RUN", installAll), Cmd("RUN", "mv /opt/docker/docs /docs")) ++
-  List(Cmd("RUN", "adduser -u 2004 -D docker")) ++
-  dockerCommands.value.drop(3)
+dockerCommands := dockerCommands.value.flatMap {
+  case cmd@Cmd("WORKDIR", _) => List(cmd,
+    Cmd("RUN", installAll)
+  )
+  case cmd@(Cmd("ADD", "opt /opt")) => List(cmd,
+    Cmd("RUN", "mv /opt/docker/docs /docs"),
+    Cmd("RUN", "adduser -u 2004 -D docker")
+  )
+  case other => List(other)
+}
