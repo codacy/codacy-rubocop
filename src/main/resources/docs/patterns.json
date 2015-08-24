@@ -86,6 +86,21 @@
       "patternId": "Lint_LiteralInInterpolation",
       "level": "Info",
       "category": "CodeStyle"
+    },
+    {
+      "patternId": "Lint_Loop",
+      "level": "Warning",
+      "category": "Performance"
+    },
+    {
+      "patternId": "Lint_NestedMethodDefinition",
+      "level": "Warn",
+      "category": "Performance"
+    },
+    {
+      "patternId": "Lint_ParenthesesAsGroupedExpression",
+      "level": "Info",
+      "category": "CodeStyle"
     }
   ]
 }

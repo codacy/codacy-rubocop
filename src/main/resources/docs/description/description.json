@@ -90,5 +90,20 @@
     "patternId": "Lint_LiteralInInterpolation",
     "title": "Literal in Interpolation",
     "description": "Checks if there are any literals inside a interpolation"
+  },
+  {
+    "patternId": "Lint_Loop",
+    "title": "Looping preferences",
+    "description": "Enforces the use of Kernel#Loop instead of begin/end/until||while statements"
+  },
+  {
+    "patternId": "Lint_NestedMethodDefinition",
+    "title": "Nested method definitions",
+    "description": "Checks for nested method definitions"
+  },
+  {
+    "patternId": "Lint_ParenthesesAsGroupedExpression",
+    "title": "ParenthesesAsGroupedExpression",
+    "description": "Checks for a space between the name of a called method and a left parenthesis"
   }
 ]
