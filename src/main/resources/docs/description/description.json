@@ -38,5 +38,17 @@
         "description": "Specifies the supported variable styles"
       }
     ]
+  },
+  {
+    "patternId": "Lint_ConditionPosition",
+    "title": "Condition Position",
+    "description": "Checks for conditions that are not on the same line as if/while/until",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Lint_DuplicateMethods",
+    "title": "Duplicate Methods",
+    "description": "Checks for duplicate methods in classes and modules",
+    "timeToFix": 10
   }
 ]

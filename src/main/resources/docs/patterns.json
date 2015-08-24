@@ -36,6 +36,16 @@
           "default": ["snake_case", "camelCase"]
         }
       ]
+    },
+    {
+      "patternId": "Lint_ConditionPosition",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "Lint_DuplicateMethods",
+      "level": "Err",
+      "category": "ErrorProne"
     }
   ]
 }
