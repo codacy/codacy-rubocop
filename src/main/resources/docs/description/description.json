@@ -103,7 +103,17 @@
   },
   {
     "patternId": "Lint_ParenthesesAsGroupedExpression",
-    "title": "ParenthesesAsGroupedExpression",
+    "title": "Parentheses As Grouped Expression",
     "description": "Checks for a space between the name of a called method and a left parenthesis"
+  },
+  {
+    "patternId": "Lint_RequireParentheses",
+    "title": "Require Parentheses",
+    "description": "Checks for expressions where there is a call to a predicate method with at least one argument"
+  },
+  {
+    "patternId": "Lint_RescueException",
+    "title": "Rescue Parentheses",
+    "description": "Checks for calls to Exception when using rescue"
   }
 ]

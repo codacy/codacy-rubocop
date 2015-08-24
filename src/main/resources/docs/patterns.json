@@ -94,13 +94,23 @@
     },
     {
       "patternId": "Lint_NestedMethodDefinition",
-      "level": "Warn",
+      "level": "Warning",
       "category": "Performance"
     },
     {
       "patternId": "Lint_ParenthesesAsGroupedExpression",
       "level": "Info",
       "category": "CodeStyle"
+    },
+    {
+      "patternId": "Lint_RequireParentheses",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "Lint_RescueException",
+      "level": "Warning",
+      "category": "Performance"
     }
   ]
 }
