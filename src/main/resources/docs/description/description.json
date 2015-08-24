@@ -74,5 +74,17 @@
     "title": "Empty Interpolation",
     "description": "Checks for empty interpolations",
     "timeToFix": 5
+  },
+  {
+    "patternId": "Lint_Eval",
+    "title": "Eval Usage",
+    "description": "Checks for eval usage",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Lint_HandleExceptions",
+    "title": "Handle exceptions",
+    "description": "Checks for empty rescue blocks"
+    "timeToFix": 5
   }
 ]

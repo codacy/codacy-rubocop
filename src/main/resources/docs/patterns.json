@@ -66,6 +66,21 @@
       "patternId": "Lint_EmptyInterpolation",
       "level": "Warning",
       "category": "UnusedCode"
+    },
+    {
+      "patternId": "Lint_EnsureReturn",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "Lint_Eval",
+      "level": "Error",
+      "category": "Security"
+    },
+    {
+      "patternId": "Lint_HandleExceptions",
+      "level": "Info",
+      "category": "CodeStyle"
     }
   ]
 }
