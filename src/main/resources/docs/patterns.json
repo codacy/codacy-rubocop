@@ -116,6 +116,21 @@
       "patternId": "Lint_ShadowingOuterLocalVariable",
       "level": "Error",
       "category": "ErrorProne"
+    },
+    {
+      "patternId": "Lint_SpaceBeforeFirstArg",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "Lint_StringConversionInInterpolation",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "Lint_UnderscorePrefixedVariableName",
+      "level": "Info",
+      "category": "CodeStyle"
     }
   ]
 }

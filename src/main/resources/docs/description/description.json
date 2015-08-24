@@ -84,41 +84,67 @@
   {
     "patternId": "Lint_LiteralInCondition",
     "title": "Literal in Condition",
-    "description": "Checks if there are any literals inside a condition"
+    "description": "Checks if there are any literals inside a condition",
+    "timeToFix": 5
   },
   {
     "patternId": "Lint_LiteralInInterpolation",
     "title": "Literal in Interpolation",
-    "description": "Checks if there are any literals inside a interpolation"
+    "description": "Checks if there are any literals inside a interpolation",
+    "timeToFix": 5
   },
   {
     "patternId": "Lint_Loop",
     "title": "Looping preferences",
-    "description": "Enforces the use of Kernel#Loop instead of begin/end/until||while statements"
+    "description": "Enforces the use of Kernel#Loop instead of begin/end/until||while statements",
+    "timeToFix": 5
   },
   {
     "patternId": "Lint_NestedMethodDefinition",
     "title": "Nested method definitions",
-    "description": "Checks for nested method definitions"
+    "description": "Checks for nested method definitions",
+    "timeToFix": 5
   },
   {
     "patternId": "Lint_ParenthesesAsGroupedExpression",
     "title": "Parentheses As Grouped Expression",
-    "description": "Checks for a space between the name of a called method and a left parenthesis"
+    "description": "Checks for a space between the name of a called method and a left parenthesis",
+    "timeToFix": 5
   },
   {
     "patternId": "Lint_RequireParentheses",
     "title": "Require Parentheses",
-    "description": "Checks for expressions where there is a call to a predicate method with at least one argument"
+    "description": "Checks for expressions where there is a call to a predicate method with at least one argument",
+    "timeToFix": 5
   },
   {
     "patternId": "Lint_RescueException",
     "title": "Rescue Parentheses",
-    "description": "Checks for calls to Exception when using rescue"
+    "description": "Checks for calls to Exception when using rescue",
+    "timeToFix": 5
   },
   {
     "patternId": "Lint_ShadowingOuterLocalVariable",
     "title": "Shadowing Outer Local Variable",
-    "description": "Checks for the use of the same name as outer local variables for block arguments or block variables"
+    "description": "Checks for the use of the same name as outer local variables for block arguments or block variables",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Lint_SpaceBeforeFirstArg",
+    "title": "Space Before First Argument",
+    "description": "Checks if there is a space between the first argument and the method call without parentheses",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Lint_StringConversionInInterpolation",
+    "title": "String Conversion In Interpolation",
+    "description": "Checks for redundant string interpolation",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Lint_UnderscorePrefixedVariableName",
+    "title": "Underscore Prefixed Variable Name",
+    "description": "Checks for used variables that are prefixed with the character '_'"
+    "timeToFix": 5
   }
 ]
