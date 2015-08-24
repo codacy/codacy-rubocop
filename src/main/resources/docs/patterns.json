@@ -111,6 +111,11 @@
       "patternId": "Lint_RescueException",
       "level": "Warning",
       "category": "Performance"
+    },
+    {
+      "patternId": "Lint_ShadowingOuterLocalVariable",
+      "level": "Error",
+      "category": "ErrorProne"
     }
   ]
 }

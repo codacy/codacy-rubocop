@@ -115,5 +115,10 @@
     "patternId": "Lint_RescueException",
     "title": "Rescue Parentheses",
     "description": "Checks for calls to Exception when using rescue"
+  },
+  {
+    "patternId": "Lint_ShadowingOuterLocalVariable",
+    "title": "Shadowing Outer Local Variable",
+    "description": "Checks for the use of the same name as outer local variables for block arguments or block variables"
   }
 ]

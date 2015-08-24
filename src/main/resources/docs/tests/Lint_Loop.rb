@@ -1,8 +1,8 @@
 ##Patterns: Lint_Loop
 
-##Warn: Lint_Loop
 begin
   puts 'Hello World'
+##Warn: Lint_Loop
 end while x < 0
 
 loop do
