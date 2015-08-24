@@ -78,7 +78,12 @@
       "category": "Security"
     },
     {
-      "patternId": "Lint_HandleExceptions",
+      "patternId": "Lint_LiteralInCondition",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "Lint_LiteralInInterpolation",
       "level": "Info",
       "category": "CodeStyle"
     }

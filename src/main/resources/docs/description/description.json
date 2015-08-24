@@ -82,9 +82,13 @@
     "timeToFix": 5
   },
   {
-    "patternId": "Lint_HandleExceptions",
-    "title": "Handle exceptions",
-    "description": "Checks for empty rescue blocks"
-    "timeToFix": 5
+    "patternId": "Lint_LiteralInCondition",
+    "title": "Literal in Condition",
+    "description": "Checks if there are any literals inside a condition"
+  },
+  {
+    "patternId": "Lint_LiteralInInterpolation",
+    "title": "Literal in Interpolation",
+    "description": "Checks if there are any literals inside a interpolation"
   }
 ]
