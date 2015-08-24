@@ -1,10 +1,10 @@
 ##Patterns: Lint_DuplicateMethods
+##Issue: {"severity": "Err", "line": 8, "patternId": "Lint_DuplicateMethods"}
 
 class SomeClass
   def some_method
   end
 
-  ##Err: Lint_DuplicateMethods
   def some_method
   end
 end

@@ -1,6 +1,6 @@
 ##Patterns: Lint_ShadowingOuterLocalVariable
+##Issue: {"severity": "Err", "line": 6, "patternId": "Lint_ShadowingOuterLocalVariable"}
 
 
 x = 42
-##Err: Lint_ShadowingOuterLocalVariable
 5.times { |x| puts x }

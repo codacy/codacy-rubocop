@@ -1,9 +1,9 @@
 ##Patterns: Lint_RescueException
+##Issue: {"severity": "Warn", "line": 7, "patternId": "Lint_RescueException"}
 
 begin
   exit
 
-    ##Warn: Lint_RescueException
 rescue Exception
   puts 'This is bad'
 end

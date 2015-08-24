@@ -1,10 +1,10 @@
 ##Patterns: Lint_EnsureReturn
+##Issue: {"severity": "Info", "line": 9, "patternId": "Lint_EnsureReturn"}
 
 begin
 
 rescue
 
 ensure
-  ##Info: Lint_EnsureReturn
   return "Hello World"
 end

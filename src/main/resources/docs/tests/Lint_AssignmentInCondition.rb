@@ -1,6 +1,6 @@
 ##Patterns: Lint_AssignmentInCondition
+##Issue: {"severity": "Info", "line": 4, "patternId": "Lint_AssignmentInCondition"}
 
-##Info: Lint_AssignmentInCondition
 if v = array.grep(/foo/)
   puts 'hello world'
 end

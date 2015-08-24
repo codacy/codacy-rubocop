@@ -1,8 +1,8 @@
 ##Patterns: Lint_Loop
+##Issue: {"severity": "Warn", "line": 6, "patternId": "Lint_Loop"}
 
 begin
   puts 'Hello World'
-##Warn: Lint_Loop
 end while x < 0
 
 loop do

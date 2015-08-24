@@ -1,4 +1,4 @@
 ##Patterns: Lint_EmptyInterpolation
+##Issue: {"severity": "Warn", "line": 4, "patternId": "Lint_EmptyInterpolation"}
 
-##Warn: Lint_EmptyInterpolation
 "result id #{}"
