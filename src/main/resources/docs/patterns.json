@@ -171,6 +171,129 @@
       "patternId": "Lint_UselessSetterCall",
       "level": "Info",
       "category": "CodeStyle"
+    },
+    {
+      "patternId": "Metrics_AbcSize",
+      "level": "Error",
+      "category": "ErrorProne",
+      "parameters":  [
+        {
+          "name": "Max",
+          "default": 15
+        }
+      ]
+    },
+    {
+      "patternId": "Metrics_BlockNesting",
+      "level": "Error",
+      "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "Max",
+          "default": 3
+        }
+      ]
+    },
+    {
+      "patternId": "Metrics_ClassLength",
+      "level": "Error",
+      "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "CountComments",
+          "default": "false"
+        },
+        {
+          "name": "Max",
+          "default": 100
+        }
+      ]
+    },
+    {
+      "patternId": "Metrics_CyclomaticComplexity",
+      "level": "Error",
+      "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "Max",
+          "default": 6
+        }
+      ]
+    },
+    {
+      "patternId": "Metrics_LineLength",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "Max",
+          "default": 80
+        },
+        {
+          "name": "AllowURI",
+          "default": true
+        },
+        {
+          "name": "URISchemes",
+          "default": ["http", "https"]
+        }
+      ]
+    },
+    {
+      "patternId": "Metrics_MethodLength",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "CountComments",
+          "default": false
+        },
+        {
+          "name": "Max",
+          "default": 10
+        }
+      ]
+    },
+    {
+      "patternId": "Metrics_ModuleLength",
+      "level": "Error",
+      "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "CountComments",
+          "default": false
+        },
+        {
+          "name": "Max",
+          "default": 100
+        }
+      ]
+    },
+    {
+      "patternId": "Metrics_ParameterLists",
+      "level": "Error",
+      "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "Max",
+          "default": 5
+        },
+        {
+          "name": "CountKeyArgs",
+          "default": true
+        }
+      ]
+    },
+    {
+      "patternId": "Metrics_PerceivedComplexity",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "Max",
+          "default": 7
+        }
+      ]
     }
   ]
 }

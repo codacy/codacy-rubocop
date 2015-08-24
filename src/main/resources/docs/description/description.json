@@ -194,5 +194,137 @@
     "title": "Useless Setter Call",
     "description": "Checks for useless setter call to local variable as the final expression of a function",
     "timeToFix": 5
+  },
+  {
+    "patternId": "Metrics_AbcSize",
+    "title": "Abc Size",
+    "description": "Checks the length of a function to see if it is not too long",
+    "timeToFix": 10,
+    "parameters": [
+      {
+        "name": "Max",
+        "description": "Maximum value that a method can have"
+      }
+    ]
+  },
+  {
+    "patternId": "Metrics_BlockNesting",
+    "title": "Block Nesting",
+    "description": "Checks the number of blocks nested in a function",
+    "timeToFix": 10,
+    "parameters": [
+      {
+        "name": "Max",
+        "description": "Maximum value that a method can have of nested blocks"
+      }
+    ]
+  },
+  {
+    "patternId": "Metrics_ClassLength",
+    "title": "Class Length",
+    "description": "Checks the length of a class",
+    "timeToFix": 20,
+    "parameters": [
+      {
+        "name": "CountComments",
+        "description": "Enables the possibility to count comments also"
+      },
+      {
+        "name": "Max",
+        "description": "Maximum value that for the length of a class"
+      }
+    ]
+  },
+  {
+    "patternId": "Metrics_CyclomaticComplexity",
+    "title": "Cyclomatic Complexity",
+    "description": "Checks the cyclomatic complexity of a method",
+    "timeToFix": 10,
+    "parameters": [
+      {
+        "name": "Max",
+        "description": "Maximum value for the cyclomatic complexity property"
+      }
+    ]
+  },
+  {
+    "patternId": "Metrics_LineLength",
+    "title": "Line Length",
+    "description": "Checks the Length of a Line",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Max",
+        "description": "Max number of characters supported per line"
+      },
+      {
+        "name": "AllowURI",
+        "description": "Allow URI's"
+      },
+      {
+        "name": "URISchemes",
+        "description": "URI Schemes that are supported"
+      }
+    ]
+  },
+  {
+    "patternId": "Metrics_MethodLength",
+    "title": "Method Length",
+    "description": "Checks the length of a method",
+    "timeToFix": 10,
+    "parameters": [
+      {
+        "name": "CountComments",
+        "description": "Includes comments in the counting of lines inside the method"
+      },
+      {
+        "name": "Max",
+        "description": "Maximum number of lines for each method"
+      }
+    ]
+  },
+  {
+    "patternId": "Metrics_ModuleLength",
+    "title": "Module Length",
+    "description": "Checks the length of a module",
+    "timeToFix": 20,
+    "parameters": [
+      {
+        "name": "CountComments",
+        "description": "Includes comments in the counting of the module length"
+      },
+      {
+        "name": "Max",
+        "description": "Maximum number of lines the a module can have"
+      }
+    ]
+  },
+  {
+    "patternId": "Metrics_ParameterLists",
+    "title": "Parameter Lists",
+    "description": "Checks the length of the number of arguments a method takes",
+    "timeToFix": 10,
+    "parameters": [
+      {
+        "name": "Max",
+        "description": "Maximum number of arguments a method can take"
+      },
+      {
+        "name": "CountKeyArgs",
+        "description": "Includes args on the counting of the number of arguments"
+      }
+    ]
+  },
+  {
+    "patternId": "Metrics_PerceivedComplexity",
+    "title": "Perceived Complexity",
+    "description": "Checks the perceived complexity of your methods",
+    "timeToFix": 10,
+    "parameters": [
+      {
+        "name": "Max",
+        "description": "Maximum number of perceived complexity you can get"
+      }
+    ]
   }
 ]
