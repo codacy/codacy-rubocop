@@ -51,6 +51,21 @@
       "patternId": "Lint_EachWithObjectArgument",
       "level": "Error",
       "category": "ErrorProne"
+    },
+    {
+      "patternId": "Lint_ElseLayout",
+      "level": "Error",
+      "category": "ErrorProne"
+    },
+    {
+      "patternId": "Lint_EmptyEnsure",
+      "level": "Error",
+      "category": "ErrorProne"
+    },
+    {
+      "patternId": "Lint_EmptyInterpolation",
+      "level": "Warning",
+      "category": "UnusedCode"
     }
   ]
 }

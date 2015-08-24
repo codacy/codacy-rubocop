@@ -56,5 +56,23 @@
     "title": "Each With Object Argument",
     "description": "Checks if each_with_object receives an immutable argument",
     "timeToFix": 5
+  },
+  {
+    "patternId": "Lint_ElseLayout",
+    "title": "Else Layout",
+    "description": "Checks for odd else block layout",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Lint_EmptyEnsure",
+    "title": "Empty Ensure",
+    "description": "Checks for empty ensure blocks",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Lint_EmptyInterpolation",
+    "title": "Empty Interpolation",
+    "description": "Checks for empty interpolations",
+    "timeToFix": 5
   }
 ]
