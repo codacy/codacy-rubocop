@@ -50,5 +50,11 @@
     "title": "Duplicate Methods",
     "description": "Checks for duplicate methods in classes and modules",
     "timeToFix": 10
+  },
+  {
+    "patternId": "Lint_EachWithObjectArgument",
+    "title": "Each With Object Argument",
+    "description": "Checks if each_with_object receives an immutable argument",
+    "timeToFix": 5
   }
 ]

@@ -44,7 +44,12 @@
     },
     {
       "patternId": "Lint_DuplicateMethods",
-      "level": "Err",
+      "level": "Error",
+      "category": "ErrorProne"
+    },
+    {
+      "patternId": "Lint_EachWithObjectArgument",
+      "level": "Error",
       "category": "ErrorProne"
     }
   ]
