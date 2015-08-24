@@ -144,7 +144,55 @@
   {
     "patternId": "Lint_UnderscorePrefixedVariableName",
     "title": "Underscore Prefixed Variable Name",
-    "description": "Checks for used variables that are prefixed with the character '_'"
+    "description": "Checks for used variables that are prefixed with the character '_'",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Lint_UnreachableCode",
+    "title": "Unreachable Code",
+    "description": "Checks for unreachable code",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Lint_UnusedBlockArgument",
+    "title": "Unused Block Argument",
+    "description": "Checks for unused argument inside a code block",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Lint_UnusedMethodArgument",
+    "title": "Unused Method Argument",
+    "description": "Checks for unused arguments on a method",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Lint_UselessAccessModifier",
+    "title": "Useless Access Modifier",
+    "description": "Checks for access modifiers without any code",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Lint_UselessAssignment",
+    "title": "Useless Assignment",
+    "description": "Checks for useless assignment to local variable ion every scope",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Lint_UselessComparison",
+    "title": "Useless Comparison",
+    "description": "Checks for comparison of something with itself",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Lint_UselessElseWithoutRescue",
+    "title": "Useless Else Without Rescue",
+    "description": "Checks for useless else in begin..end without rescue",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Lint_UselessSetterCall",
+    "title": "Useless Setter Call",
+    "description": "Checks for useless setter call to local variable as the final expression of a function",
     "timeToFix": 5
   }
 ]

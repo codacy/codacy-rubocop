@@ -131,6 +131,46 @@
       "patternId": "Lint_UnderscorePrefixedVariableName",
       "level": "Info",
       "category": "CodeStyle"
+    },
+    {
+      "patternId": "Lint_UnreachableCode",
+      "level": "Warning",
+      "category": "UnusedCode"
+    },
+    {
+      "patternId": "Lint_UnusedBlockArgument",
+      "level": "Warning",
+      "category": "UnusedCode"
+    },
+    {
+      "patternId": "Lint_UnusedMethodArgument",
+      "level": "Warning",
+      "category": "UnusedCode"
+    },
+    {
+      "patternId": "Lint_UselessAccessModifier",
+      "level": "Warning",
+      "category": "UnusedCode"
+    },
+    {
+      "patternId": "Lint_UselessAssignment",
+      "level": "Warning",
+      "category": "UnusedCode"
+    },
+    {
+      "patternId": "Lint_UselessComparison",
+      "level": "Warning",
+      "category": "UnusedCode"
+    },
+    {
+      "patternId": "Lint_UselessElseWithoutRescue",
+      "level": "Warning",
+      "category": "UnusedCode"
+    },
+    {
+      "patternId": "Lint_UselessSetterCall",
+      "level": "Info",
+      "category": "CodeStyle"
     }
   ]
 }
