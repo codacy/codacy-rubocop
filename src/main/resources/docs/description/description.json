@@ -330,31 +330,59 @@
   {
     "patternId": "Performance_Count",
     "title": "Performance Count Usage",
-    "description": "Identify usage of count on an Enumerable and change them to size"
+    "description": "Identify usage of count on an Enumerable and change them to size",
+    "timeToFix": 5
   },
   {
     "patternId": "Performance_Detect",
     "title": "Performance Detect Usage",
-    "description": "Identify the usage of first and last and change them to detect instead"
+    "description": "Identify the usage of first and last and change them to detect instead",
+    "timeToFix": 5
   },
   {
     "patternId": "Performance_FlatMap",
     "title": "Change to FlatMap to Increase Performance",
-    "description": "Increase performance by changing map.flatten with flat_map"
+    "description": "Increase performance by changing map.flatten with flat_map",
+    "timeToFix": 5
   },
   {
     "patternId": "Performance_ReverseEach",
     "title": "Performance of Reverse Each",
-    "description": "Choose reverse_each over reverse.each"
+    "description": "Choose reverse_each over reverse.each",
+    "timeToFix": 5
   },
   {
     "patternId": "Performance_Sample",
     "title": "Performance of Sample",
-    "description": "Choose sample over shuffle"
+    "description": "Choose sample over shuffle",
+    "timeToFix": 5
   },
   {
     "patternId": "Performance_Size",
     "title": "Performance Size",
-    "description": "Choose size over count"
+    "description": "Choose size over count",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Rails_Date",
+    "title": "Rails Date",
+    "description": "Choose Time over Date",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "EnforcedStyle",
+        "description": "Style used by the pattern"
+      },
+      {
+        "name": "SupportedStyles",
+        "description": "Styles supported by the pattern"
+      }
+    ]
+  },
+  {
+    "patternId": "Rails_Delegate",
+    "title": "Rails Delegate",
+    "description": "Enforces the use of delegation method",
+    "timeToFix": 5
   }
 ]

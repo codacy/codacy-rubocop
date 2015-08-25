@@ -324,6 +324,26 @@
       "patternId": "Performance_Size",
       "level": "Warning",
       "category": "Performance"
+    },
+    {
+      "patternId": "Rails_Date",
+      "level": "Error",
+      "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "flexible"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": ["strict", "flexible"]
+        }
+      ]
+    },
+    {
+      "patternId": "Rails_Delegate",
+      "level": "Info",
+      "category": "CodeStyle"
     }
   ]
 }
