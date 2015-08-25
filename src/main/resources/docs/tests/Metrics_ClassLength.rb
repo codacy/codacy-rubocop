@@ -1,6 +1,6 @@
 ##Patterns: Metrics_ClassLength
-##Issue: {"severity": "Err", "line": 4, "patternId": "Metrics_ClassLength"}
 
+##Err: Metrics_ClassLength
 class Foo
   puts 'Hello World'
   puts 'Hello World'

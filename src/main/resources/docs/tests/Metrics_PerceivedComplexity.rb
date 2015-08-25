@@ -1,6 +1,6 @@
 ##Patterns: Metrics_PerceivedComplexity
-##Issue: {"severity": "Info", "line": 4, "patternId": "Metrics_PerceivedComplexity"}
 
+##Info: Metrics_PerceivedComplexity
 def my_method
   if cond
       case var

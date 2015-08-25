@@ -1,6 +1,6 @@
 ##Patterns: Metrics_CyclomaticComplexity
-##Issue: {"severity": "Err", "line": 4, "patternId": "Metrics_CyclomaticComplexity"}
 
+##Err: Metrics_CyclomaticComplexity
 def hello
   if x = 5
     if y = 4

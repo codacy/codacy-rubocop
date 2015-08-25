@@ -1,9 +1,9 @@
 ##Patterns: Lint_ElseLayout
-##Issue: {"severity": "Err", "line": 7, "patternId": "Lint_ElseLayout"}
 
 if something
  puts 'Hello World'
 
+  ##Err: Lint_ElseLayout
 else do_this
    do_that
 end

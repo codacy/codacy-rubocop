@@ -1,6 +1,6 @@
 ##Patterns: Metrics_AbcSize
-##Issue: {"severity": "Err", "line": 4, "patternId": "Metrics_AbcSize"}
 
+##Err: Metrics_AbcSize
 def hello
   x = 1
   x = 2

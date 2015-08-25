@@ -1,9 +1,9 @@
 ##Patterns: Lint_UnreachableCode
-##Issue: {"severity": "Warn", "line": 7, "patternId": "Lint_UnreachableCode"}
 
 def something
  x = true
  return x
+ ##Warn: Lint_UnreachableCode
   if x == false
     puts 'Hello'
   end

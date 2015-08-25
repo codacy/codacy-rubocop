@@ -1,6 +1,6 @@
 ##Patterns: Lint_RequireParentheses
-##Issue: {"severity": "Info", "line": 4, "patternId": "Lint_RequireParentheses"}
 
+##Info: Lint_RequireParentheses
 if day.is? :tuesday && month == :jan
 
 end

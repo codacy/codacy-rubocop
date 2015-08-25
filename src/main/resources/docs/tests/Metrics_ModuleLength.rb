@@ -1,6 +1,6 @@
 ##Patterns: Metrics_ModuleLength
-##Issue: {"severity": "Err", "line": 4, "patternId": "Metrics_ModuleLength"}
 
+##Err: Metrics_ModuleLength
 module Foo
   puts 'Hello World'
   puts 'Hello World'
