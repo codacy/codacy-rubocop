@@ -384,5 +384,99 @@
     "title": "Rails Delegate",
     "description": "Enforces the use of delegation method",
     "timeToFix": 5
+  },
+  {
+    "patternId": "Style_AccessModifierIndentation",
+    "title": "Access Modifier Indentation",
+    "description": "Enforces the right indentation of the access modifier",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "EnforcedStyle",
+        "description": "Style used by the pattern"
+      },
+      {
+        "name": "SupportedStyles",
+        "description": "Supported styles by the pattern"
+      }
+    ]
+  },
+  {
+    "patternId": "Style_AccessorMethodName",
+    "title": "Accessor Method Naming",
+    "description": "Enforces the usage of the conventions for accessor methods in ruby",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Style_Alias",
+    "title": "Alias",
+    "description": "Enforces the use of alias_method instead of alias",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Style_AlignArray",
+    "title": "Array Alignment",
+    "description": "Enforces the correct alignment of a multiline array",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Style_AlignHash",
+    "title": "Hash Alignment",
+    "description": "Enforces the correct alignment of a multiline hash",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "EnforcedHashRocketStyle",
+        "description": "Enforces the use of RocketStyle"
+      },
+      {
+        "name": "EnforcedColonStyle",
+        "description": "Enforces the use of ColonStyle"
+      },
+      {
+        "name": "EnforcedLastArgumentStyle",
+        "description": "Enforces the use of LastArgumentStyle"
+      },
+      {
+        "name": "EnforcedLastArgumentHashStyle",
+        "description": "Enforces the use of ArgumentHashStyle"
+      },
+      {
+        "name": "SupportedLastArgumentHashStyles",
+        "description": "Supported Styles for the pattern"
+      }
+    ]
+  },
+  {
+    "patternId": "Style_AlignParameters",
+    "title": "Parameter Alignment",
+    "description": "Enforces the alignment of the parameters when calling a method",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "EnforcedStyle",
+        "description": "Style enforced by the pattern"
+      },
+      {
+        "name": "SupportedStyles",
+        "description": "Supported styles by the pattern"
+      }
+    ]
+  },
+  {
+    "patternId": "Style_AndOr",
+    "title": "And and Or",
+    "description": "Enforces the use of && and || instead of and and or",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "EnforcedStyle",
+        "description": "Style being enforced by the pattern"
+      },
+      {
+        "name": "SupportedStyles",
+        "description": "Styles supported by the pattern"
+      }
+    ]
   }
 ]

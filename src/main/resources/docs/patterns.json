@@ -344,6 +344,89 @@
       "patternId": "Rails_Delegate",
       "level": "Info",
       "category": "CodeStyle"
+    },
+    {
+      "patternId": "Style_AccessModifierIdentation",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "indent"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": ["indent", "outdent"]
+        }
+      ]
+    },
+    {
+      "patternId": "Style_AccessorMethodName",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "Style_Alias",
+      "level": "Error",
+      "category": "ErrorProne"
+    },
+    {
+      "patternId": "Style_AlignArray",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "Style_AlignHash",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "EnforcedHashRocketStyle",
+          "default": "key"
+        },
+        {
+          "name": "EnforcedColonStyle",
+          "default": "key"
+        },
+        {
+          "name": "EnforcedLastArgumentHashStyle",
+          "default": "always_inspect"
+        },
+        {
+          "name": "SupportedLastArgumentHashStyles",
+          "default": ["always_inspect", "always_ignore", "ignore_implicit", "ignore_explicit"]
+        }
+      ]
+    },
+    {
+      "patternId": "Style_AlignParameters",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "with_first_parameter"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": ["with_first_parameter", "with_fixed_indentation"]
+        }
+      ]
+    },
+    {
+      "patternId": "Style_AndOr",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "always"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": ["always", "conditionals"]
+        }
+      ]
     }
   ]
 }
