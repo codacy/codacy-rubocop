@@ -294,6 +294,36 @@
           "default": 7
         }
       ]
+    },
+    {
+      "patternId": "Performance_Count",
+      "level": "Warning",
+      "category": "Performance"
+    },
+    {
+      "patternId": "Performance_Detect",
+      "level": "Warning",
+      "category": "Performance"
+    },
+    {
+      "patternId": "Performance_FlatMap",
+      "level": "Warning",
+      "category": "Performance"
+    },
+    {
+      "patternId": "Performance_ReverseEach",
+      "level": "Warning",
+      "category": "Performance"
+    },
+    {
+      "patternId": "Performance_Sample",
+      "level": "Warning",
+      "category": "Performance"
+    },
+    {
+      "patternId": "Performance_Size",
+      "level": "Warning",
+      "category": "Performance"
     }
   ]
 }
