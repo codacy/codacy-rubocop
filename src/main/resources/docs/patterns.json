@@ -346,7 +346,7 @@
       "category": "CodeStyle"
     },
     {
-      "patternId": "Style_AccessModifierIdentation",
+      "patternId": "Style_AccessModifierIndentation",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [
