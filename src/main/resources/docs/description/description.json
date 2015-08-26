@@ -545,5 +545,33 @@
         "description": "Styles supported by the pattern"
       }
     ]
+  },
+  {
+    "patternId": "Style_CaseEquality",
+    "title": "Case Equality usage",
+    "description": "Avoid the usage of === operator",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Style_CaseIndentation",
+    "title": "Case Indentation",
+    "description": "Indent the when keyword with the case keyword",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "IndentWhenRelativeTo",
+        "description": "Defines the position of the indentation"
+      },
+      {
+        "name": "SupportedStyles",
+        "description": "Styles supported by the pattern"
+      }
+    ]
+  },
+  {
+    "patternId": "Style_CharacterLiteral",
+    "title": "Character Literal",
+    "description": "Prohibits the use of Character Literals",
+    "timeToFix": 5
   }
 ]

@@ -487,6 +487,31 @@
           "default": ["no_braces", "braces", "context_dependent"]
         }
       ]
+    },
+    {
+      "patternId": "Style_CaseEquality",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "Style_CaseIndentation",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "IndentWhenRelativeTo",
+          "default": "case"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": ["case", "end"]
+        }
+      ]
+    },
+    {
+      "patternId": "Style_CharacterLiteral",
+      "level": "Info",
+      "category": "CodeStyle"
     }
   ]
 }
