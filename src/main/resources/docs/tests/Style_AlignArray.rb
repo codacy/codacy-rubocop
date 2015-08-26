@@ -1,6 +1,6 @@
 ##Patterns: Style_AlignArray
 
 menu_item = ['Spam', 'Spam',
-##Info: Style_Align_Array
+##Info: Style_AlignArray
 'Spam', 'Hello']
 
