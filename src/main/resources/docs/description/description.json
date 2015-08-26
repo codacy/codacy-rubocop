@@ -517,5 +517,33 @@
         "description": "Styles supported by the pattern"
       }
     ]
+  },
+  {
+    "patternId": "Style_BeginBlock",
+    "title": "Begin Block",
+    "description": "Avoid using BEGIN Block",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Style_BlockEndNewline",
+    "title": "End Block Newline",
+    "description": "Enforces the end block to be on a newline",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Style_BracesAroundHashParameters",
+    "title": "Braces Around Hash Parameters",
+    "description": "If the last parameter passed to a method is a hash don't use braces",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "EnforcedStyle",
+        "description": "Style enforced by the pattern"
+      },
+      {
+        "name": "SupportedStyles",
+        "description": "Styles supported by the pattern"
+      }
+    ]
   }
 ]

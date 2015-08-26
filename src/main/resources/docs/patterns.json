@@ -462,6 +462,31 @@
           "default": ["percent_q", "bare_percent"]
         }
       ]
+    },
+    {
+      "patternId": "Style_BeginBlock",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "Style_BlockEndNewline",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "Style_BracesAroundHashParameters",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "no_braces"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": ["no_braces", "braces", "context_dependent"]
+        }
+      ]
     }
   ]
 }
