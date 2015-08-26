@@ -512,6 +512,11 @@
       "patternId": "Style_CharacterLiteral",
       "level": "Info",
       "category": "CodeStyle"
+    },
+    {
+      "patternId": "Style_ClassAndModuleCamelCase",
+      "level": "Info",
+      "category": "CodeStyle"
     }
   ]
 }

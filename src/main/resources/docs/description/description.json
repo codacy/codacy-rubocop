@@ -573,5 +573,11 @@
     "title": "Character Literal",
     "description": "Prohibits the use of Character Literals",
     "timeToFix": 5
+  },
+  {
+    "patternId": "Style_ClassAndModuleCamelCase",
+    "title": "Class And Module Camel Case",
+    "description": "Prohibits the use of snake_case on naming classes and modules",
+    "timeToFix": 5
   }
 ]
