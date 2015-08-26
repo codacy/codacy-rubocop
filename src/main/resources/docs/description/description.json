@@ -478,5 +478,23 @@
         "description": "Styles supported by the pattern"
       }
     ]
+  },
+  {
+    "patternId": "Style_ArrayJoin",
+    "title": "Array#join over Array#*",
+    "description": "Enforces the usage of Array#join instead of Array#*",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Style_AsciiComments",
+    "title": "Ascii Comments",
+    "description": "Enforces the use of ascii characters when writing comments",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Style_AsciiIdentifiers",
+    "title": "Ascii Identifiers",
+    "description": "Enforces the use of ascii characters when writing identifiers",
+    "timeToFix": 5
   }
 ]

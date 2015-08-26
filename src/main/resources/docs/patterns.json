@@ -427,6 +427,21 @@
           "default": ["always", "conditionals"]
         }
       ]
+    },
+    {
+      "patternId": "Style_ArrayJoin",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "Style_AsciiComments",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "Style_AsciiIdentifiers",
+      "level": "Info",
+      "category": "CodeStyle"
     }
   ]
 }
