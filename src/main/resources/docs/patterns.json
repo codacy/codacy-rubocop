@@ -442,6 +442,26 @@
       "patternId": "Style_Attr",
       "level": "Info",
       "category": "CodeStyle"
+    },
+    {
+      "patternId": "Style_AutoResourceCleanup",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "Style_BarePercentLiterals",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "bare_percent"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": ["percent_q", "bare_percent"]
+        }
+      ]
     }
   ]
 }

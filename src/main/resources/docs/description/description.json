@@ -495,5 +495,27 @@
     "patternId": "Style_Attr",
     "title": "Attr_reader over Attr",
     "description": "Enforces the usage of attr_reader instead of attr"
+  },
+  {
+    "patternId": "Style_AutoResourceCleanup",
+    "title": "Auto Resource Cleanup",
+    "description": "Checks for cases when you could use a block accepting version of a method that does automatic resource cleanup",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Style_BarePercentLiterals",
+    "title": "Bare Percent Literal Usage",
+    "description": "Enforces the usage of bare percent literals instead of %Q",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "EnforcedStyle",
+        "description": "Style enforced by the pattern"
+      },
+      {
+        "name": "SupportedStyles",
+        "description": "Styles supported by the pattern"
+      }
+    ]
   }
 ]
