@@ -492,9 +492,8 @@
     "timeToFix": 5
   },
   {
-    "patternId": "Style_AsciiIdentifiers",
-    "title": "Ascii Identifiers",
-    "description": "Enforces the use of ascii characters when writing identifiers",
-    "timeToFix": 5
+    "patternId": "Style_Attr",
+    "title": "Attr_reader over Attr",
+    "description": "Enforces the usage of attr_reader instead of attr"
   }
 ]

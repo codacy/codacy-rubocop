@@ -439,7 +439,7 @@
       "category": "CodeStyle"
     },
     {
-      "patternId": "Style_AsciiIdentifiers",
+      "patternId": "Style_Attr",
       "level": "Info",
       "category": "CodeStyle"
     }
