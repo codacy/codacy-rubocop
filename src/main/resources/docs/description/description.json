@@ -727,5 +727,17 @@
         "description": "Allow adjecent one line method definitions"
       }
     ]
+  },
+  {
+    "patternId": "Style_EmptyLines",
+    "title": "Empty Lines",
+    "description": "Prohibits the existence of 2 empty lines in a row",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Style_EmptyLinesAroundAccessModifier",
+    "title": "Empty Lines Around Access Modifier",
+    "description": "Enforces The ExistenceEmpty Lines Around Access Modifier",
+    "timeToFix": 5
   }
 ]

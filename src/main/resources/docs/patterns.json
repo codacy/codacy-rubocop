@@ -635,11 +635,6 @@
       "category": "CodeStyle"
     },
     {
-      "patternId": "Style_ElseAlignment",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
       "patternId": "Style_EmptyElse",
       "level": "Info",
       "category": "CodeStyle"
@@ -654,6 +649,16 @@
           "default": false
         }
       ]
+    },
+    {
+      "patternId": "Style_EmptyLines",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "Style_EmptyLinesAroundAccessModifier",
+      "level": "Info",
+      "category": "CodeStyle"
     }
   ]
 }
