@@ -659,6 +659,26 @@
       "patternId": "Style_EmptyLinesAroundAccessModifier",
       "level": "Info",
       "category": "CodeStyle"
+    },
+    {
+      "patternId": "Style_EmptyLinesAroundBlockBody",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "no_empty_lines"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": ["empty_lines", "no_empty_lines"]
+        }
+      ]
+    },
+    {
+      "patternId": "Style_EmptyLiteral",
+      "level": "Info",
+      "category": "CodeStyle"
     }
   ]
 }

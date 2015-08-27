@@ -739,5 +739,27 @@
     "title": "Empty Lines Around Access Modifier",
     "description": "Enforces The ExistenceEmpty Lines Around Access Modifier",
     "timeToFix": 5
+  },
+  {
+    "patternId": "Style_EmptyLinesAroundBlockBody",
+    "title": "Empty Lines Around Block Body",
+    "description": "Prohibits the existence of empty lines around block bodies",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "EnforcedStyle",
+        "description": "Style enforced by the pattern"
+      },
+      {
+        "name": "SupportedStyles",
+        "description": "Styles supported by the pattern"
+      }
+    ]
+  },
+  {
+    "patternId": "Style_EmptyLiteral",
+    "title": "Empty Literal",
+    "description": "Enforces the use of literals over class constructors",
+    "timeToFix": 5
   }
 ]
