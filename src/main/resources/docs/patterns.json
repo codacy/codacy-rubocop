@@ -552,6 +552,36 @@
       "patternId": "Style_ClassMethods",
       "level": "Info",
       "category": "CodeStyle"
+    },
+    {
+      "patternId": "Style_ClassVars",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "Style_ClosingParenthesisIndentation",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "Style_ColonMethodCall",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "Style_CommandLiteral",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "backticks"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": ["backticks", "percent_x", "mixed"]
+        }
+      ]
     }
   ]
 }

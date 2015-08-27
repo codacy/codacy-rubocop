@@ -617,5 +617,39 @@
     "title": "Class Methods",
     "description": "Enforces the use of self instead of using the class/module name when defining methods",
     "timeToFix": 5
+  },
+  {
+    "patternId": "Style_ClassVars",
+    "title": "Class variables usage",
+    "description": "Prohibits the usage of class variables",
+    "timeToFix": 10
+  },
+  {
+    "patternId": "Style_ClosingParenthesisIndentation",
+    "title": "Closing Parenthesis Indentation",
+    "description": "Enforces the fixing of the indentation of parenthesis",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Style_ColonMethodCall",
+    "title": "Colon Method usage for Method calls",
+    "description": "Prohibits the calling of method with colon",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Style_CommandLiteral",
+    "title": "Command Literals",
+    "description": "Enforces the usage of only one Command Literal",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "EnforcedStyle",
+        "description": "Style supported by the pattern"
+      },
+      {
+        "name": "SupportedStyles",
+        "description": "Styles supported by the pattern"
+      }
+    ]
   }
 ]
