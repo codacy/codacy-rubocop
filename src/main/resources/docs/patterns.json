@@ -616,7 +616,7 @@
       "parameters": [
         {
           "name": "EnforcedStyle",
-          "default": "trailing"
+          "default": "leading"
         },
         {
           "name": "SupportedStyles",
