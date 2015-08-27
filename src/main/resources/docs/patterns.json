@@ -582,6 +582,22 @@
           "default": ["backticks", "percent_x", "mixed"]
         }
       ]
+    },
+    {
+      "patternId": "Style_CommentAnnotation",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "Keywords",
+          "default": ["TODO", "FIXME", "OPTIMIZE", "HACK", "REVIEW"]
+        }
+      ]
+    },
+    {
+      "patternId": "Style_ConstantName",
+      "level": "Info",
+      "category": "CodeStyle"
     }
   ]
 }

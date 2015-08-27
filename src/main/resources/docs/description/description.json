@@ -651,5 +651,23 @@
         "description": "Styles supported by the pattern"
       }
     ]
+  },
+  {
+    "patternId": "Style_CommentAnnotation",
+    "title": "Comment Annotations",
+    "description": "Enforces the conventions for comment annotations",
+    "timeToFix": 5,
+    "parameters":  [
+      {
+        "name": "Keywords",
+        "description": "Words used by the annotations"
+      }
+    ]
+  },
+  {
+    "patternId": "Style_ConstantName",
+    "title": "Constant Naming",
+    "description": "Enforces good practices on constant naming",
+    "timeToFix": 10
   }
 ]
