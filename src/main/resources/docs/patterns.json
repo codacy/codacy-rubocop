@@ -600,7 +600,7 @@
       "category": "CodeStyle"
     },
     {
-      "patternId": "Style_DefWithParenthesis",
+      "patternId": "Style_DefWithParentheses",
       "level": "Info",
       "category": "CodeStyle"
     },
@@ -623,6 +623,11 @@
           "default": ["leading", "trailing"]
         }
       ]
+    },
+    {
+      "patternId": "Style_DoubleNegation",
+      "level": "Info",
+      "category": "CodeStyle"
     }
   ]
 }

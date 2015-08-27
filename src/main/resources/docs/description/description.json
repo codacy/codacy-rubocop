@@ -671,7 +671,7 @@
     "timeToFix": 10
   },
   {
-    "patternId": "Style_DefWithParenthesis",
+    "patternId": "Style_DefWithParentheses",
     "title": "Def With Parenthesis",
     "description": "Enforces the use of parenthesis when defining a method the has parameters",
     "timeToFix": 5
@@ -697,5 +697,10 @@
         "description": "Styles supported by the pattern"
       }
     ]
+  },
+  {
+    "patternId": "Style_DoubleNegation",
+    "title": "Double Negation",
+    "description": "Prohibits the usage of Double Negation"
   }
 ]
