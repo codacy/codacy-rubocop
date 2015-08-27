@@ -701,6 +701,31 @@
   {
     "patternId": "Style_DoubleNegation",
     "title": "Double Negation",
-    "description": "Prohibits the usage of Double Negation"
+    "description": "Prohibits the usage of Double Negation",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Style_EachWithObject",
+    "title": "Each With Object Usage",
+    "description": "Enforces the usage of Each With Object",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Style_EmptyElse",
+    "title": "Empty Else",
+    "description": "Enforces the removal of the empty else since it is redundant",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Style_EmptyLineBetweenDefs",
+    "title": "Empty Line Between Defs",
+    "description": "Enforces the use of a one line space between each method definition",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "AllowAdjacentOneLineDefs",
+        "description": "Allow adjecent one line method definitions"
+      }
+    ]
   }
 ]

@@ -628,6 +628,32 @@
       "patternId": "Style_DoubleNegation",
       "level": "Info",
       "category": "CodeStyle"
+    },
+    {
+      "patternId": "Style_EachWithObject",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "Style_ElseAlignment",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "Style_EmptyElse",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "Style_EmptyLineBetweenDefs",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "AllowAdjacentOneLineDefs",
+          "default": false
+        }
+      ]
     }
   ]
 }
