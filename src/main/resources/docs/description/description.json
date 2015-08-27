@@ -669,5 +669,33 @@
     "title": "Constant Naming",
     "description": "Enforces good practices on constant naming",
     "timeToFix": 10
+  },
+  {
+    "patternId": "Style_DefWithParenthesis",
+    "title": "Def With Parenthesis",
+    "description": "Enforces the use of parenthesis when defining a method the has parameters",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Style_DeprecatedHashMethods",
+    "title": "Deprecated Hash Method Used",
+    "description": "Prohibits the usage of deprecated hash methods like has_key or has_value",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Style_DotPosition",
+    "title": "Dot Position",
+    "description": "Enforces the dot position",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "EnforcedStyle",
+        "description": "Style enforced by the pattern"
+      },
+      {
+        "name": "SupportedStyles",
+        "description": "Styles supported by the pattern"
+      }
+    ]
   }
 ]

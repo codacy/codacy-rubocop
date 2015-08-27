@@ -598,6 +598,31 @@
       "patternId": "Style_ConstantName",
       "level": "Info",
       "category": "CodeStyle"
+    },
+    {
+      "patternId": "Style_DefWithParenthesis",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "Style_DeprecatedHashMethods",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "Style_DotPosition",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "trailing"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": ["leading", "trailing"]
+        }
+      ]
     }
   ]
 }
