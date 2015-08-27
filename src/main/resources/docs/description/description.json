@@ -579,5 +579,43 @@
     "title": "Class And Module Camel Case",
     "description": "Prohibits the use of snake_case on naming classes and modules",
     "timeToFix": 5
+  },
+  {
+    "patternId": "Style_ClassAndModuleChildren",
+    "title": "Class and Module Children Style",
+    "description": "Enforces a style to class and module children",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "EnforcedStyle",
+        "description": "Style enforced by the pattern"
+      },
+      {
+        "name": "SupportedStyles",
+        "description": "Styles supported by the pattern"
+      }
+    ]
+  },
+  {
+    "patternId": "Style_ClassCheck",
+    "title": "Class Check method",
+    "description": "Enforces the use of only one class check method",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "EnforcedStyle",
+        "description": "Style Supported by the pattern"
+      },
+      {
+        "name": "SuppoortedStyles",
+        "description": "Supported Styles by the pattern"
+      }
+    ]
+  },
+  {
+    "patternId": "Style_ClassMethods",
+    "title": "Class Methods",
+    "description": "Enforces the use of self instead of using the class/module name when defining methods",
+    "timeToFix": 5
   }
 ]

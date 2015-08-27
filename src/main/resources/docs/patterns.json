@@ -517,6 +517,41 @@
       "patternId": "Style_ClassAndModuleCamelCase",
       "level": "Info",
       "category": "CodeStyle"
+    },
+    {
+      "patternId": "Style_ClassAndModuleChildren",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "nested"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": ["nested", "compact"]
+        }
+      ]
+    },
+    {
+      "patternId": "Style_ClassCheck",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "is_a?"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": ["is_a?", "kind_of?"]
+        }
+      ]
+    },
+    {
+      "patternId": "Style_ClassMethods",
+      "level": "Info",
+      "category": "CodeStyle"
     }
   ]
 }
