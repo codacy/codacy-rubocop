@@ -1,14 +1,15 @@
 package codacy.rubocop
 
+import java.io.File
 import java.nio.charset.StandardCharsets
 import java.nio.file.{Files, Path, Paths, StandardOpenOption}
 
 import codacy.dockerApi._
 import play.api.libs.json._
 
+import scala.io.Source
 import scala.sys.process._
 import scala.util.{Failure, Properties, Success, Try}
-import java.io.File
 
 case class RubocopLocation(line: Int, column: JsValue, length: JsValue)
 
@@ -52,19 +53,17 @@ object Rubocop extends Tool {
 
   override def apply(path: Path, conf: Option[Seq[PatternDef]], files: Option[Set[Path]])(implicit spec: Spec): Try[Iterable[Result]] = {
     val cmd = getCommandFor(path, conf, files, spec, resultFilePath)
-    println(cmd.mkString(" "))
     cmd.!(discardingLogger)
-    println(cmd.lineStream_!.toList.mkString("\n"))
     val resultFromTool = getFileLines(resultFilePath.toFile)
     parseResult(resultFromTool)
   }
 
   private[this] def getFileLines(filename: File): String = {
-    scala.io.Source.fromFile(filename).getLines().mkString
+    Source.fromFile(filename).getLines().mkString
   }
 
   private[this] def parseResult(resultFromTool: String): Try[Iterable[Result]] = {
-    Try(Json.parse(resultFromTool)).flatMap { case json =>
+    Try(Json.parse(resultFromTool)).flatMap { json =>
       json.validate[RubocopResult] match {
         case JsSuccess(rubocopResult, _) =>
           Success(
@@ -79,17 +78,16 @@ object Rubocop extends Tool {
   }
 
   private[this] def ruboFileToResult(rubocopFiles: RubocopFiles): Iterable[Result] = {
-    println(rubocopFiles.path)
     rubocopFiles.offenses.getOrElse(Seq.empty).map { case offense =>
-      println(getIdByPatternName(offense.cop_name.value))
-     Result(SourcePath(rubocopFiles.path.value), ResultMessage(offense.message.value), PatternId(getIdByPatternName(offense.cop_name.value)), ResultLine(offense.location.line))
+      Issue(SourcePath(rubocopFiles.path.value), ResultMessage(offense.message.value),
+        PatternId(getIdByPatternName(offense.cop_name.value)), ResultLine(offense.location.line))
     }
   }
 
   private[this] def getCommandFor(path: Path, conf: Option[Seq[PatternDef]], files: Option[Set[Path]], spec: Spec, outputFilePath: Path): Seq[String] = {
-    val configPath = conf.flatMap(getConfigFile(_).map{ configFile =>
-      println(configFile)
-      Seq("-c", configFile.toAbsolutePath.toString)}).getOrElse(Seq.empty)
+    val configPath = conf.flatMap(getConfigFile(_).map { configFile =>
+      Seq("-c", configFile.toAbsolutePath.toString)
+    }).getOrElse(Seq.empty)
 
     val patternIds = for {
       patterns <- conf.getOrElse(Seq.empty)
@@ -137,7 +135,6 @@ object Rubocop extends Tool {
          |${rules.mkString(s"${Properties.lineSeparator}")}
       """.stripMargin
 
-    println(ymlConfiguration)
     fileForConfig(ymlConfiguration).toOption
   }
 
@@ -195,24 +192,6 @@ object Rubocop extends Tool {
          """.stripMargin
       case other => s"${parameter.name.value}: ${Json.stringify(other)}"
     }
-  }
-
-  private object RuleType {
-    val values = Map(
-      "Lint" -> "rulesets_ruby_linter.json",
-      "Metrics" -> "rulesets_ruby_metrics.json",
-      "Metrics/LineLength" -> "rulesets_ruby_metrics_linelength.json",
-      "Performance" -> "rulesets_ruby_performance.json",
-      "Rails" -> "rulesets_ruby_rails.json",
-      "Rails/ActionFilter" -> "rulesets_ruby_rails_actionfilter.json",
-      "Rails/Delegate" -> "rulesets_ruby_rails_delegate.json",
-      "Rails/HasAndBelongsToMany" -> "rulesets_ruby_rails_hasandbelongstomany.json",
-      "Rails/TimeZone" -> "rulesets_ruby_rails_timezone.json",
-      "Rails/Validation" -> "rulesets_ruby_rails_validation.json",
-      "Style" -> "rulesets_ruby_style.json"
-    )
-
-    def get(value: String): Option[String] = values.get(value)
   }
 
 }
