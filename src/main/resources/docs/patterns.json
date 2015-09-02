@@ -837,6 +837,22 @@
       "patternId": "Style_IndentationConsistency",
       "level": "Info",
       "category": "CodeStyle"
+    },
+    {
+      "patternId": "Style_IndentationWidth",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "Width",
+          "default": 2
+        }
+      ]
+    },
+    {
+      "patternId": "Style_InfiniteLoop",
+      "level": "Info",
+      "category": "CodeStyle"
     }
   ]
 }

@@ -935,5 +935,23 @@
     "title": "Indentation Consistency",
     "description": "Enforces a consistent indentation",
     "timeToFix": 5
+  },
+  {
+    "patternId": "Style_IndentationWidth",
+    "title": "Indentation Width",
+    "description": "Enforces the right width for your indentation",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Width",
+        "description": "Width of the indentation that is enabled"
+      }
+    ]
+  },
+  {
+    "patternId": "Style_InfiniteLoop",
+    "title": "Infinite Loop",
+    "description": "Enforces the usage of Loop do instead of while true for infinite loop",
+    "timeToFix": 5
   }
 ]
