@@ -761,5 +761,33 @@
     "title": "Empty Literal",
     "description": "Enforces the use of literals over class constructors",
     "timeToFix": 5
+  },
+  {
+    "patternId": "Style_Encoding",
+    "title": "Encoding",
+    "description": "Enforces the use of UTF-8 encoding",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "EnforcedStyle",
+        "description": "Style Enforced by the pattern"
+      },
+      {
+        "name": "SupportedStyles",
+        "description": "Styles supported by the pattern"
+      }
+    ]
+  },
+  {
+    "patternId": "Style_EndBlock",
+    "title": "End Block usage",
+    "description": "Prohibits the use of END block",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Style_EvenOdd",
+    "title": "Even Odd proper checking",
+    "description": "Enforces the right codeStyle for checking if a number is odd",
+    "timeToFix": 5
   }
 ]

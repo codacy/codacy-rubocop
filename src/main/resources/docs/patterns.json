@@ -679,6 +679,31 @@
       "patternId": "Style_EmptyLiteral",
       "level": "Info",
       "category": "CodeStyle"
+    },
+    {
+      "patternId": "Style_Encoding",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "always"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": ["always", "when_needed"]
+        }
+      ]
+    },
+    {
+      "patternId": "Style_EndBlock",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "Style_EvenOdd",
+      "level": "Info",
+      "category": "CodeStyle"
     }
   ]
 }
