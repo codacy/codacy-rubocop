@@ -1,0 +1,23 @@
+##Indentation Consistency
+
+Always have a consistent indentation since it provides aditional readabilit to your code
+
+**Example:**
+
+```
+# bad
+class A
+  def test
+    puts 'hello'
+     puts 'world'
+  end
+end
+
+# good
+class A
+  def test
+    puts 'hello'
+    puts 'world'
+  end
+end
+```

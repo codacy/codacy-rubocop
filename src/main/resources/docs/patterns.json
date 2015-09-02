@@ -807,6 +807,36 @@
           "default": 80
         }
       ]
+    },
+    {
+      "patternId": "Style_IfWithSemicolon",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "Style_IndentArray",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "Style_IndentHash",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "special_inside_parentheses"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": ["consistent", "special_inside_parantheses"]
+        }
+      ]
+    },
+    {
+      "patternId": "Style_IndentationConsistency",
+      "level": "Info",
+      "category": "CodeStyle"
     }
   ]
 }

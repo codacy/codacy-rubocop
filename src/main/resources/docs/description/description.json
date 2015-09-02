@@ -901,5 +901,39 @@
         "description": "Maximum length of the line"
       }
     ]
+  },
+  {
+    "patternId": "Style_IfWithSemicolon",
+    "title": "If with Semicolon usage",
+    "description": "Prohibits the usage of semicolons in if statements",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Style_IndentArray",
+    "title": "Array Indentation",
+    "description": "Enforces the right codestyle for array indentation",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Style_IndentHash",
+    "title": "Hash Indentation",
+    "description": "Enforces the right codestyle for hash indentation",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "EnforcedStyle",
+        "description": "Style Enforced by the pattern"
+      },
+      {
+        "name": "SupportedStyles",
+        "description": "Styles supported by the pattern"
+      }
+    ]
+  },
+  {
+    "patternId": "Style_IndentationConsistency",
+    "title": "Indentation Consistency",
+    "description": "Enforces a consistent indentation",
+    "timeToFix": 5
   }
 ]
