@@ -953,5 +953,23 @@
     "title": "Infinite Loop",
     "description": "Enforces the usage of Loop do instead of while true for infinite loop",
     "timeToFix": 5
+  },
+  {
+    "patternId": "Style_Lambda",
+    "title": "Lambda usage",
+    "description": "Enforces the right codestyle for lambda usage",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Style_LineEndConcatenation",
+    "title": "Line End Concatenation",
+    "description": "Enforces the codestyle for concatenating strings on end line",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Style_MethodCallParentheses",
+    "title": "Method Call Parentheses",
+    "description": "Prohibits the usage of parentheses on methods with no parameters",
+    "timeToFix": 5
   }
 ]

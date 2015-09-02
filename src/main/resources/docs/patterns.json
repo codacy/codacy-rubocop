@@ -853,6 +853,26 @@
       "patternId": "Style_InfiniteLoop",
       "level": "Info",
       "category": "CodeStyle"
+    },
+    {
+      "patternId": "Style_Lambda",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "Style_LeadingCommentSpace",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "Style_LineEndConcatenation",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "Style_MethodCallParentheses",
+      "level": "Info",
+      "category": "CodeStyle"
     }
   ]
 }
