@@ -781,6 +781,32 @@
           "default": 1
         }
       ]
+    },
+    {
+      "patternId": "Style_HashSyntax",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "ruby19"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": ["ruby19", "hash_rockets"]
+        }
+      ]
+    },
+    {
+      "patternId": "Style_IfUnlessModifier",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "MaxLineLength",
+          "default": 80
+        }
+      ]
     }
   ]
 }

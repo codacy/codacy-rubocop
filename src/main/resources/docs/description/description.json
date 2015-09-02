@@ -873,5 +873,33 @@
         "description": "Minimum length of the body"
       }
     ]
+  },
+  {
+    "patternId": "Style_HashSyntax",
+    "title": "Hash Syntax",
+    "description": "Enforces the right codestyle for hashes",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "EnforcedStyle",
+        "description": "Style Enforced by the pattern"
+      },
+      {
+        "name": "SupportedStyles",
+        "description": "Styles supported by the pattern"
+      }
+    ]
+  },
+  {
+    "patternId": "Style_IfUnlessModifier",
+    "title": "Info/Unless Modifier",
+    "description": "Refactors if and unless conditions",
+    "timeToFix": 10,
+    "parameters": [
+      {
+        "name": "MaxLineLength",
+        "description": "Maximum length of the line"
+      }
+    ]
   }
 ]
