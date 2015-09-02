@@ -789,5 +789,33 @@
     "title": "Even Odd proper checking",
     "description": "Enforces the right codeStyle for checking if a number is odd",
     "timeToFix": 5
+  },
+  {
+    "patternId": "Style_ExtraSpacing",
+    "title": "Extra Spacing in a line",
+    "description": "Enforces the checking of the number of spaces in a line",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Style_FirstParameterIndentation",
+    "title": "First Parameter Indentation",
+    "description": "Enforces the right CodeStyle for the first parameter",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "EnforcedStyle",
+        "description": "Style Enforced by the pattern"
+      },
+      {
+        "name": "SupportedStyles",
+        "description": "Styles supported by the pattern"
+      }
+    ]
+  },
+  {
+    "patternId": "Style_FlipFlop",
+    "title": "Flip Flop usage",
+    "description": "Prohibits the use of Flip Flops",
+    "timeToFix": 5
   }
 ]

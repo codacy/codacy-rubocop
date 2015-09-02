@@ -704,6 +704,31 @@
       "patternId": "Style_EvenOdd",
       "level": "Info",
       "category": "CodeStyle"
+    },
+    {
+      "patternId": "Style_ExtraSpacing",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "Style_FirstParameterIndentation",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "special_for_inner_method_call_in_parentheses"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": ["consistent", "special_for_inner_method_call", "special_for_inner_method_call_in_parentheses"]
+        }
+      ]
+    },
+    {
+      "patternId": "Style_FlipFlop",
+      "level": "Info",
+      "category": "CodeStyle"
     }
   ]
 }
