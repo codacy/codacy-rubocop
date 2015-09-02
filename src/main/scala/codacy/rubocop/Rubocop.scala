@@ -5,55 +5,17 @@ import java.nio.charset.StandardCharsets
 import java.nio.file.{Files, Path, Paths, StandardOpenOption}
 
 import codacy.dockerApi._
+import codacy.dockerApi.utils.CommandRunner
 import play.api.libs.json._
 
 import scala.io.Source
-import scala.sys.process._
 import scala.util.{Failure, Properties, Success, Try}
-
-case class RubocopLocation(line: Int, column: JsValue, length: JsValue)
-
-case class RubocopMetadata(rubocop_version: JsValue, ruby_engine: JsValue, ruby_version: JsValue, ruby_patchlevel: JsValue, ruby_platform: JsValue)
-
-case class RubocopOffense(severity: JsValue, message: JsString, cop_name: JsString, corrected: JsValue, location: RubocopLocation)
-
-case class RubocopFiles(path: JsString, offenses: Option[Seq[RubocopOffense]])
-
-case class RubocopSummary(offense_count: JsValue, target_file_count: JsValue, inspected_file_count: JsValue)
-
-case class RubocopResult(metadata: RubocopMetadata, files: Option[Seq[RubocopFiles]], summary: RubocopSummary)
-
-object RubocopResult {
-  implicit val RLocation: Format[RubocopLocation] = {
-    Json.format[RubocopLocation]
-  }
-
-  implicit val RMetaData: Format[RubocopMetadata] = {
-    Json.format[RubocopMetadata]
-  }
-
-  implicit val ROffenses: Format[RubocopOffense] = {
-    Json.format[RubocopOffense]
-  }
-
-  implicit val RFiles: Format[RubocopFiles] = {
-    Json.format[RubocopFiles]
-  }
-
-  implicit val RSummary: Format[RubocopSummary] = {
-    Json.format[RubocopSummary]
-  }
-
-  implicit val RResult: Format[RubocopResult] = {
-    Json.format[RubocopResult]
-  }
-}
 
 object Rubocop extends Tool {
 
   override def apply(path: Path, conf: Option[Seq[PatternDef]], files: Option[Set[Path]])(implicit spec: Spec): Try[Iterable[Result]] = {
     val cmd = getCommandFor(path, conf, files, spec, resultFilePath)
-    cmd.!(discardingLogger)
+    CommandRunner.exec(cmd, Some(path.toFile))
     val resultFromTool = getFileLines(resultFilePath.toFile)
     parseResult(resultFromTool)
   }
@@ -89,16 +51,17 @@ object Rubocop extends Tool {
       Seq("-c", configFile.toAbsolutePath.toString)
     }).getOrElse(Seq.empty)
 
-    val patternIds = for {
+    val patternsCmd = (for {
       patterns <- conf.getOrElse(Seq.empty)
-    } yield getPatternNameById(patterns.patternId)
+    } yield getPatternNameById(patterns.patternId)) match {
+      case patterns if patterns.nonEmpty => Seq("--only", patterns.mkString(","))
+      case _ => Seq.empty
+    }
 
     val filesCmd = files.getOrElse(Seq(path.toAbsolutePath)).map(_.toString)
 
-    Seq("rubocop", "-f", "json", "-o", outputFilePath.toAbsolutePath.toString) ++ configPath ++ Seq("--only", patternIds.mkString(",")) ++ filesCmd
+    Seq("rubocop", "-f", "json", "-o", outputFilePath.toAbsolutePath.toString) ++ configPath ++ patternsCmd ++ filesCmd
   }
-
-  private[this] lazy val discardingLogger = ProcessLogger((_: String) => ())
 
   private[this] lazy val resultFilePath = Paths.get(Properties.tmpDir, "rubocop-result.json")
 
@@ -181,14 +144,14 @@ object Rubocop extends Tool {
 
   private[this] def generateParameter(parameter: ParameterDef): String = {
     parameter.value match {
-      case JsString(value) => s"${parameter.name.value}: ${value}"
+      case JsString(value) => s"${parameter.name.value}: $value"
       case JsArray(parameters) =>
         val finalParameters = parameters.map {
           case JsString(value) => value
           case other => Json.stringify(other)
         }.mkString(s"${Properties.lineSeparator}    - ")
         s"""${parameter.name.value}:
-           |    - ${finalParameters}
+           |    - $finalParameters
          """.stripMargin
       case other => s"${parameter.name.value}: ${Json.stringify(other)}"
     }

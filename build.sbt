@@ -1,7 +1,5 @@
 import com.typesafe.sbt.packager.docker._
 
-resolvers += "Typesafe Repo" at "http://repo.typesafe.com/typesafe/releases/"
-
 name := """codacy-engine-rubocop"""
 
 version := "1.0-SNAPSHOT"
@@ -10,10 +8,15 @@ val languageVersion = "2.11.7"
 
 scalaVersion := languageVersion
 
+resolvers ++= Seq(
+  "Typesafe Repo" at "http://repo.typesafe.com/typesafe/releases/",
+  "Sonatype OSS Snapshots" at "https://oss.sonatype.org/content/repositories/releases"
+)
+
 libraryDependencies ++= Seq(
-  "com.typesafe.play" %% "play-json" % "2.3.8" withSources(),
-  "org.scala-lang.modules" %% "scala-xml" % "1.0.4" withSources(),
-  "com.codacy" %% "codacy-engine-scala-seed" % "1.1.0"
+  "com.typesafe.play" %% "play-json" % "2.3.10" withSources(),
+  "org.scala-lang.modules" %% "scala-xml" % "1.0.5" withSources(),
+  "com.codacy" %% "codacy-engine-scala-seed" % "1.3.0"
 )
 
 enablePlugins(JavaAppPackaging)
@@ -26,7 +29,7 @@ val installAll =
   s"""apk update && apk add bash curl &&
      |apk add --update ruby ruby-bundler ruby-dev &&
      |rm /var/cache/apk/* &&
-     |gem install rubocop""".stripMargin.replaceAll(System.lineSeparator(), " ")
+     |gem install rubocop:0.33.0""".stripMargin.replaceAll(System.lineSeparator(), " ")
 
 mappings in Universal <++= (resourceDirectory in Compile) map { (resourceDir: File) =>
   val src = resourceDir / "docs"
