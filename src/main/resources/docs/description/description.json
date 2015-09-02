@@ -817,5 +817,61 @@
     "title": "Flip Flop usage",
     "description": "Prohibits the use of Flip Flops",
     "timeToFix": 5
+  },
+  {
+    "patternId": "Style_For",
+    "title": "For usage",
+    "description": "Prohibits the usage of for keyword",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "EnforcedStyle",
+        "description": "Style Enforced by the pattern"
+      },
+      {
+        "name": "SupportedStyles",
+        "description": "Styles supported by the pattern"
+      }
+    ]
+  },
+  {
+    "patternId": "Style_FormatString",
+    "title": "Format String",
+    "description": "Enforces the proper CodeStyle to format a string",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "EnforcedStyle",
+        "description": "Style Enforced by the pattern"
+      },
+      {
+        "name": "SupportedStyles",
+        "description": "Styles supported by the pattern"
+      }
+    ]
+  },
+  {
+    "patternId": "Style_GlobalVars",
+    "title": "Global Variables usage",
+    "description": "Prohibits the usage of Global Variables",
+    "timeToFix": 10,
+    "parameters": [
+      {
+        "name": "AllowedVariables",
+        "description": "Variables that are allowed by the pattern"
+      }
+    ]
+  },
+  {
+    "patternId": "Style_GuardClause",
+    "title": "Guard Clause",
+    "description": "Enforces the use of Guard Clauses",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "MinBodyLength",
+        "description": "Minimum length of the body"
+      }
+    ]
   }
 ]

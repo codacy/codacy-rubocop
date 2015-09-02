@@ -729,6 +729,58 @@
       "patternId": "Style_FlipFlop",
       "level": "Info",
       "category": "CodeStyle"
+    },
+    {
+      "patternId": "Style_For",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "each"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": ["for", "each"]
+        }
+      ]
+    },
+    {
+      "patternId": "Style_FormatString",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "format"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": ["format", "sprintf", "percent"]
+        }
+      ]
+    },
+    {
+      "patternId": "Style_GlobalVars",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "AllowedVariables",
+          "default": []
+        }
+      ]
+    },
+    {
+      "patternId": "Style_GuardClause",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "MinBodyLength",
+          "default": 1
+        }
+      ]
     }
   ]
 }
