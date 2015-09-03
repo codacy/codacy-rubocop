@@ -943,6 +943,11 @@
           "default": ["aligned", "indented"]
         }
       ]
+    },
+    {
+      "patternId": "Style_MultilineTernaryOperator",
+      "level": "Info",
+      "category": "CodeStyle"
     }
   ]
 }

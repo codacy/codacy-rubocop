@@ -1049,5 +1049,11 @@
         "description": "Styles supported by the pattern"
       }
     ]
+  },
+  {
+    "patternId": "Style_MultilineTernaryOperator",
+    "title": "Multiline Ternary Operator",
+    "description": "Prohibits the usage of multiline ternary operator",
+    "timeToFix": 5
   }
 ]
