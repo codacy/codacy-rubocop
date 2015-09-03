@@ -860,11 +860,6 @@
       "category": "CodeStyle"
     },
     {
-      "patternId": "Style_LeadingCommentSpace",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
       "patternId": "Style_LineEndConcatenation",
       "level": "Info",
       "category": "CodeStyle"
@@ -968,6 +963,33 @@
       "patternId": "Style_NilComparison",
       "level": "Info",
       "category": "CodeStyle"
+    },
+    {
+      "patternId": "Style_NonNilCheck",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "IncludeSemanticChanges",
+          "default": false
+        }
+      ]
+    },
+    {
+      "patternId": "Style_Not",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "Style_NumericLiterals",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "MinDigits",
+          "default": 5
+        }
+      ]
     }
   ]
 }

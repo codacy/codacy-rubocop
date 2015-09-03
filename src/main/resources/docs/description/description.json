@@ -76,6 +76,12 @@
     "timeToFix": 5
   },
   {
+    "patternId": "Ling_EnsureReturn",
+    "title": "Ensure Return",
+    "description": "Checks for a return inside an ensure block",
+    "timeToFix": 5
+  },
+  {
     "patternId": "Lint_Eval",
     "title": "Eval Usage",
     "description": "Checks for eval usage",
@@ -434,7 +440,7 @@
         "description": "Enforces the use of ColonStyle"
       },
       {
-        "name": "EnforcedLastArgumentStyle",
+        "name": "EnforcedLastArgumentHashStyles",
         "description": "Enforces the use of LastArgumentStyle"
       },
       {
@@ -607,7 +613,7 @@
         "description": "Style Supported by the pattern"
       },
       {
-        "name": "SuppoortedStyles",
+        "name": "SupportedStyles",
         "description": "Supported Styles by the pattern"
       }
     ]
@@ -1079,5 +1085,35 @@
     "title": "Nil Comparison",
     "description": "Enforces the use of nil? for nil comparison",
     "timeToFix": 5
+  },
+  {
+    "patternId": "Style_NonNilCheck",
+    "title": "Non Nil Check",
+    "description": "Prohibits non nil checks",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "IncludeSemanticChanges",
+        "description": "Include Semantic Changes"
+      }
+    ]
+  },
+  {
+    "patternId": "Style_Not",
+    "title": "Not usage",
+    "description": "Enforces the use of ! instead of not keyword inside a condition",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Style_NumericLiterals",
+    "title": "Numeric Literals",
+    "description": "Enforces the separation every 3 digits with _",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "MinDigits",
+        "description": "Minimum digits for the pattern to start warning"
+      }
+    ]
   }
 ]
