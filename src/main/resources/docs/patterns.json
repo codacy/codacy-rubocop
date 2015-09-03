@@ -990,6 +990,11 @@
           "default": 5
         }
       ]
+    },
+    {
+      "patternId": "Style_OneLineConditional",
+      "level": "Info",
+      "category": "CodeStyle"
     }
   ]
 }

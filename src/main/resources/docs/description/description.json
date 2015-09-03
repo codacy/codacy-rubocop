@@ -76,7 +76,7 @@
     "timeToFix": 5
   },
   {
-    "patternId": "Ling_EnsureReturn",
+    "patternId": "Lint_EnsureReturn",
     "title": "Ensure Return",
     "description": "Checks for a return inside an ensure block",
     "timeToFix": 5
@@ -440,11 +440,11 @@
         "description": "Enforces the use of ColonStyle"
       },
       {
-        "name": "EnforcedLastArgumentHashStyles",
+        "name": "EnforcedLastArgumentHashStyle",
         "description": "Enforces the use of LastArgumentStyle"
       },
       {
-        "name": "EnforcedLastArgumentHashStyle",
+        "name": "EnforcedLastArgumentHashStyles",
         "description": "Enforces the use of ArgumentHashStyle"
       },
       {
@@ -1115,5 +1115,11 @@
         "description": "Minimum digits for the pattern to start warning"
       }
     ]
+  },
+  {
+    "patternId": "Style_OneLineConditional",
+    "title": "One Line Conditional",
+    "description": "Enforce the use of ternary operator instead of if/else in one line conditionals",
+    "timeToFix": 5
   }
 ]
