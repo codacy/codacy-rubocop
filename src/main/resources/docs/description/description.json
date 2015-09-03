@@ -971,5 +971,49 @@
     "title": "Method Call Parentheses",
     "description": "Prohibits the usage of parentheses on methods with no parameters",
     "timeToFix": 5
+  },
+  {
+    "patternId": "Style_MethodCalledOnDoEndBlock",
+    "title": "Method Called On Do End Block",
+    "description": "Prohibits method calling on do end block",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Style_MethodDefParentheses",
+    "title": "Method def parentheses",
+    "description": "Enforces the use of parentheses on a method definition with parameters",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "EnforcedStyle",
+        "description": "Style Enforced by the pattern"
+      },
+      {
+        "name": "SupportedStyles",
+        "description": "Styles supported by the pattern"
+      }
+    ]
+  },
+  {
+    "patternId": "Style_MethodName",
+    "title": "Method Name",
+    "description": "Enforces the right naming for your methods",
+    "timeToFix": 10,
+    "parameters": [
+      {
+        "name": "EnforcedStyle",
+        "description": "Style Enforced by the pattern"
+      },
+      {
+        "name": "SupportedStyles",
+        "description": "Styles supported by the pattern"
+      }
+    ]
+  },
+  {
+    "patternId": "Style_ModuleFunction",
+    "title": "Module Function",
+    "description": "Prohibits the usage of extend self and favors module_function instead",
+    "timeToFix": 5
   }
 ]

@@ -873,6 +873,46 @@
       "patternId": "Style_MethodCallParentheses",
       "level": "Info",
       "category": "CodeStyle"
+    },
+    {
+      "patternId": "Style_MethodCalledOnDoEndBlock",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "Style_MethodDefParentheses",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "require_parentheses"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": ["require_parentheses", "require_no_parentheses"]
+        }
+      ]
+    },
+    {
+      "patternId": "Style_MethodName",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "snake_case"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": ["snake_case", "camelCase"]
+        }
+      ]
+    },
+    {
+      "patternId": "Style_ModuleFunction",
+      "level": "Info",
+      "category": "CodeStyle"
     }
   ]
 }
