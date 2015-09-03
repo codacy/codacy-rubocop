@@ -9,3 +9,6 @@ docker run -it -v $srcDir:/src  codacy-engine-rubocop:1.0
 ```
 
 and $srcDir must contain a valid .codacy.json configuration
+
+Patterns Left behind
+

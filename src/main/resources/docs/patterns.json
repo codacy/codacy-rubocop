@@ -995,6 +995,11 @@
       "patternId": "Style_OneLineConditional",
       "level": "Info",
       "category": "CodeStyle"
+    },
+    {
+      "patternId": "Style_OpMethod",
+      "level": "Info",
+      "category": "CodeStyle"
     }
   ]
 }

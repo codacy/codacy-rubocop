@@ -1121,5 +1121,11 @@
     "title": "One Line Conditional",
     "description": "Enforce the use of ternary operator instead of if/else in one line conditionals",
     "timeToFix": 5
+  },
+  {
+    "patternId": "Style_OpMethod",
+    "title": "Operator Methods",
+    "description": "Enforces the name of the parameter of operator methods to other",
+    "timeToFix": 5
   }
 ]
