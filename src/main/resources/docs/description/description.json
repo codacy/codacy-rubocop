@@ -1055,5 +1055,29 @@
     "title": "Multiline Ternary Operator",
     "description": "Prohibits the usage of multiline ternary operator",
     "timeToFix": 5
+  },
+  {
+    "patternId": "Style_NegatedIf",
+    "title": "Negated If",
+    "description": "Enforces the usage of unless instead of negating an if",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Style_NegatedWhile",
+    "title": "Negated While",
+    "description": "Enforces the use of until instead of negating a while",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Style_NestedTernaryOperator",
+    "title": "Nested Ternary Operator",
+    "description": "Enforces the use of if/else instead of ternary operators",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Style_NilComparison",
+    "title": "Nil Comparison",
+    "description": "Enforces the use of nil? for nil comparison",
+    "timeToFix": 5
   }
 ]

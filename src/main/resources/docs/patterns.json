@@ -948,6 +948,26 @@
       "patternId": "Style_MultilineTernaryOperator",
       "level": "Info",
       "category": "CodeStyle"
+    },
+    {
+      "patternId": "Style_NegatedIf",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "Style_NegatedWhile",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "Style_NestedTernaryOperator",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "Style_NilComparison",
+      "level": "Info",
+      "category": "CodeStyle"
     }
   ]
 }
