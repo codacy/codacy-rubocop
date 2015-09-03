@@ -1015,5 +1015,17 @@
     "title": "Module Function",
     "description": "Prohibits the usage of extend self and favors module_function instead",
     "timeToFix": 5
+  },
+  {
+    "patternId": "Style_MultilineBlockChain",
+    "title": "Multiline Block Chain",
+    "description": "Avoid multi-line chain blocks usage",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Style_MultilineBlockLayout",
+    "title": "Multiline Block Layout",
+    "description": "Enforces a layout on multiline blocks",
+    "timeToFix": 5
   }
 ]

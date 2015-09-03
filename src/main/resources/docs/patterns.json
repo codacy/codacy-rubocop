@@ -913,6 +913,16 @@
       "patternId": "Style_ModuleFunction",
       "level": "Info",
       "category": "CodeStyle"
+    },
+    {
+      "patternId": "Style_MultilineBlockChain",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "Style_MultilineBlockLayout",
+      "level": "Info",
+      "category": "CodeStyle"
     }
   ]
 }
