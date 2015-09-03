@@ -1027,5 +1027,27 @@
     "title": "Multiline Block Layout",
     "description": "Enforces a layout on multiline blocks",
     "timeToFix": 5
+  },
+  {
+    "patternId": "Style_MultilineIfThen",
+    "title": "Multiline If Then",
+    "description": "Prohibits the use of multiline if then",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Style_MultilineOperationIndentation",
+    "title": "Multiline Operation Indentation",
+    "description": "Enforces the right indentation for multiline operations",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "EnforcedStyle",
+        "description": "Style Enforced by the pattern"
+      },
+      {
+        "name": "SupportedStyles",
+        "description": "Styles supported by the pattern"
+      }
+    ]
   }
 ]

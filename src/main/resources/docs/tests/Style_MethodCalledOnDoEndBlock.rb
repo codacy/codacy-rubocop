@@ -1,6 +1,6 @@
 ##Patterns: Style_MethodCalledOnDoEndBlock
 
-##Info: Style_MethodCalledOnDoEndBlock
 a do
   b
+##Info: Style_MethodCalledOnDoEndBlock
 end.c

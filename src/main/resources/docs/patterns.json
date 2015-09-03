@@ -923,6 +923,26 @@
       "patternId": "Style_MultilineBlockLayout",
       "level": "Info",
       "category": "CodeStyle"
+    },
+    {
+      "patternId": "Style_MultilineIfThen",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "Style_MultilineOperationIndentation",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "aligned"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": ["aligned", "indented"]
+        }
+      ]
     }
   ]
 }
