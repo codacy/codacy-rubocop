@@ -444,10 +444,6 @@
         "description": "Enforces the use of LastArgumentStyle"
       },
       {
-        "name": "EnforcedLastArgumentHashStyles",
-        "description": "Enforces the use of ArgumentHashStyle"
-      },
-      {
         "name": "SupportedLastArgumentHashStyles",
         "description": "Supported Styles for the pattern"
       }
