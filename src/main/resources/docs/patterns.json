@@ -30,10 +30,6 @@
         {
           "name": "EnforcedStyle",
           "default": "snake_case"
-        },
-        {
-          "name": "SupportedStyles",
-          "default": ["snake_case", "camelCase"]
         }
       ]
     },
@@ -333,10 +329,6 @@
         {
           "name": "EnforcedStyle",
           "default": "flexible"
-        },
-        {
-          "name": "SupportedStyles",
-          "default": ["strict", "flexible"]
         }
       ]
     },
@@ -353,10 +345,6 @@
         {
           "name": "EnforcedStyle",
           "default": "indent"
-        },
-        {
-          "name": "SupportedStyles",
-          "default": ["indent", "outdent"]
         }
       ]
     },
@@ -406,10 +394,6 @@
         {
           "name": "EnforcedStyle",
           "default": "with_first_parameter"
-        },
-        {
-          "name": "SupportedStyles",
-          "default": ["with_first_parameter", "with_fixed_indentation"]
         }
       ]
     },

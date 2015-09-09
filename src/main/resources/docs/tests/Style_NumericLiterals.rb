@@ -1,4 +1,4 @@
-##Patters: Style_NumericLiterals
+##Patterns: Style_NumericLiterals
 
 module Foo
   def parse_soemthing

@@ -31,11 +31,7 @@
     "parameters": [
       {
         "name": "EnforcedStyle",
-        "description": "This enforces you to use only one type for all of your files"
-      },
-      {
-        "name": "SupportedStyles",
-        "description": "Specifies the supported variable styles"
+        "description": "Variable name style [snake_case, camelCase]"
       }
     ]
   },
@@ -377,11 +373,7 @@
     "parameters": [
       {
         "name": "EnforcedStyle",
-        "description": "Style used by the pattern"
-      },
-      {
-        "name": "SupportedStyles",
-        "description": "Styles supported by the pattern"
+        "description": "Style used by the pattern [strict, flexible]"
       }
     ]
   },
@@ -399,11 +391,7 @@
     "parameters": [
       {
         "name": "EnforcedStyle",
-        "description": "Style used by the pattern"
-      },
-      {
-        "name": "SupportedStyles",
-        "description": "Supported styles by the pattern"
+        "description": "Style used by the pattern [indent, outdent]"
       }
     ]
   },
@@ -457,11 +445,7 @@
     "parameters": [
       {
         "name": "EnforcedStyle",
-        "description": "Style enforced by the pattern"
-      },
-      {
-        "name": "SupportedStyles",
-        "description": "Supported styles by the pattern"
+        "description": "Style enforced by the pattern [with_first_parameter, with_fixed_indentation]"
       }
     ]
   },
