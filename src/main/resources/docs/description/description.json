@@ -429,11 +429,7 @@
       },
       {
         "name": "EnforcedLastArgumentHashStyle",
-        "description": "Enforces the use of LastArgumentStyle"
-      },
-      {
-        "name": "SupportedLastArgumentHashStyles",
-        "description": "Supported Styles for the pattern"
+        "description": "Enforces the use of LastArgumentStyle [always_inspect, always_ignore, ignore_implicit, ignore_explicit]"
       }
     ]
   },
@@ -457,11 +453,7 @@
     "parameters": [
       {
         "name": "EnforcedStyle",
-        "description": "Style being enforced by the pattern"
-      },
-      {
-        "name": "SupportedStyles",
-        "description": "Styles supported by the pattern"
+        "description": "Style being enforced by the pattern [always, conditionals]"
       }
     ]
   },
@@ -496,11 +488,7 @@
     "parameters": [
       {
         "name": "EnforcedStyle",
-        "description": "Style enforced by the pattern"
-      },
-      {
-        "name": "SupportedStyles",
-        "description": "Styles supported by the pattern"
+        "description": "Style enforced by the pattern [percent_q, bare_percent]"
       }
     ]
   },
@@ -524,11 +512,7 @@
     "parameters": [
       {
         "name": "EnforcedStyle",
-        "description": "Style enforced by the pattern"
-      },
-      {
-        "name": "SupportedStyles",
-        "description": "Styles supported by the pattern"
+        "description": "Style enforced by the pattern [no_braces, braces, context_dependent]"
       }
     ]
   },
@@ -546,11 +530,7 @@
     "parameters": [
       {
         "name": "IndentWhenRelativeTo",
-        "description": "Defines the position of the indentation"
-      },
-      {
-        "name": "SupportedStyles",
-        "description": "Styles supported by the pattern"
+        "description": "Defines the position of the indentation [case, end]"
       }
     ]
   },
@@ -574,11 +554,7 @@
     "parameters": [
       {
         "name": "EnforcedStyle",
-        "description": "Style enforced by the pattern"
-      },
-      {
-        "name": "SupportedStyles",
-        "description": "Styles supported by the pattern"
+        "description": "Style enforced by the pattern [nested, compact]"
       }
     ]
   },
@@ -590,11 +566,7 @@
     "parameters": [
       {
         "name": "EnforcedStyle",
-        "description": "Style Supported by the pattern"
-      },
-      {
-        "name": "SupportedStyles",
-        "description": "Supported Styles by the pattern"
+        "description": "Style Supported by the pattern [is_a?, kind_of?]"
       }
     ]
   },
@@ -630,11 +602,7 @@
     "parameters": [
       {
         "name": "EnforcedStyle",
-        "description": "Style supported by the pattern"
-      },
-      {
-        "name": "SupportedStyles",
-        "description": "Styles supported by the pattern"
+        "description": "Style supported by the pattern [backticks, percent_x, mixed]"
       }
     ]
   },
@@ -676,11 +644,7 @@
     "parameters": [
       {
         "name": "EnforcedStyle",
-        "description": "Style enforced by the pattern"
-      },
-      {
-        "name": "SupportedStyles",
-        "description": "Styles supported by the pattern"
+        "description": "Style enforced by the pattern [leading, trailing]"
       }
     ]
   },
@@ -734,11 +698,7 @@
     "parameters": [
       {
         "name": "EnforcedStyle",
-        "description": "Style enforced by the pattern"
-      },
-      {
-        "name": "SupportedStyles",
-        "description": "Styles supported by the pattern"
+        "description": "Style enforced by the pattern [empty_lines, no_empty_lines]"
       }
     ]
   },
@@ -756,11 +716,7 @@
     "parameters": [
       {
         "name": "EnforcedStyle",
-        "description": "Style Enforced by the pattern"
-      },
-      {
-        "name": "SupportedStyles",
-        "description": "Styles supported by the pattern"
+        "description": "Style Enforced by the pattern [always, when_needed]"
       }
     ]
   },
@@ -790,11 +746,7 @@
     "parameters": [
       {
         "name": "EnforcedStyle",
-        "description": "Style Enforced by the pattern"
-      },
-      {
-        "name": "SupportedStyles",
-        "description": "Styles supported by the pattern"
+        "description": "Style Enforced by the pattern [consistent, special_for_inner_method_call, special_for_inner_method_call_in_parentheses]"
       }
     ]
   },
@@ -812,11 +764,7 @@
     "parameters": [
       {
         "name": "EnforcedStyle",
-        "description": "Style Enforced by the pattern"
-      },
-      {
-        "name": "SupportedStyles",
-        "description": "Styles supported by the pattern"
+        "description": "Style Enforced by the pattern [for, each]"
       }
     ]
   },
@@ -828,11 +776,7 @@
     "parameters": [
       {
         "name": "EnforcedStyle",
-        "description": "Style Enforced by the pattern"
-      },
-      {
-        "name": "SupportedStyles",
-        "description": "Styles supported by the pattern"
+        "description": "Style Enforced by the pattern [format, sprintf, percent]"
       }
     ]
   },
@@ -868,11 +812,7 @@
     "parameters": [
       {
         "name": "EnforcedStyle",
-        "description": "Style Enforced by the pattern"
-      },
-      {
-        "name": "SupportedStyles",
-        "description": "Styles supported by the pattern"
+        "description": "Style Enforced by the pattern [ruby19, hash_rockets]"
       }
     ]
   },
@@ -908,11 +848,7 @@
     "parameters": [
       {
         "name": "EnforcedStyle",
-        "description": "Style Enforced by the pattern"
-      },
-      {
-        "name": "SupportedStyles",
-        "description": "Styles supported by the pattern"
+        "description": "Style Enforced by the pattern [consistent, special_inside_parantheses]"
       }
     ]
   },
@@ -972,11 +908,7 @@
     "parameters": [
       {
         "name": "EnforcedStyle",
-        "description": "Style Enforced by the pattern"
-      },
-      {
-        "name": "SupportedStyles",
-        "description": "Styles supported by the pattern"
+        "description": "Style Enforced by the pattern [require_parentheses, require_no_parentheses]"
       }
     ]
   },
@@ -988,11 +920,7 @@
     "parameters": [
       {
         "name": "EnforcedStyle",
-        "description": "Style Enforced by the pattern"
-      },
-      {
-        "name": "SupportedStyles",
-        "description": "Styles supported by the pattern"
+        "description": "Style Enforced by the pattern [snake_case, camelCase]"
       }
     ]
   },
@@ -1028,11 +956,7 @@
     "parameters": [
       {
         "name": "EnforcedStyle",
-        "description": "Style Enforced by the pattern"
-      },
-      {
-        "name": "SupportedStyles",
-        "description": "Styles supported by the pattern"
+        "description": "Style Enforced by the pattern [aligned, indented]"
       }
     ]
   },

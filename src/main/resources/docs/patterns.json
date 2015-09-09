@@ -379,10 +379,6 @@
         {
           "name": "EnforcedLastArgumentHashStyle",
           "default": "always_inspect"
-        },
-        {
-          "name": "SupportedLastArgumentHashStyles",
-          "default": ["always_inspect", "always_ignore", "ignore_implicit", "ignore_explicit"]
         }
       ]
     },
@@ -405,10 +401,6 @@
         {
           "name": "EnforcedStyle",
           "default": "always"
-        },
-        {
-          "name": "SupportedStyles",
-          "default": ["always", "conditionals"]
         }
       ]
     },
@@ -440,10 +432,6 @@
         {
           "name": "EnforcedStyle",
           "default": "bare_percent"
-        },
-        {
-          "name": "SupportedStyles",
-          "default": ["percent_q", "bare_percent"]
         }
       ]
     },
@@ -465,10 +453,6 @@
         {
           "name": "EnforcedStyle",
           "default": "no_braces"
-        },
-        {
-          "name": "SupportedStyles",
-          "default": ["no_braces", "braces", "context_dependent"]
         }
       ]
     },
@@ -485,10 +469,6 @@
         {
           "name": "IndentWhenRelativeTo",
           "default": "case"
-        },
-        {
-          "name": "SupportedStyles",
-          "default": ["case", "end"]
         }
       ]
     },
@@ -510,10 +490,6 @@
         {
           "name": "EnforcedStyle",
           "default": "nested"
-        },
-        {
-          "name": "SupportedStyles",
-          "default": ["nested", "compact"]
         }
       ]
     },
@@ -525,10 +501,6 @@
         {
           "name": "EnforcedStyle",
           "default": "is_a?"
-        },
-        {
-          "name": "SupportedStyles",
-          "default": ["is_a?", "kind_of?"]
         }
       ]
     },
@@ -560,10 +532,6 @@
         {
           "name": "EnforcedStyle",
           "default": "backticks"
-        },
-        {
-          "name": "SupportedStyles",
-          "default": ["backticks", "percent_x", "mixed"]
         }
       ]
     },
@@ -601,10 +569,6 @@
         {
           "name": "EnforcedStyle",
           "default": "leading"
-        },
-        {
-          "name": "SupportedStyles",
-          "default": ["leading", "trailing"]
         }
       ]
     },
@@ -652,10 +616,6 @@
         {
           "name": "EnforcedStyle",
           "default": "no_empty_lines"
-        },
-        {
-          "name": "SupportedStyles",
-          "default": ["empty_lines", "no_empty_lines"]
         }
       ]
     },
@@ -672,10 +632,6 @@
         {
           "name": "EnforcedStyle",
           "default": "always"
-        },
-        {
-          "name": "SupportedStyles",
-          "default": ["always", "when_needed"]
         }
       ]
     },
@@ -702,10 +658,6 @@
         {
           "name": "EnforcedStyle",
           "default": "special_for_inner_method_call_in_parentheses"
-        },
-        {
-          "name": "SupportedStyles",
-          "default": ["consistent", "special_for_inner_method_call", "special_for_inner_method_call_in_parentheses"]
         }
       ]
     },
@@ -722,10 +674,6 @@
         {
           "name": "EnforcedStyle",
           "default": "each"
-        },
-        {
-          "name": "SupportedStyles",
-          "default": ["for", "each"]
         }
       ]
     },
@@ -737,10 +685,6 @@
         {
           "name": "EnforcedStyle",
           "default": "format"
-        },
-        {
-          "name": "SupportedStyles",
-          "default": ["format", "sprintf", "percent"]
         }
       ]
     },
@@ -774,10 +718,6 @@
         {
           "name": "EnforcedStyle",
           "default": "ruby19"
-        },
-        {
-          "name": "SupportedStyles",
-          "default": ["ruby19", "hash_rockets"]
         }
       ]
     },
@@ -810,10 +750,6 @@
         {
           "name": "EnforcedStyle",
           "default": "special_inside_parentheses"
-        },
-        {
-          "name": "SupportedStyles",
-          "default": ["consistent", "special_inside_parantheses"]
         }
       ]
     },
@@ -866,10 +802,6 @@
         {
           "name": "EnforcedStyle",
           "default": "require_parentheses"
-        },
-        {
-          "name": "SupportedStyles",
-          "default": ["require_parentheses", "require_no_parentheses"]
         }
       ]
     },
@@ -881,10 +813,6 @@
         {
           "name": "EnforcedStyle",
           "default": "snake_case"
-        },
-        {
-          "name": "SupportedStyles",
-          "default": ["snake_case", "camelCase"]
         }
       ]
     },
@@ -916,10 +844,6 @@
         {
           "name": "EnforcedStyle",
           "default": "aligned"
-        },
-        {
-          "name": "SupportedStyles",
-          "default": ["aligned", "indented"]
         }
       ]
     },
