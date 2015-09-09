@@ -1031,5 +1031,65 @@
     "title": "Operator Methods",
     "description": "Enforces the name of the parameter of operator methods to other",
     "timeToFix": 5
+  },
+  {
+    "patternId": "Lint_BlockAlignment",
+    "title": "Block Alignment",
+    "description": "Enforces the name of the parameter of operator methods to other",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Lint_Debugger",
+    "title": "Debugger",
+    "description": "Prohibits calls to debugger or pry",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Lint_DefEndAlignment",
+    "title": "DefEnd Alignment",
+    "description": "Enforces correct indentation of the end keyword",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "AlignWith",
+        "description": "Alignment style according to the line with def [start_of_line, def]"
+      }
+    ]
+  },
+  {
+    "patternId": "Lint_DeprecatedClassMethods",
+    "title": "Deprecated Class Methods",
+    "description": "Prohibits the usage of deprecated class methods",
+    "timeToFix": 30
+  },
+  {
+    "patternId": "Lint_EndAlignment",
+    "title": "End Alignment",
+    "description": "Enforces correct indentation of the end keyword",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "AlignWith",
+        "description": "Alignment style according to the line with def [keyword, variable]"
+      }
+    ]
+  },
+  {
+    "patternId": "Lint_EndInMethod",
+    "title": "END In Method",
+    "description": "Prohibits END in method definition",
+    "timeToFix": 10
+  },
+  {
+    "patternId": "Lint_HandleExceptions",
+    "title": "Handle Exceptions",
+    "description": "Prohibits rescue blocks with no body",
+    "timeToFix": 15
+  },
+  {
+    "patternId": "Lint_NonLocalExitFromIterator",
+    "title": "Non Local Exit From Iterator",
+    "description": "Prohibits non-local exit from iterator without return value",
+    "timeToFix": 20
   }
 ]

@@ -908,6 +908,58 @@
       "patternId": "Style_OpMethod",
       "level": "Info",
       "category": "CodeStyle"
+    },
+    {
+      "patternId": "Lint_BlockAlignment",
+      "level": "Warning",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "Lint_Debugger",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "Lint_DefEndAlignment",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "AlignWith",
+          "default": "start_of_line"
+        }
+      ]
+    },
+    {
+      "patternId": "Lint_DeprecatedClassMethods",
+      "level": "Warning",
+      "category": "ErrorProne"
+    },
+    {
+      "patternId": "Lint_EndAlignment",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "AlignWith",
+          "default": "keyword"
+        }
+      ]
+    },
+    {
+      "patternId": "Lint_EndInMethod",
+      "level": "Warning",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "Lint_HandleExceptions",
+      "level": "Warning",
+      "category": "ErrorProne"
+    },
+    {
+      "patternId": "Lint_NonLocalExitFromIterator",
+      "level": "Warning",
+      "category": "CodeStyle"
     }
   ]
 }
