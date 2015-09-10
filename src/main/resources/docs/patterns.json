@@ -275,7 +275,7 @@
           "default": 5
         },
         {
-          "name": "CountKeyArgs",
+          "name": "CountKeywordArgs",
           "default": true
         }
       ]
@@ -960,6 +960,150 @@
       "patternId": "Lint_NonLocalExitFromIterator",
       "level": "Warning",
       "category": "CodeStyle"
+    },
+    {
+      "patternId": "Style_AsciiIdentifiers",
+      "level": "Warning",
+      "category": "Compatibility"
+    },
+    {
+      "patternId": "Style_BlockComments",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "Style_BlockDelimiters",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "line_count_based"
+        },
+        {
+          "name": "ProceduralMethods",
+          "default": ["benchmark", "bm", "bmbm", "create", "each_with_object", "measure", "new", "realtime", "tap", "with_object"]
+        },
+        {
+          "name": "FunctionalMethods",
+          "default": ["let", "let!", "subject", "watch"]
+        },
+        {
+          "name": "IgnoredMethods",
+          "default": ["lambda", "proc", "it"]
+        }
+      ]
+    },
+    {
+      "patternId": "Style_Copyright",
+      "level": "Info",
+      "category": "Documentation",
+      "parameters": [
+        {
+          "name": "Notice",
+          "default": "'^Copyright (\\(c\\) )?2[0-9]{3} .+'"
+        }
+      ]
+    },
+    {
+      "patternId": "Style_Documentation",
+      "level": "Info",
+      "category": "Documentation"
+    },
+    {
+      "patternId": "Style_ElseAlignment",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "Style_EmptyLinesAroundClassBody",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "no_empty_lines"
+        }
+      ]
+    },
+    {
+      "patternId": "Style_EmptyLinesAroundMethodBody",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "Style_EmptyLinesAroundModuleBody",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "no_empty_lines"
+        }
+      ]
+    },
+    {
+      "patternId": "Style_EndOfLine",
+      "level": "Warning",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "Style_FileName",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "Exclude",
+          "default": []
+        }
+      ]
+    },
+    {
+      "patternId": "Style_IndentHash",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "special_inside_parentheses"
+        }
+      ]
+    },
+    {
+      "patternId": "Style_InlineComment",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "Style_LambdaCall",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "call"
+        }
+      ]
+    },
+    {
+      "patternId": "Style_LeadingCommentSpace",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "Style_Next",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "skip_modifier_ifs"
+        },
+        {
+          "name": "MinBodyLength",
+          "default": 3
+        }
+      ]
     }
   ]
 }

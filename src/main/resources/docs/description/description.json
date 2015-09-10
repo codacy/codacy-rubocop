@@ -312,7 +312,7 @@
         "description": "Maximum number of arguments a method can take"
       },
       {
-        "name": "CountKeyArgs",
+        "name": "CountKeywordArgs",
         "description": "Includes args on the counting of the number of arguments"
       }
     ]
@@ -1091,5 +1091,153 @@
     "title": "Non Local Exit From Iterator",
     "description": "Prohibits non-local exit from iterator without return value",
     "timeToFix": 20
+  },
+  {
+    "patternId": "Style_AsciiIdentifiers",
+    "title": "Operator Methods",
+    "description": "Prohibits non-ascii identifier names",
+    "timeToFix": 10
+  },
+  {
+    "patternId": "Style_BlockComments",
+    "title": "Block Comments",
+    "description": "Prohibits the use of block comments",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Style_BlockDelimiters",
+    "title": "Block Delimiters",
+    "description": "Enforces block delimiters style",
+    "timeToFix": 10,
+    "parameters": [
+      {
+        "name": "EnforcedStyle",
+        "description": "The style to apply to block delimiters [line_count_based, semantic]"
+      },
+      {
+        "name": "ProceduralMethods",
+        "description": "Methods you want to be considered procedural in nature, but look functional"
+      },
+      {
+        "name": "FunctionalMethods",
+        "description": "Methods you want to be considered functional in nature, but look functional"
+      },
+      {
+        "name": "IgnoredMethods",
+        "description": "Methods to be ignored by this pattern"
+      }
+    ]
+  },
+  {
+    "patternId": "Style_Copyright",
+    "title": "Copyright",
+    "description": "Enforce copyright notice in each source file",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Notice",
+        "description": "Regular expression to match copyright notice"
+      }
+    ]
+  },
+  {
+    "patternId": "Style_Documentation",
+    "title": "Documentation",
+    "description": "Enforces top-level documentation of classes and modules",
+    "timeToFix": 30
+  },
+  {
+    "patternId": "Style_ElseAlignment",
+    "title": "Else Alignment",
+    "description": "Enforces else keyword indentation",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Style_EmptyLinesAroundClassBody",
+    "title": "Empty Lines Around Class Body",
+    "description": "Enforces lines around class body style",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "EnforcedStyle",
+        "description": "The style that the class body should follow [no_empty_lines, empty_lines]"
+      }
+    ]
+  },
+  {
+    "patternId": "Style_EmptyLinesAroundMethodBody",
+    "title": "Empty Lines Around Block Body",
+    "description": "Enforces lines around block body style",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Style_EmptyLinesAroundModuleBody",
+    "title": "Empty lines Around Module Body",
+    "description": "Enforces lines around module body style",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "EnforcedStyle",
+        "description": "The style that the module body should follow [no_empty_lines, empty_lines]"
+      }
+    ]
+  },
+  {
+    "patternId": "Style_EndOfLine",
+    "title": "End Of Line (windows-style)",
+    "description": "Prohibits carriage return character (windows-style) at the end of line",
+    "timeToFix": 10
+  },
+  {
+    "patternId": "Style_FileName",
+    "title": "File Name",
+    "description": "Enforces source filenames to be in snake_case",
+    "timeToFix": 10,
+    "parameters": [
+      {
+        "name": "Exclude",
+        "description": "List of comma-separated files to be ignored by this pattern"
+      }
+    ]
+  },
+  {
+    "patternId": "Style_InlineComment",
+    "title": "Inline Comment",
+    "description": "Prohibits inline comments",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Style_LambdaCall",
+    "title": "Lambda Call",
+    "description": "Enforces a coherent lambda call style",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "EnforcedStyle",
+        "description": "The style you prefer to use when you use lambda calls [call, braces]"
+      }
+    ]
+  },
+  {
+    "patternId": "Style_LeadingCommentSpace",
+    "title": "Leading Comment Space",
+    "description": "Enforces a space after a # in a line comment",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Style_Next",
+    "title": "Next",
+    "description": "Enforces the use of next instead of a condition at the end",
+    "timeToFix": 10,
+    "parameters": [
+      {
+        "name": "EnforcedStyle",
+        "description": "The style to use in this pattern [skip_modifier_ifs, always]"
+      },
+      {
+        "name": "MinBodyLength",
+        "description": "The minimum number of lines in a body to trigger this pattern"
+      }
+    ]
   }
 ]
