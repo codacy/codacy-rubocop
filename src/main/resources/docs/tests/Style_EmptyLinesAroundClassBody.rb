@@ -2,8 +2,6 @@
 
 
 class Test
-  ##Info: Style_EmptyLinesAroundClassBody
-
    def something
      print "Hello"
    end
