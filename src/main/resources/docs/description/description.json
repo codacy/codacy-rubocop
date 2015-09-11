@@ -1093,12 +1093,6 @@
     "timeToFix": 20
   },
   {
-    "patternId": "Style_AsciiIdentifiers",
-    "title": "Operator Methods",
-    "description": "Prohibits non-ascii identifier names",
-    "timeToFix": 10
-  },
-  {
     "patternId": "Style_BlockComments",
     "title": "Block Comments",
     "description": "Prohibits the use of block comments",
@@ -1223,21 +1217,5 @@
     "title": "Leading Comment Space",
     "description": "Enforces a space after a # in a line comment",
     "timeToFix": 5
-  },
-  {
-    "patternId": "Style_Next",
-    "title": "Next",
-    "description": "Enforces the use of next instead of a condition at the end",
-    "timeToFix": 10,
-    "parameters": [
-      {
-        "name": "EnforcedStyle",
-        "description": "The style to use in this pattern [skip_modifier_ifs, always]"
-      },
-      {
-        "name": "MinBodyLength",
-        "description": "The minimum number of lines in a body to trigger this pattern"
-      }
-    ]
   }
 ]

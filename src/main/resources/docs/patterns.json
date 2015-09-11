@@ -962,11 +962,6 @@
       "category": "CodeStyle"
     },
     {
-      "patternId": "Style_AsciiIdentifiers",
-      "level": "Warning",
-      "category": "Compatibility"
-    },
-    {
       "patternId": "Style_BlockComments",
       "level": "Info",
       "category": "CodeStyle"
@@ -1089,21 +1084,6 @@
       "patternId": "Style_LeadingCommentSpace",
       "level": "Info",
       "category": "CodeStyle"
-    },
-    {
-      "patternId": "Style_Next",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "EnforcedStyle",
-          "default": "skip_modifier_ifs"
-        },
-        {
-          "name": "MinBodyLength",
-          "default": 3
-        }
-      ]
     }
   ]
 }
