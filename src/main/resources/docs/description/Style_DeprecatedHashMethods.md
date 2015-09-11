@@ -14,3 +14,5 @@ hash.has_value?(value)
 hash.key?(:test)
 hash.value?(value)
 ```
+
+[Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Style/DeprecatedHashMethods)

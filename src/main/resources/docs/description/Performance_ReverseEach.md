@@ -12,3 +12,5 @@ So it is better to change the reverse.each to reverse_each
 #good
 [].reverse_each
 ```
+
+[Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Performance/ReverseEach)

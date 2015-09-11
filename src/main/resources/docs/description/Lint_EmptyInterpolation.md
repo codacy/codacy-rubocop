@@ -8,3 +8,5 @@ Checks for empty interpolation in strings since they are pointless and should be
 
 "result is #{}"
 ```
+
+[Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Lint/EmptyInterpolation)

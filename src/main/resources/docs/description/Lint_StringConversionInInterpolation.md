@@ -9,3 +9,5 @@ Checks for string conversion in interpolation, which is redundant
 #change it to this
 "result is #{something}"
 ```
+
+[Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Lint/StringConversionInInterpolation)

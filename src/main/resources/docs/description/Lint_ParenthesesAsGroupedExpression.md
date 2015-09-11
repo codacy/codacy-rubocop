@@ -10,3 +10,5 @@ f (3 + 1)
 #Good
 f(3 + 1)
 ```
+
+[Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Lint/ParenthesesAsGroupedExpression)

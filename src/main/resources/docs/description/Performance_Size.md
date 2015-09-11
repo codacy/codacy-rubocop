@@ -11,3 +11,5 @@ Choose ```size``` over ```count``` since size comes from the same implementation
 #good
 [1, 2, 3].size
 ```
+
+[Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Performance/Size)

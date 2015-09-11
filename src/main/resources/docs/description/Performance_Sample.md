@@ -12,3 +12,5 @@ Choose using ```sample``` over ```shuffle.first, shuffle.last, shuffle[]``` sinc
 #good
 [1, 2, 3].sample
 ```
+
+[Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Performance/Sample)

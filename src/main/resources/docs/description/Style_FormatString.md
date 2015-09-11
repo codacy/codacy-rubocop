@@ -13,3 +13,5 @@ format('%d %d', 20, 10)
  # or
 format('%{first} %{second}', first: 20, second: 10)
 ```
+
+[Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Style/FormatString)

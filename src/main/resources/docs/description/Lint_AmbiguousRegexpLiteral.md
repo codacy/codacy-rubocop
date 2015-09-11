@@ -11,3 +11,5 @@ do_something /pattern/i
 #With parentheses, there's no ambiguity.
 do_something(/pattern/i)
 ```
+
+[Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Lint/AmbiguousRegexpLiteral)

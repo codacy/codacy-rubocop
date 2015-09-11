@@ -11,3 +11,5 @@ hash = { :one => 1, :two => 2, :three => 3 }
 # good
 hash = { one: 1, two: 2, three: 3 }
  ```
+
+[Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Style/HashSyntax)

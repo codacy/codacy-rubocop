@@ -23,3 +23,5 @@ ensure
   #ensure that this code always runs, no matter what
 
 ```
+
+[Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Lint/EmptyEnsure)

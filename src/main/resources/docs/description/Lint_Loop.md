@@ -19,3 +19,5 @@ begin
   x+=1
 end while x < 0
 ```
+
+[Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Lint/Loop)

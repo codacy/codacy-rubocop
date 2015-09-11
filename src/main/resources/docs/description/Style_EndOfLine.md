@@ -6,4 +6,4 @@ When transferring files from one platform to another, you can experience that EN
 
 Please consider removing all carriage return from your project.
 
-[SOURCE](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Style/EndOfLine)
+[Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Style/EndOfLine)

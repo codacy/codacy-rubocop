@@ -12,3 +12,5 @@ than non ascii characters.
 # good
 # good
 ```
+
+[Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Style/AsciiComments)

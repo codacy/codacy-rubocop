@@ -12,3 +12,5 @@ char = ?c
 # good
 char = 'c'
 ```
+
+[Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Style/CharacterLiteral)

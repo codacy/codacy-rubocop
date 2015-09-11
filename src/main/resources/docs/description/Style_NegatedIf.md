@@ -17,3 +17,5 @@ do_something unless some_condition
 # another good option
 some_condition || do_something
  ```
+
+[Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Style/NegatedIf)

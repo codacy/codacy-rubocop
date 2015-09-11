@@ -20,3 +20,5 @@ menu_item =
   ['Spam', 'Spam', 'Spam', 'Spam', 'Spam', 'Spam', 'Spam', 'Spam',
    'Baked beans', 'Spam', 'Spam', 'Spam', 'Spam', 'Spam']
 ```
+
+[Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Style/IndentArray)

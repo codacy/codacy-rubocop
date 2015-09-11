@@ -21,3 +21,5 @@ class A
   end
 end
 ```
+
+[Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Style/IndentationConsistency)

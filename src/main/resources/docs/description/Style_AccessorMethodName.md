@@ -9,3 +9,5 @@ end
 def attribute #getter
 end
 ```
+
+[Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Style/AccessorMethodName)

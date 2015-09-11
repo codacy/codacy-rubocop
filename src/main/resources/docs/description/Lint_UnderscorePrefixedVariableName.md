@@ -16,3 +16,5 @@ def something(x)
   used_var = something_else(x)
 end
 ```
+
+[Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Lint/UnderscorePrefixedVariableName)

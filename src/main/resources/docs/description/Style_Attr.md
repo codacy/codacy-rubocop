@@ -14,3 +14,5 @@ attr :one, :two, :three
 attr_accessor :something
 attr_reader :one, :two, :three
 ```
+
+[Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Style/Attr)

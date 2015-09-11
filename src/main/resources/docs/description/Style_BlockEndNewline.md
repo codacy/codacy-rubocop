@@ -14,3 +14,5 @@ blah do |i|
   foo(i)
 end
 ```
+
+[Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Style/BlockEndNewline)

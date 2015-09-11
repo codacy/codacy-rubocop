@@ -27,3 +27,5 @@ def compute_thing(thing)
   partial_compute(thing)
 end
 ```
+
+[Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Style/GuardClause)

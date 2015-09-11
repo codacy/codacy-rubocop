@@ -19,3 +19,5 @@ end
 
 Parent.print_class_var # => will print "child"
 ```
+
+[Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Style/ClassVars)

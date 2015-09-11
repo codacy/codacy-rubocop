@@ -24,3 +24,5 @@ l = lambda do |a, b|
   tmp * b / 50
 end
  ```
+
+[Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Style/Lambda)

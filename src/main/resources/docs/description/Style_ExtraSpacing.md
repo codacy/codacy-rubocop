@@ -12,3 +12,5 @@ name     = "RuboCop"
 # good
 website  = "https://github.com/bbatsov/rubocop"
 ```
+
+[Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Style/ExtraSpacing)

@@ -11,3 +11,5 @@ result = if some_condition then something else something_else end
 # good
 result = some_condition ? something : something_else
 ```
+
+[Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Style/OneLineConditional)

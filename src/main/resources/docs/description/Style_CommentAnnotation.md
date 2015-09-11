@@ -19,3 +19,5 @@ line with no note. This usage should be the exception to the rule
 * Use HACK to note code smells where questionable coding practices were used and should be refactored away.
 
 * Use REVIEW to note anything that should be looked at to confirm it is working as intended.
+
+[Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Style/CommentAnnotation)

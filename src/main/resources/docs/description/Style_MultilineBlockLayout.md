@@ -33,3 +33,5 @@ blah { |i|
   bar(i)
 }
 ```
+
+[Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Style/MultilineBlockLayout)

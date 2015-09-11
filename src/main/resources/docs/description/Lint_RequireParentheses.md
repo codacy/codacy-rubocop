@@ -15,3 +15,5 @@ Checks for expressions where there is a call to a predicate method with at least
 
   end
  ```
+
+[Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Lint/RequireParentheses)

@@ -13,3 +13,5 @@ do_something *array
 do_something(*array)
 ```
 
+
+[Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Lint/AmbiguousOperator)

@@ -2,4 +2,4 @@ You should have top-level documentation of classes and modules. Classes with no 
 
 The documentation requirement is annulled if the class or module has a "#:nodoc:" comment next to it. Likewise, "#:nodoc: all" does the same for all its children.
 
-[SOURCE](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Style/Documentation)
+[Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Style/Documentation)

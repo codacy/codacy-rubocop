@@ -13,3 +13,5 @@ file = File.open('file') do
   ...
 end
 ```
+
+[Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Style/AutoResourceCleanup)

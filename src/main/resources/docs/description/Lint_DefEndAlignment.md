@@ -6,4 +6,4 @@ Two modes are supported through the AlignWith configuration parameter. If it's s
     private def foo
     end
 
-[SOURCE](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Lint/DefEndAlignment)
+[Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Lint/DefEndAlignment)

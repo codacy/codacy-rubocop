@@ -11,3 +11,5 @@ SomeClass::some_method
 # good
 SomeClass.some_method
 ```
+
+[Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Style/ColonMethodCall)

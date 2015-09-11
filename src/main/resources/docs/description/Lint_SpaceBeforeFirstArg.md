@@ -10,3 +10,5 @@ something?x
 something? x
 
 ```
+
+[Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Lint/SpaceBeforeFirstArg)

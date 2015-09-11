@@ -12,3 +12,5 @@ Time.zone.today
 Date.today
 date.to_time
 ```
+
+[Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Rails/Date)

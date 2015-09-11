@@ -13,3 +13,5 @@ end
 if x.nil?
 end
 ```
+
+[Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Style/NilComparison)

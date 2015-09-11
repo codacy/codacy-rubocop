@@ -9,3 +9,5 @@ def something
   sum = 4 + 5 #you don't need the variable therefore useless assignment
 end
 ```
+
+[Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Lint/UselessAssignment)

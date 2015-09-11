@@ -16,3 +16,5 @@ def something(hello, world)
 
 end
 ```
+
+[Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Style/MethodDefParentheses)

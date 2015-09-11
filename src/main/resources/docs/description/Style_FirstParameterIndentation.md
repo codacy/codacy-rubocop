@@ -15,3 +15,5 @@ some_method(
   first_param,
 second_param)
 ```
+
+[Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Style/FirstParameterIndentation)

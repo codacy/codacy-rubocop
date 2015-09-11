@@ -31,3 +31,5 @@ array.select(&:value).count
 Model.select('field AS field_one').count
 Model.select(:value).count
 ```
+
+[Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Performance/Count)

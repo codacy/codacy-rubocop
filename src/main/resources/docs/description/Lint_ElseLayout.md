@@ -20,3 +20,5 @@ else
   and_that
 end
 ```
+
+[Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Lint/ElseLayout)

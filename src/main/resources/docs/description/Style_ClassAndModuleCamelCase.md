@@ -15,3 +15,5 @@ class SomeClass
   ...
 end
 ```
+
+[Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Style/ClassAndModuleCamelCase)

@@ -17,3 +17,5 @@ sed diam voluptua at vero eos et accusam et justo duo dolores et
 ea rebum stet clita kasd gubergren no sea takimata
 sanctus est lorem ipsum dolor sit amet'
 ```
+
+[Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Metrics/LineLength)

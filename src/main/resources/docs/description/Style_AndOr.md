@@ -14,3 +14,5 @@ end
 if some_condition && some_other_condition
 end
 ```
+
+[Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Style/AndOr)

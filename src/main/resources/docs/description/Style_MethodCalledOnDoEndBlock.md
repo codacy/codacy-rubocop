@@ -23,3 +23,5 @@ end.map { |name| name.upcase }
 # good
 names.select { |name| name.start_with?('S') }.map(&:upcase)
 ```
+
+[Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Style/MethodCalledOnDoEndBlock)

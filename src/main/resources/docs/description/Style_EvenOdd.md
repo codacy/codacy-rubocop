@@ -12,3 +12,5 @@ if x % 2 == 0
 # good
 if x.even?
 ```
+
+[Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Style/EvenOdd)

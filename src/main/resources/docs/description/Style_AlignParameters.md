@@ -13,3 +13,5 @@ bar)
 some_method(foo,
             bar)
 ```
+
+[Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Style/AlignParameters)

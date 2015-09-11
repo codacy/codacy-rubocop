@@ -10,3 +10,5 @@ def something(used, unused)
   puts used
 end
 ```
+
+[Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Lint/UnusedMethodArgument)

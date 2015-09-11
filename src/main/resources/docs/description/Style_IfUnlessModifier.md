@@ -16,3 +16,5 @@ do_something if some_condition
 # another good option
 some_condition && do_something
 ```
+
+[Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Style/IfUnlessModifier)

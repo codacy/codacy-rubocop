@@ -11,3 +11,5 @@ To increase the performance of your code use **flat_map** instead of using **map
 #good
 [1, 2, 3, 4].flat_map { |e| [e, e] }
 ```
+
+[Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Performance/FlatMap)

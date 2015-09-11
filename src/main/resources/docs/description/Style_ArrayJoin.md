@@ -12,3 +12,5 @@ of your code
 #good
 %w(one two three).join(',')
 ```
+
+[Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Style/ArrayJoin)

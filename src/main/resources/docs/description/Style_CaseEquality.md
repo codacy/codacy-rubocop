@@ -13,3 +13,5 @@ Array === something
 # good
 something.is_a?(Array)
 ```
+
+[Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Style/CaseEquality)

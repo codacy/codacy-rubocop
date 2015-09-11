@@ -27,3 +27,5 @@ one.two.three
 one.two.three.
   four
 ```
+
+[Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Style/DotPosition)

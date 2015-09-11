@@ -17,3 +17,5 @@ def value_set?
   !@some_boolean.nil?
 end
 ```
+
+[Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Style/NonNilCheck)

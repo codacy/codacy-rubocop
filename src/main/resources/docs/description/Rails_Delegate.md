@@ -14,3 +14,5 @@ end
 delegate :bar, to: :foo
 
 ```
+
+[Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Rails/Delegate)

@@ -11,3 +11,5 @@ Checks if there is some interpolation with a literal inside it it is pointless s
 #Do this instead since it is a fixed number
 "result is 10"
 ```
+
+[Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Lint/LiteralInInterpolation)

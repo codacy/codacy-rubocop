@@ -29,4 +29,4 @@ menu_item =
    three: 3, four: 4}
 ```
 
-[SOURCE](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Style/IndentHash)
+[Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Style/IndentHash)

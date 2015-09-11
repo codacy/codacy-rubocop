@@ -6,4 +6,4 @@ Don't use invalid character literals with a non-escaped whitespace character (e.
     -:1: syntax error, unexpected '?', expecting ')'
     p(? )
 
-[SOURCE](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Lint/InvalidCharacterLiteral)
+[Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Lint/InvalidCharacterLiteral)

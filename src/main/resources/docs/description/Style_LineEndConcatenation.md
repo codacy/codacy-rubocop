@@ -17,3 +17,5 @@ some_str = 'ala' <<
 some_str = 'ala' \
            'bala'
 ```
+
+[Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Style/LineEndConcatenation)

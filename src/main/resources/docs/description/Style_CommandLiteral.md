@@ -13,3 +13,5 @@ folders = 'find . -type d'.split
 ```
 folders = %x(find . -type d).split
 ```
+
+[Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Style/CommandLiteral)

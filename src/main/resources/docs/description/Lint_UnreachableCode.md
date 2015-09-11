@@ -16,3 +16,5 @@ def something
 end
 
 ```
+
+[Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Lint/UnreachableCode)

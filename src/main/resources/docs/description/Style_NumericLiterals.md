@@ -11,3 +11,5 @@ num = 1000000
 # good - much easier to parse for the human brain
 num = 1_000_000
  ```
+
+[Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Style/NumericLiterals)

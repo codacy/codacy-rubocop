@@ -10,3 +10,5 @@ x = 42
 5.times { |x| puts x } #You are not using the x above
 
 ```
+
+[Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Lint/ShadowingOuterLocalVariable)

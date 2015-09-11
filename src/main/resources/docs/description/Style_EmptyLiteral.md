@@ -11,3 +11,5 @@ arr = Array.new
 # good
 arr = []
 ```
+
+[Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Style/EmptyLiteral)

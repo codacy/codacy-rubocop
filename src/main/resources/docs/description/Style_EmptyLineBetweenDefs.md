@@ -22,3 +22,5 @@ def some_other_method
   ...
 end
 ```
+
+[Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Style/EmptyLineBetweenDefs)

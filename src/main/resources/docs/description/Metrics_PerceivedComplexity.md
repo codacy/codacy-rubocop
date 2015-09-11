@@ -22,3 +22,5 @@ def my_method                   # 1
   end                           # ===
 end                             # 7 complexity points
 ```
+
+[Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Metrics/PerceivedComplexity)

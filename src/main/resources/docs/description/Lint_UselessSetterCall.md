@@ -10,3 +10,5 @@ Checks for setter call to local variable as the final expression of a function d
     x.attr = 5
   end
 ```
+
+[Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Lint/UselessSetterCall)

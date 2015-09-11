@@ -8,4 +8,4 @@ Ex:
                end
 
 
-[SOURCE](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Lint/EndAlignment)
+[Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Lint/EndAlignment)

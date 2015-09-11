@@ -6,4 +6,4 @@ Ex:
       i
     end
 
-[SOURCE](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Lint/BlockAlignment)
+[Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Lint/BlockAlignment)

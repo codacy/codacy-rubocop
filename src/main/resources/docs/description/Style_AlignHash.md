@@ -20,3 +20,5 @@ menu_item =
 { spam => foo, bar => foo, something => hello, hey => hi,
      pizza => italy, more => less }
 ```
+
+[Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Style/AlignHash)
