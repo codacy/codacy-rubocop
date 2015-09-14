@@ -1,5 +1,3 @@
-##Parameter Alignment
-
 Enforces the alignment of your parameters when calling a multilined method
 
 **Example:**

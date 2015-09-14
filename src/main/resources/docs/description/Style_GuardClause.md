@@ -1,5 +1,3 @@
-##Guard Clause
-
 Avoid the use of nested conditionals for flow control
 
 Prefer a guard clause when you can assert  invalid data. A guard clause is a conditional statement at the top of a function that bails out as soon as it can.

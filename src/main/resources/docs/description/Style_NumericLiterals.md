@@ -1,5 +1,3 @@
-##Numeric Literals
-
  Add underscores to large numeric literals to improve their readability.
 
  **Example:**

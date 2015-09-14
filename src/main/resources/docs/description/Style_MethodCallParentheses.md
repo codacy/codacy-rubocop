@@ -1,5 +1,3 @@
-##Method Call Parentheses
-
 You should omit parentheses for method calls with no arguments.
 
 **Example:**

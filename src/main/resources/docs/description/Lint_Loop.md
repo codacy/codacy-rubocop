@@ -1,5 +1,3 @@
-##Loop
-
 Checks if you are using a begin/end/while or begin/end/until statement and enforces you to change it to a loop/do/break statement
 
 

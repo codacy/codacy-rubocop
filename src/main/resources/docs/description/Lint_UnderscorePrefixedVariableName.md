@@ -1,5 +1,3 @@
-##Underscore Prefixed Variable Name
-
 Checks if there is a used variable that is prefixed with '_'
 
 **Example:***

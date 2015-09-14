@@ -1,5 +1,3 @@
-##Empty Ensure Block
-
 Checks for empty ensure blocks since it it pointless to have one inside your code
 
 

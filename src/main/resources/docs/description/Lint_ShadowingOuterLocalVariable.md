@@ -1,5 +1,3 @@
-##Shadowing Outer Local Variable
-
 Shadowing is when you have two different local variables with the same name. It is said that the variable is defined in
 the inner scope "shadows" the one in the outer scope (because t he outer varible is no longer accessible as long as the inner variable scope, even though it would otherwise be in scope)
 

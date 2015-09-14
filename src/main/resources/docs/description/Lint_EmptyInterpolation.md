@@ -1,5 +1,3 @@
-##Empty Interpolation
-
 Checks for empty interpolation in strings since they are pointless and should be removed
 
 ```

@@ -1,5 +1,3 @@
-##Nested Method Definitions
-
 Checks for Nested Method Definitions since they actually produce a method in the same scope as the invoker, and everytime you call the outer method you are redifining the function again
 If you really need neted functions you should use ```lambda``` instead
 

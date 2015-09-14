@@ -1,5 +1,3 @@
-##Empty Line Between Defs
-
 Use empty lines between method definitions and also to break up a method into logical paragraphs internally.
 
 **Example:**

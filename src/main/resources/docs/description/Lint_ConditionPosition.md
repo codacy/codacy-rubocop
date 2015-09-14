@@ -1,5 +1,3 @@
-##Condition Position
-
 The Condition Position should be aligned with the if/while/until statement and not on the line below
 
 **Example**

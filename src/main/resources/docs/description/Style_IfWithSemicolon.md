@@ -1,5 +1,3 @@
-##If with Semicolon
-
  Do not use if x; .... Use the ternary operator instead.
 
  **Example:**

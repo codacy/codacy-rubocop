@@ -1,5 +1,3 @@
-##Case Indentation
-
 Indent when as deep as the case since it is the standart pattern for the ruby language
 
 **Example:**

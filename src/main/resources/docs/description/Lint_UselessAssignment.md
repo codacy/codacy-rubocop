@@ -1,5 +1,3 @@
-##Useless Assignment
-
 Checks for useless assignments to local variable in every scope
 
 **Example:**

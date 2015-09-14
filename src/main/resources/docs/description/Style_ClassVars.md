@@ -1,5 +1,3 @@
-##Class variables usage
-
 Avoid using class variables since they have some nasty behaviour in inheritance
 
 **Example:**

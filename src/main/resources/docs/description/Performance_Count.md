@@ -1,5 +1,3 @@
-##Count Performance Issue
-
 When calculating the length of an Enumerable there are several ways you can do it
 but some are better than others because of how fast they are, ```length``` is as fast as
 it gets since it's complexity is approximately O(1) but it only works on concrete

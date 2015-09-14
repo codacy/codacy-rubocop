@@ -1,5 +1,3 @@
-##Array Alignment
-
 You should align the elements of array literals spanning multiple lines
 
 

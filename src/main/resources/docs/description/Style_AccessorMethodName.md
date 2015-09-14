@@ -1,5 +1,3 @@
-##Accessor Method Naming
-
 It is good practice to follow the accessor method naming rules for ruby which are
 
 ```

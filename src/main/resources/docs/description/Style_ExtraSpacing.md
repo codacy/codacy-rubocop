@@ -1,5 +1,3 @@
-##Extra Spacing
-
 Check for extra spaces in your lines of code since they can difficult the readability of
 your code
 

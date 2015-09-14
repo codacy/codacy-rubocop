@@ -1,5 +1,3 @@
-##Empty Lines Around Access Modifier
-
 You should put empty lines around an access modifier since that is the convention established for ruby
 
 **Example**

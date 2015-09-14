@@ -1,5 +1,3 @@
-##Lambda
-
  Use the new lambda literal syntax for single line body blocks. Use the lambda method for multi-line blocks.
 
  **Example:**

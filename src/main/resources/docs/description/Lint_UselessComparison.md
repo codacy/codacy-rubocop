@@ -1,5 +1,3 @@
-##Useless Comparison
-
 Checks for comparisons of something with itself
 
 **Example:**

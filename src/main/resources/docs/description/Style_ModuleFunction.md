@@ -1,5 +1,3 @@
-##Module function
-
 You should always use ```module_function`` instead of ```extend self```
 
 **Example:**

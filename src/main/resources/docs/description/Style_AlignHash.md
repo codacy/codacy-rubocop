@@ -1,5 +1,3 @@
-##Hash Alignment
-
 You should align the elements of the hash spanning multiple lines
 
 **Example:**

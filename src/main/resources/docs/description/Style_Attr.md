@@ -1,5 +1,3 @@
-##Attr_reader over Attr
-
 Choose the usage of attr_reader over attr since attr creates a single attribute accessor and it was
 deprecated in 1.9
 

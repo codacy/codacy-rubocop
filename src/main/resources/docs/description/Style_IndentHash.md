@@ -1,5 +1,3 @@
-##Hash Indentation
-
 Hash literals shall have their first element indented one step (2 spaces) more than the start of the line where the opening bracket is.
 
 The value `special_inside_parentheses` means that hash literals with braces

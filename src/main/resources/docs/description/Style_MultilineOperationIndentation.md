@@ -1,5 +1,3 @@
-##Multiline Operation Indentation
-
 Always keep multiline operations aligned
 
 **Example:**

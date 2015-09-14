@@ -1,5 +1,3 @@
-##Global Variables
-
 Use module instances variables instead of global variables
 
 **Example:**

@@ -1,5 +1,3 @@
-##Constant Naming
-
 Use SCREAMING_SNAKE_CASE for constants
 
 **Example:**

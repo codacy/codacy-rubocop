@@ -1,5 +1,3 @@
-##Duplicate Methods
-
 Checks for duplicate methods in classes and modules, This should be changed since it can give some serious issues in the long run
 
 **Examples**

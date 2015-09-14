@@ -1,5 +1,3 @@
-##Class Methods
-
 Use self instead of defining a method using the class/module name since it provides better readability
 
 **Example:**

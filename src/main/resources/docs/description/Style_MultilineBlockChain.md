@@ -1,5 +1,3 @@
-##Multiline Block Chain
-
 Prefer {...} over do...end for single-line blocks. Avoid using {...} for multi-line blocks (multiline chaining is always ugly). Always use do...end for "control flow" and "method definitions" (e.g. in Rakefiles and certain DSLs). Avoid do...end when chaining.
 
 **Examples:**

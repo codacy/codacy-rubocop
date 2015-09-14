@@ -1,5 +1,3 @@
-##Unreachable Code
-
 Enforces the removal of unused code inside your methods since they are pointless to maintain
 
 **Example**

@@ -1,5 +1,3 @@
-##Method Name
-
 You should always use snake_case for naming methods
 
 **Example:**

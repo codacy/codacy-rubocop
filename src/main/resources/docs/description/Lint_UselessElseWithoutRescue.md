@@ -1,5 +1,3 @@
-##Useless Else Without Rescue
-
 Checks for useless else in begin..end without rescue since it will never run
 
 **Example:**

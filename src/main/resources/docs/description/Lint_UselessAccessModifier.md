@@ -1,5 +1,3 @@
-##Useless Access Modifier
-
 Checks for useless access modifiers without any code since they are redundant
 
 **Example:**

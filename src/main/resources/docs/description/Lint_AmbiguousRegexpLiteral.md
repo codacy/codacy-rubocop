@@ -1,5 +1,3 @@
-##Ambiguous Regexp Literal
-
 It checks for ambiguous regexp literals in the first argument of a method invocation without parentheses.
 
 ```

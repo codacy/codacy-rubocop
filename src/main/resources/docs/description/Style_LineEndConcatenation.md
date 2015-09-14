@@ -1,5 +1,3 @@
-##Line End Concatenation
-
 You should use \ instead of + and << since it is the standart for the ruby language
 
 **Example:**

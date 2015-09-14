@@ -1,5 +1,3 @@
-##Rescue Exception
-
 Avoid rescuing an Exception class since this will trap signals an call to ``exit``, requiring you to ```kill -9``` the process
 
 **Example:**

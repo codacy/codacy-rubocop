@@ -1,5 +1,3 @@
-##Negated if
-
  Favor unless over if for negative conditions (or control flow ||)
 
  **Example:**

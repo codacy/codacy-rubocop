@@ -1,5 +1,3 @@
-##Line Length
-
 Checks the length of each line, it improves readability to keep your code short, if the phrase really needs to be long
 you should break the line into several lines
 

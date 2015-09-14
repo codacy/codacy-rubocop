@@ -1,5 +1,3 @@
-##Else Layout
-
 Checks for odd else block layout one good example is when you have an expression on the same line as the else keyword
 
 ```

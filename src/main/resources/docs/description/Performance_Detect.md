@@ -1,5 +1,3 @@
-##Performance Detect Usage
-
 ```detect``` has much better performance than calling first or last on ```select.first, select.last, find_all.first, find_all.last```
 
 **Example:**

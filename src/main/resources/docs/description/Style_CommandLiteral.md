@@ -1,5 +1,3 @@
-##Command Literals
-
 Choose one type of command literal and use it in all the code you have
 
 **Backticks:**

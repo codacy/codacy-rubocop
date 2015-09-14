@@ -1,5 +1,3 @@
-##Negated While
-
 Favor until over while for negative conditions
 
 **Example:**

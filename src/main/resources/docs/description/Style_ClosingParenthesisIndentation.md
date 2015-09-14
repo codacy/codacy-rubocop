@@ -1,5 +1,3 @@
-##Closing Parenthesis Indentation
-
 **Examples:**
 
 ```

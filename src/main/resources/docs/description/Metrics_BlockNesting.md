@@ -1,5 +1,3 @@
-##Block Nesting
-
 Checks how many nested blocks are contained within a method, if there are too many this can become a problem to the person reading the code
 and it can probably be refactored to a better, cleaner and clearer code.
 

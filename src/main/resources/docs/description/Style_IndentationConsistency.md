@@ -1,5 +1,3 @@
-##Indentation Consistency
-
 Always have a consistent indentation since it provides aditional readabilit to your code
 
 **Example:**

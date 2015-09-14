@@ -1,5 +1,3 @@
-##One Line Conditional
-
 Favor the ternary operator(?:) over if/then/else/end constructs. It's more common and obviously more concise.
 
 **Example:**

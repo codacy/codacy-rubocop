@@ -1,5 +1,3 @@
-##Block End Newline
-
 Always put the end block on a newline since it gives more readability to your code
 
 **Example:**

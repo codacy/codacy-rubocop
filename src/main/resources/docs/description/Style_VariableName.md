@@ -1,5 +1,3 @@
-##Variable Name
-
 Enforces you to only user either snake_case or camelCase
 
 

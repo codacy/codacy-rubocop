@@ -1,5 +1,3 @@
-##If/Unless Modifier
-
 You should favor modifier if/unless usage when you have a single-line body. Another good alternative is the usage of control flow &&/||
 
 **Example:**

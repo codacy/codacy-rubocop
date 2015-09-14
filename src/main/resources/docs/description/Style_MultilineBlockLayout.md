@@ -1,5 +1,3 @@
-##Multiline Block Layout
-
 When using multiline blocks always use the same layout specified below
 
 **Example:**

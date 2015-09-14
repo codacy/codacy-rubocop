@@ -1,5 +1,3 @@
-##Dot Position
-
 You should adopt a consistent multi-line method chaining style. There are two popoular styles in the Ruby community,
 both of which are considered good -leading . and trailing .
 

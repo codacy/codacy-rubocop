@@ -1,5 +1,3 @@
-##Comment Annotations
-
 * Annotations should be followed by a colon and a space and then a note describing the problem
 
 * If multiple lines are required describe the problem, subsequent lines should be indented three spaces after

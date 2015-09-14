@@ -1,5 +1,3 @@
-##Cyclomatic Complexity
-
 Checks the Cyclomatic complexity of a method
 
 **What is Cyclomatic Complexity?**

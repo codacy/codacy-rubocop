@@ -1,5 +1,3 @@
-##Literal in Interpolation
-
 Checks if there is some interpolation with a literal inside it it is pointless since a literal is a fixed value
 
 **Example:**

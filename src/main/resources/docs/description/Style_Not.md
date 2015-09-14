@@ -1,5 +1,3 @@
-##Not usage
-
 Use ! instead of not
 
 **Example:**

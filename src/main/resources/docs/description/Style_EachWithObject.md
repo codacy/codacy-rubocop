@@ -1,5 +1,3 @@
-##Each With Object Usage
-
 
 Use each_with_object in order to reduce inject calls where the passed in object is returned at the end
 

@@ -1,5 +1,3 @@
-##Hash Syntax
-
 You should use the Ruby 1.9 hash literal syntax when your hash keys are symbols.
 
 **Example: **

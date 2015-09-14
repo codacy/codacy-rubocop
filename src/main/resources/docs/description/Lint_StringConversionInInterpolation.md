@@ -1,5 +1,3 @@
-##String Conversion In Interpolation
-
 Checks for string conversion in interpolation, which is redundant
 
 ```

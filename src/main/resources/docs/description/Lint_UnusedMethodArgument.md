@@ -1,5 +1,3 @@
-##Unused Method Argument
-
 Checks for unused method argument in your code since they will not be used (unused arguments prefixed with '_' will be ignored though)
 
 **Example:**

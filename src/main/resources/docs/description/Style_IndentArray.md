@@ -1,5 +1,3 @@
-##Array Indentation
-
 Array literals shall have their first element indented one step (2 spaces) more than the start of the line where the opening bracket is.
 
 **Example:**

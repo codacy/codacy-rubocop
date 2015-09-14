@@ -1,5 +1,3 @@
-##Format String
-
 Favor the use of sprintf and its alias format over the fairly cryptic String#% method.
 We prefer format over sprintf because of the readability it provides.
 
