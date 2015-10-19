@@ -1,3 +1,4 @@
+[![Codacy Badge](https://api.codacy.com/project/badge/7cb874a40208406dbe62fe96d6b3a727)](https://www.codacy.com/app/Codacy/codacy-rubocop)
 [![Build Status](https://circleci.com/gh/codacy/codacy-rubocop.svg?style=shield&circle-token=:circle-token)](https://circleci.com/gh/codacy/codacy-rubocop)
 
 create the docker: sbt docker:publishLocal
