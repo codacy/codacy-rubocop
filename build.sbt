@@ -29,7 +29,7 @@ val installAll =
   s"""apk update && apk add bash curl &&
      |apk add --update ruby ruby-bundler ruby-dev &&
      |rm /var/cache/apk/* &&
-     |gem install rubocop:0.33.0""".stripMargin.replaceAll(System.lineSeparator(), " ")
+     |gem install rubocop:0.34.2""".stripMargin.replaceAll(System.lineSeparator(), " ")
 
 mappings in Universal <++= (resourceDirectory in Compile) map { (resourceDir: File) =>
   val src = resourceDir / "docs"

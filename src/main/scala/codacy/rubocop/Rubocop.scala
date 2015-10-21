@@ -95,6 +95,7 @@ object Rubocop extends Tool {
          |  RunRailsCops: false
          |  DisplayCopNames: false
          |  StyleGuideCopsOnly: false
+         |  UseCache: false
          |${rules.mkString(s"${Properties.lineSeparator}")}
       """.stripMargin
 
