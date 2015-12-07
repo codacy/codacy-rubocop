@@ -1,4 +1,4 @@
-Always have a consistent indentation since it provides aditional readabilit to your code
+Always have a consistent indentation since it provides aditional readability to your code
 
 **Example:**
 
