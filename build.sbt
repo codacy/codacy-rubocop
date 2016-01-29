@@ -26,10 +26,9 @@ enablePlugins(DockerPlugin)
 version in Docker := "1.0"
 
 val installAll =
-  s"""apk update && apk add bash curl &&
-     |apk add --update ruby ruby-bundler ruby-dev &&
-     |rm /var/cache/apk/* &&
-     |gem install rubocop:0.34.2""".stripMargin.replaceAll(System.lineSeparator(), " ")
+  s"""apt-get update &&
+     |apt-get -y install ruby &&
+     |gem install --no-rdoc --no-ri rubocop -v 0.34.2""".stripMargin.replaceAll(System.lineSeparator(), " ")
 
 mappings in Universal <++= (resourceDirectory in Compile) map { (resourceDir: File) =>
   val src = resourceDir / "docs"
@@ -48,7 +47,7 @@ daemonUser in Docker := dockerUser
 
 daemonGroup in Docker := dockerGroup
 
-dockerBaseImage := "frolvlad/alpine-oraclejdk8"
+dockerBaseImage := "rtfpessoa/ubuntu-jdk8"
 
 dockerCommands := dockerCommands.value.flatMap {
   case cmd@Cmd("WORKDIR", _) => List(cmd,
@@ -56,7 +55,7 @@ dockerCommands := dockerCommands.value.flatMap {
   )
   case cmd@(Cmd("ADD", "opt /opt")) => List(cmd,
     Cmd("RUN", "mv /opt/docker/docs /docs"),
-    Cmd("RUN", "adduser -u 2004 -D docker"),
+    Cmd("RUN", "adduser --uid 2004 --disabled-password --gecos \"\" docker"),
     ExecCmd("RUN", Seq("chown", "-R", s"$dockerUser:$dockerGroup", "/docs"): _*)
   )
   case other => List(other)
