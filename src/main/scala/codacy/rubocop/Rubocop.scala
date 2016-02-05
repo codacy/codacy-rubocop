@@ -13,7 +13,7 @@ import scala.util.{Failure, Properties, Success, Try}
 
 object Rubocop extends Tool {
 
-  override def apply(path: Path, conf: Option[Seq[PatternDef]], files: Option[Set[Path]])(implicit spec: Spec): Try[Iterable[Result]] = {
+  override def apply(path: Path, conf: Option[List[PatternDef]], files: Option[Set[Path]])(implicit spec: Spec): Try[List[Result]] = {
     val cmd = getCommandFor(path, conf, files, spec, resultFilePath)
     CommandRunner.exec(cmd, Some(path.toFile))
     val resultFromTool = getFileLines(resultFilePath.toFile)
@@ -24,12 +24,12 @@ object Rubocop extends Tool {
     Source.fromFile(filename).getLines().mkString
   }
 
-  private[this] def parseResult(resultFromTool: String): Try[Iterable[Result]] = {
+  private[this] def parseResult(resultFromTool: String): Try[List[Result]] = {
     Try(Json.parse(resultFromTool)).flatMap { json =>
       json.validate[RubocopResult] match {
         case JsSuccess(rubocopResult, _) =>
           Success(
-            rubocopResult.files.getOrElse(Seq.empty).flatMap {
+            rubocopResult.files.getOrElse(List.empty).flatMap {
               file => ruboFileToResult(file)
             }
           )
@@ -39,33 +39,33 @@ object Rubocop extends Tool {
     }
   }
 
-  private[this] def ruboFileToResult(rubocopFiles: RubocopFiles): Iterable[Result] = {
-    rubocopFiles.offenses.getOrElse(Seq.empty).map { case offense =>
+  private[this] def ruboFileToResult(rubocopFiles: RubocopFiles): List[Result] = {
+    rubocopFiles.offenses.getOrElse(List.empty).map { case offense =>
       Issue(SourcePath(rubocopFiles.path.value), ResultMessage(offense.message.value),
         PatternId(getIdByPatternName(offense.cop_name.value)), ResultLine(offense.location.line))
     }
   }
 
-  private[this] def getCommandFor(path: Path, conf: Option[Seq[PatternDef]], files: Option[Set[Path]], spec: Spec, outputFilePath: Path): Seq[String] = {
+  private[this] def getCommandFor(path: Path, conf: Option[List[PatternDef]], files: Option[Set[Path]], spec: Spec, outputFilePath: Path): List[String] = {
     val configPath = conf.flatMap(getConfigFile(_).map { configFile =>
-      Seq("-c", configFile.toAbsolutePath.toString)
-    }).getOrElse(Seq.empty)
+      List("-c", configFile.toAbsolutePath.toString)
+    }).getOrElse(List.empty)
 
     val patternsCmd = (for {
-      patterns <- conf.getOrElse(Seq.empty)
+      patterns <- conf.getOrElse(List.empty)
     } yield getPatternNameById(patterns.patternId)) match {
-      case patterns if patterns.nonEmpty => Seq("--only", patterns.mkString(","))
-      case _ => Seq.empty
+      case patterns if patterns.nonEmpty => List("--only", patterns.mkString(","))
+      case _ => List.empty
     }
 
-    val filesCmd = files.getOrElse(Seq(path.toAbsolutePath)).map(_.toString)
+    val filesCmd = files.getOrElse(List(path.toAbsolutePath)).map(_.toString)
 
-    Seq("rubocop", "-f", "json", "-o", outputFilePath.toAbsolutePath.toString) ++ configPath ++ patternsCmd ++ filesCmd
+    List("rubocop", "-f", "json", "-o", outputFilePath.toAbsolutePath.toString) ++ configPath ++ patternsCmd ++ filesCmd
   }
 
   private[this] lazy val resultFilePath = Paths.get(Properties.tmpDir, "rubocop-result.json")
 
-  private[this] def getConfigFile(conf: Seq[PatternDef]): Option[Path] = {
+  private[this] def getConfigFile(conf: List[PatternDef]): Option[Path] = {
     val rules = for {
       pattern <- conf
     } yield generateRule(pattern.patternId, pattern.parameters)

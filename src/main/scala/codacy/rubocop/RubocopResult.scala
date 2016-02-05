@@ -8,11 +8,11 @@ case class RubocopMetadata(rubocop_version: JsValue, ruby_engine: JsValue, ruby_
 
 case class RubocopOffense(severity: JsValue, message: JsString, cop_name: JsString, corrected: JsValue, location: RubocopLocation)
 
-case class RubocopFiles(path: JsString, offenses: Option[Seq[RubocopOffense]])
+case class RubocopFiles(path: JsString, offenses: Option[List[RubocopOffense]])
 
 case class RubocopSummary(offense_count: JsValue, target_file_count: JsValue, inspected_file_count: JsValue)
 
-case class RubocopResult(metadata: RubocopMetadata, files: Option[Seq[RubocopFiles]], summary: RubocopSummary)
+case class RubocopResult(metadata: RubocopMetadata, files: Option[List[RubocopFiles]], summary: RubocopSummary)
 
 object RubocopResult {
   implicit val RLocation: Format[RubocopLocation] = {
