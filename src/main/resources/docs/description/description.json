@@ -8,7 +8,7 @@
   {
     "patternId": "Lint_AmbiguousRegexpLiteral",
     "title": "Ambiguous Regexp Literal",
-    "description": "Checks for ambiguous regexp literals in thge first argument of a method invocation without parentheses.",
+    "description": "Checks for ambiguous regexp literals in the first argument of a method invocation without parentheses.",
     "timeToFix": 5
   },
   {
