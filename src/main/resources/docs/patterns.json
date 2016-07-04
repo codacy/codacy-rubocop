@@ -992,7 +992,7 @@
     {
       "patternId": "Style_Copyright",
       "level": "Info",
-      "category": "Documentation",
+      "category": "CodeStyle",
       "parameters": [
         {
           "name": "Notice",
@@ -1003,7 +1003,7 @@
     {
       "patternId": "Style_Documentation",
       "level": "Info",
-      "category": "Documentation"
+      "category": "CodeStyle"
     },
     {
       "patternId": "Style_ElseAlignment",
