@@ -1,27 +1,27 @@
 package codacy.rubocop
 
-import java.io.File
-import java.nio.charset.StandardCharsets
-import java.nio.file.{Files, Path, Paths, StandardOpenOption}
+import java.nio.file.Path
 
 import codacy.dockerApi._
 import codacy.dockerApi.utils.CommandRunner
 import play.api.libs.json._
+import better.files._
 
-import scala.io.Source
 import scala.util.{Failure, Properties, Success, Try}
 
 object Rubocop extends Tool {
 
+  val configFile = File(DockerEnvironment.sourcePath) / ".rubocop.yml"
+
   override def apply(path: Path, conf: Option[List[PatternDef]], files: Option[Set[Path]])(implicit spec: Spec): Try[List[Result]] = {
     val cmd = getCommandFor(path, conf, files, spec, resultFilePath)
     CommandRunner.exec(cmd, Some(path.toFile))
-    val resultFromTool = getFileLines(resultFilePath.toFile)
+    val resultFromTool = getFileLines(resultFilePath)
     parseResult(resultFromTool)
   }
 
   private[this] def getFileLines(filename: File): String = {
-    Source.fromFile(filename).getLines().mkString
+    filename.contentAsString
   }
 
   private[this] def parseResult(resultFromTool: String): Try[List[Result]] = {
@@ -46,26 +46,37 @@ object Rubocop extends Tool {
     }
   }
 
-  private[this] def getCommandFor(path: Path, conf: Option[List[PatternDef]], files: Option[Set[Path]], spec: Spec, outputFilePath: Path): List[String] = {
-    val configPath = conf.flatMap(getConfigFile(_).map { configFile =>
-      List("-c", configFile.toAbsolutePath.toString)
-    }).getOrElse(List.empty)
+  private[this] def getCommandFor(path: Path, conf: Option[List[PatternDef]], files: Option[Set[Path]], spec: Spec, outputFilePath: File): List[String] = {
 
-    val patternsCmd = (for {
-      patterns <- conf.getOrElse(List.empty)
-    } yield getPatternNameById(patterns.patternId)) match {
-      case patterns if patterns.nonEmpty => List("--only", patterns.mkString(","))
-      case _ => List.empty
+    val configPath: List[String] = {
+      if(configFile.isRegularFile) List.empty
+      else{
+        conf.flatMap(getConfigFile(_).map { configFile =>
+          List("-c", configFile.path.toAbsolutePath.toString)
+        }).getOrElse(List.empty)
+      }
+    }
+
+    val patternsCmd = {
+      if(configFile.isRegularFile) List.empty
+      else{
+        (for {
+          patterns <- conf.getOrElse(List.empty)
+        } yield getPatternNameById(patterns.patternId)) match {
+          case patterns if patterns.nonEmpty => List("--only", patterns.mkString(","))
+          case _ => List.empty
+        }
+      }
     }
 
     val filesCmd = files.getOrElse(List(path.toAbsolutePath)).map(_.toString)
 
-    List("rubocop", "-f", "json", "-o", outputFilePath.toAbsolutePath.toString) ++ configPath ++ patternsCmd ++ filesCmd
+    List("rubocop", "-f", "json", "-o", outputFilePath.path.toAbsolutePath.toString) ++ configPath ++ patternsCmd ++ filesCmd
   }
 
-  private[this] lazy val resultFilePath = Paths.get(Properties.tmpDir, "rubocop-result.json")
+  private[this] lazy val resultFilePath = File.temp / "rubocop-result.json"
 
-  private[this] def getConfigFile(conf: List[PatternDef]): Option[Path] = {
+  private[this] def getConfigFile(conf: List[PatternDef]): Option[File] = {
     val rules = for {
       pattern <- conf
     } yield generateRule(pattern.patternId, pattern.parameters)
@@ -102,16 +113,8 @@ object Rubocop extends Tool {
     fileForConfig(ymlConfiguration).toOption
   }
 
-  private[this] def fileForConfig(config: String) = tmpFile(config.toString)
-
-  private[this] def tmpFile(content: String, prefix: String = "config", suffix: String = ".yml"): Try[Path] = {
-    Try {
-      Files.write(
-        Files.createTempFile(prefix, suffix),
-        content.getBytes(StandardCharsets.UTF_8),
-        StandardOpenOption.CREATE
-      )
-    }
+  private[this] def fileForConfig(config: String) = Try{
+    File.newTemporaryFile(prefix = "config",suffix = ".yml").write(config)
   }
 
   private[this] def generateRule(patternId: PatternId, parameters: Option[Set[ParameterDef]]): String = {
