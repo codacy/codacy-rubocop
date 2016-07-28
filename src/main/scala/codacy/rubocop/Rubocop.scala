@@ -40,7 +40,7 @@ object Rubocop extends Tool {
   }
 
   private[this] def ruboFileToResult(rubocopFiles: RubocopFiles): List[Result] = {
-    rubocopFiles.offenses.getOrElse(List.empty).map { case offense =>
+    rubocopFiles.offenses.getOrElse(List.empty).map { offense =>
       Issue(SourcePath(rubocopFiles.path.value), ResultMessage(offense.message.value),
         PatternId(getIdByPatternName(offense.cop_name.value)), ResultLine(offense.location.line))
     }
@@ -121,10 +121,11 @@ object Rubocop extends Tool {
           pattern => generateParameter(pattern)
         }
     }.getOrElse(Set.empty)
-    val patternConfig = s"""
-          |${getPatternNameById(patternId)}:
-          |  Enabled: true
-          |  ${ymlProperties.mkString(s"${Properties.lineSeparator}  ")}
+    val patternConfig =
+      s"""
+         |${getPatternNameById(patternId)}:
+         |  Enabled: true
+         |  ${ymlProperties.mkString(s"${Properties.lineSeparator}  ")}
     """.stripMargin
 
     if (parameters.nonEmpty) {
@@ -145,15 +146,17 @@ object Rubocop extends Tool {
 
   private[this] def generateParameter(parameter: ParameterDef): String = {
     parameter.value match {
-      case JsString(value) => s"${parameter.name.value}: $value"
-      case JsArray(parameters) =>
-        val finalParameters = parameters.map {
-          case JsString(value) => value
-          case other => Json.stringify(other)
-        }.mkString(s"${Properties.lineSeparator}    - ")
+      case JsArray(parameters) if parameters.nonEmpty =>
+        val finalParameters = parameters.map(p => s"    - ${Json.stringify(p)}")
+          .mkString(Properties.lineSeparator)
         s"""${parameter.name.value}:
-           |    - $finalParameters
+           |$finalParameters
          """.stripMargin
+
+      case JsArray(parameters) =>
+        s"""${parameter.name.value}: []
+         """.stripMargin
+
       case other => s"${parameter.name.value}: ${Json.stringify(other)}"
     }
   }

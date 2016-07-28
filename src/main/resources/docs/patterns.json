@@ -695,7 +695,7 @@
       "parameters": [
         {
           "name": "AllowedVariables",
-          "default": "[]"
+          "default": []
         }
       ]
     },
