@@ -1,6 +1,6 @@
 ##Patterns: Metrics_CyclomaticComplexity
 
-##Err: Metrics_CyclomaticComplexity
+##Warn: Metrics_CyclomaticComplexity
 def hello
   if x = 5
     if y = 4

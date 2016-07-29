@@ -2,5 +2,5 @@
 
 
 variable = if true
-##Info: Lint_EndAlignment
+##Warn: Lint_EndAlignment
      end

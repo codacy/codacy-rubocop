@@ -1,6 +1,6 @@
 ##Patterns: Metrics_ClassLength
 
-##Err: Metrics_ClassLength
+##Warn: Metrics_ClassLength
 class Foo
   puts 'Hello World'
   puts 'Hello World'

@@ -1,6 +1,6 @@
 ##Patterns: Lint_AssignmentInCondition
 
-##Info: Lint_AssignmentInCondition
+##Warn: Lint_AssignmentInCondition
 if v = array.grep(/foo/)
   puts 'hello world'
 end

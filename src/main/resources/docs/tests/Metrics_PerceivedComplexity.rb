@@ -1,6 +1,6 @@
 ##Patterns: Metrics_PerceivedComplexity
 
-##Info: Metrics_PerceivedComplexity
+##Warn: Metrics_PerceivedComplexity
 def my_method
   if cond
       case var

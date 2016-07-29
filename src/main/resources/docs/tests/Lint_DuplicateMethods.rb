@@ -4,7 +4,7 @@ class SomeClass
   def some_method
   end
 
-  ##Err: Lint_DuplicateMethods
+  ##Warn: Lint_DuplicateMethods
   def some_method
   end
 end

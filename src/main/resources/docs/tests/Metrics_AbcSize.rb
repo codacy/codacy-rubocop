@@ -1,6 +1,6 @@
 ##Patterns: Metrics_AbcSize
 
-##Err: Metrics_AbcSize
+##Warn: Metrics_AbcSize
 def hello
   x = 1
   x = 2
