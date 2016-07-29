@@ -114,7 +114,7 @@
       "category": "ErrorProne"
     },
     {
-      "patternId": "Lint_SpaceBeforeFirstArg",
+      "patternId": "Style_SpaceBeforeFirstArg",
       "level": "Info",
       "category": "CodeStyle"
     },
@@ -557,7 +557,7 @@
       "category": "CodeStyle"
     },
     {
-      "patternId": "Style_DeprecatedHashMethods",
+      "patternId": "Style_PreferredHashMethods",
       "level": "Info",
       "category": "CodeStyle"
     },

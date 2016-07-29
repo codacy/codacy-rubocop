@@ -132,7 +132,7 @@
     "timeToFix": 5
   },
   {
-    "patternId": "Lint_SpaceBeforeFirstArg",
+    "patternId": "Style_SpaceBeforeFirstArg",
     "title": "Space Before First Argument",
     "description": "Checks if there is a space between the first argument and the method call without parentheses",
     "timeToFix": 5
@@ -631,7 +631,7 @@
     "timeToFix": 5
   },
   {
-    "patternId": "Style_DeprecatedHashMethods",
+    "patternId": "Style_PreferredHashMethods",
     "title": "Deprecated Hash Method Used",
     "description": "Prohibits the usage of deprecated hash methods like has_key or has_value",
     "timeToFix": 5
