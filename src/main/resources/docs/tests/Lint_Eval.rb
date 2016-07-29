@@ -1,4 +1,4 @@
 ##Patterns: Lint_Eval
 
-##Err: Lint_Eval
-eval("7 * 6")
+##Warn: Lint_Eval
+eval(something, binding, "test.rb", 1)

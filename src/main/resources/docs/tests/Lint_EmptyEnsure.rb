@@ -3,6 +3,6 @@
 begin
 rescue
 
-  ##Err: Lint_EmptyEnsure
+  ##Warn: Lint_EmptyEnsure
 ensure
 end

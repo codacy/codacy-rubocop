@@ -5,6 +5,6 @@ begin
 rescue
 
 ensure
-  ##Info: Lint_EnsureReturn
+  ##Warn: Lint_EnsureReturn
   return "Hello World"
 end

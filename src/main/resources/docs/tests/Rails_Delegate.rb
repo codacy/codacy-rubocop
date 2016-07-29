@@ -1,6 +1,6 @@
 ##Patterns: Rails_Delegate
 
-##Info: Rails_Delegate
+##Warn: Rails_Delegate
 def foo
   bar.foo
 end

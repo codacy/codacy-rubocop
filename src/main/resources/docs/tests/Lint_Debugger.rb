@@ -2,5 +2,5 @@
 
 require 'pry'
 
-##Info: Lint_Debugger
+##Warn: Lint_Debugger
 binding.pry

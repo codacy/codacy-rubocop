@@ -3,7 +3,7 @@
 if something
  puts 'Hello World'
 
-  ##Err: Lint_ElseLayout
+  ##Warn: Lint_ElseLayout
 else do_this
    do_that
 end

@@ -15,17 +15,41 @@ object Rubocop extends Tool {
 
   override def apply(path: Path, conf: Option[List[PatternDef]], files: Option[Set[Path]])(implicit spec: Spec): Try[List[Result]] = {
     val cmd = getCommandFor(path, conf, files, spec, resultFilePath)
-    CommandRunner.exec(cmd, Some(path.toFile))
-    val resultFromTool = getFileLines(resultFilePath.toFile)
-    parseResult(resultFromTool)
+    CommandRunner.exec(cmd, Some(path.toFile)) match {
+
+      case Right(resultFromTool) if resultFromTool.exitCode < 2 =>
+        parseResult(resultFilePath.toFile) match {
+          case s@Success(_) => s
+          case Failure(e) =>
+            val msg =
+              s"""
+                 |Rubocop exited with code ${resultFromTool.exitCode}
+                 |message: ${e.getMessage}
+                 |stdout: ${resultFromTool.stdout.mkString(Properties.lineSeparator)}
+                 |stderr: ${resultFromTool.stderr.mkString(Properties.lineSeparator)}
+                """.stripMargin
+            Failure(new Exception(msg))
+        }
+
+      case Right(resultFromTool) =>
+        val msg =
+          s"""
+             |Rubocop exited with code ${resultFromTool.exitCode}
+             |stdout: ${resultFromTool.stdout.mkString(Properties.lineSeparator)}
+             |stderr: ${resultFromTool.stderr.mkString(Properties.lineSeparator)}
+                """.stripMargin
+        Failure(new Exception(msg))
+
+      case Left(e) =>
+        Failure(e)
+    }
   }
 
-  private[this] def getFileLines(filename: File): String = {
-    Source.fromFile(filename).getLines().mkString
-  }
-
-  private[this] def parseResult(resultFromTool: String): Try[List[Result]] = {
-    Try(Json.parse(resultFromTool)).flatMap { json =>
+  private[this] def parseResult(filename: File): Try[List[Result]] = {
+    Try {
+      val resultFromTool = Source.fromFile(filename).getLines().mkString
+      Json.parse(resultFromTool)
+    }.flatMap { json =>
       json.validate[RubocopResult] match {
         case JsSuccess(rubocopResult, _) =>
           Success(
@@ -92,7 +116,6 @@ object Rubocop extends Tool {
          |  Exclude:
          |    - "vendor/**/*"
          |    - "db/schema.rb"
-         |  RunRailsCops: false
          |  DisplayCopNames: false
          |  StyleGuideCopsOnly: false
          |  UseCache: false

@@ -5,7 +5,7 @@ if x == 5
 end
 
 if
-  ##Info: Lint_ConditionPosition
+  ##Warn: Lint_ConditionPosition
   x == 5
   #this is worse than bad
 end

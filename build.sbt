@@ -26,9 +26,14 @@ enablePlugins(DockerPlugin)
 version in Docker := "1.0"
 
 val installAll =
-  s"""apt-get update &&
-     |apt-get -y install ruby &&
-     |gem install --no-rdoc --no-ri rubocop -v 0.34.2""".stripMargin.replaceAll(System.lineSeparator(), " ")
+  s"""apk update && apk upgrade
+      |&& apk add bash
+      |&& apk add g++ make
+      |&& apk add libxml2 libxslt libevent libffi glib ncurses readline
+      |&& apk add openssl yaml zlib curl mariadb-libs libpq ruby ruby-dev ruby-io-console
+      |&& apk add ruby-bigdecimal
+      |&& gem install --no-document json
+      |&& gem install --no-document rubocop:0.42.0""".stripMargin.replaceAll(System.lineSeparator(), " ")
 
 mappings in Universal <++= (resourceDirectory in Compile) map { (resourceDir: File) =>
   val src = resourceDir / "docs"
@@ -47,7 +52,7 @@ daemonUser in Docker := dockerUser
 
 daemonGroup in Docker := dockerGroup
 
-dockerBaseImage := "rtfpessoa/ubuntu-jdk8"
+dockerBaseImage := "frolvlad/alpine-oraclejdk8"
 
 dockerCommands := dockerCommands.value.flatMap {
   case cmd@Cmd("WORKDIR", _) => List(cmd,
@@ -55,7 +60,7 @@ dockerCommands := dockerCommands.value.flatMap {
   )
   case cmd@(Cmd("ADD", "opt /opt")) => List(cmd,
     Cmd("RUN", "mv /opt/docker/docs /docs"),
-    Cmd("RUN", "adduser --uid 2004 --disabled-password --gecos \"\" docker"),
+    Cmd("RUN", "adduser -u 2004 -D docker"),
     ExecCmd("RUN", Seq("chown", "-R", s"$dockerUser:$dockerGroup", "/docs"): _*)
   )
   case other => List(other)

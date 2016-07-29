@@ -1,6 +1,6 @@
 ##Patterns: Metrics_ModuleLength
 
-##Err: Metrics_ModuleLength
+##Warn: Metrics_ModuleLength
 module Foo
   puts 'Hello World'
   puts 'Hello World'

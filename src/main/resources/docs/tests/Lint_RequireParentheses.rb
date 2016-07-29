@@ -1,6 +1,6 @@
 ##Patterns: Lint_RequireParentheses
 
-##Info: Lint_RequireParentheses
+##Warn: Lint_RequireParentheses
 if day.is? :tuesday && month == :jan
 
 end

@@ -2,5 +2,5 @@
 
 
 x = 42
-##Err: Lint_ShadowingOuterLocalVariable
+##Warn: Lint_ShadowingOuterLocalVariable
 5.times { |x| puts x }
