@@ -4,7 +4,7 @@ name := """codacy-engine-rubocop"""
 
 version := "1.0-SNAPSHOT"
 
-val languageVersion = "2.11.7"
+val languageVersion = "2.11.8"
 
 scalaVersion := languageVersion
 
@@ -14,9 +14,8 @@ resolvers ++= Seq(
 )
 
 libraryDependencies ++= Seq(
-  "com.typesafe.play" %% "play-json" % "2.3.10" withSources(),
   "org.scala-lang.modules" %% "scala-xml" % "1.0.5" withSources(),
-  "com.codacy" %% "codacy-engine-scala-seed" % "2.6.31"
+  "com.codacy" %% "codacy-engine-scala-seed" % "2.7.0"
 )
 
 enablePlugins(JavaAppPackaging)
