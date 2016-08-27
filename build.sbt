@@ -24,15 +24,15 @@ enablePlugins(DockerPlugin)
 
 version in Docker := "1.0"
 
+val rubocopVersion = "0.42.0"
+
 val installAll =
-  s"""apk update && apk upgrade
-      |&& apk add bash
-      |&& apk add g++ make
-      |&& apk add libxml2 libxslt libevent libffi glib ncurses readline
-      |&& apk add openssl yaml zlib curl mariadb-libs libpq ruby ruby-dev ruby-io-console
-      |&& apk add ruby-bigdecimal
-      |&& gem install --no-document json
-      |&& gem install --no-document rubocop:0.42.0""".stripMargin.replaceAll(System.lineSeparator(), " ")
+  s"""apk --no-cache add bash ruby build-base ruby-dev ruby-bigdecimal ruby-io-console
+      |&& gem install --no-rdoc --no-ri json
+      |&& gem install --no-rdoc --no-ri rubocop:$rubocopVersion
+      |&& gem cleanup
+      |&& apk del build-base ruby-dev
+      |&& rm -rf /var/cache/apk/*""".stripMargin.replaceAll(System.lineSeparator(), " ")
 
 mappings in Universal <++= (resourceDirectory in Compile) map { (resourceDir: File) =>
   val src = resourceDir / "docs"
@@ -51,7 +51,7 @@ daemonUser in Docker := dockerUser
 
 daemonGroup in Docker := dockerGroup
 
-dockerBaseImage := "frolvlad/alpine-oraclejdk8"
+dockerBaseImage := "develar/java"
 
 dockerCommands := dockerCommands.value.flatMap {
   case cmd@Cmd("WORKDIR", _) => List(cmd,
@@ -59,7 +59,7 @@ dockerCommands := dockerCommands.value.flatMap {
   )
   case cmd@(Cmd("ADD", "opt /opt")) => List(cmd,
     Cmd("RUN", "mv /opt/docker/docs /docs"),
-    Cmd("RUN", "adduser -u 2004 -D docker"),
+    Cmd("RUN", s"adduser -u 2004 -D $dockerUser"),
     ExecCmd("RUN", Seq("chown", "-R", s"$dockerUser:$dockerGroup", "/docs"): _*)
   )
   case other => List(other)
