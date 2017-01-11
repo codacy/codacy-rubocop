@@ -24,15 +24,21 @@ enablePlugins(DockerPlugin)
 
 version in Docker := "1.0"
 
-val rubocopVersion = "0.42.0"
-
 val installAll =
-  s"""apk --no-cache add bash ruby build-base ruby-dev ruby-bigdecimal ruby-io-console
-      |&& gem install --no-rdoc --no-ri json
-      |&& gem install --no-rdoc --no-ri rubocop:$rubocopVersion
-      |&& gem cleanup
-      |&& apk del build-base ruby-dev
-      |&& rm -rf /var/cache/apk/*""".stripMargin.replaceAll(System.lineSeparator(), " ")
+  s"""apk update
+     |&& apk --update add --no-cache ruby ruby-irb ruby-rake ruby-io-console ruby-bigdecimal
+     |ruby-json ruby-bundler libstdc++ tzdata bash ca-certificates
+     |&& echo 'gem: --no-document' > /etc/gemrc
+     |&& gem install activesupport
+     |&& gem install parser:2.3.3.1
+     |&& gem install pry
+     |&& gem install rubocop:0.46
+     |&& gem install rubocop-migrations
+     |&& gem install rubocop-rspec
+     |&& gem install safe_yaml
+     |&& gem cleanup
+     |&& apk del build-base ruby-dev
+     |&& rm -rf /var/cache/apk/*""".stripMargin.replaceAll(System.lineSeparator(), " ")
 
 mappings in Universal <++= (resourceDirectory in Compile) map { (resourceDir: File) =>
   val src = resourceDir / "docs"
