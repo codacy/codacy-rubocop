@@ -78,7 +78,7 @@
     "timeToFix": 5
   },
   {
-    "patternId": "Lint_Eval",
+    "patternId": "Security_Eval",
     "title": "Eval Usage",
     "description": "Checks for eval usage",
     "timeToFix": 5
@@ -889,7 +889,7 @@
     "timeToFix": 5
   },
   {
-    "patternId": "Style_MethodCallParentheses",
+    "patternId": "Style_MethodCallWithArgsParentheses",
     "title": "Method Call Parentheses",
     "description": "Prohibits the usage of parentheses on methods with no parameters",
     "timeToFix": 5

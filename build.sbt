@@ -30,9 +30,9 @@ val installAll =
      |ruby-json ruby-bundler libstdc++ tzdata bash ca-certificates
      |&& echo 'gem: --no-document' > /etc/gemrc
      |&& gem install activesupport
-     |&& gem install parser:2.3.3.1
+     |&& gem install parser:2.4.0.0
      |&& gem install pry
-     |&& gem install rubocop:0.46
+     |&& gem install rubocop:0.47.1
      |&& gem install rubocop-migrations
      |&& gem install rubocop-rspec
      |&& gem install safe_yaml

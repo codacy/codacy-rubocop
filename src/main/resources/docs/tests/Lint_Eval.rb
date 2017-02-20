@@ -1,4 +1,4 @@
-##Patterns: Lint_Eval
+##Patterns: Security_Eval
 
-##Warn: Lint_Eval
+##Info: Security_Eval
 eval(something, binding, "test.rb", 1)

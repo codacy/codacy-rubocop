@@ -56,6 +56,14 @@
             "http",
             "https"
           ]
+        },
+        {
+          "name": "IgnoreCopDirectives",
+          "default": false
+        },
+        {
+          "name": "IgnoredPatterns",
+          "default": []
         }
       ]
     },
@@ -112,6 +120,19 @@
       "category": "CodeStyle"
     },
     {
+      "patternId": "Rails_ReversibleMigration",
+      "level": "Warning",
+      "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "Include",
+          "default": [
+            "db/migrate/*.rb"
+          ]
+        }
+      ]
+    },
+    {
       "patternId": "Lint_RandOne",
       "level": "Warning",
       "category": "ErrorProne"
@@ -142,6 +163,19 @@
       "patternId": "Style_UnlessElse",
       "level": "Info",
       "category": "CodeStyle"
+    },
+    {
+      "patternId": "Rails_EnumUniqueness",
+      "level": "Warning",
+      "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "Include",
+          "default": [
+            "app/models/**/*.rb"
+          ]
+        }
+      ]
     },
     {
       "patternId": "Style_For",
@@ -181,6 +215,10 @@
       "category": "ErrorProne",
       "parameters": [
         {
+          "name": "CountBlocks",
+          "default": false
+        },
+        {
           "name": "Max",
           "default": 3
         }
@@ -190,6 +228,11 @@
       "patternId": "Style_OneLineConditional",
       "level": "Info",
       "category": "CodeStyle"
+    },
+    {
+      "patternId": "Rails_FilePath",
+      "level": "Warning",
+      "category": "ErrorProne"
     },
     {
       "patternId": "Style_WordArray",
@@ -254,7 +297,13 @@
     {
       "patternId": "Performance_EndWith",
       "level": "Warning",
-      "category": "Performance"
+      "category": "Performance",
+      "parameters": [
+        {
+          "name": "AutoCorrect",
+          "default": false
+        }
+      ]
     },
     {
       "patternId": "Style_EmptyCaseCondition",
@@ -311,6 +360,10 @@
         {
           "name": "SingleLineConditionsOnly",
           "default": true
+        },
+        {
+          "name": "IncludeTernaryExpressions",
+          "default": true
         }
       ]
     },
@@ -351,6 +404,7 @@
           "default": {
             "%": "()",
             "%i": "()",
+            "%I": "()",
             "%q": "()",
             "%Q": "()",
             "%r": "{}",
@@ -401,6 +455,17 @@
       "patternId": "Lint_RequireParentheses",
       "level": "Warning",
       "category": "ErrorProne"
+    },
+    {
+      "patternId": "Style_IndentHeredoc",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "ruby23"
+        }
+      ]
     },
     {
       "patternId": "Style_SpaceAfterMethodName",
@@ -464,7 +529,7 @@
       "category": "ErrorProne",
       "parameters": [
         {
-          "name": "AlignWith",
+          "name": "EnforcedStyleAlignWith",
           "default": "keyword"
         },
         {
@@ -568,9 +633,45 @@
       "category": "CodeStyle"
     },
     {
+      "patternId": "Style_VariableNumber",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "normalcase"
+        }
+      ]
+    },
+    {
       "patternId": "Style_RedundantFreeze",
       "level": "Info",
       "category": "CodeStyle"
+    },
+    {
+      "patternId": "Bundler_OrderedGems",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "Include",
+          "default": [
+            "**/Gemfile",
+            "**/gems.rb"
+          ]
+        }
+      ]
+    },
+    {
+      "patternId": "Style_MixinGrouping",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "separated"
+        }
+      ]
     },
     {
       "patternId": "Style_ParenthesesAroundCondition",
@@ -841,7 +942,13 @@
     {
       "patternId": "Lint_EmptyEnsure",
       "level": "Warning",
-      "category": "ErrorProne"
+      "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "AutoCorrect",
+          "default": false
+        }
+      ]
     },
     {
       "patternId": "Lint_ElseLayout",
@@ -858,6 +965,11 @@
           "default": false
         }
       ]
+    },
+    {
+      "patternId": "Style_EmptyLinesAroundExceptionHandlingKeywords",
+      "level": "Info",
+      "category": "CodeStyle"
     },
     {
       "patternId": "Style_SpaceInsideBlockBraces",
@@ -879,6 +991,17 @@
       ]
     },
     {
+      "patternId": "Style_MultilineMemoization",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "keyword"
+        }
+      ]
+    },
+    {
       "patternId": "Performance_RedundantSortBy",
       "level": "Warning",
       "category": "Performance"
@@ -889,6 +1012,17 @@
       "category": "ErrorProne"
     },
     {
+      "patternId": "Style_MethodCallWithArgsParentheses",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "IgnoredMethods",
+          "default": []
+        }
+      ]
+    },
+    {
       "patternId": "Style_Documentation",
       "level": "Info",
       "category": "CodeStyle",
@@ -896,8 +1030,8 @@
         {
           "name": "Exclude",
           "default": [
-            "/opt/docker/spec/**/*",
-            "/opt/docker/test/**/*"
+            "spec/**/*",
+            "test/**/*"
           ]
         }
       ]
@@ -937,7 +1071,7 @@
         {
           "name": "Exclude",
           "default": [
-            "/opt/docker/lib/**/*.rake"
+            "lib/**/*.rake"
           ]
         }
       ]
@@ -946,11 +1080,6 @@
       "patternId": "Lint_EnsureReturn",
       "level": "Warning",
       "category": "ErrorProne"
-    },
-    {
-      "patternId": "Style_MethodCallParentheses",
-      "level": "Info",
-      "category": "CodeStyle"
     },
     {
       "patternId": "Style_FirstMethodArgumentLineBreak",
@@ -1111,14 +1240,25 @@
       ]
     },
     {
-      "patternId": "Performance_PushSplat",
+      "patternId": "Lint_ParenthesesAsGroupedExpression",
+      "level": "Warning",
+      "category": "ErrorProne"
+    },
+    {
+      "patternId": "Performance_CompareWithBlock",
       "level": "Warning",
       "category": "Performance"
     },
     {
-      "patternId": "Lint_ParenthesesAsGroupedExpression",
-      "level": "Warning",
-      "category": "ErrorProne"
+      "patternId": "Security_JSONLoad",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "AutoCorrect",
+          "default": false
+        }
+      ]
     },
     {
       "patternId": "Metrics_AbcSize",
@@ -1235,10 +1375,15 @@
         {
           "name": "Exclude",
           "default": [
-            "/opt/docker/spec/**/*"
+            "spec/**/*"
           ]
         }
       ]
+    },
+    {
+      "patternId": "Lint_MultipleCompare",
+      "level": "Warning",
+      "category": "ErrorProne"
     },
     {
       "patternId": "Performance_LstripRstrip",
@@ -1287,11 +1432,6 @@
       ]
     },
     {
-      "patternId": "Lint_UselessArraySplat",
-      "level": "Warning",
-      "category": "ErrorProne"
-    },
-    {
       "patternId": "Style_StringMethods",
       "level": "Info",
       "category": "CodeStyle",
@@ -1303,6 +1443,11 @@
           }
         }
       ]
+    },
+    {
+      "patternId": "Lint_EmptyExpression",
+      "level": "Warning",
+      "category": "ErrorProne"
     },
     {
       "patternId": "Lint_UselessComparison",
@@ -1353,7 +1498,24 @@
     {
       "patternId": "Style_PreferredHashMethods",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "short"
+        }
+      ]
+    },
+    {
+      "patternId": "Style_EmptyMethod",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "compact"
+        }
+      ]
     },
     {
       "patternId": "Style_InfiniteLoop",
@@ -1391,6 +1553,51 @@
         {
           "name": "IgnoreExecutableScripts",
           "default": true
+        },
+        {
+          "name": "AllowedAcronyms",
+          "default": [
+            "CLI",
+            "DSL",
+            "ACL",
+            "API",
+            "ASCII",
+            "CPU",
+            "CSS",
+            "DNS",
+            "EOF",
+            "GUID",
+            "HTML",
+            "HTTP",
+            "HTTPS",
+            "ID",
+            "IP",
+            "JSON",
+            "LHS",
+            "QPS",
+            "RAM",
+            "RHS",
+            "RPC",
+            "SLA",
+            "SMTP",
+            "SQL",
+            "SSH",
+            "TCP",
+            "TLS",
+            "TTL",
+            "UDP",
+            "UI",
+            "UID",
+            "UUID",
+            "URI",
+            "URL",
+            "UTF8",
+            "VM",
+            "XML",
+            "XMPP",
+            "XSRF",
+            "XSS"
+          ]
         }
       ]
     },
@@ -1410,14 +1617,66 @@
       "category": "CodeStyle"
     },
     {
+      "patternId": "Rails_SkipsModelValidations",
+      "level": "Warning",
+      "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "Blacklist",
+          "default": [
+            "decrement!",
+            "decrement_counter",
+            "increment!",
+            "increment_counter",
+            "toggle!",
+            "touch",
+            "update_all",
+            "update_attribute",
+            "update_column",
+            "update_columns",
+            "update_counters"
+          ]
+        }
+      ]
+    },
+    {
       "patternId": "Performance_Sample",
       "level": "Warning",
       "category": "Performance"
     },
     {
+      "patternId": "Style_InverseMethods",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "InverseMethods",
+          "default": {
+            ":any?": ":none?",
+            ":even?": ":odd?",
+            ":==": ":!=",
+            ":=~": ":!~",
+            ":<": ":>=",
+            ":>": ":<="
+          }
+        },
+        {
+          "name": "InverseBlocks",
+          "default": {
+            ":select": ":reject"
+          }
+        }
+      ]
+    },
+    {
       "patternId": "Rails_PluralizationGrammar",
       "level": "Warning",
       "category": "ErrorProne"
+    },
+    {
+      "patternId": "Style_MultilineIfModifier",
+      "level": "Info",
+      "category": "CodeStyle"
     },
     {
       "patternId": "Style_RedundantBegin",
@@ -1471,9 +1730,20 @@
       "category": "ErrorProne"
     },
     {
+      "patternId": "Lint_UnneededSplatExpansion",
+      "level": "Warning",
+      "category": "ErrorProne"
+    },
+    {
       "patternId": "Performance_StartWith",
       "level": "Warning",
-      "category": "Performance"
+      "category": "Performance",
+      "parameters": [
+        {
+          "name": "AutoCorrect",
+          "default": false
+        }
+      ]
     },
     {
       "patternId": "Style_RescueEnsureAlignment",
@@ -1506,6 +1776,11 @@
       "category": "CodeStyle"
     },
     {
+      "patternId": "Style_EmptyLinesAroundBeginBody",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
       "patternId": "Style_ArrayJoin",
       "level": "Info",
       "category": "CodeStyle"
@@ -1531,7 +1806,23 @@
       ]
     },
     {
+      "patternId": "Rails_SafeNavigation",
+      "level": "Warning",
+      "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "ConvertTry",
+          "default": false
+        }
+      ]
+    },
+    {
       "patternId": "Style_SpaceAroundKeyword",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "Style_EmptyLineAfterMagicComment",
       "level": "Info",
       "category": "CodeStyle"
     },
@@ -1539,6 +1830,19 @@
       "patternId": "Lint_FormatParameterMismatch",
       "level": "Warning",
       "category": "ErrorProne"
+    },
+    {
+      "patternId": "Rails_DynamicFindBy",
+      "level": "Warning",
+      "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "Whitelist",
+          "default": [
+            "find_by_sql"
+          ]
+        }
+      ]
     },
     {
       "patternId": "Style_NestedModifier",
@@ -1562,7 +1866,7 @@
       "category": "ErrorProne",
       "parameters": [
         {
-          "name": "EnforcedMode",
+          "name": "EnforcedStyle",
           "default": "conservative"
         },
         {
@@ -1598,7 +1902,7 @@
       "category": "ErrorProne",
       "parameters": [
         {
-          "name": "AlignWith",
+          "name": "EnforcedStyleAlignWith",
           "default": "start_of_line"
         },
         {
@@ -1606,6 +1910,11 @@
           "default": false
         }
       ]
+    },
+    {
+      "patternId": "Rails",
+      "level": "Warning",
+      "category": "ErrorProne"
     },
     {
       "patternId": "Rails_ScopeArgs",
@@ -1667,6 +1976,20 @@
       ]
     },
     {
+      "patternId": "Bundler_DuplicatedGem",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "Include",
+          "default": [
+            "**/Gemfile",
+            "**/gems.rb"
+          ]
+        }
+      ]
+    },
+    {
       "patternId": "Style_SingleLineMethods",
       "level": "Info",
       "category": "CodeStyle",
@@ -1676,6 +1999,11 @@
           "default": true
         }
       ]
+    },
+    {
+      "patternId": "Lint_DuplicateCaseCondition",
+      "level": "Warning",
+      "category": "ErrorProne"
     },
     {
       "patternId": "Lint_Debugger",
@@ -1711,6 +2039,12 @@
         {
           "name": "EnforcedStyle",
           "default": "predicate"
+        },
+        {
+          "name": "Exclude",
+          "default": [
+            "spec/**/*"
+          ]
         }
       ]
     },
@@ -1796,7 +2130,7 @@
       "category": "CodeStyle",
       "parameters": [
         {
-          "name": "IndentWhenRelativeTo",
+          "name": "EnforcedStyle",
           "default": "case"
         },
         {
@@ -1820,7 +2154,7 @@
       "category": "ErrorProne",
       "parameters": [
         {
-          "name": "AlignWith",
+          "name": "EnforcedStyleAlignWith",
           "default": "either"
         }
       ]
@@ -1839,6 +2173,22 @@
           "name": "Include",
           "default": [
             "app/models/**/*.rb"
+          ]
+        }
+      ]
+    },
+    {
+      "patternId": "Lint_SafeNavigationChain",
+      "level": "Warning",
+      "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "Whitelist",
+          "default": [
+            "present?",
+            "blank?",
+            "presence",
+            "try"
           ]
         }
       ]
@@ -1870,6 +2220,22 @@
       ]
     },
     {
+      "patternId": "Style_DocumentationMethod",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "RequireForNonPublicMethods",
+          "default": false
+        }
+      ]
+    },
+    {
+      "patternId": "Security_Eval",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
       "patternId": "Lint_UselessAssignment",
       "level": "Warning",
       "category": "ErrorProne"
@@ -1893,7 +2259,13 @@
     {
       "patternId": "Performance_DoubleStartEndWith",
       "level": "Warning",
-      "category": "Performance"
+      "category": "Performance",
+      "parameters": [
+        {
+          "name": "IncludeActiveSupportAliases",
+          "default": false
+        }
+      ]
     },
     {
       "patternId": "Style_IfWithSemicolon",
@@ -2061,6 +2433,11 @@
       ]
     },
     {
+      "patternId": "Performance_RegexpMatch",
+      "level": "Warning",
+      "category": "Performance"
+    },
+    {
       "patternId": "Performance_FlatMap",
       "level": "Warning",
       "category": "Performance"
@@ -2095,7 +2472,13 @@
     {
       "patternId": "Style_EndOfLine",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "native"
+        }
+      ]
     },
     {
       "patternId": "Style_BlockComments",
@@ -2269,6 +2652,41 @@
       ]
     },
     {
+      "patternId": "Style_MethodCallWithoutArgsParentheses",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "Security_YAMLLoad",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "Rails_HttpPositionalArguments",
+      "level": "Warning",
+      "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "Include",
+          "default": [
+            "spec/**/*",
+            "test/**/*"
+          ]
+        }
+      ]
+    },
+    {
+      "patternId": "Style_SpaceInLambdaLiteral",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "require_no_space"
+        }
+      ]
+    },
+    {
       "patternId": "Style_SingleLineBlockParams",
       "level": "Info",
       "category": "CodeStyle",
@@ -2278,19 +2696,24 @@
           "default": [
             {
               "reduce": [
-                "a",
-                "e"
+                "acc",
+                "elem"
               ]
             },
             {
               "inject": [
-                "a",
-                "e"
+                "acc",
+                "elem"
               ]
             }
           ]
         }
       ]
+    },
+    {
+      "patternId": "Security_MarshalLoad",
+      "level": "Info",
+      "category": "CodeStyle"
     },
     {
       "patternId": "Style_OpMethod",
@@ -2362,6 +2785,11 @@
       ]
     },
     {
+      "patternId": "Rails_DelegateAllowBlank",
+      "level": "Warning",
+      "category": "ErrorProne"
+    },
+    {
       "patternId": "Performance_ReverseEach",
       "level": "Warning",
       "category": "Performance"
@@ -2403,6 +2831,11 @@
       ]
     },
     {
+      "patternId": "Lint_EmptyWhen",
+      "level": "Warning",
+      "category": "ErrorProne"
+    },
+    {
       "patternId": "Lint_AmbiguousOperator",
       "level": "Warning",
       "category": "ErrorProne"
@@ -2440,14 +2873,27 @@
       ]
     },
     {
+      "patternId": "Lint_UnifiedInteger",
+      "level": "Warning",
+      "category": "ErrorProne"
+    },
+    {
       "patternId": "Lint_UnreachableCode",
       "level": "Warning",
       "category": "ErrorProne"
     },
     {
-      "patternId": "Lint_Eval",
+      "patternId": "Rails_NotNullColumn",
       "level": "Warning",
-      "category": "ErrorProne"
+      "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "Include",
+          "default": [
+            "db/migrate/*.rb"
+          ]
+        }
+      ]
     },
     {
       "patternId": "Style_SpaceAfterSemicolon",
@@ -2502,6 +2948,11 @@
       ]
     },
     {
+      "patternId": "Rails_RelativeDateConstant",
+      "level": "Warning",
+      "category": "ErrorProne"
+    },
+    {
       "patternId": "Style_SpaceAfterColon",
       "level": "Info",
       "category": "CodeStyle"
@@ -2529,6 +2980,10 @@
       "parameters": [
         {
           "name": "ContextCreatingMethods",
+          "default": []
+        },
+        {
+          "name": "MethodCreatingMethods",
           "default": []
         }
       ]
@@ -2578,6 +3033,36 @@
       "patternId": "Performance_RedundantBlockCall",
       "level": "Warning",
       "category": "Performance"
+    },
+    {
+      "patternId": "Style_SafeNavigation",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "ConvertCodeThatCanStartToReturnNil",
+          "default": false
+        }
+      ]
+    },
+    {
+      "patternId": "Metrics_BlockLength",
+      "level": "Warning",
+      "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "CountComments",
+          "default": false
+        },
+        {
+          "name": "Max",
+          "default": 25
+        },
+        {
+          "name": "ExcludedMethods",
+          "default": []
+        }
+      ]
     },
     {
       "patternId": "Rails_ActionFilter",

@@ -17,4 +17,4 @@ fork
 ```
 
 
-[Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Style/MethodCallParentheses)
+[Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Style/MethodCallWithArgsParentheses)
