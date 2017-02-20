@@ -13,6 +13,9 @@ import scala.util.{Failure, Properties, Success, Try}
 
 object Rubocop extends Tool {
 
+  // Gemfile is analysed
+  private val filesToIgnore: Set[String] = Set("Gemfile.lock").map(_.toLowerCase())
+
   override def apply(path: Path, conf: Option[List[PatternDef]], files: Option[Set[Path]])(implicit spec: Spec): Try[List[Result]] = {
     val cmd = getCommandFor(path, conf, files, spec, resultFilePath)
     CommandRunner.exec(cmd, Some(path.toFile)) match {
@@ -82,7 +85,11 @@ object Rubocop extends Tool {
       case _ => List.empty
     }
 
-    val filesCmd = files.getOrElse(List(path.toAbsolutePath)).map(_.toString)
+    val filesCmd = files.getOrElse(List(path.toAbsolutePath))
+      .collect {
+        case file if !filesToIgnore.contains(file.getFileName.toString.toLowerCase()) =>
+          file.toString
+      }
 
     List("rubocop", "-f", "json", "-o", outputFilePath.toAbsolutePath.toString) ++ configPath ++ patternsCmd ++ filesCmd
   }
@@ -98,21 +105,24 @@ object Rubocop extends Tool {
       s"""
          |AllCops:
          |  Include:
-         |    - "**/*.gemspec"
-         |    - "**/*.podspec"
-         |    - "**/*.jbuilder"
-         |    - "**/*.rake"
-         |    - "**/*.opal"
-         |    - "**/Gemfile"
-         |    - "**/Rakefile"
-         |    - "**/Capfile"
-         |    - "**/Guardfile"
-         |    - "**/Podfile"
-         |    - "**/Thorfile"
-         |    - "**/Vagrantfile"
-         |    - "**/Berksfile"
-         |    - "**/Cheffile"
-         |    - "**/Vagabondfile"
+         |    - '**/*.gemspec'
+         |    - '**/*.podspec'
+         |    - '**/*.jbuilder'
+         |    - '**/*.rake'
+         |    - '**/*.opal'
+         |    - '**/config.ru'
+         |    - '**/Gemfile'
+         |    - '**/Rakefile'
+         |    - '**/Capfile'
+         |    - '**/Guardfile'
+         |    - '**/Podfile'
+         |    - '**/Thorfile'
+         |    - '**/Vagrantfile'
+         |    - '**/Berksfile'
+         |    - '**/Cheffile'
+         |    - '**/Vagabondfile'
+         |    - '**/Fastfile'
+         |    - '**/*Fastfile'
          |  Exclude:
          |    - "vendor/**/*"
          |    - "db/schema.rb"
