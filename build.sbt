@@ -32,7 +32,7 @@ val installAll =
      |&& gem install activesupport
      |&& gem install parser:2.4.0.0
      |&& gem install pry
-     |&& gem install rubocop:0.47.1
+     |&& gem install rubocop:0.48.1
      |&& gem install rubocop-migrations
      |&& gem install rubocop-rspec
      |&& gem install safe_yaml
