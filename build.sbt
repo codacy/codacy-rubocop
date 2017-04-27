@@ -25,8 +25,9 @@ enablePlugins(DockerPlugin)
 version in Docker := "1.0"
 
 val installAll =
-  s"""apk update
-     |&& apk --update add --no-cache ruby ruby-irb ruby-rake ruby-io-console ruby-bigdecimal
+  s"""echo "http://dl-cdn.alpinelinux.org/alpine/v3.4/main" >> /etc/apk/repositories
+     |&& echo "http://dl-cdn.alpinelinux.org/alpine/v3.4/community" >> /etc/apk/repositories
+     |&& apk add --no-cache ruby ruby-irb ruby-rake ruby-io-console ruby-bigdecimal
      |ruby-json ruby-bundler libstdc++ tzdata bash ca-certificates
      |&& echo 'gem: --no-document' > /etc/gemrc
      |&& gem install activesupport
@@ -37,8 +38,7 @@ val installAll =
      |&& gem install rubocop-rspec
      |&& gem install safe_yaml
      |&& gem cleanup
-     |&& apk del build-base ruby-dev
-     |&& rm -rf /var/cache/apk/*""".stripMargin.replaceAll(System.lineSeparator(), " ")
+     |&& rm -rf /tmp/* /var/cache/apk/*""".stripMargin.replaceAll(System.lineSeparator(), " ")
 
 mappings in Universal <++= (resourceDirectory in Compile) map { (resourceDir: File) =>
   val src = resourceDir / "docs"
