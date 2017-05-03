@@ -1,11 +1,11 @@
-##Patterns: Style_EmptyLinesAroundClassBody
+##Patterns: Layout_EmptyLinesAroundClassBody
 
 
 class Test
    def something
      print "Hello"
    end
-  ##Info: Style_EmptyLinesAroundClassBody
+  ##Info: Layout_EmptyLinesAroundClassBody
 
 end
 

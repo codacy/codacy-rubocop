@@ -2,6 +2,11 @@
   "name": "Rubocop",
   "patterns": [
     {
+      "patternId": "Layout_FirstMethodArgumentLineBreak",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
       "patternId": "Style_MultilineTernaryOperator",
       "level": "Info",
       "category": "CodeStyle"
@@ -12,15 +17,9 @@
       "category": "ErrorProne"
     },
     {
-      "patternId": "Style_EmptyLinesAroundBlockBody",
+      "patternId": "Layout_SpaceBeforeSemicolon",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "EnforcedStyle",
-          "default": "no_empty_lines"
-        }
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Style_VariableName",
@@ -68,6 +67,16 @@
       ]
     },
     {
+      "patternId": "Layout_EmptyLinesAroundBeginBody",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "Layout_CommentIndentation",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
       "patternId": "Style_ModuleFunction",
       "level": "Info",
       "category": "CodeStyle",
@@ -84,17 +93,17 @@
       "category": "CodeStyle"
     },
     {
-      "patternId": "Style_SpaceInsideHashLiteralBraces",
+      "patternId": "Layout_MultilineOperationIndentation",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [
         {
           "name": "EnforcedStyle",
-          "default": "space"
+          "default": "aligned"
         },
         {
-          "name": "EnforcedStyleForEmptyBraces",
-          "default": "no_space"
+          "name": "IndentationWidth",
+          "default": null
         }
       ]
     },
@@ -111,6 +120,10 @@
         {
           "name": "EnforcedStyle",
           "default": "percent"
+        },
+        {
+          "name": "MinSize",
+          "default": 0
         }
       ]
     },
@@ -136,6 +149,25 @@
       "patternId": "Lint_RandOne",
       "level": "Warning",
       "category": "ErrorProne"
+    },
+    {
+      "patternId": "Layout_CaseIndentation",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "case"
+        },
+        {
+          "name": "IndentOneStep",
+          "default": false
+        },
+        {
+          "name": "IndentationWidth",
+          "default": null
+        }
+      ]
     },
     {
       "patternId": "Style_RedundantReturn",
@@ -176,6 +208,11 @@
           ]
         }
       ]
+    },
+    {
+      "patternId": "Layout_FirstMethodParameterLineBreak",
+      "level": "Info",
+      "category": "CodeStyle"
     },
     {
       "patternId": "Style_For",
@@ -254,24 +291,28 @@
       ]
     },
     {
-      "patternId": "Style_ExtraSpacing",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "AllowForAlignment",
-          "default": true
-        },
-        {
-          "name": "ForceEqualSignAlignment",
-          "default": false
-        }
-      ]
-    },
-    {
       "patternId": "Style_PerlBackrefs",
       "level": "Info",
       "category": "CodeStyle"
+    },
+    {
+      "patternId": "Rails_Blank",
+      "level": "Warning",
+      "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "NilOrEmpty",
+          "default": true
+        },
+        {
+          "name": "NotPresent",
+          "default": true
+        },
+        {
+          "name": "UnlessPresent",
+          "default": true
+        }
+      ]
     },
     {
       "patternId": "Style_EmptyLiteral",
@@ -297,13 +338,7 @@
     {
       "patternId": "Performance_EndWith",
       "level": "Warning",
-      "category": "Performance",
-      "parameters": [
-        {
-          "name": "AutoCorrect",
-          "default": false
-        }
-      ]
+      "category": "Performance"
     },
     {
       "patternId": "Style_EmptyCaseCondition",
@@ -368,33 +403,6 @@
       ]
     },
     {
-      "patternId": "Style_SpaceAroundBlockParameters",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "EnforcedStyleInsidePipes",
-          "default": "no_space"
-        }
-      ]
-    },
-    {
-      "patternId": "Style_MultilineHashBraceLayout",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "EnforcedStyle",
-          "default": "symmetrical"
-        }
-      ]
-    },
-    {
-      "patternId": "Style_SpaceAfterNot",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
       "patternId": "Style_PercentLiteralDelimiters",
       "level": "Info",
       "category": "CodeStyle",
@@ -402,19 +410,20 @@
         {
           "name": "PreferredDelimiters",
           "default": {
-            "%": "()",
-            "%i": "()",
-            "%I": "()",
-            "%q": "()",
-            "%Q": "()",
+            "default": "()",
+            "%i": "[]",
+            "%I": "[]",
             "%r": "{}",
-            "%s": "()",
-            "%w": "()",
-            "%W": "()",
-            "%x": "()"
+            "%w": "[]",
+            "%W": "[]"
           }
         }
       ]
+    },
+    {
+      "patternId": "Layout_SpaceAfterMethodName",
+      "level": "Info",
+      "category": "CodeStyle"
     },
     {
       "patternId": "Performance_Size",
@@ -422,9 +431,23 @@
       "category": "Performance"
     },
     {
-      "patternId": "Style_BlockEndNewline",
-      "level": "Info",
-      "category": "CodeStyle"
+      "patternId": "Rails_Present",
+      "level": "Warning",
+      "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "NotNilAndNotEmpty",
+          "default": true
+        },
+        {
+          "name": "NotBlank",
+          "default": true
+        },
+        {
+          "name": "UnlessBlank",
+          "default": true
+        }
+      ]
     },
     {
       "patternId": "Style_CharacterLiteral",
@@ -447,6 +470,21 @@
       "category": "CodeStyle"
     },
     {
+      "patternId": "Layout_SpaceInsideHashLiteralBraces",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "space"
+        },
+        {
+          "name": "EnforcedStyleForEmptyBraces",
+          "default": "no_space"
+        }
+      ]
+    },
+    {
       "patternId": "Style_UnneededCapitalW",
       "level": "Info",
       "category": "CodeStyle"
@@ -457,20 +495,19 @@
       "category": "ErrorProne"
     },
     {
-      "patternId": "Style_IndentHeredoc",
+      "patternId": "Layout_IndentationWidth",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [
         {
-          "name": "EnforcedStyle",
-          "default": "ruby23"
+          "name": "Width",
+          "default": 2
+        },
+        {
+          "name": "IgnoredPatterns",
+          "default": []
         }
       ]
-    },
-    {
-      "patternId": "Style_SpaceAfterMethodName",
-      "level": "Info",
-      "category": "CodeStyle"
     },
     {
       "patternId": "Style_SignalException",
@@ -494,11 +531,6 @@
       "category": "ErrorProne"
     },
     {
-      "patternId": "Style_SpaceAfterComma",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
       "patternId": "Lint_UnusedMethodArgument",
       "level": "Warning",
       "category": "ErrorProne",
@@ -510,6 +542,21 @@
         {
           "name": "IgnoreEmptyMethods",
           "default": true
+        }
+      ]
+    },
+    {
+      "patternId": "Layout_AccessModifierIndentation",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "indent"
+        },
+        {
+          "name": "IndentationWidth",
+          "default": null
         }
       ]
     },
@@ -531,10 +578,6 @@
         {
           "name": "EnforcedStyleAlignWith",
           "default": "keyword"
-        },
-        {
-          "name": "AutoCorrect",
-          "default": false
         }
       ]
     },
@@ -554,7 +597,23 @@
       ]
     },
     {
-      "patternId": "Style_SpaceAroundOperators",
+      "patternId": "Layout_MultilineAssignmentLayout",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "new_line"
+        }
+      ]
+    },
+    {
+      "patternId": "Lint_EachWithObjectArgument",
+      "level": "Warning",
+      "category": "ErrorProne"
+    },
+    {
+      "patternId": "Layout_SpaceBeforeFirstArg",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [
@@ -565,23 +624,12 @@
       ]
     },
     {
-      "patternId": "Lint_EachWithObjectArgument",
-      "level": "Warning",
-      "category": "ErrorProne"
-    },
-    {
-      "patternId": "Style_IndentationConsistency",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "EnforcedStyle",
-          "default": "normal"
-        }
-      ]
-    },
-    {
       "patternId": "Style_IfInsideElse",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "Layout_SpaceInsidePercentLiteralDelimiters",
       "level": "Info",
       "category": "CodeStyle"
     },
@@ -607,25 +655,9 @@
       "category": "ErrorProne"
     },
     {
-      "patternId": "Style_CommentIndentation",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
       "patternId": "Style_DoubleNegation",
       "level": "Info",
       "category": "CodeStyle"
-    },
-    {
-      "patternId": "Style_MultilineMethodDefinitionBraceLayout",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "EnforcedStyle",
-          "default": "symmetrical"
-        }
-      ]
     },
     {
       "patternId": "Style_VariableInterpolation",
@@ -654,11 +686,8 @@
       "category": "CodeStyle",
       "parameters": [
         {
-          "name": "Include",
-          "default": [
-            "**/Gemfile",
-            "**/gems.rb"
-          ]
+          "name": "TreatCommentsAsGroupSeparators",
+          "default": true
         }
       ]
     },
@@ -670,6 +699,21 @@
         {
           "name": "EnforcedStyle",
           "default": "separated"
+        }
+      ]
+    },
+    {
+      "patternId": "Layout_ExtraSpacing",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "AllowForAlignment",
+          "default": true
+        },
+        {
+          "name": "ForceEqualSignAlignment",
+          "default": false
         }
       ]
     },
@@ -735,25 +779,14 @@
       "category": "CodeStyle"
     },
     {
-      "patternId": "Style_MultilineBlockLayout",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
       "patternId": "Lint_StringConversionInInterpolation",
       "level": "Warning",
       "category": "ErrorProne"
     },
     {
-      "patternId": "Style_IndentationWidth",
+      "patternId": "Style_MultipleComparison",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "Width",
-          "default": 2
-        }
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Style_Proc",
@@ -772,7 +805,18 @@
       ]
     },
     {
-      "patternId": "Style_EmptyLinesAroundModuleBody",
+      "patternId": "Style_GlobalVars",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "AllowedVariables",
+          "default": []
+        }
+      ]
+    },
+    {
+      "patternId": "Layout_EmptyLinesAroundClassBody",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [
@@ -783,13 +827,13 @@
       ]
     },
     {
-      "patternId": "Style_GlobalVars",
+      "patternId": "Layout_TrailingBlankLines",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [
         {
-          "name": "AllowedVariables",
-          "default": []
+          "name": "EnforcedStyle",
+          "default": "final_newline"
         }
       ]
     },
@@ -868,25 +912,6 @@
       "category": "CodeStyle"
     },
     {
-      "patternId": "Style_AlignHash",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "EnforcedHashRocketStyle",
-          "default": "key"
-        },
-        {
-          "name": "EnforcedColonStyle",
-          "default": "key"
-        },
-        {
-          "name": "EnforcedLastArgumentHashStyle",
-          "default": "always_inspect"
-        }
-      ]
-    },
-    {
       "patternId": "Style_NonNilCheck",
       "level": "Info",
       "category": "CodeStyle",
@@ -896,11 +921,6 @@
           "default": false
         }
       ]
-    },
-    {
-      "patternId": "Style_SpaceBeforeComma",
-      "level": "Info",
-      "category": "CodeStyle"
     },
     {
       "patternId": "Style_RegexpLiteral",
@@ -942,11 +962,27 @@
     {
       "patternId": "Lint_EmptyEnsure",
       "level": "Warning",
-      "category": "ErrorProne",
+      "category": "ErrorProne"
+    },
+    {
+      "patternId": "Layout_MultilineHashBraceLayout",
+      "level": "Info",
+      "category": "CodeStyle",
       "parameters": [
         {
-          "name": "AutoCorrect",
-          "default": false
+          "name": "EnforcedStyle",
+          "default": "symmetrical"
+        }
+      ]
+    },
+    {
+      "patternId": "Style_FormatStringToken",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "annotated"
         }
       ]
     },
@@ -956,39 +992,19 @@
       "category": "ErrorProne"
     },
     {
-      "patternId": "Performance_HashEachMethods",
-      "level": "Warning",
-      "category": "Performance",
-      "parameters": [
-        {
-          "name": "AutoCorrect",
-          "default": false
-        }
-      ]
-    },
-    {
-      "patternId": "Style_EmptyLinesAroundExceptionHandlingKeywords",
+      "patternId": "Layout_EmptyLinesAroundMethodBody",
       "level": "Info",
       "category": "CodeStyle"
     },
     {
-      "patternId": "Style_SpaceInsideBlockBraces",
+      "patternId": "Performance_HashEachMethods",
+      "level": "Warning",
+      "category": "Performance"
+    },
+    {
+      "patternId": "Layout_ClosingParenthesisIndentation",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "EnforcedStyle",
-          "default": "space"
-        },
-        {
-          "name": "EnforcedStyleForEmptyBraces",
-          "default": "no_space"
-        },
-        {
-          "name": "SpaceBeforeBlockParameters",
-          "default": true
-        }
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Style_MultilineMemoization",
@@ -1016,6 +1032,10 @@
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [
+        {
+          "name": "IgnoreMacros",
+          "default": true
+        },
         {
           "name": "IgnoredMethods",
           "default": []
@@ -1051,11 +1071,6 @@
       ]
     },
     {
-      "patternId": "Style_SpaceInsidePercentLiteralDelimiters",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
       "patternId": "Rails_Exit",
       "level": "Warning",
       "category": "ErrorProne",
@@ -1082,20 +1097,9 @@
       "category": "ErrorProne"
     },
     {
-      "patternId": "Style_FirstMethodArgumentLineBreak",
+      "patternId": "Layout_ElseAlignment",
       "level": "Info",
       "category": "CodeStyle"
-    },
-    {
-      "patternId": "Style_EmptyLinesAroundClassBody",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "EnforcedStyle",
-          "default": "no_empty_lines"
-        }
-      ]
     },
     {
       "patternId": "Lint_LiteralInInterpolation",
@@ -1143,15 +1147,9 @@
       "category": "CodeStyle"
     },
     {
-      "patternId": "Style_SpaceInsideStringInterpolation",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "EnforcedStyle",
-          "default": "no_space"
-        }
-      ]
+      "patternId": "Lint_ScriptPermission",
+      "level": "Warning",
+      "category": "ErrorProne"
     },
     {
       "patternId": "Style_AsciiIdentifiers",
@@ -1204,12 +1202,12 @@
       ]
     },
     {
-      "patternId": "Style_EndBlock",
+      "patternId": "Layout_MultilineBlockLayout",
       "level": "Info",
       "category": "CodeStyle"
     },
     {
-      "patternId": "Style_ElseAlignment",
+      "patternId": "Style_EndBlock",
       "level": "Info",
       "category": "CodeStyle"
     },
@@ -1219,14 +1217,24 @@
       "category": "ErrorProne"
     },
     {
-      "patternId": "Style_FirstArrayElementLineBreak",
+      "patternId": "Style_EvenOdd",
       "level": "Info",
       "category": "CodeStyle"
     },
     {
-      "patternId": "Style_EvenOdd",
+      "patternId": "Layout_IndentHash",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "special_inside_parentheses"
+        },
+        {
+          "name": "IndentationWidth",
+          "default": null
+        }
+      ]
     },
     {
       "patternId": "Style_SpecialGlobalVars",
@@ -1245,20 +1253,44 @@
       "category": "ErrorProne"
     },
     {
+      "patternId": "Layout_SpaceBeforeComment",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "Layout_EmptyLineBetweenDefs",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "AllowAdjacentOneLineDefs",
+          "default": false
+        },
+        {
+          "name": "NumberOfEmptyLines",
+          "default": 1
+        }
+      ]
+    },
+    {
+      "patternId": "Layout_SpaceInsideRangeLiteral",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
       "patternId": "Performance_CompareWithBlock",
       "level": "Warning",
       "category": "Performance"
     },
     {
+      "patternId": "Layout_EmptyLineAfterMagicComment",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
       "patternId": "Security_JSONLoad",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "AutoCorrect",
-          "default": false
-        }
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Metrics_AbcSize",
@@ -1283,21 +1315,6 @@
       ]
     },
     {
-      "patternId": "Style_MultilineMethodCallIndentation",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "EnforcedStyle",
-          "default": "aligned"
-        },
-        {
-          "name": "IndentationWidth",
-          "default": null
-        }
-      ]
-    },
-    {
       "patternId": "Lint_NestedMethodDefinition",
       "level": "Warning",
       "category": "ErrorProne"
@@ -1306,21 +1323,6 @@
       "patternId": "Lint_PercentStringArray",
       "level": "Warning",
       "category": "ErrorProne"
-    },
-    {
-      "patternId": "Style_AlignParameters",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "EnforcedStyle",
-          "default": "with_first_parameter"
-        },
-        {
-          "name": "IndentationWidth",
-          "default": null
-        }
-      ]
     },
     {
       "patternId": "Rails_Validation",
@@ -1401,11 +1403,6 @@
       "category": "ErrorProne"
     },
     {
-      "patternId": "Style_SpaceInsideBrackets",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
       "patternId": "Metrics_ClassLength",
       "level": "Warning",
       "category": "ErrorProne",
@@ -1421,15 +1418,24 @@
       ]
     },
     {
-      "patternId": "Style_MultilineMethodCallBraceLayout",
+      "patternId": "Layout_Tab",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "EnforcedStyle",
-          "default": "symmetrical"
-        }
-      ]
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "Layout_LeadingCommentSpace",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "Layout_SpaceAfterColon",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "Layout_BlockEndNewline",
+      "level": "Info",
+      "category": "CodeStyle"
     },
     {
       "patternId": "Style_StringMethods",
@@ -1486,6 +1492,36 @@
       ]
     },
     {
+      "patternId": "Layout_SpaceInsideBlockBraces",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "space"
+        },
+        {
+          "name": "EnforcedStyleForEmptyBraces",
+          "default": "no_space"
+        },
+        {
+          "name": "SpaceBeforeBlockParameters",
+          "default": true
+        }
+      ]
+    },
+    {
+      "patternId": "Layout_SpaceAroundBlockParameters",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "EnforcedStyleInsidePipes",
+          "default": "no_space"
+        }
+      ]
+    },
+    {
       "patternId": "Lint_UselessSetterCall",
       "level": "Warning",
       "category": "ErrorProne"
@@ -1494,6 +1530,21 @@
       "patternId": "Lint_UnneededDisable",
       "level": "Warning",
       "category": "ErrorProne"
+    },
+    {
+      "patternId": "Layout_FirstParameterIndentation",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "special_for_inner_method_call_in_parentheses"
+        },
+        {
+          "name": "IndentationWidth",
+          "default": null
+        }
+      ]
     },
     {
       "patternId": "Style_PreferredHashMethods",
@@ -1518,18 +1569,33 @@
       ]
     },
     {
-      "patternId": "Style_InfiniteLoop",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "Style_DotPosition",
+      "patternId": "Layout_IndentArray",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [
         {
           "name": "EnforcedStyle",
-          "default": "leading"
+          "default": "special_inside_parentheses"
+        },
+        {
+          "name": "IndentationWidth",
+          "default": null
+        }
+      ]
+    },
+    {
+      "patternId": "Style_InfiniteLoop",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "Layout_SpaceBeforeBlockBraces",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "space"
         }
       ]
     },
@@ -1607,12 +1673,7 @@
       "category": "CodeStyle"
     },
     {
-      "patternId": "Style_FirstMethodParameterLineBreak",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "Style_SpaceInsideRangeLiteral",
+      "patternId": "Layout_EmptyLinesAroundAccessModifier",
       "level": "Info",
       "category": "CodeStyle"
     },
@@ -1640,9 +1701,31 @@
       ]
     },
     {
+      "patternId": "Layout_EmptyLinesAroundModuleBody",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "no_empty_lines"
+        }
+      ]
+    },
+    {
       "patternId": "Performance_Sample",
       "level": "Warning",
       "category": "Performance"
+    },
+    {
+      "patternId": "Layout_IndentAssignment",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "IndentationWidth",
+          "default": null
+        }
+      ]
     },
     {
       "patternId": "Style_InverseMethods",
@@ -1663,7 +1746,8 @@
         {
           "name": "InverseBlocks",
           "default": {
-            ":select": ":reject"
+            ":select": ":reject",
+            ":select!": ":reject!"
           }
         }
       ]
@@ -1675,6 +1759,11 @@
     },
     {
       "patternId": "Style_MultilineIfModifier",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "Layout_SpaceAfterComma",
       "level": "Info",
       "category": "CodeStyle"
     },
@@ -1737,33 +1826,12 @@
     {
       "patternId": "Performance_StartWith",
       "level": "Warning",
-      "category": "Performance",
-      "parameters": [
-        {
-          "name": "AutoCorrect",
-          "default": false
-        }
-      ]
+      "category": "Performance"
     },
     {
-      "patternId": "Style_RescueEnsureAlignment",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "Style_FirstParameterIndentation",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "EnforcedStyle",
-          "default": "special_for_inner_method_call_in_parentheses"
-        },
-        {
-          "name": "IndentationWidth",
-          "default": null
-        }
-      ]
+      "patternId": "Rails_ApplicationJob",
+      "level": "Warning",
+      "category": "ErrorProne"
     },
     {
       "patternId": "Style_EachWithObject",
@@ -1776,12 +1844,12 @@
       "category": "CodeStyle"
     },
     {
-      "patternId": "Style_EmptyLinesAroundBeginBody",
+      "patternId": "Style_ArrayJoin",
       "level": "Info",
       "category": "CodeStyle"
     },
     {
-      "patternId": "Style_ArrayJoin",
+      "patternId": "Layout_TrailingWhitespace",
       "level": "Info",
       "category": "CodeStyle"
     },
@@ -1789,6 +1857,11 @@
       "patternId": "Performance_RedundantMatch",
       "level": "Warning",
       "category": "Performance"
+    },
+    {
+      "patternId": "Layout_FirstHashElementLineBreak",
+      "level": "Info",
+      "category": "CodeStyle"
     },
     {
       "patternId": "Lint_UnusedBlockArgument",
@@ -1815,16 +1888,6 @@
           "default": false
         }
       ]
-    },
-    {
-      "patternId": "Style_SpaceAroundKeyword",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "Style_EmptyLineAfterMagicComment",
-      "level": "Info",
-      "category": "CodeStyle"
     },
     {
       "patternId": "Lint_FormatParameterMismatch",
@@ -1857,6 +1920,10 @@
         {
           "name": "MinDigits",
           "default": 5
+        },
+        {
+          "name": "Strict",
+          "default": false
         }
       ]
     },
@@ -1868,10 +1935,6 @@
         {
           "name": "EnforcedStyle",
           "default": "conservative"
-        },
-        {
-          "name": "AutoCorrect",
-          "default": false
         }
       ]
     },
@@ -1879,17 +1942,6 @@
       "patternId": "Lint_UselessElseWithoutRescue",
       "level": "Warning",
       "category": "ErrorProne"
-    },
-    {
-      "patternId": "Style_SpaceBeforeFirstArg",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "AllowForAlignment",
-          "default": true
-        }
-      ]
     },
     {
       "patternId": "Style_ClassAndModuleCamelCase",
@@ -1904,12 +1956,13 @@
         {
           "name": "EnforcedStyleAlignWith",
           "default": "start_of_line"
-        },
-        {
-          "name": "AutoCorrect",
-          "default": false
         }
       ]
+    },
+    {
+      "patternId": "Performance_Caller",
+      "level": "Warning",
+      "category": "Performance"
     },
     {
       "patternId": "Rails",
@@ -1930,6 +1983,30 @@
       ]
     },
     {
+      "patternId": "Layout_SpaceInsideArrayPercentLiteral",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "Layout_AlignHash",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "EnforcedHashRocketStyle",
+          "default": "key"
+        },
+        {
+          "name": "EnforcedColonStyle",
+          "default": "key"
+        },
+        {
+          "name": "EnforcedLastArgumentHashStyle",
+          "default": "always_inspect"
+        }
+      ]
+    },
+    {
       "patternId": "Performance_Detect",
       "level": "Warning",
       "category": "Performance",
@@ -1941,15 +2018,9 @@
       ]
     },
     {
-      "patternId": "Style_TrailingBlankLines",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "EnforcedStyle",
-          "default": "final_newline"
-        }
-      ]
+      "patternId": "Lint_RescueType",
+      "level": "Warning",
+      "category": "ErrorProne"
     },
     {
       "patternId": "Rails_FindBy",
@@ -1961,17 +2032,6 @@
           "default": [
             "app/models/**/*.rb"
           ]
-        }
-      ]
-    },
-    {
-      "patternId": "Style_SpaceAroundEqualsInParameterDefault",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "EnforcedStyle",
-          "default": "space"
         }
       ]
     },
@@ -2011,23 +2071,17 @@
       "category": "ErrorProne"
     },
     {
+      "patternId": "Layout_EmptyLinesAroundExceptionHandlingKeywords",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
       "patternId": "Style_Send",
       "level": "Info",
       "category": "CodeStyle"
     },
     {
-      "patternId": "Style_SpaceBeforeBlockBraces",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "EnforcedStyle",
-          "default": "space"
-        }
-      ]
-    },
-    {
-      "patternId": "Style_AlignArray",
+      "patternId": "Layout_InitialIndentation",
       "level": "Info",
       "category": "CodeStyle"
     },
@@ -2054,6 +2108,11 @@
       "category": "ErrorProne"
     },
     {
+      "patternId": "Layout_EmptyLines",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
       "patternId": "Lint_ShadowedException",
       "level": "Warning",
       "category": "ErrorProne"
@@ -2074,21 +2133,6 @@
       "category": "ErrorProne"
     },
     {
-      "patternId": "Style_AccessModifierIndentation",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "EnforcedStyle",
-          "default": "indent"
-        },
-        {
-          "name": "IndentationWidth",
-          "default": null
-        }
-      ]
-    },
-    {
       "patternId": "Style_ClassMethods",
       "level": "Info",
       "category": "CodeStyle"
@@ -2099,17 +2143,13 @@
       "category": "CodeStyle"
     },
     {
-      "patternId": "Style_IndentHash",
+      "patternId": "Layout_SpaceAroundEqualsInParameterDefault",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [
         {
           "name": "EnforcedStyle",
-          "default": "special_inside_parentheses"
-        },
-        {
-          "name": "IndentationWidth",
-          "default": null
+          "default": "space"
         }
       ]
     },
@@ -2125,23 +2165,9 @@
       ]
     },
     {
-      "patternId": "Style_CaseIndentation",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "EnforcedStyle",
-          "default": "case"
-        },
-        {
-          "name": "IndentOneStep",
-          "default": false
-        },
-        {
-          "name": "IndentationWidth",
-          "default": null
-        }
-      ]
+      "patternId": "Lint_AmbiguousBlockAssociation",
+      "level": "Warning",
+      "category": "ErrorProne"
     },
     {
       "patternId": "Style_SelfAssignment",
@@ -2194,21 +2220,6 @@
       ]
     },
     {
-      "patternId": "Style_MultilineOperationIndentation",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "EnforcedStyle",
-          "default": "aligned"
-        },
-        {
-          "name": "IndentationWidth",
-          "default": null
-        }
-      ]
-    },
-    {
       "patternId": "Performance_RedundantMerge",
       "level": "Warning",
       "category": "Performance",
@@ -2218,6 +2229,11 @@
           "default": 2
         }
       ]
+    },
+    {
+      "patternId": "Layout_SpaceAroundKeyword",
+      "level": "Info",
+      "category": "CodeStyle"
     },
     {
       "patternId": "Style_DocumentationMethod",
@@ -2268,6 +2284,17 @@
       ]
     },
     {
+      "patternId": "Layout_SpaceInsideStringInterpolation",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "no_space"
+        }
+      ]
+    },
+    {
       "patternId": "Style_IfWithSemicolon",
       "level": "Info",
       "category": "CodeStyle"
@@ -2288,6 +2315,11 @@
       ]
     },
     {
+      "patternId": "Layout_RescueEnsureAlignment",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
       "patternId": "Rails_Date",
       "level": "Warning",
       "category": "ErrorProne",
@@ -2295,21 +2327,6 @@
         {
           "name": "EnforcedStyle",
           "default": "flexible"
-        }
-      ]
-    },
-    {
-      "patternId": "Style_IndentArray",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "EnforcedStyle",
-          "default": "special_inside_parentheses"
-        },
-        {
-          "name": "IndentationWidth",
-          "default": null
         }
       ]
     },
@@ -2369,9 +2386,15 @@
       ]
     },
     {
-      "patternId": "Style_EmptyLines",
+      "patternId": "Layout_EndOfLine",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "native"
+        }
+      ]
     },
     {
       "patternId": "Lint_PercentSymbolArray",
@@ -2406,17 +2429,6 @@
       ]
     },
     {
-      "patternId": "Style_MultilineArrayBraceLayout",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "EnforcedStyle",
-          "default": "symmetrical"
-        }
-      ]
-    },
-    {
       "patternId": "Lint_IneffectiveAccessModifier",
       "level": "Warning",
       "category": "ErrorProne"
@@ -2443,11 +2455,6 @@
       "category": "Performance"
     },
     {
-      "patternId": "Style_TrailingWhitespace",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
       "patternId": "Style_OptionHash",
       "level": "Info",
       "category": "CodeStyle",
@@ -2470,13 +2477,13 @@
       "category": "ErrorProne"
     },
     {
-      "patternId": "Style_EndOfLine",
+      "patternId": "Layout_MultilineMethodCallBraceLayout",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [
         {
           "name": "EnforcedStyle",
-          "default": "native"
+          "default": "symmetrical"
         }
       ]
     },
@@ -2506,19 +2513,41 @@
       ]
     },
     {
+      "patternId": "Layout_IndentationConsistency",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "normal"
+        }
+      ]
+    },
+    {
       "patternId": "Style_NegatedIf",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "both"
+        }
+      ]
     },
     {
-      "patternId": "Style_ClosingParenthesisIndentation",
+      "patternId": "Layout_AlignParameters",
       "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "Style_SpaceInsideArrayPercentLiteral",
-      "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "with_first_parameter"
+        },
+        {
+          "name": "IndentationWidth",
+          "default": null
+        }
+      ]
     },
     {
       "patternId": "Performance_CaseWhenSplat",
@@ -2581,13 +2610,13 @@
       "category": "CodeStyle"
     },
     {
-      "patternId": "Style_MultilineAssignmentLayout",
+      "patternId": "Layout_SpaceInLambdaLiteral",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [
         {
           "name": "EnforcedStyle",
-          "default": "new_line"
+          "default": "require_no_space"
         }
       ]
     },
@@ -2607,14 +2636,35 @@
       ]
     },
     {
-      "patternId": "Style_SpaceBeforeSemicolon",
-      "level": "Info",
-      "category": "CodeStyle"
+      "patternId": "Rails_ApplicationRecord",
+      "level": "Warning",
+      "category": "ErrorProne"
     },
     {
-      "patternId": "Style_EmptyLinesAroundMethodBody",
+      "patternId": "Layout_MultilineMethodCallIndentation",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "aligned"
+        },
+        {
+          "name": "IndentationWidth",
+          "default": null
+        }
+      ]
+    },
+    {
+      "patternId": "Layout_SpaceAroundOperators",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "AllowForAlignment",
+          "default": true
+        }
+      ]
     },
     {
       "patternId": "Style_OptionalArguments",
@@ -2622,12 +2672,17 @@
       "category": "CodeStyle"
     },
     {
-      "patternId": "Style_InitialIndentation",
+      "patternId": "Layout_SpaceAfterSemicolon",
       "level": "Info",
       "category": "CodeStyle"
     },
     {
       "patternId": "Style_NilComparison",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "Layout_FirstArrayElementLineBreak",
       "level": "Info",
       "category": "CodeStyle"
     },
@@ -2644,12 +2699,13 @@
         {
           "name": "EnforcedStyle",
           "default": "never"
-        },
-        {
-          "name": "AutoCorrectEncodingComment",
-          "default": "# encoding: utf-8"
         }
       ]
+    },
+    {
+      "patternId": "Layout_AlignArray",
+      "level": "Info",
+      "category": "CodeStyle"
     },
     {
       "patternId": "Style_MethodCallWithoutArgsParentheses",
@@ -2676,13 +2732,13 @@
       ]
     },
     {
-      "patternId": "Style_SpaceInLambdaLiteral",
+      "patternId": "Layout_EmptyLinesAroundBlockBody",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [
         {
           "name": "EnforcedStyle",
-          "default": "require_no_space"
+          "default": "no_empty_lines"
         }
       ]
     },
@@ -2716,6 +2772,17 @@
       "category": "CodeStyle"
     },
     {
+      "patternId": "Layout_IndentHeredoc",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "auto_detection"
+        }
+      ]
+    },
+    {
       "patternId": "Style_OpMethod",
       "level": "Info",
       "category": "CodeStyle"
@@ -2742,14 +2809,20 @@
       "category": "CodeStyle"
     },
     {
-      "patternId": "Style_FirstHashElementLineBreak",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
       "patternId": "Performance_Casecmp",
       "level": "Warning",
       "category": "Performance"
+    },
+    {
+      "patternId": "Layout_MultilineMethodDefinitionBraceLayout",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "symmetrical"
+        }
+      ]
     },
     {
       "patternId": "Style_WhileUntilModifier",
@@ -2764,6 +2837,11 @@
     },
     {
       "patternId": "Style_MethodMissing",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "Layout_SpaceInsideParens",
       "level": "Info",
       "category": "CodeStyle"
     },
@@ -2790,9 +2868,19 @@
       "category": "ErrorProne"
     },
     {
+      "patternId": "Style_YodaCondition",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
       "patternId": "Performance_ReverseEach",
       "level": "Warning",
       "category": "Performance"
+    },
+    {
+      "patternId": "Layout_SpaceAfterNot",
+      "level": "Info",
+      "category": "CodeStyle"
     },
     {
       "patternId": "Style_Alias",
@@ -2806,14 +2894,25 @@
       ]
     },
     {
+      "patternId": "Layout_MultilineArrayBraceLayout",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "symmetrical"
+        }
+      ]
+    },
+    {
       "patternId": "Lint_DuplicateMethods",
       "level": "Warning",
       "category": "ErrorProne"
     },
     {
-      "patternId": "Style_SpaceBeforeComment",
-      "level": "Info",
-      "category": "CodeStyle"
+      "patternId": "Rails_ActiveSupportAliases",
+      "level": "Warning",
+      "category": "ErrorProne"
     },
     {
       "patternId": "Metrics_MethodLength",
@@ -2834,6 +2933,11 @@
       "patternId": "Lint_EmptyWhen",
       "level": "Warning",
       "category": "ErrorProne"
+    },
+    {
+      "patternId": "Layout_SpaceInsideBrackets",
+      "level": "Info",
+      "category": "CodeStyle"
     },
     {
       "patternId": "Lint_AmbiguousOperator",
@@ -2862,17 +2966,6 @@
       "category": "CodeStyle"
     },
     {
-      "patternId": "Style_IndentAssignment",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "IndentationWidth",
-          "default": null
-        }
-      ]
-    },
-    {
       "patternId": "Lint_UnifiedInteger",
       "level": "Warning",
       "category": "ErrorProne"
@@ -2896,17 +2989,23 @@
       ]
     },
     {
-      "patternId": "Style_SpaceAfterSemicolon",
+      "patternId": "Layout_DotPosition",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "leading"
+        }
+      ]
+    },
+    {
+      "patternId": "Layout_SpaceBeforeComma",
       "level": "Info",
       "category": "CodeStyle"
     },
     {
       "patternId": "Style_DefWithParentheses",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "Style_LeadingCommentSpace",
       "level": "Info",
       "category": "CodeStyle"
     },
@@ -2922,40 +3021,14 @@
       ]
     },
     {
-      "patternId": "Style_SpaceInsideParens",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
       "patternId": "Style_MultilineBlockChain",
       "level": "Info",
       "category": "CodeStyle"
     },
     {
-      "patternId": "Style_EmptyLinesAroundAccessModifier",
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "Style_EmptyLineBetweenDefs",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "AllowAdjacentOneLineDefs",
-          "default": false
-        }
-      ]
-    },
-    {
       "patternId": "Rails_RelativeDateConstant",
       "level": "Warning",
       "category": "ErrorProne"
-    },
-    {
-      "patternId": "Style_SpaceAfterColon",
-      "level": "Info",
-      "category": "CodeStyle"
     },
     {
       "patternId": "Style_GuardClause",
@@ -2997,11 +3070,6 @@
       "patternId": "Lint_AmbiguousRegexpLiteral",
       "level": "Warning",
       "category": "ErrorProne"
-    },
-    {
-      "patternId": "Style_Tab",
-      "level": "Info",
-      "category": "CodeStyle"
     },
     {
       "patternId": "Style_Not",

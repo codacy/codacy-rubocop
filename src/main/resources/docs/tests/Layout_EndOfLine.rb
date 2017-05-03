@@ -1,7 +1,7 @@
-##Patterns: Style_EndOfLine
+##Patterns: Layout_EndOfLine
 
 class Test
-  ##Info: Style_EndOfLine
+  ##Info: Layout_EndOfLine
    def something
      print "Hello"
    end

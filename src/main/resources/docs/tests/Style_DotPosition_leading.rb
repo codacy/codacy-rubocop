@@ -1,6 +1,6 @@
-##Patterns: Style_DotPosition: {"EnforcedStyle": "leading"}
+##Patterns: Layout_DotPosition: {"EnforcedStyle": "leading"}
 
-##Info: Style_DotPosition
+##Info: Layout_DotPosition
 one.two.three.
     four
 

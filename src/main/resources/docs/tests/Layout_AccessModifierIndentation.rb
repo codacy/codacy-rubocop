@@ -1,8 +1,8 @@
-##Patterns: Style_AccessModifierIndentation
+##Patterns: Layout_AccessModifierIndentation
 
 class SomeClass
 
-    ##Info: Style_AccessModifierIndentation
+    ##Info: Layout_AccessModifierIndentation
     private
 
     def private_indent
