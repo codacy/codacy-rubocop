@@ -36,6 +36,7 @@ val installAll =
      |&& gem install rubocop:0.48.1
      |&& gem install rubocop-migrations
      |&& gem install rubocop-rspec
+     |&& gem install lingohub-rubocop
      |&& gem install safe_yaml
      |&& gem cleanup
      |&& rm -rf /tmp/* /var/cache/apk/*""".stripMargin.replaceAll(System.lineSeparator(), " ")
