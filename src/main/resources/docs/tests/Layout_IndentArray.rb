@@ -1,6 +1,6 @@
-##Patterns: Style_IndentArray
+##Patterns: Layout_IndentArray
 
 menu_item = [
-    ##Info: Style_IndentArray
+    ##Info: Layout_IndentArray
     'Spam', 'Spam', 'Spam', 'Spam', 'Spam', 'Spam', 'Spam', 'Spam',
      'Baked beans', 'Spam', 'Spam', 'Spam', 'Spam', 'Spam']

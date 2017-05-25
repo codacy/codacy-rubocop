@@ -1,5 +1,5 @@
-##Patterns: Style_AlignHash
+##Patterns: Layout_AlignHash
 
 hash_new = { style => misc, style => misc, style => misc, style => misc, style => misc,
-##Info: Style_AlignHash
+##Info: Layout_AlignHash
  style => misc, style => misc, style => misc, style => misc, style => misc }

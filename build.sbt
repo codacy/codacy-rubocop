@@ -25,15 +25,16 @@ enablePlugins(DockerPlugin)
 version in Docker := "1.0"
 
 val installAll =
-  s"""echo "http://dl-cdn.alpinelinux.org/alpine/v3.4/main" >> /etc/apk/repositories
-     |&& echo "http://dl-cdn.alpinelinux.org/alpine/v3.4/community" >> /etc/apk/repositories
+  s"""echo -n "" > /etc/apk/repositories
+     |&& echo "http://dl-cdn.alpinelinux.org/alpine/v3.6/main" >> /etc/apk/repositories
+     |&& echo "http://dl-cdn.alpinelinux.org/alpine/v3.6/community" >> /etc/apk/repositories
      |&& apk add --no-cache ruby ruby-irb ruby-rake ruby-io-console ruby-bigdecimal
-     |ruby-json ruby-bundler libstdc++ tzdata bash ca-certificates
+     |ruby-json ruby-bundler libstdc++ tzdata bash ca-certificates libc-dev
      |&& echo 'gem: --no-document' > /etc/gemrc
      |&& gem install activesupport
      |&& gem install parser:2.4.0.0
      |&& gem install pry
-     |&& gem install rubocop:0.48.1
+     |&& gem install rubocop:0.49.0
      |&& gem install rubocop-migrations
      |&& gem install rubocop-rspec
      |&& gem install lingohub-rubocop
