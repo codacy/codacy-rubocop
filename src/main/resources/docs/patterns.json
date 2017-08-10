@@ -1,5 +1,6 @@
 {
   "name": "Rubocop",
+  "version": "0.49.0",
   "patterns": [
     {
       "patternId": "Layout_FirstMethodArgumentLineBreak",

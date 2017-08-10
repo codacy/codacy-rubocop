@@ -1,4 +1,6 @@
 import com.typesafe.sbt.packager.docker.{Cmd, ExecCmd}
+import scala.util.parsing.json.JSON
+import scala.io.Source
 
 name := """codacy-engine-rubocop"""
 
@@ -25,6 +27,12 @@ enablePlugins(DockerPlugin)
 
 version in Docker := "1.0"
 
+val filename = "src/main/resources/docs/patterns.json"
+
+val toolMap = JSON.parseFull(Source.fromFile(filename).getLines().mkString).get.asInstanceOf[Map[String,String]]
+
+val rubocopVersion = toolMap("version")
+
 val installAll =
   s"""echo -n "" > /etc/apk/repositories
      |&& echo "http://dl-cdn.alpinelinux.org/alpine/v3.6/main" >> /etc/apk/repositories
@@ -35,7 +43,7 @@ val installAll =
      |&& gem install activesupport
      |&& gem install parser:2.4.0.0
      |&& gem install pry
-     |&& gem install rubocop:0.49.0
+     |&& gem install rubocop:${rubocopVersion}
      |&& gem install rubocop-migrations
      |&& gem install rubocop-rspec
      |&& gem install lingohub-rubocop
