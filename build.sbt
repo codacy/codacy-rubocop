@@ -31,11 +31,7 @@ val filename = "src/main/resources/docs/patterns.json"
 
 val toolMap = JSON.parseFull(Source.fromFile(filename).getLines().mkString).get.asInstanceOf[Map[String,String]]
 
-val defaultVersion = "0.49.0"
-
-val rubocopVersion = { val jsonVersion = toolMap("version")
-  if(jsonVersion.isEmpty) defaultVersion else jsonVersion
-}
+val rubocopVersion = toolMap.get("version").map(version => s":$version").getOrElse("")
 
 val installAll =
   s"""echo -n "" > /etc/apk/repositories
@@ -47,7 +43,7 @@ val installAll =
      |&& gem install activesupport
      |&& gem install parser:2.4.0.0
      |&& gem install pry
-     |&& gem install rubocop:$rubocopVersion
+     |&& gem install rubocop$rubocopVersion
      |&& gem install rubocop-migrations
      |&& gem install rubocop-rspec
      |&& gem install lingohub-rubocop
