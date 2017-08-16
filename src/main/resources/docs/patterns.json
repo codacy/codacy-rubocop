@@ -1295,7 +1295,7 @@
     {
       "patternId": "Metrics_AbcSize",
       "level": "Warning",
-      "category": "ErrorProne",
+      "category": "CodeStyle",
       "parameters": [
         {
           "name": "Max",

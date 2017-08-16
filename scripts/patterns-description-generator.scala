@@ -12,7 +12,7 @@ def updatePatternsAndDescription(): Unit = {
     val basePattern = Json.obj(
       "patternId" -> pattern,
       "level" -> (if (pattern.startsWith("Lint") || pattern.startsWith("Metrics") || pattern.startsWith("Performance") || pattern.startsWith("Rails")) "Warning" else "Info"),
-      "category" -> (if (pattern.startsWith("Lint") || (pattern.startsWith("Metrics") && !pattern.contains("Length")) || pattern.startsWith("Rails")) "ErrorProne" else if (pattern.startsWith("Performance")) "Performance" else "CodeStyle")
+      "category" -> (if (pattern.startsWith("Lint") || (pattern.startsWith("Metrics") && !pattern.contains("Length") && !pattern.contains("AbcSize")) || pattern.startsWith("Rails")) "ErrorProne" else if (pattern.startsWith("Performance")) "Performance" else "CodeStyle")
     )
     if (parameterMap.keys.nonEmpty) {
       basePattern ++ Json.obj(
