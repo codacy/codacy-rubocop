@@ -35,7 +35,7 @@
     {
       "patternId": "Metrics_LineLength",
       "level": "Warning",
-      "category": "ErrorProne",
+      "category": "CodeStyle",
       "parameters": [
         {
           "name": "Max",
@@ -1295,7 +1295,7 @@
     {
       "patternId": "Metrics_AbcSize",
       "level": "Warning",
-      "category": "ErrorProne",
+      "category": "CodeStyle",
       "parameters": [
         {
           "name": "Max",
@@ -1405,7 +1405,7 @@
     {
       "patternId": "Metrics_ClassLength",
       "level": "Warning",
-      "category": "ErrorProne",
+      "category": "CodeStyle",
       "parameters": [
         {
           "name": "CountComments",
@@ -2500,7 +2500,7 @@
     {
       "patternId": "Metrics_ModuleLength",
       "level": "Warning",
-      "category": "ErrorProne",
+      "category": "CodeStyle",
       "parameters": [
         {
           "name": "CountComments",
@@ -2917,7 +2917,7 @@
     {
       "patternId": "Metrics_MethodLength",
       "level": "Warning",
-      "category": "ErrorProne",
+      "category": "CodeStyle",
       "parameters": [
         {
           "name": "CountComments",
@@ -3116,7 +3116,7 @@
     {
       "patternId": "Metrics_BlockLength",
       "level": "Warning",
-      "category": "ErrorProne",
+      "category": "CodeStyle",
       "parameters": [
         {
           "name": "CountComments",
