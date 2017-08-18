@@ -2,10 +2,11 @@ import com.fasterxml.jackson.core.JsonParser.Feature
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.dataformat.yaml.YAMLFactory
 import play.api.libs.json._
-def updatePatternsAndDescription(): Unit = {
+
+def updatePatternsAndDescription(version: String): Unit = {
   def yamlReader: ObjectMapper = new ObjectMapper(new YAMLFactory()).configure(Feature.ALLOW_COMMENTS, true).configure(Feature.AUTO_CLOSE_SOURCE, true).configure(Feature.ALLOW_UNQUOTED_FIELD_NAMES, true).configure(Feature.ALLOW_SINGLE_QUOTES, true).configure(Feature.ALLOW_UNQUOTED_CONTROL_CHARS, true)
 
-  val cops = scala.io.Source.fromFile(new java.io.File("Path-of-the-merged-file")).getLines.toList.mkString("\n")
+  val cops = scala.io.Source.fromFile(new java.io.File(s"rubocop-config-base-files/$version.yml")).getLines.toList.mkString("\n")
   val json = Json.parse(yamlReader.readTree(cops).toString).as[JsObject]
   val allPatterns = json.value.collect { case (pattern, JsObject(obj)) => (pattern.replace("/", "_"), obj.filterNot { case (key, value) => key.startsWith("Supported") || key.startsWith("StyleGuide") || key.startsWith("Enabled") || key.startsWith("Description") || key.startsWith("Reference") || key.startsWith("AutoCorrect") }) }
   val codacyPatterns = allPatterns.collect { case (pattern, parameterMap) =>
