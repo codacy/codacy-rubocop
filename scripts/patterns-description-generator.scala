@@ -34,7 +34,7 @@ def updatePatternsAndDescription(version: String): Unit = {
     )
     if (filteredPatMap.keys.nonEmpty) {
       basePattern ++ Json.obj(
-        "parameters" -> Json.parse(Json.toJson(filteredPatMap.map { case (key, value) => Json.obj("name" -> key, "description" -> value) }).toString).as[JsArray]
+        "parameters" -> Json.parse(Json.toJson(filteredPatMap.map { case (key, value) => Json.obj("name" -> key, "description" -> "<TODO: parameter description>") }).toString).as[JsArray]
       )
     } else {
       basePattern
