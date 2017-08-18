@@ -109,15 +109,15 @@
     "parameters": [
       {
         "name": "NilOrEmpty",
-        "description": true
+        "description": "Convert checks for `nil` or `empty?` to `blank?`"
       },
       {
         "name": "NotPresent",
-        "description": true
+        "description": "Convert usages of not `present?` to `blank?`"
       },
       {
         "name": "UnlessPresent",
-        "description": true
+        "description": "Convert usages of `unless` `present?` to `if` `blank?`"
       }
     ]
   },
@@ -177,15 +177,15 @@
     "parameters": [
       {
         "name": "NotNilAndNotEmpty",
-        "description": true
+        "description": "Convert checks for not `nil` and not `empty?` to `present?"
       },
       {
         "name": "NotBlank",
-        "description": true
+        "description": "Convert usages of not `blank?` to `present?`"
       },
       {
         "name": "UnlessBlank",
-        "description": true
+        "description": "Convert usages of `unless` `blank?` to `if` `present?`"
       }
     ]
   },
@@ -413,10 +413,7 @@
     "parameters": [
       {
         "name": "Exclude",
-        "description": [
-          "spec/**/*",
-          "test/**/*"
-        ]
+        "description": "List of files to be ignored by this pattern"
       }
     ]
   },
@@ -626,7 +623,7 @@
     "parameters": [
       {
         "name": "EnforcedStyle",
-        "description": "both"
+        "description": "The style you prefer to use when you use lambda calls [both, call, braces]"
       }
     ]
   },
@@ -790,13 +787,7 @@
     "patternId": "Performance_Detect",
     "title": "Use `detect` instead of `select.first`, `find_all.first`, `select.last`, and `find_all.last`.",
     "description": "Use `detect` instead of `select.first`, `find_all.first`, `select.last`, and `find_all.last`.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "SafeMode",
-        "description": true
-      }
-    ]
+    "timeToFix": 5
   },
   {
     "patternId": "Lint_RescueType",
@@ -812,10 +803,7 @@
     "parameters": [
       {
         "name": "Include",
-        "description": [
-          "**/Gemfile",
-          "**/gems.rb"
-        ]
+        "description": "List of files to be included"
       }
     ]
   },
@@ -955,25 +943,13 @@
     "patternId": "Performance_Count",
     "title": "Use `count` instead of `select...size`, `reject...size`, `select...count`, `reject...count`, `select...length`, and `reject...length`.",
     "description": "Use `count` instead of `select...size`, `reject...size`, `select...count`, `reject...count`, `select...length`, and `reject...length`.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "SafeMode",
-        "description": true
-      }
-    ]
+    "timeToFix": 5
   },
   {
     "patternId": "Style_TrailingUnderscoreVariable",
     "title": "Checks for the usage of unneeded trailing underscores at the end of parallel variable assignment.",
     "description": "Checks for the usage of unneeded trailing underscores at the end of parallel variable assignment.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "AllowNamedUnderscoreVariables",
-        "description": true
-      }
-    ]
+    "timeToFix": 5
   },
   {
     "patternId": "Lint_PercentSymbolArray",
@@ -1103,10 +1079,7 @@
     "parameters": [
       {
         "name": "Include",
-        "description": [
-          "spec/**/*",
-          "test/**/*"
-        ]
+        "description": "List of files to be included"
       }
     ]
   },
@@ -1258,17 +1231,7 @@
     "patternId": "Lint_UselessAccessModifier",
     "title": "Checks for useless access modifiers.",
     "description": "Checks for useless access modifiers.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "ContextCreatingMethods",
-        "description": []
-      },
-      {
-        "name": "MethodCreatingMethods",
-        "description": []
-      }
-    ]
+    "timeToFix": 5
   },
   {
     "patternId": "Style_WhenThen",
