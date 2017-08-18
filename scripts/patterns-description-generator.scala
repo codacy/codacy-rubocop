@@ -43,4 +43,6 @@ def updatePatternsAndDescription(version: String): Unit = {
   println(Json.obj("name" -> "Rubocop", "patterns" -> Json.parse(Json.toJson(codacyPatterns).toString).as[JsArray]))
   println("\n\n")
   println(Json.parse(Json.toJson(codacyPatternsDescs).toString).as[JsArray])
+  println("\n\n")
+  println("NOTE: Look for '<TODO: parameter description>' on the descriptions .json, and fix them accordingly")
 }
