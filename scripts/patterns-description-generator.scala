@@ -40,7 +40,7 @@ def updatePatternsAndDescription(version: String): Unit = {
       basePattern
     }
   }
-  println(Json.obj("name" -> "Rubocop", "patterns" -> Json.parse(Json.toJson(codacyPatterns).toString).as[JsArray]))
+  println(Json.obj("name" -> "Rubocop", "version" -> version, "patterns" -> Json.parse(Json.toJson(codacyPatterns).toString).as[JsArray]))
   println("\n\n")
   println(Json.parse(Json.toJson(codacyPatternsDescs).toString).as[JsArray])
   println("\n\n")
