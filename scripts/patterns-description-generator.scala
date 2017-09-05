@@ -20,7 +20,7 @@ def updatePatternsAndDescription(version: String): Unit = {
   val descriptions = generateDescriptions(json, version)
   println(s"\n${Json.parse(Json.toJson(descriptions).toString).as[JsArray]}\n")
 
-  println("NOTE: Copy the parameters description from the old description.json th ")
+  println("NOTE: Copy the parameters description from the old description.json to the new one.")
 }
 
 def generatePatterns(json: JsObject, version: String): JsArray = {
