@@ -689,6 +689,13 @@
         {
           "name": "TreatCommentsAsGroupSeparators",
           "default": true
+        },
+        {
+          "name": "Include",
+          "default": [
+            "**/Gemfile",
+            "**/gems.rb"
+          ]
         }
       ]
     },
@@ -2244,6 +2251,13 @@
         {
           "name": "RequireForNonPublicMethods",
           "default": false
+        },
+        {
+          "name": "Exclude",
+          "default": [
+            "spec/**/*",
+            "test/**/*"
+          ]
         }
       ]
     },
