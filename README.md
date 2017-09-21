@@ -3,7 +3,7 @@
 
 # Codacy Rubocop
 
-This is the docker engine we use at Codacy to have [Rubocop](http://batsov.com/rubocop/) support.
+This is the docker engine we use at Codacy to have [Rubocop](http://batsov.com/rubocop/) support!
 You can also create a docker to integrate the tool and language of your choice!
 Check the **Docs** section for more information.
 
