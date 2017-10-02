@@ -1,6 +1,6 @@
-##Patterns: Style_VariableName
+##Patterns: Naming_VariableName
 
 hello_world = "Hello World"
 
-##Info: Style_VariableName
+##Info: Naming_VariableName
 hello_World = "Hello World"
