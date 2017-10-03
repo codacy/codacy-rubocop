@@ -1,6 +1,6 @@
-##Patterns: Style_MethodName
+##Patterns: Naming_MethodName
 
-##Info: Style_MethodName
+##Info: Naming_MethodName
 def someThing
 
 end

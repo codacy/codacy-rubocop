@@ -1,6 +1,6 @@
-##Patterns: Style_ClassAndModuleCamelCase
+##Patterns: Naming_ClassAndModuleCamelCase
 
-##Info: Style_ClassAndModuleCamelCase
+##Info: Naming_ClassAndModuleCamelCase
 class Camel_case
 
 end

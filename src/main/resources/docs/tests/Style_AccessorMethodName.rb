@@ -1,6 +1,6 @@
-##Patterns: Style_AccessorMethodName
+##Patterns: Naming_AccessorMethodName
 
-##Info: Style_AccessorMethodName
+##Info: Naming_AccessorMethodName
 def set_attribute(value)
 end
 

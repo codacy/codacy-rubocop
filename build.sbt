@@ -18,7 +18,8 @@ resolvers ++= Seq(
 libraryDependencies ++= Seq(
   "org.scala-lang.modules" %% "scala-xml" % "1.0.5" withSources(),
   "com.codacy" %% "codacy-engine-scala-seed" % "2.7.0",
-  "com.fasterxml.jackson.dataformat" % "jackson-dataformat-yaml" % "2.8.4"
+  "com.fasterxml.jackson.dataformat" % "jackson-dataformat-yaml" % "2.8.4",
+  "com.typesafe.play" %% "play-ws" % "2.4.8"
 )
 
 enablePlugins(JavaAppPackaging)
@@ -73,6 +74,8 @@ daemonUser in Docker := dockerUser
 daemonGroup in Docker := dockerGroup
 
 dockerBaseImage := "develar/java"
+
+mainClass in Compile := Some("codacy.Engine")
 
 dockerCommands := {
   dockerCommands.dependsOn(toolVersion).value.flatMap {
