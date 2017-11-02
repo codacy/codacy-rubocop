@@ -91,7 +91,7 @@ object Rubocop extends Tool {
           file.toString
       }
 
-    List("rubocop", "-f", "json", "-o", outputFilePath.toAbsolutePath.toString) ++ configPath ++ patternsCmd ++ filesCmd
+    List("rubocop", "--force-exclusion", "-f", "json", "-o", outputFilePath.toAbsolutePath.toString) ++ configPath ++ patternsCmd ++ filesCmd
   }
 
   private[this] lazy val resultFilePath = Paths.get(Properties.tmpDir, "rubocop-result.json")
