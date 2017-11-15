@@ -16,7 +16,7 @@ resolvers ++= Seq(
 )
 
 libraryDependencies ++= Seq(
-  "org.scala-lang.modules" %% "scala-xml" % "1.0.5" withSources(),
+  "org.scala-lang.modules" %% "scala-xml" % "1.0.6" withSources(),
   "com.codacy" %% "codacy-engine-scala-seed" % "2.7.0",
   "com.fasterxml.jackson.dataformat" % "jackson-dataformat-yaml" % "2.8.4",
   "com.typesafe.play" %% "play-ws" % "2.4.8"
