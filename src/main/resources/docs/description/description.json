@@ -224,6 +224,11 @@
   "description" : "Checks for condition placed in a confusing position relative to the keyword.",
   "timeToFix" : 5
 }, {
+  "patternId" : "Lint_RegexpAsCondition",
+  "title" : "Do not use regexp literal as a condition. The regexp literal matches `$_` implicitly.",
+  "description" : "Do not use regexp literal as a condition. The regexp literal matches `$_` implicitly.",
+  "timeToFix" : 5
+}, {
   "patternId" : "Style_CollectionMethods",
   "title" : "Preferred collection methods.",
   "description" : "Preferred collection methods.",
@@ -334,6 +339,11 @@
   "description" : "Checks for unused method arguments.",
   "timeToFix" : 5
 }, {
+  "patternId" : "Style_CommentedKeyword",
+  "title" : "Do not place comments on the same line as certain keywords.",
+  "description" : "Do not place comments on the same line as certain keywords.",
+  "timeToFix" : 5
+}, {
   "patternId" : "Layout_AccessModifierIndentation",
   "title" : "Check indentation of private/protected visibility modifiers.",
   "description" : "Check indentation of private/protected visibility modifiers.",
@@ -342,6 +352,11 @@
   "patternId" : "Style_Attr",
   "title" : "Checks for uses of Module#attr.",
   "description" : "Checks for uses of Module#attr.",
+  "timeToFix" : 5
+}, {
+  "patternId" : "Rails_UnknownEnv",
+  "title" : "Use correct environment name.",
+  "description" : "Use correct environment name.",
   "timeToFix" : 5
 }, {
   "patternId" : "Style_IdenticalConditionalBranches",
@@ -467,11 +482,6 @@
   "patternId" : "Lint_UriEscapeUnescape",
   "title" : "`URI.escape` method is obsolete and should not be used. Instead, use `CGI.escape`, `URI.encode_www_form` or `URI.encode_www_form_component` depending on your specific use case. Also `URI.unescape` method is obsolete and should not be used. Instead, use `CGI.unescape`, `URI.decode_www_form` or `URI.decode_www_form_component` depending on your specific use case.",
   "description" : "`URI.escape` method is obsolete and should not be used. Instead, use `CGI.escape`, `URI.encode_www_form` or `URI.encode_www_form_component` depending on your specific use case. Also `URI.unescape` method is obsolete and should not be used. Instead, use `CGI.unescape`, `URI.decode_www_form` or `URI.decode_www_form_component` depending on your specific use case.",
-  "timeToFix" : 5
-}, {
-  "patternId" : "Lint_InvalidCharacterLiteral",
-  "title" : "Checks for invalid character literals with a non-escaped whitespace character.",
-  "description" : "Checks for invalid character literals with a non-escaped whitespace character.",
   "timeToFix" : 5
 }, {
   "patternId" : "Lint_StringConversionInInterpolation",
@@ -763,6 +773,11 @@
   "description" : "Checks for missing space between code and a comment on the same line.",
   "timeToFix" : 5
 }, {
+  "patternId" : "Lint_RedundantWithObject",
+  "title" : "Checks for redundant `with_object`.",
+  "description" : "Checks for redundant `with_object`.",
+  "timeToFix" : 5
+}, {
   "patternId" : "Layout_EmptyLineBetweenDefs",
   "title" : "Use empty lines between defs.",
   "description" : "Use empty lines between defs.",
@@ -843,6 +858,11 @@
   "description" : "Use `Integer#times` for a simple loop which iterates a fixed number of times.",
   "timeToFix" : 5
 }, {
+  "patternId" : "Style_MixinUsage",
+  "title" : "Checks that `include`, `extend` and `prepend` exists at the top level.",
+  "description" : "Checks that `include`, `extend` and `prepend` exists at the top level.",
+  "timeToFix" : 5
+}, {
   "patternId" : "Lint_EmptyInterpolation",
   "title" : "Checks for empty string interpolation.",
   "description" : "Checks for empty string interpolation.",
@@ -856,6 +876,11 @@
   "patternId" : "Layout_Tab",
   "title" : "No hard tabs.",
   "description" : "No hard tabs.",
+  "timeToFix" : 5
+}, {
+  "patternId" : "Lint_LiteralAsCondition",
+  "title" : "Checks of literals used in conditions.",
+  "description" : "Checks of literals used in conditions.",
   "timeToFix" : 5
 }, {
   "patternId" : "Performance_UnfreezeString",
@@ -891,11 +916,6 @@
   "patternId" : "Lint_UselessComparison",
   "title" : "Checks for comparison of something with itself.",
   "description" : "Checks for comparison of something with itself.",
-  "timeToFix" : 5
-}, {
-  "patternId" : "Lint_LiteralInCondition",
-  "title" : "Checks of literals used in conditions.",
-  "description" : "Checks of literals used in conditions.",
   "timeToFix" : 5
 }, {
   "patternId" : "Style_MinMax",
@@ -1281,6 +1301,11 @@
   "description" : "Don't use semicolons to terminate expressions.",
   "timeToFix" : 5
 }, {
+  "patternId" : "Gemspec_OrderedDependencies",
+  "title" : "Dependencies in the gemspec should be alphabetically sorted.",
+  "description" : "Dependencies in the gemspec should be alphabetically sorted.",
+  "timeToFix" : 5
+}, {
   "patternId" : "Lint_AmbiguousBlockAssociation",
   "title" : "Checks for ambiguous block association with method when param passed without parentheses.",
   "description" : "Checks for ambiguous block association with method when param passed without parentheses.",
@@ -1374,6 +1399,11 @@
   "patternId" : "Layout_RescueEnsureAlignment",
   "title" : "Align rescues and ensures correctly.",
   "description" : "Align rescues and ensures correctly.",
+  "timeToFix" : 5
+}, {
+  "patternId" : "Lint_UnneededRequireStatement",
+  "title" : "Checks for unnecessary `require` statement.",
+  "description" : "Checks for unnecessary `require` statement.",
   "timeToFix" : 5
 }, {
   "patternId" : "Rails_Date",
@@ -1630,6 +1660,11 @@
   "description" : "This cops checks the indentation of the here document bodies.",
   "timeToFix" : 5
 }, {
+  "patternId" : "Style_StderrPuts",
+  "title" : "Use `warn` instead of `$stderr.puts`.",
+  "description" : "Use `warn` instead of `$stderr.puts`.",
+  "timeToFix" : 5
+}, {
   "patternId" : "Rails_Output",
   "title" : "Checks for calls to puts, print, etc.",
   "description" : "Checks for calls to puts, print, etc.",
@@ -1793,6 +1828,11 @@
   "patternId" : "Rails_RelativeDateConstant",
   "title" : "Do not assign relative date to constants.",
   "description" : "Do not assign relative date to constants.",
+  "timeToFix" : 5
+}, {
+  "patternId" : "Style_DateTime",
+  "title" : "Use Date or Time over DateTime.",
+  "description" : "Use Date or Time over DateTime.",
   "timeToFix" : 5
 }, {
   "patternId" : "Style_GuardClause",

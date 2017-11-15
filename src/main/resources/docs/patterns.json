@@ -1,6 +1,6 @@
 {
   "name" : "Rubocop",
-  "version" : "0.50.0",
+  "version" : "0.51.0",
   "patterns" : [ {
     "patternId" : "Lint_Syntax",
     "level" : "Warning",
@@ -280,6 +280,10 @@
     "level" : "Warning",
     "category" : "ErrorProne"
   }, {
+    "patternId" : "Lint_RegexpAsCondition",
+    "level" : "Warning",
+    "category" : "ErrorProne"
+  }, {
     "patternId" : "Style_CollectionMethods",
     "level" : "Info",
     "category" : "CodeStyle",
@@ -430,6 +434,10 @@
       "default" : true
     } ]
   }, {
+    "patternId" : "Style_CommentedKeyword",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
     "patternId" : "Layout_AccessModifierIndentation",
     "level" : "Info",
     "category" : "CodeStyle",
@@ -444,6 +452,14 @@
     "patternId" : "Style_Attr",
     "level" : "Info",
     "category" : "CodeStyle"
+  }, {
+    "patternId" : "Rails_UnknownEnv",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ {
+      "name" : "Environments",
+      "default" : [ "development", "test", "production" ]
+    } ]
   }, {
     "patternId" : "Style_IdenticalConditionalBranches",
     "level" : "Info",
@@ -605,10 +621,6 @@
     "category" : "CodeStyle"
   }, {
     "patternId" : "Lint_UriEscapeUnescape",
-    "level" : "Warning",
-    "category" : "ErrorProne"
-  }, {
-    "patternId" : "Lint_InvalidCharacterLiteral",
     "level" : "Warning",
     "category" : "ErrorProne"
   }, {
@@ -845,6 +857,9 @@
       "name" : "NameWhitelist",
       "default" : [ "is_a?" ]
     }, {
+      "name" : "MethodDefinitionMacros",
+      "default" : [ "define_method", "define_singleton_method" ]
+    }, {
       "name" : "Exclude",
       "default" : [ "spec/**/*" ]
     } ]
@@ -1026,6 +1041,10 @@
     "level" : "Info",
     "category" : "CodeStyle"
   }, {
+    "patternId" : "Lint_RedundantWithObject",
+    "level" : "Warning",
+    "category" : "ErrorProne"
+  }, {
     "patternId" : "Layout_EmptyLineBetweenDefs",
     "level" : "Info",
     "category" : "CodeStyle",
@@ -1109,6 +1128,10 @@
     "level" : "Info",
     "category" : "CodeStyle"
   }, {
+    "patternId" : "Style_MixinUsage",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
     "patternId" : "Lint_EmptyInterpolation",
     "level" : "Warning",
     "category" : "ErrorProne"
@@ -1126,7 +1149,15 @@
   }, {
     "patternId" : "Layout_Tab",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "IndentationWidth",
+      "default" : null
+    } ]
+  }, {
+    "patternId" : "Lint_LiteralAsCondition",
+    "level" : "Warning",
+    "category" : "ErrorProne"
   }, {
     "patternId" : "Performance_UnfreezeString",
     "level" : "Warning",
@@ -1159,10 +1190,6 @@
     "category" : "ErrorProne"
   }, {
     "patternId" : "Lint_UselessComparison",
-    "level" : "Warning",
-    "category" : "ErrorProne"
-  }, {
-    "patternId" : "Lint_LiteralInCondition",
     "level" : "Warning",
     "category" : "ErrorProne"
   }, {
@@ -1647,6 +1674,17 @@
       "default" : false
     } ]
   }, {
+    "patternId" : "Gemspec_OrderedDependencies",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "TreatCommentsAsGroupSeparators",
+      "default" : true
+    }, {
+      "name" : "Include",
+      "default" : [ "**/*.gemspec" ]
+    } ]
+  }, {
     "patternId" : "Lint_AmbiguousBlockAssociation",
     "level" : "Warning",
     "category" : "ErrorProne"
@@ -1780,6 +1818,10 @@
     "patternId" : "Layout_RescueEnsureAlignment",
     "level" : "Info",
     "category" : "CodeStyle"
+  }, {
+    "patternId" : "Lint_UnneededRequireStatement",
+    "level" : "Warning",
+    "category" : "ErrorProne"
   }, {
     "patternId" : "Rails_Date",
     "level" : "Warning",
@@ -2055,11 +2097,7 @@
   }, {
     "patternId" : "Style_Encoding",
     "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "EnforcedStyle",
-      "default" : "never"
-    } ]
+    "category" : "CodeStyle"
   }, {
     "patternId" : "Layout_AlignArray",
     "level" : "Info",
@@ -2124,6 +2162,10 @@
       "name" : "EnforcedStyle",
       "default" : "auto_detection"
     } ]
+  }, {
+    "patternId" : "Style_StderrPuts",
+    "level" : "Info",
+    "category" : "CodeStyle"
   }, {
     "patternId" : "Rails_Output",
     "level" : "Warning",
@@ -2307,6 +2349,10 @@
     "patternId" : "Rails_RelativeDateConstant",
     "level" : "Warning",
     "category" : "ErrorProne"
+  }, {
+    "patternId" : "Style_DateTime",
+    "level" : "Info",
+    "category" : "CodeStyle"
   }, {
     "patternId" : "Style_GuardClause",
     "level" : "Info",
