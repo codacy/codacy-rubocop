@@ -1074,7 +1074,7 @@
   }, {
     "patternId" : "Security_JSONLoad",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "Security"
   }, {
     "patternId" : "Metrics_AbcSize",
     "level" : "Warning",
@@ -1746,7 +1746,7 @@
   }, {
     "patternId" : "Security_Eval",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "Security"
   }, {
     "patternId" : "Lint_UselessAssignment",
     "level" : "Warning",
@@ -2117,7 +2117,7 @@
   }, {
     "patternId" : "Security_YAMLLoad",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "Security"
   }, {
     "patternId" : "Rails_HttpPositionalArguments",
     "level" : "Warning",
@@ -2153,7 +2153,7 @@
   }, {
     "patternId" : "Security_MarshalLoad",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "Security"
   }, {
     "patternId" : "Layout_IndentHeredoc",
     "level" : "Info",
