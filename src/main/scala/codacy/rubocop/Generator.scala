@@ -126,6 +126,8 @@ object Generator {
           "ErrorProne"
         } else if (pattern.startsWith("Performance")) {
           "Performance"
+        } else if (pattern.startsWith("Security")) {
+          "Security"
         } else {
           "CodeStyle"
         }
