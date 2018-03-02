@@ -50,9 +50,9 @@ def installAll(rubocopVersion: String) =
      |&& gem install parser:2.4.0.0
      |&& gem install pry
      |&& gem install rubocop:$rubocopVersion
-     |&& gem install rubocop-migrations
+     |&& gem install rubocop-migrations:0.1.2
      |&& gem install rubocop-rspec:1.20.1
-     |&& gem install lingohub-rubocop
+     |&& gem install lingohub-rubocop:1.0.3
      |&& gem install safe_yaml
      |&& gem cleanup
      |&& rm -rf /tmp/* /var/cache/apk/*""".stripMargin.replaceAll(System.lineSeparator(), " ")
