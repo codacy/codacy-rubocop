@@ -38,6 +38,7 @@ toolVersion := {
   toolMap.getOrElse[String]("version", throw new Exception("Failed to retrieve 'version' from patterns.json"))
 }
 
+//WARNING: Update the rubocop-rspec also updates rubocop version !
 def installAll(rubocopVersion: String) =
   s"""echo -n "" > /etc/apk/repositories
      |&& echo "http://dl-cdn.alpinelinux.org/alpine/v3.6/main" >> /etc/apk/repositories
@@ -49,9 +50,9 @@ def installAll(rubocopVersion: String) =
      |&& gem install parser:2.4.0.0
      |&& gem install pry
      |&& gem install rubocop:$rubocopVersion
-     |&& gem install rubocop-migrations
-     |&& gem install rubocop-rspec
-     |&& gem install lingohub-rubocop
+     |&& gem install rubocop-migrations:0.1.2
+     |&& gem install rubocop-rspec:1.20.1
+     |&& gem install lingohub-rubocop:1.0.3
      |&& gem install safe_yaml
      |&& gem cleanup
      |&& rm -rf /tmp/* /var/cache/apk/*""".stripMargin.replaceAll(System.lineSeparator(), " ")
