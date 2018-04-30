@@ -4,6 +4,8 @@ machine:
     - sudo curl -L -o /usr/bin/docker 'https://s3-external-1.amazonaws.com/circle-downloads/docker-1.9.0-circleci-cp-workaround'
     - sudo chmod 0755 /usr/bin/docker
     - (cd $HOME; rm -f codacy-plugins-test; git clone https://github.com/codacy/codacy-plugins-test.git)
+    - mkdir -p $HOME/.sbt/.lib/0.13.17 && wget http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/sbt-launch/0.13.17/sbt-launch.jar -O $HOME/.sbt/.lib/0.13.17/sbt-launch.jar
+    - mkdir -p $HOME/.sbt/.lib/1.1.2 && wget http://central.maven.org/maven2/org/scala-sbt/sbt-launch/1.1.2/sbt-launch-1.1.2.jar -O $HOME/.sbt/.lib/1.1.2/sbt-launch.jar
   java:
     version: oraclejdk8
   services:
