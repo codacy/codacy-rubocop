@@ -53,6 +53,7 @@ def installAll(rubocopVersion: String) =
      |&& gem install rubocop-migrations:0.1.2
      |&& gem install rubocop-rspec:1.20.1
      |&& gem install lingohub-rubocop:1.0.3
+     |&& gem install rubocop-github:0.10.0
      |&& gem install safe_yaml
      |&& gem cleanup
      |&& rm -rf /tmp/* /var/cache/apk/*""".stripMargin.replaceAll(System.lineSeparator(), " ")
