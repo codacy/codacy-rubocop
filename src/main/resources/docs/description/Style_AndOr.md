@@ -1,15 +1,35 @@
-Replace And and Or statements by && and || respectively since they don't provide additional
-readability and the standart for the ruby language is && and ||
 
-**Examples:**
+This cop checks for uses of `and` and `or`, and suggests using `&&` and
+`|| instead`. It can be configured to check only in conditions, or in
+all contexts.
 
-```
-#bad
-if some_comdition and some_other_condition
+# Examples
+
+```ruby
+# bad
+foo.save and return
+
+# bad
+if foo and bar
 end
 
-#good
-if some_condition && some_other_condition
+# good
+foo.save && return
+
+# good
+if foo && bar
+end# bad
+if foo and bar
+end
+
+# good
+foo.save && return
+
+# good
+foo.save and return
+
+# good
+if foo && bar
 end
 ```
 

@@ -1,5 +1,16 @@
-When something is deprecated is because there is a better way to accomplish the same thing.
 
-Usually deprecated methods are kept just for backwards compatibility, and may be removed for future releases.
+This cop checks for uses of the deprecated class method usages.
+
+# Examples
+
+```ruby
+
+# bad
+
+File.exists?(some_path)
+# good
+
+File.exist?(some_path)
+```
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Lint/DeprecatedClassMethods)

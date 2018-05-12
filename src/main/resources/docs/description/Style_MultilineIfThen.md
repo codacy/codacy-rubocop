@@ -1,16 +1,18 @@
-Then should only be used in single line code not on multiline
 
-**Example:**
+Checks for uses of the `then` keyword in multi-line if statements.
 
-```
+# Examples
+
+```ruby
 # bad
-if some_condition then
-  # body omitted
+# This is considered bad practice.
+if cond then
 end
 
 # good
-if some_condition
-  # body omitted
+# If statements can contain `then` on the same line.
+if cond then a
+elsif cond then b
 end
 ```
 

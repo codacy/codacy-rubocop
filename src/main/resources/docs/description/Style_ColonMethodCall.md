@@ -1,13 +1,19 @@
-Use :: only to reference constants and constructors. Do not use :: for regular method invocation
 
-**Example:**
+This cop checks for methods invoked via the :: operator instead
+of the . operator (like FileUtils::rmdir instead of FileUtils.rmdir).
 
-```
+# Examples
+
+```ruby
 # bad
-SomeClass::some_method
+Timeout::timeout(500) { do_something }
+FileUtils::rmdir(dir)
+Marshal::dump(obj)
 
 # good
-SomeClass.some_method
+Timeout.timeout(500) { do_something }
+FileUtils.rmdir(dir)
+Marshal.dump(obj)
 ```
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Style/ColonMethodCall)

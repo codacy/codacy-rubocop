@@ -1,16 +1,32 @@
-Use def with parenthesis when there are parameters. Omit the parentheses when the method does not accept any parameters
 
-**Example:**
+This cop checks for parentheses in the definition of a method,
+that does not take any arguments. Both instance and
+class/singleton methods are checked.
 
-```
+# Examples
+
+```ruby
+
 # bad
-def some_method hello, world
-  ...
+def foo()
+  # does a thing
 end
 
 # good
-def some_method(hello, world)
-  ...
+def foo
+  # does a thing
+end
+
+# also good
+def foo() does_a_thing end
+# bad
+def Baz.foo()
+  # does a thing
+end
+
+# good
+def Baz.foo
+  # does a thing
 end
 ```
 

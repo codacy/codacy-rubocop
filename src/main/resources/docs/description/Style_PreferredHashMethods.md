@@ -1,16 +1,25 @@
-You should use Hash#key? instead of Hash#has_key? and Hash#value? instead of Hash#has_value? since the longer forms
-are considered deprecated
 
-**Examples:**
+This cop (by default) checks for uses of methods Hash#has_key? and
+Hash#has_value? where it enforces Hash#key? and Hash#value?
+It is configurable to enforce the inverse, using `verbose` method
+names also.
 
-```
+# Examples
+
+```ruby
 # bad
-hash.has_key?(:test)
-hash.has_value?(value)
+Hash#has_key?
+Hash#has_value?
 
 # good
-hash.key?(:test)
-hash.value?(value)
+Hash#key?
+Hash#value?# bad
+Hash#key?
+Hash#value?
+
+# good
+Hash#has_key?
+Hash#has_value?
 ```
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Style/PreferredHashMethods)

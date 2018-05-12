@@ -1,14 +1,19 @@
-Choose Array#join over Array#* since the * is a more cryptic notation and therefore may affect the readability
-of your code
 
-**Example:**
+This cop checks for uses of "*" as a substitute for *join*.
 
-```
-#bad
-%w(one two three) * ','
+Not all cases can reliably checked, due to Ruby's dynamic
+types, so we consider only cases when the first argument is an
+array literal or the second is a string literal.
 
-#good
-%w(one two three).join(',')
+# Examples
+
+```ruby
+
+# bad
+%w(foo bar baz) * ","
+
+# good
+%w(foo bar baz).join(",")
 ```
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Style/ArrayJoin)

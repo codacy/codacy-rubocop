@@ -1,14 +1,46 @@
-Checks for Nested Method Definitions since they actually produce a method in the same scope as the invoker, and everytime you call the outer method you are redifining the function again
-If you really need neted functions you should use ```lambda``` instead
 
-**Example:**
+This cop checks for nested method definitions.
 
-```
-# bar definition actually produces methods in the same scope as
-#the outer foo method. Futhermore, the bar method will be redifined every time the foo is invoked
+# Examples
+
+```ruby
+
+# bad
+
+# `bar` definition actually produces methods in the same scope
+# as the outer `foo` method. Furthermore, the `bar` method
+# will be redefined every time `foo` is invoked.
 def foo
   def bar
+  end
+end
+# good
 
+def foo
+  bar = -> { puts 'hello' }
+  bar.call
+end
+# good
+
+def foo
+  self.class_eval do
+    def bar
+    end
+  end
+end
+
+def foo
+  self.module_exec do
+    def bar
+    end
+  end
+end
+# good
+
+def foo
+  class << self
+    def bar
+    end
   end
 end
 ```

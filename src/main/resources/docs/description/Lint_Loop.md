@@ -1,21 +1,34 @@
-Checks if you are using a begin/end/while or begin/end/until statement and enforces you to change it to a loop/do/break statement
 
+This cop checks for uses of *begin...end while/until something*.
 
-**Example:**
+# Examples
 
-```
-#Do this
-loop do
- puts 'Hello World'
- x+=1
- break unless x < 5
-end
+```ruby
 
-#Instead of this
+# bad
+
+# using while
 begin
-  puts 'Hello World'
-  x+=1
-end while x < 0
+  do_something
+end while some_condition
+# bad
+
+# using until
+begin
+  do_something
+end until some_condition
+# good
+
+# using while
+while some_condition
+  do_something
+end
+# good
+
+# using until
+until some_condition
+  do_something
+end
 ```
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Lint/Loop)

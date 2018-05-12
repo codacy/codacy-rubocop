@@ -1,9 +1,9 @@
-Although infinite loops are a common bad practice if you really intend in using them
-you should use ```Kernel#loop``` instead of ```while true```
 
-**Example:**
+Use `Kernel#loop` for infinite loops.
 
-```
+# Examples
+
+```ruby
 # bad
 while true
   work

@@ -1,25 +1,15 @@
-Prefer {...} over do...end for single-line blocks. Avoid using {...} for multi-line blocks (multiline chaining is always ugly). Always use do...end for "control flow" and "method definitions" (e.g. in Rakefiles and certain DSLs). Avoid do...end when chaining.
 
-**Example:**
+This cop checks for methods called on a do...end block. The point of
+this check is that it's easy to miss the call tacked on to the block
+when reading code.
 
-```
-names = %w(Bozhidar Steve Sarah)
+# Examples
 
-# bad
-names.each do |name|
-  puts name
-end
+```ruby
 
-# good
-names.each { |name| puts name }
-
-# bad
-names.select do |name|
-  name.start_with?('S')
-end.map { |name| name.upcase }
-
-# good
-names.select { |name| name.start_with?('S') }.map(&:upcase)
+a do
+  b
+end.c
 ```
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Style/MethodCalledOnDoEndBlock)

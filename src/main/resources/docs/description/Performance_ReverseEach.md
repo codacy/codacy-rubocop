@@ -1,13 +1,14 @@
-Reverse_each is definitely faster and it has to do with the time associating the creating the reverse array
-So it is better to change the reverse.each to reverse_each
 
-**Examples**
+This cop is used to identify usages of `reverse.each` and
+change them to use `reverse_each` instead.
 
-```
-#bad
+# Examples
+
+```ruby
+# bad
 [].reverse.each
 
-#good
+# good
 [].reverse_each
 ```
 

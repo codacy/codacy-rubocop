@@ -1,9 +1,11 @@
-Use ! instead of not
 
-**Example:**
+This cop checks for uses of the keyword `not` instead of `!`.
 
-```
-# bad - braces are required because of op precedence
+# Examples
+
+```ruby
+
+# bad - parentheses are required because of op precedence
 x = (not something)
 
 # good

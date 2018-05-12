@@ -1,13 +1,35 @@
-Checks for unused arguments inside a code block since they are redundant to have (unused arguments prefixed with '_' will be accepted though)
 
-**Example:**
+This cop checks for unused block arguments.
 
+# Examples
 
-```
-#remove unused variable
+```ruby
 
-do_something do |used, unused, _unused_but_allowed|
+# bad
+
+do_something do |used, unused|
   puts used
+end
+
+do_something do |bar|
+  puts :foo
+end
+
+define_method(:foo) do |bar|
+  puts :baz
+end
+#good
+
+do_something do |used, _unused|
+  puts used
+end
+
+do_something do
+  puts :foo
+end
+
+define_method(:foo) do |_bar|
+  puts :baz
 end
 ```
 

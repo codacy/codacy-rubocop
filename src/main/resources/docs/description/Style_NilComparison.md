@@ -1,8 +1,10 @@
-Favor the use of the predicate method nil? instead ==
 
-**Example:**
+This cop checks for comparison of something with nil using ==.
 
-```
+# Examples
+
+```ruby
+
 # bad
 if x == nil
 end

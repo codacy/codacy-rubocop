@@ -1,9 +1,12 @@
-Checks for comparisons of something with itself
 
-**Example:**
+This cop checks for comparison of something with itself.
 
-```
-#Dont do this it is redundant
+# Examples
+
+```ruby
+
+# bad
+
 x.top >= x.top
 ```
 

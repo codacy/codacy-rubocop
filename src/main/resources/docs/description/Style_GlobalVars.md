@@ -1,17 +1,22 @@
-Use module instances variables instead of global variables
 
-**Example:**
+This cops looks for uses of global variables.
+It does not report offenses for built-in global variables.
+Built-in global variables are allowed by default. Additionally
+users can allow additional variables via the AllowedVariables option.
 
-```
+Note that backreferences like $1, $2, etc are not global variables.
+
+# Examples
+
+```ruby
 # bad
-$foo_bar = 1
+$foo = 2
+bar = $foo + 5
 
 # good
-module Foo
-  class << self
-    attr_accessor :bar
-  end
-end
+FOO = 2
+foo = 2
+$stdin.read
 ```
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Style/GlobalVars)

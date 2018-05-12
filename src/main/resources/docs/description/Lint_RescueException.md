@@ -1,25 +1,24 @@
-Avoid rescuing an Exception class since this will trap signals an call to ``exit``, requiring you to ```kill -9``` the process
 
-**Example:**
+This cop checks for *rescue* blocks targeting the Exception class.
 
-```
+# Examples
+
+```ruby
+
 # bad
+
 begin
-  # calls to exit and kill signals will be caught (except kill -9)
-  exit
+  do_something
 rescue Exception
-  puts "you didn't really want to exit, right?"
-  # exception handling
+  handle_exception
 end
-
 # good
-begin
-  # a blind rescue rescues from StandardError, not Exception as many
-  # programmers assume.
-rescue => e
-  # exception handling
-end
 
+begin
+  do_something
+rescue ArgumentError
+  handle_exception
+end
 ```
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Lint/RescueException)

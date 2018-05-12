@@ -1,15 +1,20 @@
-This checks for ambiguous operators in the first argument of a method invocation without parentheses
+
+This cop checks for ambiguous operators in the first argument of a
+method invocation without parentheses.
+
+# Examples
 
 ```ruby
-array = [1, 2, 3]
 
-#The '*' is interpreted as a splat operator but it could possibly be
-# a '*' method invocation (i.e. 'do_something.*(array)).
-do_something *array
+# bad
 
-#With parentheses there's no ambiguity
-do_something(*array)
+# The `*` is interpreted as a splat operator but it could possibly be
+# a `*` method invocation (i.e. `do_something.*(some_array)`).
+do_something *some_array
+# good
+
+# With parentheses, there's no ambiguity.
+do_something(*some_array)
 ```
-
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Lint/AmbiguousOperator)

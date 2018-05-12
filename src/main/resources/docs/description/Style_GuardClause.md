@@ -1,29 +1,38 @@
-Avoid the use of nested conditionals for flow control
 
-Prefer a guard clause when you can assert  invalid data. A guard clause is a conditional statement at the top of a function that bails out as soon as it can.
+Use a guard clause instead of wrapping the code inside a conditional
+expression
 
-**Example:**
+# Examples
 
-```
+```ruby
 # bad
-def compute_thing(thing)
-  if thing[:foo]
-    update_with_bar(thing)
-    if thing[:foo][:bar]
-      partial_compute(thing)
-    else
-      re_compute(thing)
-    end
+def test
+  if something
+    work
   end
 end
 
 # good
-def compute_thing(thing)
-  return unless thing[:foo]
-  update_with_bar(thing[:foo])
-  return re_compute(thing) unless thing[:foo][:bar]
-  partial_compute(thing)
+def test
+  return unless something
+  work
 end
+
+# also good
+def test
+  work if something
+end
+
+# bad
+if something
+  raise 'exception'
+else
+  ok
+end
+
+# good
+raise 'exception' if something
+ok
 ```
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Style/GuardClause)

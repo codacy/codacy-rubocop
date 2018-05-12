@@ -1,13 +1,19 @@
-Don't use Array.new or Hash.new use literals for them instead since they provide cleaner and more readable code
 
-**Example:**
+This cop checks for the use of a method, the result of which
+would be a literal, like an empty array, hash or string.
 
-```
+# Examples
+
+```ruby
 # bad
-arr = Array.new
+a = Array.new
+h = Hash.new
+s = String.new
 
 # good
-arr = []
+a = []
+h = {}
+s = ''
 ```
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Style/EmptyLiteral)

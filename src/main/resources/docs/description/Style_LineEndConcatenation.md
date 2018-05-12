@@ -1,8 +1,10 @@
-You should use \ instead of + and << since it is the standart for the ruby language
 
-**Example:**
+This cop checks for string literal concatenation at
+the end of a line.
 
-```
+# Examples
+
+```ruby
 
 # bad
 some_str = 'ala' +

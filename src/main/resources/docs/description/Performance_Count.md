@@ -1,17 +1,24 @@
-When calculating the length of an Enumerable there are several ways you can do it
-but some are better than others because of how fast they are, ```length``` is as fast as
-it gets since it's complexity is approximately O(1) but it only works on concrete
-classes (like Array and String).
 
-Invoking size is the same as invoking length It comes down to a matter of personal preference
-if you like the word better.
+This cop is used to identify usages of `count` on an `Enumerable` that
+follow calls to `select` or `reject`. Querying logic can instead be
+passed to the `count` call.
 
-Count, however is very slow compared to the other two so avoid using it if you can use size or length
+`ActiveRecord` compatibility:
+`ActiveRecord` will ignore the block that is passed to `count`.
+Other methods, such as `select`, will convert the association to an
+array and then run the block on the array. A simple work around to
+make `count` work with a block is to call `to_a.count {...}`.
 
+Example:
+  Model.where(id: [1, 2, 3].select { |m| m.method == true }.size
 
-**Examples:**
+  becomes:
 
-```
+  Model.where(id: [1, 2, 3]).to_a.count { |m| m.method == true }
+
+# Examples
+
+```ruby
 # bad
 [1, 2, 3].select { |e| e > 2 }.size
 [1, 2, 3].reject { |e| e > 2 }.size

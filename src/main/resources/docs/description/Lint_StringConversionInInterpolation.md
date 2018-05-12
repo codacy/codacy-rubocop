@@ -1,10 +1,16 @@
-Checks for string conversion in interpolation, which is redundant
 
-```
-#this is redundant
+This cop checks for string conversion in string interpolation,
+which is redundant.
+
+# Examples
+
+```ruby
+
+# bad
+
 "result is #{something.to_s}"
+# good
 
-#change it to this
 "result is #{something}"
 ```
 

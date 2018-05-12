@@ -1,3 +1,9 @@
-Checks if the length of a class is more than it should be so that you can try to refactor it to improve readability
+
+This cop checks if the length a class exceeds some maximum value.
+Comment lines can optionally be ignored.
+The maximum allowed length is configurable.
+
+# Examples
+
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Metrics/ClassLength)

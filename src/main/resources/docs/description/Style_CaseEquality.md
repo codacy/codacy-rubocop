@@ -1,15 +1,18 @@
-Avoid explicit use of the case equality operator ===. As its name implies it is meant to be
-used by case expressions and outside of them it yields some pretty confusing code
 
+This cop checks for uses of the case equality operator(===).
 
-**Example:**
+# Examples
 
-```
+```ruby
 # bad
 Array === something
+(1..100) === 7
+/something/ === some_string
 
 # good
 something.is_a?(Array)
+(1..100).include?(7)
+some_string =~ /something/
 ```
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Style/CaseEquality)

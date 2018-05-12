@@ -1,12 +1,17 @@
-Checks for spaces between the name of a called method and a left parenthesis
-To check if this rule applies always run Ruby with -w flag and it will always warn you of this problem
 
-```
-#Bad
-f (3 + 1)
+Checks for space between the name of a called method and a left
+parenthesis.
 
-#Good
-f(3 + 1)
+# Examples
+
+```ruby
+
+# bad
+
+puts (x + y)
+# good
+
+puts(x + y)
 ```
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Lint/ParenthesesAsGroupedExpression)

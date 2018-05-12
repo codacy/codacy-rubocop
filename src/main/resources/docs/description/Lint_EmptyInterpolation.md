@@ -1,10 +1,16 @@
-Checks for empty interpolation in strings since they are pointless and should be removed
 
-```
-#If you have this in your code remove it
-#It will not be used
+This cop checks for empty interpolation.
+
+# Examples
+
+```ruby
+
+# bad
 
 "result is #{}"
+# good
+
+"result is #{some_result}"
 ```
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Lint/EmptyInterpolation)

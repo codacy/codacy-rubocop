@@ -1,9 +1,16 @@
-```detect``` has much better performance than calling first or last on ```select.first, select.last, find_all.first, find_all.last```
 
-**Example:**
+This cop is used to identify usages of
+`select.first`, `select.last`, `find_all.first`, and `find_all.last`
+and change them to use `detect` instead.
 
+`ActiveRecord` compatibility:
+`ActiveRecord` does not implement a `detect` method and `find` has its
+own meaning. Correcting ActiveRecord methods with this cop should be
+considered unsafe.
 
-```
+# Examples
+
+```ruby
 # bad
 [].select { |item| true }.first
 [].select { |item| true }.last
@@ -14,7 +21,5 @@
 [].detect { |item| true }
 [].reverse.detect { |item| true }
 ```
-
-
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Performance/Detect)

@@ -1,21 +1,26 @@
-Checks for odd else block layout one good example is when you have an expression on the same line as the else keyword
 
-```
-#Like this
+This cop checks for odd else block layout - like
+having an expression on the same line as the else keyword,
+which is usually a mistake.
 
-if something
-  do_this
-else do_that
-  and_that
-end
+# Examples
 
-#Instead you should have this
+```ruby
+
+# bad
 
 if something
-  do_this
-else
+  # ...
+else do_this
   do_that
-  and_that
+end
+# good
+
+if something
+  # ...
+else
+  do_this
+  do_that
 end
 ```
 

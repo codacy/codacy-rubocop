@@ -1,14 +1,16 @@
-Use Ascii characters when writing comments on your code since it is readable to a more abroad audience
-than non ascii characters.
 
-**Examples:**
+This cop checks for non-ascii (non-English) characters
+in comments. You could set an array of allowed non-ascii chars in
+AllowedChars attribute (empty by default).
 
-```
+# Examples
+
+```ruby
 # bad
-# 悪いです
+# Translates from English to 日本語。
 
 # good
-# good
+# Translates from English to Japanese
 ```
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Style/AsciiComments)

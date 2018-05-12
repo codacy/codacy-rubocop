@@ -1,10 +1,18 @@
-Checks for unused method argument in your code since they will not be used (unused arguments prefixed with '_' will be ignored though)
 
-**Example:**
+This cop checks for unused method arguments.
 
-```
-#Remove unused argument
-def something(used, unused)
+# Examples
+
+```ruby
+
+# bad
+
+def some_method(used, unused, _unused_but_allowed)
+  puts used
+end
+# good
+
+def some_method(used, _unused, _unused_but_allowed)
   puts used
 end
 ```

@@ -1,14 +1,14 @@
-Choose the usage of attr_reader over attr since attr creates a single attribute accessor and it was
-deprecated in 1.9
 
-**Examples:**
+This cop checks for uses of Module#attr.
 
-```
-#bad
+# Examples
+
+```ruby
+# bad - creates a single attribute accessor (deprecated in Ruby 1.9)
 attr :something, true
-attr :one, :two, :three
+attr :one, :two, :three # behaves as attr_reader
 
-#good
+# good
 attr_accessor :something
 attr_reader :one, :two, :three
 ```

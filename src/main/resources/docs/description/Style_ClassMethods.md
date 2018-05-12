@@ -1,19 +1,21 @@
-Use self instead of defining a method using the class/module name since it provides better readability
 
-**Example:**
+This cop checks for uses of the class/module name instead of
+self, when defining class/module methods.
 
-```
+# Examples
+
+```ruby
 # bad
 class SomeClass
-  def SomeClass.some_method
-
+  def SomeClass.class_method
+    # ...
   end
 end
 
 # good
 class SomeClass
-  def self.some_method
-
+  def self.class_method
+    # ...
   end
 end
 ```

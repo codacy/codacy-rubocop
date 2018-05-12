@@ -1,17 +1,25 @@
-Checks if there is a used variable that is prefixed with '_'
 
-**Example:***
+This cop checks for underscore-prefixed variables that are actually
+used.
 
+# Examples
 
-```
-#bad
-def something(x)
-  _used_var = something_else(x)
+```ruby
+
+# bad
+
+[1, 2, 3].each do |_num|
+  do_something(_num)
 end
+# good
 
-#good
-def something(x)
-  used_var = something_else(x)
+[1, 2, 3].each do |num|
+  do_something(num)
+end
+# good
+
+[1, 2, 3].each do |_num|
+  do_something # not using `_num`
 end
 ```
 

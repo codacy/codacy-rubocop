@@ -1,14 +1,18 @@
-Check for cases when you could use a block accepting of a method that does automatic resource cleanup
 
-**Example:**
+This cop checks for cases when you could use a block
+accepting version of a method that does automatic
+resource cleanup.
 
-```
-#bad
-file = File.open('file')
+# Examples
 
-#good
-file = File.open('file') do
-  ...
+```ruby
+
+# bad
+f = File.open('file')
+
+# good
+File.open('file') do |f|
+  # ...
 end
 ```
 

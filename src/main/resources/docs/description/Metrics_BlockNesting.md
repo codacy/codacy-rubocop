@@ -1,22 +1,14 @@
-Checks how many nested blocks are contained within a method, if there are too many this can become a problem to the person reading the code
-and it can probably be refactored to a better, cleaner and clearer code.
 
-It can provide even more problems since having many loops can be very slow to process and therefore it can be refactored to faster code
+This cop checks for excessive nesting of conditional and looping
+constructs.
 
-***Example:***
+You can configure if blocks are considered using the `CountBlocks`
+option. When set to `false` (the default) blocks are not counted
+towards the nesting level. Set to `true` to count blocks as well.
 
-```
-def hello
-  while x < 10
-    while y < 11
-      while j < 12
-        while m < 13
-          #This can probably be refactored
-        end
-      end
-    end
-  end
-end
-```
+The maximum level of nesting allowed is configurable.
+
+# Examples
+
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Metrics/BlockNesting)

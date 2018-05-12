@@ -1,0 +1,47 @@
+
+This cop checks for redundant `begin` blocks.
+
+Currently it checks for code like this:
+
+# Examples
+
+```ruby
+
+# bad
+def redundant
+  begin
+    ala
+    bala
+  rescue StandardError => e
+    something
+  end
+end
+
+# good
+def preferred
+  ala
+  bala
+rescue StandardError => e
+  something
+end
+
+# bad
+# When using Ruby 2.5 or later.
+do_something do
+  begin
+    something
+  rescue => ex
+    anything
+  end
+end
+
+# good
+# In Ruby 2.5 or later, you can omit `begin` in `do-end` block.
+do_something do
+  something
+rescue => ex
+  anything
+end
+```
+
+[Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Style/RedundantBegin)

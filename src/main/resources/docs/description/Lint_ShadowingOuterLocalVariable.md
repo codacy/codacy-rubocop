@@ -1,12 +1,31 @@
-Shadowing is when you have two different local variables with the same name. It is said that the variable is defined in
-the inner scope "shadows" the one in the outer scope (because t he outer varible is no longer accessible as long as the inner variable scope, even though it would otherwise be in scope)
 
-So in essence you can't access an outer variable with the same name of an inner variable
+This cop looks for use of the same name as outer local variables
+for block arguments or block local variables.
+This is a mimic of the warning
+"shadowing outer local variable - foo" from `ruby -cw`.
 
-```
-x = 42
-5.times { |x| puts x } #You are not using the x above
+# Examples
 
+```ruby
+
+# bad
+
+def some_method
+  foo = 1
+
+  2.times do |foo| # shadowing outer `foo`
+    do_something(foo)
+  end
+end
+# good
+
+def some_method
+  foo = 1
+
+  2.times do |bar|
+    do_something(bar)
+  end
+end
 ```
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Lint/ShadowingOuterLocalVariable)

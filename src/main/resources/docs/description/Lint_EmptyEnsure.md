@@ -1,25 +1,36 @@
-Checks for empty ensure blocks since it it pointless to have one inside your code
 
+This cop checks for empty `ensure` blocks
 
-```
-begin
- #something that might raise an exception
-rescue
- #code that deals with that exception
+# Examples
+
+```ruby
+
+# bad
+
+def some_method
+  do_something
 ensure
- #If you have this empty you can remove it
+end
+# bad
 
-
-#You should have:
 begin
-  #something that might raise an exception
-
-rescue
-  #code that deals with that exception
-
+  do_something
 ensure
-  #ensure that this code always runs, no matter what
+end
+# good
 
+def some_method
+  do_something
+ensure
+  do_something_else
+end
+# good
+
+begin
+  do_something
+ensure
+  do_something_else
+end
 ```
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Lint/EmptyEnsure)

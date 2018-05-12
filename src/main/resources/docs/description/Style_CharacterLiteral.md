@@ -1,14 +1,17 @@
-Don't use character literal syntax ?x. Since Ruby 1.9 it's basically redundant - ?x would interpreted
-as 'x' (a string with a single character in it)
 
-**Example:**
+Checks for uses of the character literal ?x.
 
-```
+# Examples
+
+```ruby
 # bad
-char = ?c
+?x
 
 # good
-char = 'c'
+'x'
+
+# good
+?\C-\M-d
 ```
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Style/CharacterLiteral)

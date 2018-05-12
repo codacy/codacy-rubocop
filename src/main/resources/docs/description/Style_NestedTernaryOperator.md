@@ -1,17 +1,18 @@
- Use one expression per branch in a ternary operator. This also means that ternary operators must not be nested. Prefer if/else constructs in these cases.
 
- **Example:**
+This cop checks for nested ternary op expressions.
 
- ```
+# Examples
+
+```ruby
 # bad
-some_condition ? (nested_condition ? nested_something : nested_something_else) : something_else
+a ? (b ? b1 : b2) : a2
 
 # good
-if some_condition
-  nested_condition ? nested_something : nested_something_else
+if a
+  b ? b1 : b2
 else
-  something_else
+  a2
 end
- ```
+```
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Style/NestedTernaryOperator)

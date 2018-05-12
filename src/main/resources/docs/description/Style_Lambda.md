@@ -1,26 +1,43 @@
- Use the new lambda literal syntax for single line body blocks. Use the lambda method for multi-line blocks.
 
- **Example:**
+This cop (by default) checks for uses of the lambda literal syntax for
+single line lambdas, and the method call syntax for multiline lambdas.
+It is configurable to enforce one of the styles for both single line
+and multiline lambdas as well.
 
- ```
+# Examples
+
+```ruby
 # bad
-l = lambda { |a, b| a + b }
-l.call(1, 2)
-
-# correct, but looks extremely awkward
-l = ->(a, b) do
-  tmp = a * 7
-  tmp * b / 50
-end
+f = lambda { |x| x }
+f = ->(x) do
+      x
+    end
 
 # good
-l = ->(a, b) { a + b }
-l.call(1, 2)
+f = ->(x) { x }
+f = lambda do |x|
+      x
+    end# bad
+f = ->(x) { x }
+f = ->(x) do
+      x
+    end
 
-l = lambda do |a, b|
-  tmp = a * 7
-  tmp * b / 50
-end
- ```
+# good
+f = lambda { |x| x }
+f = lambda do |x|
+      x
+    end# bad
+f = lambda { |x| x }
+f = lambda do |x|
+      x
+    end
+
+# good
+f = ->(x) { x }
+f = ->(x) do
+      x
+    end
+```
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Style/Lambda)

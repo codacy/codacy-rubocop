@@ -1,27 +1,43 @@
-Checks for duplicate methods in classes and modules, This should be changed since it can give some serious issues in the long run
 
-**Examples**
+This cop checks for duplicated instance (or singleton) method
+definitions.
 
-```
-#This is really bad
+# Examples
 
-class SomeClass
-  def some_method
-  end
+```ruby
 
-  def some_method
-  end
+# bad
+
+def foo
+  1
 end
 
-#You should change them to other names
-
-class SomeClass
-  def some
-  end
-
-  def method
-  end
+def foo
+  2
 end
+# bad
+
+def foo
+  1
+end
+
+alias foo bar
+# good
+
+def foo
+  1
+end
+
+def bar
+  2
+end
+# good
+
+def foo
+  1
+end
+
+alias bar foo
 ```
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Lint/DuplicateMethods)

@@ -1,13 +1,7 @@
-You should not use END Block, instead use ```Kernel#at_exit```
 
-**Example:**
+This cop checks for END blocks.
 
-```
-# bad
-END { puts 'Goodbye!' }
+# Examples
 
-# good
-at_exit { puts 'Goodbye!' }
-```
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Style/EndBlock)
