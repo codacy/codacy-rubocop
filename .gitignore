@@ -4,8 +4,6 @@
 /project/project/
 /project/target/
 /target/
-rubocop-doc.yml
-src/main/ruby/codacy/rubocop/generator.rb
 .idea
 .DS_Store
 
