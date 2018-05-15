@@ -70,6 +70,12 @@ module RubocopDoc
         "CodeStyle"
       end
 
+      def self.parameters(cop_data)
+        cop_data[:configurable_attributes].map do |key, value|
+          { name: key, default: value }
+        end
+      end
+
       def self.run(file_path = "rubocop-doc.yml")
         cops_data = YAML.load_file(file_path)
         patterns = cops_data.map do |cop_data|
@@ -77,7 +83,7 @@ module RubocopDoc
             patternId: cop_data[:name].gsub("/", "_"),
             level: level(cop_data),
             category: category(cop_data),
-            parameters: cop_data[:configurable_attributes]
+            parameters: parameters(cop_data)
           }
         end
         data = {

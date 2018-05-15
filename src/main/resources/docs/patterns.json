@@ -6,3993 +6,5376 @@
       "patternId": "Bundler_DuplicatedGem",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "Include": [
-          "**/*.gemfile",
-          "**/Gemfile",
-          "**/gems.rb"
-        ]
-      }
+      "parameters": [
+        {
+          "name": "Include",
+          "default": [
+            "**/*.gemfile",
+            "**/Gemfile",
+            "**/gems.rb"
+          ]
+        }
+      ]
     },
     {
       "patternId": "Bundler_InsecureProtocolSource",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "Include": [
-          "**/*.gemfile",
-          "**/Gemfile",
-          "**/gems.rb"
-        ]
-      }
+      "parameters": [
+        {
+          "name": "Include",
+          "default": [
+            "**/*.gemfile",
+            "**/Gemfile",
+            "**/gems.rb"
+          ]
+        }
+      ]
     },
     {
       "patternId": "Bundler_OrderedGems",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "Include": [
-          "**/*.gemfile",
-          "**/Gemfile",
-          "**/gems.rb"
-        ],
-        "TreatCommentsAsGroupSeparators": "true"
-      }
+      "parameters": [
+        {
+          "name": "Include",
+          "default": [
+            "**/*.gemfile",
+            "**/Gemfile",
+            "**/gems.rb"
+          ]
+        },
+        {
+          "name": "TreatCommentsAsGroupSeparators",
+          "default": "true"
+        }
+      ]
     },
     {
       "patternId": "Gemspec_DuplicatedAssignment",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "Include": [
-          "**/*.gemspec"
-        ]
-      }
+      "parameters": [
+        {
+          "name": "Include",
+          "default": [
+            "**/*.gemspec"
+          ]
+        }
+      ]
     },
     {
       "patternId": "Gemspec_OrderedDependencies",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "Include": [
-          "**/*.gemspec"
-        ],
-        "TreatCommentsAsGroupSeparators": "true"
-      }
+      "parameters": [
+        {
+          "name": "Include",
+          "default": [
+            "**/*.gemspec"
+          ]
+        },
+        {
+          "name": "TreatCommentsAsGroupSeparators",
+          "default": "true"
+        }
+      ]
     },
     {
       "patternId": "Gemspec_RequiredRubyVersion",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "Include": [
-          "**/*.gemspec"
-        ]
-      }
+      "parameters": [
+        {
+          "name": "Include",
+          "default": [
+            "**/*.gemspec"
+          ]
+        }
+      ]
     },
     {
       "patternId": "Layout_AccessModifierIndentation",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "EnforcedStyle": "indent",
-        "SupportedStyles": [
-          "outdent",
-          "indent"
-        ],
-        "IndentationWidth": ""
-      }
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "indent"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": [
+            "outdent",
+            "indent"
+          ]
+        },
+        {
+          "name": "IndentationWidth",
+          "default": ""
+        }
+      ]
     },
     {
       "patternId": "Layout_AlignArray",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Layout_AlignHash",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "EnforcedHashRocketStyle": "key",
-        "SupportedHashRocketStyles": [
-          "key",
-          "separator",
-          "table"
-        ],
-        "EnforcedColonStyle": "key",
-        "SupportedColonStyles": [
-          "key",
-          "separator",
-          "table"
-        ],
-        "EnforcedLastArgumentHashStyle": "always_inspect",
-        "SupportedLastArgumentHashStyles": [
-          "always_inspect",
-          "always_ignore",
-          "ignore_implicit",
-          "ignore_explicit"
-        ]
-      }
+      "parameters": [
+        {
+          "name": "EnforcedHashRocketStyle",
+          "default": "key"
+        },
+        {
+          "name": "SupportedHashRocketStyles",
+          "default": [
+            "key",
+            "separator",
+            "table"
+          ]
+        },
+        {
+          "name": "EnforcedColonStyle",
+          "default": "key"
+        },
+        {
+          "name": "SupportedColonStyles",
+          "default": [
+            "key",
+            "separator",
+            "table"
+          ]
+        },
+        {
+          "name": "EnforcedLastArgumentHashStyle",
+          "default": "always_inspect"
+        },
+        {
+          "name": "SupportedLastArgumentHashStyles",
+          "default": [
+            "always_inspect",
+            "always_ignore",
+            "ignore_implicit",
+            "ignore_explicit"
+          ]
+        }
+      ]
     },
     {
       "patternId": "Layout_AlignParameters",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "EnforcedStyle": "with_first_parameter",
-        "SupportedStyles": [
-          "with_first_parameter",
-          "with_fixed_indentation"
-        ],
-        "IndentationWidth": ""
-      }
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "with_first_parameter"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": [
+            "with_first_parameter",
+            "with_fixed_indentation"
+          ]
+        },
+        {
+          "name": "IndentationWidth",
+          "default": ""
+        }
+      ]
     },
     {
       "patternId": "Layout_BlockAlignment",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "EnforcedStyleAlignWith": "either",
-        "SupportedStylesAlignWith": [
-          "either",
-          "start_of_block",
-          "start_of_line"
-        ]
-      }
+      "parameters": [
+        {
+          "name": "EnforcedStyleAlignWith",
+          "default": "either"
+        },
+        {
+          "name": "SupportedStylesAlignWith",
+          "default": [
+            "either",
+            "start_of_block",
+            "start_of_line"
+          ]
+        }
+      ]
     },
     {
       "patternId": "Layout_BlockEndNewline",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Layout_CaseIndentation",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "EnforcedStyle": "case",
-        "SupportedStyles": [
-          "case",
-          "end"
-        ],
-        "IndentOneStep": "false",
-        "IndentationWidth": ""
-      }
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "case"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": [
+            "case",
+            "end"
+          ]
+        },
+        {
+          "name": "IndentOneStep",
+          "default": "false"
+        },
+        {
+          "name": "IndentationWidth",
+          "default": ""
+        }
+      ]
     },
     {
       "patternId": "Layout_ClassStructure",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "Categories": "{\"module_inclusion\"=>[\"include\", \"prepend\", \"extend\"]}",
-        "ExpectedOrder": [
-          "module_inclusion",
-          "constants",
-          "public_class_methods",
-          "initializer",
-          "public_methods",
-          "protected_methods",
-          "private_methods"
-        ]
-      }
+      "parameters": [
+        {
+          "name": "Categories",
+          "default": "{\"module_inclusion\"=>[\"include\", \"prepend\", \"extend\"]}"
+        },
+        {
+          "name": "ExpectedOrder",
+          "default": [
+            "module_inclusion",
+            "constants",
+            "public_class_methods",
+            "initializer",
+            "public_methods",
+            "protected_methods",
+            "private_methods"
+          ]
+        }
+      ]
     },
     {
       "patternId": "Layout_ClosingParenthesisIndentation",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Layout_CommentIndentation",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Layout_ConditionPosition",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Layout_DefEndAlignment",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "EnforcedStyleAlignWith": "start_of_line",
-        "SupportedStylesAlignWith": [
-          "start_of_line",
-          "def"
-        ],
-        "AutoCorrect": "false",
-        "Severity": "warning"
-      }
+      "parameters": [
+        {
+          "name": "EnforcedStyleAlignWith",
+          "default": "start_of_line"
+        },
+        {
+          "name": "SupportedStylesAlignWith",
+          "default": [
+            "start_of_line",
+            "def"
+          ]
+        },
+        {
+          "name": "AutoCorrect",
+          "default": "false"
+        },
+        {
+          "name": "Severity",
+          "default": "warning"
+        }
+      ]
     },
     {
       "patternId": "Layout_DotPosition",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "EnforcedStyle": "leading",
-        "SupportedStyles": [
-          "leading",
-          "trailing"
-        ]
-      }
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "leading"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": [
+            "leading",
+            "trailing"
+          ]
+        }
+      ]
     },
     {
       "patternId": "Layout_ElseAlignment",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Layout_EmptyComment",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "AllowBorderComment": "true",
-        "AllowMarginComment": "true"
-      }
+      "parameters": [
+        {
+          "name": "AllowBorderComment",
+          "default": "true"
+        },
+        {
+          "name": "AllowMarginComment",
+          "default": "true"
+        }
+      ]
     },
     {
       "patternId": "Layout_EmptyLineAfterMagicComment",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Layout_EmptyLineBetweenDefs",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "AllowAdjacentOneLineDefs": "false",
-        "NumberOfEmptyLines": "1"
-      }
+      "parameters": [
+        {
+          "name": "AllowAdjacentOneLineDefs",
+          "default": "false"
+        },
+        {
+          "name": "NumberOfEmptyLines",
+          "default": "1"
+        }
+      ]
     },
     {
       "patternId": "Layout_EmptyLinesAroundAccessModifier",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Layout_EmptyLinesAroundArguments",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Layout_EmptyLinesAroundBeginBody",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Layout_EmptyLinesAroundBlockBody",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "EnforcedStyle": "no_empty_lines",
-        "SupportedStyles": [
-          "empty_lines",
-          "no_empty_lines"
-        ]
-      }
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "no_empty_lines"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": [
+            "empty_lines",
+            "no_empty_lines"
+          ]
+        }
+      ]
     },
     {
       "patternId": "Layout_EmptyLinesAroundClassBody",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "EnforcedStyle": "no_empty_lines",
-        "SupportedStyles": [
-          "empty_lines",
-          "empty_lines_except_namespace",
-          "empty_lines_special",
-          "no_empty_lines",
-          "beginning_only",
-          "ending_only"
-        ]
-      }
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "no_empty_lines"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": [
+            "empty_lines",
+            "empty_lines_except_namespace",
+            "empty_lines_special",
+            "no_empty_lines",
+            "beginning_only",
+            "ending_only"
+          ]
+        }
+      ]
     },
     {
       "patternId": "Layout_EmptyLinesAroundExceptionHandlingKeywords",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Layout_EmptyLinesAroundMethodBody",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Layout_EmptyLinesAroundModuleBody",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "EnforcedStyle": "no_empty_lines",
-        "SupportedStyles": [
-          "empty_lines",
-          "empty_lines_except_namespace",
-          "empty_lines_special",
-          "no_empty_lines"
-        ]
-      }
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "no_empty_lines"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": [
+            "empty_lines",
+            "empty_lines_except_namespace",
+            "empty_lines_special",
+            "no_empty_lines"
+          ]
+        }
+      ]
     },
     {
       "patternId": "Layout_EmptyLines",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Layout_EndAlignment",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "EnforcedStyleAlignWith": "keyword",
-        "SupportedStylesAlignWith": [
-          "keyword",
-          "variable",
-          "start_of_line"
-        ],
-        "AutoCorrect": "false",
-        "Severity": "warning"
-      }
+      "parameters": [
+        {
+          "name": "EnforcedStyleAlignWith",
+          "default": "keyword"
+        },
+        {
+          "name": "SupportedStylesAlignWith",
+          "default": [
+            "keyword",
+            "variable",
+            "start_of_line"
+          ]
+        },
+        {
+          "name": "AutoCorrect",
+          "default": "false"
+        },
+        {
+          "name": "Severity",
+          "default": "warning"
+        }
+      ]
     },
     {
       "patternId": "Layout_EndOfLine",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "EnforcedStyle": "native",
-        "SupportedStyles": [
-          "native",
-          "lf",
-          "crlf"
-        ]
-      }
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "native"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": [
+            "native",
+            "lf",
+            "crlf"
+          ]
+        }
+      ]
     },
     {
       "patternId": "Layout_ExtraSpacing",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "AllowForAlignment": "true",
-        "ForceEqualSignAlignment": "false"
-      }
+      "parameters": [
+        {
+          "name": "AllowForAlignment",
+          "default": "true"
+        },
+        {
+          "name": "ForceEqualSignAlignment",
+          "default": "false"
+        }
+      ]
     },
     {
       "patternId": "Layout_FirstArrayElementLineBreak",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Layout_FirstHashElementLineBreak",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Layout_FirstMethodArgumentLineBreak",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Layout_FirstMethodParameterLineBreak",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Layout_FirstParameterIndentation",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "EnforcedStyle": "special_for_inner_method_call_in_parentheses",
-        "SupportedStyles": [
-          "consistent",
-          "special_for_inner_method_call",
-          "special_for_inner_method_call_in_parentheses"
-        ],
-        "IndentationWidth": ""
-      }
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "special_for_inner_method_call_in_parentheses"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": [
+            "consistent",
+            "special_for_inner_method_call",
+            "special_for_inner_method_call_in_parentheses"
+          ]
+        },
+        {
+          "name": "IndentationWidth",
+          "default": ""
+        }
+      ]
     },
     {
       "patternId": "Layout_IndentArray",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "EnforcedStyle": "special_inside_parentheses",
-        "SupportedStyles": [
-          "special_inside_parentheses",
-          "consistent",
-          "align_brackets"
-        ],
-        "IndentationWidth": ""
-      }
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "special_inside_parentheses"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": [
+            "special_inside_parentheses",
+            "consistent",
+            "align_brackets"
+          ]
+        },
+        {
+          "name": "IndentationWidth",
+          "default": ""
+        }
+      ]
     },
     {
       "patternId": "Layout_IndentAssignment",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "IndentationWidth": ""
-      }
+      "parameters": [
+        {
+          "name": "IndentationWidth",
+          "default": ""
+        }
+      ]
     },
     {
       "patternId": "Layout_IndentationConsistency",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "EnforcedStyle": "normal",
-        "SupportedStyles": [
-          "normal",
-          "rails"
-        ]
-      }
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "normal"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": [
+            "normal",
+            "rails"
+          ]
+        }
+      ]
     },
     {
       "patternId": "Layout_IndentationWidth",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "Width": "2",
-        "IgnoredPatterns": [
+      "parameters": [
+        {
+          "name": "Width",
+          "default": "2"
+        },
+        {
+          "name": "IgnoredPatterns",
+          "default": [
 
-        ]
-      }
+          ]
+        }
+      ]
     },
     {
       "patternId": "Layout_IndentHash",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "EnforcedStyle": "special_inside_parentheses",
-        "SupportedStyles": [
-          "special_inside_parentheses",
-          "consistent",
-          "align_braces"
-        ],
-        "IndentationWidth": ""
-      }
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "special_inside_parentheses"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": [
+            "special_inside_parentheses",
+            "consistent",
+            "align_braces"
+          ]
+        },
+        {
+          "name": "IndentationWidth",
+          "default": ""
+        }
+      ]
     },
     {
       "patternId": "Layout_IndentHeredoc",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "EnforcedStyle": "auto_detection",
-        "SupportedStyles": [
-          "auto_detection",
-          "squiggly",
-          "active_support",
-          "powerpack",
-          "unindent"
-        ]
-      }
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "auto_detection"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": [
+            "auto_detection",
+            "squiggly",
+            "active_support",
+            "powerpack",
+            "unindent"
+          ]
+        }
+      ]
     },
     {
       "patternId": "Layout_InitialIndentation",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Layout_LeadingCommentSpace",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Layout_MultilineArrayBraceLayout",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "EnforcedStyle": "symmetrical",
-        "SupportedStyles": [
-          "symmetrical",
-          "new_line",
-          "same_line"
-        ]
-      }
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "symmetrical"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": [
+            "symmetrical",
+            "new_line",
+            "same_line"
+          ]
+        }
+      ]
     },
     {
       "patternId": "Layout_MultilineAssignmentLayout",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "SupportedTypes": [
-          "block",
-          "case",
-          "class",
-          "if",
-          "kwbegin",
-          "module"
-        ],
-        "EnforcedStyle": "new_line",
-        "SupportedStyles": [
-          "same_line",
-          "new_line"
-        ]
-      }
+      "parameters": [
+        {
+          "name": "SupportedTypes",
+          "default": [
+            "block",
+            "case",
+            "class",
+            "if",
+            "kwbegin",
+            "module"
+          ]
+        },
+        {
+          "name": "EnforcedStyle",
+          "default": "new_line"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": [
+            "same_line",
+            "new_line"
+          ]
+        }
+      ]
     },
     {
       "patternId": "Layout_MultilineBlockLayout",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Layout_MultilineHashBraceLayout",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "EnforcedStyle": "symmetrical",
-        "SupportedStyles": [
-          "symmetrical",
-          "new_line",
-          "same_line"
-        ]
-      }
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "symmetrical"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": [
+            "symmetrical",
+            "new_line",
+            "same_line"
+          ]
+        }
+      ]
     },
     {
       "patternId": "Layout_MultilineMethodCallBraceLayout",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "EnforcedStyle": "symmetrical",
-        "SupportedStyles": [
-          "symmetrical",
-          "new_line",
-          "same_line"
-        ]
-      }
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "symmetrical"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": [
+            "symmetrical",
+            "new_line",
+            "same_line"
+          ]
+        }
+      ]
     },
     {
       "patternId": "Layout_MultilineMethodCallIndentation",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "EnforcedStyle": "aligned",
-        "SupportedStyles": [
-          "aligned",
-          "indented",
-          "indented_relative_to_receiver"
-        ],
-        "IndentationWidth": ""
-      }
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "aligned"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": [
+            "aligned",
+            "indented",
+            "indented_relative_to_receiver"
+          ]
+        },
+        {
+          "name": "IndentationWidth",
+          "default": ""
+        }
+      ]
     },
     {
       "patternId": "Layout_MultilineMethodDefinitionBraceLayout",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "EnforcedStyle": "symmetrical",
-        "SupportedStyles": [
-          "symmetrical",
-          "new_line",
-          "same_line"
-        ]
-      }
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "symmetrical"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": [
+            "symmetrical",
+            "new_line",
+            "same_line"
+          ]
+        }
+      ]
     },
     {
       "patternId": "Layout_MultilineOperationIndentation",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "EnforcedStyle": "aligned",
-        "SupportedStyles": [
-          "aligned",
-          "indented"
-        ],
-        "IndentationWidth": ""
-      }
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "aligned"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": [
+            "aligned",
+            "indented"
+          ]
+        },
+        {
+          "name": "IndentationWidth",
+          "default": ""
+        }
+      ]
     },
     {
       "patternId": "Layout_RescueEnsureAlignment",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Layout_SpaceAfterColon",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Layout_SpaceAfterComma",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Layout_SpaceAfterMethodName",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Layout_SpaceAfterNot",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Layout_SpaceAfterSemicolon",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Layout_SpaceAroundBlockParameters",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "EnforcedStyleInsidePipes": "no_space",
-        "SupportedStylesInsidePipes": [
-          "space",
-          "no_space"
-        ]
-      }
+      "parameters": [
+        {
+          "name": "EnforcedStyleInsidePipes",
+          "default": "no_space"
+        },
+        {
+          "name": "SupportedStylesInsidePipes",
+          "default": [
+            "space",
+            "no_space"
+          ]
+        }
+      ]
     },
     {
       "patternId": "Layout_SpaceAroundEqualsInParameterDefault",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "EnforcedStyle": "space",
-        "SupportedStyles": [
-          "space",
-          "no_space"
-        ]
-      }
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "space"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": [
+            "space",
+            "no_space"
+          ]
+        }
+      ]
     },
     {
       "patternId": "Layout_SpaceAroundKeyword",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Layout_SpaceAroundOperators",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "AllowForAlignment": "true"
-      }
+      "parameters": [
+        {
+          "name": "AllowForAlignment",
+          "default": "true"
+        }
+      ]
     },
     {
       "patternId": "Layout_SpaceBeforeBlockBraces",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "EnforcedStyle": "space",
-        "SupportedStyles": [
-          "space",
-          "no_space"
-        ],
-        "EnforcedStyleForEmptyBraces": "space",
-        "SupportedStylesForEmptyBraces": [
-          "space",
-          "no_space"
-        ]
-      }
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "space"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": [
+            "space",
+            "no_space"
+          ]
+        },
+        {
+          "name": "EnforcedStyleForEmptyBraces",
+          "default": "space"
+        },
+        {
+          "name": "SupportedStylesForEmptyBraces",
+          "default": [
+            "space",
+            "no_space"
+          ]
+        }
+      ]
     },
     {
       "patternId": "Layout_SpaceBeforeComma",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Layout_SpaceBeforeComment",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Layout_SpaceBeforeFirstArg",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "AllowForAlignment": "true"
-      }
+      "parameters": [
+        {
+          "name": "AllowForAlignment",
+          "default": "true"
+        }
+      ]
     },
     {
       "patternId": "Layout_SpaceBeforeSemicolon",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Layout_SpaceInLambdaLiteral",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "EnforcedStyle": "require_no_space",
-        "SupportedStyles": [
-          "require_no_space",
-          "require_space"
-        ]
-      }
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "require_no_space"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": [
+            "require_no_space",
+            "require_space"
+          ]
+        }
+      ]
     },
     {
       "patternId": "Layout_SpaceInsideArrayPercentLiteral",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Layout_SpaceInsideArrayLiteralBrackets",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "EnforcedStyle": "no_space",
-        "SupportedStyles": [
-          "space",
-          "no_space",
-          "compact"
-        ],
-        "EnforcedStyleForEmptyBrackets": "no_space",
-        "SupportedStylesForEmptyBrackets": [
-          "space",
-          "no_space"
-        ]
-      }
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "no_space"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": [
+            "space",
+            "no_space",
+            "compact"
+          ]
+        },
+        {
+          "name": "EnforcedStyleForEmptyBrackets",
+          "default": "no_space"
+        },
+        {
+          "name": "SupportedStylesForEmptyBrackets",
+          "default": [
+            "space",
+            "no_space"
+          ]
+        }
+      ]
     },
     {
       "patternId": "Layout_SpaceInsideBlockBraces",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "EnforcedStyle": "space",
-        "SupportedStyles": [
-          "space",
-          "no_space"
-        ],
-        "EnforcedStyleForEmptyBraces": "no_space",
-        "SupportedStylesForEmptyBraces": [
-          "space",
-          "no_space"
-        ],
-        "SpaceBeforeBlockParameters": "true"
-      }
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "space"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": [
+            "space",
+            "no_space"
+          ]
+        },
+        {
+          "name": "EnforcedStyleForEmptyBraces",
+          "default": "no_space"
+        },
+        {
+          "name": "SupportedStylesForEmptyBraces",
+          "default": [
+            "space",
+            "no_space"
+          ]
+        },
+        {
+          "name": "SpaceBeforeBlockParameters",
+          "default": "true"
+        }
+      ]
     },
     {
       "patternId": "Layout_SpaceInsideHashLiteralBraces",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "EnforcedStyle": "space",
-        "SupportedStyles": [
-          "space",
-          "no_space",
-          "compact"
-        ],
-        "EnforcedStyleForEmptyBraces": "no_space",
-        "SupportedStylesForEmptyBraces": [
-          "space",
-          "no_space"
-        ]
-      }
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "space"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": [
+            "space",
+            "no_space",
+            "compact"
+          ]
+        },
+        {
+          "name": "EnforcedStyleForEmptyBraces",
+          "default": "no_space"
+        },
+        {
+          "name": "SupportedStylesForEmptyBraces",
+          "default": [
+            "space",
+            "no_space"
+          ]
+        }
+      ]
     },
     {
       "patternId": "Layout_SpaceInsideParens",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "EnforcedStyle": "no_space",
-        "SupportedStyles": [
-          "space",
-          "no_space"
-        ]
-      }
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "no_space"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": [
+            "space",
+            "no_space"
+          ]
+        }
+      ]
     },
     {
       "patternId": "Layout_SpaceInsidePercentLiteralDelimiters",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Layout_SpaceInsideRangeLiteral",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Layout_SpaceInsideReferenceBrackets",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "EnforcedStyle": "no_space",
-        "SupportedStyles": [
-          "space",
-          "no_space"
-        ],
-        "EnforcedStyleForEmptyBrackets": "no_space",
-        "SupportedStylesForEmptyBrackets": [
-          "space",
-          "no_space"
-        ]
-      }
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "no_space"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": [
+            "space",
+            "no_space"
+          ]
+        },
+        {
+          "name": "EnforcedStyleForEmptyBrackets",
+          "default": "no_space"
+        },
+        {
+          "name": "SupportedStylesForEmptyBrackets",
+          "default": [
+            "space",
+            "no_space"
+          ]
+        }
+      ]
     },
     {
       "patternId": "Layout_SpaceInsideStringInterpolation",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "EnforcedStyle": "no_space",
-        "SupportedStyles": [
-          "space",
-          "no_space"
-        ]
-      }
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "no_space"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": [
+            "space",
+            "no_space"
+          ]
+        }
+      ]
     },
     {
       "patternId": "Layout_Tab",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "IndentationWidth": ""
-      }
+      "parameters": [
+        {
+          "name": "IndentationWidth",
+          "default": ""
+        }
+      ]
     },
     {
       "patternId": "Layout_TrailingBlankLines",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "EnforcedStyle": "final_newline",
-        "SupportedStyles": [
-          "final_newline",
-          "final_blank_line"
-        ]
-      }
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "final_newline"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": [
+            "final_newline",
+            "final_blank_line"
+          ]
+        }
+      ]
     },
     {
       "patternId": "Layout_TrailingWhitespace",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "AllowInHeredoc": "false"
-      }
+      "parameters": [
+        {
+          "name": "AllowInHeredoc",
+          "default": "false"
+        }
+      ]
     },
     {
       "patternId": "Lint_AmbiguousBlockAssociation",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Lint_AmbiguousOperator",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Lint_AmbiguousRegexpLiteral",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Lint_AssignmentInCondition",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-        "AllowSafeAssignment": "true"
-      }
+      "parameters": [
+        {
+          "name": "AllowSafeAssignment",
+          "default": "true"
+        }
+      ]
     },
     {
       "patternId": "Lint_BigDecimalNew",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Lint_BooleanSymbol",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Lint_CircularArgumentReference",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Lint_Debugger",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Lint_DeprecatedClassMethods",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Lint_DuplicateCaseCondition",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Lint_DuplicateMethods",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Lint_DuplicatedKey",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Lint_EachWithObjectArgument",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Lint_ElseLayout",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Lint_EmptyEnsure",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-        "AutoCorrect": "false"
-      }
+      "parameters": [
+        {
+          "name": "AutoCorrect",
+          "default": "false"
+        }
+      ]
     },
     {
       "patternId": "Lint_EmptyExpression",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Lint_EmptyInterpolation",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Lint_EmptyWhen",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Lint_EndInMethod",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Lint_EnsureReturn",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Lint_FloatOutOfRange",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Lint_FormatParameterMismatch",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Lint_HandleExceptions",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Lint_ImplicitStringConcatenation",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Lint_InheritException",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-        "EnforcedStyle": "runtime_error",
-        "SupportedStyles": [
-          "runtime_error",
-          "standard_error"
-        ]
-      }
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "runtime_error"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": [
+            "runtime_error",
+            "standard_error"
+          ]
+        }
+      ]
     },
     {
       "patternId": "Lint_IneffectiveAccessModifier",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Lint_InterpolationCheck",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Lint_LiteralAsCondition",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Lint_LiteralInInterpolation",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Lint_Loop",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Lint_MissingCopEnableDirective",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-        "MaximumRangeSize": "Infinity"
-      }
+      "parameters": [
+        {
+          "name": "MaximumRangeSize",
+          "default": "Infinity"
+        }
+      ]
     },
     {
       "patternId": "Lint_MultipleCompare",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Lint_NestedMethodDefinition",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Lint_NestedPercentLiteral",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Lint_NextWithoutAccumulator",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Lint_NonLocalExitFromIterator",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Lint_NumberConversion",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Lint_OrderedMagicComments",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Lint_ParenthesesAsGroupedExpression",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Lint_PercentStringArray",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Lint_PercentSymbolArray",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Lint_RandOne",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Lint_RedundantWithIndex",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Lint_RedundantWithObject",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Lint_RegexpAsCondition",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Lint_RequireParentheses",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Lint_RescueException",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Lint_RescueType",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Lint_ReturnInVoidContext",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Lint_SafeNavigationConsistency",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Lint_SafeNavigationChain",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-        "Whitelist": [
-          "present?",
-          "blank?",
-          "presence",
-          "try"
-        ]
-      }
+      "parameters": [
+        {
+          "name": "Whitelist",
+          "default": [
+            "present?",
+            "blank?",
+            "presence",
+            "try"
+          ]
+        }
+      ]
     },
     {
       "patternId": "Lint_ScriptPermission",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Lint_ShadowedArgument",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-        "IgnoreImplicitReferences": "false"
-      }
+      "parameters": [
+        {
+          "name": "IgnoreImplicitReferences",
+          "default": "false"
+        }
+      ]
     },
     {
       "patternId": "Lint_ShadowedException",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Lint_ShadowingOuterLocalVariable",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Lint_StringConversionInInterpolation",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Lint_Syntax",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Lint_UnderscorePrefixedVariableName",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Lint_UnifiedInteger",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Lint_UnneededCopDisableDirective",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Lint_UnneededCopEnableDirective",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Lint_UnneededRequireStatement",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Lint_UnneededSplatExpansion",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Lint_UnreachableCode",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Lint_UnusedBlockArgument",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-        "IgnoreEmptyBlocks": "true",
-        "AllowUnusedKeywordArguments": "false"
-      }
+      "parameters": [
+        {
+          "name": "IgnoreEmptyBlocks",
+          "default": "true"
+        },
+        {
+          "name": "AllowUnusedKeywordArguments",
+          "default": "false"
+        }
+      ]
     },
     {
       "patternId": "Lint_UnusedMethodArgument",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-        "AllowUnusedKeywordArguments": "false",
-        "IgnoreEmptyMethods": "true"
-      }
+      "parameters": [
+        {
+          "name": "AllowUnusedKeywordArguments",
+          "default": "false"
+        },
+        {
+          "name": "IgnoreEmptyMethods",
+          "default": "true"
+        }
+      ]
     },
     {
       "patternId": "Lint_UriEscapeUnescape",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Lint_UriRegexp",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Lint_UselessAccessModifier",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-        "ContextCreatingMethods": [
+      "parameters": [
+        {
+          "name": "ContextCreatingMethods",
+          "default": [
 
-        ],
-        "MethodCreatingMethods": [
+          ]
+        },
+        {
+          "name": "MethodCreatingMethods",
+          "default": [
 
-        ]
-      }
+          ]
+        }
+      ]
     },
     {
       "patternId": "Lint_UselessAssignment",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Lint_UselessComparison",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Lint_UselessElseWithoutRescue",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Lint_UselessSetterCall",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Lint_Void",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-        "CheckForMethodsWithNoSideEffects": "false"
-      }
+      "parameters": [
+        {
+          "name": "CheckForMethodsWithNoSideEffects",
+          "default": "false"
+        }
+      ]
     },
     {
       "patternId": "Metrics_CyclomaticComplexity",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-        "Max": "6"
-      }
+      "parameters": [
+        {
+          "name": "Max",
+          "default": "6"
+        }
+      ]
     },
     {
       "patternId": "Metrics_AbcSize",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-        "Max": "15"
-      }
+      "parameters": [
+        {
+          "name": "Max",
+          "default": "15"
+        }
+      ]
     },
     {
       "patternId": "Metrics_BlockLength",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-        "CountComments": "false",
-        "Max": "25",
-        "ExcludedMethods": [
+      "parameters": [
+        {
+          "name": "CountComments",
+          "default": "false"
+        },
+        {
+          "name": "Max",
+          "default": "25"
+        },
+        {
+          "name": "ExcludedMethods",
+          "default": [
 
-        ]
-      }
+          ]
+        }
+      ]
     },
     {
       "patternId": "Metrics_BlockNesting",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-        "CountBlocks": "false",
-        "Max": "3"
-      }
+      "parameters": [
+        {
+          "name": "CountBlocks",
+          "default": "false"
+        },
+        {
+          "name": "Max",
+          "default": "3"
+        }
+      ]
     },
     {
       "patternId": "Metrics_ClassLength",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-        "CountComments": "false",
-        "Max": "100"
-      }
+      "parameters": [
+        {
+          "name": "CountComments",
+          "default": "false"
+        },
+        {
+          "name": "Max",
+          "default": "100"
+        }
+      ]
     },
     {
       "patternId": "Metrics_LineLength",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-        "Max": "80",
-        "AllowHeredoc": "true",
-        "AllowURI": "true",
-        "URISchemes": [
-          "http",
-          "https"
-        ],
-        "IgnoreCopDirectives": "false",
-        "IgnoredPatterns": [
+      "parameters": [
+        {
+          "name": "Max",
+          "default": "80"
+        },
+        {
+          "name": "AllowHeredoc",
+          "default": "true"
+        },
+        {
+          "name": "AllowURI",
+          "default": "true"
+        },
+        {
+          "name": "URISchemes",
+          "default": [
+            "http",
+            "https"
+          ]
+        },
+        {
+          "name": "IgnoreCopDirectives",
+          "default": "false"
+        },
+        {
+          "name": "IgnoredPatterns",
+          "default": [
 
-        ]
-      }
+          ]
+        }
+      ]
     },
     {
       "patternId": "Metrics_MethodLength",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-        "CountComments": "false",
-        "Max": "10"
-      }
+      "parameters": [
+        {
+          "name": "CountComments",
+          "default": "false"
+        },
+        {
+          "name": "Max",
+          "default": "10"
+        }
+      ]
     },
     {
       "patternId": "Metrics_ModuleLength",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-        "CountComments": "false",
-        "Max": "100"
-      }
+      "parameters": [
+        {
+          "name": "CountComments",
+          "default": "false"
+        },
+        {
+          "name": "Max",
+          "default": "100"
+        }
+      ]
     },
     {
       "patternId": "Metrics_ParameterLists",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-        "Max": "5",
-        "CountKeywordArgs": "true"
-      }
+      "parameters": [
+        {
+          "name": "Max",
+          "default": "5"
+        },
+        {
+          "name": "CountKeywordArgs",
+          "default": "true"
+        }
+      ]
     },
     {
       "patternId": "Metrics_PerceivedComplexity",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-        "Max": "7"
-      }
+      "parameters": [
+        {
+          "name": "Max",
+          "default": "7"
+        }
+      ]
     },
     {
       "patternId": "Naming_AccessorMethodName",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Naming_AsciiIdentifiers",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Naming_ClassAndModuleCamelCase",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Naming_ConstantName",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Naming_FileName",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "Exclude": [
+      "parameters": [
+        {
+          "name": "Exclude",
+          "default": [
 
-        ],
-        "ExpectMatchingDefinition": "false",
-        "Regex": "",
-        "IgnoreExecutableScripts": "true",
-        "AllowedAcronyms": [
-          "CLI",
-          "DSL",
-          "ACL",
-          "API",
-          "ASCII",
-          "CPU",
-          "CSS",
-          "DNS",
-          "EOF",
-          "GUID",
-          "HTML",
-          "HTTP",
-          "HTTPS",
-          "ID",
-          "IP",
-          "JSON",
-          "LHS",
-          "QPS",
-          "RAM",
-          "RHS",
-          "RPC",
-          "SLA",
-          "SMTP",
-          "SQL",
-          "SSH",
-          "TCP",
-          "TLS",
-          "TTL",
-          "UDP",
-          "UI",
-          "UID",
-          "UUID",
-          "URI",
-          "URL",
-          "UTF8",
-          "VM",
-          "XML",
-          "XMPP",
-          "XSRF",
-          "XSS"
-        ]
-      }
+          ]
+        },
+        {
+          "name": "ExpectMatchingDefinition",
+          "default": "false"
+        },
+        {
+          "name": "Regex",
+          "default": ""
+        },
+        {
+          "name": "IgnoreExecutableScripts",
+          "default": "true"
+        },
+        {
+          "name": "AllowedAcronyms",
+          "default": [
+            "CLI",
+            "DSL",
+            "ACL",
+            "API",
+            "ASCII",
+            "CPU",
+            "CSS",
+            "DNS",
+            "EOF",
+            "GUID",
+            "HTML",
+            "HTTP",
+            "HTTPS",
+            "ID",
+            "IP",
+            "JSON",
+            "LHS",
+            "QPS",
+            "RAM",
+            "RHS",
+            "RPC",
+            "SLA",
+            "SMTP",
+            "SQL",
+            "SSH",
+            "TCP",
+            "TLS",
+            "TTL",
+            "UDP",
+            "UI",
+            "UID",
+            "UUID",
+            "URI",
+            "URL",
+            "UTF8",
+            "VM",
+            "XML",
+            "XMPP",
+            "XSRF",
+            "XSS"
+          ]
+        }
+      ]
     },
     {
       "patternId": "Naming_HeredocDelimiterCase",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "EnforcedStyle": "uppercase",
-        "SupportedStyles": [
-          "lowercase",
-          "uppercase"
-        ]
-      }
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "uppercase"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": [
+            "lowercase",
+            "uppercase"
+          ]
+        }
+      ]
     },
     {
       "patternId": "Naming_HeredocDelimiterNaming",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "Blacklist": [
-          "(?-mix:(^|\\s)(EO[A-Z]{1}|END)(\\s|$))"
-        ]
-      }
+      "parameters": [
+        {
+          "name": "Blacklist",
+          "default": [
+            "(?-mix:(^|\\s)(EO[A-Z]{1}|END)(\\s|$))"
+          ]
+        }
+      ]
     },
     {
       "patternId": "Naming_MemoizedInstanceVariableName",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Naming_MethodName",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "EnforcedStyle": "snake_case",
-        "SupportedStyles": [
-          "snake_case",
-          "camelCase"
-        ]
-      }
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "snake_case"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": [
+            "snake_case",
+            "camelCase"
+          ]
+        }
+      ]
     },
     {
       "patternId": "Naming_BinaryOperatorParameterName",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Naming_PredicateName",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "NamePrefix": [
-          "is_",
-          "has_",
-          "have_"
-        ],
-        "NamePrefixBlacklist": [
-          "is_",
-          "has_",
-          "have_"
-        ],
-        "NameWhitelist": [
-          "is_a?"
-        ],
-        "MethodDefinitionMacros": [
-          "define_method",
-          "define_singleton_method"
-        ],
-        "Exclude": [
-          "/home/miguelsavignano/Developer/Projects/rubocop/spec/**/*"
-        ]
-      }
+      "parameters": [
+        {
+          "name": "NamePrefix",
+          "default": [
+            "is_",
+            "has_",
+            "have_"
+          ]
+        },
+        {
+          "name": "NamePrefixBlacklist",
+          "default": [
+            "is_",
+            "has_",
+            "have_"
+          ]
+        },
+        {
+          "name": "NameWhitelist",
+          "default": [
+            "is_a?"
+          ]
+        },
+        {
+          "name": "MethodDefinitionMacros",
+          "default": [
+            "define_method",
+            "define_singleton_method"
+          ]
+        },
+        {
+          "name": "Exclude",
+          "default": [
+            "/home/miguelsavignano/Developer/Projects/rubocop/spec/**/*"
+          ]
+        }
+      ]
     },
     {
       "patternId": "Naming_UncommunicativeBlockParamName",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "MinNameLength": "1",
-        "AllowNamesEndingInNumbers": "true",
-        "AllowedNames": [
+      "parameters": [
+        {
+          "name": "MinNameLength",
+          "default": "1"
+        },
+        {
+          "name": "AllowNamesEndingInNumbers",
+          "default": "true"
+        },
+        {
+          "name": "AllowedNames",
+          "default": [
 
-        ],
-        "ForbiddenNames": [
+          ]
+        },
+        {
+          "name": "ForbiddenNames",
+          "default": [
 
-        ]
-      }
+          ]
+        }
+      ]
     },
     {
       "patternId": "Naming_UncommunicativeMethodParamName",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "MinNameLength": "3",
-        "AllowNamesEndingInNumbers": "true",
-        "AllowedNames": [
-          "io",
-          "id",
-          "to",
-          "by",
-          "on",
-          "in",
-          "at"
-        ],
-        "ForbiddenNames": [
+      "parameters": [
+        {
+          "name": "MinNameLength",
+          "default": "3"
+        },
+        {
+          "name": "AllowNamesEndingInNumbers",
+          "default": "true"
+        },
+        {
+          "name": "AllowedNames",
+          "default": [
+            "io",
+            "id",
+            "to",
+            "by",
+            "on",
+            "in",
+            "at"
+          ]
+        },
+        {
+          "name": "ForbiddenNames",
+          "default": [
 
-        ]
-      }
+          ]
+        }
+      ]
     },
     {
       "patternId": "Naming_VariableName",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "EnforcedStyle": "snake_case",
-        "SupportedStyles": [
-          "snake_case",
-          "camelCase"
-        ]
-      }
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "snake_case"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": [
+            "snake_case",
+            "camelCase"
+          ]
+        }
+      ]
     },
     {
       "patternId": "Naming_VariableNumber",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "EnforcedStyle": "normalcase",
-        "SupportedStyles": [
-          "snake_case",
-          "normalcase",
-          "non_integer"
-        ]
-      }
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "normalcase"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": [
+            "snake_case",
+            "normalcase",
+            "non_integer"
+          ]
+        }
+      ]
     },
     {
       "patternId": "Performance_Caller",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Performance_CaseWhenSplat",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Performance_Casecmp",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Performance_Count",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-        "SafeMode": "true"
-      }
+      "parameters": [
+        {
+          "name": "SafeMode",
+          "default": "true"
+        }
+      ]
     },
     {
       "patternId": "Performance_Detect",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-        "SafeMode": "true"
-      }
+      "parameters": [
+        {
+          "name": "SafeMode",
+          "default": "true"
+        }
+      ]
     },
     {
       "patternId": "Performance_DoubleStartEndWith",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-        "IncludeActiveSupportAliases": "false"
-      }
+      "parameters": [
+        {
+          "name": "IncludeActiveSupportAliases",
+          "default": "false"
+        }
+      ]
     },
     {
       "patternId": "Performance_EndWith",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-        "AutoCorrect": "false"
-      }
+      "parameters": [
+        {
+          "name": "AutoCorrect",
+          "default": "false"
+        }
+      ]
     },
     {
       "patternId": "Performance_FixedSize",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Performance_FlatMap",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-        "EnabledForFlattenWithoutParams": "false"
-      }
+      "parameters": [
+        {
+          "name": "EnabledForFlattenWithoutParams",
+          "default": "false"
+        }
+      ]
     },
     {
       "patternId": "Performance_LstripRstrip",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Performance_RangeInclude",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Performance_RedundantBlockCall",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Performance_RedundantMatch",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Performance_RedundantMerge",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-        "MaxKeyValuePairs": "2"
-      }
+      "parameters": [
+        {
+          "name": "MaxKeyValuePairs",
+          "default": "2"
+        }
+      ]
     },
     {
       "patternId": "Performance_RedundantSortBy",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Performance_RegexpMatch",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Performance_ReverseEach",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Performance_Sample",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Performance_Size",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Performance_CompareWithBlock",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Performance_StartWith",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-        "AutoCorrect": "false"
-      }
+      "parameters": [
+        {
+          "name": "AutoCorrect",
+          "default": "false"
+        }
+      ]
     },
     {
       "patternId": "Performance_StringReplacement",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Performance_TimesMap",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-        "AutoCorrect": "false"
-      }
+      "parameters": [
+        {
+          "name": "AutoCorrect",
+          "default": "false"
+        }
+      ]
     },
     {
       "patternId": "Performance_UnfreezeString",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Performance_UnneededSort",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Performance_UriDefaultParser",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Style_Alias",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "EnforcedStyle": "prefer_alias",
-        "SupportedStyles": [
-          "prefer_alias",
-          "prefer_alias_method"
-        ]
-      }
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "prefer_alias"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": [
+            "prefer_alias",
+            "prefer_alias_method"
+          ]
+        }
+      ]
     },
     {
       "patternId": "Style_AndOr",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "EnforcedStyle": "always",
-        "SupportedStyles": [
-          "always",
-          "conditionals"
-        ]
-      }
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "always"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": [
+            "always",
+            "conditionals"
+          ]
+        }
+      ]
     },
     {
       "patternId": "Style_ArrayJoin",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Style_AsciiComments",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "AllowedChars": [
+      "parameters": [
+        {
+          "name": "AllowedChars",
+          "default": [
 
-        ]
-      }
+          ]
+        }
+      ]
     },
     {
       "patternId": "Style_Attr",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Style_AutoResourceCleanup",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Style_BarePercentLiterals",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "EnforcedStyle": "bare_percent",
-        "SupportedStyles": [
-          "percent_q",
-          "bare_percent"
-        ]
-      }
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "bare_percent"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": [
+            "percent_q",
+            "bare_percent"
+          ]
+        }
+      ]
     },
     {
       "patternId": "Style_BeginBlock",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Style_BlockComments",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Style_BlockDelimiters",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "EnforcedStyle": "line_count_based",
-        "SupportedStyles": [
-          "line_count_based",
-          "semantic",
-          "braces_for_chaining"
-        ],
-        "ProceduralMethods": [
-          "benchmark",
-          "bm",
-          "bmbm",
-          "create",
-          "each_with_object",
-          "measure",
-          "new",
-          "realtime",
-          "tap",
-          "with_object"
-        ],
-        "FunctionalMethods": [
-          "let",
-          "let!",
-          "subject",
-          "watch"
-        ],
-        "IgnoredMethods": [
-          "lambda",
-          "proc",
-          "it"
-        ]
-      }
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "line_count_based"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": [
+            "line_count_based",
+            "semantic",
+            "braces_for_chaining"
+          ]
+        },
+        {
+          "name": "ProceduralMethods",
+          "default": [
+            "benchmark",
+            "bm",
+            "bmbm",
+            "create",
+            "each_with_object",
+            "measure",
+            "new",
+            "realtime",
+            "tap",
+            "with_object"
+          ]
+        },
+        {
+          "name": "FunctionalMethods",
+          "default": [
+            "let",
+            "let!",
+            "subject",
+            "watch"
+          ]
+        },
+        {
+          "name": "IgnoredMethods",
+          "default": [
+            "lambda",
+            "proc",
+            "it"
+          ]
+        }
+      ]
     },
     {
       "patternId": "Style_BracesAroundHashParameters",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "EnforcedStyle": "no_braces",
-        "SupportedStyles": [
-          "braces",
-          "no_braces",
-          "context_dependent"
-        ]
-      }
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "no_braces"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": [
+            "braces",
+            "no_braces",
+            "context_dependent"
+          ]
+        }
+      ]
     },
     {
       "patternId": "Style_CaseEquality",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Style_CharacterLiteral",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Style_ClassAndModuleChildren",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "AutoCorrect": "false",
-        "EnforcedStyle": "nested",
-        "SupportedStyles": [
-          "nested",
-          "compact"
-        ]
-      }
+      "parameters": [
+        {
+          "name": "AutoCorrect",
+          "default": "false"
+        },
+        {
+          "name": "EnforcedStyle",
+          "default": "nested"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": [
+            "nested",
+            "compact"
+          ]
+        }
+      ]
     },
     {
       "patternId": "Style_ClassCheck",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "EnforcedStyle": "is_a?",
-        "SupportedStyles": [
-          "is_a?",
-          "kind_of?"
-        ]
-      }
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "is_a?"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": [
+            "is_a?",
+            "kind_of?"
+          ]
+        }
+      ]
     },
     {
       "patternId": "Style_ClassMethods",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Style_ClassVars",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Style_CollectionMethods",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "PreferredMethods": "{\"collect\"=>\"map\", \"collect!\"=>\"map!\", \"inject\"=>\"reduce\", \"detect\"=>\"find\", \"find_all\"=>\"select\"}"
-      }
+      "parameters": [
+        {
+          "name": "PreferredMethods",
+          "default": "{\"collect\"=>\"map\", \"collect!\"=>\"map!\", \"inject\"=>\"reduce\", \"detect\"=>\"find\", \"find_all\"=>\"select\"}"
+        }
+      ]
     },
     {
       "patternId": "Style_ColonMethodCall",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Style_ColonMethodDefinition",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Style_CommandLiteral",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "EnforcedStyle": "backticks",
-        "SupportedStyles": [
-          "backticks",
-          "percent_x",
-          "mixed"
-        ],
-        "AllowInnerBackticks": "false"
-      }
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "backticks"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": [
+            "backticks",
+            "percent_x",
+            "mixed"
+          ]
+        },
+        {
+          "name": "AllowInnerBackticks",
+          "default": "false"
+        }
+      ]
     },
     {
       "patternId": "Style_CommentAnnotation",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "Keywords": [
-          "TODO",
-          "FIXME",
-          "OPTIMIZE",
-          "HACK",
-          "REVIEW"
-        ]
-      }
+      "parameters": [
+        {
+          "name": "Keywords",
+          "default": [
+            "TODO",
+            "FIXME",
+            "OPTIMIZE",
+            "HACK",
+            "REVIEW"
+          ]
+        }
+      ]
     },
     {
       "patternId": "Style_CommentedKeyword",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Style_ConditionalAssignment",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "EnforcedStyle": "assign_to_condition",
-        "SupportedStyles": [
-          "assign_to_condition",
-          "assign_inside_condition"
-        ],
-        "SingleLineConditionsOnly": "true",
-        "IncludeTernaryExpressions": "true"
-      }
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "assign_to_condition"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": [
+            "assign_to_condition",
+            "assign_inside_condition"
+          ]
+        },
+        {
+          "name": "SingleLineConditionsOnly",
+          "default": "true"
+        },
+        {
+          "name": "IncludeTernaryExpressions",
+          "default": "true"
+        }
+      ]
     },
     {
       "patternId": "Style_Copyright",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "Notice": "^Copyright (\\(c\\) )?2[0-9]{3} .+",
-        "AutocorrectNotice": ""
-      }
+      "parameters": [
+        {
+          "name": "Notice",
+          "default": "^Copyright (\\(c\\) )?2[0-9]{3} .+"
+        },
+        {
+          "name": "AutocorrectNotice",
+          "default": ""
+        }
+      ]
     },
     {
       "patternId": "Style_DateTime",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Style_DefWithParentheses",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Style_Dir",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Style_DocumentationMethod",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "Exclude": [
-          "/home/miguelsavignano/Developer/Projects/rubocop/spec/**/*",
-          "/home/miguelsavignano/Developer/Projects/rubocop/test/**/*"
-        ],
-        "RequireForNonPublicMethods": "false"
-      }
+      "parameters": [
+        {
+          "name": "Exclude",
+          "default": [
+            "/home/miguelsavignano/Developer/Projects/rubocop/spec/**/*",
+            "/home/miguelsavignano/Developer/Projects/rubocop/test/**/*"
+          ]
+        },
+        {
+          "name": "RequireForNonPublicMethods",
+          "default": "false"
+        }
+      ]
     },
     {
       "patternId": "Style_Documentation",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "Exclude": [
-          "/home/miguelsavignano/Developer/Projects/rubocop/spec/**/*",
-          "/home/miguelsavignano/Developer/Projects/rubocop/test/**/*"
-        ]
-      }
+      "parameters": [
+        {
+          "name": "Exclude",
+          "default": [
+            "/home/miguelsavignano/Developer/Projects/rubocop/spec/**/*",
+            "/home/miguelsavignano/Developer/Projects/rubocop/test/**/*"
+          ]
+        }
+      ]
     },
     {
       "patternId": "Style_DoubleNegation",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Style_EachForSimpleLoop",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Style_EachWithObject",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Style_EmptyBlockParameter",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Style_EmptyCaseCondition",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Style_EmptyElse",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "EnforcedStyle": "both",
-        "SupportedStyles": [
-          "empty",
-          "nil",
-          "both"
-        ]
-      }
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "both"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": [
+            "empty",
+            "nil",
+            "both"
+          ]
+        }
+      ]
     },
     {
       "patternId": "Style_EmptyLambdaParameter",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Style_EmptyLineAfterGuardClause",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Style_EmptyLiteral",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Style_EmptyMethod",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "EnforcedStyle": "compact",
-        "SupportedStyles": [
-          "compact",
-          "expanded"
-        ]
-      }
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "compact"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": [
+            "compact",
+            "expanded"
+          ]
+        }
+      ]
     },
     {
       "patternId": "Style_Encoding",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Style_EndBlock",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Style_EvalWithLocation",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Style_EvenOdd",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Style_ExpandPathArguments",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Style_FlipFlop",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Style_For",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "EnforcedStyle": "each",
-        "SupportedStyles": [
-          "each",
-          "for"
-        ]
-      }
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "each"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": [
+            "each",
+            "for"
+          ]
+        }
+      ]
     },
     {
       "patternId": "Style_FormatString",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "EnforcedStyle": "format",
-        "SupportedStyles": [
-          "format",
-          "sprintf",
-          "percent"
-        ]
-      }
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "format"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": [
+            "format",
+            "sprintf",
+            "percent"
+          ]
+        }
+      ]
     },
     {
       "patternId": "Style_FormatStringToken",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "EnforcedStyle": "annotated",
-        "SupportedStyles": [
-          "annotated",
-          "template",
-          "unannotated"
-        ]
-      }
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "annotated"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": [
+            "annotated",
+            "template",
+            "unannotated"
+          ]
+        }
+      ]
     },
     {
       "patternId": "Style_FrozenStringLiteralComment",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "EnforcedStyle": "when_needed",
-        "SupportedStyles": [
-          "when_needed",
-          "always",
-          "never"
-        ]
-      }
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "when_needed"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": [
+            "when_needed",
+            "always",
+            "never"
+          ]
+        }
+      ]
     },
     {
       "patternId": "Style_GlobalVars",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "AllowedVariables": [
+      "parameters": [
+        {
+          "name": "AllowedVariables",
+          "default": [
 
-        ]
-      }
+          ]
+        }
+      ]
     },
     {
       "patternId": "Style_GuardClause",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "MinBodyLength": "1"
-      }
+      "parameters": [
+        {
+          "name": "MinBodyLength",
+          "default": "1"
+        }
+      ]
     },
     {
       "patternId": "Style_HashSyntax",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "EnforcedStyle": "ruby19",
-        "SupportedStyles": [
-          "ruby19",
-          "hash_rockets",
-          "no_mixed_keys",
-          "ruby19_no_mixed_keys"
-        ],
-        "UseHashRocketsWithSymbolValues": "false",
-        "PreferHashRocketsForNonAlnumEndingSymbols": "false"
-      }
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "ruby19"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": [
+            "ruby19",
+            "hash_rockets",
+            "no_mixed_keys",
+            "ruby19_no_mixed_keys"
+          ]
+        },
+        {
+          "name": "UseHashRocketsWithSymbolValues",
+          "default": "false"
+        },
+        {
+          "name": "PreferHashRocketsForNonAlnumEndingSymbols",
+          "default": "false"
+        }
+      ]
     },
     {
       "patternId": "Style_IdenticalConditionalBranches",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Style_IfInsideElse",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Style_IfUnlessModifier",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Style_IfUnlessModifierOfIfUnless",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Style_IfWithSemicolon",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Style_ImplicitRuntimeError",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Style_InfiniteLoop",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Style_InverseMethods",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "InverseMethods": "{:any?=>:none?, :even?=>:odd?, :===>:!=, :=~=>:!~, :<=>:>=, :>=>:<=}",
-        "InverseBlocks": "{:select=>:reject, :select!=>:reject!}"
-      }
+      "parameters": [
+        {
+          "name": "InverseMethods",
+          "default": "{:any?=>:none?, :even?=>:odd?, :===>:!=, :=~=>:!~, :<=>:>=, :>=>:<=}"
+        },
+        {
+          "name": "InverseBlocks",
+          "default": "{:select=>:reject, :select!=>:reject!}"
+        }
+      ]
     },
     {
       "patternId": "Style_InlineComment",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Style_Lambda",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "EnforcedStyle": "line_count_dependent",
-        "SupportedStyles": [
-          "line_count_dependent",
-          "lambda",
-          "literal"
-        ]
-      }
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "line_count_dependent"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": [
+            "line_count_dependent",
+            "lambda",
+            "literal"
+          ]
+        }
+      ]
     },
     {
       "patternId": "Style_LambdaCall",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "EnforcedStyle": "call",
-        "SupportedStyles": [
-          "call",
-          "braces"
-        ]
-      }
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "call"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": [
+            "call",
+            "braces"
+          ]
+        }
+      ]
     },
     {
       "patternId": "Style_LineEndConcatenation",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Style_MethodCallWithoutArgsParentheses",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "IgnoredMethods": [
+      "parameters": [
+        {
+          "name": "IgnoredMethods",
+          "default": [
 
-        ]
-      }
+          ]
+        }
+      ]
     },
     {
       "patternId": "Style_MethodCallWithArgsParentheses",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "IgnoreMacros": "true",
-        "IgnoredMethods": [
+      "parameters": [
+        {
+          "name": "IgnoreMacros",
+          "default": "true"
+        },
+        {
+          "name": "IgnoredMethods",
+          "default": [
 
-        ]
-      }
+          ]
+        }
+      ]
     },
     {
       "patternId": "Style_MethodCalledOnDoEndBlock",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Style_MethodDefParentheses",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "EnforcedStyle": "require_parentheses",
-        "SupportedStyles": [
-          "require_parentheses",
-          "require_no_parentheses",
-          "require_no_parentheses_except_multiline"
-        ]
-      }
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "require_parentheses"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": [
+            "require_parentheses",
+            "require_no_parentheses",
+            "require_no_parentheses_except_multiline"
+          ]
+        }
+      ]
     },
     {
       "patternId": "Style_MethodMissingSuper",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Style_MinMax",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Style_MissingElse",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "EnforcedStyle": "both",
-        "SupportedStyles": [
-          "if",
-          "case",
-          "both"
-        ]
-      }
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "both"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": [
+            "if",
+            "case",
+            "both"
+          ]
+        }
+      ]
     },
     {
       "patternId": "Style_MissingRespondToMissing",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Style_MixinGrouping",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "EnforcedStyle": "separated",
-        "SupportedStyles": [
-          "separated",
-          "grouped"
-        ]
-      }
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "separated"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": [
+            "separated",
+            "grouped"
+          ]
+        }
+      ]
     },
     {
       "patternId": "Style_MixinUsage",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Style_ModuleFunction",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "EnforcedStyle": "module_function",
-        "SupportedStyles": [
-          "module_function",
-          "extend_self"
-        ]
-      }
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "module_function"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": [
+            "module_function",
+            "extend_self"
+          ]
+        }
+      ]
     },
     {
       "patternId": "Style_MultilineBlockChain",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Style_MultilineIfThen",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Style_MultilineIfModifier",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Style_MultilineMemoization",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "EnforcedStyle": "keyword",
-        "SupportedStyles": [
-          "keyword",
-          "braces"
-        ]
-      }
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "keyword"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": [
+            "keyword",
+            "braces"
+          ]
+        }
+      ]
     },
     {
       "patternId": "Style_MultilineTernaryOperator",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Style_MultipleComparison",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Style_MutableConstant",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Style_NegatedIf",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "EnforcedStyle": "both",
-        "SupportedStyles": [
-          "both",
-          "prefix",
-          "postfix"
-        ]
-      }
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "both"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": [
+            "both",
+            "prefix",
+            "postfix"
+          ]
+        }
+      ]
     },
     {
       "patternId": "Style_NegatedWhile",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Style_NestedModifier",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Style_NestedParenthesizedCalls",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "Whitelist": [
-          "be",
-          "be_a",
-          "be_an",
-          "be_between",
-          "be_falsey",
-          "be_kind_of",
-          "be_instance_of",
-          "be_truthy",
-          "be_within",
-          "eq",
-          "eql",
-          "end_with",
-          "include",
-          "match",
-          "raise_error",
-          "respond_to",
-          "start_with"
-        ]
-      }
+      "parameters": [
+        {
+          "name": "Whitelist",
+          "default": [
+            "be",
+            "be_a",
+            "be_an",
+            "be_between",
+            "be_falsey",
+            "be_kind_of",
+            "be_instance_of",
+            "be_truthy",
+            "be_within",
+            "eq",
+            "eql",
+            "end_with",
+            "include",
+            "match",
+            "raise_error",
+            "respond_to",
+            "start_with"
+          ]
+        }
+      ]
     },
     {
       "patternId": "Style_NestedTernaryOperator",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Style_Next",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "EnforcedStyle": "skip_modifier_ifs",
-        "MinBodyLength": "3",
-        "SupportedStyles": [
-          "skip_modifier_ifs",
-          "always"
-        ]
-      }
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "skip_modifier_ifs"
+        },
+        {
+          "name": "MinBodyLength",
+          "default": "3"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": [
+            "skip_modifier_ifs",
+            "always"
+          ]
+        }
+      ]
     },
     {
       "patternId": "Style_NilComparison",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Style_NonNilCheck",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "IncludeSemanticChanges": "false"
-      }
+      "parameters": [
+        {
+          "name": "IncludeSemanticChanges",
+          "default": "false"
+        }
+      ]
     },
     {
       "patternId": "Style_Not",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Style_NumericLiterals",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "MinDigits": "5",
-        "Strict": "false"
-      }
+      "parameters": [
+        {
+          "name": "MinDigits",
+          "default": "5"
+        },
+        {
+          "name": "Strict",
+          "default": "false"
+        }
+      ]
     },
     {
       "patternId": "Style_NumericLiteralPrefix",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "EnforcedOctalStyle": "zero_with_o",
-        "SupportedOctalStyles": [
-          "zero_with_o",
-          "zero_only"
-        ]
-      }
+      "parameters": [
+        {
+          "name": "EnforcedOctalStyle",
+          "default": "zero_with_o"
+        },
+        {
+          "name": "SupportedOctalStyles",
+          "default": [
+            "zero_with_o",
+            "zero_only"
+          ]
+        }
+      ]
     },
     {
       "patternId": "Style_NumericPredicate",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "AutoCorrect": "false",
-        "EnforcedStyle": "predicate",
-        "SupportedStyles": [
-          "predicate",
-          "comparison"
-        ],
-        "Exclude": [
-          "/home/miguelsavignano/Developer/Projects/rubocop/spec/**/*"
-        ]
-      }
+      "parameters": [
+        {
+          "name": "AutoCorrect",
+          "default": "false"
+        },
+        {
+          "name": "EnforcedStyle",
+          "default": "predicate"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": [
+            "predicate",
+            "comparison"
+          ]
+        },
+        {
+          "name": "Exclude",
+          "default": [
+            "/home/miguelsavignano/Developer/Projects/rubocop/spec/**/*"
+          ]
+        }
+      ]
     },
     {
       "patternId": "Style_OneLineConditional",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Style_OrAssignment",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Style_OptionHash",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "SuspiciousParamNames": [
-          "options",
-          "opts",
-          "args",
-          "params",
-          "parameters"
-        ]
-      }
+      "parameters": [
+        {
+          "name": "SuspiciousParamNames",
+          "default": [
+            "options",
+            "opts",
+            "args",
+            "params",
+            "parameters"
+          ]
+        }
+      ]
     },
     {
       "patternId": "Style_OptionalArguments",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Style_ParallelAssignment",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Style_ParenthesesAroundCondition",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "AllowSafeAssignment": "true",
-        "AllowInMultilineConditions": "false"
-      }
+      "parameters": [
+        {
+          "name": "AllowSafeAssignment",
+          "default": "true"
+        },
+        {
+          "name": "AllowInMultilineConditions",
+          "default": "false"
+        }
+      ]
     },
     {
       "patternId": "Style_PercentLiteralDelimiters",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "PreferredDelimiters": "{\"default\"=>\"()\", \"%i\"=>\"[]\", \"%I\"=>\"[]\", \"%r\"=>\"{}\", \"%w\"=>\"[]\", \"%W\"=>\"[]\"}"
-      }
+      "parameters": [
+        {
+          "name": "PreferredDelimiters",
+          "default": "{\"default\"=>\"()\", \"%i\"=>\"[]\", \"%I\"=>\"[]\", \"%r\"=>\"{}\", \"%w\"=>\"[]\", \"%W\"=>\"[]\"}"
+        }
+      ]
     },
     {
       "patternId": "Style_PercentQLiterals",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "EnforcedStyle": "lower_case_q",
-        "SupportedStyles": [
-          "lower_case_q",
-          "upper_case_q"
-        ]
-      }
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "lower_case_q"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": [
+            "lower_case_q",
+            "upper_case_q"
+          ]
+        }
+      ]
     },
     {
       "patternId": "Style_PerlBackrefs",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Style_PreferredHashMethods",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "EnforcedStyle": "short",
-        "SupportedStyles": [
-          "short",
-          "verbose"
-        ]
-      }
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "short"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": [
+            "short",
+            "verbose"
+          ]
+        }
+      ]
     },
     {
       "patternId": "Style_Proc",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Style_RaiseArgs",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "EnforcedStyle": "exploded",
-        "SupportedStyles": [
-          "compact",
-          "exploded"
-        ]
-      }
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "exploded"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": [
+            "compact",
+            "exploded"
+          ]
+        }
+      ]
     },
     {
       "patternId": "Style_RandomWithOffset",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Style_RedundantBegin",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Style_RedundantException",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Style_RedundantFreeze",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Style_RedundantParentheses",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Style_RedundantReturn",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "AllowMultipleReturnValues": "false"
-      }
+      "parameters": [
+        {
+          "name": "AllowMultipleReturnValues",
+          "default": "false"
+        }
+      ]
     },
     {
       "patternId": "Style_RedundantSelf",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Style_RedundantConditional",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Style_RegexpLiteral",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "EnforcedStyle": "slashes",
-        "SupportedStyles": [
-          "slashes",
-          "percent_r",
-          "mixed"
-        ],
-        "AllowInnerSlashes": "false"
-      }
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "slashes"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": [
+            "slashes",
+            "percent_r",
+            "mixed"
+          ]
+        },
+        {
+          "name": "AllowInnerSlashes",
+          "default": "false"
+        }
+      ]
     },
     {
       "patternId": "Style_RescueModifier",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Style_RescueStandardError",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "EnforcedStyle": "explicit",
-        "SupportedStyles": [
-          "implicit",
-          "explicit"
-        ]
-      }
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "explicit"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": [
+            "implicit",
+            "explicit"
+          ]
+        }
+      ]
     },
     {
       "patternId": "Style_ReturnNil",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "EnforcedStyle": "return",
-        "SupportedStyles": [
-          "return",
-          "return_nil"
-        ]
-      }
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "return"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": [
+            "return",
+            "return_nil"
+          ]
+        }
+      ]
     },
     {
       "patternId": "Style_SafeNavigation",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "ConvertCodeThatCanStartToReturnNil": "false",
-        "Whitelist": [
-          "present?",
-          "blank?",
-          "presence",
-          "try"
-        ]
-      }
+      "parameters": [
+        {
+          "name": "ConvertCodeThatCanStartToReturnNil",
+          "default": "false"
+        },
+        {
+          "name": "Whitelist",
+          "default": [
+            "present?",
+            "blank?",
+            "presence",
+            "try"
+          ]
+        }
+      ]
     },
     {
       "patternId": "Style_SelfAssignment",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Style_Semicolon",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "AllowAsExpressionSeparator": "false"
-      }
+      "parameters": [
+        {
+          "name": "AllowAsExpressionSeparator",
+          "default": "false"
+        }
+      ]
     },
     {
       "patternId": "Style_Send",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Style_SignalException",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "EnforcedStyle": "only_raise",
-        "SupportedStyles": [
-          "only_raise",
-          "only_fail",
-          "semantic"
-        ]
-      }
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "only_raise"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": [
+            "only_raise",
+            "only_fail",
+            "semantic"
+          ]
+        }
+      ]
     },
     {
       "patternId": "Style_SingleLineBlockParams",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "Methods": [
-          {
-            "reduce": [
-              "acc",
-              "elem"
-            ]
-          },
-          {
-            "inject": [
-              "acc",
-              "elem"
-            ]
-          }
-        ]
-      }
+      "parameters": [
+        {
+          "name": "Methods",
+          "default": [
+            {
+              "reduce": [
+                "acc",
+                "elem"
+              ]
+            },
+            {
+              "inject": [
+                "acc",
+                "elem"
+              ]
+            }
+          ]
+        }
+      ]
     },
     {
       "patternId": "Style_SingleLineMethods",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "AllowIfMethodIsEmpty": "true"
-      }
+      "parameters": [
+        {
+          "name": "AllowIfMethodIsEmpty",
+          "default": "true"
+        }
+      ]
     },
     {
       "patternId": "Style_SpecialGlobalVars",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "EnforcedStyle": "use_english_names",
-        "SupportedStyles": [
-          "use_perl_names",
-          "use_english_names"
-        ]
-      }
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "use_english_names"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": [
+            "use_perl_names",
+            "use_english_names"
+          ]
+        }
+      ]
     },
     {
       "patternId": "Style_StabbyLambdaParentheses",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "EnforcedStyle": "require_parentheses",
-        "SupportedStyles": [
-          "require_parentheses",
-          "require_no_parentheses"
-        ]
-      }
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "require_parentheses"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": [
+            "require_parentheses",
+            "require_no_parentheses"
+          ]
+        }
+      ]
     },
     {
       "patternId": "Style_StderrPuts",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Style_StringHashKeys",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Style_StringLiterals",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "EnforcedStyle": "single_quotes",
-        "SupportedStyles": [
-          "single_quotes",
-          "double_quotes"
-        ],
-        "ConsistentQuotesInMultiline": "false"
-      }
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "single_quotes"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": [
+            "single_quotes",
+            "double_quotes"
+          ]
+        },
+        {
+          "name": "ConsistentQuotesInMultiline",
+          "default": "false"
+        }
+      ]
     },
     {
       "patternId": "Style_StringLiteralsInInterpolation",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "EnforcedStyle": "single_quotes",
-        "SupportedStyles": [
-          "single_quotes",
-          "double_quotes"
-        ]
-      }
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "single_quotes"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": [
+            "single_quotes",
+            "double_quotes"
+          ]
+        }
+      ]
     },
     {
       "patternId": "Style_StringMethods",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "PreferredMethods": "{\"intern\"=>\"to_sym\"}"
-      }
+      "parameters": [
+        {
+          "name": "PreferredMethods",
+          "default": "{\"intern\"=>\"to_sym\"}"
+        }
+      ]
     },
     {
       "patternId": "Style_StructInheritance",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Style_SymbolArray",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "EnforcedStyle": "percent",
-        "MinSize": "0",
-        "SupportedStyles": [
-          "percent",
-          "brackets"
-        ]
-      }
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "percent"
+        },
+        {
+          "name": "MinSize",
+          "default": "0"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": [
+            "percent",
+            "brackets"
+          ]
+        }
+      ]
     },
     {
       "patternId": "Style_SymbolLiteral",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Style_SymbolProc",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "IgnoredMethods": [
-          "respond_to",
-          "define_method"
-        ]
-      }
+      "parameters": [
+        {
+          "name": "IgnoredMethods",
+          "default": [
+            "respond_to",
+            "define_method"
+          ]
+        }
+      ]
     },
     {
       "patternId": "Style_TernaryParentheses",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "EnforcedStyle": "require_no_parentheses",
-        "SupportedStyles": [
-          "require_parentheses",
-          "require_no_parentheses",
-          "require_parentheses_when_complex"
-        ],
-        "AllowSafeAssignment": "true"
-      }
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "require_no_parentheses"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": [
+            "require_parentheses",
+            "require_no_parentheses",
+            "require_parentheses_when_complex"
+          ]
+        },
+        {
+          "name": "AllowSafeAssignment",
+          "default": "true"
+        }
+      ]
     },
     {
       "patternId": "Style_TrailingBodyOnClass",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Style_TrailingBodyOnMethodDefinition",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Style_TrailingBodyOnModule",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Style_TrailingCommaInArguments",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "EnforcedStyleForMultiline": "no_comma",
-        "SupportedStylesForMultiline": [
-          "comma",
-          "consistent_comma",
-          "no_comma"
-        ]
-      }
+      "parameters": [
+        {
+          "name": "EnforcedStyleForMultiline",
+          "default": "no_comma"
+        },
+        {
+          "name": "SupportedStylesForMultiline",
+          "default": [
+            "comma",
+            "consistent_comma",
+            "no_comma"
+          ]
+        }
+      ]
     },
     {
       "patternId": "Style_TrailingCommaInArrayLiteral",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "EnforcedStyleForMultiline": "no_comma",
-        "SupportedStylesForMultiline": [
-          "comma",
-          "consistent_comma",
-          "no_comma"
-        ]
-      }
+      "parameters": [
+        {
+          "name": "EnforcedStyleForMultiline",
+          "default": "no_comma"
+        },
+        {
+          "name": "SupportedStylesForMultiline",
+          "default": [
+            "comma",
+            "consistent_comma",
+            "no_comma"
+          ]
+        }
+      ]
     },
     {
       "patternId": "Style_TrailingCommaInHashLiteral",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "EnforcedStyleForMultiline": "no_comma",
-        "SupportedStylesForMultiline": [
-          "comma",
-          "consistent_comma",
-          "no_comma"
-        ]
-      }
+      "parameters": [
+        {
+          "name": "EnforcedStyleForMultiline",
+          "default": "no_comma"
+        },
+        {
+          "name": "SupportedStylesForMultiline",
+          "default": [
+            "comma",
+            "consistent_comma",
+            "no_comma"
+          ]
+        }
+      ]
     },
     {
       "patternId": "Style_TrailingMethodEndStatement",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Style_TrailingUnderscoreVariable",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "AllowNamedUnderscoreVariables": "true"
-      }
+      "parameters": [
+        {
+          "name": "AllowNamedUnderscoreVariables",
+          "default": "true"
+        }
+      ]
     },
     {
       "patternId": "Style_TrivialAccessors",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "ExactNameMatch": "true",
-        "AllowPredicates": "true",
-        "AllowDSLWriters": "false",
-        "IgnoreClassMethods": "false",
-        "Whitelist": [
-          "to_ary",
-          "to_a",
-          "to_c",
-          "to_enum",
-          "to_h",
-          "to_hash",
-          "to_i",
-          "to_int",
-          "to_io",
-          "to_open",
-          "to_path",
-          "to_proc",
-          "to_r",
-          "to_regexp",
-          "to_str",
-          "to_s",
-          "to_sym"
-        ]
-      }
+      "parameters": [
+        {
+          "name": "ExactNameMatch",
+          "default": "true"
+        },
+        {
+          "name": "AllowPredicates",
+          "default": "true"
+        },
+        {
+          "name": "AllowDSLWriters",
+          "default": "false"
+        },
+        {
+          "name": "IgnoreClassMethods",
+          "default": "false"
+        },
+        {
+          "name": "Whitelist",
+          "default": [
+            "to_ary",
+            "to_a",
+            "to_c",
+            "to_enum",
+            "to_h",
+            "to_hash",
+            "to_i",
+            "to_int",
+            "to_io",
+            "to_open",
+            "to_path",
+            "to_proc",
+            "to_r",
+            "to_regexp",
+            "to_str",
+            "to_s",
+            "to_sym"
+          ]
+        }
+      ]
     },
     {
       "patternId": "Style_UnlessElse",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Style_UnneededCapitalW",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Style_UnneededInterpolation",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Style_UnneededPercentQ",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Style_UnpackFirst",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Style_VariableInterpolation",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Style_WhenThen",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Style_WhileUntilDo",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Style_WhileUntilModifier",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Style_WordArray",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "EnforcedStyle": "percent",
-        "SupportedStyles": [
-          "percent",
-          "brackets"
-        ],
-        "MinSize": "0",
-        "WordRegex": "(?-mix:\\A[\\p{Word}\\n\\t]+\\z)"
-      }
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "percent"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": [
+            "percent",
+            "brackets"
+          ]
+        },
+        {
+          "name": "MinSize",
+          "default": "0"
+        },
+        {
+          "name": "WordRegex",
+          "default": "(?-mix:\\A[\\p{Word}\\n\\t]+\\z)"
+        }
+      ]
     },
     {
       "patternId": "Style_YodaCondition",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "EnforcedStyle": "all_comparison_operators",
-        "SupportedStyles": [
-          "all_comparison_operators",
-          "equality_operators_only"
-        ]
-      }
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "all_comparison_operators"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": [
+            "all_comparison_operators",
+            "equality_operators_only"
+          ]
+        }
+      ]
     },
     {
       "patternId": "Style_ZeroLengthPredicate",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Rails_ActionFilter",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-        "EnforcedStyle": "action",
-        "SupportedStyles": [
-          "action",
-          "filter"
-        ],
-        "Include": [
-          "app/controllers/**/*.rb"
-        ]
-      }
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "action"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": [
+            "action",
+            "filter"
+          ]
+        },
+        {
+          "name": "Include",
+          "default": [
+            "app/controllers/**/*.rb"
+          ]
+        }
+      ]
     },
     {
       "patternId": "Rails_ActiveRecordAliases",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Rails_ActiveSupportAliases",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Rails_ApplicationJob",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Rails_ApplicationRecord",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Rails_AssertNot",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-        "Include": [
-          "**/test/**/*"
-        ]
-      }
+      "parameters": [
+        {
+          "name": "Include",
+          "default": [
+            "**/test/**/*"
+          ]
+        }
+      ]
     },
     {
       "patternId": "Rails_Blank",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-        "NilOrEmpty": "true",
-        "NotPresent": "true",
-        "UnlessPresent": "true"
-      }
+      "parameters": [
+        {
+          "name": "NilOrEmpty",
+          "default": "true"
+        },
+        {
+          "name": "NotPresent",
+          "default": "true"
+        },
+        {
+          "name": "UnlessPresent",
+          "default": "true"
+        }
+      ]
     },
     {
       "patternId": "Rails_CreateTableWithTimestamps",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-        "Include": [
-          "db/migrate/*.rb"
-        ]
-      }
+      "parameters": [
+        {
+          "name": "Include",
+          "default": [
+            "db/migrate/*.rb"
+          ]
+        }
+      ]
     },
     {
       "patternId": "Rails_Date",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-        "EnforcedStyle": "flexible",
-        "SupportedStyles": [
-          "strict",
-          "flexible"
-        ]
-      }
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "flexible"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": [
+            "strict",
+            "flexible"
+          ]
+        }
+      ]
     },
     {
       "patternId": "Rails_DynamicFindBy",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-        "Whitelist": [
-          "find_by_sql"
-        ]
-      }
+      "parameters": [
+        {
+          "name": "Whitelist",
+          "default": [
+            "find_by_sql"
+          ]
+        }
+      ]
     },
     {
       "patternId": "Rails_Delegate",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-        "EnforceForPrefixed": "true"
-      }
+      "parameters": [
+        {
+          "name": "EnforceForPrefixed",
+          "default": "true"
+        }
+      ]
     },
     {
       "patternId": "Rails_DelegateAllowBlank",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Rails_EnumUniqueness",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-        "Include": [
-          "app/models/**/*.rb"
-        ]
-      }
+      "parameters": [
+        {
+          "name": "Include",
+          "default": [
+            "app/models/**/*.rb"
+          ]
+        }
+      ]
     },
     {
       "patternId": "Rails_EnvironmentComparison",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Rails_Exit",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-        "Include": [
-          "app/**/*.rb",
-          "config/**/*.rb",
-          "lib/**/*.rb"
-        ],
-        "Exclude": [
-          "/home/miguelsavignano/Developer/Projects/rubocop/lib/**/*.rake"
-        ]
-      }
+      "parameters": [
+        {
+          "name": "Include",
+          "default": [
+            "app/**/*.rb",
+            "config/**/*.rb",
+            "lib/**/*.rb"
+          ]
+        },
+        {
+          "name": "Exclude",
+          "default": [
+            "/home/miguelsavignano/Developer/Projects/rubocop/lib/**/*.rake"
+          ]
+        }
+      ]
     },
     {
       "patternId": "Rails_FilePath",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Rails_FindBy",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-        "Include": [
-          "app/models/**/*.rb"
-        ]
-      }
+      "parameters": [
+        {
+          "name": "Include",
+          "default": [
+            "app/models/**/*.rb"
+          ]
+        }
+      ]
     },
     {
       "patternId": "Rails_FindEach",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-        "Include": [
-          "app/models/**/*.rb"
-        ]
-      }
+      "parameters": [
+        {
+          "name": "Include",
+          "default": [
+            "app/models/**/*.rb"
+          ]
+        }
+      ]
     },
     {
       "patternId": "Rails_HasAndBelongsToMany",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-        "Include": [
-          "app/models/**/*.rb"
-        ]
-      }
+      "parameters": [
+        {
+          "name": "Include",
+          "default": [
+            "app/models/**/*.rb"
+          ]
+        }
+      ]
     },
     {
       "patternId": "Rails_HasManyOrHasOneDependent",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-        "Include": [
-          "app/models/**/*.rb"
-        ]
-      }
+      "parameters": [
+        {
+          "name": "Include",
+          "default": [
+            "app/models/**/*.rb"
+          ]
+        }
+      ]
     },
     {
       "patternId": "Rails_HttpPositionalArguments",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-        "Include": [
-          "spec/**/*",
-          "test/**/*"
-        ]
-      }
+      "parameters": [
+        {
+          "name": "Include",
+          "default": [
+            "spec/**/*",
+            "test/**/*"
+          ]
+        }
+      ]
     },
     {
       "patternId": "Rails_HttpStatus",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-        "EnforcedStyle": "symbolic",
-        "SupportedStyles": [
-          "numeric",
-          "symbolic"
-        ]
-      }
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "symbolic"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": [
+            "numeric",
+            "symbolic"
+          ]
+        }
+      ]
     },
     {
       "patternId": "Rails_InverseOf",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-        "Include": [
-          "app/models/**/*.rb"
-        ]
-      }
+      "parameters": [
+        {
+          "name": "Include",
+          "default": [
+            "app/models/**/*.rb"
+          ]
+        }
+      ]
     },
     {
       "patternId": "Rails_LexicallyScopedActionFilter",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-        "Include": [
-          "app/controllers/**/*.rb"
-        ]
-      }
+      "parameters": [
+        {
+          "name": "Include",
+          "default": [
+            "app/controllers/**/*.rb"
+          ]
+        }
+      ]
     },
     {
       "patternId": "Rails_NotNullColumn",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-        "Include": [
-          "db/migrate/*.rb"
-        ]
-      }
+      "parameters": [
+        {
+          "name": "Include",
+          "default": [
+            "db/migrate/*.rb"
+          ]
+        }
+      ]
     },
     {
       "patternId": "Rails_OutputSafety",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Rails_Output",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-        "Include": [
-          "app/**/*.rb",
-          "config/**/*.rb",
-          "db/**/*.rb",
-          "lib/**/*.rb"
-        ]
-      }
+      "parameters": [
+        {
+          "name": "Include",
+          "default": [
+            "app/**/*.rb",
+            "config/**/*.rb",
+            "db/**/*.rb",
+            "lib/**/*.rb"
+          ]
+        }
+      ]
     },
     {
       "patternId": "Rails_PluralizationGrammar",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Rails_Presence",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Rails_Present",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-        "NotNilAndNotEmpty": "true",
-        "NotBlank": "true",
-        "UnlessBlank": "true"
-      }
+      "parameters": [
+        {
+          "name": "NotNilAndNotEmpty",
+          "default": "true"
+        },
+        {
+          "name": "NotBlank",
+          "default": "true"
+        },
+        {
+          "name": "UnlessBlank",
+          "default": "true"
+        }
+      ]
     },
     {
       "patternId": "Rails_ReadWriteAttribute",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-        "Include": [
-          "app/models/**/*.rb"
-        ]
-      }
+      "parameters": [
+        {
+          "name": "Include",
+          "default": [
+            "app/models/**/*.rb"
+          ]
+        }
+      ]
     },
     {
       "patternId": "Rails_RedundantReceiverInWithOptions",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Rails_RefuteMethods",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-        "Include": [
-          "**/test/**/*"
-        ]
-      }
+      "parameters": [
+        {
+          "name": "Include",
+          "default": [
+            "**/test/**/*"
+          ]
+        }
+      ]
     },
     {
       "patternId": "Rails_RequestReferer",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-        "EnforcedStyle": "referer",
-        "SupportedStyles": [
-          "referer",
-          "referrer"
-        ]
-      }
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "referer"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": [
+            "referer",
+            "referrer"
+          ]
+        }
+      ]
     },
     {
       "patternId": "Rails_ReversibleMigration",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-        "Include": [
-          "db/migrate/*.rb"
-        ]
-      }
+      "parameters": [
+        {
+          "name": "Include",
+          "default": [
+            "db/migrate/*.rb"
+          ]
+        }
+      ]
     },
     {
       "patternId": "Rails_RelativeDateConstant",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Rails_SafeNavigation",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-        "ConvertTry": "false"
-      }
+      "parameters": [
+        {
+          "name": "ConvertTry",
+          "default": "false"
+        }
+      ]
     },
     {
       "patternId": "Rails_SaveBang",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Rails_ScopeArgs",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-        "Include": [
-          "app/models/**/*.rb"
-        ]
-      }
+      "parameters": [
+        {
+          "name": "Include",
+          "default": [
+            "app/models/**/*.rb"
+          ]
+        }
+      ]
     },
     {
       "patternId": "Rails_SkipsModelValidations",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-        "Blacklist": [
-          "decrement!",
-          "decrement_counter",
-          "increment!",
-          "increment_counter",
-          "toggle!",
-          "touch",
-          "update_all",
-          "update_attribute",
-          "update_column",
-          "update_columns",
-          "update_counters"
-        ]
-      }
+      "parameters": [
+        {
+          "name": "Blacklist",
+          "default": [
+            "decrement!",
+            "decrement_counter",
+            "increment!",
+            "increment_counter",
+            "toggle!",
+            "touch",
+            "update_all",
+            "update_attribute",
+            "update_column",
+            "update_columns",
+            "update_counters"
+          ]
+        }
+      ]
     },
     {
       "patternId": "Rails_TimeZone",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-        "EnforcedStyle": "flexible",
-        "SupportedStyles": [
-          "strict",
-          "flexible"
-        ]
-      }
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "flexible"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": [
+            "strict",
+            "flexible"
+          ]
+        }
+      ]
     },
     {
       "patternId": "Rails_UniqBeforePluck",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-        "EnforcedStyle": "conservative",
-        "SupportedStyles": [
-          "conservative",
-          "aggressive"
-        ],
-        "AutoCorrect": "false"
-      }
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "conservative"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": [
+            "conservative",
+            "aggressive"
+          ]
+        },
+        {
+          "name": "AutoCorrect",
+          "default": "false"
+        }
+      ]
     },
     {
       "patternId": "Rails_UnknownEnv",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-        "Environments": [
-          "development",
-          "test",
-          "production"
-        ]
-      }
+      "parameters": [
+        {
+          "name": "Environments",
+          "default": [
+            "development",
+            "test",
+            "production"
+          ]
+        }
+      ]
     },
     {
       "patternId": "Rails_Validation",
       "level": "Warning",
       "category": "CodeStyle",
-      "parameters": {
-        "Include": [
-          "app/models/**/*.rb"
-        ]
-      }
+      "parameters": [
+        {
+          "name": "Include",
+          "default": [
+            "app/models/**/*.rb"
+          ]
+        }
+      ]
     },
     {
       "patternId": "Security_Eval",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Security_JSONLoad",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-        "AutoCorrect": "false"
-      }
+      "parameters": [
+        {
+          "name": "AutoCorrect",
+          "default": "false"
+        }
+      ]
     },
     {
       "patternId": "Security_MarshalLoad",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Security_Open",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Security_YAMLLoad",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "InternalAffairs_NodeDestructuring",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "InternalAffairs_NodeTypePredicate",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "InternalAffairs_OffenseLocationKeyword",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "InternalAffairs_RedundantMessageArgument",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "InternalAffairs_RedundantLocationArgument",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "InternalAffairs_UselessMessageAssertion",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Test_ClassMustBeAModuleCop",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     },
     {
       "patternId": "Test_ModuleMustBeAClassCop",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": {
-      }
+      "parameters": [
+
+      ]
     }
   ]
 }
