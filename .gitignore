@@ -4,6 +4,7 @@
 /project/project/
 /project/target/
 /target/
+/vendor
 .idea
 .DS_Store
 
