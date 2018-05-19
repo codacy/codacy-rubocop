@@ -1,0 +1,4248 @@
+---
+- :name: Bundler/DuplicatedGem
+  :department_name: Bundler
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Checks for duplicate gem entries in Gemfile.
+    Enabled: true
+  :configurable_attributes:
+    Include:
+    - "**/Gemfile"
+    - "**/gems.rb"
+- :name: Bundler/InsecureProtocolSource
+  :department_name: Bundler
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: The source `:gemcutter`, `:rubygems` and `:rubyforge` are deprecated
+      because HTTP requests are insecure. Please change your source to 'https://rubygems.org'
+      if possible, or 'http://rubygems.org' if not.
+    Enabled: true
+  :configurable_attributes:
+    Include:
+    - "**/Gemfile"
+    - "**/gems.rb"
+- :name: Bundler/OrderedGems
+  :department_name: Bundler
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Gems within groups in the Gemfile should be alphabetically sorted.
+    Enabled: true
+  :configurable_attributes:
+    Include:
+    - "**/Gemfile"
+    - "**/gems.rb"
+    TreatCommentsAsGroupSeparators: 'true'
+- :name: Gemspec/DuplicatedAssignment
+  :department_name: Gemspec
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: An attribute assignment method calls should be listed only once in
+      a gemspec.
+    Enabled: true
+  :configurable_attributes:
+    Include:
+    - "**/*.gemspec"
+- :name: Gemspec/OrderedDependencies
+  :department_name: Gemspec
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Dependencies in the gemspec should be alphabetically sorted.
+    Enabled: true
+  :configurable_attributes:
+    Include:
+    - "**/*.gemspec"
+    TreatCommentsAsGroupSeparators: 'true'
+- :name: Gemspec/RequiredRubyVersion
+  :department_name: Gemspec
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Checks that `required_ruby_version` of gemspec and `TargetRubyVersion`
+      of .rubocop.yml are equal.
+    Enabled: true
+  :configurable_attributes:
+    Include:
+    - "**/*.gemspec"
+- :name: Layout/AccessModifierIndentation
+  :department_name: Layout
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Check indentation of private/protected visibility modifiers.
+    StyleGuide: "#indent-public-private-protected"
+    Enabled: true
+  :configurable_attributes:
+    EnforcedStyle: indent
+    SupportedStyles:
+    - outdent
+    - indent
+    IndentationWidth: ''
+- :name: Layout/AlignArray
+  :department_name: Layout
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Align the elements of an array literal if they span more than one
+      line.
+    StyleGuide: "#align-multiline-arrays"
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Layout/AlignHash
+  :department_name: Layout
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Align the elements of a hash literal if they span more than one line.
+    Enabled: true
+  :configurable_attributes:
+    EnforcedHashRocketStyle: key
+    SupportedHashRocketStyles:
+    - key
+    - separator
+    - table
+    EnforcedColonStyle: key
+    SupportedColonStyles:
+    - key
+    - separator
+    - table
+    EnforcedLastArgumentHashStyle: always_inspect
+    SupportedLastArgumentHashStyles:
+    - always_inspect
+    - always_ignore
+    - ignore_implicit
+    - ignore_explicit
+- :name: Layout/AlignParameters
+  :department_name: Layout
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Align the parameters of a method call if they span more than one
+      line.
+    StyleGuide: "#no-double-indent"
+    Enabled: true
+  :configurable_attributes:
+    EnforcedStyle: with_first_parameter
+    SupportedStyles:
+    - with_first_parameter
+    - with_fixed_indentation
+    IndentationWidth: ''
+- :name: Layout/BlockEndNewline
+  :department_name: Layout
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Put end statement of multiline block on its own line.
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Layout/CaseIndentation
+  :department_name: Layout
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Indentation of when in a case/when/[else/]end.
+    StyleGuide: "#indent-when-to-case"
+    Enabled: true
+  :configurable_attributes:
+    EnforcedStyle: case
+    SupportedStyles:
+    - case
+    - end
+    IndentOneStep: 'false'
+    IndentationWidth: ''
+- :name: Layout/ClassStructure
+  :department_name: Layout
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Enforces a configured order of definitions within a class body.
+    StyleGuide: https://github.com/bbatsov/ruby-style-guide#consistent-classes
+    Enabled: false
+  :configurable_attributes:
+    Categories: '{"module_inclusion"=>["include", "prepend", "extend"]}'
+    ExpectedOrder:
+    - module_inclusion
+    - constants
+    - public_class_methods
+    - initializer
+    - public_methods
+    - protected_methods
+    - private_methods
+- :name: Layout/ClosingParenthesisIndentation
+  :department_name: Layout
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Checks the indentation of hanging closing parentheses.
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Layout/CommentIndentation
+  :department_name: Layout
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Indentation of comments.
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Layout/DotPosition
+  :department_name: Layout
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Checks the position of the dot in multi-line method calls.
+    StyleGuide: "#consistent-multi-line-chains"
+    Enabled: true
+  :configurable_attributes:
+    EnforcedStyle: leading
+    SupportedStyles:
+    - leading
+    - trailing
+- :name: Layout/ElseAlignment
+  :department_name: Layout
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Align elses and elsifs correctly.
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Layout/EmptyLineAfterMagicComment
+  :department_name: Layout
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Add an empty line after magic comments to separate them from code.
+    StyleGuide: "#separate-magic-comments-from-code"
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Layout/EmptyLineBetweenDefs
+  :department_name: Layout
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Use empty lines between defs.
+    StyleGuide: "#empty-lines-between-methods"
+    Enabled: true
+  :configurable_attributes:
+    AllowAdjacentOneLineDefs: 'false'
+    NumberOfEmptyLines: '1'
+- :name: Layout/EmptyLinesAroundAccessModifier
+  :department_name: Layout
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Keep blank lines around access modifiers.
+    StyleGuide: "#empty-lines-around-access-modifier"
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Layout/EmptyLinesAroundArguments
+  :department_name: Layout
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Keeps track of empty lines around method arguments.
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Layout/EmptyLinesAroundBeginBody
+  :department_name: Layout
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Keeps track of empty lines around begin-end bodies.
+    StyleGuide: "#empty-lines-around-bodies"
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Layout/EmptyLinesAroundBlockBody
+  :department_name: Layout
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Keeps track of empty lines around block bodies.
+    StyleGuide: "#empty-lines-around-bodies"
+    Enabled: true
+  :configurable_attributes:
+    EnforcedStyle: no_empty_lines
+    SupportedStyles:
+    - empty_lines
+    - no_empty_lines
+- :name: Layout/EmptyLinesAroundClassBody
+  :department_name: Layout
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Keeps track of empty lines around class bodies.
+    StyleGuide: "#empty-lines-around-bodies"
+    Enabled: true
+  :configurable_attributes:
+    EnforcedStyle: no_empty_lines
+    SupportedStyles:
+    - empty_lines
+    - empty_lines_except_namespace
+    - empty_lines_special
+    - no_empty_lines
+- :name: Layout/EmptyLinesAroundExceptionHandlingKeywords
+  :department_name: Layout
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Keeps track of empty lines around exception handling keywords.
+    StyleGuide: "#empty-lines-around-bodies"
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Layout/EmptyLinesAroundMethodBody
+  :department_name: Layout
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Keeps track of empty lines around method bodies.
+    StyleGuide: "#empty-lines-around-bodies"
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Layout/EmptyLinesAroundModuleBody
+  :department_name: Layout
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Keeps track of empty lines around module bodies.
+    StyleGuide: "#empty-lines-around-bodies"
+    Enabled: true
+  :configurable_attributes:
+    EnforcedStyle: no_empty_lines
+    SupportedStyles:
+    - empty_lines
+    - empty_lines_except_namespace
+    - empty_lines_special
+    - no_empty_lines
+- :name: Layout/EmptyLines
+  :department_name: Layout
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Don't use several empty lines in a row.
+    StyleGuide: "#two-or-more-empty-lines"
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Layout/EndOfLine
+  :department_name: Layout
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Use Unix-style line endings.
+    StyleGuide: "#crlf"
+    Enabled: true
+  :configurable_attributes:
+    EnforcedStyle: native
+    SupportedStyles:
+    - native
+    - lf
+    - crlf
+- :name: Layout/ExtraSpacing
+  :department_name: Layout
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Do not use unnecessary spacing.
+    Enabled: true
+  :configurable_attributes:
+    AllowForAlignment: 'true'
+    ForceEqualSignAlignment: 'false'
+- :name: Layout/FirstArrayElementLineBreak
+  :department_name: Layout
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Checks for a line break before the first element in a multi-line
+      array.
+    Enabled: false
+  :configurable_attributes: {}
+- :name: Layout/FirstHashElementLineBreak
+  :department_name: Layout
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Checks for a line break before the first element in a multi-line
+      hash.
+    Enabled: false
+  :configurable_attributes: {}
+- :name: Layout/FirstMethodArgumentLineBreak
+  :department_name: Layout
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Checks for a line break before the first argument in a multi-line
+      method call.
+    Enabled: false
+  :configurable_attributes: {}
+- :name: Layout/FirstMethodParameterLineBreak
+  :department_name: Layout
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Checks for a line break before the first parameter in a multi-line
+      method parameter definition.
+    Enabled: false
+  :configurable_attributes: {}
+- :name: Layout/FirstParameterIndentation
+  :department_name: Layout
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Checks the indentation of the first parameter in a method call.
+    Enabled: true
+  :configurable_attributes:
+    EnforcedStyle: special_for_inner_method_call_in_parentheses
+    SupportedStyles:
+    - consistent
+    - special_for_inner_method_call
+    - special_for_inner_method_call_in_parentheses
+    IndentationWidth: ''
+- :name: Layout/IndentArray
+  :department_name: Layout
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Checks the indentation of the first element in an array literal.
+    Enabled: true
+  :configurable_attributes:
+    EnforcedStyle: special_inside_parentheses
+    SupportedStyles:
+    - special_inside_parentheses
+    - consistent
+    - align_brackets
+    IndentationWidth: ''
+- :name: Layout/IndentAssignment
+  :department_name: Layout
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Checks the indentation of the first line of the right-hand-side of
+      a multi-line assignment.
+    Enabled: true
+  :configurable_attributes:
+    IndentationWidth: ''
+- :name: Layout/IndentationConsistency
+  :department_name: Layout
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Keep indentation straight.
+    StyleGuide: "#spaces-indentation"
+    Enabled: true
+  :configurable_attributes:
+    EnforcedStyle: normal
+    SupportedStyles:
+    - normal
+    - rails
+- :name: Layout/IndentationWidth
+  :department_name: Layout
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Use 2 spaces for indentation.
+    StyleGuide: "#spaces-indentation"
+    Enabled: true
+  :configurable_attributes:
+    Width: '2'
+    IgnoredPatterns: []
+- :name: Layout/IndentHash
+  :department_name: Layout
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Checks the indentation of the first key in a hash literal.
+    Enabled: true
+  :configurable_attributes:
+    EnforcedStyle: special_inside_parentheses
+    SupportedStyles:
+    - special_inside_parentheses
+    - consistent
+    - align_braces
+    IndentationWidth: ''
+- :name: Layout/IndentHeredoc
+  :department_name: Layout
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: This cops checks the indentation of the here document bodies.
+    StyleGuide: "#squiggly-heredocs"
+    Enabled: true
+  :configurable_attributes:
+    EnforcedStyle: auto_detection
+    SupportedStyles:
+    - auto_detection
+    - squiggly
+    - active_support
+    - powerpack
+    - unindent
+- :name: Layout/InitialIndentation
+  :department_name: Layout
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Checks the indentation of the first non-blank non-comment line in
+      a file.
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Layout/LeadingCommentSpace
+  :department_name: Layout
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Comments should start with a space.
+    StyleGuide: "#hash-space"
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Layout/MultilineArrayBraceLayout
+  :department_name: Layout
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Checks that the closing brace in an array literal is either on the
+      same line as the last array element, or a new line.
+    Enabled: true
+  :configurable_attributes:
+    EnforcedStyle: symmetrical
+    SupportedStyles:
+    - symmetrical
+    - new_line
+    - same_line
+- :name: Layout/MultilineAssignmentLayout
+  :department_name: Layout
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Check for a newline after the assignment operator in multi-line assignments.
+    StyleGuide: "#indent-conditional-assignment"
+    Enabled: false
+  :configurable_attributes:
+    SupportedTypes:
+    - block
+    - case
+    - class
+    - if
+    - kwbegin
+    - module
+    EnforcedStyle: new_line
+    SupportedStyles:
+    - same_line
+    - new_line
+- :name: Layout/MultilineBlockLayout
+  :department_name: Layout
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Ensures newlines after multiline block do statements.
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Layout/MultilineHashBraceLayout
+  :department_name: Layout
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Checks that the closing brace in a hash literal is either on the
+      same line as the last hash element, or a new line.
+    Enabled: true
+  :configurable_attributes:
+    EnforcedStyle: symmetrical
+    SupportedStyles:
+    - symmetrical
+    - new_line
+    - same_line
+- :name: Layout/MultilineMethodCallBraceLayout
+  :department_name: Layout
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Checks that the closing brace in a method call is either on the same
+      line as the last method argument, or a new line.
+    Enabled: true
+  :configurable_attributes:
+    EnforcedStyle: symmetrical
+    SupportedStyles:
+    - symmetrical
+    - new_line
+    - same_line
+- :name: Layout/MultilineMethodCallIndentation
+  :department_name: Layout
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Checks indentation of method calls with the dot operator that span
+      more than one line.
+    Enabled: true
+  :configurable_attributes:
+    EnforcedStyle: aligned
+    SupportedStyles:
+    - aligned
+    - indented
+    - indented_relative_to_receiver
+    IndentationWidth: ''
+- :name: Layout/MultilineMethodDefinitionBraceLayout
+  :department_name: Layout
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Checks that the closing brace in a method definition is either on
+      the same line as the last method parameter, or a new line.
+    Enabled: true
+  :configurable_attributes:
+    EnforcedStyle: symmetrical
+    SupportedStyles:
+    - symmetrical
+    - new_line
+    - same_line
+- :name: Layout/MultilineOperationIndentation
+  :department_name: Layout
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Checks indentation of binary operations that span more than one line.
+    Enabled: true
+  :configurable_attributes:
+    EnforcedStyle: aligned
+    SupportedStyles:
+    - aligned
+    - indented
+    IndentationWidth: ''
+- :name: Layout/RescueEnsureAlignment
+  :department_name: Layout
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Align rescues and ensures correctly.
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Layout/SpaceAfterColon
+  :department_name: Layout
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Use spaces after colons.
+    StyleGuide: "#spaces-operators"
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Layout/SpaceAfterComma
+  :department_name: Layout
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Use spaces after commas.
+    StyleGuide: "#spaces-operators"
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Layout/SpaceAfterMethodName
+  :department_name: Layout
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Do not put a space between a method name and the opening parenthesis
+      in a method definition.
+    StyleGuide: "#parens-no-spaces"
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Layout/SpaceAfterNot
+  :department_name: Layout
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Tracks redundant space after the ! operator.
+    StyleGuide: "#no-space-bang"
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Layout/SpaceAfterSemicolon
+  :department_name: Layout
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Use spaces after semicolons.
+    StyleGuide: "#spaces-operators"
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Layout/SpaceAroundBlockParameters
+  :department_name: Layout
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Checks the spacing inside and after block parameters pipes.
+    Enabled: true
+  :configurable_attributes:
+    EnforcedStyleInsidePipes: no_space
+    SupportedStylesInsidePipes:
+    - space
+    - no_space
+- :name: Layout/SpaceAroundEqualsInParameterDefault
+  :department_name: Layout
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Checks that the equals signs in parameter default assignments have
+      or don't have surrounding space depending on configuration.
+    StyleGuide: "#spaces-around-equals"
+    Enabled: true
+  :configurable_attributes:
+    EnforcedStyle: space
+    SupportedStyles:
+    - space
+    - no_space
+- :name: Layout/SpaceAroundKeyword
+  :department_name: Layout
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Use a space around keywords if appropriate.
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Layout/SpaceAroundOperators
+  :department_name: Layout
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Use a single space around operators.
+    StyleGuide: "#spaces-operators"
+    Enabled: true
+  :configurable_attributes:
+    AllowForAlignment: 'true'
+- :name: Layout/SpaceBeforeBlockBraces
+  :department_name: Layout
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Checks that the left block brace has or doesn't have space before
+      it.
+    Enabled: true
+  :configurable_attributes:
+    EnforcedStyle: space
+    SupportedStyles:
+    - space
+    - no_space
+    EnforcedStyleForEmptyBraces: space
+    SupportedStylesForEmptyBraces:
+    - space
+    - no_space
+- :name: Layout/SpaceBeforeComma
+  :department_name: Layout
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: No spaces before commas.
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Layout/SpaceBeforeComment
+  :department_name: Layout
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Checks for missing space between code and a comment on the same line.
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Layout/SpaceBeforeFirstArg
+  :department_name: Layout
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Checks that exactly one space is used between a method name and the
+      first argument for method calls without parentheses.
+    Enabled: true
+  :configurable_attributes:
+    AllowForAlignment: 'true'
+- :name: Layout/SpaceBeforeSemicolon
+  :department_name: Layout
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: No spaces before semicolons.
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Layout/SpaceInLambdaLiteral
+  :department_name: Layout
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Checks for spaces in lambda literals.
+    Enabled: true
+  :configurable_attributes:
+    EnforcedStyle: require_no_space
+    SupportedStyles:
+    - require_no_space
+    - require_space
+- :name: Layout/SpaceInsideArrayPercentLiteral
+  :department_name: Layout
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: No unnecessary additional spaces between elements in %i/%w literals.
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Layout/SpaceInsideArrayLiteralBrackets
+  :department_name: Layout
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Checks the spacing inside array literal brackets.
+    Enabled: true
+  :configurable_attributes:
+    EnforcedStyle: no_space
+    SupportedStyles:
+    - space
+    - no_space
+    - compact
+    EnforcedStyleForEmptyBrackets: no_space
+    SupportedStylesForEmptyBrackets:
+    - space
+    - no_space
+- :name: Layout/SpaceInsideBlockBraces
+  :department_name: Layout
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Checks that block braces have or don't have surrounding space. For
+      blocks taking parameters, checks that the left brace has or doesn't have trailing
+      space.
+    Enabled: true
+  :configurable_attributes:
+    EnforcedStyle: space
+    SupportedStyles:
+    - space
+    - no_space
+    EnforcedStyleForEmptyBraces: no_space
+    SupportedStylesForEmptyBraces:
+    - space
+    - no_space
+    SpaceBeforeBlockParameters: 'true'
+- :name: Layout/SpaceInsideHashLiteralBraces
+  :department_name: Layout
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Use spaces inside hash literal braces - or don't.
+    StyleGuide: "#spaces-operators"
+    Enabled: true
+  :configurable_attributes:
+    EnforcedStyle: space
+    SupportedStyles:
+    - space
+    - no_space
+    - compact
+    EnforcedStyleForEmptyBraces: no_space
+    SupportedStylesForEmptyBraces:
+    - space
+    - no_space
+- :name: Layout/SpaceInsideParens
+  :department_name: Layout
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: No spaces after ( or before ).
+    StyleGuide: "#spaces-braces"
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Layout/SpaceInsidePercentLiteralDelimiters
+  :department_name: Layout
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: No unnecessary spaces inside delimiters of %i/%w/%x literals.
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Layout/SpaceInsideRangeLiteral
+  :department_name: Layout
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: No spaces inside range literals.
+    StyleGuide: "#no-space-inside-range-literals"
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Layout/SpaceInsideReferenceBrackets
+  :department_name: Layout
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Checks the spacing inside referential brackets.
+    Enabled: true
+  :configurable_attributes:
+    EnforcedStyle: no_space
+    SupportedStyles:
+    - space
+    - no_space
+- :name: Layout/SpaceInsideStringInterpolation
+  :department_name: Layout
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Checks for padding/surrounding spaces inside string interpolation.
+    StyleGuide: "#string-interpolation"
+    Enabled: true
+  :configurable_attributes:
+    EnforcedStyle: no_space
+    SupportedStyles:
+    - space
+    - no_space
+- :name: Layout/Tab
+  :department_name: Layout
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: No hard tabs.
+    StyleGuide: "#spaces-indentation"
+    Enabled: true
+  :configurable_attributes:
+    IndentationWidth: ''
+- :name: Layout/TrailingBlankLines
+  :department_name: Layout
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Checks trailing blank lines and final newline.
+    StyleGuide: "#newline-eof"
+    Enabled: true
+  :configurable_attributes:
+    EnforcedStyle: final_newline
+    SupportedStyles:
+    - final_newline
+    - final_blank_line
+- :name: Layout/TrailingWhitespace
+  :department_name: Layout
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Avoid trailing whitespace.
+    StyleGuide: "#no-trailing-whitespace"
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Lint/AmbiguousBlockAssociation
+  :department_name: Lint
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Checks for ambiguous block association with method when param passed
+      without parentheses.
+    StyleGuide: "#syntax"
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Lint/AmbiguousOperator
+  :department_name: Lint
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Checks for ambiguous operators in the first argument of a method
+      invocation without parentheses.
+    StyleGuide: "#method-invocation-parens"
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Lint/AmbiguousRegexpLiteral
+  :department_name: Lint
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Checks for ambiguous regexp literals in the first argument of a method
+      invocation without parentheses.
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Lint/AssignmentInCondition
+  :department_name: Lint
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Don't use assignment in conditions.
+    StyleGuide: "#safe-assignment-in-condition"
+    Enabled: true
+  :configurable_attributes:
+    AllowSafeAssignment: 'true'
+- :name: Lint/BlockAlignment
+  :department_name: Lint
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Align block ends correctly.
+    Enabled: true
+  :configurable_attributes:
+    EnforcedStyleAlignWith: either
+    SupportedStylesAlignWith:
+    - either
+    - start_of_block
+    - start_of_line
+- :name: Lint/BooleanSymbol
+  :department_name: Lint
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Check for `:true` and `:false` symbols.
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Lint/CircularArgumentReference
+  :department_name: Lint
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Default values in optional keyword arguments and optional ordinal
+      arguments should not refer back to the name of the argument.
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Lint/ConditionPosition
+  :department_name: Lint
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Checks for condition placed in a confusing position relative to the
+      keyword.
+    StyleGuide: "#same-line-condition"
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Lint/Debugger
+  :department_name: Lint
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Check for debugger calls.
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Lint/DefEndAlignment
+  :department_name: Lint
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Align ends corresponding to defs correctly.
+    Enabled: true
+  :configurable_attributes:
+    EnforcedStyleAlignWith: start_of_line
+    SupportedStylesAlignWith:
+    - start_of_line
+    - def
+    AutoCorrect: 'false'
+- :name: Lint/DeprecatedClassMethods
+  :department_name: Lint
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Check for deprecated class method calls.
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Lint/DuplicateCaseCondition
+  :department_name: Lint
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Do not repeat values in case conditionals.
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Lint/DuplicateMethods
+  :department_name: Lint
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Check for duplicate method definitions.
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Lint/DuplicatedKey
+  :department_name: Lint
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Check for duplicate keys in hash literals.
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Lint/EachWithObjectArgument
+  :department_name: Lint
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Check for immutable argument given to each_with_object.
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Lint/ElseLayout
+  :department_name: Lint
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Check for odd code arrangement in an else block.
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Lint/EmptyEnsure
+  :department_name: Lint
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Checks for empty ensure block.
+    Enabled: true
+  :configurable_attributes:
+    AutoCorrect: 'false'
+- :name: Lint/EmptyExpression
+  :department_name: Lint
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Checks for empty expressions.
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Lint/EmptyInterpolation
+  :department_name: Lint
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Checks for empty string interpolation.
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Lint/EmptyWhen
+  :department_name: Lint
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Checks for `when` branches with empty bodies.
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Lint/EndAlignment
+  :department_name: Lint
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Align ends correctly.
+    Enabled: true
+  :configurable_attributes:
+    EnforcedStyleAlignWith: keyword
+    SupportedStylesAlignWith:
+    - keyword
+    - variable
+    - start_of_line
+    AutoCorrect: 'false'
+- :name: Lint/EndInMethod
+  :department_name: Lint
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: END blocks should not be placed inside method definitions.
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Lint/EnsureReturn
+  :department_name: Lint
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Do not use return in an ensure block.
+    StyleGuide: "#no-return-ensure"
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Lint/FloatOutOfRange
+  :department_name: Lint
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Catches floating-point literals too large or small for Ruby to represent.
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Lint/FormatParameterMismatch
+  :department_name: Lint
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: The number of parameters to format/sprint must match the fields.
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Lint/HandleExceptions
+  :department_name: Lint
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Don't suppress exception.
+    StyleGuide: "#dont-hide-exceptions"
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Lint/ImplicitStringConcatenation
+  :department_name: Lint
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Checks for adjacent string literals on the same line, which could
+      better be represented as a single string literal.
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Lint/InheritException
+  :department_name: Lint
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Avoid inheriting from the `Exception` class.
+    Enabled: true
+  :configurable_attributes:
+    EnforcedStyle: runtime_error
+    SupportedStyles:
+    - runtime_error
+    - standard_error
+- :name: Lint/IneffectiveAccessModifier
+  :department_name: Lint
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Checks for attempts to use `private` or `protected` to set the visibility
+      of a class method, which does not work.
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Lint/InterpolationCheck
+  :department_name: Lint
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Raise warning for interpolation in single q strs
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Lint/LiteralAsCondition
+  :department_name: Lint
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Checks of literals used in conditions.
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Lint/LiteralInInterpolation
+  :department_name: Lint
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Checks for literals used in interpolation.
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Lint/Loop
+  :department_name: Lint
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Use Kernel#loop with break rather than begin/end/until or begin/end/while
+      for post-loop tests.
+    StyleGuide: "#loop-with-break"
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Lint/MissingCopEnableDirective
+  :department_name: Lint
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Checks for a `# rubocop:enable` after `# rubocop:disable`
+    Enabled: true
+  :configurable_attributes:
+    MaximumRangeSize: Infinity
+- :name: Lint/MultipleCompare
+  :department_name: Lint
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Use `&&` operator to compare multiple value.
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Lint/NestedMethodDefinition
+  :department_name: Lint
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Do not use nested method definitions.
+    StyleGuide: "#no-nested-methods"
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Lint/NestedPercentLiteral
+  :department_name: Lint
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Checks for nested percent literals.
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Lint/NextWithoutAccumulator
+  :department_name: Lint
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Do not omit the accumulator when calling `next` in a `reduce`/`inject`
+      block.
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Lint/NonLocalExitFromIterator
+  :department_name: Lint
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Do not use return in iterator to cause non-local exit.
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Lint/ParenthesesAsGroupedExpression
+  :department_name: Lint
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Checks for method calls with a space before the opening parenthesis.
+    StyleGuide: "#parens-no-spaces"
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Lint/PercentStringArray
+  :department_name: Lint
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Checks for unwanted commas and quotes in %w/%W literals.
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Lint/PercentSymbolArray
+  :department_name: Lint
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Checks for unwanted commas and colons in %i/%I literals.
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Lint/RandOne
+  :department_name: Lint
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Checks for `rand(1)` calls. Such calls always return `0` and most
+      likely a mistake.
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Lint/RedundantWithIndex
+  :department_name: Lint
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Checks for redundant `with_index`.
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Lint/RedundantWithObject
+  :department_name: Lint
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Checks for redundant `with_object`.
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Lint/RegexpAsCondition
+  :department_name: Lint
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Do not use regexp literal as a condition. The regexp literal matches
+      `$_` implicitly.
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Lint/RequireParentheses
+  :department_name: Lint
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Use parentheses in the method call to avoid confusion about precedence.
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Lint/RescueException
+  :department_name: Lint
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Avoid rescuing the Exception class.
+    StyleGuide: "#no-blind-rescues"
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Lint/RescueType
+  :department_name: Lint
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Avoid rescuing from non constants that could result in a `TypeError`.
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Lint/ReturnInVoidContext
+  :department_name: Lint
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Checks for return in void context.
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Lint/SafeNavigationChain
+  :department_name: Lint
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Do not chain ordinary method call after safe navigation operator.
+    Enabled: true
+  :configurable_attributes:
+    Whitelist:
+    - present?
+    - blank?
+    - presence
+    - try
+- :name: Lint/ScriptPermission
+  :department_name: Lint
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Grant script file execute permission.
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Lint/ShadowedArgument
+  :department_name: Lint
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Avoid reassigning arguments before they were used.
+    Enabled: true
+  :configurable_attributes:
+    IgnoreImplicitReferences: 'false'
+- :name: Lint/ShadowedException
+  :department_name: Lint
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Avoid rescuing a higher level exception before a lower level exception.
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Lint/ShadowingOuterLocalVariable
+  :department_name: Lint
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Do not use the same name as outer local variable for block arguments
+      or block local variables.
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Lint/StringConversionInInterpolation
+  :department_name: Lint
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Checks for Object#to_s usage in string interpolation.
+    StyleGuide: "#no-to-s"
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Lint/Syntax
+  :department_name: Lint
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Checks syntax error
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Lint/UnderscorePrefixedVariableName
+  :department_name: Lint
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Do not use prefix `_` for a variable that is used.
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Lint/UnifiedInteger
+  :department_name: Lint
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Use Integer instead of Fixnum or Bignum
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Lint/UnneededDisable
+  :department_name: Lint
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: 'Checks for rubocop:disable comments that can be removed. Note: this
+      cop is not disabled when disabling all cops. It must be explicitly disabled.'
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Lint/UnneededRequireStatement
+  :department_name: Lint
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Checks for unnecessary `require` statement.
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Lint/UnneededSplatExpansion
+  :department_name: Lint
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Checks for splat unnecessarily being called on literals
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Lint/UnreachableCode
+  :department_name: Lint
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Unreachable code.
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Lint/UnusedBlockArgument
+  :department_name: Lint
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Checks for unused block arguments.
+    StyleGuide: "#underscore-unused-vars"
+    Enabled: true
+  :configurable_attributes:
+    IgnoreEmptyBlocks: 'true'
+    AllowUnusedKeywordArguments: 'false'
+- :name: Lint/UnusedMethodArgument
+  :department_name: Lint
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Checks for unused method arguments.
+    StyleGuide: "#underscore-unused-vars"
+    Enabled: true
+  :configurable_attributes:
+    AllowUnusedKeywordArguments: 'false'
+    IgnoreEmptyMethods: 'true'
+- :name: Lint/UriEscapeUnescape
+  :department_name: Lint
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: "`URI.escape` method is obsolete and should not be used. Instead,
+      use `CGI.escape`, `URI.encode_www_form` or `URI.encode_www_form_component` depending
+      on your specific use case. Also `URI.unescape` method is obsolete and should
+      not be used. Instead, use `CGI.unescape`, `URI.decode_www_form` or `URI.decode_www_form_component`
+      depending on your specific use case."
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Lint/UriRegexp
+  :department_name: Lint
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Use `URI::DEFAULT_PARSER.make_regexp` instead of `URI.regexp`.
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Lint/UselessAccessModifier
+  :department_name: Lint
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Checks for useless access modifiers.
+    Enabled: true
+  :configurable_attributes:
+    ContextCreatingMethods: []
+    MethodCreatingMethods: []
+- :name: Lint/UselessAssignment
+  :department_name: Lint
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Checks for useless assignment to a local variable.
+    StyleGuide: "#underscore-unused-vars"
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Lint/UselessComparison
+  :department_name: Lint
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Checks for comparison of something with itself.
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Lint/UselessElseWithoutRescue
+  :department_name: Lint
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Checks for useless `else` in `begin..end` without `rescue`.
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Lint/UselessSetterCall
+  :department_name: Lint
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Checks for useless setter call to a local variable.
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Lint/Void
+  :department_name: Lint
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Possible use of operator/literal/variable in void context.
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Metrics/CyclomaticComplexity
+  :department_name: Metrics
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: A complexity metric that is strongly correlated to the number of
+      test cases needed to validate a method.
+    Enabled: true
+  :configurable_attributes:
+    Max: '6'
+- :name: Metrics/AbcSize
+  :department_name: Metrics
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: A calculated magnitude based on number of assignments, branches,
+      and conditions.
+    Reference: http://c2.com/cgi/wiki?AbcMetric
+    Enabled: true
+  :configurable_attributes:
+    Max: '15'
+- :name: Metrics/BlockLength
+  :department_name: Metrics
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Avoid long blocks with many lines.
+    Enabled: true
+  :configurable_attributes:
+    CountComments: 'false'
+    Max: '25'
+    ExcludedMethods: []
+- :name: Metrics/BlockNesting
+  :department_name: Metrics
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Avoid excessive block nesting
+    StyleGuide: "#three-is-the-number-thou-shalt-count"
+    Enabled: true
+  :configurable_attributes:
+    CountBlocks: 'false'
+    Max: '3'
+- :name: Metrics/ClassLength
+  :department_name: Metrics
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Avoid classes longer than 100 lines of code.
+    Enabled: true
+  :configurable_attributes:
+    CountComments: 'false'
+    Max: '100'
+- :name: Metrics/LineLength
+  :department_name: Metrics
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Limit lines to 80 characters.
+    StyleGuide: "#80-character-limits"
+    Enabled: true
+  :configurable_attributes:
+    Max: '80'
+    AllowHeredoc: 'true'
+    AllowURI: 'true'
+    URISchemes:
+    - http
+    - https
+    IgnoreCopDirectives: 'false'
+    IgnoredPatterns: []
+- :name: Metrics/MethodLength
+  :department_name: Metrics
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Avoid methods longer than 10 lines of code.
+    StyleGuide: "#short-methods"
+    Enabled: true
+  :configurable_attributes:
+    CountComments: 'false'
+    Max: '10'
+- :name: Metrics/ModuleLength
+  :department_name: Metrics
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Avoid modules longer than 100 lines of code.
+    Enabled: true
+  :configurable_attributes:
+    CountComments: 'false'
+    Max: '100'
+- :name: Metrics/ParameterLists
+  :department_name: Metrics
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Avoid parameter lists longer than three or four parameters.
+    StyleGuide: "#too-many-params"
+    Enabled: true
+  :configurable_attributes:
+    Max: '5'
+    CountKeywordArgs: 'true'
+- :name: Metrics/PerceivedComplexity
+  :department_name: Metrics
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: A complexity metric geared towards measuring complexity for a human
+      reader.
+    Enabled: true
+  :configurable_attributes:
+    Max: '7'
+- :name: Naming/AccessorMethodName
+  :department_name: Naming
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Check the naming of accessor methods for get_/set_.
+    StyleGuide: "#accessor_mutator_method_names"
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Naming/AsciiIdentifiers
+  :department_name: Naming
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Use only ascii symbols in identifiers.
+    StyleGuide: "#english-identifiers"
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Naming/ClassAndModuleCamelCase
+  :department_name: Naming
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Use CamelCase for classes and modules.
+    StyleGuide: "#camelcase-classes"
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Naming/ConstantName
+  :department_name: Naming
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Constants should use SCREAMING_SNAKE_CASE.
+    StyleGuide: "#screaming-snake-case"
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Naming/FileName
+  :department_name: Naming
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Use snake_case for source file names.
+    StyleGuide: "#snake-case-files"
+    Enabled: true
+  :configurable_attributes:
+    Exclude: []
+    ExpectMatchingDefinition: 'false'
+    Regex: ''
+    IgnoreExecutableScripts: 'true'
+    AllowedAcronyms:
+    - CLI
+    - DSL
+    - ACL
+    - API
+    - ASCII
+    - CPU
+    - CSS
+    - DNS
+    - EOF
+    - GUID
+    - HTML
+    - HTTP
+    - HTTPS
+    - ID
+    - IP
+    - JSON
+    - LHS
+    - QPS
+    - RAM
+    - RHS
+    - RPC
+    - SLA
+    - SMTP
+    - SQL
+    - SSH
+    - TCP
+    - TLS
+    - TTL
+    - UDP
+    - UI
+    - UID
+    - UUID
+    - URI
+    - URL
+    - UTF8
+    - VM
+    - XML
+    - XMPP
+    - XSRF
+    - XSS
+- :name: Naming/HeredocDelimiterCase
+  :department_name: Naming
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Use configured case for heredoc delimiters.
+    StyleGuide: "#heredoc-delimiters"
+    Enabled: true
+  :configurable_attributes:
+    EnforcedStyle: uppercase
+    SupportedStyles:
+    - lowercase
+    - uppercase
+- :name: Naming/HeredocDelimiterNaming
+  :department_name: Naming
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Use descriptive heredoc delimiters.
+    StyleGuide: "#heredoc-delimiters"
+    Enabled: true
+  :configurable_attributes:
+    Blacklist:
+    - END
+    - !ruby/regexp /EO[A-Z]{1}/
+- :name: Naming/MethodName
+  :department_name: Naming
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Use the configured style when naming methods.
+    StyleGuide: "#snake-case-symbols-methods-vars"
+    Enabled: true
+  :configurable_attributes:
+    EnforcedStyle: snake_case
+    SupportedStyles:
+    - snake_case
+    - camelCase
+- :name: Naming/BinaryOperatorParameterName
+  :department_name: Naming
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: When defining binary operators, name the argument other.
+    StyleGuide: "#other-arg"
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Naming/PredicateName
+  :department_name: Naming
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Check the names of predicate methods.
+    StyleGuide: "#bool-methods-qmark"
+    Enabled: true
+  :configurable_attributes:
+    NamePrefix:
+    - is_
+    - has_
+    - have_
+    NamePrefixBlacklist:
+    - is_
+    - has_
+    - have_
+    NameWhitelist:
+    - is_a?
+    MethodDefinitionMacros:
+    - define_method
+    - define_singleton_method
+    Exclude:
+    - "/home/masx/Developer/projects/codacy-rubocop/spec/**/*"
+- :name: Naming/VariableName
+  :department_name: Naming
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Use the configured style when naming variables.
+    StyleGuide: "#snake-case-symbols-methods-vars"
+    Enabled: true
+  :configurable_attributes:
+    EnforcedStyle: snake_case
+    SupportedStyles:
+    - snake_case
+    - camelCase
+- :name: Naming/VariableNumber
+  :department_name: Naming
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Use the configured style when numbering variables.
+    Enabled: true
+  :configurable_attributes:
+    EnforcedStyle: normalcase
+    SupportedStyles:
+    - snake_case
+    - normalcase
+    - non_integer
+- :name: Performance/Caller
+  :department_name: Performance
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Use `caller(n..n)` instead of `caller`.
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Performance/CaseWhenSplat
+  :department_name: Performance
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Place `when` conditions that use splat at the end of the list of
+      `when` branches.
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Performance/Casecmp
+  :department_name: Performance
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Use `casecmp` rather than `downcase ==`, `upcase ==`, `== downcase`,
+      or `== upcase`..
+    Reference: https://github.com/JuanitoFatas/fast-ruby#stringcasecmp-vs-stringdowncase---code
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Performance/Count
+  :department_name: Performance
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Use `count` instead of `select...size`, `reject...size`, `select...count`,
+      `reject...count`, `select...length`, and `reject...length`.
+    Enabled: true
+  :configurable_attributes:
+    SafeMode: 'true'
+- :name: Performance/Detect
+  :department_name: Performance
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Use `detect` instead of `select.first`, `find_all.first`, `select.last`,
+      and `find_all.last`.
+    Reference: https://github.com/JuanitoFatas/fast-ruby#enumerabledetect-vs-enumerableselectfirst-code
+    Enabled: true
+  :configurable_attributes:
+    SafeMode: 'true'
+- :name: Performance/DoubleStartEndWith
+  :department_name: Performance
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Use `str.{start,end}_with?(x, ..., y, ...)` instead of `str.{start,end}_with?(x,
+      ...) || str.{start,end}_with?(y, ...)`.
+    Enabled: true
+  :configurable_attributes:
+    IncludeActiveSupportAliases: 'false'
+- :name: Performance/EndWith
+  :department_name: Performance
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Use `end_with?` instead of a regex match anchored to the end of a
+      string.
+    Reference: https://github.com/JuanitoFatas/fast-ruby#stringmatch-vs-stringstart_withstringend_with-code-start-code-end
+    Enabled: true
+  :configurable_attributes:
+    AutoCorrect: 'false'
+- :name: Performance/FixedSize
+  :department_name: Performance
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Do not compute the size of statically sized objects except in constants
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Performance/FlatMap
+  :department_name: Performance
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Use `Enumerable#flat_map` instead of `Enumerable#map...Array#flatten(1)`
+      or `Enumberable#collect..Array#flatten(1)`
+    Reference: https://github.com/JuanitoFatas/fast-ruby#enumerablemaparrayflatten-vs-enumerableflat_map-code
+    Enabled: true
+  :configurable_attributes:
+    EnabledForFlattenWithoutParams: 'false'
+- :name: Performance/HashEachMethods
+  :department_name: Performance
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Use `Hash#each_key` and `Hash#each_value` instead of `Hash#keys.each`
+      and `Hash#values.each`.
+    StyleGuide: "#hash-each"
+    Enabled: true
+  :configurable_attributes:
+    AutoCorrect: 'false'
+- :name: Performance/LstripRstrip
+  :department_name: Performance
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Use `strip` instead of `lstrip.rstrip`.
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Performance/RangeInclude
+  :department_name: Performance
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Use `Range#cover?` instead of `Range#include?`.
+    Reference: https://github.com/JuanitoFatas/fast-ruby#cover-vs-include-code
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Performance/RedundantBlockCall
+  :department_name: Performance
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Use `yield` instead of `block.call`.
+    Reference: https://github.com/JuanitoFatas/fast-ruby#proccall-and-block-arguments-vs-yieldcode
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Performance/RedundantMatch
+  :department_name: Performance
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Use `=~` instead of `String#match` or `Regexp#match` in a context
+      where the returned `MatchData` is not needed.
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Performance/RedundantMerge
+  :department_name: Performance
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Use Hash#[]=, rather than Hash#merge! with a single key-value pair.
+    Reference: https://github.com/JuanitoFatas/fast-ruby#hashmerge-vs-hash-code
+    Enabled: true
+  :configurable_attributes:
+    MaxKeyValuePairs: '2'
+- :name: Performance/RedundantSortBy
+  :department_name: Performance
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Use `sort` instead of `sort_by { |x| x }`.
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Performance/RegexpMatch
+  :department_name: Performance
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Use `match?` instead of `Regexp#match`, `String#match`, `Symbol#match`,
+      `Regexp#===`, or `=~` when `MatchData` is not used.
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Performance/ReverseEach
+  :department_name: Performance
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Use `reverse_each` instead of `reverse.each`.
+    Reference: https://github.com/JuanitoFatas/fast-ruby#enumerablereverseeach-vs-enumerablereverse_each-code
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Performance/Sample
+  :department_name: Performance
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Use `sample` instead of `shuffle.first`, `shuffle.last`, and `shuffle[Integer]`.
+    Reference: https://github.com/JuanitoFatas/fast-ruby#arrayshufflefirst-vs-arraysample-code
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Performance/Size
+  :department_name: Performance
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Use `size` instead of `count` for counting the number of elements
+      in `Array` and `Hash`.
+    Reference: https://github.com/JuanitoFatas/fast-ruby#arraylength-vs-arraysize-vs-arraycount-code
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Performance/CompareWithBlock
+  :department_name: Performance
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Use `sort_by(&:foo)` instead of `sort { |a, b| a.foo <=> b.foo }`.
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Performance/StartWith
+  :department_name: Performance
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Use `start_with?` instead of a regex match anchored to the beginning
+      of a string.
+    Reference: https://github.com/JuanitoFatas/fast-ruby#stringmatch-vs-stringstart_withstringend_with-code-start-code-end
+    Enabled: true
+  :configurable_attributes:
+    AutoCorrect: 'false'
+- :name: Performance/StringReplacement
+  :department_name: Performance
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Use `tr` instead of `gsub` when you are replacing the same number
+      of characters. Use `delete` instead of `gsub` when you are deleting characters.
+    Reference: https://github.com/JuanitoFatas/fast-ruby#stringgsub-vs-stringtr-code
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Performance/TimesMap
+  :department_name: Performance
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Checks for .times.map calls.
+    Enabled: true
+  :configurable_attributes:
+    AutoCorrect: 'false'
+- :name: Performance/UnfreezeString
+  :department_name: Performance
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Use unary plus to get an unfrozen string literal.
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Performance/UriDefaultParser
+  :department_name: Performance
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Use `URI::DEFAULT_PARSER` instead of `URI::Parser.new`.
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Style/Alias
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Use alias instead of alias_method.
+    StyleGuide: "#alias-method"
+    Enabled: true
+  :configurable_attributes:
+    EnforcedStyle: prefer_alias
+    SupportedStyles:
+    - prefer_alias
+    - prefer_alias_method
+- :name: Style/AndOr
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Use &&/|| instead of and/or.
+    StyleGuide: "#no-and-or-or"
+    Enabled: true
+  :configurable_attributes:
+    EnforcedStyle: always
+    SupportedStyles:
+    - always
+    - conditionals
+- :name: Style/ArrayJoin
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Use Array#join instead of Array#*.
+    StyleGuide: "#array-join"
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Style/AsciiComments
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Use only ascii symbols in comments.
+    StyleGuide: "#english-comments"
+    Enabled: true
+  :configurable_attributes:
+    AllowedChars: []
+- :name: Style/Attr
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Checks for uses of Module#attr.
+    StyleGuide: "#attr"
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Style/AutoResourceCleanup
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Suggests the usage of an auto resource cleanup version of a method
+      (if available).
+    Enabled: false
+  :configurable_attributes: {}
+- :name: Style/BarePercentLiterals
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Checks if usage of %() or %Q() matches configuration.
+    StyleGuide: "#percent-q-shorthand"
+    Enabled: true
+  :configurable_attributes:
+    EnforcedStyle: bare_percent
+    SupportedStyles:
+    - percent_q
+    - bare_percent
+- :name: Style/BeginBlock
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Avoid the use of BEGIN blocks.
+    StyleGuide: "#no-BEGIN-blocks"
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Style/BlockComments
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Do not use block comments.
+    StyleGuide: "#no-block-comments"
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Style/BlockDelimiters
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Avoid using {...} for multi-line blocks (multiline chaining is always
+      ugly). Prefer {...} over do...end for single-line blocks.
+    StyleGuide: "#single-line-blocks"
+    Enabled: true
+  :configurable_attributes:
+    EnforcedStyle: line_count_based
+    SupportedStyles:
+    - line_count_based
+    - semantic
+    - braces_for_chaining
+    ProceduralMethods:
+    - benchmark
+    - bm
+    - bmbm
+    - create
+    - each_with_object
+    - measure
+    - new
+    - realtime
+    - tap
+    - with_object
+    FunctionalMethods:
+    - let
+    - let!
+    - subject
+    - watch
+    IgnoredMethods:
+    - lambda
+    - proc
+    - it
+- :name: Style/BracesAroundHashParameters
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Enforce braces style around hash parameters.
+    Enabled: true
+  :configurable_attributes:
+    EnforcedStyle: no_braces
+    SupportedStyles:
+    - braces
+    - no_braces
+    - context_dependent
+- :name: Style/CaseEquality
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Avoid explicit use of the case equality operator(===).
+    StyleGuide: "#no-case-equality"
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Style/CharacterLiteral
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Checks for uses of character literals.
+    StyleGuide: "#no-character-literals"
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Style/ClassAndModuleChildren
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Checks style of children classes and modules.
+    StyleGuide: "#namespace-definition"
+    Enabled: true
+  :configurable_attributes:
+    AutoCorrect: 'false'
+    EnforcedStyle: nested
+    SupportedStyles:
+    - nested
+    - compact
+- :name: Style/ClassCheck
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Enforces consistent use of `Object#is_a?` or `Object#kind_of?`.
+    Enabled: true
+  :configurable_attributes:
+    EnforcedStyle: is_a?
+    SupportedStyles:
+    - is_a?
+    - kind_of?
+- :name: Style/ClassMethods
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Use self when defining module/class methods.
+    StyleGuide: "#def-self-class-methods"
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Style/ClassVars
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Avoid the use of class variables.
+    StyleGuide: "#no-class-vars"
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Style/CollectionMethods
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Preferred collection methods.
+    StyleGuide: "#map-find-select-reduce-size"
+    Enabled: false
+  :configurable_attributes:
+    PreferredMethods: '{"collect"=>"map", "collect!"=>"map!", "inject"=>"reduce",
+      "detect"=>"find", "find_all"=>"select"}'
+- :name: Style/ColonMethodCall
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: 'Do not use :: for method call.'
+    StyleGuide: "#double-colons"
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Style/ColonMethodDefinition
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: 'Do not use :: for defining class methods.'
+    StyleGuide: "#colon-method-definition"
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Style/CommandLiteral
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Use `` or %x around command literals.
+    StyleGuide: "#percent-x"
+    Enabled: true
+  :configurable_attributes:
+    EnforcedStyle: backticks
+    SupportedStyles:
+    - backticks
+    - percent_x
+    - mixed
+    AllowInnerBackticks: 'false'
+- :name: Style/CommentAnnotation
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Checks formatting of special comments (TODO, FIXME, OPTIMIZE, HACK,
+      REVIEW).
+    StyleGuide: "#annotate-keywords"
+    Enabled: true
+  :configurable_attributes:
+    Keywords:
+    - TODO
+    - FIXME
+    - OPTIMIZE
+    - HACK
+    - REVIEW
+- :name: Style/CommentedKeyword
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Do not place comments on the same line as certain keywords.
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Style/ConditionalAssignment
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Use the return value of `if` and `case` statements for assignment
+      to a variable and variable comparison instead of assigning that variable inside
+      of each branch.
+    Enabled: true
+  :configurable_attributes:
+    EnforcedStyle: assign_to_condition
+    SupportedStyles:
+    - assign_to_condition
+    - assign_inside_condition
+    SingleLineConditionsOnly: 'true'
+    IncludeTernaryExpressions: 'true'
+- :name: Style/Copyright
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Include a copyright notice in each file before any code.
+    Enabled: false
+  :configurable_attributes:
+    Notice: "^Copyright (\\(c\\) )?2[0-9]{3} .+"
+    AutocorrectNotice: ''
+- :name: Style/DateTime
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Use Date or Time over DateTime.
+    StyleGuide: "#date--time"
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Style/DefWithParentheses
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Use def with parentheses when there are arguments.
+    StyleGuide: "#method-parens"
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Style/Dir
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Use the `__dir__` method to retrieve the canonicalized absolute path
+      to the current file.
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Style/DocumentationMethod
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Public methods.
+    Enabled: false
+  :configurable_attributes:
+    Exclude:
+    - "/home/masx/Developer/projects/codacy-rubocop/spec/**/*"
+    - "/home/masx/Developer/projects/codacy-rubocop/test/**/*"
+    RequireForNonPublicMethods: 'false'
+- :name: Style/Documentation
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Document classes and non-namespace modules.
+    Enabled: true
+  :configurable_attributes:
+    Exclude:
+    - "/home/masx/Developer/projects/codacy-rubocop/spec/**/*"
+    - "/home/masx/Developer/projects/codacy-rubocop/test/**/*"
+- :name: Style/DoubleNegation
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Checks for uses of double negation (!!).
+    StyleGuide: "#no-bang-bang"
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Style/EachForSimpleLoop
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Use `Integer#times` for a simple loop which iterates a fixed number
+      of times.
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Style/EachWithObject
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Prefer `each_with_object` over `inject` or `reduce`.
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Style/EmptyBlockParameter
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Omit pipes for empty block parameters.
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Style/EmptyCaseCondition
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Avoid empty condition in case statements.
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Style/EmptyElse
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Avoid empty else-clauses.
+    Enabled: true
+  :configurable_attributes:
+    EnforcedStyle: both
+    SupportedStyles:
+    - empty
+    - nil
+    - both
+- :name: Style/EmptyLambdaParameter
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Omit parens for empty lambda parameters.
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Style/EmptyLiteral
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Prefer literals to Array.new/Hash.new/String.new.
+    StyleGuide: "#literal-array-hash"
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Style/EmptyMethod
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Checks the formatting of empty method definitions.
+    StyleGuide: "#no-single-line-methods"
+    Enabled: true
+  :configurable_attributes:
+    EnforcedStyle: compact
+    SupportedStyles:
+    - compact
+    - expanded
+- :name: Style/Encoding
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Use UTF-8 as the source file encoding.
+    StyleGuide: "#utf-8"
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Style/EndBlock
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Avoid the use of END blocks.
+    StyleGuide: "#no-END-blocks"
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Style/EvalWithLocation
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Pass `__FILE__` and `__LINE__` to `eval` method, as they are used
+      by backtraces.
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Style/EvenOdd
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Favor the use of Integer#even? && Integer#odd?
+    StyleGuide: "#predicate-methods"
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Style/FlipFlop
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Checks for flip flops
+    StyleGuide: "#no-flip-flops"
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Style/For
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Checks use of for or each in multiline loops.
+    StyleGuide: "#no-for-loops"
+    Enabled: true
+  :configurable_attributes:
+    EnforcedStyle: each
+    SupportedStyles:
+    - for
+    - each
+- :name: Style/FormatString
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Enforce the use of Kernel#sprintf, Kernel#format or String#%.
+    StyleGuide: "#sprintf"
+    Enabled: true
+  :configurable_attributes:
+    EnforcedStyle: format
+    SupportedStyles:
+    - format
+    - sprintf
+    - percent
+- :name: Style/FormatStringToken
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Use a consistent style for format string tokens.
+    Enabled: true
+  :configurable_attributes:
+    EnforcedStyle: annotated
+    SupportedStyles:
+    - annotated
+    - template
+    - unannotated
+- :name: Style/FrozenStringLiteralComment
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Add the frozen_string_literal comment to the top of files to help
+      transition from Ruby 2.3.0 to Ruby 3.0.
+    Enabled: true
+  :configurable_attributes:
+    EnforcedStyle: when_needed
+    SupportedStyles:
+    - when_needed
+    - always
+    - never
+- :name: Style/GlobalVars
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Do not introduce global variables.
+    StyleGuide: "#instance-vars"
+    Reference: http://www.zenspider.com/Languages/Ruby/QuickRef.html
+    Enabled: true
+  :configurable_attributes:
+    AllowedVariables: []
+- :name: Style/GuardClause
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Check for conditionals that can be replaced with guard clauses
+    StyleGuide: "#no-nested-conditionals"
+    Enabled: true
+  :configurable_attributes:
+    MinBodyLength: '1'
+- :name: Style/HashSyntax
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: 'Prefer Ruby 1.9 hash syntax { a: 1, b: 2 } over 1.8 syntax { :a
+      => 1, :b => 2 }.'
+    StyleGuide: "#hash-literals"
+    Enabled: true
+  :configurable_attributes:
+    EnforcedStyle: ruby19
+    SupportedStyles:
+    - ruby19
+    - hash_rockets
+    - no_mixed_keys
+    - ruby19_no_mixed_keys
+    UseHashRocketsWithSymbolValues: 'false'
+    PreferHashRocketsForNonAlnumEndingSymbols: 'false'
+- :name: Style/IdenticalConditionalBranches
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Checks that conditional statements do not have an identical line
+      at the end of each branch, which can validly be moved out of the conditional.
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Style/IfInsideElse
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Finds if nodes inside else, which can be converted to elsif.
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Style/IfUnlessModifier
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Favor modifier if/unless usage when you have a single-line body.
+    StyleGuide: "#if-as-a-modifier"
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Style/IfUnlessModifierOfIfUnless
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Avoid modifier if/unless usage on conditionals.
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Style/IfWithSemicolon
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Do not use if x; .... Use the ternary operator instead.
+    StyleGuide: "#no-semicolon-ifs"
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Style/ImplicitRuntimeError
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Use `raise` or `fail` with an explicit exception class and message,
+      rather than just a message.
+    Enabled: false
+  :configurable_attributes: {}
+- :name: Style/InfiniteLoop
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Use Kernel#loop for infinite loops.
+    StyleGuide: "#infinite-loop"
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Style/InverseMethods
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Use the inverse method instead of `!.method` if an inverse method
+      is defined.
+    Enabled: true
+  :configurable_attributes:
+    InverseMethods: "{:any?=>:none?, :even?=>:odd?, :===>:!=, :=~=>:!~, :<=>:>=, :>=>:<=}"
+    InverseBlocks: "{:select=>:reject, :select!=>:reject!}"
+- :name: Style/InlineComment
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Avoid trailing inline comments.
+    Enabled: false
+  :configurable_attributes: {}
+- :name: Style/Lambda
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Use the new lambda literal syntax for single-line blocks.
+    StyleGuide: "#lambda-multi-line"
+    Enabled: true
+  :configurable_attributes:
+    EnforcedStyle: line_count_dependent
+    SupportedStyles:
+    - line_count_dependent
+    - lambda
+    - literal
+- :name: Style/LambdaCall
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Use lambda.call(...) instead of lambda.(...).
+    StyleGuide: "#proc-call"
+    Enabled: true
+  :configurable_attributes:
+    EnforcedStyle: call
+    SupportedStyles:
+    - call
+    - braces
+- :name: Style/LineEndConcatenation
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Use \ instead of + or << to concatenate two string literals at line
+      end.
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Style/MethodCallWithoutArgsParentheses
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Do not use parentheses for method calls with no arguments.
+    StyleGuide: "#method-invocation-parens"
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Style/MethodCallWithArgsParentheses
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Use parentheses for method calls with arguments.
+    StyleGuide: "#method-invocation-parens"
+    Enabled: false
+  :configurable_attributes:
+    IgnoreMacros: 'true'
+    IgnoredMethods: []
+- :name: Style/MethodCalledOnDoEndBlock
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Avoid chaining a method call on a do...end block.
+    StyleGuide: "#single-line-blocks"
+    Enabled: false
+  :configurable_attributes: {}
+- :name: Style/MethodDefParentheses
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Checks if the method definitions have or don't have parentheses.
+    StyleGuide: "#method-parens"
+    Enabled: true
+  :configurable_attributes:
+    EnforcedStyle: require_parentheses
+    SupportedStyles:
+    - require_parentheses
+    - require_no_parentheses
+    - require_no_parentheses_except_multiline
+- :name: Style/MethodMissing
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Avoid using `method_missing`.
+    StyleGuide: "#no-method-missing"
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Style/MinMax
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Use `Enumerable#minmax` instead of `Enumerable#min` and `Enumerable#max`
+      in conjunction.'
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Style/MissingElse
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Require if/case expressions to have an else branches. If enabled,
+      it is recommended that Style/UnlessElse and Style/EmptyElse be enabled. This
+      will conflict with Style/EmptyElse if Style/EmptyElse is configured to style
+      "both"
+    Enabled: false
+  :configurable_attributes:
+    EnforcedStyle: both
+    SupportedStyles:
+    - if
+    - case
+    - both
+- :name: Style/MixinGrouping
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Checks for grouping of mixins in `class` and `module` bodies.
+    StyleGuide: "#mixin-grouping"
+    Enabled: true
+  :configurable_attributes:
+    EnforcedStyle: separated
+    SupportedStyles:
+    - separated
+    - grouped
+- :name: Style/MixinUsage
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Checks that `include`, `extend` and `prepend` exists at the top level.
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Style/ModuleFunction
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Checks for usage of `extend self` in modules.
+    StyleGuide: "#module-function"
+    Enabled: true
+  :configurable_attributes:
+    EnforcedStyle: module_function
+    SupportedStyles:
+    - module_function
+    - extend_self
+- :name: Style/MultilineBlockChain
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Avoid multi-line chains of blocks.
+    StyleGuide: "#single-line-blocks"
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Style/MultilineIfThen
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Do not use then for multi-line if/unless.
+    StyleGuide: "#no-then"
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Style/MultilineIfModifier
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Only use if/unless modifiers on single line statements.
+    StyleGuide: "#no-multiline-if-modifiers"
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Style/MultilineMemoization
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Wrap multiline memoizations in a `begin` and `end` block.
+    Enabled: true
+  :configurable_attributes:
+    EnforcedStyle: keyword
+    SupportedStyles:
+    - keyword
+    - braces
+- :name: Style/MultilineTernaryOperator
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: 'Avoid multi-line ?: (the ternary operator); use if/unless instead.'
+    StyleGuide: "#no-multiline-ternary"
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Style/MultipleComparison
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Avoid comparing a variable with multiple items in a conditional,
+      use Array#include? instead.
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Style/MutableConstant
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Do not assign mutable objects to constants.
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Style/NegatedIf
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Favor unless over if for negative conditions (or control flow or).
+    StyleGuide: "#unless-for-negatives"
+    Enabled: true
+  :configurable_attributes:
+    EnforcedStyle: both
+    SupportedStyles:
+    - both
+    - prefix
+    - postfix
+- :name: Style/NegatedWhile
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Favor until over while for negative conditions.
+    StyleGuide: "#until-for-negatives"
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Style/NestedModifier
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Avoid using nested modifiers.
+    StyleGuide: "#no-nested-modifiers"
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Style/NestedParenthesizedCalls
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Parenthesize method calls which are nested inside the argument list
+      of another parenthesized method call.
+    Enabled: true
+  :configurable_attributes:
+    Whitelist:
+    - be
+    - be_a
+    - be_an
+    - be_between
+    - be_falsey
+    - be_kind_of
+    - be_instance_of
+    - be_truthy
+    - be_within
+    - eq
+    - eql
+    - end_with
+    - include
+    - match
+    - raise_error
+    - respond_to
+    - start_with
+- :name: Style/NestedTernaryOperator
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Use one expression per branch in a ternary operator.
+    StyleGuide: "#no-nested-ternary"
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Style/Next
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Use `next` to skip iteration instead of a condition at the end.
+    StyleGuide: "#no-nested-conditionals"
+    Enabled: true
+  :configurable_attributes:
+    EnforcedStyle: skip_modifier_ifs
+    MinBodyLength: '3'
+    SupportedStyles:
+    - skip_modifier_ifs
+    - always
+- :name: Style/NilComparison
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Prefer x.nil? to x == nil.
+    StyleGuide: "#predicate-methods"
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Style/NonNilCheck
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Checks for redundant nil checks.
+    StyleGuide: "#no-non-nil-checks"
+    Enabled: true
+  :configurable_attributes:
+    IncludeSemanticChanges: 'false'
+- :name: Style/Not
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Use ! instead of not.
+    StyleGuide: "#bang-not-not"
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Style/NumericLiterals
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Add underscores to large numeric literals to improve their readability.
+    StyleGuide: "#underscores-in-numerics"
+    Enabled: true
+  :configurable_attributes:
+    MinDigits: '5'
+    Strict: 'false'
+- :name: Style/NumericLiteralPrefix
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Use smallcase prefixes for numeric literals.
+    StyleGuide: "#numeric-literal-prefixes"
+    Enabled: true
+  :configurable_attributes:
+    EnforcedOctalStyle: zero_with_o
+    SupportedOctalStyles:
+    - zero_with_o
+    - zero_only
+- :name: Style/NumericPredicate
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Checks for the use of predicate- or comparison methods for numeric
+      comparisons.
+    StyleGuide: "#predicate-methods"
+    Enabled: true
+  :configurable_attributes:
+    AutoCorrect: 'false'
+    EnforcedStyle: predicate
+    SupportedStyles:
+    - predicate
+    - comparison
+    Exclude:
+    - "/home/masx/Developer/projects/codacy-rubocop/spec/**/*"
+- :name: Style/OneLineConditional
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Favor the ternary operator(?:) over if/then/else/end constructs.
+    StyleGuide: "#ternary-operator"
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Style/OrAssignment
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Recommend usage of double pipe equals (||=) where applicable.
+    StyleGuide: "#double-pipe-for-uninit"
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Style/OptionHash
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Don't use option hashes when you can use keyword arguments.
+    Enabled: false
+  :configurable_attributes:
+    SuspiciousParamNames:
+    - options
+    - opts
+    - args
+    - params
+    - parameters
+- :name: Style/OptionalArguments
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Checks for optional arguments that do not appear at the end of the
+      argument list
+    StyleGuide: "#optional-arguments"
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Style/ParallelAssignment
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Check for simple usages of parallel assignment. It will only warn
+      when the number of variables matches on both sides of the assignment.
+    StyleGuide: "#parallel-assignment"
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Style/ParenthesesAroundCondition
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Don't use parentheses around the condition of an if/unless/while.
+    StyleGuide: "#no-parens-around-condition"
+    Enabled: true
+  :configurable_attributes:
+    AllowSafeAssignment: 'true'
+- :name: Style/PercentLiteralDelimiters
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Use `%`-literal delimiters consistently
+    StyleGuide: "#percent-literal-braces"
+    Enabled: true
+  :configurable_attributes:
+    PreferredDelimiters: '{"default"=>"()", "%i"=>"[]", "%I"=>"[]", "%r"=>"{}", "%w"=>"[]",
+      "%W"=>"[]"}'
+- :name: Style/PercentQLiterals
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Checks if uses of %Q/%q match the configured preference.
+    Enabled: true
+  :configurable_attributes:
+    EnforcedStyle: lower_case_q
+    SupportedStyles:
+    - lower_case_q
+    - upper_case_q
+- :name: Style/PerlBackrefs
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Avoid Perl-style regex back references.
+    StyleGuide: "#no-perl-regexp-last-matchers"
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Style/PreferredHashMethods
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Checks use of `has_key?` and `has_value?` Hash methods.
+    StyleGuide: "#hash-key"
+    Enabled: true
+  :configurable_attributes:
+    EnforcedStyle: short
+    SupportedStyles:
+    - short
+    - verbose
+- :name: Style/Proc
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Use proc instead of Proc.new.
+    StyleGuide: "#proc"
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Style/RaiseArgs
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Checks the arguments passed to raise/fail.
+    StyleGuide: "#exception-class-messages"
+    Enabled: true
+  :configurable_attributes:
+    EnforcedStyle: exploded
+    SupportedStyles:
+    - compact
+    - exploded
+- :name: Style/RandomWithOffset
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Prefer to use ranges when generating random numbers instead of integers
+      with offsets.
+    StyleGuide: "#random-numbers"
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Style/RedundantBegin
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Don't use begin blocks when they are not needed.
+    StyleGuide: "#begin-implicit"
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Style/RedundantException
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Checks for an obsolete RuntimeException argument in raise/fail.
+    StyleGuide: "#no-explicit-runtimeerror"
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Style/RedundantFreeze
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Checks usages of Object#freeze on immutable objects.
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Style/RedundantParentheses
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Checks for parentheses that seem not to serve any purpose.
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Style/RedundantReturn
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Don't use return where it's not required.
+    StyleGuide: "#no-explicit-return"
+    Enabled: true
+  :configurable_attributes:
+    AllowMultipleReturnValues: 'false'
+- :name: Style/RedundantSelf
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Don't use self where it's not needed.
+    StyleGuide: "#no-self-unless-required"
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Style/RedundantConditional
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Don't return true/false from a conditional.
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Style/RegexpLiteral
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Use / or %r around regular expressions.
+    StyleGuide: "#percent-r"
+    Enabled: true
+  :configurable_attributes:
+    EnforcedStyle: slashes
+    SupportedStyles:
+    - slashes
+    - percent_r
+    - mixed
+    AllowInnerSlashes: 'false'
+- :name: Style/RescueModifier
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Avoid using rescue in its modifier form.
+    StyleGuide: "#no-rescue-modifiers"
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Style/RescueStandardError
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Avoid rescuing without specifying an error class.
+    Enabled: true
+  :configurable_attributes:
+    EnforcedStyle: explicit
+    SupportedStyles:
+    - implicit
+    - explicit
+- :name: Style/ReturnNil
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Use return instead of return nil.
+    Enabled: false
+  :configurable_attributes:
+    EnforcedStyle: return
+    SupportedStyles:
+    - return
+    - return_nil
+- :name: Style/SafeNavigation
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: This cop transforms usages of a method call safeguarded by a check
+      for the existence of the object to safe navigation (`&.`).
+    Enabled: true
+  :configurable_attributes:
+    ConvertCodeThatCanStartToReturnNil: 'false'
+- :name: Style/SelfAssignment
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Checks for places where self-assignment shorthand should have been
+      used.
+    StyleGuide: "#self-assignment"
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Style/Semicolon
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Don't use semicolons to terminate expressions.
+    StyleGuide: "#no-semicolon"
+    Enabled: true
+  :configurable_attributes:
+    AllowAsExpressionSeparator: 'false'
+- :name: Style/Send
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Prefer `Object#__send__` or `Object#public_send` to `send`, as `send`
+      may overlap with existing methods.
+    StyleGuide: "#prefer-public-send"
+    Enabled: false
+  :configurable_attributes: {}
+- :name: Style/SignalException
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Checks for proper usage of fail and raise.
+    StyleGuide: "#prefer-raise-over-fail"
+    Enabled: true
+  :configurable_attributes:
+    EnforcedStyle: only_raise
+    SupportedStyles:
+    - only_raise
+    - only_fail
+    - semantic
+- :name: Style/SingleLineBlockParams
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Enforces the names of some block params.
+    Enabled: false
+  :configurable_attributes:
+    Methods:
+    - reduce:
+      - acc
+      - elem
+    - inject:
+      - acc
+      - elem
+- :name: Style/SingleLineMethods
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Avoid single-line methods.
+    StyleGuide: "#no-single-line-methods"
+    Enabled: true
+  :configurable_attributes:
+    AllowIfMethodIsEmpty: 'true'
+- :name: Style/SpecialGlobalVars
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Avoid Perl-style global variables.
+    StyleGuide: "#no-cryptic-perlisms"
+    Enabled: true
+  :configurable_attributes:
+    EnforcedStyle: use_english_names
+    SupportedStyles:
+    - use_perl_names
+    - use_english_names
+- :name: Style/StabbyLambdaParentheses
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Check for the usage of parentheses around stabby lambda arguments.
+    StyleGuide: "#stabby-lambda-with-args"
+    Enabled: true
+  :configurable_attributes:
+    EnforcedStyle: require_parentheses
+    SupportedStyles:
+    - require_parentheses
+    - require_no_parentheses
+- :name: Style/StderrPuts
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Use `warn` instead of `$stderr.puts`.
+    StyleGuide: "#warn"
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Style/StringHashKeys
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Prefer symbols instead of strings as hash keys.
+    StyleGuide: "#symbols-as-keys"
+    Enabled: false
+  :configurable_attributes: {}
+- :name: Style/StringLiterals
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Checks if uses of quotes match the configured preference.
+    StyleGuide: "#consistent-string-literals"
+    Enabled: true
+  :configurable_attributes:
+    EnforcedStyle: single_quotes
+    SupportedStyles:
+    - single_quotes
+    - double_quotes
+    ConsistentQuotesInMultiline: 'false'
+- :name: Style/StringLiteralsInInterpolation
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Checks if uses of quotes inside expressions in interpolated strings
+      match the configured preference.
+    Enabled: true
+  :configurable_attributes:
+    EnforcedStyle: single_quotes
+    SupportedStyles:
+    - single_quotes
+    - double_quotes
+- :name: Style/StringMethods
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Checks if configured preferred methods are used over non-preferred.
+    Enabled: false
+  :configurable_attributes:
+    PreferredMethods: '{"intern"=>"to_sym"}'
+- :name: Style/StructInheritance
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Checks for inheritance from Struct.new.
+    StyleGuide: "#no-extend-struct-new"
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Style/SymbolArray
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Use %i or %I for arrays of symbols.
+    StyleGuide: "#percent-i"
+    Enabled: true
+  :configurable_attributes:
+    EnforcedStyle: percent
+    MinSize: '0'
+    SupportedStyles:
+    - percent
+    - brackets
+- :name: Style/SymbolLiteral
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Use plain symbols instead of string symbols when possible.
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Style/SymbolProc
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Use symbols as procs instead of blocks when possible.
+    Enabled: true
+  :configurable_attributes:
+    IgnoredMethods:
+    - respond_to
+    - define_method
+- :name: Style/TernaryParentheses
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Checks for use of parentheses around ternary conditions.
+    Enabled: true
+  :configurable_attributes:
+    EnforcedStyle: require_no_parentheses
+    SupportedStyles:
+    - require_parentheses
+    - require_no_parentheses
+    - require_parentheses_when_complex
+    AllowSafeAssignment: 'true'
+- :name: Style/TrailingBodyOnMethodDefinition
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Method body goes below definition.
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Style/TrailingCommaInArguments
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Checks for trailing comma in argument lists.
+    StyleGuide: "#no-trailing-params-comma"
+    Enabled: true
+  :configurable_attributes:
+    EnforcedStyleForMultiline: no_comma
+    SupportedStylesForMultiline:
+    - comma
+    - consistent_comma
+    - no_comma
+- :name: Style/TrailingCommaInLiteral
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Checks for trailing comma in array and hash literals.
+    StyleGuide: "#no-trailing-array-commas"
+    Enabled: true
+  :configurable_attributes:
+    EnforcedStyleForMultiline: no_comma
+    SupportedStylesForMultiline:
+    - comma
+    - consistent_comma
+    - no_comma
+- :name: Style/TrailingMethodEndStatement
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Checks for trailing end statement on line of method body.
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Style/TrailingUnderscoreVariable
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Checks for the usage of unneeded trailing underscores at the end
+      of parallel variable assignment.
+    Enabled: true
+  :configurable_attributes:
+    AllowNamedUnderscoreVariables: 'true'
+- :name: Style/TrivialAccessors
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Prefer attr_* methods to trivial readers/writers.
+    StyleGuide: "#attr_family"
+    Enabled: true
+  :configurable_attributes:
+    ExactNameMatch: 'true'
+    AllowPredicates: 'true'
+    AllowDSLWriters: 'false'
+    IgnoreClassMethods: 'false'
+    Whitelist:
+    - to_ary
+    - to_a
+    - to_c
+    - to_enum
+    - to_h
+    - to_hash
+    - to_i
+    - to_int
+    - to_io
+    - to_open
+    - to_path
+    - to_proc
+    - to_r
+    - to_regexp
+    - to_str
+    - to_s
+    - to_sym
+- :name: Style/UnlessElse
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Do not use unless with else. Rewrite these with the positive case
+      first.
+    StyleGuide: "#no-else-with-unless"
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Style/UnneededCapitalW
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Checks for %W when interpolation is not needed.
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Style/UnneededInterpolation
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Checks for strings that are just an interpolated expression.
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Style/UnneededPercentQ
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Checks for %q/%Q when single quotes or double quotes would do.
+    StyleGuide: "#percent-q"
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Style/VariableInterpolation
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Don't interpolate global, instance and class variables directly in
+      strings.
+    StyleGuide: "#curlies-interpolate"
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Style/WhenThen
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Use when x then ... for one-line cases.
+    StyleGuide: "#one-line-cases"
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Style/WhileUntilDo
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Checks for redundant do after while or until.
+    StyleGuide: "#no-multiline-while-do"
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Style/WhileUntilModifier
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Favor modifier while/until usage when you have a single-line body.
+    StyleGuide: "#while-as-a-modifier"
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Style/WordArray
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Use %w or %W for arrays of words.
+    StyleGuide: "#percent-w"
+    Enabled: true
+  :configurable_attributes:
+    EnforcedStyle: percent
+    SupportedStyles:
+    - percent
+    - brackets
+    MinSize: '0'
+    WordRegex: "(?-mix:\\A[\\p{Word}\\n\\t]+\\z)"
+- :name: Style/YodaCondition
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Do not use literals as the first operand of a comparison.
+    Reference: https://en.wikipedia.org/wiki/Yoda_conditions
+    Enabled: true
+  :configurable_attributes:
+    EnforcedStyle: all_comparison_operators
+    SupportedStyles:
+    - all_comparison_operators
+    - equality_operators_only
+- :name: Style/ZeroLengthPredicate
+  :department_name: Style
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: 'Use #empty? when testing for objects of length 0.'
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Rails/ActionFilter
+  :department_name: Rails
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Enforces consistent use of action filter methods.
+    Enabled: true
+  :configurable_attributes:
+    EnforcedStyle: action
+    SupportedStyles:
+    - action
+    - filter
+    Include:
+    - app/controllers/**/*.rb
+- :name: Rails/ActiveSupportAliases
+  :department_name: Rails
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: 'Avoid ActiveSupport aliases of standard ruby methods: `String#starts_with?`,
+      `String#ends_with?`, `Array#append`, `Array#prepend`.'
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Rails/ApplicationJob
+  :department_name: Rails
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Check that jobs subclass ApplicationJob.
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Rails/ApplicationRecord
+  :department_name: Rails
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Check that models subclass ApplicationRecord.
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Rails/Blank
+  :department_name: Rails
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Enforce using `blank?` and `present?`.
+    Enabled: true
+  :configurable_attributes:
+    NilOrEmpty: 'true'
+    NotPresent: 'true'
+    UnlessPresent: 'true'
+- :name: Rails/CreateTableWithTimestamps
+  :department_name: Rails
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Checks the migration for which timestamps are not included when creating
+      a new table.
+    Enabled: true
+  :configurable_attributes:
+    Include:
+    - db/migrate/*.rb
+- :name: Rails/Date
+  :department_name: Rails
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Checks the correct usage of date aware methods, such as Date.today,
+      Date.current etc.
+    Enabled: true
+  :configurable_attributes:
+    EnforcedStyle: flexible
+    SupportedStyles:
+    - strict
+    - flexible
+- :name: Rails/DynamicFindBy
+  :department_name: Rails
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Use `find_by` instead of dynamic `find_by_*`.
+    StyleGuide: https://github.com/bbatsov/rails-style-guide#find_by
+    Enabled: true
+  :configurable_attributes:
+    Whitelist:
+    - find_by_sql
+- :name: Rails/Delegate
+  :department_name: Rails
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Prefer delegate method for delegations.
+    Enabled: true
+  :configurable_attributes:
+    EnforceForPrefixed: 'true'
+- :name: Rails/DelegateAllowBlank
+  :department_name: Rails
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Do not use allow_blank as an option to delegate.
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Rails/EnumUniqueness
+  :department_name: Rails
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Avoid duplicate integers in hash-syntax `enum` declaration.
+    Enabled: true
+  :configurable_attributes:
+    Include:
+    - app/models/**/*.rb
+- :name: Rails/EnvironmentComparison
+  :department_name: Rails
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Favor `Rails.env.production?` over `Rails.env == 'production'`
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Rails/Exit
+  :department_name: Rails
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Favor `fail`, `break`, `return`, etc. over `exit` in application
+      or library code outside of Rake files to avoid exits during unit testing or
+      running in production.
+    Enabled: true
+  :configurable_attributes:
+    Include:
+    - app/**/*.rb
+    - config/**/*.rb
+    - lib/**/*.rb
+    Exclude:
+    - "/home/masx/Developer/projects/codacy-rubocop/lib/**/*.rake"
+- :name: Rails/FilePath
+  :department_name: Rails
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Use `Rails.root.join` for file path joining.
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Rails/FindBy
+  :department_name: Rails
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Prefer find_by over where.first.
+    StyleGuide: https://github.com/bbatsov/rails-style-guide#find_by
+    Enabled: true
+  :configurable_attributes:
+    Include:
+    - app/models/**/*.rb
+- :name: Rails/FindEach
+  :department_name: Rails
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Prefer all.find_each over all.find.
+    StyleGuide: https://github.com/bbatsov/rails-style-guide#find-each
+    Enabled: true
+  :configurable_attributes:
+    Include:
+    - app/models/**/*.rb
+- :name: Rails/HasAndBelongsToMany
+  :department_name: Rails
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Prefer has_many :through to has_and_belongs_to_many.
+    StyleGuide: https://github.com/bbatsov/rails-style-guide#has-many-through
+    Enabled: true
+  :configurable_attributes:
+    Include:
+    - app/models/**/*.rb
+- :name: Rails/HasManyOrHasOneDependent
+  :department_name: Rails
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Define the dependent option to the has_many and has_one associations.
+    StyleGuide: https://github.com/bbatsov/rails-style-guide#has_many-has_one-dependent-option
+    Enabled: true
+  :configurable_attributes:
+    Include:
+    - app/models/**/*.rb
+- :name: Rails/HttpPositionalArguments
+  :department_name: Rails
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Use keyword arguments instead of positional arguments in http method
+      calls.
+    Enabled: true
+  :configurable_attributes:
+    Include:
+    - spec/**/*
+    - test/**/*
+- :name: Rails/InverseOf
+  :department_name: Rails
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Checks for associations where the inverse cannot be determined automatically.
+    Enabled: true
+  :configurable_attributes:
+    Include:
+    - app/models/**/*.rb
+- :name: Rails/LexicallyScopedActionFilter
+  :department_name: Rails
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Checks that methods specified in the filter's `only` or `except`
+      options are explicitly defined in the controller.
+    StyleGuide: https://github.com/bbatsov/rails-style-guide#lexically-scoped-action-filter
+    Enabled: true
+  :configurable_attributes:
+    Include:
+    - app/controllers/**/*.rb
+- :name: Rails/NotNullColumn
+  :department_name: Rails
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Do not add a NOT NULL column without a default value
+    Enabled: true
+  :configurable_attributes:
+    Include:
+    - db/migrate/*.rb
+- :name: Rails/OutputSafety
+  :department_name: Rails
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: The use of `html_safe` or `raw` may be a security risk.
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Rails/Output
+  :department_name: Rails
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Checks for calls to puts, print, etc.
+    Enabled: true
+  :configurable_attributes:
+    Include:
+    - app/**/*.rb
+    - config/**/*.rb
+    - db/**/*.rb
+    - lib/**/*.rb
+- :name: Rails/PluralizationGrammar
+  :department_name: Rails
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Checks for incorrect grammar when using methods like `3.day.ago`.
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Rails/Presence
+  :department_name: Rails
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Checks code that can be written more easily using `Object#presence`
+      defined by Active Support.
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Rails/Present
+  :department_name: Rails
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Enforce using `blank?` and `present?`.
+    Enabled: true
+  :configurable_attributes:
+    NotNilAndNotEmpty: 'true'
+    NotBlank: 'true'
+    UnlessBlank: 'true'
+- :name: Rails/ReadWriteAttribute
+  :department_name: Rails
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Checks for read_attribute(:attr) and write_attribute(:attr, val).
+    StyleGuide: https://github.com/bbatsov/rails-style-guide#read-attribute
+    Enabled: true
+  :configurable_attributes:
+    Include:
+    - app/models/**/*.rb
+- :name: Rails/RedundantReceiverInWithOptions
+  :department_name: Rails
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Checks for redundant receiver in `with_options`.
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Rails/RequestReferer
+  :department_name: Rails
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Use consistent syntax for request.referer.
+    Enabled: true
+  :configurable_attributes:
+    EnforcedStyle: referer
+    SupportedStyles:
+    - referer
+    - referrer
+- :name: Rails/ReversibleMigration
+  :department_name: Rails
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Checks whether the change method of the migration file is reversible.
+    StyleGuide: https://github.com/bbatsov/rails-style-guide#reversible-migration
+    Reference: http://api.rubyonrails.org/classes/ActiveRecord/Migration/CommandRecorder.html
+    Enabled: true
+  :configurable_attributes:
+    Include:
+    - db/migrate/*.rb
+- :name: Rails/RelativeDateConstant
+  :department_name: Rails
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Do not assign relative date to constants.
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Rails/SafeNavigation
+  :department_name: Rails
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Use Ruby's safe navigation operator (`&.`) instead of `try!`
+    Enabled: true
+  :configurable_attributes:
+    ConvertTry: 'false'
+- :name: Rails/SaveBang
+  :department_name: Rails
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Identifies possible cases where Active Record save! or related should
+      be used.
+    StyleGuide: https://github.com/bbatsov/rails-style-guide#save-bang
+    Enabled: false
+  :configurable_attributes: {}
+- :name: Rails/ScopeArgs
+  :department_name: Rails
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Checks the arguments of ActiveRecord scopes.
+    Enabled: true
+  :configurable_attributes:
+    Include:
+    - app/models/**/*.rb
+- :name: Rails/SkipsModelValidations
+  :department_name: Rails
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Use methods that skips model validations with caution. See reference
+      for more information.
+    Reference: http://guides.rubyonrails.org/active_record_validations.html#skipping-validations
+    Enabled: true
+  :configurable_attributes:
+    Blacklist:
+    - decrement!
+    - decrement_counter
+    - increment!
+    - increment_counter
+    - toggle!
+    - touch
+    - update_all
+    - update_attribute
+    - update_column
+    - update_columns
+    - update_counters
+- :name: Rails/TimeZone
+  :department_name: Rails
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Checks the correct usage of time zone aware methods.
+    StyleGuide: https://github.com/bbatsov/rails-style-guide#time
+    Reference: http://danilenko.org/2012/7/6/rails_timezones
+    Enabled: true
+  :configurable_attributes:
+    EnforcedStyle: flexible
+    SupportedStyles:
+    - strict
+    - flexible
+- :name: Rails/UniqBeforePluck
+  :department_name: Rails
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Prefer the use of uniq or distinct before pluck.
+    Enabled: true
+  :configurable_attributes:
+    EnforcedStyle: conservative
+    SupportedStyles:
+    - conservative
+    - aggressive
+    AutoCorrect: 'false'
+- :name: Rails/UnknownEnv
+  :department_name: Rails
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Use correct environment name.
+    Enabled: true
+  :configurable_attributes:
+    Environments:
+    - development
+    - test
+    - production
+- :name: Rails/Validation
+  :department_name: Rails
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Use validates :attribute, hash of validations.
+    Enabled: true
+  :configurable_attributes:
+    Include:
+    - app/models/**/*.rb
+- :name: Security/Eval
+  :department_name: Security
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: The use of eval represents a serious security risk.
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Security/JSONLoad
+  :department_name: Security
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Prefer usage of `JSON.parse` over `JSON.load` due to potential security
+      issues. See reference for more information.
+    Reference: http://ruby-doc.org/stdlib-2.3.0/libdoc/json/rdoc/JSON.html#method-i-load
+    Enabled: true
+  :configurable_attributes:
+    AutoCorrect: 'false'
+- :name: Security/MarshalLoad
+  :department_name: Security
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Avoid using of `Marshal.load` or `Marshal.restore` due to potential
+      security issues. See reference for more information.
+    Reference: http://ruby-doc.org/core-2.3.3/Marshal.html#module-Marshal-label-Security+considerations
+    Enabled: true
+  :configurable_attributes: {}
+- :name: Security/YAMLLoad
+  :department_name: Security
+  :description: ''
+  :examples_description: ''
+  :configuration:
+    Description: Prefer usage of `YAML.safe_load` over `YAML.load` due to potential
+      security issues. See reference for more information.
+    Reference: https://ruby-doc.org/stdlib-2.3.3/libdoc/yaml/rdoc/YAML.html#module-YAML-label-Security
+    Enabled: true
+  :configurable_attributes: {}

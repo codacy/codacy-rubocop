@@ -1,21 +1,7 @@
-Use self instead of defining a method using the class/module name since it provides better readability
 
-**Example:**
 
-```
-# bad
-class SomeClass
-  def SomeClass.some_method
 
-  end
-end
+# Examples
 
-# good
-class SomeClass
-  def self.some_method
-
-  end
-end
-```
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Style/ClassMethods)
