@@ -1,5 +1,5 @@
 
-This cop checks for END blocks.
+
 
 # Examples
 

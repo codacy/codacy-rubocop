@@ -10,7 +10,6 @@
         {
           "name": "Include",
           "default": [
-            "**/*.gemfile",
             "**/Gemfile",
             "**/gems.rb"
           ]
@@ -25,7 +24,6 @@
         {
           "name": "Include",
           "default": [
-            "**/*.gemfile",
             "**/Gemfile",
             "**/gems.rb"
           ]
@@ -40,7 +38,6 @@
         {
           "name": "Include",
           "default": [
-            "**/*.gemfile",
             "**/Gemfile",
             "**/gems.rb"
           ]
@@ -191,25 +188,6 @@
       ]
     },
     {
-      "patternId": "Layout_BlockAlignment",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "EnforcedStyleAlignWith",
-          "default": "either"
-        },
-        {
-          "name": "SupportedStylesAlignWith",
-          "default": [
-            "either",
-            "start_of_block",
-            "start_of_line"
-          ]
-        }
-      ]
-    },
-    {
       "patternId": "Layout_BlockEndNewline",
       "level": "Info",
       "category": "CodeStyle",
@@ -283,40 +261,6 @@
       ]
     },
     {
-      "patternId": "Layout_ConditionPosition",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
-    },
-    {
-      "patternId": "Layout_DefEndAlignment",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "EnforcedStyleAlignWith",
-          "default": "start_of_line"
-        },
-        {
-          "name": "SupportedStylesAlignWith",
-          "default": [
-            "start_of_line",
-            "def"
-          ]
-        },
-        {
-          "name": "AutoCorrect",
-          "default": "false"
-        },
-        {
-          "name": "Severity",
-          "default": "warning"
-        }
-      ]
-    },
-    {
       "patternId": "Layout_DotPosition",
       "level": "Info",
       "category": "CodeStyle",
@@ -340,21 +284,6 @@
       "category": "CodeStyle",
       "parameters": [
 
-      ]
-    },
-    {
-      "patternId": "Layout_EmptyComment",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "AllowBorderComment",
-          "default": "true"
-        },
-        {
-          "name": "AllowMarginComment",
-          "default": "true"
-        }
       ]
     },
     {
@@ -437,9 +366,7 @@
             "empty_lines",
             "empty_lines_except_namespace",
             "empty_lines_special",
-            "no_empty_lines",
-            "beginning_only",
-            "ending_only"
+            "no_empty_lines"
           ]
         }
       ]
@@ -486,33 +413,6 @@
       "category": "CodeStyle",
       "parameters": [
 
-      ]
-    },
-    {
-      "patternId": "Layout_EndAlignment",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "EnforcedStyleAlignWith",
-          "default": "keyword"
-        },
-        {
-          "name": "SupportedStylesAlignWith",
-          "default": [
-            "keyword",
-            "variable",
-            "start_of_line"
-          ]
-        },
-        {
-          "name": "AutoCorrect",
-          "default": "false"
-        },
-        {
-          "name": "Severity",
-          "default": "warning"
-        }
       ]
     },
     {
@@ -1182,17 +1082,7 @@
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [
-        {
-          "name": "EnforcedStyle",
-          "default": "no_space"
-        },
-        {
-          "name": "SupportedStyles",
-          "default": [
-            "space",
-            "no_space"
-          ]
-        }
+
       ]
     },
     {
@@ -1222,17 +1112,6 @@
         },
         {
           "name": "SupportedStyles",
-          "default": [
-            "space",
-            "no_space"
-          ]
-        },
-        {
-          "name": "EnforcedStyleForEmptyBrackets",
-          "default": "no_space"
-        },
-        {
-          "name": "SupportedStylesForEmptyBrackets",
           "default": [
             "space",
             "no_space"
@@ -1292,10 +1171,7 @@
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [
-        {
-          "name": "AllowInHeredoc",
-          "default": "false"
-        }
+
       ]
     },
     {
@@ -1334,11 +1210,22 @@
       ]
     },
     {
-      "patternId": "Lint_BigDecimalNew",
+      "patternId": "Lint_BlockAlignment",
       "level": "Warning",
       "category": "CodeStyle",
       "parameters": [
-
+        {
+          "name": "EnforcedStyleAlignWith",
+          "default": "either"
+        },
+        {
+          "name": "SupportedStylesAlignWith",
+          "default": [
+            "either",
+            "start_of_block",
+            "start_of_line"
+          ]
+        }
       ]
     },
     {
@@ -1358,11 +1245,41 @@
       ]
     },
     {
+      "patternId": "Lint_ConditionPosition",
+      "level": "Warning",
+      "category": "CodeStyle",
+      "parameters": [
+
+      ]
+    },
+    {
       "patternId": "Lint_Debugger",
       "level": "Warning",
       "category": "CodeStyle",
       "parameters": [
 
+      ]
+    },
+    {
+      "patternId": "Lint_DefEndAlignment",
+      "level": "Warning",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "EnforcedStyleAlignWith",
+          "default": "start_of_line"
+        },
+        {
+          "name": "SupportedStylesAlignWith",
+          "default": [
+            "start_of_line",
+            "def"
+          ]
+        },
+        {
+          "name": "AutoCorrect",
+          "default": "false"
+        }
       ]
     },
     {
@@ -1446,6 +1363,29 @@
       "category": "CodeStyle",
       "parameters": [
 
+      ]
+    },
+    {
+      "patternId": "Lint_EndAlignment",
+      "level": "Warning",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "EnforcedStyleAlignWith",
+          "default": "keyword"
+        },
+        {
+          "name": "SupportedStylesAlignWith",
+          "default": [
+            "keyword",
+            "variable",
+            "start_of_line"
+          ]
+        },
+        {
+          "name": "AutoCorrect",
+          "default": "false"
+        }
       ]
     },
     {
@@ -1606,22 +1546,6 @@
       ]
     },
     {
-      "patternId": "Lint_NumberConversion",
-      "level": "Warning",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
-    },
-    {
-      "patternId": "Lint_OrderedMagicComments",
-      "level": "Warning",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
-    },
-    {
       "patternId": "Lint_ParenthesesAsGroupedExpression",
       "level": "Warning",
       "category": "CodeStyle",
@@ -1703,14 +1627,6 @@
     },
     {
       "patternId": "Lint_ReturnInVoidContext",
-      "level": "Warning",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
-    },
-    {
-      "patternId": "Lint_SafeNavigationConsistency",
       "level": "Warning",
       "category": "CodeStyle",
       "parameters": [
@@ -1801,15 +1717,7 @@
       ]
     },
     {
-      "patternId": "Lint_UnneededCopDisableDirective",
-      "level": "Warning",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
-    },
-    {
-      "patternId": "Lint_UnneededCopEnableDirective",
+      "patternId": "Lint_UnneededDisable",
       "level": "Warning",
       "category": "CodeStyle",
       "parameters": [
@@ -1942,10 +1850,7 @@
       "level": "Warning",
       "category": "CodeStyle",
       "parameters": [
-        {
-          "name": "CheckForMethodsWithNoSideEffects",
-          "default": "false"
-        }
+
       ]
     },
     {
@@ -2241,17 +2146,10 @@
         {
           "name": "Blacklist",
           "default": [
-            "(?-mix:(^|\\s)(EO[A-Z]{1}|END)(\\s|$))"
+            "END",
+            "(?-mix:EO[A-Z]{1})"
           ]
         }
-      ]
-    },
-    {
-      "patternId": "Naming_MemoizedInstanceVariableName",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
       ]
     },
     {
@@ -2317,67 +2215,7 @@
         {
           "name": "Exclude",
           "default": [
-            "/home/miguelsavignano/Developer/Projects/rubocop/spec/**/*"
-          ]
-        }
-      ]
-    },
-    {
-      "patternId": "Naming_UncommunicativeBlockParamName",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "MinNameLength",
-          "default": "1"
-        },
-        {
-          "name": "AllowNamesEndingInNumbers",
-          "default": "true"
-        },
-        {
-          "name": "AllowedNames",
-          "default": [
-
-          ]
-        },
-        {
-          "name": "ForbiddenNames",
-          "default": [
-
-          ]
-        }
-      ]
-    },
-    {
-      "patternId": "Naming_UncommunicativeMethodParamName",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "MinNameLength",
-          "default": "3"
-        },
-        {
-          "name": "AllowNamesEndingInNumbers",
-          "default": "true"
-        },
-        {
-          "name": "AllowedNames",
-          "default": [
-            "io",
-            "id",
-            "to",
-            "by",
-            "on",
-            "in",
-            "at"
-          ]
-        },
-        {
-          "name": "ForbiddenNames",
-          "default": [
-
+            "/home/masx/Developer/projects/codacy-rubocop/spec/**/*"
           ]
         }
       ]
@@ -2507,6 +2345,17 @@
       ]
     },
     {
+      "patternId": "Performance_HashEachMethods",
+      "level": "Warning",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "AutoCorrect",
+          "default": "false"
+        }
+      ]
+    },
+    {
       "patternId": "Performance_LstripRstrip",
       "level": "Warning",
       "category": "CodeStyle",
@@ -2629,14 +2478,6 @@
     },
     {
       "patternId": "Performance_UnfreezeString",
-      "level": "Warning",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
-    },
-    {
-      "patternId": "Performance_UnneededSort",
       "level": "Warning",
       "category": "CodeStyle",
       "parameters": [
@@ -3048,8 +2889,8 @@
         {
           "name": "Exclude",
           "default": [
-            "/home/miguelsavignano/Developer/Projects/rubocop/spec/**/*",
-            "/home/miguelsavignano/Developer/Projects/rubocop/test/**/*"
+            "/home/masx/Developer/projects/codacy-rubocop/spec/**/*",
+            "/home/masx/Developer/projects/codacy-rubocop/test/**/*"
           ]
         },
         {
@@ -3066,8 +2907,8 @@
         {
           "name": "Exclude",
           "default": [
-            "/home/miguelsavignano/Developer/Projects/rubocop/spec/**/*",
-            "/home/miguelsavignano/Developer/Projects/rubocop/test/**/*"
+            "/home/masx/Developer/projects/codacy-rubocop/spec/**/*",
+            "/home/masx/Developer/projects/codacy-rubocop/test/**/*"
           ]
         }
       ]
@@ -3140,14 +2981,6 @@
       ]
     },
     {
-      "patternId": "Style_EmptyLineAfterGuardClause",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
-    },
-    {
       "patternId": "Style_EmptyLiteral",
       "level": "Info",
       "category": "CodeStyle",
@@ -3206,14 +3039,6 @@
       ]
     },
     {
-      "patternId": "Style_ExpandPathArguments",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
-    },
-    {
       "patternId": "Style_FlipFlop",
       "level": "Info",
       "category": "CodeStyle",
@@ -3233,8 +3058,8 @@
         {
           "name": "SupportedStyles",
           "default": [
-            "each",
-            "for"
+            "for",
+            "each"
           ]
         }
       ]
@@ -3477,12 +3302,7 @@
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [
-        {
-          "name": "IgnoredMethods",
-          "default": [
 
-          ]
-        }
       ]
     },
     {
@@ -3530,7 +3350,7 @@
       ]
     },
     {
-      "patternId": "Style_MethodMissingSuper",
+      "patternId": "Style_MethodMissing",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [
@@ -3562,14 +3382,6 @@
             "both"
           ]
         }
-      ]
-    },
-    {
-      "patternId": "Style_MissingRespondToMissing",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
       ]
     },
     {
@@ -3859,7 +3671,7 @@
         {
           "name": "Exclude",
           "default": [
-            "/home/miguelsavignano/Developer/Projects/rubocop/spec/**/*"
+            "/home/masx/Developer/projects/codacy-rubocop/spec/**/*"
           ]
         }
       ]
@@ -3921,10 +3733,6 @@
         {
           "name": "AllowSafeAssignment",
           "default": "true"
-        },
-        {
-          "name": "AllowInMultilineConditions",
-          "default": "false"
         }
       ]
     },
@@ -4151,15 +3959,6 @@
         {
           "name": "ConvertCodeThatCanStartToReturnNil",
           "default": "false"
-        },
-        {
-          "name": "Whitelist",
-          "default": [
-            "present?",
-            "blank?",
-            "presence",
-            "try"
-          ]
         }
       ]
     },
@@ -4423,23 +4222,7 @@
       ]
     },
     {
-      "patternId": "Style_TrailingBodyOnClass",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
-    },
-    {
       "patternId": "Style_TrailingBodyOnMethodDefinition",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
-    },
-    {
-      "patternId": "Style_TrailingBodyOnModule",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [
@@ -4466,26 +4249,7 @@
       ]
     },
     {
-      "patternId": "Style_TrailingCommaInArrayLiteral",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "EnforcedStyleForMultiline",
-          "default": "no_comma"
-        },
-        {
-          "name": "SupportedStylesForMultiline",
-          "default": [
-            "comma",
-            "consistent_comma",
-            "no_comma"
-          ]
-        }
-      ]
-    },
-    {
-      "patternId": "Style_TrailingCommaInHashLiteral",
+      "patternId": "Style_TrailingCommaInLiteral",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [
@@ -4593,14 +4357,6 @@
     },
     {
       "patternId": "Style_UnneededPercentQ",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
-    },
-    {
-      "patternId": "Style_UnpackFirst",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [
@@ -4716,14 +4472,6 @@
       ]
     },
     {
-      "patternId": "Rails_ActiveRecordAliases",
-      "level": "Warning",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
-    },
-    {
       "patternId": "Rails_ActiveSupportAliases",
       "level": "Warning",
       "category": "CodeStyle",
@@ -4745,19 +4493,6 @@
       "category": "CodeStyle",
       "parameters": [
 
-      ]
-    },
-    {
-      "patternId": "Rails_AssertNot",
-      "level": "Warning",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "Include",
-          "default": [
-            "**/test/**/*"
-          ]
-        }
       ]
     },
     {
@@ -4879,7 +4614,7 @@
         {
           "name": "Exclude",
           "default": [
-            "/home/miguelsavignano/Developer/Projects/rubocop/lib/**/*.rake"
+            "/home/masx/Developer/projects/codacy-rubocop/lib/**/*.rake"
           ]
         }
       ]
@@ -4954,24 +4689,6 @@
           "default": [
             "spec/**/*",
             "test/**/*"
-          ]
-        }
-      ]
-    },
-    {
-      "patternId": "Rails_HttpStatus",
-      "level": "Warning",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "EnforcedStyle",
-          "default": "symbolic"
-        },
-        {
-          "name": "SupportedStyles",
-          "default": [
-            "numeric",
-            "symbolic"
           ]
         }
       ]
@@ -5093,19 +4810,6 @@
       "category": "CodeStyle",
       "parameters": [
 
-      ]
-    },
-    {
-      "patternId": "Rails_RefuteMethods",
-      "level": "Warning",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "Include",
-          "default": [
-            "**/test/**/*"
-          ]
-        }
       ]
     },
     {
@@ -5298,79 +5002,7 @@
       ]
     },
     {
-      "patternId": "Security_Open",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
-    },
-    {
       "patternId": "Security_YAMLLoad",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
-    },
-    {
-      "patternId": "InternalAffairs_NodeDestructuring",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
-    },
-    {
-      "patternId": "InternalAffairs_NodeTypePredicate",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
-    },
-    {
-      "patternId": "InternalAffairs_OffenseLocationKeyword",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
-    },
-    {
-      "patternId": "InternalAffairs_RedundantMessageArgument",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
-    },
-    {
-      "patternId": "InternalAffairs_RedundantLocationArgument",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
-    },
-    {
-      "patternId": "InternalAffairs_UselessMessageAssertion",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
-    },
-    {
-      "patternId": "Test_ClassMustBeAModuleCop",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
-    },
-    {
-      "patternId": "Test_ModuleMustBeAClassCop",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [
