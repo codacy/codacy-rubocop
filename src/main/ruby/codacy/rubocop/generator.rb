@@ -39,13 +39,13 @@ module RubocopDoc
       end
 
       def self.run(file_path = "rubocop-doc.yml")
-        cops_data = YAML.load_file(file_path)
+        cops_data    = YAML.load_file(file_path)
         descriptions = cops_data.map do |cop_data|
           {
-            patternId: cop_data[:name].gsub("/", "_"),
-            title: cop_data[:description],
-            description: cop_data[:description],
-            timeToFix: 5
+            patternId:   cop_data[:name].gsub("/", "_"),
+            title:       cop_data[:configuration]['Description'],
+            description: cop_data[:configuration]['Description'],
+            timeToFix:   5
           }
         end
         generate_json_file(descriptions)
@@ -59,7 +59,13 @@ module RubocopDoc
       end
 
       def self.level(cop_data)
-        if ["Metrics", "Lint", "Performance", "Rails"].include?(cop_data[:department_name])
+        if ["Security"].include?(cop_data[:department_name])
+          "Error"
+        elsif ["Lint", "Performance", "Rails"].include?(cop_data[:department_name])
+          "Warning"
+        elsif cop_data[:department_name].start_with?("Metrics") &&
+          !cop_data[:department_name].include?("Length") &&
+          !cop_data[:department_name].include?("AbcSize")
           "Warning"
         else
           "Info"
@@ -67,7 +73,21 @@ module RubocopDoc
       end
 
       def self.category(cop_data)
-        "CodeStyle"
+        if ["Lint"].include?(cop_data[:department_name])
+          "ErrorProne"
+        elsif cop_data[:department_name].start_with?("Metrics") &&
+          !cop_data[:department_name].include?("Length") &&
+          !cop_data[:department_name].include?("AbcSize")
+          "ErrorProne"
+        elsif ["Rails"].include?(cop_data[:department_name])
+          "ErrorProne"
+        elsif ["Performance"].include?(cop_data[:department_name])
+          "Performance"
+        elsif ["Security"].include?(cop_data[:department_name])
+          "Security"
+        else
+          "CodeStyle"
+        end
       end
 
       def self.parameters(cop_data)
@@ -78,17 +98,17 @@ module RubocopDoc
 
       def self.run(file_path = "rubocop-doc.yml")
         cops_data = YAML.load_file(file_path)
-        patterns = cops_data.map do |cop_data|
+        patterns  = cops_data.map do |cop_data|
           {
-            patternId: cop_data[:name].gsub("/", "_"),
-            level: level(cop_data),
-            category: category(cop_data),
+            patternId:  cop_data[:name].gsub("/", "_"),
+            level:      level(cop_data),
+            category:   category(cop_data),
             parameters: parameters(cop_data)
           }
         end
-        data = {
-          name: "Rubocop",
-          version: "0.51.0",
+        data      = {
+          name:     "Rubocop",
+          version:  File.read(".rubocop-version"),
           patterns: patterns
         }
         generate_json_file(data)
@@ -96,6 +116,7 @@ module RubocopDoc
     end
   end
 end
+
 RubocopDoc::Codacy::Markdown.run
 RubocopDoc::Codacy::PattersJSON.run
 RubocopDoc::Codacy::DescriptionJSON.run

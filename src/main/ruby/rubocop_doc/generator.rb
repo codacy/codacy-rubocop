@@ -6,8 +6,9 @@ require 'yard'
 module RubocopDocs
   class CopDoc
     attr_accessor :cop, :yard_object, :name, :example, :description, :department_name, :config
+
     def initialize(cop, config)
-      @cop = cop
+      @cop    = cop
       @config = config.for_cop(cop)
     end
 
@@ -26,8 +27,8 @@ module RubocopDocs
 
     def configurable_attributes
       non_display_keys = %w[Description Enabled StyleGuide Reference]
-      result = config.reject { |k| non_display_keys.include? k }
-      result.map { |key, value| [key, value.is_a?(Array) ? value : value.to_s ] }.to_h
+      result           = config.reject { |k| non_display_keys.include? k }
+      result.map { |key, value| [key, value.is_a?(Array) ? value : value.to_s] }.to_h
     end
 
     def yard_object
@@ -59,11 +60,11 @@ module RubocopDocs
 
     def as_json
       {
-        name: name,
-        department_name: department_name,
-        description: description,
-        examples_description: examples_description,
-        configuration: configuration,
+        name:                    name,
+        department_name:         department_name,
+        description:             description,
+        examples_description:    examples_description,
+        configuration:           configuration,
         configurable_attributes: configurable_attributes,
       }
     end
@@ -71,22 +72,22 @@ module RubocopDocs
 
   def self.rubocop_source_code_path(rubocop_version)
     ruby_version = "2.4.0"
-    gem_path = "vendor/ruby/#{ruby_version}/gems/rubocop-#{rubocop_version}"
+    gem_path     = "vendor/ruby/#{ruby_version}/gems/rubocop-#{rubocop_version}"
     "#{gem_path}/lib/rubocop/cop/*/*.rb"
   end
 
   def self.run
-    rubocop_version = "0.51.0"
+    rubocop_version = File.read('.rubocop-version')
     YARD::Rake::YardocTask.new do |task|
-      task.files = [rubocop_source_code_path(rubocop_version)]
+      task.files   = [rubocop_source_code_path(rubocop_version)]
       task.options = ['--no-output']
     end
     YARD::Registry.load!
 
-    cops   = RuboCop::Cop::Cop.registry
-    config = RuboCop::ConfigLoader.default_configuration
+    cops                       = RuboCop::Cop::Cop.registry
+    config                     = RuboCop::ConfigLoader.default_configuration
     config['Rails']['Enabled'] = true
-    result = []
+    result                     = []
     cops.each do |cop|
       result << RubocopDocs::CopDoc.new(cop, config)
     end
@@ -94,4 +95,5 @@ module RubocopDocs
     File.write('rubocop-doc.yml', result.to_yaml)
   end
 end
+
 RubocopDocs.run

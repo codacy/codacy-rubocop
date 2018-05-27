@@ -49,19 +49,6 @@
       ]
     },
     {
-      "patternId": "Gemspec_DuplicatedAssignment",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "Include",
-          "default": [
-            "**/*.gemspec"
-          ]
-        }
-      ]
-    },
-    {
       "patternId": "Gemspec_OrderedDependencies",
       "level": "Info",
       "category": "CodeStyle",
@@ -75,19 +62,6 @@
         {
           "name": "TreatCommentsAsGroupSeparators",
           "default": "true"
-        }
-      ]
-    },
-    {
-      "patternId": "Gemspec_RequiredRubyVersion",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "Include",
-          "default": [
-            "**/*.gemspec"
-          ]
         }
       ]
     },
@@ -222,29 +196,6 @@
       ]
     },
     {
-      "patternId": "Layout_ClassStructure",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "Categories",
-          "default": "{\"module_inclusion\"=>[\"include\", \"prepend\", \"extend\"]}"
-        },
-        {
-          "name": "ExpectedOrder",
-          "default": [
-            "module_inclusion",
-            "constants",
-            "public_class_methods",
-            "initializer",
-            "public_methods",
-            "protected_methods",
-            "private_methods"
-          ]
-        }
-      ]
-    },
-    {
       "patternId": "Layout_ClosingParenthesisIndentation",
       "level": "Info",
       "category": "CodeStyle",
@@ -311,14 +262,6 @@
     },
     {
       "patternId": "Layout_EmptyLinesAroundAccessModifier",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
-    },
-    {
-      "patternId": "Layout_EmptyLinesAroundArguments",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [
@@ -911,10 +854,6 @@
           ]
         },
         {
-          "name": "EnforcedStyleForEmptyBraces",
-          "default": "space"
-        },
-        {
           "name": "SupportedStylesForEmptyBraces",
           "default": [
             "space",
@@ -985,36 +924,6 @@
       ]
     },
     {
-      "patternId": "Layout_SpaceInsideArrayLiteralBrackets",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "EnforcedStyle",
-          "default": "no_space"
-        },
-        {
-          "name": "SupportedStyles",
-          "default": [
-            "space",
-            "no_space",
-            "compact"
-          ]
-        },
-        {
-          "name": "EnforcedStyleForEmptyBrackets",
-          "default": "no_space"
-        },
-        {
-          "name": "SupportedStylesForEmptyBrackets",
-          "default": [
-            "space",
-            "no_space"
-          ]
-        }
-      ]
-    },
-    {
       "patternId": "Layout_SpaceInsideBlockBraces",
       "level": "Info",
       "category": "CodeStyle",
@@ -1045,6 +954,14 @@
           "name": "SpaceBeforeBlockParameters",
           "default": "true"
         }
+      ]
+    },
+    {
+      "patternId": "Layout_SpaceInsideBrackets",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+
       ]
     },
     {
@@ -1099,24 +1016,6 @@
       "category": "CodeStyle",
       "parameters": [
 
-      ]
-    },
-    {
-      "patternId": "Layout_SpaceInsideReferenceBrackets",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "EnforcedStyle",
-          "default": "no_space"
-        },
-        {
-          "name": "SupportedStyles",
-          "default": [
-            "space",
-            "no_space"
-          ]
-        }
       ]
     },
     {
@@ -1177,7 +1076,7 @@
     {
       "patternId": "Lint_AmbiguousBlockAssociation",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "ErrorProne",
       "parameters": [
 
       ]
@@ -1185,7 +1084,7 @@
     {
       "patternId": "Lint_AmbiguousOperator",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "ErrorProne",
       "parameters": [
 
       ]
@@ -1193,7 +1092,7 @@
     {
       "patternId": "Lint_AmbiguousRegexpLiteral",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "ErrorProne",
       "parameters": [
 
       ]
@@ -1201,7 +1100,7 @@
     {
       "patternId": "Lint_AssignmentInCondition",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "ErrorProne",
       "parameters": [
         {
           "name": "AllowSafeAssignment",
@@ -1212,7 +1111,7 @@
     {
       "patternId": "Lint_BlockAlignment",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "ErrorProne",
       "parameters": [
         {
           "name": "EnforcedStyleAlignWith",
@@ -1231,7 +1130,7 @@
     {
       "patternId": "Lint_BooleanSymbol",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "ErrorProne",
       "parameters": [
 
       ]
@@ -1239,7 +1138,7 @@
     {
       "patternId": "Lint_CircularArgumentReference",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "ErrorProne",
       "parameters": [
 
       ]
@@ -1247,7 +1146,7 @@
     {
       "patternId": "Lint_ConditionPosition",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "ErrorProne",
       "parameters": [
 
       ]
@@ -1255,7 +1154,7 @@
     {
       "patternId": "Lint_Debugger",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "ErrorProne",
       "parameters": [
 
       ]
@@ -1263,7 +1162,7 @@
     {
       "patternId": "Lint_DefEndAlignment",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "ErrorProne",
       "parameters": [
         {
           "name": "EnforcedStyleAlignWith",
@@ -1285,7 +1184,7 @@
     {
       "patternId": "Lint_DeprecatedClassMethods",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "ErrorProne",
       "parameters": [
 
       ]
@@ -1293,7 +1192,7 @@
     {
       "patternId": "Lint_DuplicateCaseCondition",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "ErrorProne",
       "parameters": [
 
       ]
@@ -1301,7 +1200,7 @@
     {
       "patternId": "Lint_DuplicateMethods",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "ErrorProne",
       "parameters": [
 
       ]
@@ -1309,7 +1208,7 @@
     {
       "patternId": "Lint_DuplicatedKey",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "ErrorProne",
       "parameters": [
 
       ]
@@ -1317,7 +1216,7 @@
     {
       "patternId": "Lint_EachWithObjectArgument",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "ErrorProne",
       "parameters": [
 
       ]
@@ -1325,7 +1224,7 @@
     {
       "patternId": "Lint_ElseLayout",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "ErrorProne",
       "parameters": [
 
       ]
@@ -1333,7 +1232,7 @@
     {
       "patternId": "Lint_EmptyEnsure",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "ErrorProne",
       "parameters": [
         {
           "name": "AutoCorrect",
@@ -1344,7 +1243,7 @@
     {
       "patternId": "Lint_EmptyExpression",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "ErrorProne",
       "parameters": [
 
       ]
@@ -1352,7 +1251,7 @@
     {
       "patternId": "Lint_EmptyInterpolation",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "ErrorProne",
       "parameters": [
 
       ]
@@ -1360,7 +1259,7 @@
     {
       "patternId": "Lint_EmptyWhen",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "ErrorProne",
       "parameters": [
 
       ]
@@ -1368,7 +1267,7 @@
     {
       "patternId": "Lint_EndAlignment",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "ErrorProne",
       "parameters": [
         {
           "name": "EnforcedStyleAlignWith",
@@ -1391,7 +1290,7 @@
     {
       "patternId": "Lint_EndInMethod",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "ErrorProne",
       "parameters": [
 
       ]
@@ -1399,7 +1298,7 @@
     {
       "patternId": "Lint_EnsureReturn",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "ErrorProne",
       "parameters": [
 
       ]
@@ -1407,7 +1306,7 @@
     {
       "patternId": "Lint_FloatOutOfRange",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "ErrorProne",
       "parameters": [
 
       ]
@@ -1415,7 +1314,7 @@
     {
       "patternId": "Lint_FormatParameterMismatch",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "ErrorProne",
       "parameters": [
 
       ]
@@ -1423,7 +1322,7 @@
     {
       "patternId": "Lint_HandleExceptions",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "ErrorProne",
       "parameters": [
 
       ]
@@ -1431,7 +1330,7 @@
     {
       "patternId": "Lint_ImplicitStringConcatenation",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "ErrorProne",
       "parameters": [
 
       ]
@@ -1439,7 +1338,7 @@
     {
       "patternId": "Lint_InheritException",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "ErrorProne",
       "parameters": [
         {
           "name": "EnforcedStyle",
@@ -1457,7 +1356,7 @@
     {
       "patternId": "Lint_IneffectiveAccessModifier",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "ErrorProne",
       "parameters": [
 
       ]
@@ -1465,7 +1364,7 @@
     {
       "patternId": "Lint_InterpolationCheck",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "ErrorProne",
       "parameters": [
 
       ]
@@ -1473,7 +1372,7 @@
     {
       "patternId": "Lint_LiteralAsCondition",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "ErrorProne",
       "parameters": [
 
       ]
@@ -1481,7 +1380,7 @@
     {
       "patternId": "Lint_LiteralInInterpolation",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "ErrorProne",
       "parameters": [
 
       ]
@@ -1489,26 +1388,15 @@
     {
       "patternId": "Lint_Loop",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "ErrorProne",
       "parameters": [
 
       ]
     },
     {
-      "patternId": "Lint_MissingCopEnableDirective",
-      "level": "Warning",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "MaximumRangeSize",
-          "default": "Infinity"
-        }
-      ]
-    },
-    {
       "patternId": "Lint_MultipleCompare",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "ErrorProne",
       "parameters": [
 
       ]
@@ -1516,15 +1404,7 @@
     {
       "patternId": "Lint_NestedMethodDefinition",
       "level": "Warning",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
-    },
-    {
-      "patternId": "Lint_NestedPercentLiteral",
-      "level": "Warning",
-      "category": "CodeStyle",
+      "category": "ErrorProne",
       "parameters": [
 
       ]
@@ -1532,7 +1412,7 @@
     {
       "patternId": "Lint_NextWithoutAccumulator",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "ErrorProne",
       "parameters": [
 
       ]
@@ -1540,7 +1420,7 @@
     {
       "patternId": "Lint_NonLocalExitFromIterator",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "ErrorProne",
       "parameters": [
 
       ]
@@ -1548,7 +1428,7 @@
     {
       "patternId": "Lint_ParenthesesAsGroupedExpression",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "ErrorProne",
       "parameters": [
 
       ]
@@ -1556,7 +1436,7 @@
     {
       "patternId": "Lint_PercentStringArray",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "ErrorProne",
       "parameters": [
 
       ]
@@ -1564,7 +1444,7 @@
     {
       "patternId": "Lint_PercentSymbolArray",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "ErrorProne",
       "parameters": [
 
       ]
@@ -1572,7 +1452,7 @@
     {
       "patternId": "Lint_RandOne",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "ErrorProne",
       "parameters": [
 
       ]
@@ -1580,7 +1460,7 @@
     {
       "patternId": "Lint_RedundantWithIndex",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "ErrorProne",
       "parameters": [
 
       ]
@@ -1588,7 +1468,7 @@
     {
       "patternId": "Lint_RedundantWithObject",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "ErrorProne",
       "parameters": [
 
       ]
@@ -1596,7 +1476,7 @@
     {
       "patternId": "Lint_RegexpAsCondition",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "ErrorProne",
       "parameters": [
 
       ]
@@ -1604,7 +1484,7 @@
     {
       "patternId": "Lint_RequireParentheses",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "ErrorProne",
       "parameters": [
 
       ]
@@ -1612,7 +1492,7 @@
     {
       "patternId": "Lint_RescueException",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "ErrorProne",
       "parameters": [
 
       ]
@@ -1620,7 +1500,15 @@
     {
       "patternId": "Lint_RescueType",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "ErrorProne",
+      "parameters": [
+
+      ]
+    },
+    {
+      "patternId": "Lint_RescueWithoutErrorClass",
+      "level": "Warning",
+      "category": "ErrorProne",
       "parameters": [
 
       ]
@@ -1628,7 +1516,7 @@
     {
       "patternId": "Lint_ReturnInVoidContext",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "ErrorProne",
       "parameters": [
 
       ]
@@ -1636,7 +1524,7 @@
     {
       "patternId": "Lint_SafeNavigationChain",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "ErrorProne",
       "parameters": [
         {
           "name": "Whitelist",
@@ -1652,26 +1540,15 @@
     {
       "patternId": "Lint_ScriptPermission",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "ErrorProne",
       "parameters": [
 
       ]
     },
     {
-      "patternId": "Lint_ShadowedArgument",
-      "level": "Warning",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "IgnoreImplicitReferences",
-          "default": "false"
-        }
-      ]
-    },
-    {
       "patternId": "Lint_ShadowedException",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "ErrorProne",
       "parameters": [
 
       ]
@@ -1679,7 +1556,7 @@
     {
       "patternId": "Lint_ShadowingOuterLocalVariable",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "ErrorProne",
       "parameters": [
 
       ]
@@ -1687,7 +1564,7 @@
     {
       "patternId": "Lint_StringConversionInInterpolation",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "ErrorProne",
       "parameters": [
 
       ]
@@ -1695,7 +1572,7 @@
     {
       "patternId": "Lint_Syntax",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "ErrorProne",
       "parameters": [
 
       ]
@@ -1703,7 +1580,7 @@
     {
       "patternId": "Lint_UnderscorePrefixedVariableName",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "ErrorProne",
       "parameters": [
 
       ]
@@ -1711,7 +1588,7 @@
     {
       "patternId": "Lint_UnifiedInteger",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "ErrorProne",
       "parameters": [
 
       ]
@@ -1719,7 +1596,7 @@
     {
       "patternId": "Lint_UnneededDisable",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "ErrorProne",
       "parameters": [
 
       ]
@@ -1727,7 +1604,7 @@
     {
       "patternId": "Lint_UnneededRequireStatement",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "ErrorProne",
       "parameters": [
 
       ]
@@ -1735,7 +1612,7 @@
     {
       "patternId": "Lint_UnneededSplatExpansion",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "ErrorProne",
       "parameters": [
 
       ]
@@ -1743,7 +1620,7 @@
     {
       "patternId": "Lint_UnreachableCode",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "ErrorProne",
       "parameters": [
 
       ]
@@ -1751,7 +1628,7 @@
     {
       "patternId": "Lint_UnusedBlockArgument",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "ErrorProne",
       "parameters": [
         {
           "name": "IgnoreEmptyBlocks",
@@ -1766,7 +1643,7 @@
     {
       "patternId": "Lint_UnusedMethodArgument",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "ErrorProne",
       "parameters": [
         {
           "name": "AllowUnusedKeywordArguments",
@@ -1781,7 +1658,7 @@
     {
       "patternId": "Lint_UriEscapeUnescape",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "ErrorProne",
       "parameters": [
 
       ]
@@ -1789,7 +1666,7 @@
     {
       "patternId": "Lint_UriRegexp",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "ErrorProne",
       "parameters": [
 
       ]
@@ -1797,7 +1674,7 @@
     {
       "patternId": "Lint_UselessAccessModifier",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "ErrorProne",
       "parameters": [
         {
           "name": "ContextCreatingMethods",
@@ -1816,7 +1693,7 @@
     {
       "patternId": "Lint_UselessAssignment",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "ErrorProne",
       "parameters": [
 
       ]
@@ -1824,7 +1701,7 @@
     {
       "patternId": "Lint_UselessComparison",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "ErrorProne",
       "parameters": [
 
       ]
@@ -1832,7 +1709,7 @@
     {
       "patternId": "Lint_UselessElseWithoutRescue",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "ErrorProne",
       "parameters": [
 
       ]
@@ -1840,7 +1717,7 @@
     {
       "patternId": "Lint_UselessSetterCall",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "ErrorProne",
       "parameters": [
 
       ]
@@ -1848,7 +1725,7 @@
     {
       "patternId": "Lint_Void",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "ErrorProne",
       "parameters": [
 
       ]
@@ -1856,7 +1733,7 @@
     {
       "patternId": "Metrics_CyclomaticComplexity",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "ErrorProne",
       "parameters": [
         {
           "name": "Max",
@@ -1867,7 +1744,7 @@
     {
       "patternId": "Metrics_AbcSize",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "ErrorProne",
       "parameters": [
         {
           "name": "Max",
@@ -1878,7 +1755,7 @@
     {
       "patternId": "Metrics_BlockLength",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "ErrorProne",
       "parameters": [
         {
           "name": "CountComments",
@@ -1899,7 +1776,7 @@
     {
       "patternId": "Metrics_BlockNesting",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "ErrorProne",
       "parameters": [
         {
           "name": "CountBlocks",
@@ -1914,7 +1791,7 @@
     {
       "patternId": "Metrics_ClassLength",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "ErrorProne",
       "parameters": [
         {
           "name": "CountComments",
@@ -1929,7 +1806,7 @@
     {
       "patternId": "Metrics_LineLength",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "ErrorProne",
       "parameters": [
         {
           "name": "Max",
@@ -1965,7 +1842,7 @@
     {
       "patternId": "Metrics_MethodLength",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "ErrorProne",
       "parameters": [
         {
           "name": "CountComments",
@@ -1980,7 +1857,7 @@
     {
       "patternId": "Metrics_ModuleLength",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "ErrorProne",
       "parameters": [
         {
           "name": "CountComments",
@@ -1995,7 +1872,7 @@
     {
       "patternId": "Metrics_ParameterLists",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "ErrorProne",
       "parameters": [
         {
           "name": "Max",
@@ -2010,7 +1887,7 @@
     {
       "patternId": "Metrics_PerceivedComplexity",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "ErrorProne",
       "parameters": [
         {
           "name": "Max",
@@ -2215,7 +2092,7 @@
         {
           "name": "Exclude",
           "default": [
-            "/home/masx/Developer/projects/codacy-rubocop/spec/**/*"
+            "/Users/rtfpessoa/qamine/codacy-rubocop/spec/**/*"
           ]
         }
       ]
@@ -2260,7 +2137,7 @@
     {
       "patternId": "Performance_Caller",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "Performance",
       "parameters": [
 
       ]
@@ -2268,7 +2145,7 @@
     {
       "patternId": "Performance_CaseWhenSplat",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "Performance",
       "parameters": [
 
       ]
@@ -2276,7 +2153,7 @@
     {
       "patternId": "Performance_Casecmp",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "Performance",
       "parameters": [
 
       ]
@@ -2284,7 +2161,7 @@
     {
       "patternId": "Performance_Count",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "Performance",
       "parameters": [
         {
           "name": "SafeMode",
@@ -2295,7 +2172,7 @@
     {
       "patternId": "Performance_Detect",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "Performance",
       "parameters": [
         {
           "name": "SafeMode",
@@ -2306,7 +2183,7 @@
     {
       "patternId": "Performance_DoubleStartEndWith",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "Performance",
       "parameters": [
         {
           "name": "IncludeActiveSupportAliases",
@@ -2317,7 +2194,7 @@
     {
       "patternId": "Performance_EndWith",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "Performance",
       "parameters": [
         {
           "name": "AutoCorrect",
@@ -2328,7 +2205,7 @@
     {
       "patternId": "Performance_FixedSize",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "Performance",
       "parameters": [
 
       ]
@@ -2336,7 +2213,7 @@
     {
       "patternId": "Performance_FlatMap",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "Performance",
       "parameters": [
         {
           "name": "EnabledForFlattenWithoutParams",
@@ -2347,7 +2224,7 @@
     {
       "patternId": "Performance_HashEachMethods",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "Performance",
       "parameters": [
         {
           "name": "AutoCorrect",
@@ -2358,7 +2235,7 @@
     {
       "patternId": "Performance_LstripRstrip",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "Performance",
       "parameters": [
 
       ]
@@ -2366,7 +2243,7 @@
     {
       "patternId": "Performance_RangeInclude",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "Performance",
       "parameters": [
 
       ]
@@ -2374,7 +2251,7 @@
     {
       "patternId": "Performance_RedundantBlockCall",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "Performance",
       "parameters": [
 
       ]
@@ -2382,7 +2259,7 @@
     {
       "patternId": "Performance_RedundantMatch",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "Performance",
       "parameters": [
 
       ]
@@ -2390,7 +2267,7 @@
     {
       "patternId": "Performance_RedundantMerge",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "Performance",
       "parameters": [
         {
           "name": "MaxKeyValuePairs",
@@ -2401,7 +2278,7 @@
     {
       "patternId": "Performance_RedundantSortBy",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "Performance",
       "parameters": [
 
       ]
@@ -2409,7 +2286,7 @@
     {
       "patternId": "Performance_RegexpMatch",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "Performance",
       "parameters": [
 
       ]
@@ -2417,7 +2294,7 @@
     {
       "patternId": "Performance_ReverseEach",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "Performance",
       "parameters": [
 
       ]
@@ -2425,7 +2302,7 @@
     {
       "patternId": "Performance_Sample",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "Performance",
       "parameters": [
 
       ]
@@ -2433,7 +2310,7 @@
     {
       "patternId": "Performance_Size",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "Performance",
       "parameters": [
 
       ]
@@ -2441,7 +2318,7 @@
     {
       "patternId": "Performance_CompareWithBlock",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "Performance",
       "parameters": [
 
       ]
@@ -2449,7 +2326,7 @@
     {
       "patternId": "Performance_StartWith",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "Performance",
       "parameters": [
         {
           "name": "AutoCorrect",
@@ -2460,7 +2337,7 @@
     {
       "patternId": "Performance_StringReplacement",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "Performance",
       "parameters": [
 
       ]
@@ -2468,7 +2345,7 @@
     {
       "patternId": "Performance_TimesMap",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "Performance",
       "parameters": [
         {
           "name": "AutoCorrect",
@@ -2479,7 +2356,7 @@
     {
       "patternId": "Performance_UnfreezeString",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "Performance",
       "parameters": [
 
       ]
@@ -2487,7 +2364,7 @@
     {
       "patternId": "Performance_UriDefaultParser",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "Performance",
       "parameters": [
 
       ]
@@ -2541,12 +2418,7 @@
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [
-        {
-          "name": "AllowedChars",
-          "default": [
 
-          ]
-        }
       ]
     },
     {
@@ -2691,10 +2563,6 @@
       "category": "CodeStyle",
       "parameters": [
         {
-          "name": "AutoCorrect",
-          "default": "false"
-        },
-        {
           "name": "EnforcedStyle",
           "default": "nested"
         },
@@ -2754,14 +2622,6 @@
     },
     {
       "patternId": "Style_ColonMethodCall",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
-    },
-    {
-      "patternId": "Style_ColonMethodDefinition",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [
@@ -2889,8 +2749,8 @@
         {
           "name": "Exclude",
           "default": [
-            "/home/masx/Developer/projects/codacy-rubocop/spec/**/*",
-            "/home/masx/Developer/projects/codacy-rubocop/test/**/*"
+            "/Users/rtfpessoa/qamine/codacy-rubocop/spec/**/*",
+            "/Users/rtfpessoa/qamine/codacy-rubocop/test/**/*"
           ]
         },
         {
@@ -2907,8 +2767,8 @@
         {
           "name": "Exclude",
           "default": [
-            "/home/masx/Developer/projects/codacy-rubocop/spec/**/*",
-            "/home/masx/Developer/projects/codacy-rubocop/test/**/*"
+            "/Users/rtfpessoa/qamine/codacy-rubocop/spec/**/*",
+            "/Users/rtfpessoa/qamine/codacy-rubocop/test/**/*"
           ]
         }
       ]
@@ -2931,14 +2791,6 @@
     },
     {
       "patternId": "Style_EachWithObject",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
-    },
-    {
-      "patternId": "Style_EmptyBlockParameter",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [
@@ -2970,14 +2822,6 @@
             "both"
           ]
         }
-      ]
-    },
-    {
-      "patternId": "Style_EmptyLambdaParameter",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
       ]
     },
     {
@@ -3016,14 +2860,6 @@
     },
     {
       "patternId": "Style_EndBlock",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
-    },
-    {
-      "patternId": "Style_EvalWithLocation",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [
@@ -3096,8 +2932,7 @@
           "name": "SupportedStyles",
           "default": [
             "annotated",
-            "template",
-            "unannotated"
+            "template"
           ]
         }
       ]
@@ -3194,7 +3029,10 @@
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [
-
+        {
+          "name": "MaxLineLength",
+          "default": "80"
+        }
       ]
     },
     {
@@ -3671,7 +3509,7 @@
         {
           "name": "Exclude",
           "default": [
-            "/home/masx/Developer/projects/codacy-rubocop/spec/**/*"
+            "/Users/rtfpessoa/qamine/codacy-rubocop/spec/**/*"
           ]
         }
       ]
@@ -3818,14 +3656,6 @@
       ]
     },
     {
-      "patternId": "Style_RandomWithOffset",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
-    },
-    {
       "patternId": "Style_RedundantBegin",
       "level": "Info",
       "category": "CodeStyle",
@@ -3913,24 +3743,6 @@
       "category": "CodeStyle",
       "parameters": [
 
-      ]
-    },
-    {
-      "patternId": "Style_RescueStandardError",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "EnforcedStyle",
-          "default": "explicit"
-        },
-        {
-          "name": "SupportedStyles",
-          "default": [
-            "implicit",
-            "explicit"
-          ]
-        }
       ]
     },
     {
@@ -4088,14 +3900,6 @@
       ]
     },
     {
-      "patternId": "Style_StringHashKeys",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
-    },
-    {
       "patternId": "Style_StringLiterals",
       "level": "Info",
       "category": "CodeStyle",
@@ -4222,14 +4026,6 @@
       ]
     },
     {
-      "patternId": "Style_TrailingBodyOnMethodDefinition",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
-    },
-    {
       "patternId": "Style_TrailingCommaInArguments",
       "level": "Info",
       "category": "CodeStyle",
@@ -4265,14 +4061,6 @@
             "no_comma"
           ]
         }
-      ]
-    },
-    {
-      "patternId": "Style_TrailingMethodEndStatement",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
       ]
     },
     {
@@ -4392,7 +4180,10 @@
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [
-
+        {
+          "name": "MaxLineLength",
+          "default": "80"
+        }
       ]
     },
     {
@@ -4450,7 +4241,7 @@
     {
       "patternId": "Rails_ActionFilter",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "ErrorProne",
       "parameters": [
         {
           "name": "EnforcedStyle",
@@ -4474,7 +4265,7 @@
     {
       "patternId": "Rails_ActiveSupportAliases",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "ErrorProne",
       "parameters": [
 
       ]
@@ -4482,7 +4273,7 @@
     {
       "patternId": "Rails_ApplicationJob",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "ErrorProne",
       "parameters": [
 
       ]
@@ -4490,7 +4281,7 @@
     {
       "patternId": "Rails_ApplicationRecord",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "ErrorProne",
       "parameters": [
 
       ]
@@ -4498,7 +4289,7 @@
     {
       "patternId": "Rails_Blank",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "ErrorProne",
       "parameters": [
         {
           "name": "NilOrEmpty",
@@ -4515,22 +4306,9 @@
       ]
     },
     {
-      "patternId": "Rails_CreateTableWithTimestamps",
-      "level": "Warning",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "Include",
-          "default": [
-            "db/migrate/*.rb"
-          ]
-        }
-      ]
-    },
-    {
       "patternId": "Rails_Date",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "ErrorProne",
       "parameters": [
         {
           "name": "EnforcedStyle",
@@ -4548,7 +4326,7 @@
     {
       "patternId": "Rails_DynamicFindBy",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "ErrorProne",
       "parameters": [
         {
           "name": "Whitelist",
@@ -4561,7 +4339,7 @@
     {
       "patternId": "Rails_Delegate",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "ErrorProne",
       "parameters": [
         {
           "name": "EnforceForPrefixed",
@@ -4572,7 +4350,7 @@
     {
       "patternId": "Rails_DelegateAllowBlank",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "ErrorProne",
       "parameters": [
 
       ]
@@ -4580,7 +4358,7 @@
     {
       "patternId": "Rails_EnumUniqueness",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "ErrorProne",
       "parameters": [
         {
           "name": "Include",
@@ -4591,17 +4369,9 @@
       ]
     },
     {
-      "patternId": "Rails_EnvironmentComparison",
-      "level": "Warning",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
-    },
-    {
       "patternId": "Rails_Exit",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "ErrorProne",
       "parameters": [
         {
           "name": "Include",
@@ -4614,7 +4384,7 @@
         {
           "name": "Exclude",
           "default": [
-            "/home/masx/Developer/projects/codacy-rubocop/lib/**/*.rake"
+            "/Users/rtfpessoa/qamine/codacy-rubocop/lib/**/*.rake"
           ]
         }
       ]
@@ -4622,7 +4392,7 @@
     {
       "patternId": "Rails_FilePath",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "ErrorProne",
       "parameters": [
 
       ]
@@ -4630,7 +4400,7 @@
     {
       "patternId": "Rails_FindBy",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "ErrorProne",
       "parameters": [
         {
           "name": "Include",
@@ -4643,7 +4413,7 @@
     {
       "patternId": "Rails_FindEach",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "ErrorProne",
       "parameters": [
         {
           "name": "Include",
@@ -4656,7 +4426,7 @@
     {
       "patternId": "Rails_HasAndBelongsToMany",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "ErrorProne",
       "parameters": [
         {
           "name": "Include",
@@ -4669,7 +4439,7 @@
     {
       "patternId": "Rails_HasManyOrHasOneDependent",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "ErrorProne",
       "parameters": [
         {
           "name": "Include",
@@ -4682,7 +4452,7 @@
     {
       "patternId": "Rails_HttpPositionalArguments",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "ErrorProne",
       "parameters": [
         {
           "name": "Include",
@@ -4694,35 +4464,9 @@
       ]
     },
     {
-      "patternId": "Rails_InverseOf",
-      "level": "Warning",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "Include",
-          "default": [
-            "app/models/**/*.rb"
-          ]
-        }
-      ]
-    },
-    {
-      "patternId": "Rails_LexicallyScopedActionFilter",
-      "level": "Warning",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "Include",
-          "default": [
-            "app/controllers/**/*.rb"
-          ]
-        }
-      ]
-    },
-    {
       "patternId": "Rails_NotNullColumn",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "ErrorProne",
       "parameters": [
         {
           "name": "Include",
@@ -4735,7 +4479,7 @@
     {
       "patternId": "Rails_OutputSafety",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "ErrorProne",
       "parameters": [
 
       ]
@@ -4743,7 +4487,7 @@
     {
       "patternId": "Rails_Output",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "ErrorProne",
       "parameters": [
         {
           "name": "Include",
@@ -4759,15 +4503,7 @@
     {
       "patternId": "Rails_PluralizationGrammar",
       "level": "Warning",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
-    },
-    {
-      "patternId": "Rails_Presence",
-      "level": "Warning",
-      "category": "CodeStyle",
+      "category": "ErrorProne",
       "parameters": [
 
       ]
@@ -4775,7 +4511,7 @@
     {
       "patternId": "Rails_Present",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "ErrorProne",
       "parameters": [
         {
           "name": "NotNilAndNotEmpty",
@@ -4794,7 +4530,7 @@
     {
       "patternId": "Rails_ReadWriteAttribute",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "ErrorProne",
       "parameters": [
         {
           "name": "Include",
@@ -4805,17 +4541,9 @@
       ]
     },
     {
-      "patternId": "Rails_RedundantReceiverInWithOptions",
-      "level": "Warning",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
-    },
-    {
       "patternId": "Rails_RequestReferer",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "ErrorProne",
       "parameters": [
         {
           "name": "EnforcedStyle",
@@ -4833,7 +4561,7 @@
     {
       "patternId": "Rails_ReversibleMigration",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "ErrorProne",
       "parameters": [
         {
           "name": "Include",
@@ -4846,7 +4574,7 @@
     {
       "patternId": "Rails_RelativeDateConstant",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "ErrorProne",
       "parameters": [
 
       ]
@@ -4854,7 +4582,7 @@
     {
       "patternId": "Rails_SafeNavigation",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "ErrorProne",
       "parameters": [
         {
           "name": "ConvertTry",
@@ -4865,7 +4593,7 @@
     {
       "patternId": "Rails_SaveBang",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "ErrorProne",
       "parameters": [
 
       ]
@@ -4873,7 +4601,7 @@
     {
       "patternId": "Rails_ScopeArgs",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "ErrorProne",
       "parameters": [
         {
           "name": "Include",
@@ -4886,7 +4614,7 @@
     {
       "patternId": "Rails_SkipsModelValidations",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "ErrorProne",
       "parameters": [
         {
           "name": "Blacklist",
@@ -4909,7 +4637,7 @@
     {
       "patternId": "Rails_TimeZone",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "ErrorProne",
       "parameters": [
         {
           "name": "EnforcedStyle",
@@ -4927,7 +4655,7 @@
     {
       "patternId": "Rails_UniqBeforePluck",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "ErrorProne",
       "parameters": [
         {
           "name": "EnforcedStyle",
@@ -4949,7 +4677,7 @@
     {
       "patternId": "Rails_UnknownEnv",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "ErrorProne",
       "parameters": [
         {
           "name": "Environments",
@@ -4964,7 +4692,7 @@
     {
       "patternId": "Rails_Validation",
       "level": "Warning",
-      "category": "CodeStyle",
+      "category": "ErrorProne",
       "parameters": [
         {
           "name": "Include",
@@ -4976,16 +4704,16 @@
     },
     {
       "patternId": "Security_Eval",
-      "level": "Info",
-      "category": "CodeStyle",
+      "level": "Error",
+      "category": "Security",
       "parameters": [
 
       ]
     },
     {
       "patternId": "Security_JSONLoad",
-      "level": "Info",
-      "category": "CodeStyle",
+      "level": "Error",
+      "category": "Security",
       "parameters": [
         {
           "name": "AutoCorrect",
@@ -4995,16 +4723,16 @@
     },
     {
       "patternId": "Security_MarshalLoad",
-      "level": "Info",
-      "category": "CodeStyle",
+      "level": "Error",
+      "category": "Security",
       "parameters": [
 
       ]
     },
     {
       "patternId": "Security_YAMLLoad",
-      "level": "Info",
-      "category": "CodeStyle",
+      "level": "Error",
+      "category": "Security",
       "parameters": [
 
       ]
