@@ -1,17 +1,7 @@
-Checks for expressions where there is a call to a predicate method with at least one argument, where no parentheses are used around parameter list, and a boolean operator, && or ||, is used in the last argument.
 
-**Example:**
 
- ```
-  #dont do like this
-  if day.is? :tuesday && month == :jan
 
-  end
+# Examples
 
-  #do it like this instead
-  if day.is?(:tuesday) && month == :jan
-
-  end
- ```
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Lint/RequireParentheses)

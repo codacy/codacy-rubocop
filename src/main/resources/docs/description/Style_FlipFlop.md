@@ -1,3 +1,7 @@
-Avoid using Flip Flop at all times
+
+
+
+# Examples
+
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Style/FlipFlop)
