@@ -34,7 +34,14 @@ You can follow the instructions there to make sure your tool is working as expec
 
 ## Update Version with Docs
 
-* Run `sbt "runMain codacy.rubocop.Generator <version>"`
+Change the version in `.rubocop-version` and then run on this project root:
+
+```sh
+bundle install
+ruby src/main/ruby/rubocop_doc/generator.rb
+ruby src/main/ruby/codacy/rubocop/generator.rb
+rm -f rubocop-doc.yml
+```
 
 ## What is Codacy?
 

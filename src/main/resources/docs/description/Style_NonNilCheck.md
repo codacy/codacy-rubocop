@@ -1,19 +1,7 @@
-Don't do explicit non-nil checks unless you're dealing with boolean values.
 
-**Example:**
 
-```
-# bad
-do_something if !something.nil?
-do_something if something != nil
 
-# good
-do_something if something
+# Examples
 
-# good - dealing with a boolean
-def value_set?
-  !@some_boolean.nil?
-end
-```
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Style/NonNilCheck)

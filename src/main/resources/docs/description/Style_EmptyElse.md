@@ -1,3 +1,7 @@
-Remove the empty else since it is redundant and serves no purpose for your code
+
+
+
+# Examples
+
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Style/EmptyElse)
