@@ -6,6 +6,7 @@ git_source(:github) do |repo_name|
 end
 
 gem "yard"
+gem "rake"
 gem "activesupport"
 gem "parser", "2.5.1.2"
 gem "pry"

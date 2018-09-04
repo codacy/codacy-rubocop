@@ -22,6 +22,7 @@ GEM
       coderay (~> 1.1.0)
       method_source (~> 0.9.0)
     rainbow (3.0.0)
+    rake (12.3.1)
     rubocop (0.58.2)
       jaro_winkler (~> 1.5.1)
       parallel (~> 1.10)
@@ -51,6 +52,7 @@ DEPENDENCIES
   activesupport
   parser (= 2.5.1.2)
   pry
+  rake
   rubocop (= 0.58.2)
   rubocop-github (= 0.10.0)
   rubocop-migrations (= 0.1.2)
@@ -59,4 +61,4 @@ DEPENDENCIES
   yard
 
 BUNDLED WITH
-   1.16.2
+   1.16.4
