@@ -48,12 +48,13 @@ def installAll(rubocopVersion: String) =
   s"""echo -n "" > /etc/apk/repositories
      |&& echo "http://dl-cdn.alpinelinux.org/alpine/v3.7/main" >> /etc/apk/repositories
      |&& echo "http://dl-cdn.alpinelinux.org/alpine/v3.7/community" >> /etc/apk/repositories
-     |&& apk add --no-cache ruby ruby-irb ruby-rake ruby-io-console ruby-bigdecimal
+     |&& apk add --no-cache ruby-dev ruby ruby-irb ruby-rake ruby-io-console ruby-bigdecimal make gcc
      |ruby-json ruby-bundler libstdc++ tzdata bash ca-certificates libc-dev
      |&& echo 'gem: --no-document' > /etc/gemrc
      |&& cd /opt/docker/setup
      |&& bundle install
      |&& gem cleanup
+     |&& apk del ruby-dev make gcc
      |&& rm -rf /tmp/* /var/cache/apk/*""".stripMargin
     .replaceAll(System.lineSeparator(), " ")
 
