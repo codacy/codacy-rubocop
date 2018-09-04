@@ -18,9 +18,21 @@
     "timeToFix": 5
   },
   {
+    "patternId": "Gemspec_DuplicatedAssignment",
+    "title": "An attribute assignment method calls should be listed only once in a gemspec.",
+    "description": "An attribute assignment method calls should be listed only once in a gemspec.",
+    "timeToFix": 5
+  },
+  {
     "patternId": "Gemspec_OrderedDependencies",
     "title": "Dependencies in the gemspec should be alphabetically sorted.",
     "description": "Dependencies in the gemspec should be alphabetically sorted.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Gemspec_RequiredRubyVersion",
+    "title": "Checks that `required_ruby_version` of gemspec and `TargetRubyVersion` of .rubocop.yml are equal.",
+    "description": "Checks that `required_ruby_version` of gemspec and `TargetRubyVersion` of .rubocop.yml are equal.",
     "timeToFix": 5
   },
   {
@@ -48,6 +60,12 @@
     "timeToFix": 5
   },
   {
+    "patternId": "Layout_BlockAlignment",
+    "title": "Align block ends correctly.",
+    "description": "Align block ends correctly.",
+    "timeToFix": 5
+  },
+  {
     "patternId": "Layout_BlockEndNewline",
     "title": "Put end statement of multiline block on its own line.",
     "description": "Put end statement of multiline block on its own line.",
@@ -57,6 +75,18 @@
     "patternId": "Layout_CaseIndentation",
     "title": "Indentation of when in a case/when/[else/]end.",
     "description": "Indentation of when in a case/when/[else/]end.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Layout_ClassStructure",
+    "title": "Enforces a configured order of definitions within a class body.",
+    "description": "Enforces a configured order of definitions within a class body.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Layout_ClosingHeredocIndentation",
+    "title": "Checks the indentation of here document closings.",
+    "description": "Checks the indentation of here document closings.",
     "timeToFix": 5
   },
   {
@@ -72,6 +102,18 @@
     "timeToFix": 5
   },
   {
+    "patternId": "Layout_ConditionPosition",
+    "title": "Checks for condition placed in a confusing position relative to the keyword.",
+    "description": "Checks for condition placed in a confusing position relative to the keyword.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Layout_DefEndAlignment",
+    "title": "Align ends corresponding to defs correctly.",
+    "description": "Align ends corresponding to defs correctly.",
+    "timeToFix": 5
+  },
+  {
     "patternId": "Layout_DotPosition",
     "title": "Checks the position of the dot in multi-line method calls.",
     "description": "Checks the position of the dot in multi-line method calls.",
@@ -81,6 +123,18 @@
     "patternId": "Layout_ElseAlignment",
     "title": "Align elses and elsifs correctly.",
     "description": "Align elses and elsifs correctly.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Layout_EmptyComment",
+    "title": "Checks empty comment.",
+    "description": "Checks empty comment.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Layout_EmptyLineAfterGuardClause",
+    "title": "Add empty line after guard clause.",
+    "description": "Add empty line after guard clause.",
     "timeToFix": 5
   },
   {
@@ -99,6 +153,12 @@
     "patternId": "Layout_EmptyLinesAroundAccessModifier",
     "title": "Keep blank lines around access modifiers.",
     "description": "Keep blank lines around access modifiers.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Layout_EmptyLinesAroundArguments",
+    "title": "Keeps track of empty lines around method arguments.",
+    "description": "Keeps track of empty lines around method arguments.",
     "timeToFix": 5
   },
   {
@@ -141,6 +201,12 @@
     "patternId": "Layout_EmptyLines",
     "title": "Don't use several empty lines in a row.",
     "description": "Don't use several empty lines in a row.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Layout_EndAlignment",
+    "title": "Align ends correctly.",
+    "description": "Align ends correctly.",
     "timeToFix": 5
   },
   {
@@ -225,6 +291,12 @@
     "patternId": "Layout_InitialIndentation",
     "title": "Checks the indentation of the first non-blank non-comment line in a file.",
     "description": "Checks the indentation of the first non-blank non-comment line in a file.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Layout_LeadingBlankLines",
+    "title": "Check for unnecessary blank lines at the beginning of a file.",
+    "description": "Check for unnecessary blank lines at the beginning of a file.",
     "timeToFix": 5
   },
   {
@@ -384,15 +456,15 @@
     "timeToFix": 5
   },
   {
-    "patternId": "Layout_SpaceInsideBlockBraces",
-    "title": "Checks that block braces have or don't have surrounding space. For blocks taking parameters, checks that the left brace has or doesn't have trailing space.",
-    "description": "Checks that block braces have or don't have surrounding space. For blocks taking parameters, checks that the left brace has or doesn't have trailing space.",
+    "patternId": "Layout_SpaceInsideArrayLiteralBrackets",
+    "title": "Checks the spacing inside array literal brackets.",
+    "description": "Checks the spacing inside array literal brackets.",
     "timeToFix": 5
   },
   {
-    "patternId": "Layout_SpaceInsideBrackets",
-    "title": "No spaces after [ or before ].",
-    "description": "No spaces after [ or before ].",
+    "patternId": "Layout_SpaceInsideBlockBraces",
+    "title": "Checks that block braces have or don't have surrounding space. For blocks taking parameters, checks that the left brace has or doesn't have trailing space.",
+    "description": "Checks that block braces have or don't have surrounding space. For blocks taking parameters, checks that the left brace has or doesn't have trailing space.",
     "timeToFix": 5
   },
   {
@@ -417,6 +489,12 @@
     "patternId": "Layout_SpaceInsideRangeLiteral",
     "title": "No spaces inside range literals.",
     "description": "No spaces inside range literals.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Layout_SpaceInsideReferenceBrackets",
+    "title": "Checks the spacing inside referential brackets.",
+    "description": "Checks the spacing inside referential brackets.",
     "timeToFix": 5
   },
   {
@@ -468,9 +546,9 @@
     "timeToFix": 5
   },
   {
-    "patternId": "Lint_BlockAlignment",
-    "title": "Align block ends correctly.",
-    "description": "Align block ends correctly.",
+    "patternId": "Lint_BigDecimalNew",
+    "title": "`BigDecimal.new()` is deprecated. Use `BigDecimal()` instead.",
+    "description": "`BigDecimal.new()` is deprecated. Use `BigDecimal()` instead.",
     "timeToFix": 5
   },
   {
@@ -486,21 +564,9 @@
     "timeToFix": 5
   },
   {
-    "patternId": "Lint_ConditionPosition",
-    "title": "Checks for condition placed in a confusing position relative to the keyword.",
-    "description": "Checks for condition placed in a confusing position relative to the keyword.",
-    "timeToFix": 5
-  },
-  {
     "patternId": "Lint_Debugger",
     "title": "Check for debugger calls.",
     "description": "Check for debugger calls.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "Lint_DefEndAlignment",
-    "title": "Align ends corresponding to defs correctly.",
-    "description": "Align ends corresponding to defs correctly.",
     "timeToFix": 5
   },
   {
@@ -564,12 +630,6 @@
     "timeToFix": 5
   },
   {
-    "patternId": "Lint_EndAlignment",
-    "title": "Align ends correctly.",
-    "description": "Align ends correctly.",
-    "timeToFix": 5
-  },
-  {
     "patternId": "Lint_EndInMethod",
     "title": "END blocks should not be placed inside method definitions.",
     "description": "END blocks should not be placed inside method definitions.",
@@ -579,6 +639,12 @@
     "patternId": "Lint_EnsureReturn",
     "title": "Do not use return in an ensure block.",
     "description": "Do not use return in an ensure block.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Lint_ErbNewArguments",
+    "title": "Use `:trim_mode` and `:eoutvar` keyword arguments to `ERB.new`.",
+    "description": "Use `:trim_mode` and `:eoutvar` keyword arguments to `ERB.new`.",
     "timeToFix": 5
   },
   {
@@ -642,6 +708,12 @@
     "timeToFix": 5
   },
   {
+    "patternId": "Lint_MissingCopEnableDirective",
+    "title": "Checks for a `# rubocop:enable` after `# rubocop:disable`",
+    "description": "Checks for a `# rubocop:enable` after `# rubocop:disable`",
+    "timeToFix": 5
+  },
+  {
     "patternId": "Lint_MultipleCompare",
     "title": "Use `&&` operator to compare multiple value.",
     "description": "Use `&&` operator to compare multiple value.",
@@ -654,6 +726,12 @@
     "timeToFix": 5
   },
   {
+    "patternId": "Lint_NestedPercentLiteral",
+    "title": "Checks for nested percent literals.",
+    "description": "Checks for nested percent literals.",
+    "timeToFix": 5
+  },
+  {
     "patternId": "Lint_NextWithoutAccumulator",
     "title": "Do not omit the accumulator when calling `next` in a `reduce`/`inject` block.",
     "description": "Do not omit the accumulator when calling `next` in a `reduce`/`inject` block.",
@@ -663,6 +741,18 @@
     "patternId": "Lint_NonLocalExitFromIterator",
     "title": "Do not use return in iterator to cause non-local exit.",
     "description": "Do not use return in iterator to cause non-local exit.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Lint_NumberConversion",
+    "title": "Checks unsafe usage of number conversion methods.",
+    "description": "Checks unsafe usage of number conversion methods.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Lint_OrderedMagicComments",
+    "title": "Checks the proper ordering of magic comments and whether a magic comment is not placed before a shebang.",
+    "description": "Checks the proper ordering of magic comments and whether a magic comment is not placed before a shebang.",
     "timeToFix": 5
   },
   {
@@ -726,15 +816,15 @@
     "timeToFix": 5
   },
   {
-    "patternId": "Lint_RescueWithoutErrorClass",
-    "title": "Avoid rescuing without specifying an error class.",
-    "description": "Avoid rescuing without specifying an error class.",
-    "timeToFix": 5
-  },
-  {
     "patternId": "Lint_ReturnInVoidContext",
     "title": "Checks for return in void context.",
     "description": "Checks for return in void context.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Lint_SafeNavigationConsistency",
+    "title": "Check to make sure that if safe navigation is used for a method call in an `&&` or `||` condition that safe navigation is used for all method calls on that same object.",
+    "description": "Check to make sure that if safe navigation is used for a method call in an `&&` or `||` condition that safe navigation is used for all method calls on that same object.",
     "timeToFix": 5
   },
   {
@@ -747,6 +837,12 @@
     "patternId": "Lint_ScriptPermission",
     "title": "Grant script file execute permission.",
     "description": "Grant script file execute permission.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Lint_ShadowedArgument",
+    "title": "Avoid reassigning arguments before they were used.",
+    "description": "Avoid reassigning arguments before they were used.",
     "timeToFix": 5
   },
   {
@@ -786,9 +882,15 @@
     "timeToFix": 5
   },
   {
-    "patternId": "Lint_UnneededDisable",
+    "patternId": "Lint_UnneededCopDisableDirective",
     "title": "Checks for rubocop:disable comments that can be removed. Note: this cop is not disabled when disabling all cops. It must be explicitly disabled.",
     "description": "Checks for rubocop:disable comments that can be removed. Note: this cop is not disabled when disabling all cops. It must be explicitly disabled.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Lint_UnneededCopEnableDirective",
+    "title": "Checks for rubocop:enable comments that can be removed.",
+    "description": "Checks for rubocop:enable comments that can be removed.",
     "timeToFix": 5
   },
   {
@@ -972,6 +1074,12 @@
     "timeToFix": 5
   },
   {
+    "patternId": "Naming_MemoizedInstanceVariableName",
+    "title": "Memoized method name should match memo instance variable name.",
+    "description": "Memoized method name should match memo instance variable name.",
+    "timeToFix": 5
+  },
+  {
     "patternId": "Naming_MethodName",
     "title": "Use the configured style when naming methods.",
     "description": "Use the configured style when naming methods.",
@@ -987,6 +1095,18 @@
     "patternId": "Naming_PredicateName",
     "title": "Check the names of predicate methods.",
     "description": "Check the names of predicate methods.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Naming_UncommunicativeBlockParamName",
+    "title": "Checks for block parameter names that contain capital letters, end in numbers, or do not meet a minimal length.",
+    "description": "Checks for block parameter names that contain capital letters, end in numbers, or do not meet a minimal length.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Naming_UncommunicativeMethodParamName",
+    "title": "Checks for method parameter names that contain capital letters, end in numbers, or do not meet a minimal length.",
+    "description": "Checks for method parameter names that contain capital letters, end in numbers, or do not meet a minimal length.",
     "timeToFix": 5
   },
   {
@@ -1056,9 +1176,9 @@
     "timeToFix": 5
   },
   {
-    "patternId": "Performance_HashEachMethods",
-    "title": "Use `Hash#each_key` and `Hash#each_value` instead of `Hash#keys.each` and `Hash#values.each`.",
-    "description": "Use `Hash#each_key` and `Hash#each_value` instead of `Hash#keys.each` and `Hash#values.each`.",
+    "patternId": "Performance_InefficientHashSearch",
+    "title": "Use `key?` or `value?` instead of `keys.include?` or `values.include?`",
+    "description": "Use `key?` or `value?` instead of `keys.include?` or `values.include?`",
     "timeToFix": 5
   },
   {
@@ -1152,9 +1272,21 @@
     "timeToFix": 5
   },
   {
+    "patternId": "Performance_UnneededSort",
+    "title": "Use `min` instead of `sort.first`, `max_by` instead of `sort_by...last`, etc.",
+    "description": "Use `min` instead of `sort.first`, `max_by` instead of `sort_by...last`, etc.",
+    "timeToFix": 5
+  },
+  {
     "patternId": "Performance_UriDefaultParser",
     "title": "Use `URI::DEFAULT_PARSER` instead of `URI::Parser.new`.",
     "description": "Use `URI::DEFAULT_PARSER` instead of `URI::Parser.new`.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Style_AccessModifierDeclarations",
+    "title": "Checks style of how access modifiers are used.",
+    "description": "Checks style of how access modifiers are used.",
     "timeToFix": 5
   },
   {
@@ -1272,6 +1404,12 @@
     "timeToFix": 5
   },
   {
+    "patternId": "Style_ColonMethodDefinition",
+    "title": "Do not use :: for defining class methods.",
+    "description": "Do not use :: for defining class methods.",
+    "timeToFix": 5
+  },
+  {
     "patternId": "Style_CommandLiteral",
     "title": "Use `` or %x around command literals.",
     "description": "Use `` or %x around command literals.",
@@ -1350,6 +1488,12 @@
     "timeToFix": 5
   },
   {
+    "patternId": "Style_EmptyBlockParameter",
+    "title": "Omit pipes for empty block parameters.",
+    "description": "Omit pipes for empty block parameters.",
+    "timeToFix": 5
+  },
+  {
     "patternId": "Style_EmptyCaseCondition",
     "title": "Avoid empty condition in case statements.",
     "description": "Avoid empty condition in case statements.",
@@ -1359,6 +1503,12 @@
     "patternId": "Style_EmptyElse",
     "title": "Avoid empty else-clauses.",
     "description": "Avoid empty else-clauses.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Style_EmptyLambdaParameter",
+    "title": "Omit parens for empty lambda parameters.",
+    "description": "Omit parens for empty lambda parameters.",
     "timeToFix": 5
   },
   {
@@ -1386,9 +1536,21 @@
     "timeToFix": 5
   },
   {
+    "patternId": "Style_EvalWithLocation",
+    "title": "Pass `__FILE__` and `__LINE__` to `eval` method, as they are used by backtraces.",
+    "description": "Pass `__FILE__` and `__LINE__` to `eval` method, as they are used by backtraces.",
+    "timeToFix": 5
+  },
+  {
     "patternId": "Style_EvenOdd",
     "title": "Favor the use of Integer#even? && Integer#odd?",
     "description": "Favor the use of Integer#even? && Integer#odd?",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Style_ExpandPathArguments",
+    "title": "Use `expand_path(__dir__)` instead of `expand_path('..', __FILE__)`.",
+    "description": "Use `expand_path(__dir__)` instead of `expand_path('..', __FILE__)`.",
     "timeToFix": 5
   },
   {
@@ -1494,6 +1656,12 @@
     "timeToFix": 5
   },
   {
+    "patternId": "Style_IpAddresses",
+    "title": "Don't include literal IP addresses in code.",
+    "description": "Don't include literal IP addresses in code.",
+    "timeToFix": 5
+  },
+  {
     "patternId": "Style_Lambda",
     "title": "Use the new lambda literal syntax for single-line blocks.",
     "description": "Use the new lambda literal syntax for single-line blocks.",
@@ -1536,9 +1704,9 @@
     "timeToFix": 5
   },
   {
-    "patternId": "Style_MethodMissing",
-    "title": "Avoid using `method_missing`.",
-    "description": "Avoid using `method_missing`.",
+    "patternId": "Style_MethodMissingSuper",
+    "title": "Checks for `method_missing` to call `super`.",
+    "description": "Checks for `method_missing` to call `super`.",
     "timeToFix": 5
   },
   {
@@ -1551,6 +1719,12 @@
     "patternId": "Style_MissingElse",
     "title": "Require if/case expressions to have an else branches. If enabled, it is recommended that Style/UnlessElse and Style/EmptyElse be enabled. This will conflict with Style/EmptyElse if Style/EmptyElse is configured to style \"both\"",
     "description": "Require if/case expressions to have an else branches. If enabled, it is recommended that Style/UnlessElse and Style/EmptyElse be enabled. This will conflict with Style/EmptyElse if Style/EmptyElse is configured to style \"both\"",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Style_MissingRespondToMissing",
+    "title": "Checks if `method_missing` is implemented without implementing `respond_to_missing`.",
+    "description": "Checks if `method_missing` is implemented without implementing `respond_to_missing`.",
     "timeToFix": 5
   },
   {
@@ -1758,6 +1932,12 @@
     "timeToFix": 5
   },
   {
+    "patternId": "Style_RandomWithOffset",
+    "title": "Prefer to use ranges when generating random numbers instead of integers with offsets.",
+    "description": "Prefer to use ranges when generating random numbers instead of integers with offsets.",
+    "timeToFix": 5
+  },
+  {
     "patternId": "Style_RedundantBegin",
     "title": "Don't use begin blocks when they are not needed.",
     "description": "Don't use begin blocks when they are not needed.",
@@ -1812,6 +1992,12 @@
     "timeToFix": 5
   },
   {
+    "patternId": "Style_RescueStandardError",
+    "title": "Avoid rescuing without specifying an error class.",
+    "description": "Avoid rescuing without specifying an error class.",
+    "timeToFix": 5
+  },
+  {
     "patternId": "Style_ReturnNil",
     "title": "Use return instead of return nil.",
     "description": "Use return instead of return nil.",
@@ -1819,8 +2005,8 @@
   },
   {
     "patternId": "Style_SafeNavigation",
-    "title": "This cop transforms usages of a method call safeguarded by a check for the existance of the object to safe navigation (`&.`).",
-    "description": "This cop transforms usages of a method call safeguarded by a check for the existance of the object to safe navigation (`&.`).",
+    "title": "This cop transforms usages of a method call safeguarded by a check for the existence of the object to safe navigation (`&.`).",
+    "description": "This cop transforms usages of a method call safeguarded by a check for the existence of the object to safe navigation (`&.`).",
     "timeToFix": 5
   },
   {
@@ -1878,6 +2064,12 @@
     "timeToFix": 5
   },
   {
+    "patternId": "Style_StringHashKeys",
+    "title": "Prefer symbols instead of strings as hash keys.",
+    "description": "Prefer symbols instead of strings as hash keys.",
+    "timeToFix": 5
+  },
+  {
     "patternId": "Style_StringLiterals",
     "title": "Checks if uses of quotes match the configured preference.",
     "description": "Checks if uses of quotes match the configured preference.",
@@ -1926,15 +2118,45 @@
     "timeToFix": 5
   },
   {
+    "patternId": "Style_TrailingBodyOnClass",
+    "title": "Class body goes below class statement.",
+    "description": "Class body goes below class statement.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Style_TrailingBodyOnMethodDefinition",
+    "title": "Method body goes below definition.",
+    "description": "Method body goes below definition.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Style_TrailingBodyOnModule",
+    "title": "Module body goes below module statement.",
+    "description": "Module body goes below module statement.",
+    "timeToFix": 5
+  },
+  {
     "patternId": "Style_TrailingCommaInArguments",
     "title": "Checks for trailing comma in argument lists.",
     "description": "Checks for trailing comma in argument lists.",
     "timeToFix": 5
   },
   {
-    "patternId": "Style_TrailingCommaInLiteral",
-    "title": "Checks for trailing comma in array and hash literals.",
-    "description": "Checks for trailing comma in array and hash literals.",
+    "patternId": "Style_TrailingCommaInArrayLiteral",
+    "title": "Checks for trailing comma in array literals.",
+    "description": "Checks for trailing comma in array literals.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Style_TrailingCommaInHashLiteral",
+    "title": "Checks for trailing comma in hash literals.",
+    "description": "Checks for trailing comma in hash literals.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Style_TrailingMethodEndStatement",
+    "title": "Checks for trailing end statement on line of method body.",
+    "description": "Checks for trailing end statement on line of method body.",
     "timeToFix": 5
   },
   {
@@ -1962,6 +2184,12 @@
     "timeToFix": 5
   },
   {
+    "patternId": "Style_UnneededCondition",
+    "title": "Checks for unnecessary conditional expressions.",
+    "description": "Checks for unnecessary conditional expressions.",
+    "timeToFix": 5
+  },
+  {
     "patternId": "Style_UnneededInterpolation",
     "title": "Checks for strings that are just an interpolated expression.",
     "description": "Checks for strings that are just an interpolated expression.",
@@ -1971,6 +2199,12 @@
     "patternId": "Style_UnneededPercentQ",
     "title": "Checks for %q/%Q when single quotes or double quotes would do.",
     "description": "Checks for %q/%Q when single quotes or double quotes would do.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Style_UnpackFirst",
+    "title": "Checks for accessing the first element of `String#unpack` instead of using `unpack1`",
+    "description": "Checks for accessing the first element of `String#unpack` instead of using `unpack1`",
     "timeToFix": 5
   },
   {
@@ -2022,6 +2256,12 @@
     "timeToFix": 5
   },
   {
+    "patternId": "Rails_ActiveRecordAliases",
+    "title": "Avoid Active Record aliases: Use `update` instead of `update_attributes`. Use `update!` instead of `update_attributes!`.",
+    "description": "Avoid Active Record aliases: Use `update` instead of `update_attributes`. Use `update!` instead of `update_attributes!`.",
+    "timeToFix": 5
+  },
+  {
     "patternId": "Rails_ActiveSupportAliases",
     "title": "Avoid ActiveSupport aliases of standard ruby methods: `String#starts_with?`, `String#ends_with?`, `Array#append`, `Array#prepend`.",
     "description": "Avoid ActiveSupport aliases of standard ruby methods: `String#starts_with?`, `String#ends_with?`, `Array#append`, `Array#prepend`.",
@@ -2040,9 +2280,27 @@
     "timeToFix": 5
   },
   {
+    "patternId": "Rails_AssertNot",
+    "title": "Use `assert_not` instead of `assert !`.",
+    "description": "Use `assert_not` instead of `assert !`.",
+    "timeToFix": 5
+  },
+  {
     "patternId": "Rails_Blank",
-    "title": "Enforce using `blank?` and `present?`.",
-    "description": "Enforce using `blank?` and `present?`.",
+    "title": "Enforces use of `blank?`.",
+    "description": "Enforces use of `blank?`.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Rails_BulkChangeTable",
+    "title": "Check whether alter queries are combinable.",
+    "description": "Check whether alter queries are combinable.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Rails_CreateTableWithTimestamps",
+    "title": "Checks the migration for which timestamps are not included when creating a new table.",
+    "description": "Checks the migration for which timestamps are not included when creating a new table.",
     "timeToFix": 5
   },
   {
@@ -2073,6 +2331,12 @@
     "patternId": "Rails_EnumUniqueness",
     "title": "Avoid duplicate integers in hash-syntax `enum` declaration.",
     "description": "Avoid duplicate integers in hash-syntax `enum` declaration.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Rails_EnvironmentComparison",
+    "title": "Favor `Rails.env.production?` over `Rails.env == 'production'`",
+    "description": "Favor `Rails.env.production?` over `Rails.env == 'production'`",
     "timeToFix": 5
   },
   {
@@ -2118,6 +2382,24 @@
     "timeToFix": 5
   },
   {
+    "patternId": "Rails_HttpStatus",
+    "title": "Enforces use of symbolic or numeric value to define HTTP status.",
+    "description": "Enforces use of symbolic or numeric value to define HTTP status.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Rails_InverseOf",
+    "title": "Checks for associations where the inverse cannot be determined automatically.",
+    "description": "Checks for associations where the inverse cannot be determined automatically.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Rails_LexicallyScopedActionFilter",
+    "title": "Checks that methods specified in the filter's `only` or `except` options are explicitly defined in the controller.",
+    "description": "Checks that methods specified in the filter's `only` or `except` options are explicitly defined in the controller.",
+    "timeToFix": 5
+  },
+  {
     "patternId": "Rails_NotNullColumn",
     "title": "Do not add a NOT NULL column without a default value",
     "description": "Do not add a NOT NULL column without a default value",
@@ -2142,15 +2424,33 @@
     "timeToFix": 5
   },
   {
+    "patternId": "Rails_Presence",
+    "title": "Checks code that can be written more easily using `Object#presence` defined by Active Support.",
+    "description": "Checks code that can be written more easily using `Object#presence` defined by Active Support.",
+    "timeToFix": 5
+  },
+  {
     "patternId": "Rails_Present",
-    "title": "Enforce using `blank?` and `present?`.",
-    "description": "Enforce using `blank?` and `present?`.",
+    "title": "Enforces use of `present?`.",
+    "description": "Enforces use of `present?`.",
     "timeToFix": 5
   },
   {
     "patternId": "Rails_ReadWriteAttribute",
     "title": "Checks for read_attribute(:attr) and write_attribute(:attr, val).",
     "description": "Checks for read_attribute(:attr) and write_attribute(:attr, val).",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Rails_RedundantReceiverInWithOptions",
+    "title": "Checks for redundant receiver in `with_options`.",
+    "description": "Checks for redundant receiver in `with_options`.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Rails_RefuteMethods",
+    "title": "Use `assert_not` methods instead of `refute` methods.",
+    "description": "Use `assert_not` methods instead of `refute` methods.",
     "timeToFix": 5
   },
   {
@@ -2235,6 +2535,12 @@
     "patternId": "Security_MarshalLoad",
     "title": "Avoid using of `Marshal.load` or `Marshal.restore` due to potential security issues. See reference for more information.",
     "description": "Avoid using of `Marshal.load` or `Marshal.restore` due to potential security issues. See reference for more information.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Security_Open",
+    "title": "The use of Kernel#open represents a serious security risk.",
+    "description": "The use of Kernel#open represents a serious security risk.",
     "timeToFix": 5
   },
   {
