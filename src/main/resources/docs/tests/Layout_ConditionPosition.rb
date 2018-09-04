@@ -1,11 +1,11 @@
-##Patterns: Lint_ConditionPosition
+##Patterns: Layout_ConditionPosition
 
 if x == 5
   #this is good
 end
 
 if
-  ##Warn: Lint_ConditionPosition
+  ##Info: Layout_ConditionPosition
   x == 5
   #this is worse than bad
 end
