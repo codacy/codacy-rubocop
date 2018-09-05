@@ -1,7 +1,10 @@
+#!/usr/bin/env ruby
+
 # frozen_string_literal: true
 require "rubocop"
 require 'yaml'
 require 'yard'
+require 'pathname'
 
 module RubocopDocs
   class CopDoc
@@ -50,7 +53,7 @@ module RubocopDocs
     def examples_description
       return '' unless yard_object
       return '' if yard_object.tags('example').empty?
-      result = "```ruby\n"
+      result = "```ruby\n".dup
       yard_object.tags('example').map do |x|
         result << x.text
       end
@@ -71,19 +74,19 @@ module RubocopDocs
   end
 
   def self.rubocop_source_code_path(rubocop_version)
-    ruby_version = "2.4.0"
-    gem_path     = "vendor/ruby/#{ruby_version}/gems/rubocop-#{rubocop_version}"
+    ruby_version = "2.5.0"
+    gem_path     = "vendor/bundle/ruby/#{ruby_version}/gems/rubocop-#{rubocop_version}"
     "#{gem_path}/lib/rubocop/cop/*/*.rb"
   end
 
   def self.run
     rubocop_version = File.read('.rubocop-version')
-    YARD::Rake::YardocTask.new do |task|
+    YARD::Rake::YardocTask.new(:yard_for_generate_documentation) do |task|
       task.files   = [rubocop_source_code_path(rubocop_version)]
       task.options = ['--no-output']
     end
+    Rake.application['yard_for_generate_documentation'].invoke
     YARD::Registry.load!
-
     cops                       = RuboCop::Cop::Cop.registry
     config                     = RuboCop::ConfigLoader.default_configuration
     config['Rails']['Enabled'] = true
