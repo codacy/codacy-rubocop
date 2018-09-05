@@ -1,7 +1,43 @@
 
-
+This cop (by default) checks for uses of the lambda literal syntax for
+single line lambdas, and the method call syntax for multiline lambdas.
+It is configurable to enforce one of the styles for both single line
+and multiline lambdas as well.
 
 # Examples
 
+```ruby
+# bad
+f = lambda { |x| x }
+f = ->(x) do
+      x
+    end
+
+# good
+f = ->(x) { x }
+f = lambda do |x|
+      x
+    end# bad
+f = ->(x) { x }
+f = ->(x) do
+      x
+    end
+
+# good
+f = lambda { |x| x }
+f = lambda do |x|
+      x
+    end# bad
+f = lambda { |x| x }
+f = lambda do |x|
+      x
+    end
+
+# good
+f = ->(x) { x }
+f = ->(x) do
+      x
+    end
+```
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Style/Lambda)
