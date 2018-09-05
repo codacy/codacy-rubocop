@@ -19,7 +19,7 @@ object Rubocop extends Tool {
   override def apply(path: Path, conf: Option[List[PatternDef]], files: Option[Set[Path]])(implicit spec: Spec): Try[List[Result]] = {
     val cmd = getCommandFor(path, conf, files, spec, resultFilePath)
     CommandRunner.exec(cmd, Some(path.toFile)) match {
-
+    
       case Right(resultFromTool) if resultFromTool.exitCode < 2 =>
         parseResult(resultFilePath.toFile) match {
           case s@Success(_) => s
@@ -105,27 +105,32 @@ object Rubocop extends Tool {
       s"""
          |AllCops:
          |  Include:
+         |    - '**/*.rb'
+         |    - '**/*.arb'
+         |    - '**/*.axlsx'
+         |    - '**/*.gemfile'
          |    - '**/*.gemspec'
-         |    - '**/*.podspec'
          |    - '**/*.jbuilder'
-         |    - '**/*.rake'
          |    - '**/*.opal'
-         |    - '**/config.ru'
-         |    - '**/Gemfile'
-         |    - '**/Rakefile'
-         |    - '**/Capfile'
-         |    - '**/Guardfile'
-         |    - '**/Podfile'
-         |    - '**/Thorfile'
-         |    - '**/Vagrantfile'
+         |    - '**/*.podspec'
+         |    - '**/*.rake'
+         |    - '**/buildfile'
          |    - '**/Berksfile'
+         |    - '**/Capfile'
          |    - '**/Cheffile'
-         |    - '**/Vagabondfile'
          |    - '**/Fastfile'
          |    - '**/*Fastfile'
+         |    - '**/Gemfile'
+         |    - '**/Guardfile'
+         |    - '**/Podfile'
+         |    - '**/Rakefile'
+         |    - '**/Thorfile'
+         |    - '**/Vagabondfile'
+         |    - '**/Vagrantfile'
          |  Exclude:
          |    - "vendor/**/*"
          |    - "db/schema.rb"
+         |    - ".git/**/*"
          |  DisplayCopNames: false
          |  StyleGuideCopsOnly: false
          |  UseCache: false

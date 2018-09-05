@@ -5,8 +5,12 @@
 /project/target/
 /target/
 /vendor
+/doc/
+/src/main/resources/docs/tests/target/
 .idea
 .DS_Store
-
+.bundle/
+.yardoc/
+rubocop-doc.yml
 *.swo
 *.swp
