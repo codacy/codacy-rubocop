@@ -7,7 +7,7 @@ name := """codacy-engine-rubocop"""
 
 version := "1.0-SNAPSHOT"
 
-val languageVersion = "2.11.8"
+val languageVersion = "2.11.12"
 
 scalaVersion := languageVersion
 
