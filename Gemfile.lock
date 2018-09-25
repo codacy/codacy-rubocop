@@ -35,7 +35,7 @@ GEM
       rubocop (~> 0.51)
     rubocop-migrations (0.1.2)
       rubocop (~> 0.41)
-    rubocop-rspec (1.29.0)
+    rubocop-rspec (1.29.1)
       rubocop (>= 0.58.0)
     ruby-progressbar (1.10.0)
     safe_yaml (1.0.4)
@@ -56,7 +56,7 @@ DEPENDENCIES
   rubocop (= 0.58.2)
   rubocop-github (= 0.10.0)
   rubocop-migrations (= 0.1.2)
-  rubocop-rspec (= 1.29.0)
+  rubocop-rspec (= 1.29.1)
   safe_yaml
   yard
 
