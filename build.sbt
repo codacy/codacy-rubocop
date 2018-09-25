@@ -11,10 +11,8 @@ val languageVersion = "2.11.8"
 
 scalaVersion := languageVersion
 
-resolvers ++= Seq(
-  "Typesafe Repo" at "http://repo.typesafe.com/typesafe/releases/",
-  "Sonatype OSS Snapshots" at "https://oss.sonatype.org/content/repositories/releases"
-)
+resolvers := Seq("Sonatype OSS Snapshots".at("https://oss.sonatype.org/content/repositories/releases"),
+  "Typesafe Repo".at("http://repo.typesafe.com/typesafe/releases/")) ++ resolvers.value
 
 libraryDependencies ++= Seq(
   "org.scala-lang.modules" %% "scala-xml" % "1.0.6" withSources (),
