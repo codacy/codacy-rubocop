@@ -1,5 +1,8 @@
 
-This cop checks for comparison of something with nil using ==.
+This cop checks for comparison of something with nil using `==` and
+`nil?`.
+
+Supported styles are: predicate, comparison.
 
 # Examples
 
@@ -11,6 +14,13 @@ end
 
 # good
 if x.nil?
+end
+# bad
+if x.nil?
+end
+
+# good
+if x == nil
 end
 ```
 

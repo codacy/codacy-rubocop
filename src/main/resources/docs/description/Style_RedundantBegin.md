@@ -42,6 +42,16 @@ do_something do
 rescue => ex
   anything
 end
+
+# good
+# Stabby lambdas don't support implicit `begin` in `do-end` blocks.
+-> do
+  begin
+    foo
+  rescue Bar
+    baz
+  end
+end
 ```
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Style/RedundantBegin)

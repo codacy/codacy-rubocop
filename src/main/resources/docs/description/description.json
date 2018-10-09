@@ -6,6 +6,12 @@
     "timeToFix": 5
   },
   {
+    "patternId": "Bundler_GemComment",
+    "title": "Add a comment describing each gem.",
+    "description": "Add a comment describing each gem.",
+    "timeToFix": 5
+  },
+  {
     "patternId": "Bundler_InsecureProtocolSource",
     "title": "The source `:gemcutter`, `:rubygems` and `:rubyforge` are deprecated because HTTP requests are insecure. Please change your source to 'https://rubygems.org' if possible, or 'http://rubygems.org' if not.",
     "description": "The source `:gemcutter`, `:rubygems` and `:rubyforge` are deprecated because HTTP requests are insecure. Please change your source to 'https://rubygems.org' if possible, or 'http://rubygems.org' if not.",
@@ -1129,8 +1135,8 @@
   },
   {
     "patternId": "Performance_CaseWhenSplat",
-    "title": "Place `when` conditions that use splat at the end of the list of `when` branches.",
-    "description": "Place `when` conditions that use splat at the end of the list of `when` branches.",
+    "title": "Reordering `when` conditions with a splat to the end of the `when` branches can improve performance.",
+    "description": "Reordering `when` conditions with a splat to the end of the `when` branches can improve performance.",
     "timeToFix": 5
   },
   {
@@ -1281,6 +1287,12 @@
     "patternId": "Performance_UriDefaultParser",
     "title": "Use `URI::DEFAULT_PARSER` instead of `URI::Parser.new`.",
     "description": "Use `URI::DEFAULT_PARSER` instead of `URI::Parser.new`.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Performance_ChainArrayAllocation",
+    "title": "Instead of chaining array methods that allocate new arrays, mutate an existing array.",
+    "description": "Instead of chaining array methods that allocate new arrays, mutate an existing array.",
     "timeToFix": 5
   },
   {
@@ -1441,8 +1453,8 @@
   },
   {
     "patternId": "Style_DateTime",
-    "title": "Use Date or Time over DateTime.",
-    "description": "Use Date or Time over DateTime.",
+    "title": "Use Time over DateTime.",
+    "description": "Use Time over DateTime.",
     "timeToFix": 5
   },
   {
@@ -1761,6 +1773,12 @@
     "patternId": "Style_MultilineIfModifier",
     "title": "Only use if/unless modifiers on single line statements.",
     "description": "Only use if/unless modifiers on single line statements.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Style_MultilineMethodSignature",
+    "title": "Avoid multi-line method signatures.",
+    "description": "Avoid multi-line method signatures.",
     "timeToFix": 5
   },
   {
