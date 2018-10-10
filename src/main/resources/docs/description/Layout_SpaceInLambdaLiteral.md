@@ -1,6 +1,6 @@
 
-This cop checks for spaces between -> and opening parameter
-brace in lambda literals.
+This cop checks for spaces between `->` and opening parameter
+parenthesis (`(`) in lambda literals.
 
 # Examples
 

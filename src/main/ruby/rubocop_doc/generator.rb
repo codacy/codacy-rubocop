@@ -75,7 +75,7 @@ module RubocopDocs
 
   def self.rubocop_source_code_path(rubocop_version)
     ruby_version = "2.5.0"
-    gem_path     = "vendor/bundle/ruby/#{ruby_version}/gems/rubocop-#{rubocop_version}"
+    gem_path     = "vendor/bundle/ruby/#{ruby_version}/gems/rubocop-#{rubocop_version.strip}"
     "#{gem_path}/lib/rubocop/cop/*/*.rb"
   end
 

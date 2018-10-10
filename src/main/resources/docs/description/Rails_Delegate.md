@@ -31,19 +31,13 @@ end
 private
 def bar
   foo.bar
-end
-
-# EnforceForPrefixed: true
-# bad
+end# bad
 def foo_bar
   foo.bar
 end
 
 # good
-delegate :bar, to: :foo, prefix: true
-
-# EnforceForPrefixed: false
-# good
+delegate :bar, to: :foo, prefix: true# good
 def foo_bar
   foo.bar
 end

@@ -1,6 +1,6 @@
 {
   "name": "Rubocop",
-  "version": "0.58.2",
+  "version": "0.59.2\n",
   "patterns": [
     {
       "patternId": "Bundler_DuplicatedGem",
@@ -13,6 +13,27 @@
             "**/*.gemfile",
             "**/Gemfile",
             "**/gems.rb"
+          ]
+        }
+      ]
+    },
+    {
+      "patternId": "Bundler_GemComment",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "Include",
+          "default": [
+            "**/*.gemfile",
+            "**/Gemfile",
+            "**/gems.rb"
+          ]
+        },
+        {
+          "name": "Whitelist",
+          "default": [
+
           ]
         }
       ]
@@ -2112,6 +2133,12 @@
         {
           "name": "Max",
           "default": "10"
+        },
+        {
+          "name": "ExcludedMethods",
+          "default": [
+
+          ]
         }
       ]
     },
@@ -2371,7 +2398,7 @@
         {
           "name": "Exclude",
           "default": [
-            "/Users/Lopes/codacy/codacy-rubocop/spec/**/*"
+            "spec/**/*"
           ]
         }
       ]
@@ -2426,7 +2453,8 @@
             "on",
             "in",
             "at",
-            "ip"
+            "ip",
+            "db"
           ]
         },
         {
@@ -2487,7 +2515,10 @@
       "level": "Warning",
       "category": "Performance",
       "parameters": [
-
+        {
+          "name": "AutoCorrect",
+          "default": "false"
+        }
       ]
     },
     {
@@ -2708,6 +2739,14 @@
     },
     {
       "patternId": "Performance_UriDefaultParser",
+      "level": "Warning",
+      "category": "Performance",
+      "parameters": [
+
+      ]
+    },
+    {
+      "patternId": "Performance_ChainArrayAllocation",
       "level": "Warning",
       "category": "Performance",
       "parameters": [
@@ -3102,7 +3141,10 @@
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [
-
+        {
+          "name": "AllowCoercion",
+          "default": "false"
+        }
       ]
     },
     {
@@ -3129,8 +3171,8 @@
         {
           "name": "Exclude",
           "default": [
-            "/Users/Lopes/codacy/codacy-rubocop/spec/**/*",
-            "/Users/Lopes/codacy/codacy-rubocop/test/**/*"
+            "spec/**/*",
+            "test/**/*"
           ]
         },
         {
@@ -3147,8 +3189,8 @@
         {
           "name": "Exclude",
           "default": [
-            "/Users/Lopes/codacy/codacy-rubocop/spec/**/*",
-            "/Users/Lopes/codacy/codacy-rubocop/test/**/*"
+            "spec/**/*",
+            "test/**/*"
           ]
         }
       ]
@@ -3727,6 +3769,14 @@
       ]
     },
     {
+      "patternId": "Style_MultilineMethodSignature",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+
+      ]
+    },
+    {
       "patternId": "Style_MultilineMemoization",
       "level": "Info",
       "category": "CodeStyle",
@@ -3867,7 +3917,17 @@
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [
-
+        {
+          "name": "EnforcedStyle",
+          "default": "predicate"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": [
+            "predicate",
+            "comparison"
+          ]
+        }
       ]
     },
     {
@@ -3943,9 +4003,15 @@
           ]
         },
         {
+          "name": "IgnoredMethods",
+          "default": [
+
+          ]
+        },
+        {
           "name": "Exclude",
           "default": [
-            "/Users/Lopes/codacy/codacy-rubocop/spec/**/*"
+            "spec/**/*"
           ]
         }
       ]
@@ -4998,7 +5064,7 @@
         {
           "name": "Exclude",
           "default": [
-            "/Users/Lopes/codacy/codacy-rubocop/lib/**/*.rake"
+            "lib/**/*.rake"
           ]
         }
       ]
@@ -5273,7 +5339,10 @@
       "level": "Warning",
       "category": "ErrorProne",
       "parameters": [
-
+        {
+          "name": "AutoCorrect",
+          "default": "false"
+        }
       ]
     },
     {
@@ -5292,7 +5361,16 @@
       "level": "Warning",
       "category": "ErrorProne",
       "parameters": [
+        {
+          "name": "AllowImplicitReturn",
+          "default": "true"
+        },
+        {
+          "name": "AllowedReceivers",
+          "default": [
 
+          ]
+        }
       ]
     },
     {
