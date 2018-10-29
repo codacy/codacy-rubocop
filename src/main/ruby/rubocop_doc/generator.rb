@@ -13,6 +13,21 @@ module RubocopDocs
     def initialize(cop, config)
       @cop    = cop
       @config = config.for_cop(cop)
+      make_excludes_relative(@config, config.base_dir_for_path_parameters)
+    end
+
+    # Reverses what this method does: RuboCop::Config#make_excludes_absolute
+    def make_excludes_relative(config, base_dir)
+      config["Exclude"]&.map! do |exclude_elem|
+        if exclude_elem.is_a?(String)
+          exclude_path = Pathname.new(exclude_elem)
+          base_dri = Pathname.new(base_dir)
+
+          exclude_path.relative_path_from(base_dri).to_s
+        else
+          exclude_elem
+        end
+      end
     end
 
     def name
@@ -29,7 +44,7 @@ module RubocopDocs
     end
 
     def configurable_attributes
-      non_display_keys = %w[Description Enabled StyleGuide Reference]
+      non_display_keys = %w[Description Enabled StyleGuide Reference VersionAdded VersionChanged]
       result           = config.reject { |k| non_display_keys.include? k }
       result.map { |key, value| [key, value.is_a?(Array) ? value : value.to_s] }.to_h
     end
