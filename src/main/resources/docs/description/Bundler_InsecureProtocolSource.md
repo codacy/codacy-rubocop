@@ -1,5 +1,5 @@
 
-The symbol argument `:gemcutter`, `:rubygems` and `:rubyforge`
+The symbol argument `:gemcutter`, `:rubygems`, and `:rubyforge`
 are deprecated. So please change your source to URL string that
 'https://rubygems.org' if possible, or 'http://rubygems.org' if not.
 

@@ -3,6 +3,8 @@ This cop checks for the use of methods which skip
 validations which are listed in
 http://guides.rubyonrails.org/active_record_validations.html#skipping-validations
 
+Methods may be ignored from this rule by configuring a `Whitelist`.
+
 # Examples
 
 ```ruby
@@ -20,7 +22,13 @@ Post.update_counters 5, comment_count: -1, action_count: 1
 
 # good
 user.update(website: 'example.com')
-FileUtils.touch('file')
+FileUtils.touch('file')# bad
+DiscussionBoard.decrement_counter(:post_count, 5)
+DiscussionBoard.increment_counter(:post_count, 5)
+person.toggle :active
+
+# good
+user.touch
 ```
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Rails/SkipsModelValidations)

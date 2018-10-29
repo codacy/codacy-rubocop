@@ -1,5 +1,5 @@
 
-This cops checks for two or more consecutive blank lines.
+This cop checks for two or more consecutive blank lines.
 
 # Examples
 

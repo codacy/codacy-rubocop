@@ -289,8 +289,8 @@
   },
   {
     "patternId": "Layout_IndentHeredoc",
-    "title": "This cops checks the indentation of the here document bodies.",
-    "description": "This cops checks the indentation of the here document bodies.",
+    "title": "This cop checks the indentation of the here document bodies.",
+    "description": "This cop checks the indentation of the here document bodies.",
     "timeToFix": 5
   },
   {
@@ -1453,8 +1453,8 @@
   },
   {
     "patternId": "Style_DateTime",
-    "title": "Use Time over DateTime.",
-    "description": "Use Time over DateTime.",
+    "title": "Use Date or Time over DateTime.",
+    "description": "Use Date or Time over DateTime.",
     "timeToFix": 5
   },
   {
@@ -1471,8 +1471,8 @@
   },
   {
     "patternId": "Style_DocumentationMethod",
-    "title": "Public methods.",
-    "description": "Public methods.",
+    "title": "Checks for missing documentation comment for public methods.",
+    "description": "Checks for missing documentation comment for public methods.",
     "timeToFix": 5
   },
   {

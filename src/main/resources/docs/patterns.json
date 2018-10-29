@@ -1,6 +1,6 @@
 {
   "name": "Rubocop",
-  "version": "0.59.2\n",
+  "version": "0.60.0",
   "patterns": [
     {
       "patternId": "Bundler_DuplicatedGem",
@@ -59,16 +59,16 @@
       "category": "CodeStyle",
       "parameters": [
         {
+          "name": "TreatCommentsAsGroupSeparators",
+          "default": "true"
+        },
+        {
           "name": "Include",
           "default": [
             "**/*.gemfile",
             "**/Gemfile",
             "**/gems.rb"
           ]
-        },
-        {
-          "name": "TreatCommentsAsGroupSeparators",
-          "default": "true"
         }
       ]
     },
@@ -91,14 +91,14 @@
       "category": "CodeStyle",
       "parameters": [
         {
+          "name": "TreatCommentsAsGroupSeparators",
+          "default": "true"
+        },
+        {
           "name": "Include",
           "default": [
             "**/*.gemspec"
           ]
-        },
-        {
-          "name": "TreatCommentsAsGroupSeparators",
-          "default": "true"
         }
       ]
     },
@@ -2518,6 +2518,10 @@
         {
           "name": "AutoCorrect",
           "default": "false"
+        },
+        {
+          "name": "SafeAutoCorrect",
+          "default": "false"
         }
       ]
     },
@@ -2568,6 +2572,10 @@
       "category": "Performance",
       "parameters": [
         {
+          "name": "SafeAutoCorrect",
+          "default": "false"
+        },
+        {
           "name": "AutoCorrect",
           "default": "false"
         }
@@ -2597,7 +2605,10 @@
       "level": "Warning",
       "category": "Performance",
       "parameters": [
-
+        {
+          "name": "Safe",
+          "default": "false"
+        }
       ]
     },
     {
@@ -2697,6 +2708,10 @@
       "category": "Performance",
       "parameters": [
         {
+          "name": "SafeAutoCorrect",
+          "default": "false"
+        },
+        {
           "name": "AutoCorrect",
           "default": "false"
         }
@@ -2717,6 +2732,10 @@
       "parameters": [
         {
           "name": "AutoCorrect",
+          "default": "false"
+        },
+        {
+          "name": "SafeAutoCorrect",
           "default": "false"
         }
       ]
@@ -2970,6 +2989,10 @@
       "category": "CodeStyle",
       "parameters": [
         {
+          "name": "SafeAutoCorrect",
+          "default": "false"
+        },
+        {
           "name": "AutoCorrect",
           "default": "false"
         },
@@ -3025,6 +3048,10 @@
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [
+        {
+          "name": "Safe",
+          "default": "false"
+        },
         {
           "name": "PreferredMethods",
           "default": "{\"collect\"=>\"map\", \"collect!\"=>\"map!\", \"inject\"=>\"reduce\", \"detect\"=>\"find\", \"find_all\"=>\"select\"}"
@@ -3516,7 +3543,10 @@
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [
-
+        {
+          "name": "SafeAutoCorrect",
+          "default": "false"
+        }
       ]
     },
     {
@@ -3524,6 +3554,10 @@
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [
+        {
+          "name": "Safe",
+          "default": "false"
+        },
         {
           "name": "InverseMethods",
           "default": "{:any?=>:none?, :even?=>:odd?, :===>:!=, :=~=>:!~, :<=>:>=, :>=>:<=}"
@@ -3988,6 +4022,14 @@
       "category": "CodeStyle",
       "parameters": [
         {
+          "name": "Safe",
+          "default": "false"
+        },
+        {
+          "name": "SafeAutoCorrect",
+          "default": "false"
+        },
+        {
           "name": "AutoCorrect",
           "default": "false"
         },
@@ -4402,6 +4444,10 @@
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [
+        {
+          "name": "SafeAutoCorrect",
+          "default": "false"
+        },
         {
           "name": "EnforcedStyle",
           "default": "use_english_names"
@@ -4849,7 +4895,10 @@
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [
-
+        {
+          "name": "Safe",
+          "default": "false"
+        }
       ]
     },
     {
@@ -5406,6 +5455,12 @@
             "update_columns",
             "update_counters"
           ]
+        },
+        {
+          "name": "Whitelist",
+          "default": [
+
+          ]
         }
       ]
     },
@@ -5493,6 +5548,10 @@
         {
           "name": "AutoCorrect",
           "default": "false"
+        },
+        {
+          "name": "SafeAutoCorrect",
+          "default": "false"
         }
       ]
     },
@@ -5509,7 +5568,10 @@
       "level": "Error",
       "category": "Security",
       "parameters": [
-
+        {
+          "name": "Safe",
+          "default": "false"
+        }
       ]
     },
     {
@@ -5517,7 +5579,10 @@
       "level": "Error",
       "category": "Security",
       "parameters": [
-
+        {
+          "name": "SafeAutoCorrect",
+          "default": "false"
+        }
       ]
     }
   ]
