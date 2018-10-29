@@ -6,7 +6,7 @@ This cop checks the . position in multi-line method calls.
 ```ruby
 # bad
 something.
-  mehod
+  method
 
 # good
 something
@@ -16,7 +16,7 @@ something
 
 # good
 something.
-  mehod
+  method
 ```
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Layout/DotPosition)

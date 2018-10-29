@@ -1,5 +1,5 @@
 
-This cops checks if empty lines exist around the arguments
+This cop checks if empty lines exist around the arguments
 of a method invocation.
 
 # Examples
