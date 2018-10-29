@@ -110,7 +110,7 @@ module RubocopDoc
         end
         data      = {
           name:     "Rubocop",
-          version:  File.read(".rubocop-version"),
+          version:  File.read(".rubocop-version").strip,
           patterns: patterns
         }
         generate_json_file(data)

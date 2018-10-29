@@ -80,7 +80,7 @@ module RubocopDocs
   end
 
   def self.run
-    rubocop_version = File.read('.rubocop-version')
+    rubocop_version = File.read('.rubocop-version').strip
     YARD::Rake::YardocTask.new(:yard_for_generate_documentation) do |task|
       task.files   = [rubocop_source_code_path(rubocop_version)]
       task.options = ['--no-output']
