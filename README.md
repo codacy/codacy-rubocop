@@ -3,7 +3,7 @@
 
 # Codacy Rubocop
 
-This is the docker engine we use at Codacy to have [Rubocop](http://batsov.com/rubocop/) support.
+This is the docker engine we use at Codacy to have [Rubocop](https://www.rubocop.org) support.
 You can also create a docker to integrate the tool and language of your choice!
 See the [codacy-engine-scala-seed](https://github.com/codacy/codacy-engine-scala-seed) repository for more information.
 
