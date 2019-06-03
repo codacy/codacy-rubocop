@@ -4,7 +4,10 @@ module.
 
 Supported styles are: module_function, extend_self.
 
-These offenses are not auto-corrected since there are different
+In case there are private methods, the cop won't be activated.
+Otherwise, it forces to change the flow of the default code.
+
+These offenses are not safe to auto-correct since there are different
 implications to each approach.
 
 # Examples
@@ -19,6 +22,12 @@ end
 # good
 module Test
   module_function
+  # ...
+end# good
+module Test
+  extend self
+  # ...
+  private
   # ...
 end# bad
 module Test

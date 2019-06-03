@@ -13,6 +13,7 @@ validates_inclusion_of :foo
 validates_length_of :foo
 validates_numericality_of :foo
 validates_presence_of :foo
+validates_absence_of :foo
 validates_size_of :foo
 validates_uniqueness_of :foo
 
@@ -25,6 +26,7 @@ validates :foo, inclusion: true
 validates :foo, length: true
 validates :foo, numericality: true
 validates :foo, presence: true
+validates :foo, absence: true
 validates :foo, size: true
 validates :foo, uniqueness: true
 ```

@@ -25,9 +25,11 @@ h = {a: 1, b: 2}# The `compact` style normally requires a space inside
 
 # bad
 h = { a: { b: 2 } }
+foo = { { a: 1 } => { b: { c: 2 } } }
 
 # good
-h = { a: { b: 2 }}# The `no_space` EnforcedStyleForEmptyBraces style enforces that
+h = { a: { b: 2 }}
+foo = {{ a: 1 } => { b: { c: 2 }}}# The `no_space` EnforcedStyleForEmptyBraces style enforces that
 # empty hash braces do not contain spaces.
 
 # bad

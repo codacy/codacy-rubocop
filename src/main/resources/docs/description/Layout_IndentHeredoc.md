@@ -17,22 +17,6 @@ something
 RUBY
 
 # good
-# When using Ruby 2.3 or higher.
-<<~RUBY
-  something
-RUBY
-
-# good
-# When using Ruby 2.2 or lower and enabled Rails department.
-# The following is possible to enable Rails department by
-# adding for example:
-#
-# Rails:
-#   Enabled: true
-#
-<<-RUBY.strip_heredoc
-  something
-RUBY# good
 # When EnforcedStyle is squiggly, bad code is auto-corrected to the
 # following code.
 <<~RUBY
@@ -45,7 +29,7 @@ RUBY# good
 RUBY# good
 # When EnforcedStyle is powerpack, bad code is auto-corrected to
 # the following code.
-<<-RUBY.strip_indent
+<<~RUBY
   something
 RUBY# good
 # When EnforcedStyle is unindent, bad code is auto-corrected to

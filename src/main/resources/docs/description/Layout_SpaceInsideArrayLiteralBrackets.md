@@ -25,9 +25,15 @@ array = [a, b, c, d]# The `compact` style normally requires a space inside
 
 # bad
 array = [ a, [ b, c ] ]
+array = [
+  [ a ],
+  [ b, c ]
+]
 
 # good
-array = [ a, [ b, c ]]# The `no_space` EnforcedStyleForEmptyBrackets style enforces that
+array = [ a, [ b, c ]]
+array = [[ a ],
+  [ b, c ]]# The `no_space` EnforcedStyleForEmptyBrackets style enforces that
 # empty array brackets do not contain spaces.
 
 # bad

@@ -48,6 +48,12 @@
     "timeToFix": 5
   },
   {
+    "patternId": "Layout_AlignArguments",
+    "title": "Align the arguments of a method call if they span more than one line.",
+    "description": "Align the arguments of a method call if they span more than one line.",
+    "timeToFix": 5
+  },
+  {
     "patternId": "Layout_AlignArray",
     "title": "Align the elements of an array literal if they span more than one line.",
     "description": "Align the elements of an array literal if they span more than one line.",
@@ -61,8 +67,8 @@
   },
   {
     "patternId": "Layout_AlignParameters",
-    "title": "Align the parameters of a method call if they span more than one line.",
-    "description": "Align the parameters of a method call if they span more than one line.",
+    "title": "Align the parameters of a method definition if they span more than one line.",
+    "description": "Align the parameters of a method definition if they span more than one line.",
     "timeToFix": 5
   },
   {
@@ -252,15 +258,9 @@
     "timeToFix": 5
   },
   {
-    "patternId": "Layout_FirstParameterIndentation",
-    "title": "Checks the indentation of the first parameter in a method call.",
-    "description": "Checks the indentation of the first parameter in a method call.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "Layout_IndentArray",
-    "title": "Checks the indentation of the first element in an array literal.",
-    "description": "Checks the indentation of the first element in an array literal.",
+    "patternId": "Layout_HeredocArgumentClosingParenthesis",
+    "title": "Checks for the placement of the closing parenthesis in a method call that passes a HEREDOC string as an argument.",
+    "description": "Checks for the placement of the closing parenthesis in a method call that passes a HEREDOC string as an argument.",
     "timeToFix": 5
   },
   {
@@ -282,9 +282,27 @@
     "timeToFix": 5
   },
   {
-    "patternId": "Layout_IndentHash",
+    "patternId": "Layout_IndentFirstArgument",
+    "title": "Checks the indentation of the first argument in a method call.",
+    "description": "Checks the indentation of the first argument in a method call.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Layout_IndentFirstArrayElement",
+    "title": "Checks the indentation of the first element in an array literal.",
+    "description": "Checks the indentation of the first element in an array literal.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Layout_IndentFirstHashElement",
     "title": "Checks the indentation of the first key in a hash literal.",
     "description": "Checks the indentation of the first key in a hash literal.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Layout_IndentFirstParameter",
+    "title": "Checks the indentation of the first parameter in a method definition.",
+    "description": "Checks the indentation of the first parameter in a method definition.",
     "timeToFix": 5
   },
   {
@@ -318,6 +336,12 @@
     "timeToFix": 5
   },
   {
+    "patternId": "Layout_MultilineArrayLineBreaks",
+    "title": "Checks that each item in a multi-line array literal starts on a separate line.",
+    "description": "Checks that each item in a multi-line array literal starts on a separate line.",
+    "timeToFix": 5
+  },
+  {
     "patternId": "Layout_MultilineAssignmentLayout",
     "title": "Check for a newline after the assignment operator in multi-line assignments.",
     "description": "Check for a newline after the assignment operator in multi-line assignments.",
@@ -333,6 +357,18 @@
     "patternId": "Layout_MultilineHashBraceLayout",
     "title": "Checks that the closing brace in a hash literal is either on the same line as the last hash element, or a new line.",
     "description": "Checks that the closing brace in a hash literal is either on the same line as the last hash element, or a new line.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Layout_MultilineHashKeyLineBreaks",
+    "title": "Checks that each item in a multi-line hash literal starts on a separate line.",
+    "description": "Checks that each item in a multi-line hash literal starts on a separate line.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Layout_MultilineMethodArgumentLineBreaks",
+    "title": "Checks that each argument in a multi-line method call starts on a separate line.",
+    "description": "Checks that each argument in a multi-line method call starts on a separate line.",
     "timeToFix": 5
   },
   {
@@ -582,6 +618,12 @@
     "timeToFix": 5
   },
   {
+    "patternId": "Lint_DisjunctiveAssignmentInConstructor",
+    "title": "In constructor, plain assignment is preferred over disjunctive.",
+    "description": "In constructor, plain assignment is preferred over disjunctive.",
+    "timeToFix": 5
+  },
+  {
     "patternId": "Lint_DuplicateCaseCondition",
     "title": "Do not repeat values in case conditionals.",
     "description": "Do not repeat values in case conditionals.",
@@ -654,6 +696,12 @@
     "timeToFix": 5
   },
   {
+    "patternId": "Lint_FlipFlop",
+    "title": "Checks for flip-flops",
+    "description": "Checks for flip-flops",
+    "timeToFix": 5
+  },
+  {
     "patternId": "Lint_FloatOutOfRange",
     "title": "Catches floating-point literals too large or small for Ruby to represent.",
     "description": "Catches floating-point literals too large or small for Ruby to represent.",
@@ -669,6 +717,12 @@
     "patternId": "Lint_HandleExceptions",
     "title": "Don't suppress exception.",
     "description": "Don't suppress exception.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Lint_HeredocMethodCallPosition",
+    "title": "Checks for the ordering of a method call where the receiver of the call is a HEREDOC.",
+    "description": "Checks for the ordering of a method call where the receiver of the call is a HEREDOC.",
     "timeToFix": 5
   },
   {
@@ -840,6 +894,12 @@
     "timeToFix": 5
   },
   {
+    "patternId": "Lint_SafeNavigationWithEmpty",
+    "title": "Avoid `foo&.empty?` in conditionals.",
+    "description": "Avoid `foo&.empty?` in conditionals.",
+    "timeToFix": 5
+  },
+  {
     "patternId": "Lint_ScriptPermission",
     "title": "Grant script file execute permission.",
     "description": "Grant script file execute permission.",
@@ -873,6 +933,12 @@
     "patternId": "Lint_Syntax",
     "title": "Checks syntax error",
     "description": "Checks syntax error",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Lint_ToJSON",
+    "title": "Ensure #to_json includes an optional argument.",
+    "description": "Ensure #to_json includes an optional argument.",
     "timeToFix": 5
   },
   {
@@ -1104,6 +1170,12 @@
     "timeToFix": 5
   },
   {
+    "patternId": "Naming_RescuedExceptionsVariableName",
+    "title": "Use consistent rescued exceptions variables naming.",
+    "description": "Use consistent rescued exceptions variables naming.",
+    "timeToFix": 5
+  },
+  {
     "patternId": "Naming_UncommunicativeBlockParamName",
     "title": "Checks for block parameter names that contain capital letters, end in numbers, or do not meet a minimal length.",
     "description": "Checks for block parameter names that contain capital letters, end in numbers, or do not meet a minimal length.",
@@ -1125,174 +1197,6 @@
     "patternId": "Naming_VariableNumber",
     "title": "Use the configured style when numbering variables.",
     "description": "Use the configured style when numbering variables.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "Performance_Caller",
-    "title": "Use `caller(n..n)` instead of `caller`.",
-    "description": "Use `caller(n..n)` instead of `caller`.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "Performance_CaseWhenSplat",
-    "title": "Reordering `when` conditions with a splat to the end of the `when` branches can improve performance.",
-    "description": "Reordering `when` conditions with a splat to the end of the `when` branches can improve performance.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "Performance_Casecmp",
-    "title": "Use `casecmp` rather than `downcase ==`, `upcase ==`, `== downcase`, or `== upcase`..",
-    "description": "Use `casecmp` rather than `downcase ==`, `upcase ==`, `== downcase`, or `== upcase`..",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "Performance_Count",
-    "title": "Use `count` instead of `select...size`, `reject...size`, `select...count`, `reject...count`, `select...length`, and `reject...length`.",
-    "description": "Use `count` instead of `select...size`, `reject...size`, `select...count`, `reject...count`, `select...length`, and `reject...length`.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "Performance_Detect",
-    "title": "Use `detect` instead of `select.first`, `find_all.first`, `select.last`, and `find_all.last`.",
-    "description": "Use `detect` instead of `select.first`, `find_all.first`, `select.last`, and `find_all.last`.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "Performance_DoubleStartEndWith",
-    "title": "Use `str.{start,end}_with?(x, ..., y, ...)` instead of `str.{start,end}_with?(x, ...) || str.{start,end}_with?(y, ...)`.",
-    "description": "Use `str.{start,end}_with?(x, ..., y, ...)` instead of `str.{start,end}_with?(x, ...) || str.{start,end}_with?(y, ...)`.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "Performance_EndWith",
-    "title": "Use `end_with?` instead of a regex match anchored to the end of a string.",
-    "description": "Use `end_with?` instead of a regex match anchored to the end of a string.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "Performance_FixedSize",
-    "title": "Do not compute the size of statically sized objects except in constants",
-    "description": "Do not compute the size of statically sized objects except in constants",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "Performance_FlatMap",
-    "title": "Use `Enumerable#flat_map` instead of `Enumerable#map...Array#flatten(1)` or `Enumberable#collect..Array#flatten(1)`",
-    "description": "Use `Enumerable#flat_map` instead of `Enumerable#map...Array#flatten(1)` or `Enumberable#collect..Array#flatten(1)`",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "Performance_InefficientHashSearch",
-    "title": "Use `key?` or `value?` instead of `keys.include?` or `values.include?`",
-    "description": "Use `key?` or `value?` instead of `keys.include?` or `values.include?`",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "Performance_LstripRstrip",
-    "title": "Use `strip` instead of `lstrip.rstrip`.",
-    "description": "Use `strip` instead of `lstrip.rstrip`.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "Performance_RangeInclude",
-    "title": "Use `Range#cover?` instead of `Range#include?`.",
-    "description": "Use `Range#cover?` instead of `Range#include?`.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "Performance_RedundantBlockCall",
-    "title": "Use `yield` instead of `block.call`.",
-    "description": "Use `yield` instead of `block.call`.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "Performance_RedundantMatch",
-    "title": "Use `=~` instead of `String#match` or `Regexp#match` in a context where the returned `MatchData` is not needed.",
-    "description": "Use `=~` instead of `String#match` or `Regexp#match` in a context where the returned `MatchData` is not needed.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "Performance_RedundantMerge",
-    "title": "Use Hash#[]=, rather than Hash#merge! with a single key-value pair.",
-    "description": "Use Hash#[]=, rather than Hash#merge! with a single key-value pair.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "Performance_RedundantSortBy",
-    "title": "Use `sort` instead of `sort_by { |x| x }`.",
-    "description": "Use `sort` instead of `sort_by { |x| x }`.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "Performance_RegexpMatch",
-    "title": "Use `match?` instead of `Regexp#match`, `String#match`, `Symbol#match`, `Regexp#===`, or `=~` when `MatchData` is not used.",
-    "description": "Use `match?` instead of `Regexp#match`, `String#match`, `Symbol#match`, `Regexp#===`, or `=~` when `MatchData` is not used.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "Performance_ReverseEach",
-    "title": "Use `reverse_each` instead of `reverse.each`.",
-    "description": "Use `reverse_each` instead of `reverse.each`.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "Performance_Sample",
-    "title": "Use `sample` instead of `shuffle.first`, `shuffle.last`, and `shuffle[Integer]`.",
-    "description": "Use `sample` instead of `shuffle.first`, `shuffle.last`, and `shuffle[Integer]`.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "Performance_Size",
-    "title": "Use `size` instead of `count` for counting the number of elements in `Array` and `Hash`.",
-    "description": "Use `size` instead of `count` for counting the number of elements in `Array` and `Hash`.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "Performance_CompareWithBlock",
-    "title": "Use `sort_by(&:foo)` instead of `sort { |a, b| a.foo <=> b.foo }`.",
-    "description": "Use `sort_by(&:foo)` instead of `sort { |a, b| a.foo <=> b.foo }`.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "Performance_StartWith",
-    "title": "Use `start_with?` instead of a regex match anchored to the beginning of a string.",
-    "description": "Use `start_with?` instead of a regex match anchored to the beginning of a string.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "Performance_StringReplacement",
-    "title": "Use `tr` instead of `gsub` when you are replacing the same number of characters. Use `delete` instead of `gsub` when you are deleting characters.",
-    "description": "Use `tr` instead of `gsub` when you are replacing the same number of characters. Use `delete` instead of `gsub` when you are deleting characters.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "Performance_TimesMap",
-    "title": "Checks for .times.map calls.",
-    "description": "Checks for .times.map calls.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "Performance_UnfreezeString",
-    "title": "Use unary plus to get an unfrozen string literal.",
-    "description": "Use unary plus to get an unfrozen string literal.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "Performance_UnneededSort",
-    "title": "Use `min` instead of `sort.first`, `max_by` instead of `sort_by...last`, etc.",
-    "description": "Use `min` instead of `sort.first`, `max_by` instead of `sort_by...last`, etc.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "Performance_UriDefaultParser",
-    "title": "Use `URI::DEFAULT_PARSER` instead of `URI::Parser.new`.",
-    "description": "Use `URI::DEFAULT_PARSER` instead of `URI::Parser.new`.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "Performance_ChainArrayAllocation",
-    "title": "Instead of chaining array methods that allocate new arrays, mutate an existing array.",
-    "description": "Instead of chaining array methods that allocate new arrays, mutate an existing array.",
     "timeToFix": 5
   },
   {
@@ -1446,6 +1350,12 @@
     "timeToFix": 5
   },
   {
+    "patternId": "Style_ConstantVisibility",
+    "title": "Check that class- and module constants have visibility declarations.",
+    "description": "Check that class- and module constants have visibility declarations.",
+    "timeToFix": 5
+  },
+  {
     "patternId": "Style_Copyright",
     "title": "Include a copyright notice in each file before any code.",
     "description": "Include a copyright notice in each file before any code.",
@@ -1453,8 +1363,8 @@
   },
   {
     "patternId": "Style_DateTime",
-    "title": "Use Date or Time over DateTime.",
-    "description": "Use Date or Time over DateTime.",
+    "title": "Use Time over DateTime.",
+    "description": "Use Time over DateTime.",
     "timeToFix": 5
   },
   {
@@ -1566,12 +1476,6 @@
     "timeToFix": 5
   },
   {
-    "patternId": "Style_FlipFlop",
-    "title": "Checks for flip flops",
-    "description": "Checks for flip flops",
-    "timeToFix": 5
-  },
-  {
     "patternId": "Style_For",
     "title": "Checks use of for or each in multiline loops.",
     "description": "Checks use of for or each in multiline loops.",
@@ -1591,8 +1495,8 @@
   },
   {
     "patternId": "Style_FrozenStringLiteralComment",
-    "title": "Add the frozen_string_literal comment to the top of files to help transition from Ruby 2.3.0 to Ruby 3.0.",
-    "description": "Add the frozen_string_literal comment to the top of files to help transition from Ruby 2.3.0 to Ruby 3.0.",
+    "title": "Add the frozen_string_literal comment to the top of files to help transition to frozen string literals by default.",
+    "description": "Add the frozen_string_literal comment to the top of files to help transition to frozen string literals by default.",
     "timeToFix": 5
   },
   {
@@ -1812,6 +1716,12 @@
     "timeToFix": 5
   },
   {
+    "patternId": "Style_NegatedUnless",
+    "title": "Favor if over unless for negative conditions.",
+    "description": "Favor if over unless for negative conditions.",
+    "timeToFix": 5
+  },
+  {
     "patternId": "Style_NegatedWhile",
     "title": "Favor until over while for negative conditions.",
     "description": "Favor until over while for negative conditions.",
@@ -1962,6 +1872,12 @@
     "timeToFix": 5
   },
   {
+    "patternId": "Style_RedundantConditional",
+    "title": "Don't return true/false from a conditional.",
+    "description": "Don't return true/false from a conditional.",
+    "timeToFix": 5
+  },
+  {
     "patternId": "Style_RedundantException",
     "title": "Checks for an obsolete RuntimeException argument in raise/fail.",
     "description": "Checks for an obsolete RuntimeException argument in raise/fail.",
@@ -1992,9 +1908,9 @@
     "timeToFix": 5
   },
   {
-    "patternId": "Style_RedundantConditional",
-    "title": "Don't return true/false from a conditional.",
-    "description": "Don't return true/false from a conditional.",
+    "patternId": "Style_RedundantSortBy",
+    "title": "Use `sort` instead of `sort_by { |x| x }`.",
+    "description": "Use `sort` instead of `sort_by { |x| x }`.",
     "timeToFix": 5
   },
   {
@@ -2025,6 +1941,12 @@
     "patternId": "Style_SafeNavigation",
     "title": "This cop transforms usages of a method call safeguarded by a check for the existence of the object to safe navigation (`&.`).",
     "description": "This cop transforms usages of a method call safeguarded by a check for the existence of the object to safe navigation (`&.`).",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Style_Sample",
+    "title": "Use `sample` instead of `shuffle.first`, `shuffle.last`, and `shuffle[Integer]`.",
+    "description": "Use `sample` instead of `shuffle.first`, `shuffle.last`, and `shuffle[Integer]`.",
     "timeToFix": 5
   },
   {
@@ -2103,6 +2025,12 @@
     "patternId": "Style_StringMethods",
     "title": "Checks if configured preferred methods are used over non-preferred.",
     "description": "Checks if configured preferred methods are used over non-preferred.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Style_Strip",
+    "title": "Use `strip` instead of `lstrip.rstrip`.",
+    "description": "Use `strip` instead of `lstrip.rstrip`.",
     "timeToFix": 5
   },
   {
@@ -2220,6 +2148,12 @@
     "timeToFix": 5
   },
   {
+    "patternId": "Style_UnneededSort",
+    "title": "Use `min` instead of `sort.first`, `max_by` instead of `sort_by...last`, etc.",
+    "description": "Use `min` instead of `sort.first`, `max_by` instead of `sort_by...last`, etc.",
+    "timeToFix": 5
+  },
+  {
     "patternId": "Style_UnpackFirst",
     "title": "Checks for accessing the first element of `String#unpack` instead of using `unpack1`",
     "description": "Checks for accessing the first element of `String#unpack` instead of using `unpack1`",
@@ -2257,8 +2191,8 @@
   },
   {
     "patternId": "Style_YodaCondition",
-    "title": "Do not use literals as the first operand of a comparison.",
-    "description": "Do not use literals as the first operand of a comparison.",
+    "title": "Forbid or enforce yoda conditions.",
+    "description": "Forbid or enforce yoda conditions.",
     "timeToFix": 5
   },
   {
@@ -2277,6 +2211,12 @@
     "patternId": "Rails_ActiveRecordAliases",
     "title": "Avoid Active Record aliases: Use `update` instead of `update_attributes`. Use `update!` instead of `update_attributes!`.",
     "description": "Avoid Active Record aliases: Use `update` instead of `update_attributes`. Use `update!` instead of `update_attributes!`.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Rails_ActiveRecordOverride",
+    "title": "Check for overriding Active Record methods instead of using callbacks.",
+    "description": "Check for overriding Active Record methods instead of using callbacks.",
     "timeToFix": 5
   },
   {
@@ -2304,6 +2244,12 @@
     "timeToFix": 5
   },
   {
+    "patternId": "Rails_BelongsTo",
+    "title": "Use `optional: true` instead of `required: false` for `belongs_to` relations'",
+    "description": "Use `optional: true` instead of `required: false` for `belongs_to` relations'",
+    "timeToFix": 5
+  },
+  {
     "patternId": "Rails_Blank",
     "title": "Enforces use of `blank?`.",
     "description": "Enforces use of `blank?`.",
@@ -2328,12 +2274,6 @@
     "timeToFix": 5
   },
   {
-    "patternId": "Rails_DynamicFindBy",
-    "title": "Use `find_by` instead of dynamic `find_by_*`.",
-    "description": "Use `find_by` instead of dynamic `find_by_*`.",
-    "timeToFix": 5
-  },
-  {
     "patternId": "Rails_Delegate",
     "title": "Prefer delegate method for delegations.",
     "description": "Prefer delegate method for delegations.",
@@ -2343,6 +2283,12 @@
     "patternId": "Rails_DelegateAllowBlank",
     "title": "Do not use allow_blank as an option to delegate.",
     "description": "Do not use allow_blank as an option to delegate.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Rails_DynamicFindBy",
+    "title": "Use `find_by` instead of dynamic `find_by_*`.",
+    "description": "Use `find_by` instead of dynamic `find_by_*`.",
     "timeToFix": 5
   },
   {
@@ -2406,6 +2352,12 @@
     "timeToFix": 5
   },
   {
+    "patternId": "Rails_IgnoredSkipActionFilterOption",
+    "title": "Checks that `if` and `only` (or `except`) are not used together as options of `skip_*` action filter.",
+    "description": "Checks that `if` and `only` (or `except`) are not used together as options of `skip_*` action filter.",
+    "timeToFix": 5
+  },
+  {
     "patternId": "Rails_InverseOf",
     "title": "Checks for associations where the inverse cannot be determined automatically.",
     "description": "Checks for associations where the inverse cannot be determined automatically.",
@@ -2418,21 +2370,27 @@
     "timeToFix": 5
   },
   {
+    "patternId": "Rails_LinkToBlank",
+    "title": "Checks that `link_to` with a `target: \"_blank\"` have a `rel: \"noopener\"` option passed to them.",
+    "description": "Checks that `link_to` with a `target: \"_blank\"` have a `rel: \"noopener\"` option passed to them.",
+    "timeToFix": 5
+  },
+  {
     "patternId": "Rails_NotNullColumn",
     "title": "Do not add a NOT NULL column without a default value",
     "description": "Do not add a NOT NULL column without a default value",
     "timeToFix": 5
   },
   {
-    "patternId": "Rails_OutputSafety",
-    "title": "The use of `html_safe` or `raw` may be a security risk.",
-    "description": "The use of `html_safe` or `raw` may be a security risk.",
-    "timeToFix": 5
-  },
-  {
     "patternId": "Rails_Output",
     "title": "Checks for calls to puts, print, etc.",
     "description": "Checks for calls to puts, print, etc.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Rails_OutputSafety",
+    "title": "The use of `html_safe` or `raw` may be a security risk.",
+    "description": "The use of `html_safe` or `raw` may be a security risk.",
     "timeToFix": 5
   },
   {
@@ -2460,15 +2418,33 @@
     "timeToFix": 5
   },
   {
+    "patternId": "Rails_RedundantAllowNil",
+    "title": "Finds redundant use of `allow_nil` when `allow_blank` is set to certain values in model validations.",
+    "description": "Finds redundant use of `allow_nil` when `allow_blank` is set to certain values in model validations.",
+    "timeToFix": 5
+  },
+  {
     "patternId": "Rails_RedundantReceiverInWithOptions",
     "title": "Checks for redundant receiver in `with_options`.",
     "description": "Checks for redundant receiver in `with_options`.",
     "timeToFix": 5
   },
   {
+    "patternId": "Rails_ReflectionClassName",
+    "title": "Use a string for `class_name` option value in the definition of a reflection.",
+    "description": "Use a string for `class_name` option value in the definition of a reflection.",
+    "timeToFix": 5
+  },
+  {
     "patternId": "Rails_RefuteMethods",
     "title": "Use `assert_not` methods instead of `refute` methods.",
     "description": "Use `assert_not` methods instead of `refute` methods.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Rails_RelativeDateConstant",
+    "title": "Do not assign relative date to constants.",
+    "description": "Do not assign relative date to constants.",
     "timeToFix": 5
   },
   {
@@ -2481,12 +2457,6 @@
     "patternId": "Rails_ReversibleMigration",
     "title": "Checks whether the change method of the migration file is reversible.",
     "description": "Checks whether the change method of the migration file is reversible.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "Rails_RelativeDateConstant",
-    "title": "Do not assign relative date to constants.",
-    "description": "Do not assign relative date to constants.",
     "timeToFix": 5
   },
   {
