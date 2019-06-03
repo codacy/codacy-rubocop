@@ -1,6 +1,6 @@
 {
   "name": "Rubocop",
-  "version": "0.70.0",
+  "version": "0.71.0",
   "patterns": [
     {
       "patternId": "Bundler_DuplicatedGem",
@@ -1814,7 +1814,10 @@
       "level": "Warning",
       "category": "ErrorProne",
       "parameters": [
-
+        {
+          "name": "Safe",
+          "default": "false"
+        }
       ]
     },
     {
