@@ -8,7 +8,7 @@ end
 gem "yard"
 gem "rake"
 gem "activesupport"
-gem "parser", "2.5.1.2"
+gem "parser", "2.6.3.0"
 gem "pry"
 gem "rubocop", File.read('.rubocop-version').strip
 gem "rubocop-migrations", "0.1.2"
