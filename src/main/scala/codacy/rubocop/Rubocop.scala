@@ -134,6 +134,8 @@ object Rubocop extends Tool {
          |  DisplayCopNames: false
          |  StyleGuideCopsOnly: false
          |  UseCache: false
+         |require:
+         |  - rubocop-performance
          |${rules.mkString(s"${Properties.lineSeparator}")}
       """.stripMargin
 

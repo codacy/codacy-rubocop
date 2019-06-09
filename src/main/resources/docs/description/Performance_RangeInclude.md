@@ -5,6 +5,9 @@ item in a `Range` to see if a specified item is there. In contrast,
 end points of the `Range`. In a great majority of cases, this is what
 is wanted.
 
+This cop is `Safe: false` by default because `Range#include?` and
+`Range#cover?` are not equivalent behaviour.
+
 # Examples
 
 ```ruby

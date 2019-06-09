@@ -5669,6 +5669,258 @@
           "default": "false"
         }
       ]
+    },
+    {
+      "patternId": "Performance_Caller",
+      "level": "Warning",
+      "category": "Performance",
+      "parameters": [
+
+      ]
+    },
+    {
+      "patternId": "Performance_CaseWhenSplat",
+      "level": "Warning",
+      "category": "Performance",
+      "parameters": [
+        {
+          "name": "AutoCorrect",
+          "default": "false"
+        },
+        {
+          "name": "SafeAutoCorrect",
+          "default": "false"
+        }
+      ]
+    },
+    {
+      "patternId": "Performance_Casecmp",
+      "level": "Warning",
+      "category": "Performance",
+      "parameters": [
+
+      ]
+    },
+    {
+      "patternId": "Performance_CompareWithBlock",
+      "level": "Warning",
+      "category": "Performance",
+      "parameters": [
+
+      ]
+    },
+    {
+      "patternId": "Performance_Count",
+      "level": "Warning",
+      "category": "Performance",
+      "parameters": [
+        {
+          "name": "SafeMode",
+          "default": "true"
+        }
+      ]
+    },
+    {
+      "patternId": "Performance_Detect",
+      "level": "Warning",
+      "category": "Performance",
+      "parameters": [
+        {
+          "name": "SafeMode",
+          "default": "true"
+        }
+      ]
+    },
+    {
+      "patternId": "Performance_DoubleStartEndWith",
+      "level": "Warning",
+      "category": "Performance",
+      "parameters": [
+        {
+          "name": "IncludeActiveSupportAliases",
+          "default": "false"
+        }
+      ]
+    },
+    {
+      "patternId": "Performance_EndWith",
+      "level": "Warning",
+      "category": "Performance",
+      "parameters": [
+        {
+          "name": "SafeAutoCorrect",
+          "default": "false"
+        },
+        {
+          "name": "AutoCorrect",
+          "default": "false"
+        }
+      ]
+    },
+    {
+      "patternId": "Performance_FixedSize",
+      "level": "Warning",
+      "category": "Performance",
+      "parameters": [
+
+      ]
+    },
+    {
+      "patternId": "Performance_FlatMap",
+      "level": "Warning",
+      "category": "Performance",
+      "parameters": [
+        {
+          "name": "EnabledForFlattenWithoutParams",
+          "default": "false"
+        }
+      ]
+    },
+    {
+      "patternId": "Performance_InefficientHashSearch",
+      "level": "Warning",
+      "category": "Performance",
+      "parameters": [
+        {
+          "name": "Safe",
+          "default": "false"
+        }
+      ]
+    },
+    {
+      "patternId": "Performance_OpenStruct",
+      "level": "Warning",
+      "category": "Performance",
+      "parameters": [
+        {
+          "name": "Safe",
+          "default": "false"
+        }
+      ]
+    },
+    {
+      "patternId": "Performance_RangeInclude",
+      "level": "Warning",
+      "category": "Performance",
+      "parameters": [
+        {
+          "name": "Safe",
+          "default": "false"
+        }
+      ]
+    },
+    {
+      "patternId": "Performance_RedundantBlockCall",
+      "level": "Warning",
+      "category": "Performance",
+      "parameters": [
+
+      ]
+    },
+    {
+      "patternId": "Performance_RedundantMatch",
+      "level": "Warning",
+      "category": "Performance",
+      "parameters": [
+
+      ]
+    },
+    {
+      "patternId": "Performance_RedundantMerge",
+      "level": "Warning",
+      "category": "Performance",
+      "parameters": [
+        {
+          "name": "MaxKeyValuePairs",
+          "default": "2"
+        }
+      ]
+    },
+    {
+      "patternId": "Performance_RegexpMatch",
+      "level": "Warning",
+      "category": "Performance",
+      "parameters": [
+
+      ]
+    },
+    {
+      "patternId": "Performance_ReverseEach",
+      "level": "Warning",
+      "category": "Performance",
+      "parameters": [
+
+      ]
+    },
+    {
+      "patternId": "Performance_Size",
+      "level": "Warning",
+      "category": "Performance",
+      "parameters": [
+
+      ]
+    },
+    {
+      "patternId": "Performance_StartWith",
+      "level": "Warning",
+      "category": "Performance",
+      "parameters": [
+        {
+          "name": "SafeAutoCorrect",
+          "default": "false"
+        },
+        {
+          "name": "AutoCorrect",
+          "default": "false"
+        }
+      ]
+    },
+    {
+      "patternId": "Performance_StringReplacement",
+      "level": "Warning",
+      "category": "Performance",
+      "parameters": [
+
+      ]
+    },
+    {
+      "patternId": "Performance_TimesMap",
+      "level": "Warning",
+      "category": "Performance",
+      "parameters": [
+        {
+          "name": "AutoCorrect",
+          "default": "false"
+        },
+        {
+          "name": "SafeAutoCorrect",
+          "default": "false"
+        }
+      ]
+    },
+    {
+      "patternId": "Performance_UnfreezeString",
+      "level": "Warning",
+      "category": "Performance",
+      "parameters": [
+
+      ]
+    },
+    {
+      "patternId": "Performance_UriDefaultParser",
+      "level": "Warning",
+      "category": "Performance",
+      "parameters": [
+
+      ]
+    },
+    {
+      "patternId": "Performance_ChainArrayAllocation",
+      "level": "Warning",
+      "category": "Performance",
+      "parameters": [
+
+      ]
     }
   ]
 }

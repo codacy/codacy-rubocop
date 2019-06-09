@@ -2536,5 +2536,155 @@
     "title": "Prefer usage of `YAML.safe_load` over `YAML.load` due to potential security issues. See reference for more information.",
     "description": "Prefer usage of `YAML.safe_load` over `YAML.load` due to potential security issues. See reference for more information.",
     "timeToFix": 5
+  },
+  {
+    "patternId": "Performance_Caller",
+    "title": "Use `caller(n..n)` instead of `caller`.",
+    "description": "Use `caller(n..n)` instead of `caller`.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Performance_CaseWhenSplat",
+    "title": "Reordering `when` conditions with a splat to the end of the `when` branches can improve performance.",
+    "description": "Reordering `when` conditions with a splat to the end of the `when` branches can improve performance.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Performance_Casecmp",
+    "title": "Use `casecmp` rather than `downcase ==`, `upcase ==`, `== downcase`, or `== upcase`..",
+    "description": "Use `casecmp` rather than `downcase ==`, `upcase ==`, `== downcase`, or `== upcase`..",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Performance_CompareWithBlock",
+    "title": "Use `sort_by(&:foo)` instead of `sort { |a, b| a.foo <=> b.foo }`.",
+    "description": "Use `sort_by(&:foo)` instead of `sort { |a, b| a.foo <=> b.foo }`.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Performance_Count",
+    "title": "Use `count` instead of `select...size`, `reject...size`, `select...count`, `reject...count`, `select...length`, and `reject...length`.",
+    "description": "Use `count` instead of `select...size`, `reject...size`, `select...count`, `reject...count`, `select...length`, and `reject...length`.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Performance_Detect",
+    "title": "Use `detect` instead of `select.first`, `find_all.first`, `select.last`, and `find_all.last`.",
+    "description": "Use `detect` instead of `select.first`, `find_all.first`, `select.last`, and `find_all.last`.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Performance_DoubleStartEndWith",
+    "title": "Use `str.{start,end}_with?(x, ..., y, ...)` instead of `str.{start,end}_with?(x, ...) || str.{start,end}_with?(y, ...)`.",
+    "description": "Use `str.{start,end}_with?(x, ..., y, ...)` instead of `str.{start,end}_with?(x, ...) || str.{start,end}_with?(y, ...)`.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Performance_EndWith",
+    "title": "Use `end_with?` instead of a regex match anchored to the end of a string.",
+    "description": "Use `end_with?` instead of a regex match anchored to the end of a string.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Performance_FixedSize",
+    "title": "Do not compute the size of statically sized objects except in constants",
+    "description": "Do not compute the size of statically sized objects except in constants",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Performance_FlatMap",
+    "title": "Use `Enumerable#flat_map` instead of `Enumerable#map...Array#flatten(1)` or `Enumberable#collect..Array#flatten(1)`",
+    "description": "Use `Enumerable#flat_map` instead of `Enumerable#map...Array#flatten(1)` or `Enumberable#collect..Array#flatten(1)`",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Performance_InefficientHashSearch",
+    "title": "Use `key?` or `value?` instead of `keys.include?` or `values.include?`",
+    "description": "Use `key?` or `value?` instead of `keys.include?` or `values.include?`",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Performance_OpenStruct",
+    "title": "Use `Struct` instead of `OpenStruct`.",
+    "description": "Use `Struct` instead of `OpenStruct`.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Performance_RangeInclude",
+    "title": "Use `Range#cover?` instead of `Range#include?`.",
+    "description": "Use `Range#cover?` instead of `Range#include?`.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Performance_RedundantBlockCall",
+    "title": "Use `yield` instead of `block.call`.",
+    "description": "Use `yield` instead of `block.call`.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Performance_RedundantMatch",
+    "title": "Use `=~` instead of `String#match` or `Regexp#match` in a context where the returned `MatchData` is not needed.",
+    "description": "Use `=~` instead of `String#match` or `Regexp#match` in a context where the returned `MatchData` is not needed.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Performance_RedundantMerge",
+    "title": "Use Hash#[]=, rather than Hash#merge! with a single key-value pair.",
+    "description": "Use Hash#[]=, rather than Hash#merge! with a single key-value pair.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Performance_RegexpMatch",
+    "title": "Use `match?` instead of `Regexp#match`, `String#match`, `Symbol#match`, `Regexp#===`, or `=~` when `MatchData` is not used.",
+    "description": "Use `match?` instead of `Regexp#match`, `String#match`, `Symbol#match`, `Regexp#===`, or `=~` when `MatchData` is not used.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Performance_ReverseEach",
+    "title": "Use `reverse_each` instead of `reverse.each`.",
+    "description": "Use `reverse_each` instead of `reverse.each`.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Performance_Size",
+    "title": "Use `size` instead of `count` for counting the number of elements in `Array` and `Hash`.",
+    "description": "Use `size` instead of `count` for counting the number of elements in `Array` and `Hash`.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Performance_StartWith",
+    "title": "Use `start_with?` instead of a regex match anchored to the beginning of a string.",
+    "description": "Use `start_with?` instead of a regex match anchored to the beginning of a string.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Performance_StringReplacement",
+    "title": "Use `tr` instead of `gsub` when you are replacing the same number of characters. Use `delete` instead of `gsub` when you are deleting characters.",
+    "description": "Use `tr` instead of `gsub` when you are replacing the same number of characters. Use `delete` instead of `gsub` when you are deleting characters.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Performance_TimesMap",
+    "title": "Checks for .times.map calls.",
+    "description": "Checks for .times.map calls.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Performance_UnfreezeString",
+    "title": "Use unary plus to get an unfrozen string literal.",
+    "description": "Use unary plus to get an unfrozen string literal.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Performance_UriDefaultParser",
+    "title": "Use `URI::DEFAULT_PARSER` instead of `URI::Parser.new`.",
+    "description": "Use `URI::DEFAULT_PARSER` instead of `URI::Parser.new`.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Performance_ChainArrayAllocation",
+    "title": "Instead of chaining array methods that allocate new arrays, mutate an existing array.",
+    "description": "Instead of chaining array methods that allocate new arrays, mutate an existing array.",
+    "timeToFix": 5
   }
 ]
