@@ -43,10 +43,7 @@ toolVersion := {
 
 //WARNING: Update the rubocop-rspec also updates rubocop version !
 def installAll(rubocopVersion: String) =
-  s"""echo -n "" > /etc/apk/repositories
-     |&& echo "http://dl-cdn.alpinelinux.org/alpine/v3.7/main" >> /etc/apk/repositories
-     |&& echo "http://dl-cdn.alpinelinux.org/alpine/v3.7/community" >> /etc/apk/repositories
-     |&& apk add --no-cache ruby-dev ruby ruby-irb ruby-rake ruby-io-console ruby-bigdecimal make gcc
+  s"""apk add --no-cache ruby ruby-dev ruby-irb ruby-rake ruby-io-console ruby-bigdecimal make gcc
      |ruby-json libstdc++ tzdata bash ca-certificates libc-dev
      |&& echo 'gem: --no-document' > /etc/gemrc
      |&& gem install bundler -v 2.0.1
