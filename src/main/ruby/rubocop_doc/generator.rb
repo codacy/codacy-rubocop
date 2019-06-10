@@ -111,10 +111,9 @@ module RubocopDocs
     plugins_with_versions << "rubocop-#{RuboCop::Version::STRING}"
 
     puts "Generating documentation based on Rubocop and plugins:"
-    plugins_with_versions.map(&method(:puts))
+    puts plugins_with_versions
     puts "^^^^ MAKE SURE THE PLUGIN YOU ADDED IS ON THE LIST ABOVE, OTHERWISE WILL NOT BE PART OF THE patterns.json"
 
-    # It is assumed that the plugins have their cops available at lib/rubocop/cop/*/*.rb
     YARD::Rake::YardocTask.new(:yard_for_generate_documentation) do |task|
       task.files   = plugins_with_versions.map(&method(:rubocop_source_code_path))
       task.options = ['--no-output']

@@ -24,13 +24,21 @@ docker run -it -v $srcDir:/src  <DOCKER_NAME>:<DOCKER_VERSION>
 ## Add plugin
 
 Rubocop is moving some checks to separate repositories, as an example you can check
-https://github.com/alphagov/govuk-lint/pull/115
+https://github.com/rubocop-hq/rubocop/pull/6890
 
 There are some important details to take into consideration:
 - Add dependency to Gemfile
-- Make it part of the generate config file on the tool
-- Make sure you depend on them on the documentation generation, so it can fetch those patterns
-(more details on the Test section)
+- Add it to src/main/ruby/rubocop_doc/generator.rb
+
+```diff
+- $plugins = ["rubocop-performance"]
++ $plugins = ["rubocop-performance", "rubocop-style"]
+```
+
+- `bundle install` so the examples for the documentation are made available at
+`vendor/bundle/ruby/{ruby_version}/gems/{plugin}/lib/rubocop/cop/*/*.rb`
+- Adding the plugin to the `$plugins` will also make the script to *require* it,
+to be able to fetch Cops for the base documentation
 
 ## Test
 
