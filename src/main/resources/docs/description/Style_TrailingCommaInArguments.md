@@ -8,6 +8,9 @@ This cop checks for trailing comma in argument lists.
 method(1, 2,)
 
 # good
+method(1, 2)
+
+# good
 method(
   1, 2,
   3,
@@ -21,11 +24,17 @@ method(
 method(1, 2,)
 
 # good
+method(1, 2)
+
+# good
 method(
   1,
   2,
 )# bad
 method(1, 2,)
+
+# good
+method(1, 2)
 
 # good
 method(

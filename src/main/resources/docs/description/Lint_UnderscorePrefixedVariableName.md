@@ -2,6 +2,10 @@
 This cop checks for underscore-prefixed variables that are actually
 used.
 
+Since block keyword arguments cannot be arbitrarily named at call
+sites, the `AllowKeywordBlockArguments` will allow use of underscore-
+prefixed block keyword arguments.
+
 # Examples
 
 ```ruby
@@ -11,15 +15,24 @@ used.
 [1, 2, 3].each do |_num|
   do_something(_num)
 end
+
+query(:sales) do |_id:, revenue:, cost:|
+  {_id: _id, profit: revenue - cost}
+end
+
 # good
 
 [1, 2, 3].each do |num|
   do_something(num)
 end
-# good
 
 [1, 2, 3].each do |_num|
   do_something # not using `_num`
+end
+# good
+
+query(:sales) do |_id:, revenue:, cost:|
+  {_id: _id, profit: revenue - cost}
 end
 ```
 

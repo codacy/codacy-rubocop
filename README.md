@@ -21,6 +21,25 @@ The docker is ran with the following command:
 docker run -it -v $srcDir:/src  <DOCKER_NAME>:<DOCKER_VERSION>
 ```
 
+## Add plugin
+
+Rubocop is moving some checks to separate repositories, as an example you can check
+https://github.com/rubocop-hq/rubocop/pull/6890
+
+There are some important details to take into consideration:
+- Add dependency to Gemfile
+- Add it to src/main/ruby/rubocop_doc/generator.rb
+
+```diff
+- $plugins = ["rubocop-performance"]
++ $plugins = ["rubocop-performance", "rubocop-style"]
+```
+
+- `bundle install` so the examples for the documentation are made available at
+`vendor/bundle/ruby/{ruby_version}/gems/{plugin}/lib/rubocop/cop/*/*.rb`
+- Adding the plugin to the `$plugins` will also make the script to *require* it,
+to be able to fetch Cops for the base documentation
+
 ## Test
 
 We use the [codacy-plugins-test](https://github.com/codacy/codacy-plugins-test) to test our external tools integration.
@@ -36,6 +55,10 @@ bundle exec src/main/ruby/rubocop_doc/generator.rb
 bundle exec src/main/ruby/codacy/rubocop/generator.rb
 rm -f rubocop-doc.yml
 ```
+
+Notes on the documentation generation:
+- You need to *require* the plugin, so they are injected on the *registry* when fetching the available Cops
+- After the `bundle install` the documentation generator will fetch examples from the Cops of the added plugins
 
 ## What is Codacy?
 

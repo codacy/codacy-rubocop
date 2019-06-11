@@ -53,7 +53,31 @@ foo = map { |x|
 }
 map { |x|
   x
-}.inspect# bad
+}.inspect
+
+# The AllowBracesOnProceduralOneLiners option is ignored unless the
+# EnforcedStyle is set to `semantic`. If so:
+
+# If the AllowBracesOnProceduralOneLiners option is unspecified, or
+# set to `false` or any other falsey value, then semantic purity is
+# maintained, so one-line procedural blocks must use do-end, not
+# braces.
+
+# bad
+collection.each { |element| puts element }
+
+# good
+collection.each do |element| puts element end
+
+# If the AllowBracesOnProceduralOneLiners option is set to `true`, or
+# any other truthy value, then one-line procedural blocks may use
+# either style. (There is no setting for requiring braces on them.)
+
+# good
+collection.each { |element| puts element }
+
+# also good
+collection.each do |element| puts element end# bad
 words.each do |word|
   word.flip.flop
 end.join("-")
@@ -61,7 +85,15 @@ end.join("-")
 # good
 words.each { |word|
   word.flip.flop
-}.join("-")
+}.join("-")# bad
+words.each do |word|
+  word.flip.flop
+end
+
+# good
+words.each { |word|
+  word.flip.flop
+}
 ```
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Style/BlockDelimiters)

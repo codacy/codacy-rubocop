@@ -11,15 +11,23 @@ and its standard library subclasses, excluding subclasses of
 
 class C < Exception; end
 
+C = Class.new(Exception)
+
 # good
 
-class C < RuntimeError; end# bad
+class C < RuntimeError; end
+
+C = Class.new(RuntimeError)# bad
 
 class C < Exception; end
+
+C = Class.new(Exception)
 
 # good
 
 class C < StandardError; end
+
+C = Class.new(StandardError)
 ```
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Lint/InheritException)

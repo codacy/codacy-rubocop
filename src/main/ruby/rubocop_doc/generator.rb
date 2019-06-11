@@ -1,10 +1,15 @@
 #!/usr/bin/env ruby
 
+# Plugins with patterns documentation should be added here
+$plugins = ["rubocop-performance"]
+
 # frozen_string_literal: true
-require "rubocop"
+require 'rubocop'
 require 'yaml'
 require 'yard'
 require 'pathname'
+
+$plugins.map(&method(:require))
 
 module RubocopDocs
   class CopDoc
@@ -88,18 +93,32 @@ module RubocopDocs
     end
   end
 
-  def self.rubocop_source_code_path(rubocop_version)
+  def self.rubocop_source_code_path(plugin_with_version)
+    puts "Parsing cops to be available for documentation details for #{plugin_with_version}..."
     ruby_version = "2.5.0"
-    gem_path     = "vendor/bundle/ruby/#{ruby_version}/gems/rubocop-#{rubocop_version.strip}"
+    gem_path     = "vendor/bundle/ruby/#{ruby_version}/gems/#{plugin_with_version}"
     "#{gem_path}/lib/rubocop/cop/*/*.rb"
   end
 
   def self.run
-    rubocop_version = File.read('.rubocop-version').strip
+    # Each plugin has a Version, so we retrieve that to know where to look on the gem files for the Cops documentation
+    plugins_with_versions = $plugins.map do |plugin|
+      version = eval("RuboCop::#{plugin.delete_prefix("rubocop-").capitalize}::Version::STRING")
+      "#{plugin}-#{version}"
+    end
+
+    # Add rubocop itself as a source of Cops
+    plugins_with_versions << "rubocop-#{RuboCop::Version::STRING}"
+
+    puts "Generating documentation based on Rubocop and plugins:"
+    puts plugins_with_versions
+    puts "^^^^ MAKE SURE THE PLUGIN YOU ADDED IS ON THE LIST ABOVE, OTHERWISE WILL NOT BE PART OF THE patterns.json"
+
     YARD::Rake::YardocTask.new(:yard_for_generate_documentation) do |task|
-      task.files   = [rubocop_source_code_path(rubocop_version)]
+      task.files   = plugins_with_versions.map(&method(:rubocop_source_code_path))
       task.options = ['--no-output']
     end
+
     Rake.application['yard_for_generate_documentation'].invoke
     YARD::Registry.load!
     cops                       = RuboCop::Cop::Cop.registry

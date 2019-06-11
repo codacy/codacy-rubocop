@@ -1,7 +1,6 @@
 
-This cop checks the indentation of the first parameter in a method call.
-Parameters after the first one are checked by Layout/AlignParameters,
-not by this cop.
+This cop checks the indentation of the first argument in a method call
+or definition.
 
 # Examples
 
@@ -27,7 +26,7 @@ second_param)
 
 some_method nested_call(
 nested_first_param),
-second_param# The first parameter should always be indented one step more than the
+second_param# The first argument should always be indented one step more than the
 # preceding line.
 
 # good
@@ -50,8 +49,8 @@ second_param)
 
 some_method nested_call(
   nested_first_param),
-second_param# The first parameter should always be indented one level relative to
-# the parent that is receiving the parameter
+second_param# The first argument should always be indented one level relative to
+# the parent that is receiving the argument
 
 # good
 some_method(
@@ -73,9 +72,9 @@ second_param)
 
 some_method nested_call(
               nested_first_param),
-second_params# The first parameter should normally be indented one step more than
-# the preceding line, but if it's a parameter for a method call that
-# is itself a parameter in a method call, then the inner parameter
+second_params# The first argument should normally be indented one step more than
+# the preceding line, but if it's a argument for a method call that
+# is itself a argument in a method call, then the inner argument
 # should be indented relative to the inner method.
 
 # good
@@ -125,4 +124,4 @@ some_method nested_call(
 second_param
 ```
 
-[Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Layout/FirstParameterIndentation)
+[Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Layout/IndentFirstArgument)

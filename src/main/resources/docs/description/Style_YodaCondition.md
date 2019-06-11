@@ -1,7 +1,7 @@
 
-This cop checks for Yoda conditions, i.e. comparison operations where
-readability is reduced because the operands are not ordered the same
-way as they would be ordered in spoken English.
+This cop can either enforce or forbid Yoda conditions,
+i.e. comparison operations where the order of expression is reversed.
+eg. `5 == x`
 
 # Examples
 
@@ -22,7 +22,23 @@ bar > 10# bad
 
 # good
 99 >= foo
+3 < a && a < 5# bad
+foo == 99
+foo == "bar"
+foo <= 42
+bar > 10
+
+# good
+99 == foo
+"bar" != foo
+42 >= foo
+10 < bar# bad
+99 >= foo
 3 < a && a < 5
+
+# good
+99 == foo
+"bar" != foo
 ```
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Style/YodaCondition)

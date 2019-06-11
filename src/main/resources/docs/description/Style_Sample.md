@@ -27,4 +27,4 @@ This cop is used to identify usages of `shuffle.first`,
 [1, 2, 3].shuffle(random: Random.new)
 ```
 
-[Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Performance/Sample)
+[Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Style/Sample)
