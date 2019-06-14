@@ -7,7 +7,7 @@ name := """codacy-engine-rubocop"""
 
 version := "1.0-SNAPSHOT"
 
-val languageVersion = "2.11.12"
+val languageVersion = "2.12.7"
 
 scalaVersion := languageVersion
 
@@ -16,9 +16,9 @@ resolvers := Seq("Sonatype OSS Snapshots".at("https://oss.sonatype.org/content/r
 
 libraryDependencies ++= Seq(
   "org.scala-lang.modules" %% "scala-xml" % "1.0.6" withSources (),
-  "com.codacy" %% "codacy-engine-scala-seed" % "2.7.0",
+  "com.codacy" %% "codacy-engine-scala-seed" % "3.0.9",
   "com.fasterxml.jackson.dataformat" % "jackson-dataformat-yaml" % "2.8.4",
-  "com.typesafe.play" %% "play-ws" % "2.4.8"
+  "com.typesafe.play" %% "play-ws" % "2.7.2"
 )
 
 enablePlugins(JavaAppPackaging)
