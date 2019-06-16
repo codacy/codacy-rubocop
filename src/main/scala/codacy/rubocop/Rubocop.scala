@@ -3,9 +3,8 @@ package codacy.rubocop
 import java.io.File
 import java.nio.charset.StandardCharsets
 import java.nio.file.{Files, Path, Paths, StandardOpenOption}
-import com.codacy.plugins.api.paramValueToJsValue
 import com.codacy.plugins.api
-import com.codacy.plugins.api.Options
+import com.codacy.plugins.api.{Options, paramValueToJsValue}
 import com.codacy.plugins.api.results.Result.Issue
 import com.codacy.plugins.api.results.Tool.Specification
 import com.codacy.plugins.api.results.{Parameter, Pattern, Result, Tool}
