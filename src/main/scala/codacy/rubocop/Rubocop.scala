@@ -3,9 +3,12 @@ package codacy.rubocop
 import java.io.File
 import java.nio.charset.StandardCharsets
 import java.nio.file.{Files, Path, Paths, StandardOpenOption}
-
-import codacy.dockerApi._
-import codacy.dockerApi.utils.CommandRunner
+import com.codacy.plugins.api
+import com.codacy.plugins.api.{Options, paramValueToJsValue}
+import com.codacy.plugins.api.results.Result.Issue
+import com.codacy.plugins.api.results.Tool.Specification
+import com.codacy.plugins.api.results.{Parameter, Pattern, Result, Tool}
+import com.codacy.tools.scala.seed.utils.CommandRunner
 import play.api.libs.json._
 
 import scala.io.Source
@@ -14,15 +17,22 @@ import scala.util.{Failure, Properties, Success, Try}
 object Rubocop extends Tool {
 
   // Gemfile is analysed
-  private val filesToIgnore: Set[String] = Set("Gemfile.lock").map(_.toLowerCase())
+  private val filesToIgnore: Set[String] =
+    Set("Gemfile.lock").map(_.toLowerCase())
 
-  override def apply(path: Path, conf: Option[List[PatternDef]], files: Option[Set[Path]])(implicit spec: Spec): Try[List[Result]] = {
-    val cmd = getCommandFor(path, conf, files, spec, resultFilePath)
-    CommandRunner.exec(cmd, Some(path.toFile)) match {
-    
+  override def apply(
+      source: api.Source.Directory,
+      configuration: Option[List[Pattern.Definition]],
+      files: Option[Set[api.Source.File]],
+      options: Map[Options.Key, Options.Value]
+  )(implicit specification: Tool.Specification): Try[List[Result]] = {
+
+    val cmd = getCommandFor(Paths.get(source.path), configuration, files, specification, resultFilePath)
+    CommandRunner.exec(cmd, Some(new File(source.path))) match {
+
       case Right(resultFromTool) if resultFromTool.exitCode < 2 =>
         parseResult(resultFilePath.toFile) match {
-          case s@Success(_) => s
+          case s @ Success(_) => s
           case Failure(e) =>
             val msg =
               s"""
@@ -55,48 +65,61 @@ object Rubocop extends Tool {
     }.flatMap { json =>
       json.validate[RubocopResult] match {
         case JsSuccess(rubocopResult, _) =>
-          Success(
-            rubocopResult.files.getOrElse(List.empty).flatMap {
-              file => ruboFileToResult(file)
-            }
-          )
+          Success(rubocopResult.files.getOrElse(List.empty).flatMap { file =>
+            ruboFileToResult(file)
+          })
         case JsError(err) =>
-          Failure(new Throwable(Json.stringify(JsError.toFlatJson(err))))
+          Failure(new Throwable(Json.stringify(JsError.toJson(err))))
       }
     }
   }
 
   private[this] def ruboFileToResult(rubocopFiles: RubocopFiles): List[Result] = {
     rubocopFiles.offenses.getOrElse(List.empty).map { offense =>
-      Issue(SourcePath(rubocopFiles.path.value), ResultMessage(offense.message.value),
-        PatternId(getIdByPatternName(offense.cop_name.value)), ResultLine(offense.location.line))
+      Issue(
+        api.Source.File(rubocopFiles.path.value),
+        Result.Message(offense.message.value),
+        Pattern.Id(getIdByPatternName(offense.cop_name.value)),
+        api.Source.Line(offense.location.line)
+      )
     }
   }
 
-  private[this] def getCommandFor(path: Path, conf: Option[List[PatternDef]], files: Option[Set[Path]], spec: Spec, outputFilePath: Path): List[String] = {
-    val configPath = conf.flatMap(getConfigFile(_).map { configFile =>
-      List("-c", configFile.toAbsolutePath.toString)
-    }).getOrElse(List.empty)
+  private[this] def getCommandFor(
+      path: Path,
+      conf: Option[List[Pattern.Definition]],
+      files: Option[Set[api.Source.File]],
+      spec: Specification,
+      outputFilePath: Path
+  ): List[String] = {
+    val configPath = conf
+      .flatMap(getConfigFile(_).map { configFile =>
+        List("-c", configFile.toAbsolutePath.toString)
+      })
+      .getOrElse(List.empty)
 
     val patternsCmd = (for {
       patterns <- conf.getOrElse(List.empty)
     } yield getPatternNameById(patterns.patternId)) match {
-      case patterns if patterns.nonEmpty => List("--only", patterns.mkString(","))
+      case patterns if patterns.nonEmpty =>
+        List("--only", patterns.mkString(","))
       case _ => List.empty
     }
 
-    val filesCmd = files.getOrElse(List(path.toAbsolutePath))
+    val filesCmd = files
+      .getOrElse(List(path.toAbsolutePath))
       .collect {
-        case file if !filesToIgnore.contains(file.getFileName.toString.toLowerCase()) =>
+        case file if !file.toString.toLowerCase().contains(filesToIgnore) =>
           file.toString
       }
 
     List("rubocop", "--force-exclusion", "-f", "json", "-o", outputFilePath.toAbsolutePath.toString) ++ configPath ++ patternsCmd ++ filesCmd
   }
 
-  private[this] lazy val resultFilePath = Paths.get(Properties.tmpDir, "rubocop-result.json")
+  private[this] lazy val resultFilePath =
+    Paths.get(Properties.tmpDir, "rubocop-result.json")
 
-  private[this] def getConfigFile(conf: List[PatternDef]): Option[Path] = {
+  private[this] def getConfigFile(conf: List[Pattern.Definition]): Option[Path] = {
     val rules = for {
       pattern <- conf
     } yield generateRule(pattern.patternId, pattern.parameters)
@@ -154,13 +177,14 @@ object Rubocop extends Tool {
     }
   }
 
-  private[this] def generateRule(patternId: PatternId, parameters: Option[Set[ParameterDef]]): String = {
-    val ymlProperties = parameters.map {
-      parameterDef =>
-        parameterDef.map {
-          pattern => generateParameter(pattern)
+  private[this] def generateRule(patternId: Pattern.Id, parameters: Option[Set[Parameter.Definition]]): String = {
+    val ymlProperties = parameters
+      .map { parameterDef =>
+        parameterDef.map { pattern =>
+          generateParameter(pattern)
         }
-    }.getOrElse(Set.empty)
+      }
+      .getOrElse(Set.empty)
     val patternConfig =
       s"""
          |${getPatternNameById(patternId)}:
@@ -175,8 +199,7 @@ object Rubocop extends Tool {
     }
   }
 
-
-  private[this] def getPatternNameById(patternId: PatternId): String = {
+  private[this] def getPatternNameById(patternId: Pattern.Id): String = {
     patternId.value.replace('_', '/')
   }
 
@@ -184,10 +207,11 @@ object Rubocop extends Tool {
     id.replace('/', '_')
   }
 
-  private[this] def generateParameter(parameter: ParameterDef): String = {
-    parameter.value match {
+  private[this] def generateParameter(parameter: Parameter.Definition): String = {
+    paramValueToJsValue(parameter.value) match {
       case JsArray(parameters) if parameters.nonEmpty =>
-        val finalParameters = parameters.map(p => s"    - ${Json.stringify(p)}")
+        val finalParameters = parameters
+          .map(p => s"    - ${Json.stringify(p)}")
           .mkString(Properties.lineSeparator)
         s"""${parameter.name.value}:
            |$finalParameters
