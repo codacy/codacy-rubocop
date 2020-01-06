@@ -37,18 +37,9 @@ mappings in Universal ++= (resourceDirectory in Compile).map { resourceDir: File
   val src = resourceDir / "docs"
   val dest = "/docs"
 
-  val docFiles = for {
+  for {
     path <- src.allPaths.get if !path.isDirectory
   } yield path -> path.toString.replaceFirst(src.toString, dest)
-
-  val rubyFiles = Seq(
-    (file("Gemfile"), "/setup/Gemfile"),
-    (file("Gemfile.lock"), "/setup/Gemfile.lock"),
-    (file(".ruby-version"), "/setup/.ruby-version"),
-    (file(".rubocop-version"), "/setup/.rubocop-version")
-  )
-
-  docFiles ++ rubyFiles
 }.value
 
 val dockerUser = "docker"
