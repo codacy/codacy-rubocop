@@ -4,9 +4,21 @@ import play.api.libs.json.{Format, JsString, JsValue, Json}
 
 case class RubocopLocation(line: Int, column: JsValue, length: JsValue)
 
-case class RubocopMetadata(rubocop_version: JsValue, ruby_engine: JsValue, ruby_version: JsValue, ruby_patchlevel: JsValue, ruby_platform: JsValue)
+case class RubocopMetadata(
+    rubocop_version: JsValue,
+    ruby_engine: JsValue,
+    ruby_version: JsValue,
+    ruby_patchlevel: JsValue,
+    ruby_platform: JsValue
+)
 
-case class RubocopOffense(severity: JsValue, message: JsString, cop_name: JsString, corrected: JsValue, location: RubocopLocation)
+case class RubocopOffense(
+    severity: JsValue,
+    message: JsString,
+    cop_name: JsString,
+    corrected: JsValue,
+    location: RubocopLocation
+)
 
 case class RubocopFiles(path: JsString, offenses: Option[List[RubocopOffense]])
 

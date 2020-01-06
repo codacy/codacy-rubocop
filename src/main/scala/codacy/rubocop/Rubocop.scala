@@ -4,7 +4,7 @@ import java.io.File
 import java.nio.charset.StandardCharsets
 import java.nio.file.{Files, Path, Paths, StandardOpenOption}
 import com.codacy.plugins.api
-import com.codacy.plugins.api.{Options, paramValueToJsValue}
+import com.codacy.plugins.api.{paramValueToJsValue, Options}
 import com.codacy.plugins.api.results.Result.Issue
 import com.codacy.plugins.api.results.Tool.Specification
 import com.codacy.plugins.api.results.{Parameter, Pattern, Result, Tool}
@@ -109,7 +109,7 @@ object Rubocop extends Tool {
     val filesCmd = files
       .getOrElse(List(path.toAbsolutePath))
       .collect {
-        case file if !file.toString.toLowerCase().contains(filesToIgnore) =>
+        case file if !filesToIgnore.contains(file.toString.toLowerCase) =>
           file.toString
       }
 
