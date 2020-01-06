@@ -1,100 +1,68 @@
-import com.typesafe.sbt.packager.docker.{Cmd, ExecCmd}
+import com.typesafe.sbt.packager.docker.Cmd
+import sjsonnew._
+import sjsonnew.BasicJsonProtocol._
+import sjsonnew.support.scalajson.unsafe._
 
-import scala.io.Source
-import scala.util.parsing.json.JSON
+name := "codacy-engine-rubocop"
 
-name := """codacy-engine-rubocop"""
-
-version := "1.0-SNAPSHOT"
-
-val languageVersion = "2.12.7"
-
-scalaVersion := languageVersion
-
-resolvers := Seq("Sonatype OSS Snapshots".at("https://oss.sonatype.org/content/repositories/releases"),
-  "Typesafe Repo".at("http://repo.typesafe.com/typesafe/releases/")) ++ resolvers.value
+scalaVersion := "2.13.1"
 
 libraryDependencies ++= Seq(
-  "org.scala-lang.modules" %% "scala-xml" % "1.0.6" withSources (),
-  "com.codacy" %% "codacy-engine-scala-seed" % "3.0.9",
+  "org.scala-lang.modules" %% "scala-xml" % "1.2.0" withSources (),
+  "com.codacy" %% "codacy-engine-scala-seed" % "3.1.0",
   "com.fasterxml.jackson.dataformat" % "jackson-dataformat-yaml" % "2.8.4",
-  "com.typesafe.play" %% "play-ws" % "2.7.2"
+  "com.typesafe.play" %% "play-json" % "2.8.1"
 )
 
 enablePlugins(JavaAppPackaging)
 
 enablePlugins(DockerPlugin)
 
-version in Docker := "1.0"
-
-lazy val toolVersion = TaskKey[String](
-  "The version of the underlying tool retrieved from patterns.json")
+lazy val toolVersion = settingKey[String]("The version of the underlying tool retrieved from patterns.json")
 
 toolVersion := {
+  case class Patterns(name: String, version: String)
+  implicit val patternsIso: IsoLList[Patterns] =
+    LList.isoCurried((p: Patterns) => ("name", p.name) :*: ("version", p.version) :*: LNil) {
+      case (_, n) :*: (_, v) :*: LNil => Patterns(n, v)
+    }
+
   val jsonFile = (resourceDirectory in Compile).value / "docs" / "patterns.json"
-  val toolMap = JSON
-    .parseFull(Source.fromFile(jsonFile).getLines().mkString)
-    .getOrElse(throw new Exception("patterns.json is not a valid json"))
-    .asInstanceOf[Map[String, String]]
-  toolMap.getOrElse[String](
-    "version",
-    throw new Exception("Failed to retrieve 'version' from patterns.json"))
+  val json = Parser.parseFromFile(jsonFile)
+  val patterns = json.flatMap(Converter.fromJson[Patterns])
+  patterns.get.version
 }
 
-//WARNING: Update the rubocop-rspec also updates rubocop version !
-def installAll(rubocopVersion: String) =
-  s"""apk add --no-cache ruby ruby-etc ruby-dev ruby-irb ruby-rake ruby-io-console ruby-bigdecimal make gcc
-     |ruby-json libstdc++ tzdata bash ca-certificates libc-dev
-     |&& echo 'gem: --no-document' > /etc/gemrc
-     |&& gem install bundler -v 2.0.1
-     |&& cd /opt/docker/setup
-     |&& bundle install
-     |&& gem cleanup
-     |&& apk del ruby-dev make gcc
-     |&& rm -rf /tmp/* /var/cache/apk/*""".stripMargin
-    .replaceAll(System.lineSeparator(), " ")
+mappings in Universal ++= (resourceDirectory in Compile).map { resourceDir: File =>
+  val src = resourceDir / "docs"
+  val dest = "/docs"
 
-mappings in Universal <++= (resourceDirectory in Compile) map {
-  resourceDir: File =>
-    val src = resourceDir / "docs"
-    val dest = "/docs"
+  val docFiles = for {
+    path <- src.allPaths.get if !path.isDirectory
+  } yield path -> path.toString.replaceFirst(src.toString, dest)
 
-    val docFiles = for {
-      path <- src.***.get if !path.isDirectory
-    } yield path -> path.toString.replaceFirst(src.toString, dest)
+  val rubyFiles = Seq(
+    (file("Gemfile"), "/setup/Gemfile"),
+    (file("Gemfile.lock"), "/setup/Gemfile.lock"),
+    (file(".ruby-version"), "/setup/.ruby-version"),
+    (file(".rubocop-version"), "/setup/.rubocop-version")
+  )
 
-    val rubyFiles = Seq(
-      (file("Gemfile"), "/setup/Gemfile"),
-      (file("Gemfile.lock"), "/setup/Gemfile.lock"),
-      (file(".ruby-version"), "/setup/.ruby-version"),
-      (file(".rubocop-version"), "/setup/.rubocop-version")
-    )
-
-    docFiles ++ rubyFiles
-}
+  docFiles ++ rubyFiles
+}.value
 
 val dockerUser = "docker"
 val dockerGroup = "docker"
 
 daemonUser in Docker := dockerUser
-
 daemonGroup in Docker := dockerGroup
 
-dockerBaseImage := "openjdk:8-jre-alpine"
-
-mainClass in Compile := Some("codacy.Engine")
+dockerBaseImage := "codacy-rubocop-base"
 
 dockerCommands := {
-  dockerCommands.dependsOn(toolVersion).value.flatMap {
-    case cmd @ (Cmd("ADD", "opt /opt")) =>
-      List(
-        cmd,
-        Cmd("RUN", installAll(toolVersion.value)),
-        Cmd("RUN", "mv /opt/docker/docs /docs"),
-        Cmd("RUN", s"adduser -u 2004 -D $dockerUser"),
-        ExecCmd("RUN",
-                Seq("chown", "-R", s"$dockerUser:$dockerGroup", "/docs"): _*)
-      )
-    case other => List(other)
+  dockerCommands.value.flatMap {
+    case cmd @ (Cmd("ADD", _)) =>
+      Seq(Cmd("RUN", s"adduser -u 2004 -D $dockerUser"), cmd, Cmd("RUN", "mv /opt/docker/docs /docs"))
+    case other => Seq(other)
   }
 }

@@ -12,6 +12,7 @@ See the [codacy-engine-scala-seed](https://github.com/codacy/codacy-engine-scala
 You can create the docker by doing:
 
 ```
+docker build -t codacy-rubocop-base .
 sbt docker:publishLocal
 ```
 

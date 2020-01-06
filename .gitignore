@@ -14,3 +14,5 @@
 rubocop-doc.yml
 *.swo
 *.swp
+.metals
+.bloop
