@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<checkstyle version="4.3">
+    <file name="test.rb">
+        <error source="Style_HashSyntax" line="2" message="Use hash rockets syntax." severity="info" />
+        <error source="Style_HashSyntax" line="4" message="Use hash rockets syntax." severity="info" />
+        <error source="Style_HashSyntax" line="5" message="Use hash rockets syntax." severity="info" />
+    </file>
+</checkstyle>

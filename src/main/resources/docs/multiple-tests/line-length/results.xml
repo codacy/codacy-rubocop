@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<checkstyle version="4.3">
+    <file name="Metrics_LineLength.rb">
+        <error source="Naming_FileName" line="1" message="The name of this source file (`Metrics_LineLength.rb`) should use snake_case." severity="info" />
+        <error source="Layout_LeadingCommentSpace" line="1" message="Missing space after `#`." severity="info" />
+        <error source="Layout_LeadingCommentSpace" line="3" message="Missing space after `#`." severity="info" />
+        <error source="Metrics_LineLength" line="4" message="Line is too long. [192/80]" severity="warning" />
+    </file>
+</checkstyle>
