@@ -3,7 +3,7 @@ import sjsonnew._
 import sjsonnew.BasicJsonProtocol._
 import sjsonnew.support.scalajson.unsafe._
 
-name := "codacy-engine-rubocop"
+name := "codacy-rubocop"
 
 scalaVersion := "2.13.1"
 
