@@ -28,7 +28,12 @@ module RubocopDocs
           exclude_path = Pathname.new(exclude_elem)
           base_dri = Pathname.new(base_dir)
 
-          exclude_path.relative_path_from(base_dri).to_s
+          if base_dri.relative?() != exclude_path.relative?()
+            exclude_elem
+          else  
+            exclude_path.relative_path_from(base_dri).to_s
+          end
+
         else
           exclude_elem
         end
@@ -123,7 +128,6 @@ module RubocopDocs
     YARD::Registry.load!
     cops                       = RuboCop::Cop::Cop.registry
     config                     = RuboCop::ConfigLoader.default_configuration
-    config['Rails']['Enabled'] = true
     result                     = []
     cops.each do |cop|
       result << RubocopDocs::CopDoc.new(cop, config)

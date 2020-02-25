@@ -2686,5 +2686,11 @@
     "title": "Instead of chaining array methods that allocate new arrays, mutate an existing array.",
     "description": "Instead of chaining array methods that allocate new arrays, mutate an existing array.",
     "timeToFix": 5
+  },
+  {
+    "patternId": "Rails_HelperInstanceVariable",
+    "title": "Do not use instance variables in helpers",
+    "description": "Do not use instance variables in helpers",
+    "timeToFix": 5
   }
 ]

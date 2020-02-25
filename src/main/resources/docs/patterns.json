@@ -5621,6 +5621,7 @@
       "patternId": "Security_Eval",
       "level": "Error",
       "category": "Security",
+      "subcategory": "InputValidation",
       "parameters": [
 
       ]
@@ -5629,6 +5630,7 @@
       "patternId": "Security_JSONLoad",
       "level": "Error",
       "category": "Security",
+      "subcategory": "InsecureModulesLibraries",
       "parameters": [
         {
           "name": "AutoCorrect",
@@ -5644,6 +5646,7 @@
       "patternId": "Security_MarshalLoad",
       "level": "Error",
       "category": "Security",
+      "subcategory": "InsecureModulesLibraries",
       "parameters": [
 
       ]
@@ -5652,6 +5655,7 @@
       "patternId": "Security_Open",
       "level": "Error",
       "category": "Security",
+      "subcategory": "CommandInjection",
       "parameters": [
         {
           "name": "Safe",
@@ -5663,6 +5667,7 @@
       "patternId": "Security_YAMLLoad",
       "level": "Error",
       "category": "Security",
+      "subcategory": "InputValidation",
       "parameters": [
         {
           "name": "SafeAutoCorrect",
@@ -5920,6 +5925,19 @@
       "category": "Performance",
       "parameters": [
 
+      ]
+    },
+    {
+      "patternId": "Rails_HelperInstanceVariable",
+      "level": "Warning",
+      "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "Include",
+          "default": [
+            "app/helpers/**/*.rb"
+          ]
+        }
       ]
     }
   ]

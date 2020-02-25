@@ -92,6 +92,20 @@ module RubocopDoc
         end
       end
 
+      def self.subcategory(cop_data)
+        if category(cop_data) == "Security"
+          case cop_data[:name] 
+          when "Security/JSONLoad", "Security/MarshalLoad"
+            "InsecureModulesLibraries"
+          when "Security/Open"
+            "CommandInjection"
+          when "Security/YAMLLoad", "Security/Eval"
+            "InputValidation"
+          else nil
+          end
+        end
+      end
+
       def self.parameters(cop_data)
         cop_data[:configurable_attributes].map do |key, value|
           { name: key, default: value }
@@ -105,8 +119,9 @@ module RubocopDoc
             patternId:  cop_data[:name].gsub("/", "_"),
             level:      level(cop_data),
             category:   category(cop_data),
+            subcategory: subcategory(cop_data),
             parameters: parameters(cop_data)
-          }
+          }.delete_if { |key, value| value == nil }
         end
         data      = {
           name:     "Rubocop",
