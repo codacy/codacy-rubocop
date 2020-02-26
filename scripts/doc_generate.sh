@@ -1,3 +1,4 @@
+rm -rf src/main/resources/docs/description/*
 bundle install --path vendor/bundle
 bundle exec src/main/ruby/rubocop_doc/generator.rb
 bundle exec src/main/ruby/codacy/rubocop/generator.rb

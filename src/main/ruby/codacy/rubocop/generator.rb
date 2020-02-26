@@ -40,12 +40,19 @@ module RubocopDoc
         File.write("src/main/resources/docs/description/description.json", JSON.pretty_generate(hash))
       end
 
+      def self.get_title(description)
+        while description.length() > 254 do
+          description = description.slice(0..(description.rindex('.')-1))
+        end
+        description
+      end
+
       def self.run(file_path = "rubocop-doc.yml")
         cops_data    = YAML.load_file(file_path)
-        descriptions = cops_data.map do |cop_data|
+        descriptions = cops_data.map do |cop_data|            
           {
             patternId:   cop_data[:name].gsub("/", "_"),
-            title:       cop_data[:configuration]['Description'],
+            title:       get_title(cop_data[:configuration]['Description']),
             description: cop_data[:configuration]['Description'],
             timeToFix:   5
           }
@@ -101,7 +108,6 @@ module RubocopDoc
             "CommandInjection"
           when "Security/YAMLLoad", "Security/Eval"
             "InputValidation"
-          else nil
           end
         end
       end
@@ -121,11 +127,11 @@ module RubocopDoc
             category:   category(cop_data),
             subcategory: subcategory(cop_data),
             parameters: parameters(cop_data)
-          }.delete_if { |key, value| value == nil }
+          }.delete_if { |_, value| value.nil? }
         end
         data      = {
           name:     "Rubocop",
-          version:  File.read(".rubocop-version").strip,
+          version:  Gem.loaded_specs["rubocop"].version, #File.read(".rubocop-version").strip,
           patterns: patterns
         }
         generate_json_file(data)
