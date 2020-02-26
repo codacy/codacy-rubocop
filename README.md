@@ -29,6 +29,13 @@ https://github.com/rubocop-hq/rubocop/pull/6890
 
 There are some important details to take into consideration:
 - Add dependency to Gemfile
+- Add it to src/main/scala/codacy/rubocop/Rubocop.scala
+
+```diff
+- private val plugins: List[String] = List("rubocop-performance")
++ private val plugins: List[String] = List("rubocop-performance", "rubocop-style")
+```
+
 - Add it to src/main/ruby/rubocop_doc/generator.rb
 
 ```diff

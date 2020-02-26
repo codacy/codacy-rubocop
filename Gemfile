@@ -14,7 +14,7 @@ gem "safe_yaml"
 gem "dark_finger"
 gem "rubocop-migrations", "0.1.2"
 gem "rubocop-github", "0.14.0"
-gem "rubocop", File.read('.rubocop-version').strip
+gem "rubocop", "0.80.0"
 #Rubocop official modules
 gem "rubocop-performance", "1.5.2"
 gem "rubocop-rails", "2.4.2"

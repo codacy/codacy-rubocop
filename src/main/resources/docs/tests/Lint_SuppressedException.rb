@@ -1,9 +1,9 @@
-##Patterns: Lint_HandleExceptions
+##Patterns: Lint_SuppressedException
 
 
 begin
   # an exception occurs here
-  ##Warn: Lint_HandleExceptions
+  ##Warn: Lint_SuppressedException
 rescue SomeError
   # the rescue clause does absolutely nothing
 end

@@ -1,4 +1,4 @@
-##Patterns: Metrics_LineLength
+##Patterns: Layout_LineLength
 
-##Warn: Metrics_LineLength
+##Info: Layout_LineLength
 puts 'HelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHello'
