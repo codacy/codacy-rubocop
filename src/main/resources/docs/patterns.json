@@ -5111,7 +5111,7 @@
       "patternId": "Security_YAMLLoad",
       "level": "Error",
       "category": "Security",
-      "subcategory": "InputValidation",
+      "subcategory": "InsecureModulesLibraries",
       "parameters": [
         {
           "name": "SafeAutoCorrect",

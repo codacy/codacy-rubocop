@@ -41,15 +41,15 @@ module RubocopDoc
       end
 
       def self.get_title(description)
-        while description.length() > 254 do
-          description = description.slice(0..(description.rindex('.')-1))
+        while description.length() > 254 && description.split(".").length() > 0 do
+          description = description.split(".")[0..-2].join(".") + "."
         end
         description
       end
 
       def self.run(file_path = "rubocop-doc.yml")
         cops_data    = YAML.load_file(file_path)
-        descriptions = cops_data.map do |cop_data|            
+        descriptions = cops_data.map do |cop_data|
           {
             patternId:   cop_data[:name].gsub("/", "_"),
             title:       get_title(cop_data[:configuration]['Description']),
@@ -102,11 +102,11 @@ module RubocopDoc
       def self.subcategory(cop_data)
         if category(cop_data) == "Security"
           case cop_data[:name] 
-          when "Security/JSONLoad", "Security/MarshalLoad"
+          when "Security/JSONLoad", "Security/MarshalLoad", "Security/YAMLLoad"
             "InsecureModulesLibraries"
           when "Security/Open"
             "CommandInjection"
-          when "Security/YAMLLoad", "Security/Eval"
+          when "Security/Eval"
             "InputValidation"
           end
         end
@@ -131,7 +131,7 @@ module RubocopDoc
         end
         data      = {
           name:     "Rubocop",
-          version:  Gem.loaded_specs["rubocop"].version, #File.read(".rubocop-version").strip,
+          version:  Gem.loaded_specs["rubocop"].version,
           patterns: patterns
         }
         generate_json_file(data)
