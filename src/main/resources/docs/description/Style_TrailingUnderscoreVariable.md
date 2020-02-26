@@ -16,9 +16,8 @@ a, = foo()
 *a, b, _ = foo()
 # => We need to know to not include 2 variables in a
 a, *b, _ = foo()
-# => The correction `a, *b, = foo()` is a syntax error
-
-# good if AllowNamedUnderscoreVariables is true
+# => The correction `a, *b, = foo()` is a syntax error# good
+a, b, _something = foo()# bad
 a, b, _something = foo()
 ```
 

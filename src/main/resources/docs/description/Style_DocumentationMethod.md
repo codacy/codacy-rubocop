@@ -44,6 +44,43 @@ end
 # Documentation
 def foo.bar
   puts baz
+end# good
+class Foo
+  protected
+  def do_something
+  end
+end
+
+class Foo
+  private
+  def do_something
+  end
+end# bad
+class Foo
+  protected
+  def do_something
+  end
+end
+
+class Foo
+  private
+  def do_something
+  end
+end
+
+# good
+class Foo
+  protected
+  # Documentation
+  def do_something
+  end
+end
+
+class Foo
+  private
+  # Documentation
+  def do_something
+  end
 end
 ```
 

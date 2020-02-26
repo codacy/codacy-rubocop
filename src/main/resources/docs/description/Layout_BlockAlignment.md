@@ -39,8 +39,8 @@ foo.bar
 
 foo.bar
   .each do
-     baz
-   end# bad
+    baz
+  end# bad
 
 foo.bar
    .each do

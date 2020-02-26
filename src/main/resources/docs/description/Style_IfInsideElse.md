@@ -24,6 +24,30 @@ elsif condition_b
   action_b
 else
   action_c
+end# bad
+if condition_a
+  action_a
+else
+  action_b if condition_b
+end
+
+# good
+if condition_a
+  action_a
+elsif condition_b
+  action_b
+end# good
+if condition_a
+  action_a
+else
+  action_b if condition_b
+end
+
+# good
+if condition_a
+  action_a
+elsif condition_b
+  action_b
 end
 ```
 

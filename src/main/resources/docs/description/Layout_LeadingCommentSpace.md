@@ -14,6 +14,26 @@ or rackup options.
 
 # good
 # Some comment
+# bad
+
+#**
+# Some comment
+# Another line of comment
+#*
+# good
+
+#**
+# Some comment
+# Another line of comment
+#*
+# bad
+
+#ruby=2.7.0
+#ruby-gemset=myproject
+# good
+
+#ruby=2.7.0
+#ruby-gemset=myproject
 ```
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Layout/LeadingCommentSpace)

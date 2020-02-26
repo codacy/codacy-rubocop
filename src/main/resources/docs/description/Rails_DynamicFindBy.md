@@ -1,7 +1,7 @@
 
 This cop checks dynamic `find_by_*` methods.
 Use `find_by` instead of dynamic method.
-See. https://github.com/rubocop-hq/rails-style-guide#find_by
+See. https://rails.rubystyle.guide#find_by
 
 # Examples
 

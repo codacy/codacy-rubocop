@@ -1,5 +1,11 @@
 [
   {
+    "patternId": "Migration_DepartmentName",
+    "title": "Check that cop names in rubocop:disable (etc) comments are given with department name.",
+    "description": "Check that cop names in rubocop:disable (etc) comments are given with department name.",
+    "timeToFix": 5
+  },
+  {
     "patternId": "Bundler_DuplicatedGem",
     "title": "Checks for duplicate gem entries in Gemfile.",
     "description": "Checks for duplicate gem entries in Gemfile.",
@@ -42,33 +48,33 @@
     "timeToFix": 5
   },
   {
+    "patternId": "Gemspec_RubyVersionGlobalsUsage",
+    "title": "Checks usage of RUBY_VERSION in gemspec.",
+    "description": "Checks usage of RUBY_VERSION in gemspec.",
+    "timeToFix": 5
+  },
+  {
     "patternId": "Layout_AccessModifierIndentation",
     "title": "Check indentation of private/protected visibility modifiers.",
     "description": "Check indentation of private/protected visibility modifiers.",
     "timeToFix": 5
   },
   {
-    "patternId": "Layout_AlignArguments",
+    "patternId": "Layout_ArgumentAlignment",
     "title": "Align the arguments of a method call if they span more than one line.",
     "description": "Align the arguments of a method call if they span more than one line.",
     "timeToFix": 5
   },
   {
-    "patternId": "Layout_AlignArray",
+    "patternId": "Layout_ArrayAlignment",
     "title": "Align the elements of an array literal if they span more than one line.",
     "description": "Align the elements of an array literal if they span more than one line.",
     "timeToFix": 5
   },
   {
-    "patternId": "Layout_AlignHash",
-    "title": "Align the elements of a hash literal if they span more than one line.",
-    "description": "Align the elements of a hash literal if they span more than one line.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "Layout_AlignParameters",
-    "title": "Align the parameters of a method definition if they span more than one line.",
-    "description": "Align the parameters of a method definition if they span more than one line.",
+    "patternId": "Layout_AssignmentIndentation",
+    "title": "Checks the indentation of the first line of the right-hand-side of a multi-line assignment.",
+    "description": "Checks the indentation of the first line of the right-hand-side of a multi-line assignment.",
     "timeToFix": 5
   },
   {
@@ -234,9 +240,27 @@
     "timeToFix": 5
   },
   {
+    "patternId": "Layout_FirstArgumentIndentation",
+    "title": "Checks the indentation of the first argument in a method call.",
+    "description": "Checks the indentation of the first argument in a method call.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Layout_FirstArrayElementIndentation",
+    "title": "Checks the indentation of the first element in an array literal.",
+    "description": "Checks the indentation of the first element in an array literal.",
+    "timeToFix": 5
+  },
+  {
     "patternId": "Layout_FirstArrayElementLineBreak",
     "title": "Checks for a line break before the first element in a multi-line array.",
     "description": "Checks for a line break before the first element in a multi-line array.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Layout_FirstHashElementIndentation",
+    "title": "Checks the indentation of the first key in a hash literal.",
+    "description": "Checks the indentation of the first key in a hash literal.",
     "timeToFix": 5
   },
   {
@@ -258,15 +282,27 @@
     "timeToFix": 5
   },
   {
+    "patternId": "Layout_FirstParameterIndentation",
+    "title": "Checks the indentation of the first parameter in a method definition.",
+    "description": "Checks the indentation of the first parameter in a method definition.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Layout_HashAlignment",
+    "title": "Align the elements of a hash literal if they span more than one line.",
+    "description": "Align the elements of a hash literal if they span more than one line.",
+    "timeToFix": 5
+  },
+  {
     "patternId": "Layout_HeredocArgumentClosingParenthesis",
     "title": "Checks for the placement of the closing parenthesis in a method call that passes a HEREDOC string as an argument.",
     "description": "Checks for the placement of the closing parenthesis in a method call that passes a HEREDOC string as an argument.",
     "timeToFix": 5
   },
   {
-    "patternId": "Layout_IndentAssignment",
-    "title": "Checks the indentation of the first line of the right-hand-side of a multi-line assignment.",
-    "description": "Checks the indentation of the first line of the right-hand-side of a multi-line assignment.",
+    "patternId": "Layout_HeredocIndentation",
+    "title": "This cop checks the indentation of the here document bodies.",
+    "description": "This cop checks the indentation of the here document bodies.",
     "timeToFix": 5
   },
   {
@@ -282,51 +318,27 @@
     "timeToFix": 5
   },
   {
-    "patternId": "Layout_IndentFirstArgument",
-    "title": "Checks the indentation of the first argument in a method call.",
-    "description": "Checks the indentation of the first argument in a method call.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "Layout_IndentFirstArrayElement",
-    "title": "Checks the indentation of the first element in an array literal.",
-    "description": "Checks the indentation of the first element in an array literal.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "Layout_IndentFirstHashElement",
-    "title": "Checks the indentation of the first key in a hash literal.",
-    "description": "Checks the indentation of the first key in a hash literal.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "Layout_IndentFirstParameter",
-    "title": "Checks the indentation of the first parameter in a method definition.",
-    "description": "Checks the indentation of the first parameter in a method definition.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "Layout_IndentHeredoc",
-    "title": "This cop checks the indentation of the here document bodies.",
-    "description": "This cop checks the indentation of the here document bodies.",
-    "timeToFix": 5
-  },
-  {
     "patternId": "Layout_InitialIndentation",
     "title": "Checks the indentation of the first non-blank non-comment line in a file.",
     "description": "Checks the indentation of the first non-blank non-comment line in a file.",
     "timeToFix": 5
   },
   {
-    "patternId": "Layout_LeadingBlankLines",
+    "patternId": "Layout_LeadingCommentSpace",
+    "title": "Comments should start with a space.",
+    "description": "Comments should start with a space.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Layout_LeadingEmptyLines",
     "title": "Check for unnecessary blank lines at the beginning of a file.",
     "description": "Check for unnecessary blank lines at the beginning of a file.",
     "timeToFix": 5
   },
   {
-    "patternId": "Layout_LeadingCommentSpace",
-    "title": "Comments should start with a space.",
-    "description": "Comments should start with a space.",
+    "patternId": "Layout_LineLength",
+    "title": "Limit lines to 80 characters.",
+    "description": "Limit lines to 80 characters.",
     "timeToFix": 5
   },
   {
@@ -393,6 +405,12 @@
     "patternId": "Layout_MultilineOperationIndentation",
     "title": "Checks indentation of binary operations that span more than one line.",
     "description": "Checks indentation of binary operations that span more than one line.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Layout_ParameterAlignment",
+    "title": "Align the parameters of a method definition if they span more than one line.",
+    "description": "Align the parameters of a method definition if they span more than one line.",
     "timeToFix": 5
   },
   {
@@ -552,7 +570,7 @@
     "timeToFix": 5
   },
   {
-    "patternId": "Layout_TrailingBlankLines",
+    "patternId": "Layout_TrailingEmptyLines",
     "title": "Checks trailing blank lines and final newline.",
     "description": "Checks trailing blank lines and final newline.",
     "timeToFix": 5
@@ -630,15 +648,15 @@
     "timeToFix": 5
   },
   {
-    "patternId": "Lint_DuplicateMethods",
-    "title": "Check for duplicate method definitions.",
-    "description": "Check for duplicate method definitions.",
+    "patternId": "Lint_DuplicateHashKey",
+    "title": "Check for duplicate keys in hash literals.",
+    "description": "Check for duplicate keys in hash literals.",
     "timeToFix": 5
   },
   {
-    "patternId": "Lint_DuplicatedKey",
-    "title": "Check for duplicate keys in hash literals.",
-    "description": "Check for duplicate keys in hash literals.",
+    "patternId": "Lint_DuplicateMethods",
+    "title": "Check for duplicate method definitions.",
+    "description": "Check for duplicate method definitions.",
     "timeToFix": 5
   },
   {
@@ -697,8 +715,8 @@
   },
   {
     "patternId": "Lint_FlipFlop",
-    "title": "Checks for flip-flops",
-    "description": "Checks for flip-flops",
+    "title": "Checks for flip-flops.",
+    "description": "Checks for flip-flops.",
     "timeToFix": 5
   },
   {
@@ -711,12 +729,6 @@
     "patternId": "Lint_FormatParameterMismatch",
     "title": "The number of parameters to format/sprint must match the fields.",
     "description": "The number of parameters to format/sprint must match the fields.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "Lint_HandleExceptions",
-    "title": "Don't suppress exception.",
-    "description": "Don't suppress exception.",
     "timeToFix": 5
   },
   {
@@ -745,8 +757,8 @@
   },
   {
     "patternId": "Lint_InterpolationCheck",
-    "title": "Raise warning for interpolation in single q strs",
-    "description": "Raise warning for interpolation in single q strs",
+    "title": "Raise warning for interpolation in single q strs.",
+    "description": "Raise warning for interpolation in single q strs.",
     "timeToFix": 5
   },
   {
@@ -769,14 +781,14 @@
   },
   {
     "patternId": "Lint_MissingCopEnableDirective",
-    "title": "Checks for a `# rubocop:enable` after `# rubocop:disable`",
-    "description": "Checks for a `# rubocop:enable` after `# rubocop:disable`",
+    "title": "Checks for a `# rubocop:enable` after `# rubocop:disable`.",
+    "description": "Checks for a `# rubocop:enable` after `# rubocop:disable`.",
     "timeToFix": 5
   },
   {
-    "patternId": "Lint_MultipleCompare",
-    "title": "Use `&&` operator to compare multiple value.",
-    "description": "Use `&&` operator to compare multiple value.",
+    "patternId": "Lint_MultipleComparison",
+    "title": "Use `&&` operator to compare multiple values.",
+    "description": "Use `&&` operator to compare multiple values.",
     "timeToFix": 5
   },
   {
@@ -795,6 +807,12 @@
     "patternId": "Lint_NextWithoutAccumulator",
     "title": "Do not omit the accumulator when calling `next` in a `reduce`/`inject` block.",
     "description": "Do not omit the accumulator when calling `next` in a `reduce`/`inject` block.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Lint_NonDeterministicRequireOrder",
+    "title": "Always sort arrays returned by Dir.glob when requiring files.",
+    "description": "Always sort arrays returned by Dir.glob when requiring files.",
     "timeToFix": 5
   },
   {
@@ -837,6 +855,36 @@
     "patternId": "Lint_RandOne",
     "title": "Checks for `rand(1)` calls. Such calls always return `0` and most likely a mistake.",
     "description": "Checks for `rand(1)` calls. Such calls always return `0` and most likely a mistake.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Lint_RedundantCopDisableDirective",
+    "title": "Checks for rubocop:disable comments that can be removed. Note: this cop is not disabled when disabling all cops. It must be explicitly disabled.",
+    "description": "Checks for rubocop:disable comments that can be removed. Note: this cop is not disabled when disabling all cops. It must be explicitly disabled.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Lint_RedundantCopEnableDirective",
+    "title": "Checks for rubocop:enable comments that can be removed.",
+    "description": "Checks for rubocop:enable comments that can be removed.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Lint_RedundantRequireStatement",
+    "title": "Checks for unnecessary `require` statement.",
+    "description": "Checks for unnecessary `require` statement.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Lint_RedundantSplatExpansion",
+    "title": "Checks for splat unnecessarily being called on literals.",
+    "description": "Checks for splat unnecessarily being called on literals.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Lint_RedundantStringCoercion",
+    "title": "Checks for Object#to_s usage in string interpolation.",
+    "description": "Checks for Object#to_s usage in string interpolation.",
     "timeToFix": 5
   },
   {
@@ -906,6 +954,12 @@
     "timeToFix": 5
   },
   {
+    "patternId": "Lint_SendWithMixinArgument",
+    "title": "Checks for `send` method when using mixin.",
+    "description": "Checks for `send` method when using mixin.",
+    "timeToFix": 5
+  },
+  {
     "patternId": "Lint_ShadowedArgument",
     "title": "Avoid reassigning arguments before they were used.",
     "description": "Avoid reassigning arguments before they were used.",
@@ -924,15 +978,15 @@
     "timeToFix": 5
   },
   {
-    "patternId": "Lint_StringConversionInInterpolation",
-    "title": "Checks for Object#to_s usage in string interpolation.",
-    "description": "Checks for Object#to_s usage in string interpolation.",
+    "patternId": "Lint_SuppressedException",
+    "title": "Don't suppress exceptions.",
+    "description": "Don't suppress exceptions.",
     "timeToFix": 5
   },
   {
     "patternId": "Lint_Syntax",
-    "title": "Checks syntax error",
-    "description": "Checks syntax error",
+    "title": "Checks syntax error.",
+    "description": "Checks syntax error.",
     "timeToFix": 5
   },
   {
@@ -949,32 +1003,8 @@
   },
   {
     "patternId": "Lint_UnifiedInteger",
-    "title": "Use Integer instead of Fixnum or Bignum",
-    "description": "Use Integer instead of Fixnum or Bignum",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "Lint_UnneededCopDisableDirective",
-    "title": "Checks for rubocop:disable comments that can be removed. Note: this cop is not disabled when disabling all cops. It must be explicitly disabled.",
-    "description": "Checks for rubocop:disable comments that can be removed. Note: this cop is not disabled when disabling all cops. It must be explicitly disabled.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "Lint_UnneededCopEnableDirective",
-    "title": "Checks for rubocop:enable comments that can be removed.",
-    "description": "Checks for rubocop:enable comments that can be removed.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "Lint_UnneededRequireStatement",
-    "title": "Checks for unnecessary `require` statement.",
-    "description": "Checks for unnecessary `require` statement.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "Lint_UnneededSplatExpansion",
-    "title": "Checks for splat unnecessarily being called on literals",
-    "description": "Checks for splat unnecessarily being called on literals",
+    "title": "Use Integer instead of Fixnum or Bignum.",
+    "description": "Use Integer instead of Fixnum or Bignum.",
     "timeToFix": 5
   },
   {
@@ -1063,20 +1093,14 @@
   },
   {
     "patternId": "Metrics_BlockNesting",
-    "title": "Avoid excessive block nesting",
-    "description": "Avoid excessive block nesting",
+    "title": "Avoid excessive block nesting.",
+    "description": "Avoid excessive block nesting.",
     "timeToFix": 5
   },
   {
     "patternId": "Metrics_ClassLength",
     "title": "Avoid classes longer than 100 lines of code.",
     "description": "Avoid classes longer than 100 lines of code.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "Metrics_LineLength",
-    "title": "Limit lines to 80 characters.",
-    "description": "Limit lines to 80 characters.",
     "timeToFix": 5
   },
   {
@@ -1113,6 +1137,12 @@
     "patternId": "Naming_AsciiIdentifiers",
     "title": "Use only ascii symbols in identifiers.",
     "description": "Use only ascii symbols in identifiers.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Naming_BlockParameterName",
+    "title": "Checks for block parameter names that contain capital letters, end in numbers, or do not meet a minimal length.",
+    "description": "Checks for block parameter names that contain capital letters, end in numbers, or do not meet a minimal length.",
     "timeToFix": 5
   },
   {
@@ -1158,6 +1188,12 @@
     "timeToFix": 5
   },
   {
+    "patternId": "Naming_MethodParameterName",
+    "title": "Checks for method parameter names that contain capital letters, end in numbers, or do not meet a minimal length.",
+    "description": "Checks for method parameter names that contain capital letters, end in numbers, or do not meet a minimal length.",
+    "timeToFix": 5
+  },
+  {
     "patternId": "Naming_BinaryOperatorParameterName",
     "title": "When defining binary operators, name the argument other.",
     "description": "When defining binary operators, name the argument other.",
@@ -1173,18 +1209,6 @@
     "patternId": "Naming_RescuedExceptionsVariableName",
     "title": "Use consistent rescued exceptions variables naming.",
     "description": "Use consistent rescued exceptions variables naming.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "Naming_UncommunicativeBlockParamName",
-    "title": "Checks for block parameter names that contain capital letters, end in numbers, or do not meet a minimal length.",
-    "description": "Checks for block parameter names that contain capital letters, end in numbers, or do not meet a minimal length.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "Naming_UncommunicativeMethodParamName",
-    "title": "Checks for method parameter names that contain capital letters, end in numbers, or do not meet a minimal length.",
-    "description": "Checks for method parameter names that contain capital letters, end in numbers, or do not meet a minimal length.",
     "timeToFix": 5
   },
   {
@@ -1263,12 +1287,6 @@
     "patternId": "Style_BlockDelimiters",
     "title": "Avoid using {...} for multi-line blocks (multiline chaining is always ugly). Prefer {...} over do...end for single-line blocks.",
     "description": "Avoid using {...} for multi-line blocks (multiline chaining is always ugly). Prefer {...} over do...end for single-line blocks.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "Style_BracesAroundHashParameters",
-    "title": "Enforce braces style around hash parameters.",
-    "description": "Enforce braces style around hash parameters.",
     "timeToFix": 5
   },
   {
@@ -1392,6 +1410,12 @@
     "timeToFix": 5
   },
   {
+    "patternId": "Style_DoubleCopDisableDirective",
+    "title": "Checks for double rubocop:disable comments on a single line.",
+    "description": "Checks for double rubocop:disable comments on a single line.",
+    "timeToFix": 5
+  },
+  {
     "patternId": "Style_DoubleNegation",
     "title": "Checks for uses of double negation (!!).",
     "description": "Checks for uses of double negation (!!).",
@@ -1465,14 +1489,20 @@
   },
   {
     "patternId": "Style_EvenOdd",
-    "title": "Favor the use of Integer#even? && Integer#odd?",
-    "description": "Favor the use of Integer#even? && Integer#odd?",
+    "title": "Favor the use of `Integer#even?` && `Integer#odd?`.",
+    "description": "Favor the use of `Integer#even?` && `Integer#odd?`.",
     "timeToFix": 5
   },
   {
     "patternId": "Style_ExpandPathArguments",
     "title": "Use `expand_path(__dir__)` instead of `expand_path('..', __FILE__)`.",
     "description": "Use `expand_path(__dir__)` instead of `expand_path('..', __FILE__)`.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Style_FloatDivision",
+    "title": "For performing float division, coerce one side only.",
+    "description": "For performing float division, coerce one side only.",
     "timeToFix": 5
   },
   {
@@ -1507,14 +1537,32 @@
   },
   {
     "patternId": "Style_GuardClause",
-    "title": "Check for conditionals that can be replaced with guard clauses",
-    "description": "Check for conditionals that can be replaced with guard clauses",
+    "title": "Check for conditionals that can be replaced with guard clauses.",
+    "description": "Check for conditionals that can be replaced with guard clauses.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Style_HashEachMethods",
+    "title": "Use Hash#each_key and Hash#each_value.",
+    "description": "Use Hash#each_key and Hash#each_value.",
     "timeToFix": 5
   },
   {
     "patternId": "Style_HashSyntax",
     "title": "Prefer Ruby 1.9 hash syntax { a: 1, b: 2 } over 1.8 syntax { :a => 1, :b => 2 }.",
     "description": "Prefer Ruby 1.9 hash syntax { a: 1, b: 2 } over 1.8 syntax { :a => 1, :b => 2 }.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Style_HashTransformKeys",
+    "title": "Prefer `transform_keys` over `each_with_object` and `map`.",
+    "description": "Prefer `transform_keys` over `each_with_object` and `map`.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Style_HashTransformValues",
+    "title": "Prefer `transform_values` over `each_with_object` and `map`.",
+    "description": "Prefer `transform_values` over `each_with_object` and `map`.",
     "timeToFix": 5
   },
   {
@@ -1627,14 +1675,14 @@
   },
   {
     "patternId": "Style_MinMax",
-    "title": "Use `Enumerable#minmax` instead of `Enumerable#min` and `Enumerable#max` in conjunction.'",
-    "description": "Use `Enumerable#minmax` instead of `Enumerable#min` and `Enumerable#max` in conjunction.'",
+    "title": "Use `Enumerable#minmax` instead of `Enumerable#min` and `Enumerable#max` in conjunction.",
+    "description": "Use `Enumerable#minmax` instead of `Enumerable#min` and `Enumerable#max` in conjunction.",
     "timeToFix": 5
   },
   {
     "patternId": "Style_MissingElse",
-    "title": "Require if/case expressions to have an else branches. If enabled, it is recommended that Style/UnlessElse and Style/EmptyElse be enabled. This will conflict with Style/EmptyElse if Style/EmptyElse is configured to style \"both\"",
-    "description": "Require if/case expressions to have an else branches. If enabled, it is recommended that Style/UnlessElse and Style/EmptyElse be enabled. This will conflict with Style/EmptyElse if Style/EmptyElse is configured to style \"both\"",
+    "title": "Require if/case expressions to have an else branches. If enabled, it is recommended that Style/UnlessElse and Style/EmptyElse be enabled. This will conflict with Style/EmptyElse if Style/EmptyElse is configured to style \"both\".",
+    "description": "Require if/case expressions to have an else branches. If enabled, it is recommended that Style/UnlessElse and Style/EmptyElse be enabled. This will conflict with Style/EmptyElse if Style/EmptyElse is configured to style \"both\".",
     "timeToFix": 5
   },
   {
@@ -1695,6 +1743,12 @@
     "patternId": "Style_MultilineTernaryOperator",
     "title": "Avoid multi-line ?: (the ternary operator); use if/unless instead.",
     "description": "Avoid multi-line ?: (the ternary operator); use if/unless instead.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Style_MultilineWhenThen",
+    "title": "Do not use then for multi-line when statement.",
+    "description": "Do not use then for multi-line when statement.",
     "timeToFix": 5
   },
   {
@@ -1807,8 +1861,8 @@
   },
   {
     "patternId": "Style_OptionalArguments",
-    "title": "Checks for optional arguments that do not appear at the end of the argument list",
-    "description": "Checks for optional arguments that do not appear at the end of the argument list",
+    "title": "Checks for optional arguments that do not appear at the end of the argument list.",
+    "description": "Checks for optional arguments that do not appear at the end of the argument list.",
     "timeToFix": 5
   },
   {
@@ -1825,8 +1879,8 @@
   },
   {
     "patternId": "Style_PercentLiteralDelimiters",
-    "title": "Use `%`-literal delimiters consistently",
-    "description": "Use `%`-literal delimiters consistently",
+    "title": "Use `%`-literal delimiters consistently.",
+    "description": "Use `%`-literal delimiters consistently.",
     "timeToFix": 5
   },
   {
@@ -1872,6 +1926,18 @@
     "timeToFix": 5
   },
   {
+    "patternId": "Style_RedundantCapitalW",
+    "title": "Checks for %W when interpolation is not needed.",
+    "description": "Checks for %W when interpolation is not needed.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Style_RedundantCondition",
+    "title": "Checks for unnecessary conditional expressions.",
+    "description": "Checks for unnecessary conditional expressions.",
+    "timeToFix": 5
+  },
+  {
     "patternId": "Style_RedundantConditional",
     "title": "Don't return true/false from a conditional.",
     "description": "Don't return true/false from a conditional.",
@@ -1890,9 +1956,21 @@
     "timeToFix": 5
   },
   {
+    "patternId": "Style_RedundantInterpolation",
+    "title": "Checks for strings that are just an interpolated expression.",
+    "description": "Checks for strings that are just an interpolated expression.",
+    "timeToFix": 5
+  },
+  {
     "patternId": "Style_RedundantParentheses",
     "title": "Checks for parentheses that seem not to serve any purpose.",
     "description": "Checks for parentheses that seem not to serve any purpose.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Style_RedundantPercentQ",
+    "title": "Checks for %q/%Q when single quotes or double quotes would do.",
+    "description": "Checks for %q/%Q when single quotes or double quotes would do.",
     "timeToFix": 5
   },
   {
@@ -1905,6 +1983,12 @@
     "patternId": "Style_RedundantSelf",
     "title": "Don't use self where it's not needed.",
     "description": "Don't use self where it's not needed.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Style_RedundantSort",
+    "title": "Use `min` instead of `sort.first`, `max_by` instead of `sort_by...last`, etc.",
+    "description": "Use `min` instead of `sort.first`, `max_by` instead of `sort_by...last`, etc.",
     "timeToFix": 5
   },
   {
@@ -2124,39 +2208,9 @@
     "timeToFix": 5
   },
   {
-    "patternId": "Style_UnneededCapitalW",
-    "title": "Checks for %W when interpolation is not needed.",
-    "description": "Checks for %W when interpolation is not needed.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "Style_UnneededCondition",
-    "title": "Checks for unnecessary conditional expressions.",
-    "description": "Checks for unnecessary conditional expressions.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "Style_UnneededInterpolation",
-    "title": "Checks for strings that are just an interpolated expression.",
-    "description": "Checks for strings that are just an interpolated expression.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "Style_UnneededPercentQ",
-    "title": "Checks for %q/%Q when single quotes or double quotes would do.",
-    "description": "Checks for %q/%Q when single quotes or double quotes would do.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "Style_UnneededSort",
-    "title": "Use `min` instead of `sort.first`, `max_by` instead of `sort_by...last`, etc.",
-    "description": "Use `min` instead of `sort.first`, `max_by` instead of `sort_by...last`, etc.",
-    "timeToFix": 5
-  },
-  {
     "patternId": "Style_UnpackFirst",
-    "title": "Checks for accessing the first element of `String#unpack` instead of using `unpack1`",
-    "description": "Checks for accessing the first element of `String#unpack` instead of using `unpack1`",
+    "title": "Checks for accessing the first element of `String#unpack` instead of using `unpack1`.",
+    "description": "Checks for accessing the first element of `String#unpack` instead of using `unpack1`.",
     "timeToFix": 5
   },
   {
@@ -2199,312 +2253,6 @@
     "patternId": "Style_ZeroLengthPredicate",
     "title": "Use #empty? when testing for objects of length 0.",
     "description": "Use #empty? when testing for objects of length 0.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "Rails_ActionFilter",
-    "title": "Enforces consistent use of action filter methods.",
-    "description": "Enforces consistent use of action filter methods.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "Rails_ActiveRecordAliases",
-    "title": "Avoid Active Record aliases: Use `update` instead of `update_attributes`. Use `update!` instead of `update_attributes!`.",
-    "description": "Avoid Active Record aliases: Use `update` instead of `update_attributes`. Use `update!` instead of `update_attributes!`.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "Rails_ActiveRecordOverride",
-    "title": "Check for overriding Active Record methods instead of using callbacks.",
-    "description": "Check for overriding Active Record methods instead of using callbacks.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "Rails_ActiveSupportAliases",
-    "title": "Avoid ActiveSupport aliases of standard ruby methods: `String#starts_with?`, `String#ends_with?`, `Array#append`, `Array#prepend`.",
-    "description": "Avoid ActiveSupport aliases of standard ruby methods: `String#starts_with?`, `String#ends_with?`, `Array#append`, `Array#prepend`.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "Rails_ApplicationJob",
-    "title": "Check that jobs subclass ApplicationJob.",
-    "description": "Check that jobs subclass ApplicationJob.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "Rails_ApplicationRecord",
-    "title": "Check that models subclass ApplicationRecord.",
-    "description": "Check that models subclass ApplicationRecord.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "Rails_AssertNot",
-    "title": "Use `assert_not` instead of `assert !`.",
-    "description": "Use `assert_not` instead of `assert !`.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "Rails_BelongsTo",
-    "title": "Use `optional: true` instead of `required: false` for `belongs_to` relations'",
-    "description": "Use `optional: true` instead of `required: false` for `belongs_to` relations'",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "Rails_Blank",
-    "title": "Enforces use of `blank?`.",
-    "description": "Enforces use of `blank?`.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "Rails_BulkChangeTable",
-    "title": "Check whether alter queries are combinable.",
-    "description": "Check whether alter queries are combinable.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "Rails_CreateTableWithTimestamps",
-    "title": "Checks the migration for which timestamps are not included when creating a new table.",
-    "description": "Checks the migration for which timestamps are not included when creating a new table.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "Rails_Date",
-    "title": "Checks the correct usage of date aware methods, such as Date.today, Date.current etc.",
-    "description": "Checks the correct usage of date aware methods, such as Date.today, Date.current etc.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "Rails_Delegate",
-    "title": "Prefer delegate method for delegations.",
-    "description": "Prefer delegate method for delegations.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "Rails_DelegateAllowBlank",
-    "title": "Do not use allow_blank as an option to delegate.",
-    "description": "Do not use allow_blank as an option to delegate.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "Rails_DynamicFindBy",
-    "title": "Use `find_by` instead of dynamic `find_by_*`.",
-    "description": "Use `find_by` instead of dynamic `find_by_*`.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "Rails_EnumUniqueness",
-    "title": "Avoid duplicate integers in hash-syntax `enum` declaration.",
-    "description": "Avoid duplicate integers in hash-syntax `enum` declaration.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "Rails_EnvironmentComparison",
-    "title": "Favor `Rails.env.production?` over `Rails.env == 'production'`",
-    "description": "Favor `Rails.env.production?` over `Rails.env == 'production'`",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "Rails_Exit",
-    "title": "Favor `fail`, `break`, `return`, etc. over `exit` in application or library code outside of Rake files to avoid exits during unit testing or running in production.",
-    "description": "Favor `fail`, `break`, `return`, etc. over `exit` in application or library code outside of Rake files to avoid exits during unit testing or running in production.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "Rails_FilePath",
-    "title": "Use `Rails.root.join` for file path joining.",
-    "description": "Use `Rails.root.join` for file path joining.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "Rails_FindBy",
-    "title": "Prefer find_by over where.first.",
-    "description": "Prefer find_by over where.first.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "Rails_FindEach",
-    "title": "Prefer all.find_each over all.find.",
-    "description": "Prefer all.find_each over all.find.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "Rails_HasAndBelongsToMany",
-    "title": "Prefer has_many :through to has_and_belongs_to_many.",
-    "description": "Prefer has_many :through to has_and_belongs_to_many.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "Rails_HasManyOrHasOneDependent",
-    "title": "Define the dependent option to the has_many and has_one associations.",
-    "description": "Define the dependent option to the has_many and has_one associations.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "Rails_HttpPositionalArguments",
-    "title": "Use keyword arguments instead of positional arguments in http method calls.",
-    "description": "Use keyword arguments instead of positional arguments in http method calls.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "Rails_HttpStatus",
-    "title": "Enforces use of symbolic or numeric value to define HTTP status.",
-    "description": "Enforces use of symbolic or numeric value to define HTTP status.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "Rails_IgnoredSkipActionFilterOption",
-    "title": "Checks that `if` and `only` (or `except`) are not used together as options of `skip_*` action filter.",
-    "description": "Checks that `if` and `only` (or `except`) are not used together as options of `skip_*` action filter.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "Rails_InverseOf",
-    "title": "Checks for associations where the inverse cannot be determined automatically.",
-    "description": "Checks for associations where the inverse cannot be determined automatically.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "Rails_LexicallyScopedActionFilter",
-    "title": "Checks that methods specified in the filter's `only` or `except` options are explicitly defined in the controller.",
-    "description": "Checks that methods specified in the filter's `only` or `except` options are explicitly defined in the controller.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "Rails_LinkToBlank",
-    "title": "Checks that `link_to` with a `target: \"_blank\"` have a `rel: \"noopener\"` option passed to them.",
-    "description": "Checks that `link_to` with a `target: \"_blank\"` have a `rel: \"noopener\"` option passed to them.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "Rails_NotNullColumn",
-    "title": "Do not add a NOT NULL column without a default value",
-    "description": "Do not add a NOT NULL column without a default value",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "Rails_Output",
-    "title": "Checks for calls to puts, print, etc.",
-    "description": "Checks for calls to puts, print, etc.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "Rails_OutputSafety",
-    "title": "The use of `html_safe` or `raw` may be a security risk.",
-    "description": "The use of `html_safe` or `raw` may be a security risk.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "Rails_PluralizationGrammar",
-    "title": "Checks for incorrect grammar when using methods like `3.day.ago`.",
-    "description": "Checks for incorrect grammar when using methods like `3.day.ago`.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "Rails_Presence",
-    "title": "Checks code that can be written more easily using `Object#presence` defined by Active Support.",
-    "description": "Checks code that can be written more easily using `Object#presence` defined by Active Support.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "Rails_Present",
-    "title": "Enforces use of `present?`.",
-    "description": "Enforces use of `present?`.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "Rails_ReadWriteAttribute",
-    "title": "Checks for read_attribute(:attr) and write_attribute(:attr, val).",
-    "description": "Checks for read_attribute(:attr) and write_attribute(:attr, val).",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "Rails_RedundantAllowNil",
-    "title": "Finds redundant use of `allow_nil` when `allow_blank` is set to certain values in model validations.",
-    "description": "Finds redundant use of `allow_nil` when `allow_blank` is set to certain values in model validations.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "Rails_RedundantReceiverInWithOptions",
-    "title": "Checks for redundant receiver in `with_options`.",
-    "description": "Checks for redundant receiver in `with_options`.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "Rails_ReflectionClassName",
-    "title": "Use a string for `class_name` option value in the definition of a reflection.",
-    "description": "Use a string for `class_name` option value in the definition of a reflection.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "Rails_RefuteMethods",
-    "title": "Use `assert_not` methods instead of `refute` methods.",
-    "description": "Use `assert_not` methods instead of `refute` methods.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "Rails_RelativeDateConstant",
-    "title": "Do not assign relative date to constants.",
-    "description": "Do not assign relative date to constants.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "Rails_RequestReferer",
-    "title": "Use consistent syntax for request.referer.",
-    "description": "Use consistent syntax for request.referer.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "Rails_ReversibleMigration",
-    "title": "Checks whether the change method of the migration file is reversible.",
-    "description": "Checks whether the change method of the migration file is reversible.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "Rails_SafeNavigation",
-    "title": "Use Ruby's safe navigation operator (`&.`) instead of `try!`",
-    "description": "Use Ruby's safe navigation operator (`&.`) instead of `try!`",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "Rails_SaveBang",
-    "title": "Identifies possible cases where Active Record save! or related should be used.",
-    "description": "Identifies possible cases where Active Record save! or related should be used.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "Rails_ScopeArgs",
-    "title": "Checks the arguments of ActiveRecord scopes.",
-    "description": "Checks the arguments of ActiveRecord scopes.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "Rails_SkipsModelValidations",
-    "title": "Use methods that skips model validations with caution. See reference for more information.",
-    "description": "Use methods that skips model validations with caution. See reference for more information.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "Rails_TimeZone",
-    "title": "Checks the correct usage of time zone aware methods.",
-    "description": "Checks the correct usage of time zone aware methods.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "Rails_UniqBeforePluck",
-    "title": "Prefer the use of uniq or distinct before pluck.",
-    "description": "Prefer the use of uniq or distinct before pluck.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "Rails_UnknownEnv",
-    "title": "Use correct environment name.",
-    "description": "Use correct environment name.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "Rails_Validation",
-    "title": "Use validates :attribute, hash of validations.",
-    "description": "Use validates :attribute, hash of validations.",
     "timeToFix": 5
   },
   {
@@ -2688,9 +2436,345 @@
     "timeToFix": 5
   },
   {
+    "patternId": "Rails_ActionFilter",
+    "title": "Enforces consistent use of action filter methods.",
+    "description": "Enforces consistent use of action filter methods.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Rails_ActiveRecordAliases",
+    "title": "Avoid Active Record aliases: Use `update` instead of `update_attributes`. Use `update!` instead of `update_attributes!`.",
+    "description": "Avoid Active Record aliases: Use `update` instead of `update_attributes`. Use `update!` instead of `update_attributes!`.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Rails_ActiveRecordOverride",
+    "title": "Check for overriding Active Record methods instead of using callbacks.",
+    "description": "Check for overriding Active Record methods instead of using callbacks.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Rails_ActiveSupportAliases",
+    "title": "Avoid ActiveSupport aliases of standard ruby methods: `String#starts_with?`, `String#ends_with?`, `Array#append`, `Array#prepend`.",
+    "description": "Avoid ActiveSupport aliases of standard ruby methods: `String#starts_with?`, `String#ends_with?`, `Array#append`, `Array#prepend`.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Rails_ApplicationController",
+    "title": "Check that controllers subclass ApplicationController.",
+    "description": "Check that controllers subclass ApplicationController.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Rails_ApplicationJob",
+    "title": "Check that jobs subclass ApplicationJob.",
+    "description": "Check that jobs subclass ApplicationJob.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Rails_ApplicationMailer",
+    "title": "Check that mailers subclass ApplicationMailer.",
+    "description": "Check that mailers subclass ApplicationMailer.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Rails_ApplicationRecord",
+    "title": "Check that models subclass ApplicationRecord.",
+    "description": "Check that models subclass ApplicationRecord.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Rails_AssertNot",
+    "title": "Use `assert_not` instead of `assert !`.",
+    "description": "Use `assert_not` instead of `assert !`.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Rails_BelongsTo",
+    "title": "Use `optional: true` instead of `required: false` for `belongs_to` relations'",
+    "description": "Use `optional: true` instead of `required: false` for `belongs_to` relations'",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Rails_Blank",
+    "title": "Enforces use of `blank?`.",
+    "description": "Enforces use of `blank?`.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Rails_BulkChangeTable",
+    "title": "Check whether alter queries are combinable.",
+    "description": "Check whether alter queries are combinable.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Rails_CreateTableWithTimestamps",
+    "title": "Checks the migration for which timestamps are not included when creating a new table.",
+    "description": "Checks the migration for which timestamps are not included when creating a new table.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Rails_Date",
+    "title": "Checks the correct usage of date aware methods, such as Date.today, Date.current etc.",
+    "description": "Checks the correct usage of date aware methods, such as Date.today, Date.current etc.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Rails_Delegate",
+    "title": "Prefer delegate method for delegations.",
+    "description": "Prefer delegate method for delegations.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Rails_DelegateAllowBlank",
+    "title": "Do not use allow_blank as an option to delegate.",
+    "description": "Do not use allow_blank as an option to delegate.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Rails_DynamicFindBy",
+    "title": "Use `find_by` instead of dynamic `find_by_*`.",
+    "description": "Use `find_by` instead of dynamic `find_by_*`.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Rails_EnumHash",
+    "title": "Prefer hash syntax over array syntax when defining enums.",
+    "description": "Prefer hash syntax over array syntax when defining enums.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Rails_EnumUniqueness",
+    "title": "Avoid duplicate integers in hash-syntax `enum` declaration.",
+    "description": "Avoid duplicate integers in hash-syntax `enum` declaration.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Rails_EnvironmentComparison",
+    "title": "Favor `Rails.env.production?` over `Rails.env == 'production'`",
+    "description": "Favor `Rails.env.production?` over `Rails.env == 'production'`",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Rails_Exit",
+    "title": "Favor `fail`, `break`, `return`, etc. over `exit` in application or library code outside of Rake files to avoid exits during unit testing or running in production.",
+    "description": "Favor `fail`, `break`, `return`, etc. over `exit` in application or library code outside of Rake files to avoid exits during unit testing or running in production.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Rails_FilePath",
+    "title": "Use `Rails.root.join` for file path joining.",
+    "description": "Use `Rails.root.join` for file path joining.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Rails_FindBy",
+    "title": "Prefer find_by over where.first.",
+    "description": "Prefer find_by over where.first.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Rails_FindEach",
+    "title": "Prefer all.find_each over all.find.",
+    "description": "Prefer all.find_each over all.find.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Rails_HasAndBelongsToMany",
+    "title": "Prefer has_many :through to has_and_belongs_to_many.",
+    "description": "Prefer has_many :through to has_and_belongs_to_many.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Rails_HasManyOrHasOneDependent",
+    "title": "Define the dependent option to the has_many and has_one associations.",
+    "description": "Define the dependent option to the has_many and has_one associations.",
+    "timeToFix": 5
+  },
+  {
     "patternId": "Rails_HelperInstanceVariable",
     "title": "Do not use instance variables in helpers",
     "description": "Do not use instance variables in helpers",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Rails_HttpPositionalArguments",
+    "title": "Use keyword arguments instead of positional arguments in http method calls.",
+    "description": "Use keyword arguments instead of positional arguments in http method calls.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Rails_HttpStatus",
+    "title": "Enforces use of symbolic or numeric value to define HTTP status.",
+    "description": "Enforces use of symbolic or numeric value to define HTTP status.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Rails_IgnoredSkipActionFilterOption",
+    "title": "Checks that `if` and `only` (or `except`) are not used together as options of `skip_*` action filter.",
+    "description": "Checks that `if` and `only` (or `except`) are not used together as options of `skip_*` action filter.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Rails_InverseOf",
+    "title": "Checks for associations where the inverse cannot be determined automatically.",
+    "description": "Checks for associations where the inverse cannot be determined automatically.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Rails_LexicallyScopedActionFilter",
+    "title": "Checks that methods specified in the filter's `only` or `except` options are explicitly defined in the controller.",
+    "description": "Checks that methods specified in the filter's `only` or `except` options are explicitly defined in the controller.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Rails_LinkToBlank",
+    "title": "Checks that `link_to` with a `target: \"_blank\"` have a `rel: \"noopener\"` option passed to them.",
+    "description": "Checks that `link_to` with a `target: \"_blank\"` have a `rel: \"noopener\"` option passed to them.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Rails_NotNullColumn",
+    "title": "Do not add a NOT NULL column without a default value",
+    "description": "Do not add a NOT NULL column without a default value",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Rails_Output",
+    "title": "Checks for calls to puts, print, etc.",
+    "description": "Checks for calls to puts, print, etc.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Rails_OutputSafety",
+    "title": "The use of `html_safe` or `raw` may be a security risk.",
+    "description": "The use of `html_safe` or `raw` may be a security risk.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Rails_PluralizationGrammar",
+    "title": "Checks for incorrect grammar when using methods like `3.day.ago`.",
+    "description": "Checks for incorrect grammar when using methods like `3.day.ago`.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Rails_Presence",
+    "title": "Checks code that can be written more easily using `Object#presence` defined by Active Support.",
+    "description": "Checks code that can be written more easily using `Object#presence` defined by Active Support.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Rails_Present",
+    "title": "Enforces use of `present?`.",
+    "description": "Enforces use of `present?`.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Rails_RakeEnvironment",
+    "title": "Include `:environment` as a dependency for all Rake tasks.",
+    "description": "Include `:environment` as a dependency for all Rake tasks.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Rails_ReadWriteAttribute",
+    "title": "Checks for read_attribute(:attr) and write_attribute(:attr, val).",
+    "description": "Checks for read_attribute(:attr) and write_attribute(:attr, val).",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Rails_RedundantAllowNil",
+    "title": "Finds redundant use of `allow_nil` when `allow_blank` is set to certain values in model validations.",
+    "description": "Finds redundant use of `allow_nil` when `allow_blank` is set to certain values in model validations.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Rails_RedundantReceiverInWithOptions",
+    "title": "Checks for redundant receiver in `with_options`.",
+    "description": "Checks for redundant receiver in `with_options`.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Rails_ReflectionClassName",
+    "title": "Use a string for `class_name` option value in the definition of a reflection.",
+    "description": "Use a string for `class_name` option value in the definition of a reflection.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Rails_RefuteMethods",
+    "title": "Use `assert_not` methods instead of `refute` methods.",
+    "description": "Use `assert_not` methods instead of `refute` methods.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Rails_RelativeDateConstant",
+    "title": "Do not assign relative date to constants.",
+    "description": "Do not assign relative date to constants.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Rails_RequestReferer",
+    "title": "Use consistent syntax for request.referer.",
+    "description": "Use consistent syntax for request.referer.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Rails_ReversibleMigration",
+    "title": "Checks whether the change method of the migration file is reversible.",
+    "description": "Checks whether the change method of the migration file is reversible.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Rails_SafeNavigation",
+    "title": "Use Ruby's safe navigation operator (`&.`) instead of `try!`",
+    "description": "Use Ruby's safe navigation operator (`&.`) instead of `try!`",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Rails_SafeNavigationWithBlank",
+    "title": "Avoid `foo&.blank?` in conditionals.",
+    "description": "Avoid `foo&.blank?` in conditionals.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Rails_SaveBang",
+    "title": "Identifies possible cases where Active Record save! or related should be used.",
+    "description": "Identifies possible cases where Active Record save! or related should be used.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Rails_ScopeArgs",
+    "title": "Checks the arguments of ActiveRecord scopes.",
+    "description": "Checks the arguments of ActiveRecord scopes.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Rails_SkipsModelValidations",
+    "title": "Use methods that skips model validations with caution. See reference for more information.",
+    "description": "Use methods that skips model validations with caution. See reference for more information.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Rails_TimeZone",
+    "title": "Checks the correct usage of time zone aware methods.",
+    "description": "Checks the correct usage of time zone aware methods.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Rails_UniqBeforePluck",
+    "title": "Prefer the use of uniq or distinct before pluck.",
+    "description": "Prefer the use of uniq or distinct before pluck.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Rails_UnknownEnv",
+    "title": "Use correct environment name.",
+    "description": "Use correct environment name.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Rails_Validation",
+    "title": "Use validates :attribute, hash of validations.",
+    "description": "Use validates :attribute, hash of validations.",
     "timeToFix": 5
   }
 ]

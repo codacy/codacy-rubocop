@@ -7,8 +7,11 @@ would suffice.
 ```ruby
 # bad
 'abc'.match?(/bc\Z/)
+/bc\Z/.match?('abc')
 'abc' =~ /bc\Z/
+/bc\Z/ =~ 'abc'
 'abc'.match(/bc\Z/)
+/bc\Z/.match('abc')
 
 # good
 'abc'.end_with?('bc')

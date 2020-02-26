@@ -31,6 +31,12 @@ def test
   elsif y
   else
   end
+end# bad
+def test
+  return x, y
+end# good
+def test
+  return x, y
 end
 ```
 
