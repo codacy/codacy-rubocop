@@ -5,10 +5,7 @@
     {
       "patternId": "Migration_DepartmentName",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Bundler_DuplicatedGem",
@@ -183,10 +180,7 @@
     {
       "patternId": "Layout_ArrayAlignment",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Layout_AssignmentIndentation",
@@ -221,10 +215,7 @@
     {
       "patternId": "Layout_BlockEndNewline",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Layout_CaseIndentation",
@@ -278,34 +269,22 @@
     {
       "patternId": "Layout_ClosingHeredocIndentation",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Layout_ClosingParenthesisIndentation",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Layout_CommentIndentation",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Layout_ConditionPosition",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Layout_DefEndAlignment",
@@ -354,10 +333,7 @@
     {
       "patternId": "Layout_ElseAlignment",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Layout_EmptyComment",
@@ -377,18 +353,12 @@
     {
       "patternId": "Layout_EmptyLineAfterGuardClause",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Layout_EmptyLineAfterMagicComment",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Layout_EmptyLineBetweenDefs",
@@ -426,18 +396,12 @@
     {
       "patternId": "Layout_EmptyLinesAroundArguments",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Layout_EmptyLinesAroundBeginBody",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Layout_EmptyLinesAroundBlockBody",
@@ -482,18 +446,12 @@
     {
       "patternId": "Layout_EmptyLinesAroundExceptionHandlingKeywords",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Layout_EmptyLinesAroundMethodBody",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Layout_EmptyLinesAroundModuleBody",
@@ -518,10 +476,7 @@
     {
       "patternId": "Layout_EmptyLines",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Layout_EndAlignment",
@@ -638,10 +593,7 @@
     {
       "patternId": "Layout_FirstArrayElementLineBreak",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Layout_FirstHashElementIndentation",
@@ -669,26 +621,17 @@
     {
       "patternId": "Layout_FirstHashElementLineBreak",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Layout_FirstMethodArgumentLineBreak",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Layout_FirstMethodParameterLineBreak",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Layout_FirstParameterIndentation",
@@ -763,10 +706,7 @@
     {
       "patternId": "Layout_HeredocArgumentClosingParenthesis",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Layout_HeredocIndentation",
@@ -826,10 +766,7 @@
     {
       "patternId": "Layout_InitialIndentation",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Layout_LeadingCommentSpace",
@@ -849,10 +786,7 @@
     {
       "patternId": "Layout_LeadingEmptyLines",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Layout_LineLength",
@@ -916,10 +850,7 @@
     {
       "patternId": "Layout_MultilineArrayLineBreaks",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Layout_MultilineAssignmentLayout",
@@ -953,10 +884,7 @@
     {
       "patternId": "Layout_MultilineBlockLayout",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Layout_MultilineHashBraceLayout",
@@ -980,18 +908,12 @@
     {
       "patternId": "Layout_MultilineHashKeyLineBreaks",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Layout_MultilineMethodArgumentLineBreaks",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Layout_MultilineMethodCallBraceLayout",
@@ -1101,50 +1023,32 @@
     {
       "patternId": "Layout_RescueEnsureAlignment",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Layout_SpaceAfterColon",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Layout_SpaceAfterComma",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Layout_SpaceAfterMethodName",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Layout_SpaceAfterNot",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Layout_SpaceAfterSemicolon",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Layout_SpaceAroundBlockParameters",
@@ -1185,10 +1089,7 @@
     {
       "patternId": "Layout_SpaceAroundKeyword",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Layout_SpaceAroundOperators",
@@ -1244,18 +1145,12 @@
     {
       "patternId": "Layout_SpaceBeforeComma",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Layout_SpaceBeforeComment",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Layout_SpaceBeforeFirstArg",
@@ -1271,10 +1166,7 @@
     {
       "patternId": "Layout_SpaceBeforeSemicolon",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Layout_SpaceInLambdaLiteral",
@@ -1297,10 +1189,7 @@
     {
       "patternId": "Layout_SpaceInsideArrayPercentLiteral",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Layout_SpaceInsideArrayLiteralBrackets",
@@ -1416,18 +1305,12 @@
     {
       "patternId": "Layout_SpaceInsidePercentLiteralDelimiters",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Layout_SpaceInsideRangeLiteral",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Layout_SpaceInsideReferenceBrackets",
@@ -1519,26 +1402,17 @@
     {
       "patternId": "Lint_AmbiguousBlockAssociation",
       "level": "Warning",
-      "category": "ErrorProne",
-      "parameters": [
-
-      ]
+      "category": "ErrorProne"
     },
     {
       "patternId": "Lint_AmbiguousOperator",
       "level": "Warning",
-      "category": "ErrorProne",
-      "parameters": [
-
-      ]
+      "category": "ErrorProne"
     },
     {
       "patternId": "Lint_AmbiguousRegexpLiteral",
       "level": "Warning",
-      "category": "ErrorProne",
-      "parameters": [
-
-      ]
+      "category": "ErrorProne"
     },
     {
       "patternId": "Lint_AssignmentInCondition",
@@ -1554,42 +1428,27 @@
     {
       "patternId": "Lint_BigDecimalNew",
       "level": "Warning",
-      "category": "ErrorProne",
-      "parameters": [
-
-      ]
+      "category": "ErrorProne"
     },
     {
       "patternId": "Lint_BooleanSymbol",
       "level": "Warning",
-      "category": "ErrorProne",
-      "parameters": [
-
-      ]
+      "category": "ErrorProne"
     },
     {
       "patternId": "Lint_CircularArgumentReference",
       "level": "Warning",
-      "category": "ErrorProne",
-      "parameters": [
-
-      ]
+      "category": "ErrorProne"
     },
     {
       "patternId": "Lint_Debugger",
       "level": "Warning",
-      "category": "ErrorProne",
-      "parameters": [
-
-      ]
+      "category": "ErrorProne"
     },
     {
       "patternId": "Lint_DeprecatedClassMethods",
       "level": "Warning",
-      "category": "ErrorProne",
-      "parameters": [
-
-      ]
+      "category": "ErrorProne"
     },
     {
       "patternId": "Lint_DisjunctiveAssignmentInConstructor",
@@ -1605,42 +1464,27 @@
     {
       "patternId": "Lint_DuplicateCaseCondition",
       "level": "Warning",
-      "category": "ErrorProne",
-      "parameters": [
-
-      ]
+      "category": "ErrorProne"
     },
     {
       "patternId": "Lint_DuplicateHashKey",
       "level": "Warning",
-      "category": "ErrorProne",
-      "parameters": [
-
-      ]
+      "category": "ErrorProne"
     },
     {
       "patternId": "Lint_DuplicateMethods",
       "level": "Warning",
-      "category": "ErrorProne",
-      "parameters": [
-
-      ]
+      "category": "ErrorProne"
     },
     {
       "patternId": "Lint_EachWithObjectArgument",
       "level": "Warning",
-      "category": "ErrorProne",
-      "parameters": [
-
-      ]
+      "category": "ErrorProne"
     },
     {
       "patternId": "Lint_ElseLayout",
       "level": "Warning",
-      "category": "ErrorProne",
-      "parameters": [
-
-      ]
+      "category": "ErrorProne"
     },
     {
       "patternId": "Lint_EmptyEnsure",
@@ -1656,90 +1500,57 @@
     {
       "patternId": "Lint_EmptyExpression",
       "level": "Warning",
-      "category": "ErrorProne",
-      "parameters": [
-
-      ]
+      "category": "ErrorProne"
     },
     {
       "patternId": "Lint_EmptyInterpolation",
       "level": "Warning",
-      "category": "ErrorProne",
-      "parameters": [
-
-      ]
+      "category": "ErrorProne"
     },
     {
       "patternId": "Lint_EmptyWhen",
       "level": "Warning",
-      "category": "ErrorProne",
-      "parameters": [
-
-      ]
+      "category": "ErrorProne"
     },
     {
       "patternId": "Lint_EndInMethod",
       "level": "Warning",
-      "category": "ErrorProne",
-      "parameters": [
-
-      ]
+      "category": "ErrorProne"
     },
     {
       "patternId": "Lint_EnsureReturn",
       "level": "Warning",
-      "category": "ErrorProne",
-      "parameters": [
-
-      ]
+      "category": "ErrorProne"
     },
     {
       "patternId": "Lint_ErbNewArguments",
       "level": "Warning",
-      "category": "ErrorProne",
-      "parameters": [
-
-      ]
+      "category": "ErrorProne"
     },
     {
       "patternId": "Lint_FlipFlop",
       "level": "Warning",
-      "category": "ErrorProne",
-      "parameters": [
-
-      ]
+      "category": "ErrorProne"
     },
     {
       "patternId": "Lint_FloatOutOfRange",
       "level": "Warning",
-      "category": "ErrorProne",
-      "parameters": [
-
-      ]
+      "category": "ErrorProne"
     },
     {
       "patternId": "Lint_FormatParameterMismatch",
       "level": "Warning",
-      "category": "ErrorProne",
-      "parameters": [
-
-      ]
+      "category": "ErrorProne"
     },
     {
       "patternId": "Lint_HeredocMethodCallPosition",
       "level": "Warning",
-      "category": "ErrorProne",
-      "parameters": [
-
-      ]
+      "category": "ErrorProne"
     },
     {
       "patternId": "Lint_ImplicitStringConcatenation",
       "level": "Warning",
-      "category": "ErrorProne",
-      "parameters": [
-
-      ]
+      "category": "ErrorProne"
     },
     {
       "patternId": "Lint_InheritException",
@@ -1762,42 +1573,27 @@
     {
       "patternId": "Lint_IneffectiveAccessModifier",
       "level": "Warning",
-      "category": "ErrorProne",
-      "parameters": [
-
-      ]
+      "category": "ErrorProne"
     },
     {
       "patternId": "Lint_InterpolationCheck",
       "level": "Warning",
-      "category": "ErrorProne",
-      "parameters": [
-
-      ]
+      "category": "ErrorProne"
     },
     {
       "patternId": "Lint_LiteralAsCondition",
       "level": "Warning",
-      "category": "ErrorProne",
-      "parameters": [
-
-      ]
+      "category": "ErrorProne"
     },
     {
       "patternId": "Lint_LiteralInInterpolation",
       "level": "Warning",
-      "category": "ErrorProne",
-      "parameters": [
-
-      ]
+      "category": "ErrorProne"
     },
     {
       "patternId": "Lint_Loop",
       "level": "Warning",
-      "category": "ErrorProne",
-      "parameters": [
-
-      ]
+      "category": "ErrorProne"
     },
     {
       "patternId": "Lint_MissingCopEnableDirective",
@@ -1813,34 +1609,22 @@
     {
       "patternId": "Lint_MultipleComparison",
       "level": "Warning",
-      "category": "ErrorProne",
-      "parameters": [
-
-      ]
+      "category": "ErrorProne"
     },
     {
       "patternId": "Lint_NestedMethodDefinition",
       "level": "Warning",
-      "category": "ErrorProne",
-      "parameters": [
-
-      ]
+      "category": "ErrorProne"
     },
     {
       "patternId": "Lint_NestedPercentLiteral",
       "level": "Warning",
-      "category": "ErrorProne",
-      "parameters": [
-
-      ]
+      "category": "ErrorProne"
     },
     {
       "patternId": "Lint_NextWithoutAccumulator",
       "level": "Warning",
-      "category": "ErrorProne",
-      "parameters": [
-
-      ]
+      "category": "ErrorProne"
     },
     {
       "patternId": "Lint_NonDeterministicRequireOrder",
@@ -1856,10 +1640,7 @@
     {
       "patternId": "Lint_NonLocalExitFromIterator",
       "level": "Warning",
-      "category": "ErrorProne",
-      "parameters": [
-
-      ]
+      "category": "ErrorProne"
     },
     {
       "patternId": "Lint_NumberConversion",
@@ -1875,18 +1656,12 @@
     {
       "patternId": "Lint_OrderedMagicComments",
       "level": "Warning",
-      "category": "ErrorProne",
-      "parameters": [
-
-      ]
+      "category": "ErrorProne"
     },
     {
       "patternId": "Lint_ParenthesesAsGroupedExpression",
       "level": "Warning",
-      "category": "ErrorProne",
-      "parameters": [
-
-      ]
+      "category": "ErrorProne"
     },
     {
       "patternId": "Lint_PercentStringArray",
@@ -1902,114 +1677,72 @@
     {
       "patternId": "Lint_PercentSymbolArray",
       "level": "Warning",
-      "category": "ErrorProne",
-      "parameters": [
-
-      ]
+      "category": "ErrorProne"
     },
     {
       "patternId": "Lint_RandOne",
       "level": "Warning",
-      "category": "ErrorProne",
-      "parameters": [
-
-      ]
+      "category": "ErrorProne"
     },
     {
       "patternId": "Lint_RedundantCopDisableDirective",
       "level": "Warning",
-      "category": "ErrorProne",
-      "parameters": [
-
-      ]
+      "category": "ErrorProne"
     },
     {
       "patternId": "Lint_RedundantCopEnableDirective",
       "level": "Warning",
-      "category": "ErrorProne",
-      "parameters": [
-
-      ]
+      "category": "ErrorProne"
     },
     {
       "patternId": "Lint_RedundantRequireStatement",
       "level": "Warning",
-      "category": "ErrorProne",
-      "parameters": [
-
-      ]
+      "category": "ErrorProne"
     },
     {
       "patternId": "Lint_RedundantSplatExpansion",
       "level": "Warning",
-      "category": "ErrorProne",
-      "parameters": [
-
-      ]
+      "category": "ErrorProne"
     },
     {
       "patternId": "Lint_RedundantStringCoercion",
       "level": "Warning",
-      "category": "ErrorProne",
-      "parameters": [
-
-      ]
+      "category": "ErrorProne"
     },
     {
       "patternId": "Lint_RedundantWithIndex",
       "level": "Warning",
-      "category": "ErrorProne",
-      "parameters": [
-
-      ]
+      "category": "ErrorProne"
     },
     {
       "patternId": "Lint_RedundantWithObject",
       "level": "Warning",
-      "category": "ErrorProne",
-      "parameters": [
-
-      ]
+      "category": "ErrorProne"
     },
     {
       "patternId": "Lint_RegexpAsCondition",
       "level": "Warning",
-      "category": "ErrorProne",
-      "parameters": [
-
-      ]
+      "category": "ErrorProne"
     },
     {
       "patternId": "Lint_RequireParentheses",
       "level": "Warning",
-      "category": "ErrorProne",
-      "parameters": [
-
-      ]
+      "category": "ErrorProne"
     },
     {
       "patternId": "Lint_RescueException",
       "level": "Warning",
-      "category": "ErrorProne",
-      "parameters": [
-
-      ]
+      "category": "ErrorProne"
     },
     {
       "patternId": "Lint_RescueType",
       "level": "Warning",
-      "category": "ErrorProne",
-      "parameters": [
-
-      ]
+      "category": "ErrorProne"
     },
     {
       "patternId": "Lint_ReturnInVoidContext",
       "level": "Warning",
-      "category": "ErrorProne",
-      "parameters": [
-
-      ]
+      "category": "ErrorProne"
     },
     {
       "patternId": "Lint_SafeNavigationConsistency",
@@ -2048,26 +1781,17 @@
     {
       "patternId": "Lint_SafeNavigationWithEmpty",
       "level": "Warning",
-      "category": "ErrorProne",
-      "parameters": [
-
-      ]
+      "category": "ErrorProne"
     },
     {
       "patternId": "Lint_ScriptPermission",
       "level": "Warning",
-      "category": "ErrorProne",
-      "parameters": [
-
-      ]
+      "category": "ErrorProne"
     },
     {
       "patternId": "Lint_SendWithMixinArgument",
       "level": "Warning",
-      "category": "ErrorProne",
-      "parameters": [
-
-      ]
+      "category": "ErrorProne"
     },
     {
       "patternId": "Lint_ShadowedArgument",
@@ -2083,18 +1807,12 @@
     {
       "patternId": "Lint_ShadowedException",
       "level": "Warning",
-      "category": "ErrorProne",
-      "parameters": [
-
-      ]
+      "category": "ErrorProne"
     },
     {
       "patternId": "Lint_ShadowingOuterLocalVariable",
       "level": "Warning",
-      "category": "ErrorProne",
-      "parameters": [
-
-      ]
+      "category": "ErrorProne"
     },
     {
       "patternId": "Lint_SuppressedException",
@@ -2110,18 +1828,12 @@
     {
       "patternId": "Lint_Syntax",
       "level": "Warning",
-      "category": "ErrorProne",
-      "parameters": [
-
-      ]
+      "category": "ErrorProne"
     },
     {
       "patternId": "Lint_ToJSON",
       "level": "Warning",
-      "category": "ErrorProne",
-      "parameters": [
-
-      ]
+      "category": "ErrorProne"
     },
     {
       "patternId": "Lint_UnderscorePrefixedVariableName",
@@ -2137,18 +1849,12 @@
     {
       "patternId": "Lint_UnifiedInteger",
       "level": "Warning",
-      "category": "ErrorProne",
-      "parameters": [
-
-      ]
+      "category": "ErrorProne"
     },
     {
       "patternId": "Lint_UnreachableCode",
       "level": "Warning",
-      "category": "ErrorProne",
-      "parameters": [
-
-      ]
+      "category": "ErrorProne"
     },
     {
       "patternId": "Lint_UnusedBlockArgument",
@@ -2183,18 +1889,12 @@
     {
       "patternId": "Lint_UriEscapeUnescape",
       "level": "Warning",
-      "category": "ErrorProne",
-      "parameters": [
-
-      ]
+      "category": "ErrorProne"
     },
     {
       "patternId": "Lint_UriRegexp",
       "level": "Warning",
-      "category": "ErrorProne",
-      "parameters": [
-
-      ]
+      "category": "ErrorProne"
     },
     {
       "patternId": "Lint_UselessAccessModifier",
@@ -2218,26 +1918,17 @@
     {
       "patternId": "Lint_UselessAssignment",
       "level": "Warning",
-      "category": "ErrorProne",
-      "parameters": [
-
-      ]
+      "category": "ErrorProne"
     },
     {
       "patternId": "Lint_UselessComparison",
       "level": "Warning",
-      "category": "ErrorProne",
-      "parameters": [
-
-      ]
+      "category": "ErrorProne"
     },
     {
       "patternId": "Lint_UselessElseWithoutRescue",
       "level": "Warning",
-      "category": "ErrorProne",
-      "parameters": [
-
-      ]
+      "category": "ErrorProne"
     },
     {
       "patternId": "Lint_UselessSetterCall",
@@ -2405,18 +2096,12 @@
     {
       "patternId": "Naming_AccessorMethodName",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Naming_AsciiIdentifiers",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Naming_BlockParameterName",
@@ -2448,18 +2133,12 @@
     {
       "patternId": "Naming_ClassAndModuleCamelCase",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Naming_ConstantName",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Naming_FileName",
@@ -2645,10 +2324,7 @@
     {
       "patternId": "Naming_BinaryOperatorParameterName",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Naming_PredicateName",
@@ -2797,10 +2473,7 @@
     {
       "patternId": "Style_ArrayJoin",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Style_AsciiComments",
@@ -2818,18 +2491,12 @@
     {
       "patternId": "Style_Attr",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Style_AutoResourceCleanup",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Style_BarePercentLiterals",
@@ -2852,18 +2519,12 @@
     {
       "patternId": "Style_BeginBlock",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Style_BlockComments",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Style_BlockDelimiters",
@@ -2930,18 +2591,12 @@
     {
       "patternId": "Style_CaseEquality",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Style_CharacterLiteral",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Style_ClassAndModuleChildren",
@@ -2990,18 +2645,12 @@
     {
       "patternId": "Style_ClassMethods",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Style_ClassVars",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Style_CollectionMethods",
@@ -3021,18 +2670,12 @@
     {
       "patternId": "Style_ColonMethodCall",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Style_ColonMethodDefinition",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Style_CommandLiteral",
@@ -3077,10 +2720,7 @@
     {
       "patternId": "Style_CommentedKeyword",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Style_ConditionalAssignment",
@@ -3111,10 +2751,7 @@
     {
       "patternId": "Style_ConstantVisibility",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Style_Copyright",
@@ -3145,18 +2782,12 @@
     {
       "patternId": "Style_DefWithParentheses",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Style_Dir",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Style_DocumentationMethod",
@@ -3193,50 +2824,32 @@
     {
       "patternId": "Style_DoubleCopDisableDirective",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Style_DoubleNegation",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Style_EachForSimpleLoop",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Style_EachWithObject",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Style_EmptyBlockParameter",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Style_EmptyCaseCondition",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Style_EmptyElse",
@@ -3260,18 +2873,12 @@
     {
       "patternId": "Style_EmptyLambdaParameter",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Style_EmptyLiteral",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Style_EmptyMethod",
@@ -3294,42 +2901,27 @@
     {
       "patternId": "Style_Encoding",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Style_EndBlock",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Style_EvalWithLocation",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Style_EvenOdd",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Style_ExpandPathArguments",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Style_FloatDivision",
@@ -3518,10 +3110,7 @@
     {
       "patternId": "Style_IdenticalConditionalBranches",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Style_IfInsideElse",
@@ -3537,34 +3126,22 @@
     {
       "patternId": "Style_IfUnlessModifier",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Style_IfUnlessModifierOfIfUnless",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Style_IfWithSemicolon",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Style_ImplicitRuntimeError",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Style_InfiniteLoop",
@@ -3599,10 +3176,7 @@
     {
       "patternId": "Style_InlineComment",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Style_IpAddresses",
@@ -3733,10 +3307,7 @@
     {
       "patternId": "Style_MethodCalledOnDoEndBlock",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Style_MethodDefParentheses",
@@ -3760,18 +3331,12 @@
     {
       "patternId": "Style_MethodMissingSuper",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Style_MinMax",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Style_MissingElse",
@@ -3795,10 +3360,7 @@
     {
       "patternId": "Style_MissingRespondToMissing",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Style_MixinGrouping",
@@ -3821,10 +3383,7 @@
     {
       "patternId": "Style_MixinUsage",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Style_ModuleFunction",
@@ -3855,34 +3414,22 @@
     {
       "patternId": "Style_MultilineBlockChain",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Style_MultilineIfThen",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Style_MultilineIfModifier",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Style_MultilineMethodSignature",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Style_MultilineMemoization",
@@ -3905,26 +3452,17 @@
     {
       "patternId": "Style_MultilineTernaryOperator",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Style_MultilineWhenThen",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Style_MultipleComparison",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Style_MutableConstant",
@@ -3985,18 +3523,12 @@
     {
       "patternId": "Style_NegatedWhile",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Style_NestedModifier",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Style_NestedParenthesizedCalls",
@@ -4030,10 +3562,7 @@
     {
       "patternId": "Style_NestedTernaryOperator",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Style_Next",
@@ -4089,10 +3618,7 @@
     {
       "patternId": "Style_Not",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Style_NumericLiterals",
@@ -4172,18 +3698,12 @@
     {
       "patternId": "Style_OneLineConditional",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Style_OrAssignment",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Style_OptionHash",
@@ -4205,18 +3725,12 @@
     {
       "patternId": "Style_OptionalArguments",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Style_ParallelAssignment",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Style_ParenthesesAroundCondition",
@@ -4265,10 +3779,7 @@
     {
       "patternId": "Style_PerlBackrefs",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Style_PreferredHashMethods",
@@ -4295,10 +3806,7 @@
     {
       "patternId": "Style_Proc",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Style_RaiseArgs",
@@ -4321,82 +3829,52 @@
     {
       "patternId": "Style_RandomWithOffset",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Style_RedundantBegin",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Style_RedundantCapitalW",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Style_RedundantCondition",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Style_RedundantConditional",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Style_RedundantException",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Style_RedundantFreeze",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Style_RedundantInterpolation",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Style_RedundantParentheses",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Style_RedundantPercentQ",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Style_RedundantReturn",
@@ -4412,26 +3890,17 @@
     {
       "patternId": "Style_RedundantSelf",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Style_RedundantSort",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Style_RedundantSortBy",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Style_RegexpLiteral",
@@ -4459,10 +3928,7 @@
     {
       "patternId": "Style_RescueModifier",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Style_RescueStandardError",
@@ -4524,18 +3990,12 @@
     {
       "patternId": "Style_Sample",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Style_SelfAssignment",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Style_Semicolon",
@@ -4551,10 +4011,7 @@
     {
       "patternId": "Style_Send",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Style_SignalException",
@@ -4653,10 +4110,7 @@
     {
       "patternId": "Style_StderrPuts",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Style_StringHashKeys",
@@ -4723,18 +4177,12 @@
     {
       "patternId": "Style_Strip",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Style_StructInheritance",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Style_SymbolArray",
@@ -4761,10 +4209,7 @@
     {
       "patternId": "Style_SymbolLiteral",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Style_SymbolProc",
@@ -4810,26 +4255,17 @@
     {
       "patternId": "Style_TrailingBodyOnClass",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Style_TrailingBodyOnMethodDefinition",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Style_TrailingBodyOnModule",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Style_TrailingCommaInArguments",
@@ -4891,10 +4327,7 @@
     {
       "patternId": "Style_TrailingMethodEndStatement",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Style_TrailingUnderscoreVariable",
@@ -4955,50 +4388,32 @@
     {
       "patternId": "Style_UnlessElse",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Style_UnpackFirst",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Style_VariableInterpolation",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Style_WhenThen",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Style_WhileUntilDo",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Style_WhileUntilModifier",
       "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-
-      ]
+      "category": "CodeStyle"
     },
     {
       "patternId": "Style_WordArray",
@@ -5065,10 +4480,7 @@
       "patternId": "Security_Eval",
       "level": "Error",
       "category": "Security",
-      "subcategory": "InputValidation",
-      "parameters": [
-
-      ]
+      "subcategory": "InputValidation"
     },
     {
       "patternId": "Security_JSONLoad",
@@ -5090,10 +4502,7 @@
       "patternId": "Security_MarshalLoad",
       "level": "Error",
       "category": "Security",
-      "subcategory": "InsecureModulesLibraries",
-      "parameters": [
-
-      ]
+      "subcategory": "InsecureModulesLibraries"
     },
     {
       "patternId": "Security_Open",
@@ -5122,10 +4531,7 @@
     {
       "patternId": "Performance_Caller",
       "level": "Warning",
-      "category": "Performance",
-      "parameters": [
-
-      ]
+      "category": "Performance"
     },
     {
       "patternId": "Performance_CaseWhenSplat",
@@ -5145,18 +4551,12 @@
     {
       "patternId": "Performance_Casecmp",
       "level": "Warning",
-      "category": "Performance",
-      "parameters": [
-
-      ]
+      "category": "Performance"
     },
     {
       "patternId": "Performance_CompareWithBlock",
       "level": "Warning",
-      "category": "Performance",
-      "parameters": [
-
-      ]
+      "category": "Performance"
     },
     {
       "patternId": "Performance_Count",
@@ -5209,10 +4609,7 @@
     {
       "patternId": "Performance_FixedSize",
       "level": "Warning",
-      "category": "Performance",
-      "parameters": [
-
-      ]
+      "category": "Performance"
     },
     {
       "patternId": "Performance_FlatMap",
@@ -5261,18 +4658,12 @@
     {
       "patternId": "Performance_RedundantBlockCall",
       "level": "Warning",
-      "category": "Performance",
-      "parameters": [
-
-      ]
+      "category": "Performance"
     },
     {
       "patternId": "Performance_RedundantMatch",
       "level": "Warning",
-      "category": "Performance",
-      "parameters": [
-
-      ]
+      "category": "Performance"
     },
     {
       "patternId": "Performance_RedundantMerge",
@@ -5288,26 +4679,17 @@
     {
       "patternId": "Performance_RegexpMatch",
       "level": "Warning",
-      "category": "Performance",
-      "parameters": [
-
-      ]
+      "category": "Performance"
     },
     {
       "patternId": "Performance_ReverseEach",
       "level": "Warning",
-      "category": "Performance",
-      "parameters": [
-
-      ]
+      "category": "Performance"
     },
     {
       "patternId": "Performance_Size",
       "level": "Warning",
-      "category": "Performance",
-      "parameters": [
-
-      ]
+      "category": "Performance"
     },
     {
       "patternId": "Performance_StartWith",
@@ -5327,10 +4709,7 @@
     {
       "patternId": "Performance_StringReplacement",
       "level": "Warning",
-      "category": "Performance",
-      "parameters": [
-
-      ]
+      "category": "Performance"
     },
     {
       "patternId": "Performance_TimesMap",
@@ -5350,26 +4729,17 @@
     {
       "patternId": "Performance_UnfreezeString",
       "level": "Warning",
-      "category": "Performance",
-      "parameters": [
-
-      ]
+      "category": "Performance"
     },
     {
       "patternId": "Performance_UriDefaultParser",
       "level": "Warning",
-      "category": "Performance",
-      "parameters": [
-
-      ]
+      "category": "Performance"
     },
     {
       "patternId": "Performance_ChainArrayAllocation",
       "level": "Warning",
-      "category": "Performance",
-      "parameters": [
-
-      ]
+      "category": "Performance"
     },
     {
       "patternId": "Rails_ActionFilter",
@@ -5422,42 +4792,27 @@
     {
       "patternId": "Rails_ActiveSupportAliases",
       "level": "Warning",
-      "category": "ErrorProne",
-      "parameters": [
-
-      ]
+      "category": "ErrorProne"
     },
     {
       "patternId": "Rails_ApplicationController",
       "level": "Warning",
-      "category": "ErrorProne",
-      "parameters": [
-
-      ]
+      "category": "ErrorProne"
     },
     {
       "patternId": "Rails_ApplicationJob",
       "level": "Warning",
-      "category": "ErrorProne",
-      "parameters": [
-
-      ]
+      "category": "ErrorProne"
     },
     {
       "patternId": "Rails_ApplicationMailer",
       "level": "Warning",
-      "category": "ErrorProne",
-      "parameters": [
-
-      ]
+      "category": "ErrorProne"
     },
     {
       "patternId": "Rails_ApplicationRecord",
       "level": "Warning",
-      "category": "ErrorProne",
-      "parameters": [
-
-      ]
+      "category": "ErrorProne"
     },
     {
       "patternId": "Rails_AssertNot",
@@ -5475,10 +4830,7 @@
     {
       "patternId": "Rails_BelongsTo",
       "level": "Warning",
-      "category": "ErrorProne",
-      "parameters": [
-
-      ]
+      "category": "ErrorProne"
     },
     {
       "patternId": "Rails_Blank",
@@ -5568,10 +4920,7 @@
     {
       "patternId": "Rails_DelegateAllowBlank",
       "level": "Warning",
-      "category": "ErrorProne",
-      "parameters": [
-
-      ]
+      "category": "ErrorProne"
     },
     {
       "patternId": "Rails_DynamicFindBy",
@@ -5615,10 +4964,7 @@
     {
       "patternId": "Rails_EnvironmentComparison",
       "level": "Warning",
-      "category": "ErrorProne",
-      "parameters": [
-
-      ]
+      "category": "ErrorProne"
     },
     {
       "patternId": "Rails_Exit",
@@ -5802,10 +5148,7 @@
     {
       "patternId": "Rails_LinkToBlank",
       "level": "Warning",
-      "category": "ErrorProne",
-      "parameters": [
-
-      ]
+      "category": "ErrorProne"
     },
     {
       "patternId": "Rails_NotNullColumn",
@@ -5839,26 +5182,17 @@
     {
       "patternId": "Rails_OutputSafety",
       "level": "Warning",
-      "category": "ErrorProne",
-      "parameters": [
-
-      ]
+      "category": "ErrorProne"
     },
     {
       "patternId": "Rails_PluralizationGrammar",
       "level": "Warning",
-      "category": "ErrorProne",
-      "parameters": [
-
-      ]
+      "category": "ErrorProne"
     },
     {
       "patternId": "Rails_Presence",
       "level": "Warning",
-      "category": "ErrorProne",
-      "parameters": [
-
-      ]
+      "category": "ErrorProne"
     },
     {
       "patternId": "Rails_Present",
@@ -5926,18 +5260,12 @@
     {
       "patternId": "Rails_RedundantReceiverInWithOptions",
       "level": "Warning",
-      "category": "ErrorProne",
-      "parameters": [
-
-      ]
+      "category": "ErrorProne"
     },
     {
       "patternId": "Rails_ReflectionClassName",
       "level": "Warning",
-      "category": "ErrorProne",
-      "parameters": [
-
-      ]
+      "category": "ErrorProne"
     },
     {
       "patternId": "Rails_RefuteMethods",
