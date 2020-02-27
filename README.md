@@ -29,6 +29,13 @@ https://github.com/rubocop-hq/rubocop/pull/6890
 
 There are some important details to take into consideration:
 - Add dependency to Gemfile
+- Add it to src/main/scala/codacy/rubocop/Rubocop.scala
+
+```diff
+- private val plugins: List[String] = List("rubocop-performance")
++ private val plugins: List[String] = List("rubocop-performance", "rubocop-style")
+```
+
 - Add it to src/main/ruby/rubocop_doc/generator.rb
 
 ```diff
@@ -51,10 +58,7 @@ You can follow the instructions there to make sure your tool is working as expec
 Change the version in `.rubocop-version` and then run on this project root:
 
 ```sh
-bundle install --path vendor/bundle
-bundle exec src/main/ruby/rubocop_doc/generator.rb
-bundle exec src/main/ruby/codacy/rubocop/generator.rb
-rm -f rubocop-doc.yml
+./scripts/doc_generate.sh
 ```
 
 Notes on the documentation generation:

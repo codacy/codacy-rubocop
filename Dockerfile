@@ -6,7 +6,6 @@ RUN apk add --no-cache ruby ruby-etc ruby-dev ruby-irb ruby-rake ruby-io-console
 
 COPY Gemfile .
 COPY Gemfile.lock .
-COPY .rubocop-version .
 
 RUN echo 'gem: --no-document' > /etc/gemrc \
     && gem install bundler -v 2.0.1 \

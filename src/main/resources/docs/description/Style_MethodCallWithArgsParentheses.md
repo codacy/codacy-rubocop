@@ -4,7 +4,7 @@ method calls containing parameters.
 
 In the default style (require_parentheses), macro methods are ignored.
 Additional methods can be added to the `IgnoredMethods`
-or `IgnoredMethodPatterns` list. These options are
+or `IgnoredPatterns` list. These options are
 valid only in the default style. Macros can be included by
 either setting `IgnoreMacros` to false or adding specific macros to
 the `IncludedMacros` list.
@@ -12,7 +12,7 @@ the `IncludedMacros` list.
 Precedence of options is all follows:
 
 1. `IgnoredMethods`
-2. `IgnoredMethodPatterns`
+2. `IgnoredPatterns`
 3. `IncludedMacros`
 
 eg. If a method is listed in both
@@ -57,22 +57,8 @@ foo.bar = baz
 # okay with `puts` listed in `IgnoredMethods`
 puts 'test'
 
-# okay with `^assert` listed in `IgnoredMethodPatterns`
+# okay with `^assert` listed in `IgnoredPatterns`
 assert_equal 'test', x
-
-# IgnoreMacros: true (default)
-
-# good
-class Foo
-  bar :baz
-end
-
-# IgnoreMacros: false
-
-# bad
-class Foo
-  bar :baz
-end
 # bad
 array.delete(e)
 
@@ -84,9 +70,14 @@ foo.enforce(strict: true)
 
 # good
 foo.enforce strict: true
-
-# AllowParenthesesInMultilineCall: false (default)
-
+# good
+class Foo
+  bar :baz
+end
+# bad
+class Foo
+  bar :baz
+end
 # bad
 foo.enforce(
   strict: true
@@ -95,9 +86,6 @@ foo.enforce(
 # good
 foo.enforce \
   strict: true
-
-# AllowParenthesesInMultilineCall: true
-
 # good
 foo.enforce(
   strict: true
@@ -106,33 +94,21 @@ foo.enforce(
 # good
 foo.enforce \
   strict: true
-
-# AllowParenthesesInChaining: false (default)
-
 # bad
 foo().bar(1)
 
 # good
 foo().bar 1
-
-# AllowParenthesesInChaining: true
-
 # good
 foo().bar(1)
 
 # good
 foo().bar 1
-
-# AllowParenthesesInCamelCaseMethod: false (default)
-
 # bad
 Array(1)
 
 # good
 Array 1
-
-# AllowParenthesesInCamelCaseMethod: true
-
 # good
 Array(1)
 

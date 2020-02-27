@@ -7,9 +7,11 @@ exist.
 ```ruby
 # bad
 Rails.env.proudction?
+Rails.env == 'proudction'
 
 # good
 Rails.env.production?
+Rails.env == 'production'
 ```
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Rails/UnknownEnv)

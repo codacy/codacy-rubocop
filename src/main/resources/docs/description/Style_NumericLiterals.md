@@ -7,18 +7,16 @@ of digits in them.
 ```ruby
 
 # bad
-
 1000000
 1_00_000
 1_0000
 
 # good
-
 1_000_000
 1000
-
-# good unless Strict is set
-
+# good
+10_000_00 # typical representation of $10,000 in cents
+# bad
 10_000_00 # typical representation of $10,000 in cents
 ```
 

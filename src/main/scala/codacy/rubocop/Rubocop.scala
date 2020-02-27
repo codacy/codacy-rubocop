@@ -3,11 +3,12 @@ package codacy.rubocop
 import java.io.File
 import java.nio.charset.StandardCharsets
 import java.nio.file.{Files, Path, Paths, StandardOpenOption}
+
 import com.codacy.plugins.api
-import com.codacy.plugins.api.{paramValueToJsValue, Options}
 import com.codacy.plugins.api.results.Result.Issue
 import com.codacy.plugins.api.results.Tool.Specification
 import com.codacy.plugins.api.results.{Parameter, Pattern, Result, Tool}
+import com.codacy.plugins.api.{paramValueToJsValue, Options}
 import com.codacy.tools.scala.seed.utils.CommandRunner
 import play.api.libs.json._
 
@@ -15,6 +16,7 @@ import scala.io.Source
 import scala.util.{Failure, Properties, Success, Try}
 
 object Rubocop extends Tool {
+  private val plugins: List[String] = List("rubocop-performance", "rubocop-rails", "rubocop-rspec")
 
   // Gemfile is analysed
   private val filesToIgnore: Set[String] =
@@ -113,7 +115,11 @@ object Rubocop extends Tool {
           file.toString
       }
 
-    List("rubocop", "--force-exclusion", "-f", "json", "-o", outputFilePath.toAbsolutePath.toString) ++ configPath ++ patternsCmd ++ filesCmd
+    List("rubocop", "--force-exclusion", "-f", "json", "-o", outputFilePath.toAbsolutePath.toString) ++ pluginsAvailable ++ configPath ++ patternsCmd ++ filesCmd
+  }
+
+  private[this] def pluginsAvailable(): List[String] = {
+    plugins.flatMap(List("--require", _))
   }
 
   private[this] lazy val resultFilePath =
@@ -159,6 +165,7 @@ object Rubocop extends Tool {
          |  UseCache: false
          |require:
          |  - rubocop-performance
+         |  - rubocop-rails
          |${rules.mkString(s"${Properties.lineSeparator}")}
       """.stripMargin
 

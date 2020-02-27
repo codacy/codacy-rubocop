@@ -1,4 +1,0 @@
-##Patterns: Metrics_LineLength
-
-##Warn: Metrics_LineLength
-puts 'HelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHello'

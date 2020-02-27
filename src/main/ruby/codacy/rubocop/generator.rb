@@ -35,20 +35,46 @@ module RubocopDoc
       end
     end
 
+    module GenerationCommons
+      def self.withoutNilValues(obj)
+        obj.delete_if { |_, value| value.nil? }
+      end
+
+      def self.parametersFieldValue(parameters)
+        if parameters.length() > 0
+          parameters
+        end
+      end
+    end
+
     module DescriptionJSON
       def self.generate_json_file(hash)
         File.write("src/main/resources/docs/description/description.json", JSON.pretty_generate(hash))
       end
 
+      def self.get_title(description)
+        while description.length() > 254 && description.split(".").length() > 0 do
+          description = description.split(".")[0..-2].join(".") + "."
+        end
+        description
+      end
+
+      def self.parameters(cop_data)
+        cop_data[:configurable_attributes].map do |key, _|
+          { name: key, description: key }
+        end
+      end
+
       def self.run(file_path = "rubocop-doc.yml")
         cops_data    = YAML.load_file(file_path)
         descriptions = cops_data.map do |cop_data|
-          {
+          GenerationCommons.withoutNilValues({
             patternId:   cop_data[:name].gsub("/", "_"),
-            title:       cop_data[:configuration]['Description'],
+            title:       get_title(cop_data[:configuration]['Description']),
             description: cop_data[:configuration]['Description'],
-            timeToFix:   5
-          }
+            timeToFix:   5,
+            parameters:  GenerationCommons.parametersFieldValue(parameters(cop_data))
+          })
         end
         generate_json_file(descriptions)
       end
@@ -92,6 +118,19 @@ module RubocopDoc
         end
       end
 
+      def self.subcategory(cop_data)
+        if category(cop_data) == "Security"
+          case cop_data[:name] 
+          when "Security/JSONLoad", "Security/MarshalLoad", "Security/YAMLLoad"
+            "InsecureModulesLibraries"
+          when "Security/Open"
+            "CommandInjection"
+          when "Security/Eval"
+            "InputValidation"
+          end
+        end
+      end
+
       def self.parameters(cop_data)
         cop_data[:configurable_attributes].map do |key, value|
           { name: key, default: value }
@@ -101,16 +140,17 @@ module RubocopDoc
       def self.run(file_path = "rubocop-doc.yml")
         cops_data = YAML.load_file(file_path)
         patterns  = cops_data.map do |cop_data|
-          {
+          GenerationCommons.withoutNilValues({
             patternId:  cop_data[:name].gsub("/", "_"),
             level:      level(cop_data),
             category:   category(cop_data),
-            parameters: parameters(cop_data)
-          }
+            subcategory: subcategory(cop_data),
+            parameters: GenerationCommons.parametersFieldValue(parameters(cop_data))
+          })
         end
         data      = {
           name:     "Rubocop",
-          version:  File.read(".rubocop-version").strip,
+          version:  Gem.loaded_specs["rubocop"].version,
           patterns: patterns
         }
         generate_json_file(data)

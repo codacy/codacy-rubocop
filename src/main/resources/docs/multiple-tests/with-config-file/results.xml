@@ -3,6 +3,6 @@
     <file name="Lint_AssignmentInCondition.rb">
         <error source="Lint_UselessAssignment" line="4" message="Useless assignment to variable - `v`." severity="warning" />
         <error source="Lint_AssignmentInCondition" line="4" message="Use `==` if you meant to do a comparison or wrap the expression in parentheses to indicate you meant to assign in a condition." severity="warning" />
-        <error source="Style_FrozenStringLiteralComment" line="1" message="Missing magic comment `# frozen_string_literal: true`." severity="info" />
+        <error source="Style_FrozenStringLiteralComment" line="1" message="Missing frozen string literal comment." severity="info" />
     </file>
 </checkstyle>

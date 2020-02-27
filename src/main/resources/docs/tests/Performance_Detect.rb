@@ -1,4 +1,4 @@
-##Patterns: Performance_Detect : {"SafeMode":false}
+##Patterns: Performance_Detect : {"SafeAutoCorrect":false}
 
 ##Warn: Performance_Detect
 [].select { |item| true }.first

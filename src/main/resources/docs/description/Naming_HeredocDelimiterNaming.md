@@ -1,7 +1,7 @@
 
 This cop checks that your heredocs are using meaningful delimiters.
 By default it disallows `END` and `EO*`, and can be configured through
-blacklisting additional delimiters.
+forbidden listing additional delimiters.
 
 # Examples
 

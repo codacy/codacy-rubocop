@@ -11,9 +11,10 @@ def link_to(url); {:name => url}; end
 def @table.columns; super; end
 
 # good
-def no_op; end
 def self.resource_class=(klass); end
-def @table.columns; end
+def @table.columns; end# good
+def no_op; end# bad
+def no_op; end
 ```
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Style/SingleLineMethods)
