@@ -8,7 +8,7 @@ end
 gem "yard"
 gem "rake"
 gem "activesupport"
-gem "parser", "2.7.0.3"
+gem "parser", "2.7.0.4"
 gem "pry"
 gem "safe_yaml"
 gem "dark_finger"
