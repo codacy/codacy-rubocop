@@ -1,6 +1,6 @@
 import com.typesafe.sbt.packager.docker.Cmd
-import sjsonnew._
 import sjsonnew.BasicJsonProtocol._
+import sjsonnew._
 import sjsonnew.support.scalajson.unsafe._
 
 name := "codacy-rubocop"
@@ -50,10 +50,20 @@ daemonGroup in Docker := dockerGroup
 
 dockerBaseImage := "codacy-rubocop-base"
 
+mappings in Universal += file("scripts/doc_generate.sh") -> "scripts/doc_generate.sh"
+mappings in Universal += file("Gemfile") -> "Gemfile"
+mappings in Universal += file("doc_generation/codacy/rubocop/generator.rb") -> "doc_generation/codacy/rubocop/generator.rb"
+mappings in Universal += file("doc_generation/rubocop_doc/generator.rb") -> "doc_generation/rubocop_doc/generator.rb"
+
 dockerCommands := {
   dockerCommands.value.flatMap {
     case cmd @ (Cmd("ADD", _)) =>
-      Seq(Cmd("RUN", s"adduser -u 2004 -D $dockerUser"), cmd, Cmd("RUN", "mv /opt/docker/docs /docs"))
+      Seq(
+        Cmd("RUN", s"adduser -u 2004 -D $dockerUser"),
+        cmd,
+        Cmd("RUN", "sh scripts/doc_generate.sh ."),
+        Cmd("RUN", "mv /opt/docker/docs /docs")
+      )
     case other => Seq(other)
   }
 }
