@@ -58,7 +58,9 @@ You can follow the instructions there to make sure your tool is working as expec
 Change the version in `.rubocop-version` and then run on this project root:
 
 ```sh
-./scripts/doc_generate.sh
+bundle update
+bundle install --path vendor/bundle
+./scripts/doc_generate.sh <docs_location>
 ```
 
 Notes on the documentation generation:

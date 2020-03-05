@@ -8,8 +8,10 @@ require 'json'
 module RubocopDoc
   module Codacy
     module Markdown
+      @baseDir
       def self.generate_markdown_file(file_name, content)
-        File.write("src/main/resources/docs/description/#{file_name}.md", content)
+        markdownFilePath = File.join(@baseDir,"/docs/description/#{file_name}.md")
+        File.write(markdownFilePath , content)
       end
 
       def self.file_name(cop_data)
@@ -24,7 +26,8 @@ module RubocopDoc
         "http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/#{cop_data[:name]}"
       end
 
-      def self.run(file_path = "rubocop-doc.yml")
+      def self.run(baseDir = "src/main/resources", file_path = "rubocop-doc.yml")
+        @baseDir = baseDir
         cops_data = YAML.load_file(file_path)
         cops_data.each do |cop_data|
           generate_markdown_file(
@@ -48,8 +51,10 @@ module RubocopDoc
     end
 
     module DescriptionJSON
+      @baseDir
       def self.generate_json_file(hash)
-        File.write("src/main/resources/docs/description/description.json", JSON.pretty_generate(hash))
+        descriptionFilePath = File.join(@baseDir,"/docs/description/description.json")
+        File.write(descriptionFilePath, JSON.pretty_generate(hash))
       end
 
       def self.get_title(description)
@@ -65,7 +70,8 @@ module RubocopDoc
         end
       end
 
-      def self.run(file_path = "rubocop-doc.yml")
+      def self.run(baseDir = "src/main/resources", file_path = "rubocop-doc.yml")
+        @baseDir = baseDir
         cops_data    = YAML.load_file(file_path)
         descriptions = cops_data.map do |cop_data|
           GenerationCommons.withoutNilValues({
@@ -82,8 +88,10 @@ module RubocopDoc
     end
 
     module PattersJSON
+      @baseDir
       def self.generate_json_file(hash)
-        File.write("src/main/resources/docs/patterns.json", JSON.pretty_generate(hash))
+        patternsFilePath = File.join(@baseDir,"/docs/patterns.json")
+        File.write(patternsFilePath, JSON.pretty_generate(hash))
       end
 
       def self.level(cop_data)
@@ -137,7 +145,8 @@ module RubocopDoc
         end
       end
 
-      def self.run(file_path = "rubocop-doc.yml")
+      def self.run(baseDir = "src/main/resources", file_path = "rubocop-doc.yml")
+        @baseDir=baseDir
         cops_data = YAML.load_file(file_path)
         patterns  = cops_data.map do |cop_data|
           GenerationCommons.withoutNilValues({
@@ -159,6 +168,11 @@ module RubocopDoc
   end
 end
 
-RubocopDoc::Codacy::Markdown.run
-RubocopDoc::Codacy::PattersJSON.run
-RubocopDoc::Codacy::DescriptionJSON.run
+baseDir="src/main/resources"
+if ARGV.length == 1 
+  baseDir=ARGV[0]
+end
+
+RubocopDoc::Codacy::Markdown.run(baseDir)
+RubocopDoc::Codacy::PattersJSON.run(baseDir)
+RubocopDoc::Codacy::DescriptionJSON.run(baseDir)
