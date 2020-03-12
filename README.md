@@ -1,4 +1,4 @@
-[![Codacy Badge](https://api.codacy.com/project/badge/grade/7cb874a40208406dbe62fe96d6b3a727)](https://www.codacy.com/app/Codacy/codacy-rubocop)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/7cb874a40208406dbe62fe96d6b3a727)](https://www.codacy.com/gh/codacy/codacy-rubocop?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=codacy/codacy-rubocop&amp;utm_campaign=Badge_Grade)
 [![Build Status](https://circleci.com/gh/codacy/codacy-rubocop.svg?style=shield&circle-token=:circle-token)](https://circleci.com/gh/codacy/codacy-rubocop)
 
 # Codacy Rubocop
