@@ -17,5 +17,5 @@ gem "rubocop-github", "0.14.0"
 gem "rubocop", "0.80.1"
 #Rubocop official modules
 gem "rubocop-performance", "1.5.2"
-gem "rubocop-rails", "2.4.2"
+gem "rubocop-rails", "2.5.0"
 gem "rubocop-rspec", "1.38.1"
