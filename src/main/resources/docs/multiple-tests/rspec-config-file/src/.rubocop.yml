@@ -1,0 +1,29 @@
+require:
+  - rubocop-rspec
+
+Lint/AmbiguousOperator:
+  Description: >-
+    Checks for ambiguous operators in the first argument of a
+    method invocation without parentheses.
+  StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#parens-as-args'
+  Enabled: false
+
+RSpec/FilePath:
+  Enabled: false
+
+RSpec/AlignLeftLetBrace:
+  Description: Checks that left braces for adjacent single line lets are aligned.
+  Enabled: true
+  StyleGuide: https://www.rubydoc.info/gems/rubocop-rspec/RuboCop/Cop/RSpec/AlignLeftLetBrace
+
+RSpec/EmptyLineAfterFinalLet:
+  Enabled: false
+
+Layout/IndentationWidth:
+  Enabled: false
+
+Style/StringLiterals:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false

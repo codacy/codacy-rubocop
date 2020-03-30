@@ -115,11 +115,7 @@ object Rubocop extends Tool {
           file.toString
       }
 
-    List("rubocop", "--force-exclusion", "-f", "json", "-o", outputFilePath.toAbsolutePath.toString) ++ pluginsAvailable ++ configPath ++ patternsCmd ++ filesCmd
-  }
-
-  private[this] def pluginsAvailable(): List[String] = {
-    plugins.flatMap(List("--require", _))
+    List("rubocop", "--force-exclusion", "-f", "json", "-o", outputFilePath.toAbsolutePath.toString) ++ configPath ++ patternsCmd ++ filesCmd
   }
 
   private[this] lazy val resultFilePath =
@@ -129,6 +125,12 @@ object Rubocop extends Tool {
     val rules = for {
       pattern <- conf
     } yield generateRule(pattern.patternId, pattern.parameters)
+
+    val ymlRequires =
+      s"""
+         |require:
+         |${plugins.map(plugin => s"  - $plugin").mkString(System.lineSeparator())}
+         |""".stripMargin
 
     val ymlConfiguration =
       s"""
@@ -163,9 +165,7 @@ object Rubocop extends Tool {
          |  DisplayCopNames: false
          |  StyleGuideCopsOnly: false
          |  UseCache: false
-         |require:
-         |  - rubocop-performance
-         |  - rubocop-rails
+         |$ymlRequires
          |${rules.mkString(s"${Properties.lineSeparator}")}
       """.stripMargin
 
