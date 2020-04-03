@@ -41,7 +41,7 @@ GEM
       rubocop (~> 0.41)
     rubocop-performance (1.5.2)
       rubocop (>= 0.71.0)
-    rubocop-rails (2.5.0)
+    rubocop-rails (2.5.1)
       activesupport
       rack (>= 1.1)
       rubocop (>= 0.72.0)
@@ -69,7 +69,7 @@ DEPENDENCIES
   rubocop-github (= 0.14.0)
   rubocop-migrations (= 0.1.2)
   rubocop-performance (= 1.5.2)
-  rubocop-rails (= 2.5.0)
+  rubocop-rails (= 2.5.1)
   rubocop-rspec (= 1.38.1)
   safe_yaml
   yard
