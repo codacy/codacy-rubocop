@@ -25,6 +25,7 @@ items.collect!
 items.inject
 items.detect
 items.find_all
+items.member?
 
 # good
 items.map
@@ -32,6 +33,7 @@ items.map!
 items.reduce
 items.find
 items.select
+items.include?
 ```
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Style/CollectionMethods)

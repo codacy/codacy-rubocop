@@ -19,15 +19,17 @@ begin
 end until some_condition
 # good
 
-# using while
-while some_condition
+# while replacement
+loop do
   do_something
+  break unless some_condition
 end
 # good
 
-# using until
-until some_condition
+# until replacement
+loop do
   do_something
+  break if some_condition
 end
 ```
 

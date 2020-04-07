@@ -157,7 +157,21 @@
     "patternId": "Layout_ArrayAlignment",
     "title": "Align the elements of an array literal if they span more than one line.",
     "description": "Align the elements of an array literal if they span more than one line.",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "EnforcedStyle",
+        "description": "EnforcedStyle"
+      },
+      {
+        "name": "SupportedStyles",
+        "description": "SupportedStyles"
+      },
+      {
+        "name": "IndentationWidth",
+        "description": "IndentationWidth"
+      }
+    ]
   },
   {
     "patternId": "Layout_AssignmentIndentation",
@@ -1414,12 +1428,6 @@
     "timeToFix": 5
   },
   {
-    "patternId": "Lint_EndInMethod",
-    "title": "END blocks should not be placed inside method definitions.",
-    "description": "END blocks should not be placed inside method definitions.",
-    "timeToFix": 5
-  },
-  {
     "patternId": "Lint_EnsureReturn",
     "title": "Do not use return in an ensure block.",
     "description": "Do not use return in an ensure block.",
@@ -1604,6 +1612,12 @@
     "timeToFix": 5
   },
   {
+    "patternId": "Lint_RaiseException",
+    "title": "Checks for `raise` or `fail` statements which are raising `Exception` class.",
+    "description": "Checks for `raise` or `fail` statements which are raising `Exception` class.",
+    "timeToFix": 5
+  },
+  {
     "patternId": "Lint_RandOne",
     "title": "Checks for `rand(1)` calls. Such calls always return `0` and most likely a mistake.",
     "description": "Checks for `rand(1)` calls. Such calls always return `0` and most likely a mistake.",
@@ -1748,6 +1762,12 @@
     "timeToFix": 5
   },
   {
+    "patternId": "Lint_StructNewOverride",
+    "title": "Disallow overriding the `Struct` built-in methods via `Struct.new`.",
+    "description": "Disallow overriding the `Struct` built-in methods via `Struct.new`.",
+    "timeToFix": 5
+  },
+  {
     "patternId": "Lint_SuppressedException",
     "title": "Don't suppress exceptions.",
     "description": "Don't suppress exceptions.",
@@ -1824,6 +1844,10 @@
       {
         "name": "IgnoreEmptyMethods",
         "description": "IgnoreEmptyMethods"
+      },
+      {
+        "name": "IgnoreNotImplementedMethods",
+        "description": "IgnoreNotImplementedMethods"
       }
     ]
   },
@@ -1904,6 +1928,10 @@
     "timeToFix": 5,
     "parameters": [
       {
+        "name": "IgnoredMethods",
+        "description": "IgnoredMethods"
+      },
+      {
         "name": "Max",
         "description": "Max"
       }
@@ -1915,6 +1943,10 @@
     "description": "A calculated magnitude based on number of assignments, branches, and conditions.",
     "timeToFix": 5,
     "parameters": [
+      {
+        "name": "IgnoredMethods",
+        "description": "IgnoredMethods"
+      },
       {
         "name": "Max",
         "description": "Max"
@@ -2035,6 +2067,10 @@
     "description": "A complexity metric geared towards measuring complexity for a human reader.",
     "timeToFix": 5,
     "parameters": [
+      {
+        "name": "IgnoredMethods",
+        "description": "IgnoredMethods"
+      },
       {
         "name": "Max",
         "description": "Max"
@@ -2296,6 +2332,10 @@
       {
         "name": "SupportedStyles",
         "description": "SupportedStyles"
+      },
+      {
+        "name": "AllowModifiersOnSymbols",
+        "description": "AllowModifiersOnSymbols"
       }
     ]
   },
@@ -4072,6 +4112,18 @@
     ]
   },
   {
+    "patternId": "Style_TrailingCommaInBlockArgs",
+    "title": "Checks for useless trailing commas in block arguments.",
+    "description": "Checks for useless trailing commas in block arguments.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Safe",
+        "description": "Safe"
+      }
+    ]
+  },
+  {
     "patternId": "Style_TrailingCommaInHashLiteral",
     "title": "Checks for trailing comma in hash literals.",
     "description": "Checks for trailing comma in hash literals.",
@@ -4569,25 +4621,49 @@
     "patternId": "Rails_ApplicationController",
     "title": "Check that controllers subclass ApplicationController.",
     "description": "Check that controllers subclass ApplicationController.",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "SafeAutoCorrect",
+        "description": "SafeAutoCorrect"
+      }
+    ]
   },
   {
     "patternId": "Rails_ApplicationJob",
     "title": "Check that jobs subclass ApplicationJob.",
     "description": "Check that jobs subclass ApplicationJob.",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "SafeAutoCorrect",
+        "description": "SafeAutoCorrect"
+      }
+    ]
   },
   {
     "patternId": "Rails_ApplicationMailer",
     "title": "Check that mailers subclass ApplicationMailer.",
     "description": "Check that mailers subclass ApplicationMailer.",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "SafeAutoCorrect",
+        "description": "SafeAutoCorrect"
+      }
+    ]
   },
   {
     "patternId": "Rails_ApplicationRecord",
     "title": "Check that models subclass ApplicationRecord.",
     "description": "Check that models subclass ApplicationRecord.",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "SafeAutoCorrect",
+        "description": "SafeAutoCorrect"
+      }
+    ]
   },
   {
     "patternId": "Rails_AssertNot",
@@ -4868,6 +4944,18 @@
     ]
   },
   {
+    "patternId": "Rails_IndexBy",
+    "title": "Prefer `index_by` over `each_with_object` or `map`.",
+    "description": "Prefer `index_by` over `each_with_object` or `map`.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Rails_IndexWith",
+    "title": "Prefer `index_with` over `each_with_object` or `map`.",
+    "description": "Prefer `index_with` over `each_with_object` or `map`.",
+    "timeToFix": 5
+  },
+  {
     "patternId": "Rails_InverseOf",
     "title": "Checks for associations where the inverse cannot be determined automatically.",
     "description": "Checks for associations where the inverse cannot be determined automatically.",
@@ -4976,6 +5064,10 @@
       {
         "name": "Include",
         "description": "Include"
+      },
+      {
+        "name": "Exclude",
+        "description": "Exclude"
       }
     ]
   },
@@ -5021,6 +5113,14 @@
     "description": "Use `assert_not` methods instead of `refute` methods.",
     "timeToFix": 5,
     "parameters": [
+      {
+        "name": "EnforcedStyle",
+        "description": "EnforcedStyle"
+      },
+      {
+        "name": "SupportedStyles",
+        "description": "SupportedStyles"
+      },
       {
         "name": "Include",
         "description": "Include"
@@ -5176,6 +5276,18 @@
       {
         "name": "AutoCorrect",
         "description": "AutoCorrect"
+      }
+    ]
+  },
+  {
+    "patternId": "Rails_UniqueValidationWithoutIndex",
+    "title": "Uniqueness validation should be with a unique index.",
+    "description": "Uniqueness validation should be with a unique index.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Include",
+        "description": "Include"
       }
     ]
   },

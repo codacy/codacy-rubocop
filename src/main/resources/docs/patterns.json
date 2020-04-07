@@ -1,6 +1,6 @@
 {
   "name": "Rubocop",
-  "version": "0.80.1",
+  "version": "0.81.0",
   "patterns": [
     {
       "patternId": "Migration_DepartmentName",
@@ -180,7 +180,24 @@
     {
       "patternId": "Layout_ArrayAlignment",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "with_first_element"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": [
+            "with_first_element",
+            "with_fixed_indentation"
+          ]
+        },
+        {
+          "name": "IndentationWidth",
+          "default": ""
+        }
+      ]
     },
     {
       "patternId": "Layout_AssignmentIndentation",
@@ -1513,11 +1530,6 @@
       "category": "ErrorProne"
     },
     {
-      "patternId": "Lint_EndInMethod",
-      "level": "Warning",
-      "category": "ErrorProne"
-    },
-    {
       "patternId": "Lint_EnsureReturn",
       "level": "Warning",
       "category": "ErrorProne"
@@ -1680,6 +1692,11 @@
       "category": "ErrorProne"
     },
     {
+      "patternId": "Lint_RaiseException",
+      "level": "Warning",
+      "category": "ErrorProne"
+    },
+    {
       "patternId": "Lint_RandOne",
       "level": "Warning",
       "category": "ErrorProne"
@@ -1815,13 +1832,18 @@
       "category": "ErrorProne"
     },
     {
+      "patternId": "Lint_StructNewOverride",
+      "level": "Warning",
+      "category": "ErrorProne"
+    },
+    {
       "patternId": "Lint_SuppressedException",
       "level": "Warning",
       "category": "ErrorProne",
       "parameters": [
         {
           "name": "AllowComments",
-          "default": "false"
+          "default": "true"
         }
       ]
     },
@@ -1882,6 +1904,10 @@
         },
         {
           "name": "IgnoreEmptyMethods",
+          "default": "true"
+        },
+        {
+          "name": "IgnoreNotImplementedMethods",
           "default": "true"
         }
       ]
@@ -1958,6 +1984,12 @@
       "category": "ErrorProne",
       "parameters": [
         {
+          "name": "IgnoredMethods",
+          "default": [
+
+          ]
+        },
+        {
           "name": "Max",
           "default": "6"
         }
@@ -1968,6 +2000,12 @@
       "level": "Warning",
       "category": "ErrorProne",
       "parameters": [
+        {
+          "name": "IgnoredMethods",
+          "default": [
+
+          ]
+        },
         {
           "name": "Max",
           "default": "15"
@@ -2087,6 +2125,12 @@
       "level": "Warning",
       "category": "ErrorProne",
       "parameters": [
+        {
+          "name": "IgnoredMethods",
+          "default": [
+
+          ]
+        },
         {
           "name": "Max",
           "default": "7"
@@ -2431,6 +2475,10 @@
             "inline",
             "group"
           ]
+        },
+        {
+          "name": "AllowModifiersOnSymbols",
+          "default": "true"
         }
       ]
     },
@@ -2663,7 +2711,7 @@
         },
         {
           "name": "PreferredMethods",
-          "default": "{\"collect\"=>\"map\", \"collect!\"=>\"map!\", \"inject\"=>\"reduce\", \"detect\"=>\"find\", \"find_all\"=>\"select\"}"
+          "default": "{\"collect\"=>\"map\", \"collect!\"=>\"map!\", \"inject\"=>\"reduce\", \"detect\"=>\"find\", \"find_all\"=>\"select\", \"member?\"=>\"include?\"}"
         }
       ]
     },
@@ -3398,7 +3446,8 @@
           "name": "SupportedStyles",
           "default": [
             "module_function",
-            "extend_self"
+            "extend_self",
+            "forbidden"
           ]
         },
         {
@@ -4306,6 +4355,17 @@
       ]
     },
     {
+      "patternId": "Style_TrailingCommaInBlockArgs",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "Safe",
+          "default": "false"
+        }
+      ]
+    },
+    {
       "patternId": "Style_TrailingCommaInHashLiteral",
       "level": "Info",
       "category": "CodeStyle",
@@ -4797,22 +4857,46 @@
     {
       "patternId": "Rails_ApplicationController",
       "level": "Warning",
-      "category": "ErrorProne"
+      "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "SafeAutoCorrect",
+          "default": "false"
+        }
+      ]
     },
     {
       "patternId": "Rails_ApplicationJob",
       "level": "Warning",
-      "category": "ErrorProne"
+      "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "SafeAutoCorrect",
+          "default": "false"
+        }
+      ]
     },
     {
       "patternId": "Rails_ApplicationMailer",
       "level": "Warning",
-      "category": "ErrorProne"
+      "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "SafeAutoCorrect",
+          "default": "false"
+        }
+      ]
     },
     {
       "patternId": "Rails_ApplicationRecord",
       "level": "Warning",
-      "category": "ErrorProne"
+      "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "SafeAutoCorrect",
+          "default": "false"
+        }
+      ]
     },
     {
       "patternId": "Rails_AssertNot",
@@ -5116,6 +5200,16 @@
       ]
     },
     {
+      "patternId": "Rails_IndexBy",
+      "level": "Warning",
+      "category": "ErrorProne"
+    },
+    {
+      "patternId": "Rails_IndexWith",
+      "level": "Warning",
+      "category": "ErrorProne"
+    },
+    {
       "patternId": "Rails_InverseOf",
       "level": "Warning",
       "category": "ErrorProne",
@@ -5228,6 +5322,12 @@
             "**/Rakefile",
             "**/*.rake"
           ]
+        },
+        {
+          "name": "Exclude",
+          "default": [
+            "lib/capistrano/tasks/**/*.rake"
+          ]
         }
       ]
     },
@@ -5272,6 +5372,17 @@
       "level": "Warning",
       "category": "ErrorProne",
       "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "assert_not"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": [
+            "assert_not",
+            "refute"
+          ]
+        },
         {
           "name": "Include",
           "default": [
@@ -5448,6 +5559,19 @@
         {
           "name": "AutoCorrect",
           "default": "false"
+        }
+      ]
+    },
+    {
+      "patternId": "Rails_UniqueValidationWithoutIndex",
+      "level": "Warning",
+      "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "Include",
+          "default": [
+            "app/models/**/*.rb"
+          ]
         }
       ]
     },
