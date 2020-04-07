@@ -12,23 +12,9 @@ rescue
 end
 
 # bad
-def some_method
-  do_something
-rescue
-  # do nothing
-end
-
-# bad
 begin
   do_something
 rescue
-end
-
-# bad
-begin
-  do_something
-rescue
-  # do nothing
 end
 
 # good
@@ -44,30 +30,31 @@ begin
 rescue
   handle_exception
 end
-# bad
-def some_method
-  do_something
-rescue
-end
-
-# bad
-begin
-  do_something
-rescue
-end
-
 # good
 def some_method
   do_something
 rescue
-  # do nothing but comment
+  # do nothing
 end
 
 # good
 begin
   do_something
 rescue
-  # do nothing but comment
+  # do nothing
+end
+# bad
+def some_method
+  do_something
+rescue
+  # do nothing
+end
+
+# bad
+begin
+  do_something
+rescue
+  # do nothing
 end
 ```
 

@@ -55,8 +55,6 @@ You can follow the instructions there to make sure your tool is working as expec
 
 ## Update Version with Docs
 
-Change the version in `.rubocop-version` and then run on this project root:
-
 ```sh
 bundle update
 bundle install --path vendor/bundle

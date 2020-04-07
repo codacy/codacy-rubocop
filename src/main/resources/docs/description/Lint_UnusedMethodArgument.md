@@ -22,6 +22,20 @@ end# good
 def do_something(unused)
 end# bad
 def do_something(unused)
+end# good
+def do_something(unused)
+  raise NotImplementedError
+end
+
+def do_something_else(unused)
+  fail "TODO"
+end# bad
+def do_something(unused)
+  raise NotImplementedError
+end
+
+def do_something_else(unused)
+  fail "TODO"
 end
 ```
 
