@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<checkstyle version="4.3">
+    <file name="Rakefile">
+        <error source="Rake_DuplicateTask" line="15" message="Task `all` is defined at both Rakefile:7 and Rakefile:15." severity="info" />
+    </file>
+</checkstyle>

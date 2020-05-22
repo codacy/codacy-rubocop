@@ -224,7 +224,7 @@ object Rubocop extends Tool {
            |$finalParameters
          """.stripMargin
 
-      case JsArray(parameters) =>
+      case JsArray(_) =>
         s"""${parameter.name.value}: []
          """.stripMargin
 

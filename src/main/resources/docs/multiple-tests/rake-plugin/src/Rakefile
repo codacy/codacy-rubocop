@@ -1,0 +1,15 @@
+desc "one"
+task :one do
+  puts "one"
+end
+
+desc "all"
+task :all => [:one]
+
+desc "two"
+task :two do
+  puts "two"
+end
+
+desc "all"
+task :all => [:two]

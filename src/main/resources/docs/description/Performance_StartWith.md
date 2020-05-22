@@ -13,6 +13,13 @@ This cop identifies unnecessary use of a regex where
 'abc'.match(/\Aab/)
 /\Aab/.match('abc')
 
+'abc'.match?(/^ab/)
+/^ab/.match?('abc')
+'abc' =~ /^ab/
+/^ab/ =~ 'abc'
+'abc'.match(/^ab/)
+/^ab/.match('abc')
+
 # good
 'abc'.start_with?('ab')
 ```
