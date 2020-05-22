@@ -13,7 +13,7 @@ gem "pry"
 gem "safe_yaml"
 gem "dark_finger"
 gem "rubocop-migrations", "0.1.2"
-gem "rubocop-github", "0.15.0"
+gem "rubocop-github", "0.16.0"
 gem "rubocop", "0.82.0"
 #Rubocop official modules
 gem "rubocop-performance", "1.5.2"
