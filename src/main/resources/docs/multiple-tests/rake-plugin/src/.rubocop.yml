@@ -1,0 +1,11 @@
+require:
+  - rubocop-rake
+
+Layout:
+  Enabled: false
+
+Metrics:
+  Enabled: false
+
+Style:
+  Enabled: false
