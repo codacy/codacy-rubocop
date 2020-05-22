@@ -694,6 +694,26 @@
     ]
   },
   {
+    "patternId": "Layout_IndentationStyle",
+    "title": "Consistent indentation either with tabs only or spaces only.",
+    "description": "Consistent indentation either with tabs only or spaces only.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "IndentationWidth",
+        "description": "IndentationWidth"
+      },
+      {
+        "name": "EnforcedStyle",
+        "description": "EnforcedStyle"
+      },
+      {
+        "name": "SupportedStyles",
+        "description": "SupportedStyles"
+      }
+    ]
+  },
+  {
     "patternId": "Layout_IndentationWidth",
     "title": "Use 2 spaces for indentation.",
     "description": "Use 2 spaces for indentation.",
@@ -1016,6 +1036,12 @@
     "timeToFix": 5
   },
   {
+    "patternId": "Layout_SpaceAroundMethodCallOperator",
+    "title": "Checks method call operators to not have spaces around them.",
+    "description": "Checks method call operators to not have spaces around them.",
+    "timeToFix": 5
+  },
+  {
     "patternId": "Layout_SpaceAroundOperators",
     "title": "Use a single space around operators.",
     "description": "Use a single space around operators.",
@@ -1252,18 +1278,6 @@
       {
         "name": "SupportedStyles",
         "description": "SupportedStyles"
-      }
-    ]
-  },
-  {
-    "patternId": "Layout_Tab",
-    "title": "No hard tabs.",
-    "description": "No hard tabs.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "IndentationWidth",
-        "description": "IndentationWidth"
       }
     ]
   },
@@ -1615,7 +1629,13 @@
     "patternId": "Lint_RaiseException",
     "title": "Checks for `raise` or `fail` statements which are raising `Exception` class.",
     "description": "Checks for `raise` or `fail` statements which are raising `Exception` class.",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "AllowedImplicitNamespaces",
+        "description": "AllowedImplicitNamespaces"
+      }
+    ]
   },
   {
     "patternId": "Lint_RandOne",
@@ -2469,7 +2489,13 @@
     "patternId": "Style_CaseEquality",
     "title": "Avoid explicit use of the case equality operator(===).",
     "description": "Avoid explicit use of the case equality operator(===).",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "AllowOnConstant",
+        "description": "AllowOnConstant"
+      }
+    ]
   },
   {
     "patternId": "Style_CharacterLiteral",
@@ -2666,6 +2692,12 @@
     "timeToFix": 5
   },
   {
+    "patternId": "Style_DisableCopsWithinSourceCodeDirective",
+    "title": "Forbids disabling/enabling cops within source code.",
+    "description": "Forbids disabling/enabling cops within source code.",
+    "timeToFix": 5
+  },
+  {
     "patternId": "Style_DocumentationMethod",
     "title": "Checks for missing documentation comment for public methods.",
     "description": "Checks for missing documentation comment for public methods.",
@@ -2802,6 +2834,22 @@
     "title": "Use `expand_path(__dir__)` instead of `expand_path('..', __FILE__)`.",
     "description": "Use `expand_path(__dir__)` instead of `expand_path('..', __FILE__)`.",
     "timeToFix": 5
+  },
+  {
+    "patternId": "Style_ExponentialNotation",
+    "title": "When using exponential notation, favor a mantissa between 1 (inclusive) and 10 (exclusive).",
+    "description": "When using exponential notation, favor a mantissa between 1 (inclusive) and 10 (exclusive).",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "EnforcedStyle",
+        "description": "EnforcedStyle"
+      },
+      {
+        "name": "SupportedStyles",
+        "description": "SupportedStyles"
+      }
+    ]
   },
   {
     "patternId": "Style_FloatDivision",
@@ -4330,6 +4378,12 @@
     ]
   },
   {
+    "patternId": "Performance_BindCall",
+    "title": "Use `bind_call(obj, args, ...)` instead of `bind(obj).call(args, ...)`.",
+    "description": "Use `bind_call(obj, args, ...)` instead of `bind(obj).call(args, ...)`.",
+    "timeToFix": 5
+  },
+  {
     "patternId": "Performance_Caller",
     "title": "Use `caller(n..n)` instead of `caller`.",
     "description": "Use `caller(n..n)` instead of `caller`.",
@@ -4355,7 +4409,13 @@
     "patternId": "Performance_Casecmp",
     "title": "Use `casecmp` rather than `downcase ==`, `upcase ==`, `== downcase`, or `== upcase`..",
     "description": "Use `casecmp` rather than `downcase ==`, `upcase ==`, `== downcase`, or `== upcase`..",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Safe",
+        "description": "Safe"
+      }
+    ]
   },
   {
     "patternId": "Performance_CompareWithBlock",
@@ -4374,6 +4434,18 @@
         "description": "SafeAutoCorrect"
       }
     ]
+  },
+  {
+    "patternId": "Performance_DeletePrefix",
+    "title": "Use `delete_prefix` instead of `gsub`.",
+    "description": "Use `delete_prefix` instead of `gsub`.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Performance_DeleteSuffix",
+    "title": "Use `delete_suffix` instead of `gsub`.",
+    "description": "Use `delete_suffix` instead of `gsub`.",
+    "timeToFix": 5
   },
   {
     "patternId": "Performance_Detect",
@@ -4417,14 +4489,14 @@
   },
   {
     "patternId": "Performance_FixedSize",
-    "title": "Do not compute the size of statically sized objects except in constants",
-    "description": "Do not compute the size of statically sized objects except in constants",
+    "title": "Do not compute the size of statically sized objects except in constants.",
+    "description": "Do not compute the size of statically sized objects except in constants.",
     "timeToFix": 5
   },
   {
     "patternId": "Performance_FlatMap",
-    "title": "Use `Enumerable#flat_map` instead of `Enumerable#map...Array#flatten(1)` or `Enumberable#collect..Array#flatten(1)`",
-    "description": "Use `Enumerable#flat_map` instead of `Enumerable#map...Array#flatten(1)` or `Enumberable#collect..Array#flatten(1)`",
+    "title": "Use `Enumerable#flat_map` instead of `Enumerable#map...Array#flatten(1)` or `Enumberable#collect..Array#flatten(1)`.",
+    "description": "Use `Enumerable#flat_map` instead of `Enumerable#map...Array#flatten(1)` or `Enumberable#collect..Array#flatten(1)`.",
     "timeToFix": 5,
     "parameters": [
       {
@@ -4435,8 +4507,8 @@
   },
   {
     "patternId": "Performance_InefficientHashSearch",
-    "title": "Use `key?` or `value?` instead of `keys.include?` or `values.include?`",
-    "description": "Use `key?` or `value?` instead of `keys.include?` or `values.include?`",
+    "title": "Use `key?` or `value?` instead of `keys.include?` or `values.include?`.",
+    "description": "Use `key?` or `value?` instead of `keys.include?` or `values.include?`.",
     "timeToFix": 5,
     "parameters": [
       {

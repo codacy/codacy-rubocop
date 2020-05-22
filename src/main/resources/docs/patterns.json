@@ -1,6 +1,6 @@
 {
   "name": "Rubocop",
-  "version": "0.81.0",
+  "version": "0.82.0",
   "patterns": [
     {
       "patternId": "Migration_DepartmentName",
@@ -764,6 +764,28 @@
       ]
     },
     {
+      "patternId": "Layout_IndentationStyle",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "IndentationWidth",
+          "default": ""
+        },
+        {
+          "name": "EnforcedStyle",
+          "default": "spaces"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": [
+            "spaces",
+            "tabs"
+          ]
+        }
+      ]
+    },
+    {
       "patternId": "Layout_IndentationWidth",
       "level": "Info",
       "category": "CodeStyle",
@@ -1109,6 +1131,11 @@
       "category": "CodeStyle"
     },
     {
+      "patternId": "Layout_SpaceAroundMethodCallOperator",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
       "patternId": "Layout_SpaceAroundOperators",
       "level": "Info",
       "category": "CodeStyle",
@@ -1373,17 +1400,6 @@
             "space",
             "no_space"
           ]
-        }
-      ]
-    },
-    {
-      "patternId": "Layout_Tab",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "IndentationWidth",
-          "default": ""
         }
       ]
     },
@@ -1694,7 +1710,15 @@
     {
       "patternId": "Lint_RaiseException",
       "level": "Warning",
-      "category": "ErrorProne"
+      "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "AllowedImplicitNamespaces",
+          "default": [
+            "Gem"
+          ]
+        }
+      ]
     },
     {
       "patternId": "Lint_RandOne",
@@ -2639,7 +2663,13 @@
     {
       "patternId": "Style_CaseEquality",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "AllowOnConstant",
+          "default": "false"
+        }
+      ]
     },
     {
       "patternId": "Style_CharacterLiteral",
@@ -2838,6 +2868,11 @@
       "category": "CodeStyle"
     },
     {
+      "patternId": "Style_DisableCopsWithinSourceCodeDirective",
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
       "patternId": "Style_DocumentationMethod",
       "level": "Info",
       "category": "CodeStyle",
@@ -2970,6 +3005,25 @@
       "patternId": "Style_ExpandPathArguments",
       "level": "Info",
       "category": "CodeStyle"
+    },
+    {
+      "patternId": "Style_ExponentialNotation",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "scientific"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": [
+            "scientific",
+            "engineering",
+            "integral"
+          ]
+        }
+      ]
     },
     {
       "patternId": "Style_FloatDivision",
@@ -4589,6 +4643,11 @@
       ]
     },
     {
+      "patternId": "Performance_BindCall",
+      "level": "Warning",
+      "category": "Performance"
+    },
+    {
       "patternId": "Performance_Caller",
       "level": "Warning",
       "category": "Performance"
@@ -4611,7 +4670,13 @@
     {
       "patternId": "Performance_Casecmp",
       "level": "Warning",
-      "category": "Performance"
+      "category": "Performance",
+      "parameters": [
+        {
+          "name": "Safe",
+          "default": "false"
+        }
+      ]
     },
     {
       "patternId": "Performance_CompareWithBlock",
@@ -4628,6 +4693,16 @@
           "default": "false"
         }
       ]
+    },
+    {
+      "patternId": "Performance_DeletePrefix",
+      "level": "Warning",
+      "category": "Performance"
+    },
+    {
+      "patternId": "Performance_DeleteSuffix",
+      "level": "Warning",
+      "category": "Performance"
     },
     {
       "patternId": "Performance_Detect",

@@ -13,6 +13,13 @@ would suffice.
 'abc'.match(/bc\Z/)
 /bc\Z/.match('abc')
 
+'abc'.match?(/bc$/)
+/bc$/.match?('abc')
+'abc' =~ /bc$/
+/bc$/ =~ 'abc'
+'abc'.match(/bc$/)
+/bc$/.match('abc')
+
 # good
 'abc'.end_with?('bc')
 ```
