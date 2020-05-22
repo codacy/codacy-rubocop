@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <module name="root">
-    <module name="HashSyntax">
-        <property name="EnforcedStyle" value="ruby19_no_mixed_keys"/>
-        <property name="UseHashRocketsWithSymbolValues" value="true"/>
-        <property name="PreferHashRocketsForNonAlnumEndingSymbols" value="true"/>
+    <module name="Style_HashSyntax">
+        <property name="EnforcedStyle" value="ruby19_no_mixed_keys" />
+        <property name="UseHashRocketsWithSymbolValues" value="true" />
+        <property name="PreferHashRocketsForNonAlnumEndingSymbols" value="true" />
     </module>
 </module>
