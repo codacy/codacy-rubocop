@@ -61,7 +61,8 @@ dockerCommands := {
       Seq(
         Cmd("RUN", s"adduser -u 2004 -D $dockerUser"),
         cmd,
-        Cmd("RUN", "sh scripts/doc_generate.sh ."),
+        Cmd("RUN", "sh scripts/doc_generate.sh $PWD"),
+        Cmd("RUN", "apk del ruby-dev make gcc"),
         Cmd("RUN", "mv /opt/docker/docs /docs")
       )
     case other => Seq(other)

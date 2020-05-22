@@ -11,5 +11,4 @@ RUN echo 'gem: --no-document' > /etc/gemrc \
     && gem install bundler -v 2.0.1 \
     && bundle install \
     && gem cleanup \
-    && apk del ruby-dev make gcc \
     && rm -rf /tmp/* /var/cache/apk/*
