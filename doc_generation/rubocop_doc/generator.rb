@@ -100,7 +100,7 @@ module RubocopDocs
 
   def self.rubocop_source_code_path(plugin_with_version)
     puts "Parsing cops to be available for documentation details for #{plugin_with_version}..."
-    ruby_version = "2.5.0"
+    ruby_version = RbConfig::CONFIG['ruby_version']
     gem_path     = "vendor/bundle/ruby/#{ruby_version}/gems/#{plugin_with_version}"
     "#{gem_path}/lib/rubocop/cop/*/*.rb"
   end
