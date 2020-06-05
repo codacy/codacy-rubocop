@@ -16,7 +16,7 @@ gem "rubocop-migrations", "0.1.2"
 gem "rubocop-github", "0.16.0"
 gem "rubocop", "0.82.0"
 #Rubocop official modules
-gem "rubocop-performance", "1.6.0"
+gem "rubocop-performance", "1.6.1"
 gem "rubocop-rails", "2.5.2"
 gem "rubocop-rake", "0.5.1"
 gem "rubocop-rspec", "1.39.0"
