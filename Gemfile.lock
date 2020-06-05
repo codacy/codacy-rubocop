@@ -12,7 +12,7 @@ GEM
     concurrent-ruby (1.1.6)
     dark_finger (0.6.0)
       rubocop (>= 0.51.0)
-    i18n (1.8.2)
+    i18n (1.8.3)
       concurrent-ruby (~> 1.0)
     jaro_winkler (1.5.4)
     method_source (1.0.0)
