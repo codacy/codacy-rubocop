@@ -158,7 +158,7 @@ module RubocopDoc
           })
         end
         data      = {
-          name:     "Rubocop",
+          name:     "rubocop",
           version:  Gem.loaded_specs["rubocop"].version,
           patterns: patterns
         }

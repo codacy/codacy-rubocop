@@ -1,5 +1,5 @@
 {
-  "name": "Rubocop",
+  "name": "rubocop",
   "version": "0.82.0",
   "patterns": [
     {
@@ -2531,7 +2531,7 @@
       "parameters": [
         {
           "name": "EnforcedStyle",
-          "default": "always"
+          "default": "conditionals"
         },
         {
           "name": "SupportedStyles",
@@ -4643,6 +4643,16 @@
       ]
     },
     {
+      "patternId": "Performance_AncestorsInclude",
+      "level": "Warning",
+      "category": "Performance"
+    },
+    {
+      "patternId": "Performance_BigDecimalWithNumericArgument",
+      "level": "Warning",
+      "category": "Performance"
+    },
+    {
       "patternId": "Performance_BindCall",
       "level": "Warning",
       "category": "Performance"
@@ -4697,12 +4707,24 @@
     {
       "patternId": "Performance_DeletePrefix",
       "level": "Warning",
-      "category": "Performance"
+      "category": "Performance",
+      "parameters": [
+        {
+          "name": "SafeMultiline",
+          "default": "true"
+        }
+      ]
     },
     {
       "patternId": "Performance_DeleteSuffix",
       "level": "Warning",
-      "category": "Performance"
+      "category": "Performance",
+      "parameters": [
+        {
+          "name": "SafeMultiline",
+          "default": "true"
+        }
+      ]
     },
     {
       "patternId": "Performance_Detect",
@@ -4738,6 +4760,10 @@
         {
           "name": "AutoCorrect",
           "default": "false"
+        },
+        {
+          "name": "SafeMultiline",
+          "default": "true"
         }
       ]
     },
@@ -4791,6 +4817,11 @@
       ]
     },
     {
+      "patternId": "Performance_IoReadlines",
+      "level": "Warning",
+      "category": "Performance"
+    },
+    {
       "patternId": "Performance_RedundantBlockCall",
       "level": "Warning",
       "category": "Performance"
@@ -4812,6 +4843,16 @@
       ]
     },
     {
+      "patternId": "Performance_RedundantSortBlock",
+      "level": "Warning",
+      "category": "Performance"
+    },
+    {
+      "patternId": "Performance_RedundantStringChars",
+      "level": "Warning",
+      "category": "Performance"
+    },
+    {
       "patternId": "Performance_RegexpMatch",
       "level": "Warning",
       "category": "Performance"
@@ -4822,7 +4863,22 @@
       "category": "Performance"
     },
     {
+      "patternId": "Performance_ReverseFirst",
+      "level": "Warning",
+      "category": "Performance"
+    },
+    {
       "patternId": "Performance_Size",
+      "level": "Warning",
+      "category": "Performance"
+    },
+    {
+      "patternId": "Performance_SortReverse",
+      "level": "Warning",
+      "category": "Performance"
+    },
+    {
+      "patternId": "Performance_Squeeze",
       "level": "Warning",
       "category": "Performance"
     },
@@ -4838,8 +4894,17 @@
         {
           "name": "AutoCorrect",
           "default": "false"
+        },
+        {
+          "name": "SafeMultiline",
+          "default": "true"
         }
       ]
+    },
+    {
+      "patternId": "Performance_StringInclude",
+      "level": "Warning",
+      "category": "Performance"
     },
     {
       "patternId": "Performance_StringReplacement",
@@ -5035,6 +5100,11 @@
       ]
     },
     {
+      "patternId": "Rails_ContentTag",
+      "level": "Warning",
+      "category": "ErrorProne"
+    },
+    {
       "patternId": "Rails_CreateTableWithTimestamps",
       "level": "Warning",
       "category": "ErrorProne",
@@ -5090,6 +5160,18 @@
           "name": "Whitelist",
           "default": [
             "find_by_sql"
+          ]
+        },
+        {
+          "name": "AllowedMethods",
+          "default": [
+            "find_by_sql"
+          ]
+        },
+        {
+          "name": "AllowedReceivers",
+          "default": [
+            "Gem::Specification"
           ]
         }
       ]
@@ -5354,6 +5436,17 @@
       "category": "ErrorProne"
     },
     {
+      "patternId": "Rails_Pick",
+      "level": "Warning",
+      "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "Safe",
+          "default": "false"
+        }
+      ]
+    },
+    {
       "patternId": "Rails_PluralizationGrammar",
       "level": "Warning",
       "category": "ErrorProne"
@@ -5431,6 +5524,11 @@
           ]
         }
       ]
+    },
+    {
+      "patternId": "Rails_RedundantForeignKey",
+      "level": "Warning",
+      "category": "ErrorProne"
     },
     {
       "patternId": "Rails_RedundantReceiverInWithOptions",

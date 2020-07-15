@@ -4378,6 +4378,18 @@
     ]
   },
   {
+    "patternId": "Performance_AncestorsInclude",
+    "title": "Use `A <= B` instead of `A.ancestors.include?(B)`.",
+    "description": "Use `A <= B` instead of `A.ancestors.include?(B)`.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Performance_BigDecimalWithNumericArgument",
+    "title": "Convert numeric argument to string before passing to BigDecimal.",
+    "description": "Convert numeric argument to string before passing to BigDecimal.",
+    "timeToFix": 5
+  },
+  {
     "patternId": "Performance_BindCall",
     "title": "Use `bind_call(obj, args, ...)` instead of `bind(obj).call(args, ...)`.",
     "description": "Use `bind_call(obj, args, ...)` instead of `bind(obj).call(args, ...)`.",
@@ -4439,13 +4451,25 @@
     "patternId": "Performance_DeletePrefix",
     "title": "Use `delete_prefix` instead of `gsub`.",
     "description": "Use `delete_prefix` instead of `gsub`.",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "SafeMultiline",
+        "description": "SafeMultiline"
+      }
+    ]
   },
   {
     "patternId": "Performance_DeleteSuffix",
     "title": "Use `delete_suffix` instead of `gsub`.",
     "description": "Use `delete_suffix` instead of `gsub`.",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "SafeMultiline",
+        "description": "SafeMultiline"
+      }
+    ]
   },
   {
     "patternId": "Performance_Detect",
@@ -4484,6 +4508,10 @@
       {
         "name": "AutoCorrect",
         "description": "AutoCorrect"
+      },
+      {
+        "name": "SafeMultiline",
+        "description": "SafeMultiline"
       }
     ]
   },
@@ -4531,8 +4559,8 @@
   },
   {
     "patternId": "Performance_RangeInclude",
-    "title": "Use `Range#cover?` instead of `Range#include?`.",
-    "description": "Use `Range#cover?` instead of `Range#include?`.",
+    "title": "Use `Range#cover?` instead of `Range#include?` (or `Range#member?`).",
+    "description": "Use `Range#cover?` instead of `Range#include?` (or `Range#member?`).",
     "timeToFix": 5,
     "parameters": [
       {
@@ -4540,6 +4568,12 @@
         "description": "Safe"
       }
     ]
+  },
+  {
+    "patternId": "Performance_IoReadlines",
+    "title": "Use `IO.each_line` (`IO#each_line`) instead of `IO.readlines` (`IO#readlines`).",
+    "description": "Use `IO.each_line` (`IO#each_line`) instead of `IO.readlines` (`IO#readlines`).",
+    "timeToFix": 5
   },
   {
     "patternId": "Performance_RedundantBlockCall",
@@ -4566,6 +4600,18 @@
     ]
   },
   {
+    "patternId": "Performance_RedundantSortBlock",
+    "title": "Use `sort` instead of `sort { |a, b| a <=> b }`.",
+    "description": "Use `sort` instead of `sort { |a, b| a <=> b }`.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Performance_RedundantStringChars",
+    "title": "Checks for redundant `String#chars`.",
+    "description": "Checks for redundant `String#chars`.",
+    "timeToFix": 5
+  },
+  {
     "patternId": "Performance_RegexpMatch",
     "title": "Use `match?` instead of `Regexp#match`, `String#match`, `Symbol#match`, `Regexp#===`, or `=~` when `MatchData` is not used.",
     "description": "Use `match?` instead of `Regexp#match`, `String#match`, `Symbol#match`, `Regexp#===`, or `=~` when `MatchData` is not used.",
@@ -4578,9 +4624,27 @@
     "timeToFix": 5
   },
   {
+    "patternId": "Performance_ReverseFirst",
+    "title": "Use `last(n).reverse` instead of `reverse.first(n)`.",
+    "description": "Use `last(n).reverse` instead of `reverse.first(n)`.",
+    "timeToFix": 5
+  },
+  {
     "patternId": "Performance_Size",
     "title": "Use `size` instead of `count` for counting the number of elements in `Array` and `Hash`.",
     "description": "Use `size` instead of `count` for counting the number of elements in `Array` and `Hash`.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Performance_SortReverse",
+    "title": "Use `sort.reverse` instead of `sort { |a, b| b <=> a }`.",
+    "description": "Use `sort.reverse` instead of `sort { |a, b| b <=> a }`.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Performance_Squeeze",
+    "title": "Use `squeeze('a')` instead of `gsub(/a+/, 'a')`.",
+    "description": "Use `squeeze('a')` instead of `gsub(/a+/, 'a')`.",
     "timeToFix": 5
   },
   {
@@ -4596,8 +4660,18 @@
       {
         "name": "AutoCorrect",
         "description": "AutoCorrect"
+      },
+      {
+        "name": "SafeMultiline",
+        "description": "SafeMultiline"
       }
     ]
+  },
+  {
+    "patternId": "Performance_StringInclude",
+    "title": "Use `String#include?` instead of a regex match with literal-only pattern.",
+    "description": "Use `String#include?` instead of a regex match with literal-only pattern.",
+    "timeToFix": 5
   },
   {
     "patternId": "Performance_StringReplacement",
@@ -4751,8 +4825,8 @@
   },
   {
     "patternId": "Rails_BelongsTo",
-    "title": "Use `optional: true` instead of `required: false` for `belongs_to` relations'",
-    "description": "Use `optional: true` instead of `required: false` for `belongs_to` relations'",
+    "title": "Use `optional: true` instead of `required: false` for `belongs_to` relations.",
+    "description": "Use `optional: true` instead of `required: false` for `belongs_to` relations.",
     "timeToFix": 5
   },
   {
@@ -4794,6 +4868,12 @@
         "description": "Include"
       }
     ]
+  },
+  {
+    "patternId": "Rails_ContentTag",
+    "title": "Use `tag` instead of `content_tag`.",
+    "description": "Use `tag` instead of `content_tag`.",
+    "timeToFix": 5
   },
   {
     "patternId": "Rails_CreateTableWithTimestamps",
@@ -4850,6 +4930,14 @@
       {
         "name": "Whitelist",
         "description": "Whitelist"
+      },
+      {
+        "name": "AllowedMethods",
+        "description": "AllowedMethods"
+      },
+      {
+        "name": "AllowedReceivers",
+        "description": "AllowedReceivers"
       }
     ]
   },
@@ -4879,8 +4967,8 @@
   },
   {
     "patternId": "Rails_EnvironmentComparison",
-    "title": "Favor `Rails.env.production?` over `Rails.env == 'production'`",
-    "description": "Favor `Rails.env.production?` over `Rails.env == 'production'`",
+    "title": "Favor `Rails.env.production?` over `Rails.env == 'production'`.",
+    "description": "Favor `Rails.env.production?` over `Rails.env == 'production'`.",
     "timeToFix": 5
   },
   {
@@ -4965,8 +5053,8 @@
   },
   {
     "patternId": "Rails_HelperInstanceVariable",
-    "title": "Do not use instance variables in helpers",
-    "description": "Do not use instance variables in helpers",
+    "title": "Do not use instance variables in helpers.",
+    "description": "Do not use instance variables in helpers.",
     "timeToFix": 5,
     "parameters": [
       {
@@ -5063,8 +5151,8 @@
   },
   {
     "patternId": "Rails_NotNullColumn",
-    "title": "Do not add a NOT NULL column without a default value",
-    "description": "Do not add a NOT NULL column without a default value",
+    "title": "Do not add a NOT NULL column without a default value.",
+    "description": "Do not add a NOT NULL column without a default value.",
     "timeToFix": 5,
     "parameters": [
       {
@@ -5090,6 +5178,18 @@
     "title": "The use of `html_safe` or `raw` may be a security risk.",
     "description": "The use of `html_safe` or `raw` may be a security risk.",
     "timeToFix": 5
+  },
+  {
+    "patternId": "Rails_Pick",
+    "title": "Prefer `pick` over `pluck(...).first`.",
+    "description": "Prefer `pick` over `pluck(...).first`.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Safe",
+        "description": "Safe"
+      }
+    ]
   },
   {
     "patternId": "Rails_PluralizationGrammar",
@@ -5168,6 +5268,12 @@
     ]
   },
   {
+    "patternId": "Rails_RedundantForeignKey",
+    "title": "Checks for associations where the `:foreign_key` option is redundant.",
+    "description": "Checks for associations where the `:foreign_key` option is redundant.",
+    "timeToFix": 5
+  },
+  {
     "patternId": "Rails_RedundantReceiverInWithOptions",
     "title": "Checks for redundant receiver in `with_options`.",
     "description": "Checks for redundant receiver in `with_options`.",
@@ -5241,8 +5347,8 @@
   },
   {
     "patternId": "Rails_SafeNavigation",
-    "title": "Use Ruby's safe navigation operator (`&.`) instead of `try!`",
-    "description": "Use Ruby's safe navigation operator (`&.`) instead of `try!`",
+    "title": "Use Ruby's safe navigation operator (`&.`) instead of `try!`.",
+    "description": "Use Ruby's safe navigation operator (`&.`) instead of `try!`.",
     "timeToFix": 5,
     "parameters": [
       {

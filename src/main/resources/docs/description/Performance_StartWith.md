@@ -1,6 +1,9 @@
 
-This cop identifies unnecessary use of a regex where
-`String#start_with?` would suffice.
+This cop identifies unnecessary use of a regex where `String#start_with?` would suffice.
+
+This cop has `SafeMultiline` configuration option that `true` by default because
+`^start` is unsafe as it will behave incompatible with `start_with?`
+for receiver is multiline string.
 
 # Examples
 
@@ -13,15 +16,22 @@ This cop identifies unnecessary use of a regex where
 'abc'.match(/\Aab/)
 /\Aab/.match('abc')
 
+# good
+'abc'.start_with?('ab')
+# good
 'abc'.match?(/^ab/)
 /^ab/.match?('abc')
 'abc' =~ /^ab/
 /^ab/ =~ 'abc'
 'abc'.match(/^ab/)
 /^ab/.match('abc')
-
-# good
-'abc'.start_with?('ab')
+# bad
+'abc'.match?(/^ab/)
+/^ab/.match?('abc')
+'abc' =~ /^ab/
+/^ab/ =~ 'abc'
+'abc'.match(/^ab/)
+/^ab/.match('abc')
 ```
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Performance/StartWith)
