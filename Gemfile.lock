@@ -10,7 +10,7 @@ GEM
     ast (2.4.1)
     coderay (1.1.3)
     concurrent-ruby (1.1.6)
-    dark_finger (0.6.0)
+    dark_finger (0.6.1)
       rubocop (>= 0.51.0)
     i18n (1.8.5)
       concurrent-ruby (~> 1.0)
