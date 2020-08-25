@@ -106,6 +106,8 @@ module RubocopDocs
   end
 
   def self.run
+    blacklist = ["Lint/RedundantCopDisableDirective"]
+
     # Each plugin has a Version, so we retrieve that to know where to look on the gem files for the Cops documentation
     plugins_with_versions = $plugins.map do |plugin|
       version = eval("RuboCop::#{plugin.delete_prefix("rubocop-").capitalize}::Version::STRING")
@@ -130,6 +132,7 @@ module RubocopDocs
     config                     = RuboCop::ConfigLoader.default_configuration
     result                     = []
     cops.each do |cop|
+      next if blacklist.include? cop.cop_name
       result << RubocopDocs::CopDoc.new(cop, config)
     end
     result = result.map(&:as_json)

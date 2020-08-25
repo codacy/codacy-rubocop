@@ -1726,11 +1726,6 @@
       "category": "ErrorProne"
     },
     {
-      "patternId": "Lint_RedundantCopDisableDirective",
-      "level": "Warning",
-      "category": "ErrorProne"
-    },
-    {
       "patternId": "Lint_RedundantCopEnableDirective",
       "level": "Warning",
       "category": "ErrorProne"
@@ -4645,7 +4640,13 @@
     {
       "patternId": "Performance_AncestorsInclude",
       "level": "Warning",
-      "category": "Performance"
+      "category": "Performance",
+      "parameters": [
+        {
+          "name": "Safe",
+          "default": "false"
+        }
+      ]
     },
     {
       "patternId": "Performance_BigDecimalWithNumericArgument",
@@ -4904,7 +4905,17 @@
     {
       "patternId": "Performance_StringInclude",
       "level": "Warning",
-      "category": "Performance"
+      "category": "Performance",
+      "parameters": [
+        {
+          "name": "AutoCorrect",
+          "default": "false"
+        },
+        {
+          "name": "SafeAutoCorrect",
+          "default": "false"
+        }
+      ]
     },
     {
       "patternId": "Performance_StringReplacement",
