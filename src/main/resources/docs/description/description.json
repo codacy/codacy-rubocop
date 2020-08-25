@@ -1644,12 +1644,6 @@
     "timeToFix": 5
   },
   {
-    "patternId": "Lint_RedundantCopDisableDirective",
-    "title": "Checks for rubocop:disable comments that can be removed. Note: this cop is not disabled when disabling all cops. It must be explicitly disabled.",
-    "description": "Checks for rubocop:disable comments that can be removed. Note: this cop is not disabled when disabling all cops. It must be explicitly disabled.",
-    "timeToFix": 5
-  },
-  {
     "patternId": "Lint_RedundantCopEnableDirective",
     "title": "Checks for rubocop:enable comments that can be removed.",
     "description": "Checks for rubocop:enable comments that can be removed.",

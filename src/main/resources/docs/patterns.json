@@ -1726,11 +1726,6 @@
       "category": "ErrorProne"
     },
     {
-      "patternId": "Lint_RedundantCopDisableDirective",
-      "level": "Warning",
-      "category": "ErrorProne"
-    },
-    {
       "patternId": "Lint_RedundantCopEnableDirective",
       "level": "Warning",
       "category": "ErrorProne"
