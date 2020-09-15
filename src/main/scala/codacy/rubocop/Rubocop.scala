@@ -184,14 +184,9 @@ object Rubocop extends Tool {
     }
   }
 
-  private[this] def generateRule(patternId: Pattern.Id, parameters: Option[Set[Parameter.Definition]]): String = {
+  private[this] def generateRule(patternId: Pattern.Id, parameters: Set[Parameter.Definition]): String = {
     val ymlProperties = parameters
-      .map { parameterDef =>
-        parameterDef.map { pattern =>
-          generateParameter(pattern)
-        }
-      }
-      .getOrElse(Set.empty)
+      .map(generateParameter)
     val patternConfig =
       s"""
          |${getPatternNameById(patternId)}:
