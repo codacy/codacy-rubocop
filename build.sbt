@@ -9,7 +9,7 @@ scalaVersion := "2.13.1"
 
 libraryDependencies ++= Seq(
   "org.scala-lang.modules" %% "scala-xml" % "1.2.0" withSources (),
-  "com.codacy" %% "codacy-engine-scala-seed" % "4.0.0",
+  "com.codacy" %% "codacy-engine-scala-seed" % "5.0.0",
   "com.fasterxml.jackson.dataformat" % "jackson-dataformat-yaml" % "2.8.4",
   "com.typesafe.play" %% "play-json" % "2.8.1"
 )

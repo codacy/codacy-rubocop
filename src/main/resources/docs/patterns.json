@@ -5,7 +5,8 @@
     {
       "patternId": "Migration_DepartmentName",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": false
     },
     {
       "patternId": "Bundler_DuplicatedGem",
@@ -20,7 +21,8 @@
             "**/gems.rb"
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Bundler_GemComment",
@@ -41,7 +43,8 @@
 
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Bundler_InsecureProtocolSource",
@@ -56,7 +59,8 @@
             "**/gems.rb"
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Bundler_OrderedGems",
@@ -75,7 +79,8 @@
             "**/gems.rb"
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Gemspec_DuplicatedAssignment",
@@ -88,7 +93,8 @@
             "**/*.gemspec"
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Gemspec_OrderedDependencies",
@@ -105,7 +111,8 @@
             "**/*.gemspec"
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Gemspec_RequiredRubyVersion",
@@ -118,7 +125,8 @@
             "**/*.gemspec"
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Gemspec_RubyVersionGlobalsUsage",
@@ -131,7 +139,8 @@
             "**/*.gemspec"
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Layout_AccessModifierIndentation",
@@ -153,7 +162,8 @@
           "name": "IndentationWidth",
           "default": ""
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Layout_ArgumentAlignment",
@@ -175,7 +185,8 @@
           "name": "IndentationWidth",
           "default": ""
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Layout_ArrayAlignment",
@@ -197,7 +208,8 @@
           "name": "IndentationWidth",
           "default": ""
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Layout_AssignmentIndentation",
@@ -208,7 +220,8 @@
           "name": "IndentationWidth",
           "default": ""
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Layout_BlockAlignment",
@@ -227,12 +240,14 @@
             "start_of_line"
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Layout_BlockEndNewline",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": false
     },
     {
       "patternId": "Layout_CaseIndentation",
@@ -258,7 +273,8 @@
           "name": "IndentationWidth",
           "default": ""
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Layout_ClassStructure",
@@ -281,27 +297,32 @@
             "private_methods"
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Layout_ClosingHeredocIndentation",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": false
     },
     {
       "patternId": "Layout_ClosingParenthesisIndentation",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": false
     },
     {
       "patternId": "Layout_CommentIndentation",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": false
     },
     {
       "patternId": "Layout_ConditionPosition",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": false
     },
     {
       "patternId": "Layout_DefEndAlignment",
@@ -327,7 +348,8 @@
           "name": "Severity",
           "default": "warning"
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Layout_DotPosition",
@@ -345,12 +367,14 @@
             "trailing"
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Layout_ElseAlignment",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": false
     },
     {
       "patternId": "Layout_EmptyComment",
@@ -365,17 +389,20 @@
           "name": "AllowMarginComment",
           "default": "true"
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Layout_EmptyLineAfterGuardClause",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": false
     },
     {
       "patternId": "Layout_EmptyLineAfterMagicComment",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": false
     },
     {
       "patternId": "Layout_EmptyLineBetweenDefs",
@@ -390,7 +417,8 @@
           "name": "NumberOfEmptyLines",
           "default": "1"
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Layout_EmptyLinesAroundAccessModifier",
@@ -408,17 +436,20 @@
             "only_before"
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Layout_EmptyLinesAroundArguments",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": false
     },
     {
       "patternId": "Layout_EmptyLinesAroundBeginBody",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": false
     },
     {
       "patternId": "Layout_EmptyLinesAroundBlockBody",
@@ -436,7 +467,8 @@
             "no_empty_lines"
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Layout_EmptyLinesAroundClassBody",
@@ -458,17 +490,20 @@
             "ending_only"
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Layout_EmptyLinesAroundExceptionHandlingKeywords",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": false
     },
     {
       "patternId": "Layout_EmptyLinesAroundMethodBody",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": false
     },
     {
       "patternId": "Layout_EmptyLinesAroundModuleBody",
@@ -488,12 +523,14 @@
             "no_empty_lines"
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Layout_EmptyLines",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": false
     },
     {
       "patternId": "Layout_EndAlignment",
@@ -520,7 +557,8 @@
           "name": "Severity",
           "default": "warning"
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Layout_EndOfLine",
@@ -539,7 +577,8 @@
             "crlf"
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Layout_ExtraSpacing",
@@ -558,7 +597,8 @@
           "name": "ForceEqualSignAlignment",
           "default": "false"
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Layout_FirstArgumentIndentation",
@@ -582,7 +622,8 @@
           "name": "IndentationWidth",
           "default": ""
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Layout_FirstArrayElementIndentation",
@@ -605,12 +646,14 @@
           "name": "IndentationWidth",
           "default": ""
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Layout_FirstArrayElementLineBreak",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": false
     },
     {
       "patternId": "Layout_FirstHashElementIndentation",
@@ -633,22 +676,26 @@
           "name": "IndentationWidth",
           "default": ""
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Layout_FirstHashElementLineBreak",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": false
     },
     {
       "patternId": "Layout_FirstMethodArgumentLineBreak",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": false
     },
     {
       "patternId": "Layout_FirstMethodParameterLineBreak",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": false
     },
     {
       "patternId": "Layout_FirstParameterIndentation",
@@ -670,7 +717,8 @@
           "name": "IndentationWidth",
           "default": ""
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Layout_HashAlignment",
@@ -718,12 +766,14 @@
             "ignore_explicit"
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Layout_HeredocArgumentClosingParenthesis",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": false
     },
     {
       "patternId": "Layout_HeredocIndentation",
@@ -743,7 +793,8 @@
             "unindent"
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Layout_IndentationConsistency",
@@ -761,7 +812,8 @@
             "indented_internal_methods"
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Layout_IndentationStyle",
@@ -783,7 +835,8 @@
             "tabs"
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Layout_IndentationWidth",
@@ -800,12 +853,14 @@
 
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Layout_InitialIndentation",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": false
     },
     {
       "patternId": "Layout_LeadingCommentSpace",
@@ -820,12 +875,14 @@
           "name": "AllowGemfileRubyComment",
           "default": "false"
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Layout_LeadingEmptyLines",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": false
     },
     {
       "patternId": "Layout_LineLength",
@@ -865,7 +922,8 @@
 
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Layout_MultilineArrayBraceLayout",
@@ -884,12 +942,14 @@
             "same_line"
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Layout_MultilineArrayLineBreaks",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": false
     },
     {
       "patternId": "Layout_MultilineAssignmentLayout",
@@ -918,12 +978,14 @@
             "new_line"
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Layout_MultilineBlockLayout",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": false
     },
     {
       "patternId": "Layout_MultilineHashBraceLayout",
@@ -942,17 +1004,20 @@
             "same_line"
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Layout_MultilineHashKeyLineBreaks",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": false
     },
     {
       "patternId": "Layout_MultilineMethodArgumentLineBreaks",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": false
     },
     {
       "patternId": "Layout_MultilineMethodCallBraceLayout",
@@ -971,7 +1036,8 @@
             "same_line"
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Layout_MultilineMethodCallIndentation",
@@ -994,7 +1060,8 @@
           "name": "IndentationWidth",
           "default": ""
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Layout_MultilineMethodDefinitionBraceLayout",
@@ -1013,7 +1080,8 @@
             "same_line"
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Layout_MultilineOperationIndentation",
@@ -1035,7 +1103,8 @@
           "name": "IndentationWidth",
           "default": ""
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Layout_ParameterAlignment",
@@ -1057,37 +1126,44 @@
           "name": "IndentationWidth",
           "default": ""
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Layout_RescueEnsureAlignment",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": false
     },
     {
       "patternId": "Layout_SpaceAfterColon",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": false
     },
     {
       "patternId": "Layout_SpaceAfterComma",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": false
     },
     {
       "patternId": "Layout_SpaceAfterMethodName",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": false
     },
     {
       "patternId": "Layout_SpaceAfterNot",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": false
     },
     {
       "patternId": "Layout_SpaceAfterSemicolon",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": false
     },
     {
       "patternId": "Layout_SpaceAroundBlockParameters",
@@ -1105,7 +1181,8 @@
             "no_space"
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Layout_SpaceAroundEqualsInParameterDefault",
@@ -1123,17 +1200,20 @@
             "no_space"
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Layout_SpaceAroundKeyword",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": false
     },
     {
       "patternId": "Layout_SpaceAroundMethodCallOperator",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": false
     },
     {
       "patternId": "Layout_SpaceAroundOperators",
@@ -1155,7 +1235,8 @@
             "no_space"
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Layout_SpaceBeforeBlockBraces",
@@ -1184,17 +1265,20 @@
             "no_space"
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Layout_SpaceBeforeComma",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": false
     },
     {
       "patternId": "Layout_SpaceBeforeComment",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": false
     },
     {
       "patternId": "Layout_SpaceBeforeFirstArg",
@@ -1205,12 +1289,14 @@
           "name": "AllowForAlignment",
           "default": "true"
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Layout_SpaceBeforeSemicolon",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": false
     },
     {
       "patternId": "Layout_SpaceInLambdaLiteral",
@@ -1228,12 +1314,14 @@
             "require_space"
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Layout_SpaceInsideArrayPercentLiteral",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": false
     },
     {
       "patternId": "Layout_SpaceInsideArrayLiteralBrackets",
@@ -1263,7 +1351,8 @@
             "no_space"
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Layout_SpaceInsideBlockBraces",
@@ -1296,7 +1385,8 @@
           "name": "SpaceBeforeBlockParameters",
           "default": "true"
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Layout_SpaceInsideHashLiteralBraces",
@@ -1326,7 +1416,8 @@
             "no_space"
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Layout_SpaceInsideParens",
@@ -1344,17 +1435,20 @@
             "no_space"
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Layout_SpaceInsidePercentLiteralDelimiters",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": false
     },
     {
       "patternId": "Layout_SpaceInsideRangeLiteral",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": false
     },
     {
       "patternId": "Layout_SpaceInsideReferenceBrackets",
@@ -1383,7 +1477,8 @@
             "no_space"
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Layout_SpaceInsideStringInterpolation",
@@ -1401,7 +1496,8 @@
             "no_space"
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Layout_TrailingEmptyLines",
@@ -1419,7 +1515,8 @@
             "final_blank_line"
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Layout_TrailingWhitespace",
@@ -1430,22 +1527,26 @@
           "name": "AllowInHeredoc",
           "default": "false"
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Lint_AmbiguousBlockAssociation",
       "level": "Warning",
-      "category": "ErrorProne"
+      "category": "ErrorProne",
+      "enabled": false
     },
     {
       "patternId": "Lint_AmbiguousOperator",
       "level": "Warning",
-      "category": "ErrorProne"
+      "category": "ErrorProne",
+      "enabled": true
     },
     {
       "patternId": "Lint_AmbiguousRegexpLiteral",
       "level": "Warning",
-      "category": "ErrorProne"
+      "category": "ErrorProne",
+      "enabled": true
     },
     {
       "patternId": "Lint_AssignmentInCondition",
@@ -1456,32 +1557,38 @@
           "name": "AllowSafeAssignment",
           "default": "true"
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Lint_BigDecimalNew",
       "level": "Warning",
-      "category": "ErrorProne"
+      "category": "ErrorProne",
+      "enabled": false
     },
     {
       "patternId": "Lint_BooleanSymbol",
       "level": "Warning",
-      "category": "ErrorProne"
+      "category": "ErrorProne",
+      "enabled": false
     },
     {
       "patternId": "Lint_CircularArgumentReference",
       "level": "Warning",
-      "category": "ErrorProne"
+      "category": "ErrorProne",
+      "enabled": false
     },
     {
       "patternId": "Lint_Debugger",
       "level": "Warning",
-      "category": "ErrorProne"
+      "category": "ErrorProne",
+      "enabled": true
     },
     {
       "patternId": "Lint_DeprecatedClassMethods",
       "level": "Warning",
-      "category": "ErrorProne"
+      "category": "ErrorProne",
+      "enabled": false
     },
     {
       "patternId": "Lint_DisjunctiveAssignmentInConstructor",
@@ -1492,32 +1599,38 @@
           "name": "Safe",
           "default": "false"
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Lint_DuplicateCaseCondition",
       "level": "Warning",
-      "category": "ErrorProne"
+      "category": "ErrorProne",
+      "enabled": false
     },
     {
       "patternId": "Lint_DuplicateHashKey",
       "level": "Warning",
-      "category": "ErrorProne"
+      "category": "ErrorProne",
+      "enabled": false
     },
     {
       "patternId": "Lint_DuplicateMethods",
       "level": "Warning",
-      "category": "ErrorProne"
+      "category": "ErrorProne",
+      "enabled": true
     },
     {
       "patternId": "Lint_EachWithObjectArgument",
       "level": "Warning",
-      "category": "ErrorProne"
+      "category": "ErrorProne",
+      "enabled": true
     },
     {
       "patternId": "Lint_ElseLayout",
       "level": "Warning",
-      "category": "ErrorProne"
+      "category": "ErrorProne",
+      "enabled": true
     },
     {
       "patternId": "Lint_EmptyEnsure",
@@ -1528,57 +1641,68 @@
           "name": "AutoCorrect",
           "default": "false"
         }
-      ]
+      ],
+      "enabled": true
     },
     {
       "patternId": "Lint_EmptyExpression",
       "level": "Warning",
-      "category": "ErrorProne"
+      "category": "ErrorProne",
+      "enabled": false
     },
     {
       "patternId": "Lint_EmptyInterpolation",
       "level": "Warning",
-      "category": "ErrorProne"
+      "category": "ErrorProne",
+      "enabled": true
     },
     {
       "patternId": "Lint_EmptyWhen",
       "level": "Warning",
-      "category": "ErrorProne"
+      "category": "ErrorProne",
+      "enabled": false
     },
     {
       "patternId": "Lint_EnsureReturn",
       "level": "Warning",
-      "category": "ErrorProne"
+      "category": "ErrorProne",
+      "enabled": true
     },
     {
       "patternId": "Lint_ErbNewArguments",
       "level": "Warning",
-      "category": "ErrorProne"
+      "category": "ErrorProne",
+      "enabled": false
     },
     {
       "patternId": "Lint_FlipFlop",
       "level": "Warning",
-      "category": "ErrorProne"
+      "category": "ErrorProne",
+      "enabled": false
     },
     {
       "patternId": "Lint_FloatOutOfRange",
       "level": "Warning",
-      "category": "ErrorProne"
+      "category": "ErrorProne",
+      "enabled": false
     },
     {
       "patternId": "Lint_FormatParameterMismatch",
       "level": "Warning",
-      "category": "ErrorProne"
+      "category": "ErrorProne",
+      "enabled": false
     },
     {
       "patternId": "Lint_HeredocMethodCallPosition",
       "level": "Warning",
-      "category": "ErrorProne"
+      "category": "ErrorProne",
+      "enabled": false
     },
     {
       "patternId": "Lint_ImplicitStringConcatenation",
       "level": "Warning",
-      "category": "ErrorProne"
+      "category": "ErrorProne",
+      "enabled": false
     },
     {
       "patternId": "Lint_InheritException",
@@ -1596,32 +1720,38 @@
             "standard_error"
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Lint_IneffectiveAccessModifier",
       "level": "Warning",
-      "category": "ErrorProne"
+      "category": "ErrorProne",
+      "enabled": false
     },
     {
       "patternId": "Lint_InterpolationCheck",
       "level": "Warning",
-      "category": "ErrorProne"
+      "category": "ErrorProne",
+      "enabled": false
     },
     {
       "patternId": "Lint_LiteralAsCondition",
       "level": "Warning",
-      "category": "ErrorProne"
+      "category": "ErrorProne",
+      "enabled": false
     },
     {
       "patternId": "Lint_LiteralInInterpolation",
       "level": "Warning",
-      "category": "ErrorProne"
+      "category": "ErrorProne",
+      "enabled": true
     },
     {
       "patternId": "Lint_Loop",
       "level": "Warning",
-      "category": "ErrorProne"
+      "category": "ErrorProne",
+      "enabled": true
     },
     {
       "patternId": "Lint_MissingCopEnableDirective",
@@ -1632,27 +1762,32 @@
           "name": "MaximumRangeSize",
           "default": "Infinity"
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Lint_MultipleComparison",
       "level": "Warning",
-      "category": "ErrorProne"
+      "category": "ErrorProne",
+      "enabled": false
     },
     {
       "patternId": "Lint_NestedMethodDefinition",
       "level": "Warning",
-      "category": "ErrorProne"
+      "category": "ErrorProne",
+      "enabled": true
     },
     {
       "patternId": "Lint_NestedPercentLiteral",
       "level": "Warning",
-      "category": "ErrorProne"
+      "category": "ErrorProne",
+      "enabled": false
     },
     {
       "patternId": "Lint_NextWithoutAccumulator",
       "level": "Warning",
-      "category": "ErrorProne"
+      "category": "ErrorProne",
+      "enabled": false
     },
     {
       "patternId": "Lint_NonDeterministicRequireOrder",
@@ -1663,12 +1798,14 @@
           "name": "Safe",
           "default": "false"
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Lint_NonLocalExitFromIterator",
       "level": "Warning",
-      "category": "ErrorProne"
+      "category": "ErrorProne",
+      "enabled": false
     },
     {
       "patternId": "Lint_NumberConversion",
@@ -1679,17 +1816,20 @@
           "name": "SafeAutoCorrect",
           "default": "false"
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Lint_OrderedMagicComments",
       "level": "Warning",
-      "category": "ErrorProne"
+      "category": "ErrorProne",
+      "enabled": false
     },
     {
       "patternId": "Lint_ParenthesesAsGroupedExpression",
       "level": "Warning",
-      "category": "ErrorProne"
+      "category": "ErrorProne",
+      "enabled": false
     },
     {
       "patternId": "Lint_PercentStringArray",
@@ -1700,12 +1840,14 @@
           "name": "Safe",
           "default": "false"
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Lint_PercentSymbolArray",
       "level": "Warning",
-      "category": "ErrorProne"
+      "category": "ErrorProne",
+      "enabled": false
     },
     {
       "patternId": "Lint_RaiseException",
@@ -1718,67 +1860,80 @@
             "Gem"
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Lint_RandOne",
       "level": "Warning",
-      "category": "ErrorProne"
+      "category": "ErrorProne",
+      "enabled": false
     },
     {
       "patternId": "Lint_RedundantCopEnableDirective",
       "level": "Warning",
-      "category": "ErrorProne"
+      "category": "ErrorProne",
+      "enabled": false
     },
     {
       "patternId": "Lint_RedundantRequireStatement",
       "level": "Warning",
-      "category": "ErrorProne"
+      "category": "ErrorProne",
+      "enabled": false
     },
     {
       "patternId": "Lint_RedundantSplatExpansion",
       "level": "Warning",
-      "category": "ErrorProne"
+      "category": "ErrorProne",
+      "enabled": false
     },
     {
       "patternId": "Lint_RedundantStringCoercion",
       "level": "Warning",
-      "category": "ErrorProne"
+      "category": "ErrorProne",
+      "enabled": false
     },
     {
       "patternId": "Lint_RedundantWithIndex",
       "level": "Warning",
-      "category": "ErrorProne"
+      "category": "ErrorProne",
+      "enabled": false
     },
     {
       "patternId": "Lint_RedundantWithObject",
       "level": "Warning",
-      "category": "ErrorProne"
+      "category": "ErrorProne",
+      "enabled": false
     },
     {
       "patternId": "Lint_RegexpAsCondition",
       "level": "Warning",
-      "category": "ErrorProne"
+      "category": "ErrorProne",
+      "enabled": false
     },
     {
       "patternId": "Lint_RequireParentheses",
       "level": "Warning",
-      "category": "ErrorProne"
+      "category": "ErrorProne",
+      "enabled": false
     },
     {
       "patternId": "Lint_RescueException",
       "level": "Warning",
-      "category": "ErrorProne"
+      "category": "ErrorProne",
+      "enabled": true
     },
     {
       "patternId": "Lint_RescueType",
       "level": "Warning",
-      "category": "ErrorProne"
+      "category": "ErrorProne",
+      "enabled": false
     },
     {
       "patternId": "Lint_ReturnInVoidContext",
       "level": "Warning",
-      "category": "ErrorProne"
+      "category": "ErrorProne",
+      "enabled": false
     },
     {
       "patternId": "Lint_SafeNavigationConsistency",
@@ -1795,7 +1950,8 @@
             "try!"
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Lint_SafeNavigationChain",
@@ -1812,22 +1968,26 @@
             "try!"
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Lint_SafeNavigationWithEmpty",
       "level": "Warning",
-      "category": "ErrorProne"
+      "category": "ErrorProne",
+      "enabled": false
     },
     {
       "patternId": "Lint_ScriptPermission",
       "level": "Warning",
-      "category": "ErrorProne"
+      "category": "ErrorProne",
+      "enabled": false
     },
     {
       "patternId": "Lint_SendWithMixinArgument",
       "level": "Warning",
-      "category": "ErrorProne"
+      "category": "ErrorProne",
+      "enabled": false
     },
     {
       "patternId": "Lint_ShadowedArgument",
@@ -1838,22 +1998,26 @@
           "name": "IgnoreImplicitReferences",
           "default": "false"
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Lint_ShadowedException",
       "level": "Warning",
-      "category": "ErrorProne"
+      "category": "ErrorProne",
+      "enabled": false
     },
     {
       "patternId": "Lint_ShadowingOuterLocalVariable",
       "level": "Warning",
-      "category": "ErrorProne"
+      "category": "ErrorProne",
+      "enabled": true
     },
     {
       "patternId": "Lint_StructNewOverride",
       "level": "Warning",
-      "category": "ErrorProne"
+      "category": "ErrorProne",
+      "enabled": false
     },
     {
       "patternId": "Lint_SuppressedException",
@@ -1864,17 +2028,20 @@
           "name": "AllowComments",
           "default": "true"
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Lint_Syntax",
       "level": "Warning",
-      "category": "ErrorProne"
+      "category": "ErrorProne",
+      "enabled": false
     },
     {
       "patternId": "Lint_ToJSON",
       "level": "Warning",
-      "category": "ErrorProne"
+      "category": "ErrorProne",
+      "enabled": false
     },
     {
       "patternId": "Lint_UnderscorePrefixedVariableName",
@@ -1885,17 +2052,20 @@
           "name": "AllowKeywordBlockArguments",
           "default": "false"
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Lint_UnifiedInteger",
       "level": "Warning",
-      "category": "ErrorProne"
+      "category": "ErrorProne",
+      "enabled": false
     },
     {
       "patternId": "Lint_UnreachableCode",
       "level": "Warning",
-      "category": "ErrorProne"
+      "category": "ErrorProne",
+      "enabled": true
     },
     {
       "patternId": "Lint_UnusedBlockArgument",
@@ -1910,7 +2080,8 @@
           "name": "AllowUnusedKeywordArguments",
           "default": "false"
         }
-      ]
+      ],
+      "enabled": true
     },
     {
       "patternId": "Lint_UnusedMethodArgument",
@@ -1929,17 +2100,20 @@
           "name": "IgnoreNotImplementedMethods",
           "default": "true"
         }
-      ]
+      ],
+      "enabled": true
     },
     {
       "patternId": "Lint_UriEscapeUnescape",
       "level": "Warning",
-      "category": "ErrorProne"
+      "category": "ErrorProne",
+      "enabled": false
     },
     {
       "patternId": "Lint_UriRegexp",
       "level": "Warning",
-      "category": "ErrorProne"
+      "category": "ErrorProne",
+      "enabled": false
     },
     {
       "patternId": "Lint_UselessAccessModifier",
@@ -1958,22 +2132,26 @@
 
           ]
         }
-      ]
+      ],
+      "enabled": true
     },
     {
       "patternId": "Lint_UselessAssignment",
       "level": "Warning",
-      "category": "ErrorProne"
+      "category": "ErrorProne",
+      "enabled": true
     },
     {
       "patternId": "Lint_UselessComparison",
       "level": "Warning",
-      "category": "ErrorProne"
+      "category": "ErrorProne",
+      "enabled": true
     },
     {
       "patternId": "Lint_UselessElseWithoutRescue",
       "level": "Warning",
-      "category": "ErrorProne"
+      "category": "ErrorProne",
+      "enabled": true
     },
     {
       "patternId": "Lint_UselessSetterCall",
@@ -1984,7 +2162,8 @@
           "name": "Safe",
           "default": "false"
         }
-      ]
+      ],
+      "enabled": true
     },
     {
       "patternId": "Lint_Void",
@@ -1995,7 +2174,8 @@
           "name": "CheckForMethodsWithNoSideEffects",
           "default": "false"
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Metrics_CyclomaticComplexity",
@@ -2012,7 +2192,8 @@
           "name": "Max",
           "default": "6"
         }
-      ]
+      ],
+      "enabled": true
     },
     {
       "patternId": "Metrics_AbcSize",
@@ -2029,7 +2210,8 @@
           "name": "Max",
           "default": "15"
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Metrics_BlockLength",
@@ -2056,7 +2238,8 @@
             "**/*.gemspec"
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Metrics_BlockNesting",
@@ -2071,7 +2254,8 @@
           "name": "Max",
           "default": "3"
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Metrics_ClassLength",
@@ -2086,7 +2270,8 @@
           "name": "Max",
           "default": "100"
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Metrics_MethodLength",
@@ -2107,7 +2292,8 @@
 
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Metrics_ModuleLength",
@@ -2122,7 +2308,8 @@
           "name": "Max",
           "default": "100"
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Metrics_ParameterLists",
@@ -2137,7 +2324,8 @@
           "name": "CountKeywordArgs",
           "default": "true"
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Metrics_PerceivedComplexity",
@@ -2154,17 +2342,20 @@
           "name": "Max",
           "default": "7"
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Naming_AccessorMethodName",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": false
     },
     {
       "patternId": "Naming_AsciiIdentifiers",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": false
     },
     {
       "patternId": "Naming_BlockParameterName",
@@ -2191,17 +2382,20 @@
 
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Naming_ClassAndModuleCamelCase",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": false
     },
     {
       "patternId": "Naming_ConstantName",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": false
     },
     {
       "patternId": "Naming_FileName",
@@ -2271,7 +2465,8 @@
             "XSS"
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Naming_HeredocDelimiterCase",
@@ -2289,7 +2484,8 @@
             "uppercase"
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Naming_HeredocDelimiterNaming",
@@ -2302,7 +2498,8 @@
             "(?-mix:(^|\\s)(EO[A-Z]{1}|END)(\\s|$))"
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Naming_MemoizedInstanceVariableName",
@@ -2321,7 +2518,8 @@
             "optional"
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Naming_MethodName",
@@ -2345,7 +2543,8 @@
 
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Naming_MethodParameterName",
@@ -2382,12 +2581,14 @@
 
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Naming_BinaryOperatorParameterName",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": false
     },
     {
       "patternId": "Naming_PredicateName",
@@ -2429,7 +2630,8 @@
             "spec/**/*"
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Naming_RescuedExceptionsVariableName",
@@ -2440,7 +2642,8 @@
           "name": "PreferredName",
           "default": "e"
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Naming_VariableName",
@@ -2458,7 +2661,8 @@
             "camelCase"
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Naming_VariableNumber",
@@ -2477,7 +2681,8 @@
             "non_integer"
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Style_AccessModifierDeclarations",
@@ -2499,7 +2704,8 @@
           "name": "AllowModifiersOnSymbols",
           "default": "true"
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Style_Alias",
@@ -2517,7 +2723,8 @@
             "prefer_alias_method"
           ]
         }
-      ]
+      ],
+      "enabled": true
     },
     {
       "patternId": "Style_AndOr",
@@ -2535,12 +2742,14 @@
             "conditionals"
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Style_ArrayJoin",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": true
     },
     {
       "patternId": "Style_AsciiComments",
@@ -2553,17 +2762,20 @@
 
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Style_Attr",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": false
     },
     {
       "patternId": "Style_AutoResourceCleanup",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": true
     },
     {
       "patternId": "Style_BarePercentLiterals",
@@ -2581,17 +2793,20 @@
             "bare_percent"
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Style_BeginBlock",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": false
     },
     {
       "patternId": "Style_BlockComments",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": false
     },
     {
       "patternId": "Style_BlockDelimiters",
@@ -2653,7 +2868,8 @@
 
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Style_CaseEquality",
@@ -2664,12 +2880,14 @@
           "name": "AllowOnConstant",
           "default": "false"
         }
-      ]
+      ],
+      "enabled": true
     },
     {
       "patternId": "Style_CharacterLiteral",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": false
     },
     {
       "patternId": "Style_ClassAndModuleChildren",
@@ -2695,7 +2913,8 @@
             "compact"
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Style_ClassCheck",
@@ -2713,17 +2932,20 @@
             "kind_of?"
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Style_ClassMethods",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": false
     },
     {
       "patternId": "Style_ClassVars",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": true
     },
     {
       "patternId": "Style_CollectionMethods",
@@ -2738,17 +2960,20 @@
           "name": "PreferredMethods",
           "default": "{\"collect\"=>\"map\", \"collect!\"=>\"map!\", \"inject\"=>\"reduce\", \"detect\"=>\"find\", \"find_all\"=>\"select\", \"member?\"=>\"include?\"}"
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Style_ColonMethodCall",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": true
     },
     {
       "patternId": "Style_ColonMethodDefinition",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": false
     },
     {
       "patternId": "Style_CommandLiteral",
@@ -2771,7 +2996,8 @@
           "name": "AllowInnerBackticks",
           "default": "false"
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Style_CommentAnnotation",
@@ -2788,12 +3014,14 @@
             "REVIEW"
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Style_CommentedKeyword",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": false
     },
     {
       "patternId": "Style_ConditionalAssignment",
@@ -2819,12 +3047,14 @@
           "name": "IncludeTernaryExpressions",
           "default": "true"
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Style_ConstantVisibility",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": false
     },
     {
       "patternId": "Style_Copyright",
@@ -2839,7 +3069,8 @@
           "name": "AutocorrectNotice",
           "default": ""
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Style_DateTime",
@@ -2850,22 +3081,26 @@
           "name": "AllowCoercion",
           "default": "false"
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Style_DefWithParentheses",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": false
     },
     {
       "patternId": "Style_Dir",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": false
     },
     {
       "patternId": "Style_DisableCopsWithinSourceCodeDirective",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": false
     },
     {
       "patternId": "Style_DocumentationMethod",
@@ -2883,7 +3118,8 @@
           "name": "RequireForNonPublicMethods",
           "default": "false"
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Style_Documentation",
@@ -2897,37 +3133,44 @@
             "test/**/*"
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Style_DoubleCopDisableDirective",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": false
     },
     {
       "patternId": "Style_DoubleNegation",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": true
     },
     {
       "patternId": "Style_EachForSimpleLoop",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": false
     },
     {
       "patternId": "Style_EachWithObject",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": true
     },
     {
       "patternId": "Style_EmptyBlockParameter",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": false
     },
     {
       "patternId": "Style_EmptyCaseCondition",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": false
     },
     {
       "patternId": "Style_EmptyElse",
@@ -2946,17 +3189,20 @@
             "both"
           ]
         }
-      ]
+      ],
+      "enabled": true
     },
     {
       "patternId": "Style_EmptyLambdaParameter",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": false
     },
     {
       "patternId": "Style_EmptyLiteral",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": false
     },
     {
       "patternId": "Style_EmptyMethod",
@@ -2974,32 +3220,38 @@
             "expanded"
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Style_Encoding",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": false
     },
     {
       "patternId": "Style_EndBlock",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": false
     },
     {
       "patternId": "Style_EvalWithLocation",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": false
     },
     {
       "patternId": "Style_EvenOdd",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": true
     },
     {
       "patternId": "Style_ExpandPathArguments",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": false
     },
     {
       "patternId": "Style_ExponentialNotation",
@@ -3018,7 +3270,8 @@
             "integral"
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Style_FloatDivision",
@@ -3038,7 +3291,8 @@
             "fdiv"
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Style_For",
@@ -3056,7 +3310,8 @@
             "for"
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Style_FormatString",
@@ -3075,7 +3330,8 @@
             "percent"
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Style_FormatStringToken",
@@ -3094,7 +3350,8 @@
             "unannotated"
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Style_FrozenStringLiteralComment",
@@ -3117,7 +3374,8 @@
           "name": "Safe",
           "default": "false"
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Style_GlobalVars",
@@ -3130,7 +3388,8 @@
 
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Style_GuardClause",
@@ -3141,7 +3400,8 @@
           "name": "MinBodyLength",
           "default": "1"
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Style_HashEachMethods",
@@ -3152,7 +3412,8 @@
           "name": "Safe",
           "default": "false"
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Style_HashSyntax",
@@ -3180,7 +3441,8 @@
           "name": "PreferHashRocketsForNonAlnumEndingSymbols",
           "default": "false"
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Style_HashTransformKeys",
@@ -3191,7 +3453,8 @@
           "name": "Safe",
           "default": "false"
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Style_HashTransformValues",
@@ -3202,12 +3465,14 @@
           "name": "Safe",
           "default": "false"
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Style_IdenticalConditionalBranches",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": false
     },
     {
       "patternId": "Style_IfInsideElse",
@@ -3218,27 +3483,32 @@
           "name": "AllowIfModifier",
           "default": "false"
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Style_IfUnlessModifier",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": false
     },
     {
       "patternId": "Style_IfUnlessModifierOfIfUnless",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": false
     },
     {
       "patternId": "Style_IfWithSemicolon",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": false
     },
     {
       "patternId": "Style_ImplicitRuntimeError",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": false
     },
     {
       "patternId": "Style_InfiniteLoop",
@@ -3249,7 +3519,8 @@
           "name": "SafeAutoCorrect",
           "default": "true"
         }
-      ]
+      ],
+      "enabled": true
     },
     {
       "patternId": "Style_InverseMethods",
@@ -3268,12 +3539,14 @@
           "name": "InverseBlocks",
           "default": "{:select=>:reject, :select!=>:reject!}"
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Style_InlineComment",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": false
     },
     {
       "patternId": "Style_IpAddresses",
@@ -3286,7 +3559,8 @@
             "::"
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Style_Lambda",
@@ -3305,7 +3579,8 @@
             "literal"
           ]
         }
-      ]
+      ],
+      "enabled": true
     },
     {
       "patternId": "Style_LambdaCall",
@@ -3323,7 +3598,8 @@
             "braces"
           ]
         }
-      ]
+      ],
+      "enabled": true
     },
     {
       "patternId": "Style_LineEndConcatenation",
@@ -3334,7 +3610,8 @@
           "name": "SafeAutoCorrect",
           "default": "false"
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Style_MethodCallWithoutArgsParentheses",
@@ -3347,7 +3624,8 @@
 
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Style_MethodCallWithArgsParentheses",
@@ -3399,12 +3677,14 @@
             "omit_parentheses"
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Style_MethodCalledOnDoEndBlock",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": false
     },
     {
       "patternId": "Style_MethodDefParentheses",
@@ -3423,17 +3703,20 @@
             "require_no_parentheses_except_multiline"
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Style_MethodMissingSuper",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": false
     },
     {
       "patternId": "Style_MinMax",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": false
     },
     {
       "patternId": "Style_MissingElse",
@@ -3452,12 +3735,14 @@
             "both"
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Style_MissingRespondToMissing",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": false
     },
     {
       "patternId": "Style_MixinGrouping",
@@ -3475,12 +3760,14 @@
             "grouped"
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Style_MixinUsage",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": false
     },
     {
       "patternId": "Style_ModuleFunction",
@@ -3507,27 +3794,32 @@
           "name": "SafeAutoCorrect",
           "default": "false"
         }
-      ]
+      ],
+      "enabled": true
     },
     {
       "patternId": "Style_MultilineBlockChain",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": false
     },
     {
       "patternId": "Style_MultilineIfThen",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": true
     },
     {
       "patternId": "Style_MultilineIfModifier",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": false
     },
     {
       "patternId": "Style_MultilineMethodSignature",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": false
     },
     {
       "patternId": "Style_MultilineMemoization",
@@ -3545,22 +3837,26 @@
             "braces"
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Style_MultilineTernaryOperator",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": true
     },
     {
       "patternId": "Style_MultilineWhenThen",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": false
     },
     {
       "patternId": "Style_MultipleComparison",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": false
     },
     {
       "patternId": "Style_MutableConstant",
@@ -3578,7 +3874,8 @@
             "strict"
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Style_NegatedIf",
@@ -3597,7 +3894,8 @@
             "postfix"
           ]
         }
-      ]
+      ],
+      "enabled": true
     },
     {
       "patternId": "Style_NegatedUnless",
@@ -3616,17 +3914,20 @@
             "postfix"
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Style_NegatedWhile",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": true
     },
     {
       "patternId": "Style_NestedModifier",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": false
     },
     {
       "patternId": "Style_NestedParenthesizedCalls",
@@ -3655,12 +3956,14 @@
             "start_with"
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Style_NestedTernaryOperator",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": true
     },
     {
       "patternId": "Style_Next",
@@ -3682,7 +3985,8 @@
             "always"
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Style_NilComparison",
@@ -3700,7 +4004,8 @@
             "comparison"
           ]
         }
-      ]
+      ],
+      "enabled": true
     },
     {
       "patternId": "Style_NonNilCheck",
@@ -3711,12 +4016,14 @@
           "name": "IncludeSemanticChanges",
           "default": "false"
         }
-      ]
+      ],
+      "enabled": true
     },
     {
       "patternId": "Style_Not",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": false
     },
     {
       "patternId": "Style_NumericLiterals",
@@ -3731,7 +4038,8 @@
           "name": "Strict",
           "default": "false"
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Style_NumericLiteralPrefix",
@@ -3749,7 +4057,8 @@
             "zero_only"
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Style_NumericPredicate",
@@ -3791,17 +4100,20 @@
             "spec/**/*"
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Style_OneLineConditional",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": true
     },
     {
       "patternId": "Style_OrAssignment",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": false
     },
     {
       "patternId": "Style_OptionHash",
@@ -3818,17 +4130,20 @@
             "parameters"
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Style_OptionalArguments",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": false
     },
     {
       "patternId": "Style_ParallelAssignment",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": false
     },
     {
       "patternId": "Style_ParenthesesAroundCondition",
@@ -3843,7 +4158,8 @@
           "name": "AllowInMultilineConditions",
           "default": "false"
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Style_PercentLiteralDelimiters",
@@ -3854,7 +4170,8 @@
           "name": "PreferredDelimiters",
           "default": "{\"default\"=>\"()\", \"%i\"=>\"[]\", \"%I\"=>\"[]\", \"%r\"=>\"{}\", \"%w\"=>\"[]\", \"%W\"=>\"[]\"}"
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Style_PercentQLiterals",
@@ -3872,12 +4189,14 @@
             "upper_case_q"
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Style_PerlBackrefs",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": false
     },
     {
       "patternId": "Style_PreferredHashMethods",
@@ -3899,12 +4218,14 @@
             "verbose"
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Style_Proc",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": false
     },
     {
       "patternId": "Style_RaiseArgs",
@@ -3922,57 +4243,68 @@
             "exploded"
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Style_RandomWithOffset",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": false
     },
     {
       "patternId": "Style_RedundantBegin",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": false
     },
     {
       "patternId": "Style_RedundantCapitalW",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": false
     },
     {
       "patternId": "Style_RedundantCondition",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": false
     },
     {
       "patternId": "Style_RedundantConditional",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": false
     },
     {
       "patternId": "Style_RedundantException",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": false
     },
     {
       "patternId": "Style_RedundantFreeze",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": false
     },
     {
       "patternId": "Style_RedundantInterpolation",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": false
     },
     {
       "patternId": "Style_RedundantParentheses",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": false
     },
     {
       "patternId": "Style_RedundantPercentQ",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": false
     },
     {
       "patternId": "Style_RedundantReturn",
@@ -3983,22 +4315,26 @@
           "name": "AllowMultipleReturnValues",
           "default": "false"
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Style_RedundantSelf",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": false
     },
     {
       "patternId": "Style_RedundantSort",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": false
     },
     {
       "patternId": "Style_RedundantSortBy",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": false
     },
     {
       "patternId": "Style_RegexpLiteral",
@@ -4021,12 +4357,14 @@
           "name": "AllowInnerSlashes",
           "default": "false"
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Style_RescueModifier",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": false
     },
     {
       "patternId": "Style_RescueStandardError",
@@ -4044,7 +4382,8 @@
             "explicit"
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Style_ReturnNil",
@@ -4062,7 +4401,8 @@
             "return_nil"
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Style_SafeNavigation",
@@ -4083,17 +4423,20 @@
             "try!"
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Style_Sample",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": false
     },
     {
       "patternId": "Style_SelfAssignment",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": false
     },
     {
       "patternId": "Style_Semicolon",
@@ -4104,12 +4447,14 @@
           "name": "AllowAsExpressionSeparator",
           "default": "false"
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Style_Send",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": false
     },
     {
       "patternId": "Style_SignalException",
@@ -4128,7 +4473,8 @@
             "semantic"
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Style_SingleLineBlockParams",
@@ -4152,7 +4498,8 @@
             }
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Style_SingleLineMethods",
@@ -4163,7 +4510,8 @@
           "name": "AllowIfMethodIsEmpty",
           "default": "true"
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Style_SpecialGlobalVars",
@@ -4185,7 +4533,8 @@
             "use_english_names"
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Style_StabbyLambdaParentheses",
@@ -4203,12 +4552,14 @@
             "require_no_parentheses"
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Style_StderrPuts",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": false
     },
     {
       "patternId": "Style_StringHashKeys",
@@ -4219,7 +4570,8 @@
           "name": "Safe",
           "default": "false"
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Style_StringLiterals",
@@ -4241,7 +4593,8 @@
           "name": "ConsistentQuotesInMultiline",
           "default": "false"
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Style_StringLiteralsInInterpolation",
@@ -4259,7 +4612,8 @@
             "double_quotes"
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Style_StringMethods",
@@ -4270,17 +4624,20 @@
           "name": "PreferredMethods",
           "default": "{\"intern\"=>\"to_sym\"}"
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Style_Strip",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": false
     },
     {
       "patternId": "Style_StructInheritance",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": false
     },
     {
       "patternId": "Style_SymbolArray",
@@ -4302,12 +4659,14 @@
             "brackets"
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Style_SymbolLiteral",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": false
     },
     {
       "patternId": "Style_SymbolProc",
@@ -4325,7 +4684,8 @@
             "define_method"
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Style_TernaryParentheses",
@@ -4348,22 +4708,26 @@
           "name": "AllowSafeAssignment",
           "default": "true"
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Style_TrailingBodyOnClass",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": false
     },
     {
       "patternId": "Style_TrailingBodyOnMethodDefinition",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": false
     },
     {
       "patternId": "Style_TrailingBodyOnModule",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": false
     },
     {
       "patternId": "Style_TrailingCommaInArguments",
@@ -4382,7 +4746,8 @@
             "no_comma"
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Style_TrailingCommaInArrayLiteral",
@@ -4401,7 +4766,8 @@
             "no_comma"
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Style_TrailingCommaInBlockArgs",
@@ -4412,7 +4778,8 @@
           "name": "Safe",
           "default": "false"
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Style_TrailingCommaInHashLiteral",
@@ -4431,12 +4798,14 @@
             "no_comma"
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Style_TrailingMethodEndStatement",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": false
     },
     {
       "patternId": "Style_TrailingUnderscoreVariable",
@@ -4447,7 +4816,8 @@
           "name": "AllowNamedUnderscoreVariables",
           "default": "true"
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Style_TrivialAccessors",
@@ -4492,37 +4862,44 @@
             "to_sym"
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Style_UnlessElse",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": false
     },
     {
       "patternId": "Style_UnpackFirst",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": false
     },
     {
       "patternId": "Style_VariableInterpolation",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": false
     },
     {
       "patternId": "Style_WhenThen",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": false
     },
     {
       "patternId": "Style_WhileUntilDo",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": false
     },
     {
       "patternId": "Style_WhileUntilModifier",
       "level": "Info",
-      "category": "CodeStyle"
+      "category": "CodeStyle",
+      "enabled": false
     },
     {
       "patternId": "Style_WordArray",
@@ -4548,7 +4925,8 @@
           "name": "WordRegex",
           "default": "(?-mix:\\A(?:\\p{Word}|\\p{Word}-\\p{Word}|\\n|\\t)+\\z)"
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Style_YodaCondition",
@@ -4572,7 +4950,8 @@
           "name": "Safe",
           "default": "false"
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Style_ZeroLengthPredicate",
@@ -4583,13 +4962,15 @@
           "name": "Safe",
           "default": "false"
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Security_Eval",
       "level": "Error",
       "category": "Security",
-      "subcategory": "InputValidation"
+      "subcategory": "InputValidation",
+      "enabled": false
     },
     {
       "patternId": "Security_JSONLoad",
@@ -4605,13 +4986,15 @@
           "name": "SafeAutoCorrect",
           "default": "false"
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Security_MarshalLoad",
       "level": "Error",
       "category": "Security",
-      "subcategory": "InsecureModulesLibraries"
+      "subcategory": "InsecureModulesLibraries",
+      "enabled": false
     },
     {
       "patternId": "Security_Open",
@@ -4623,7 +5006,8 @@
           "name": "Safe",
           "default": "false"
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Security_YAMLLoad",
@@ -4635,7 +5019,8 @@
           "name": "SafeAutoCorrect",
           "default": "false"
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Performance_AncestorsInclude",
@@ -4646,22 +5031,26 @@
           "name": "Safe",
           "default": "false"
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Performance_BigDecimalWithNumericArgument",
       "level": "Warning",
-      "category": "Performance"
+      "category": "Performance",
+      "enabled": false
     },
     {
       "patternId": "Performance_BindCall",
       "level": "Warning",
-      "category": "Performance"
+      "category": "Performance",
+      "enabled": false
     },
     {
       "patternId": "Performance_Caller",
       "level": "Warning",
-      "category": "Performance"
+      "category": "Performance",
+      "enabled": false
     },
     {
       "patternId": "Performance_CaseWhenSplat",
@@ -4676,7 +5065,8 @@
           "name": "SafeAutoCorrect",
           "default": "false"
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Performance_Casecmp",
@@ -4687,12 +5077,14 @@
           "name": "Safe",
           "default": "false"
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Performance_CompareWithBlock",
       "level": "Warning",
-      "category": "Performance"
+      "category": "Performance",
+      "enabled": false
     },
     {
       "patternId": "Performance_Count",
@@ -4703,7 +5095,8 @@
           "name": "SafeAutoCorrect",
           "default": "false"
         }
-      ]
+      ],
+      "enabled": true
     },
     {
       "patternId": "Performance_DeletePrefix",
@@ -4714,7 +5107,8 @@
           "name": "SafeMultiline",
           "default": "true"
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Performance_DeleteSuffix",
@@ -4725,7 +5119,8 @@
           "name": "SafeMultiline",
           "default": "true"
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Performance_Detect",
@@ -4736,7 +5131,8 @@
           "name": "SafeAutoCorrect",
           "default": "false"
         }
-      ]
+      ],
+      "enabled": true
     },
     {
       "patternId": "Performance_DoubleStartEndWith",
@@ -4747,7 +5143,8 @@
           "name": "IncludeActiveSupportAliases",
           "default": "false"
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Performance_EndWith",
@@ -4766,12 +5163,14 @@
           "name": "SafeMultiline",
           "default": "true"
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Performance_FixedSize",
       "level": "Warning",
-      "category": "Performance"
+      "category": "Performance",
+      "enabled": false
     },
     {
       "patternId": "Performance_FlatMap",
@@ -4782,7 +5181,8 @@
           "name": "EnabledForFlattenWithoutParams",
           "default": "false"
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Performance_InefficientHashSearch",
@@ -4793,7 +5193,8 @@
           "name": "Safe",
           "default": "false"
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Performance_OpenStruct",
@@ -4804,7 +5205,8 @@
           "name": "Safe",
           "default": "false"
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Performance_RangeInclude",
@@ -4815,22 +5217,26 @@
           "name": "Safe",
           "default": "false"
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Performance_IoReadlines",
       "level": "Warning",
-      "category": "Performance"
+      "category": "Performance",
+      "enabled": false
     },
     {
       "patternId": "Performance_RedundantBlockCall",
       "level": "Warning",
-      "category": "Performance"
+      "category": "Performance",
+      "enabled": false
     },
     {
       "patternId": "Performance_RedundantMatch",
       "level": "Warning",
-      "category": "Performance"
+      "category": "Performance",
+      "enabled": false
     },
     {
       "patternId": "Performance_RedundantMerge",
@@ -4841,47 +5247,56 @@
           "name": "MaxKeyValuePairs",
           "default": "2"
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Performance_RedundantSortBlock",
       "level": "Warning",
-      "category": "Performance"
+      "category": "Performance",
+      "enabled": false
     },
     {
       "patternId": "Performance_RedundantStringChars",
       "level": "Warning",
-      "category": "Performance"
+      "category": "Performance",
+      "enabled": false
     },
     {
       "patternId": "Performance_RegexpMatch",
       "level": "Warning",
-      "category": "Performance"
+      "category": "Performance",
+      "enabled": false
     },
     {
       "patternId": "Performance_ReverseEach",
       "level": "Warning",
-      "category": "Performance"
+      "category": "Performance",
+      "enabled": true
     },
     {
       "patternId": "Performance_ReverseFirst",
       "level": "Warning",
-      "category": "Performance"
+      "category": "Performance",
+      "enabled": false
     },
     {
       "patternId": "Performance_Size",
       "level": "Warning",
-      "category": "Performance"
+      "category": "Performance",
+      "enabled": true
     },
     {
       "patternId": "Performance_SortReverse",
       "level": "Warning",
-      "category": "Performance"
+      "category": "Performance",
+      "enabled": false
     },
     {
       "patternId": "Performance_Squeeze",
       "level": "Warning",
-      "category": "Performance"
+      "category": "Performance",
+      "enabled": false
     },
     {
       "patternId": "Performance_StartWith",
@@ -4900,7 +5315,8 @@
           "name": "SafeMultiline",
           "default": "true"
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Performance_StringInclude",
@@ -4915,12 +5331,14 @@
           "name": "SafeAutoCorrect",
           "default": "false"
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Performance_StringReplacement",
       "level": "Warning",
-      "category": "Performance"
+      "category": "Performance",
+      "enabled": false
     },
     {
       "patternId": "Performance_TimesMap",
@@ -4935,22 +5353,26 @@
           "name": "SafeAutoCorrect",
           "default": "false"
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Performance_UnfreezeString",
       "level": "Warning",
-      "category": "Performance"
+      "category": "Performance",
+      "enabled": false
     },
     {
       "patternId": "Performance_UriDefaultParser",
       "level": "Warning",
-      "category": "Performance"
+      "category": "Performance",
+      "enabled": false
     },
     {
       "patternId": "Performance_ChainArrayAllocation",
       "level": "Warning",
-      "category": "Performance"
+      "category": "Performance",
+      "enabled": false
     },
     {
       "patternId": "Rails_ActionFilter",
@@ -4974,7 +5396,8 @@
             "app/controllers/**/*.rb"
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Rails_ActiveRecordAliases",
@@ -4985,7 +5408,8 @@
           "name": "SafeAutoCorrect",
           "default": "false"
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Rails_ActiveRecordOverride",
@@ -4998,12 +5422,14 @@
             "app/models/**/*.rb"
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Rails_ActiveSupportAliases",
       "level": "Warning",
-      "category": "ErrorProne"
+      "category": "ErrorProne",
+      "enabled": false
     },
     {
       "patternId": "Rails_ApplicationController",
@@ -5014,7 +5440,8 @@
           "name": "SafeAutoCorrect",
           "default": "false"
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Rails_ApplicationJob",
@@ -5025,7 +5452,8 @@
           "name": "SafeAutoCorrect",
           "default": "false"
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Rails_ApplicationMailer",
@@ -5036,7 +5464,8 @@
           "name": "SafeAutoCorrect",
           "default": "false"
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Rails_ApplicationRecord",
@@ -5047,7 +5476,8 @@
           "name": "SafeAutoCorrect",
           "default": "false"
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Rails_AssertNot",
@@ -5060,12 +5490,14 @@
             "**/test/**/*"
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Rails_BelongsTo",
       "level": "Warning",
-      "category": "ErrorProne"
+      "category": "ErrorProne",
+      "enabled": false
     },
     {
       "patternId": "Rails_Blank",
@@ -5084,7 +5516,8 @@
           "name": "UnlessPresent",
           "default": "true"
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Rails_BulkChangeTable",
@@ -5108,12 +5541,14 @@
             "db/migrate/*.rb"
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Rails_ContentTag",
       "level": "Warning",
-      "category": "ErrorProne"
+      "category": "ErrorProne",
+      "enabled": false
     },
     {
       "patternId": "Rails_CreateTableWithTimestamps",
@@ -5126,7 +5561,8 @@
             "db/migrate/*.rb"
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Rails_Date",
@@ -5144,7 +5580,8 @@
             "flexible"
           ]
         }
-      ]
+      ],
+      "enabled": true
     },
     {
       "patternId": "Rails_Delegate",
@@ -5155,12 +5592,14 @@
           "name": "EnforceForPrefixed",
           "default": "true"
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Rails_DelegateAllowBlank",
       "level": "Warning",
-      "category": "ErrorProne"
+      "category": "ErrorProne",
+      "enabled": false
     },
     {
       "patternId": "Rails_DynamicFindBy",
@@ -5185,7 +5624,8 @@
             "Gem::Specification"
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Rails_EnumHash",
@@ -5198,7 +5638,8 @@
             "app/models/**/*.rb"
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Rails_EnumUniqueness",
@@ -5211,12 +5652,14 @@
             "app/models/**/*.rb"
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Rails_EnvironmentComparison",
       "level": "Warning",
-      "category": "ErrorProne"
+      "category": "ErrorProne",
+      "enabled": false
     },
     {
       "patternId": "Rails_Exit",
@@ -5237,7 +5680,8 @@
             "lib/**/*.rake"
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Rails_FilePath",
@@ -5255,7 +5699,8 @@
             "arguments"
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Rails_FindBy",
@@ -5268,7 +5713,8 @@
             "app/models/**/*.rb"
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Rails_FindEach",
@@ -5281,7 +5727,8 @@
             "app/models/**/*.rb"
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Rails_HasAndBelongsToMany",
@@ -5294,7 +5741,8 @@
             "app/models/**/*.rb"
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Rails_HasManyOrHasOneDependent",
@@ -5307,7 +5755,8 @@
             "app/models/**/*.rb"
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Rails_HelperInstanceVariable",
@@ -5320,7 +5769,8 @@
             "app/helpers/**/*.rb"
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Rails_HttpPositionalArguments",
@@ -5334,7 +5784,8 @@
             "test/**/*"
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Rails_HttpStatus",
@@ -5352,7 +5803,8 @@
             "symbolic"
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Rails_IgnoredSkipActionFilterOption",
@@ -5365,17 +5817,20 @@
             "app/controllers/**/*.rb"
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Rails_IndexBy",
       "level": "Warning",
-      "category": "ErrorProne"
+      "category": "ErrorProne",
+      "enabled": false
     },
     {
       "patternId": "Rails_IndexWith",
       "level": "Warning",
-      "category": "ErrorProne"
+      "category": "ErrorProne",
+      "enabled": false
     },
     {
       "patternId": "Rails_InverseOf",
@@ -5388,7 +5843,8 @@
             "app/models/**/*.rb"
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Rails_LexicallyScopedActionFilter",
@@ -5405,12 +5861,14 @@
             "app/controllers/**/*.rb"
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Rails_LinkToBlank",
       "level": "Warning",
-      "category": "ErrorProne"
+      "category": "ErrorProne",
+      "enabled": false
     },
     {
       "patternId": "Rails_NotNullColumn",
@@ -5423,7 +5881,8 @@
             "db/migrate/*.rb"
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Rails_Output",
@@ -5439,12 +5898,14 @@
             "lib/**/*.rb"
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Rails_OutputSafety",
       "level": "Warning",
-      "category": "ErrorProne"
+      "category": "ErrorProne",
+      "enabled": false
     },
     {
       "patternId": "Rails_Pick",
@@ -5455,17 +5916,20 @@
           "name": "Safe",
           "default": "false"
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Rails_PluralizationGrammar",
       "level": "Warning",
-      "category": "ErrorProne"
+      "category": "ErrorProne",
+      "enabled": false
     },
     {
       "patternId": "Rails_Presence",
       "level": "Warning",
-      "category": "ErrorProne"
+      "category": "ErrorProne",
+      "enabled": false
     },
     {
       "patternId": "Rails_Present",
@@ -5484,7 +5948,8 @@
           "name": "UnlessBlank",
           "default": "true"
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Rails_RakeEnvironment",
@@ -5508,7 +5973,8 @@
             "lib/capistrano/tasks/**/*.rake"
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Rails_ReadWriteAttribute",
@@ -5521,7 +5987,8 @@
             "app/models/**/*.rb"
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Rails_RedundantAllowNil",
@@ -5534,22 +6001,26 @@
             "app/models/**/*.rb"
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Rails_RedundantForeignKey",
       "level": "Warning",
-      "category": "ErrorProne"
+      "category": "ErrorProne",
+      "enabled": false
     },
     {
       "patternId": "Rails_RedundantReceiverInWithOptions",
       "level": "Warning",
-      "category": "ErrorProne"
+      "category": "ErrorProne",
+      "enabled": false
     },
     {
       "patternId": "Rails_ReflectionClassName",
       "level": "Warning",
-      "category": "ErrorProne"
+      "category": "ErrorProne",
+      "enabled": false
     },
     {
       "patternId": "Rails_RefuteMethods",
@@ -5573,7 +6044,8 @@
             "**/test/**/*"
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Rails_RelativeDateConstant",
@@ -5584,7 +6056,8 @@
           "name": "AutoCorrect",
           "default": "false"
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Rails_RequestReferer",
@@ -5602,7 +6075,8 @@
             "referrer"
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Rails_ReversibleMigration",
@@ -5615,7 +6089,8 @@
             "db/migrate/*.rb"
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Rails_SafeNavigation",
@@ -5626,7 +6101,8 @@
           "name": "ConvertTry",
           "default": "false"
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Rails_SafeNavigationWithBlank",
@@ -5637,7 +6113,8 @@
           "name": "SafeAutoCorrect",
           "default": "false"
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Rails_SaveBang",
@@ -5658,7 +6135,8 @@
           "name": "SafeAutoCorrect",
           "default": "false"
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Rails_ScopeArgs",
@@ -5671,7 +6149,8 @@
             "app/models/**/*.rb"
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Rails_SkipsModelValidations",
@@ -5700,7 +6179,8 @@
 
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Rails_TimeZone",
@@ -5722,7 +6202,8 @@
             "flexible"
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Rails_UniqBeforePluck",
@@ -5744,7 +6225,8 @@
           "name": "AutoCorrect",
           "default": "false"
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Rails_UniqueValidationWithoutIndex",
@@ -5757,7 +6239,8 @@
             "app/models/**/*.rb"
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Rails_UnknownEnv",
@@ -5772,7 +6255,8 @@
             "production"
           ]
         }
-      ]
+      ],
+      "enabled": false
     },
     {
       "patternId": "Rails_Validation",
@@ -5785,7 +6269,8 @@
             "app/models/**/*.rb"
           ]
         }
-      ]
+      ],
+      "enabled": false
     }
   ]
 }

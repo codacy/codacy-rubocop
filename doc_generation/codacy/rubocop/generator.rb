@@ -145,16 +145,19 @@ module RubocopDoc
         end
       end
 
-      def self.run(baseDir = "src/main/resources", file_path = "rubocop-doc.yml")
+      def self.run(default_patterns, baseDir = "src/main/resources", file_path = "rubocop-doc.yml")
         @baseDir=baseDir
         cops_data = YAML.load_file(file_path)
         patterns  = cops_data.map do |cop_data|
+          patternIdValue = cop_data[:name].gsub("/", "_")
+
           GenerationCommons.withoutNilValues({
-            patternId:  cop_data[:name].gsub("/", "_"),
+            patternId:  patternIdValue,
             level:      level(cop_data),
             category:   category(cop_data),
             subcategory: subcategory(cop_data),
-            parameters: GenerationCommons.parametersFieldValue(parameters(cop_data))
+            parameters: GenerationCommons.parametersFieldValue(parameters(cop_data)),
+            enabled: default_patterns.include?(patternIdValue)
           })
         end
         data      = {
@@ -173,6 +176,59 @@ if ARGV.length == 1
   baseDir=ARGV[0]
 end
 
+default_patterns = [
+  "Style_DoubleNegation",
+  "Style_OneLineConditional",
+  "Lint_EnsureReturn",
+  "Style_EachWithObject",
+  "Rails_Date",
+  "Lint_AmbiguousRegexpLiteral",
+  "Performance_ReverseEach",
+  "Lint_RescueException",
+  "Lint_ShadowingOuterLocalVariable",
+  "Lint_ElseLayout",
+  "Style_NestedTernaryOperator",
+  "Performance_Count",
+  "Lint_EmptyInterpolation",
+  "Style_ClassVars",
+  "Style_Alias",
+  "Style_EvenOdd",
+  "Lint_AmbiguousOperator",
+  "Lint_Debugger",
+  "Lint_EachWithObjectArgument",
+  "Lint_EmptyEnsure",
+  "Lint_Loop",
+  "Lint_NestedMethodDefinition",
+  "Lint_UnreachableCode",
+  "Lint_UnusedMethodArgument",
+  "Lint_UselessAccessModifier",
+  "Lint_UselessElseWithoutRescue",
+  "Lint_UselessSetterCall",
+  "Metrics_CyclomaticComplexity",
+  "Performance_Detect",
+  "Performance_Size",
+  "Lint_UselessAssignment",
+  "Style_ArrayJoin",
+  "Style_AutoResourceCleanup",
+  "Style_CaseEquality",
+  "Style_ColonMethodCall",
+  "Style_EmptyElse",
+  "Style_InfiniteLoop",
+  "Style_Lambda",
+  "Style_LambdaCall",
+  "Style_ModuleFunction",
+  "Style_MultilineTernaryOperator",
+  "Style_NegatedIf",
+  "Style_NegatedWhile",
+  "Lint_DuplicateMethods",
+  "Lint_LiteralInInterpolation",
+  "Lint_UnusedBlockArgument",
+  "Lint_UselessComparison",
+  "Style_MultilineIfThen",
+  "Style_NilComparison",
+  "Style_NonNilCheck"
+]
+
 RubocopDoc::Codacy::Markdown.run(baseDir)
-RubocopDoc::Codacy::PattersJSON.run(baseDir)
+RubocopDoc::Codacy::PattersJSON.run(default_patterns, baseDir)
 RubocopDoc::Codacy::DescriptionJSON.run(baseDir)
