@@ -7,6 +7,7 @@ end
 
 gem "yard"
 gem "rake"
+gem "rdoc", "6.3.0"
 gem "activesupport"
 gem "parser", "2.7.2.0"
 gem "pry"
