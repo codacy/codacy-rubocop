@@ -18,7 +18,7 @@ GEM
     method_source (1.0.0)
     minitest (5.14.2)
     parallel (1.20.1)
-    parser (2.7.2.0)
+    parser (3.0.0.0)
       ast (~> 2.4.1)
     pry (0.13.1)
       coderay (~> 1.1)
@@ -26,6 +26,7 @@ GEM
     rack (2.2.3)
     rainbow (3.0.0)
     rake (13.0.3)
+    rdoc (6.3.0)
     rexml (3.2.4)
     rubocop (0.82.0)
       jaro_winkler (~> 1.5.1)
@@ -65,9 +66,10 @@ PLATFORMS
 DEPENDENCIES
   activesupport
   dark_finger
-  parser (= 2.7.2.0)
+  parser (= 3.0.0.0)
   pry
   rake
+  rdoc (= 6.3.0)
   rubocop (= 0.82.0)
   rubocop-github (= 0.16.0)
   rubocop-migrations (= 0.1.2)
