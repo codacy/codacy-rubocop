@@ -12,8 +12,8 @@ See the [codacy-engine-scala-seed](https://github.com/codacy/codacy-engine-scala
 You can create the docker by doing:
 
 ```
-docker build -t codacy-rubocop-base .
-sbt docker:publishLocal
+sbt universal:stage
+docker build -t codacy-rubocops .
 ```
 
 The docker is ran with the following command:
@@ -36,7 +36,7 @@ There are some important details to take into consideration:
 + private val plugins: List[String] = List("rubocop-performance", "rubocop-style")
 ```
 
-- Add it to src/main/ruby/rubocop_doc/generator.rb
+- Add it to doc_generation/codacy/rubocop/generator.rb
 
 ```diff
 - $plugins = ["rubocop-performance"]
@@ -57,7 +57,8 @@ You can follow the instructions there to make sure your tool is working as expec
 
 ```sh
 bundle update
-bundle install --path vendor/bundle
+bundle config set --local path 'vendor/bundle'
+bundle install
 ./scripts/doc_generate.sh <docs_location>
 ```
 

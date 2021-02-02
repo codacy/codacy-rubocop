@@ -1,0 +1,51 @@
+
+Check that certain constants are fully qualified.
+
+This is not enabled by default because it would mark a lot of offenses
+unnecessarily.
+
+Generally, gems should fully qualify all constants to avoid conflicts with
+the code that uses the gem. Enable this cop without using `Only`/`Ignore`
+
+Large projects will over time end up with one or two constant names that
+are problematic because of a conflict with a library or just internally
+using the same name a namespace and a class. To avoid too many unnecessary
+offenses, Enable this cop with `Only: [The, Constant, Names, Causing, Issues]`
+
+# Examples
+
+```ruby
+# By default checks every constant
+
+# bad
+User
+
+# bad
+User::Login
+
+# good
+::User
+
+# good
+::User::Login# Restrict this cop to only being concerned about certain constants
+
+# bad
+Login
+
+# good
+::Login
+
+# good
+User::Login# Restrict this cop not being concerned about certain constants
+
+# bad
+User
+
+# good
+::User::Login
+
+# good
+Login
+```
+
+[Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Lint/ConstantResolution)

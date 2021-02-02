@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 DOCS_PATH=$1
 rm -rf $DOCS_PATH/docs/description/*
 mkdir -p "$DOCS_PATH/docs/description"
