@@ -26,7 +26,7 @@ module RubocopDoc
         "http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/#{cop_data[:name]}"
       end
 
-      def self.run(baseDir = "src/main/resources", file_path = "rubocop-doc.yml")
+      def self.run(baseDir = "", file_path = "rubocop-doc.yml")
         @baseDir = baseDir
         cops_data = YAML.load_file(file_path)
         cops_data.each do |cop_data|
@@ -70,7 +70,7 @@ module RubocopDoc
         end
       end
 
-      def self.run(baseDir = "src/main/resources", file_path = "rubocop-doc.yml")
+      def self.run(baseDir = "", file_path = "rubocop-doc.yml")
         @baseDir = baseDir
         cops_data    = YAML.load_file(file_path)
         descriptions = cops_data.map do |cop_data|
@@ -145,7 +145,7 @@ module RubocopDoc
         end
       end
 
-      def self.run(default_patterns, baseDir = "src/main/resources", file_path = "rubocop-doc.yml")
+      def self.run(default_patterns, baseDir = "", file_path = "rubocop-doc.yml")
         @baseDir=baseDir
         cops_data = YAML.load_file(file_path)
         patterns  = cops_data.map do |cop_data|
@@ -171,7 +171,7 @@ module RubocopDoc
   end
 end
 
-baseDir="src/main/resources"
+baseDir=""
 if ARGV.length == 1 
   baseDir=ARGV[0]
 end

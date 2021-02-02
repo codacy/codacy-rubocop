@@ -1,0 +1,33 @@
+
+This cop checks for grouping of accessors in `class` and `module` bodies.
+By default it enforces accessors to be placed in grouped declarations,
+but it can be configured to enforce separating them in multiple declarations.
+
+NOTE: `Sorbet` is not compatible with "grouped" style. Consider "separated" style
+or disabling this cop.
+
+# Examples
+
+```ruby
+# bad
+class Foo
+  attr_reader :bar
+  attr_reader :baz
+end
+
+# good
+class Foo
+  attr_reader :bar, :baz
+end# bad
+class Foo
+  attr_reader :bar, :baz
+end
+
+# good
+class Foo
+  attr_reader :bar
+  attr_reader :baz
+end
+```
+
+[Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Style/AccessorGrouping)

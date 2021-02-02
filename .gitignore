@@ -5,8 +5,7 @@
 /project/target/
 /target/
 /vendor
-/doc/
-/src/main/resources/docs/tests/target/
+/docs/tests/target/
 .idea
 .DS_Store
 .bundle/

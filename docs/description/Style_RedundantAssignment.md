@@ -1,0 +1,39 @@
+
+This cop checks for redundant assignment before returning.
+
+# Examples
+
+```ruby
+# bad
+def test
+  x = foo
+  x
+end
+
+# bad
+def test
+  if x
+    z = foo
+    z
+  elsif y
+    z = bar
+    z
+  end
+end
+
+# good
+def test
+  foo
+end
+
+# good
+def test
+  if x
+    foo
+  elsif y
+    bar
+  end
+end
+```
+
+[Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Style/RedundantAssignment)
