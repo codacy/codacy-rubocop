@@ -5,6 +5,8 @@
 !/Gemfile*
 !/target/universal/stage
 !/docs
+!/doc_generation
+!/scripts
 
 # Ignore unnecessary files inside allowed directories
 # This should go after the allowed directories
