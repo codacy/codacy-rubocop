@@ -1,0 +1,22 @@
+version: 2
+updates:
+- package-ecosystem: bundler
+  directory: "/"
+  schedule:
+    interval: daily
+    timezone: Europe/Lisbon
+  open-pull-requests-limit: 10
+  allow:
+  - dependency-type: direct
+  - dependency-type: indirect
+  ignore:
+  - dependency-name: i18n
+    versions:
+    - 1.8.10
+    - 1.8.8
+  - dependency-name: ast
+    versions:
+    - 2.4.2
+  - dependency-name: concurrent-ruby
+    versions:
+    - 1.1.8
