@@ -34,7 +34,6 @@ end
 do_something
 
 # bad
-# When using Ruby 2.5 or later.
 do_something do
   begin
     something

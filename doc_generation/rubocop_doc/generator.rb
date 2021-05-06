@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
 # Plugins with patterns documentation should be added here
-$plugins = ["rubocop-performance","rubocop-rails"]
+$plugins = ["rubocop-performance","rubocop-rails", "rubocop-sorbet"]
 
 # frozen_string_literal: true
 require 'rubocop'
@@ -102,15 +102,17 @@ module RubocopDocs
     puts "Parsing cops to be available for documentation details for #{plugin_with_version}..."
     ruby_version = RbConfig::CONFIG['ruby_version']
     gem_path     = "vendor/bundle/ruby/#{ruby_version}/gems/#{plugin_with_version}"
-    "#{gem_path}/lib/rubocop/cop/*/*.rb"
+    "#{gem_path}/lib/rubocop/cop/**/*.rb"
   end
 
   def self.run
-    blacklist = ["Lint/RedundantCopDisableDirective"]
+    blacklist = ["Lint/RedundantCopDisableDirective", "Sorbet/SignatureCop"]
+    plugins_with_string_version = ["rubocop-sorbet"]
 
     # Each plugin has a Version, so we retrieve that to know where to look on the gem files for the Cops documentation
     plugins_with_versions = $plugins.map do |plugin|
-      version = eval("RuboCop::#{plugin.delete_prefix("rubocop-").capitalize}::Version::STRING")
+      version_name = plugins_with_string_version.include?(plugin) ? "VERSION" : "Version::STRING"
+      version = eval("RuboCop::#{plugin.delete_prefix("rubocop-").capitalize}::#{version_name}")
       "#{plugin}-#{version}"
     end
 
@@ -128,7 +130,7 @@ module RubocopDocs
 
     Rake.application['yard_for_generate_documentation'].invoke
     YARD::Registry.load!
-    cops                       = RuboCop::Cop::Cop.registry
+    cops                       = RuboCop::Cop::Registry.global
     config                     = RuboCop::ConfigLoader.default_configuration
     result                     = []
     cops.each do |cop|

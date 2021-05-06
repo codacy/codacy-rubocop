@@ -19,7 +19,8 @@ module RubocopDoc
       end
 
       def self.content(cop_data)
-        "\n#{cop_data[:description]}\n\n# Examples\n\n#{cop_data[:examples_description]}\n[Source](#{info_url(cop_data)})"
+        examples = cop_data[:examples_description].nil? || cop_data[:examples_description].empty? ? "" : "# Examples\n\n#{cop_data[:examples_description]}\n"
+        "\n#{cop_data[:description]}\n\n#{examples}[Source](#{info_url(cop_data)})"
       end
 
       def self.info_url(cop_data)
@@ -74,14 +75,19 @@ module RubocopDoc
         @baseDir = baseDir
         cops_data    = YAML.load_file(file_path)
         descriptions = cops_data.map do |cop_data|
-          GenerationCommons.withoutNilValues({
-            patternId:   cop_data[:name].gsub("/", "_"),
-            title:       get_title(cop_data[:configuration]['Description']),
-            description: cop_data[:configuration]['Description'],
-            timeToFix:   5,
-            parameters:  GenerationCommons.parametersFieldValue(parameters(cop_data))
-          })
-        end
+          if cop_data[:name].nil? || cop_data[:configuration]['Description'].nil?
+            puts "Skipping #{cop_data[:name]}"
+            nil
+          else
+            GenerationCommons.withoutNilValues({
+              patternId:   cop_data[:name].gsub("/", "_"),
+              title:       get_title(cop_data[:configuration]['Description']),
+              description: cop_data[:configuration]['Description'],
+              timeToFix:   5,
+              parameters:  GenerationCommons.parametersFieldValue(parameters(cop_data))
+            })
+          end
+        end.compact
         generate_json_file(descriptions)
       end
 

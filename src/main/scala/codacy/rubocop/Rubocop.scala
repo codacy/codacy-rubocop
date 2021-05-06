@@ -16,7 +16,7 @@ import scala.io.Source
 import scala.util.{Failure, Properties, Success, Try}
 
 object Rubocop extends Tool {
-  private val plugins: List[String] = List("rubocop-performance", "rubocop-rails", "rubocop-rspec")
+  private val plugins: List[String] = List("rubocop-performance", "rubocop-rails", "rubocop-rspec", "rubocop-sorbet")
 
   // Gemfile is analysed
   private val filesToIgnore: Set[String] =

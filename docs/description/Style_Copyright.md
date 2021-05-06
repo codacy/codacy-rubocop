@@ -11,7 +11,4 @@ This regex string is treated as an unanchored regex. For each file
 that RuboCop scans, a comment that matches this regex must be found or
 an offense is reported.
 
-# Examples
-
-
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Style/Copyright)

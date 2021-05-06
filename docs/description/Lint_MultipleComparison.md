@@ -9,11 +9,10 @@ comparison operators.
 ```ruby
 
 # bad
-
 x < y < z
 10 <= x <= 20
-# good
 
+# good
 x < y && y < z
 10 <= x && x <= 20
 ```

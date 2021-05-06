@@ -22,6 +22,18 @@ class Foo
 
   BAZ = 43
   public_constant :BAZ
+end# bad
+class Foo
+  MyClass = Struct.new()
+end
+
+# good
+class Foo
+  MyClass = Struct.new()
+  public_constant :MyClass
+end# good
+class Foo
+  MyClass = Struct.new()
 end
 ```
 
