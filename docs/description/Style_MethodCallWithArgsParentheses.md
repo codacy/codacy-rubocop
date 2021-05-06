@@ -36,8 +36,12 @@ options.
     to `true` allows the presence of parentheses in such a method call
     even with arguments.
 
-NOTE: Parens are required around a method with arguments when inside an
-endless method definition (>= Ruby 3.0).
+NOTE: Parentheses are still allowed in cases where omitting them
+results in ambiguous or syntactically incorrect code. For example,
+parentheses are required around a method with arguments when inside an
+endless method definition introduced in Ruby 3.0.  Parentheses are also
+allowed when forwarding arguments with the triple-dot syntax introduced
+in Ruby 2.7 as omitting them starts an endless range.
 
 # Examples
 
@@ -73,6 +77,30 @@ foo.enforce(strict: true)
 
 # good
 foo.enforce strict: true
+
+# good
+# Allows parens for calls that won't produce valid Ruby or be ambiguous.
+model.validate strict(true)
+
+# good
+# Allows parens for calls that won't produce valid Ruby or be ambiguous.
+yield path, File.basename(path)
+
+# good
+# Operators methods calls with parens
+array&.[](index)
+
+# good
+# Operators methods without parens, if you prefer
+array.[] index
+
+# good
+# Operators methods calls with parens
+array&.[](index)
+
+# good
+# Operators methods without parens, if you prefer
+array.[] index
 # good
 class Foo
   bar :baz
@@ -117,6 +145,16 @@ Array(1)
 
 # good
 Array 1
+# bad
+"#{t('this.is.bad')}"
+
+# good
+"#{t 'this.is.better'}"
+# good
+"#{t('this.is.good')}"
+
+# good
+"#{t 'this.is.also.good'}"
 ```
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Style/MethodCallWithArgsParentheses)

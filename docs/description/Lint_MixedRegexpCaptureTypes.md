@@ -16,7 +16,4 @@ named captures.
   # good
   /(FOO)(BAR)/
 
-# Examples
-
-
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Lint/MixedRegexpCaptureTypes)

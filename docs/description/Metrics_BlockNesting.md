@@ -8,7 +8,4 @@ towards the nesting level. Set to `true` to count blocks as well.
 
 The maximum level of nesting allowed is configurable.
 
-# Examples
-
-
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Metrics/BlockNesting)
