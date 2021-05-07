@@ -53,6 +53,8 @@ GEM
     rubocop-rspec (2.3.0)
       rubocop (~> 1.0)
       rubocop-ast (>= 1.1.0)
+    rubocop-shopify (2.1.0)
+      rubocop (~> 1.13)
     rubocop-sorbet (0.6.1)
       rubocop
     ruby-progressbar (1.11.0)
@@ -79,6 +81,7 @@ DEPENDENCIES
   rubocop-rails
   rubocop-rake
   rubocop-rspec
+  rubocop-shopify
   rubocop-sorbet
   safe_yaml
   yard
