@@ -107,7 +107,6 @@ module RubocopDocs
 
   def self.run
     blacklist = ["Lint/RedundantCopDisableDirective", "Sorbet/SignatureCop", "GraphQL/OrderedArguments", "GraphQL/OrderedFields"]
-    plugins_with_string_version = ["rubocop-sorbet", "rubocop-graphql"]
 
     # Each plugin has a Version, so we retrieve that to know where to look on the gem files for the Cops documentation
     plugins_with_versions = $plugins.map do |plugin|
