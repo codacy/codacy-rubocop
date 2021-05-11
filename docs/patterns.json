@@ -8224,18 +8224,6 @@
         }
       ],
       "enabled": false
-    },
-    {
-      "patternId": "GraphQL_OrderedArguments",
-      "level": "Info",
-      "category": "CodeStyle",
-      "enabled": false
-    },
-    {
-      "patternId": "GraphQL_OrderedFields",
-      "level": "Info",
-      "category": "CodeStyle",
-      "enabled": false
     }
   ]
 }
