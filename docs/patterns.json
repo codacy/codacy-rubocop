@@ -1,6 +1,6 @@
 {
   "name": "rubocop",
-  "version": "1.13.0",
+  "version": "1.14.0",
   "patterns": [
     {
       "patternId": "Migration_DepartmentName",
@@ -45,6 +45,39 @@
         },
         {
           "name": "OnlyFor",
+          "default": [
+
+          ]
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "Bundler_GemVersion",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "required"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": [
+            "required",
+            "forbidden"
+          ]
+        },
+        {
+          "name": "Include",
+          "default": [
+            "**/*.gemfile",
+            "**/Gemfile",
+            "**/gems.rb"
+          ]
+        },
+        {
+          "name": "AllowedGems",
           "default": [
 
           ]
@@ -1210,6 +1243,12 @@
     },
     {
       "patternId": "Layout_RescueEnsureAlignment",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "Layout_SingleLineBlockChain",
       "level": "Info",
       "category": "CodeStyle",
       "enabled": false
@@ -8056,6 +8095,144 @@
     },
     {
       "patternId": "Sorbet_EnforceSigilOrder",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "GraphQL_ArgumentDescription",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "GraphQL_ArgumentName",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "GraphQL_ExtractInputType",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "MaxArguments",
+          "default": "2"
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "GraphQL_ExtractType",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "MaxFields",
+          "default": "2"
+        },
+        {
+          "name": "Prefixes",
+          "default": [
+            "is",
+            "with",
+            "avg",
+            "min",
+            "max"
+          ]
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "GraphQL_FieldDefinitions",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "group_definitions"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": [
+            "group_definitions",
+            "define_resolver_after_definition"
+          ]
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "GraphQL_FieldDescription",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "GraphQL_FieldHashKey",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "GraphQL_FieldMethod",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "GraphQL_FieldName",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "GraphQL_ResolverMethodLength",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "Max",
+          "default": "10"
+        },
+        {
+          "name": "CountComments",
+          "default": "false"
+        },
+        {
+          "name": "ExcludedMethods",
+          "default": [
+
+          ]
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "GraphQL_ObjectDescription",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "Exclude",
+          "default": [
+            "**/*_schema.rb",
+            "**/base_*.rb"
+          ]
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "GraphQL_OrderedArguments",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "GraphQL_OrderedFields",
       "level": "Info",
       "category": "CodeStyle",
       "enabled": false
