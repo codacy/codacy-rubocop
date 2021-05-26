@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
 # Plugins with patterns documentation should be added here
-$plugins = ["rubocop-performance","rubocop-rails", "rubocop-sorbet"]
+$plugins = ["rubocop-performance","rubocop-rails", "rubocop-sorbet", "rubocop-graphql"]
 
 # frozen_string_literal: true
 require 'rubocop'
@@ -30,7 +30,7 @@ module RubocopDocs
 
           if base_dri.relative?() != exclude_path.relative?()
             exclude_elem
-          else  
+          else
             exclude_path.relative_path_from(base_dri).to_s
           end
 
@@ -106,13 +106,11 @@ module RubocopDocs
   end
 
   def self.run
-    blacklist = ["Lint/RedundantCopDisableDirective", "Sorbet/SignatureCop"]
-    plugins_with_string_version = ["rubocop-sorbet"]
+    blacklist = ["Lint/RedundantCopDisableDirective", "Sorbet/SignatureCop", "GraphQL/OrderedArguments", "GraphQL/OrderedFields"]
 
     # Each plugin has a Version, so we retrieve that to know where to look on the gem files for the Cops documentation
     plugins_with_versions = $plugins.map do |plugin|
-      version_name = plugins_with_string_version.include?(plugin) ? "VERSION" : "Version::STRING"
-      version = eval("RuboCop::#{plugin.delete_prefix("rubocop-").capitalize}::#{version_name}")
+      version = Gem.loaded_specs[plugin].version.to_s
       "#{plugin}-#{version}"
     end
 

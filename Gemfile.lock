@@ -37,8 +37,10 @@ GEM
       rubocop-ast (>= 1.5.0, < 2.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (>= 1.4.0, < 3.0)
-    rubocop-ast (1.5.0)
+    rubocop-ast (1.6.0)
       parser (>= 3.0.1.1)
+    rubocop-graphql (0.9.0)
+      rubocop (>= 0.87, < 2)
     rubocop-migrations (0.1.0)
       rubocop (>= 0.42.0)
     rubocop-performance (1.11.3)
@@ -76,6 +78,7 @@ DEPENDENCIES
   rake
   rdoc
   rubocop (= 1.15.0)
+  rubocop-graphql
   rubocop-migrations
   rubocop-performance
   rubocop-rails
@@ -87,4 +90,4 @@ DEPENDENCIES
   yard
 
 BUNDLED WITH
-   2.2.7
+   2.2.16

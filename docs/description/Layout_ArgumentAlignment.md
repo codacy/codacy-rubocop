@@ -8,30 +8,36 @@ definition are aligned.
 # good
 
 foo :bar,
-    :baz
+    :baz,
+    key: value
 
 foo(
   :bar,
-  :baz
+  :baz,
+  key: value
 )
 
 # bad
 
 foo :bar,
-  :baz
+  :baz,
+  key: value
 
 foo(
   :bar,
-    :baz
+    :baz,
+    key: value
 )# good
 
 foo :bar,
-  :baz
+  :baz,
+  key: value
 
 # bad
 
 foo :bar,
-    :baz
+    :baz,
+    key: value
 ```
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Layout/ArgumentAlignment)

@@ -38,6 +38,30 @@
     ]
   },
   {
+    "patternId": "Bundler_GemVersion",
+    "title": "Requires or forbids specifying gem versions.",
+    "description": "Requires or forbids specifying gem versions.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "EnforcedStyle",
+        "description": "EnforcedStyle"
+      },
+      {
+        "name": "SupportedStyles",
+        "description": "SupportedStyles"
+      },
+      {
+        "name": "Include",
+        "description": "Include"
+      },
+      {
+        "name": "AllowedGems",
+        "description": "AllowedGems"
+      }
+    ]
+  },
+  {
     "patternId": "Bundler_InsecureProtocolSource",
     "title": "The source `:gemcutter`, `:rubygems` and `:rubyforge` are deprecated because HTTP requests are insecure. Please change your source to 'https://rubygems.org' if possible, or 'http://rubygems.org' if not.",
     "description": "The source `:gemcutter`, `:rubygems` and `:rubyforge` are deprecated because HTTP requests are insecure. Please change your source to 'https://rubygems.org' if possible, or 'http://rubygems.org' if not.",
@@ -1037,6 +1061,12 @@
     "patternId": "Layout_RescueEnsureAlignment",
     "title": "Align rescues and ensures correctly.",
     "description": "Align rescues and ensures correctly.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Layout_SingleLineBlockChain",
+    "title": "Put method call on a separate line if chained to a single line block.",
+    "description": "Put method call on a separate line if chained to a single line block.",
     "timeToFix": 5
   },
   {
@@ -5144,6 +5174,12 @@
     ]
   },
   {
+    "patternId": "Style_TopLevelMethodDefinition",
+    "title": "This cop looks for top-level method definitions.",
+    "description": "This cop looks for top-level method definitions.",
+    "timeToFix": 5
+  },
+  {
     "patternId": "Style_TrailingBodyOnClass",
     "title": "Class body goes below class statement.",
     "description": "Class body goes below class statement.",
@@ -7116,5 +7152,123 @@
     "title": "Ensures that Sorbet sigil comes first in a file.",
     "description": "Ensures that Sorbet sigil comes first in a file.",
     "timeToFix": 5
+  },
+  {
+    "patternId": "GraphQL_ArgumentDescription",
+    "title": "Ensures all arguments have a description",
+    "description": "Ensures all arguments have a description",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "GraphQL_ArgumentName",
+    "title": "This cop checks whether argument names are snake_case",
+    "description": "This cop checks whether argument names are snake_case",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "GraphQL_ExtractInputType",
+    "title": "Suggests using input type instead of many arguments",
+    "description": "Suggests using input type instead of many arguments",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "MaxArguments",
+        "description": "MaxArguments"
+      }
+    ]
+  },
+  {
+    "patternId": "GraphQL_ExtractType",
+    "title": "Suggests extracting fields with common prefixes to the separate type",
+    "description": "Suggests extracting fields with common prefixes to the separate type",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "MaxFields",
+        "description": "MaxFields"
+      },
+      {
+        "name": "Prefixes",
+        "description": "Prefixes"
+      }
+    ]
+  },
+  {
+    "patternId": "GraphQL_FieldDefinitions",
+    "title": "Checks consistency of field definitions",
+    "description": "Checks consistency of field definitions",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "EnforcedStyle",
+        "description": "EnforcedStyle"
+      },
+      {
+        "name": "SupportedStyles",
+        "description": "SupportedStyles"
+      }
+    ]
+  },
+  {
+    "patternId": "GraphQL_FieldDescription",
+    "title": "Ensures all fields have a description",
+    "description": "Ensures all fields have a description",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "GraphQL_FieldHashKey",
+    "title": "Checks :hash_key option is used for appropriate fields",
+    "description": "Checks :hash_key option is used for appropriate fields",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "GraphQL_FieldMethod",
+    "title": "Checks :method option is used for appropriate fields",
+    "description": "Checks :method option is used for appropriate fields",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "GraphQL_FieldName",
+    "title": "This cop checks whether field names are snake_case",
+    "description": "This cop checks whether field names are snake_case",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "GraphQL_LegacyDsl",
+    "title": "Checks that types are defined with class-based API",
+    "description": "Checks that types are defined with class-based API",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "GraphQL_ResolverMethodLength",
+    "title": "Checks resolver methods are not too long",
+    "description": "Checks resolver methods are not too long",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Max",
+        "description": "Max"
+      },
+      {
+        "name": "CountComments",
+        "description": "CountComments"
+      },
+      {
+        "name": "ExcludedMethods",
+        "description": "ExcludedMethods"
+      }
+    ]
+  },
+  {
+    "patternId": "GraphQL_ObjectDescription",
+    "title": "Ensures all types have a description",
+    "description": "Ensures all types have a description",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Exclude",
+        "description": "Exclude"
+      }
+    ]
   }
 ]
