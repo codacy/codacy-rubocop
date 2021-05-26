@@ -1,6 +1,6 @@
 {
   "name": "rubocop",
-  "version": "1.14.0",
+  "version": "1.15.0",
   "patterns": [
     {
       "patternId": "Migration_DepartmentName",
@@ -5905,6 +5905,12 @@
       "enabled": false
     },
     {
+      "patternId": "Style_TopLevelMethodDefinition",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
       "patternId": "Style_TrailingBodyOnClass",
       "level": "Info",
       "category": "CodeStyle",
@@ -6027,7 +6033,7 @@
         },
         {
           "name": "AllowDSLWriters",
-          "default": "false"
+          "default": "true"
         },
         {
           "name": "IgnoreClassMethods",
@@ -8184,6 +8190,12 @@
     },
     {
       "patternId": "GraphQL_FieldName",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "GraphQL_LegacyDsl",
       "level": "Info",
       "category": "CodeStyle",
       "enabled": false
