@@ -28,13 +28,13 @@ GEM
     rdoc (6.3.1)
     regexp_parser (2.1.1)
     rexml (3.2.5)
-    rubocop (1.15.0)
+    rubocop (1.16.0)
       parallel (~> 1.10)
       parser (>= 3.0.0.0)
       rainbow (>= 2.2.2, < 4.0)
       regexp_parser (>= 1.8, < 3.0)
       rexml
-      rubocop-ast (>= 1.5.0, < 2.0)
+      rubocop-ast (>= 1.7.0, < 2.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (>= 1.4.0, < 3.0)
     rubocop-ast (1.7.0)
@@ -77,7 +77,7 @@ DEPENDENCIES
   pry
   rake
   rdoc
-  rubocop (= 1.15.0)
+  rubocop (= 1.16.0)
   rubocop-graphql
   rubocop-migrations
   rubocop-performance
