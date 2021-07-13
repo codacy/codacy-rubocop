@@ -2,6 +2,8 @@
 This cop checks for ambiguous block association with method
 when param passed without parentheses.
 
+This cop can customize ignored methods with `IgnoredMethods`.
+
 # Examples
 
 ```ruby
@@ -21,6 +23,8 @@ foo == bar { |b| b.baz }
 # good
 # Lambda arguments require no disambiguation
 foo = ->(bar) { bar.baz }
+# good
+expect { do_something }.to change { object.attribute }
 ```
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Lint/AmbiguousBlockAssociation)

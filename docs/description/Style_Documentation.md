@@ -57,6 +57,12 @@ end
   module Namespace
     extend Foo
   end
+# good
+module A
+  module ClassMethods
+    # ...
+  end
+ end
 ```
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Style/Documentation)

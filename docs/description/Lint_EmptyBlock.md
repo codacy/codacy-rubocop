@@ -3,7 +3,11 @@ This cop checks for blocks without a body.
 Such empty blocks are typically an oversight or we should provide a comment
 be clearer what we're aiming for.
 
-Empty lambdas are ignored by default.
+Empty lambdas and procs are ignored by default.
+
+NOTE: For backwards compatibility, the configuration that allows/disallows
+empty lambdas and procs is called `AllowEmptyLambdas`, even though it also
+applies to procs.
 
 # Examples
 
@@ -27,12 +31,20 @@ allow(subject).to receive(:callable).and_return(-> {})
 
 placeholder = lambda do
 end
-(callable || placeholder).call# bad
+(callable || placeholder).call
+
+proc { }
+
+Proc.new { }# bad
 allow(subject).to receive(:callable).and_return(-> {})
 
 placeholder = lambda do
 end
 (callable || placeholder).call
+
+proc { }
+
+Proc.new { }
 ```
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Lint/EmptyBlock)

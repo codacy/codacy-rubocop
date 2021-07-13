@@ -1,6 +1,18 @@
 
-This cop checks for calls to debugger or pry.
-The cop can be configured to define which methods and receivers must be fixed.
+This cop checks for debug calls (such as `debugger` or `binding.pry`) that should
+not be kept for production code.
+
+The cop can be configured using `DebuggerMethods`. By default, a number of gems
+debug entrypoints are configured (`Kernel`, `Byebug`, `Capybara`, `Pry`, `Rails`,
+and `WebConsole`). Additional methods can be added.
+
+Specific default groups can be disabled if necessary:
+
+[source,yaml]
+----
+Lint/Debugger:
+  WebConsole: ~
+----
 
 # Examples
 
@@ -24,6 +36,11 @@ end
 
 def some_method
   do_something
+end
+# bad (ok during development)
+
+def some_method
+  my_debugger
 end
 ```
 

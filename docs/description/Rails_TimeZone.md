@@ -17,7 +17,7 @@ to use Time.in_time_zone.
 
 # bad
 Time.now
-Time.parse('2015-03-02 19:05:37')
+Time.parse('2015-03-02T19:05:37')
 
 # bad
 Time.current
@@ -25,15 +25,16 @@ Time.at(timestamp).in_time_zone
 
 # good
 Time.zone.now
-Time.zone.parse('2015-03-02 19:05:37')# `flexible` allows usage of `in_time_zone` instead of `zone`.
+Time.zone.parse('2015-03-02T19:05:37')
+Time.zone.parse('2015-03-02T19:05:37Z') # Respect ISO 8601 format with timezone specifier.# `flexible` allows usage of `in_time_zone` instead of `zone`.
 
 # bad
 Time.now
-Time.parse('2015-03-02 19:05:37')
+Time.parse('2015-03-02T19:05:37')
 
 # good
 Time.zone.now
-Time.zone.parse('2015-03-02 19:05:37')
+Time.zone.parse('2015-03-02T19:05:37')
 
 # good
 Time.current

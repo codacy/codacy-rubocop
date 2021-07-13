@@ -4,6 +4,9 @@ This cop identifies places where `Hash#merge!` can be replaced by
 You can set the maximum number of key-value pairs to consider
 an offense with `MaxKeyValuePairs`.
 
+This cop is marked as unsafe because RuboCop cannot determine if the
+receiver of `merge!` is actually a hash or not.
+
 # Examples
 
 ```ruby

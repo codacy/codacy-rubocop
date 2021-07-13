@@ -8,6 +8,14 @@ in a backtrace.
 The cop also checks that the line number given relative to `__LINE__` is
 correct.
 
+This cop will autocorrect incorrect or missing filename and line number
+values. However, if `eval` is called without a binding argument, the cop
+will not attempt to automatically add a binding, or add filename and
+line values.
+
+This cop works only when a string literal is given as a code string.
+No offence is reported if a string variable is given as below:
+
 # Examples
 
 ```ruby
@@ -33,7 +41,12 @@ RUBY
 C.class_eval <<-RUBY, __FILE__, __LINE__ + 1
   def do_something
   end
+RUBY# not checked
+code = <<-RUBY
+  def do_something
+  end
 RUBY
+eval code
 ```
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Style/EvalWithLocation)

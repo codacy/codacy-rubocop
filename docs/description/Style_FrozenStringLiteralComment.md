@@ -6,9 +6,6 @@ files to enable frozen string literals. Frozen string literals may be
 default in future Ruby. The comment will be added below a shebang and
 encoding comment.
 
-Note that the cop will ignore files where the comment exists but is set
-to `false` instead of `true`.
-
 # Examples
 
 ```ruby

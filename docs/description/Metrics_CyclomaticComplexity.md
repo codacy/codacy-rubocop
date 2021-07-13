@@ -26,7 +26,4 @@ Blocks that are calls to builtin iteration methods
     self
   end                                       # total: 6
 
-# Examples
-
-
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Metrics/CyclomaticComplexity)
