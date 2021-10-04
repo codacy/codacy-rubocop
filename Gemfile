@@ -14,7 +14,7 @@ gem "pry"
 gem "safe_yaml"
 gem "dark_finger"
 gem "rubocop-migrations"
-gem "rubocop", "1.22.0"
+gem "rubocop", "1.22.1"
 #Rubocop official modules
 gem "rubocop-performance"
 gem "rubocop-rails"
