@@ -54,8 +54,8 @@ GEM
       rubocop (~> 1.0)
     rubocop-rspec (2.5.0)
       rubocop (~> 1.19)
-    rubocop-shopify (2.2.0)
-      rubocop (~> 1.18)
+    rubocop-shopify (2.3.0)
+      rubocop (~> 1.22)
     rubocop-sorbet (0.6.2)
       rubocop
     ruby-progressbar (1.11.0)
