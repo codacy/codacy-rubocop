@@ -56,8 +56,8 @@ GEM
       rubocop (~> 1.19)
     rubocop-shopify (2.3.0)
       rubocop (~> 1.22)
-    rubocop-sorbet (0.6.2)
-      rubocop
+    rubocop-sorbet (0.6.3)
+      rubocop (>= 0.90.0)
     ruby-progressbar (1.11.0)
     safe_yaml (1.0.5)
     tzinfo (2.0.4)
