@@ -17,7 +17,7 @@ GEM
     method_source (1.0.0)
     minitest (5.14.4)
     parallel (1.21.0)
-    parser (3.0.3.0)
+    parser (3.0.3.2)
       ast (~> 2.4.1)
     pry (0.14.1)
       coderay (~> 1.1)
