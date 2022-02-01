@@ -65,6 +65,28 @@ else
   do_x
   do_z
 end
+
+# bad
+case foo
+in 1
+  do_x
+in 2
+  do_x
+else
+  do_x
+end
+
+# good
+case foo
+in 1
+  do_x
+  do_y
+in 2
+  # nothing
+else
+  do_x
+  do_z
+end
 ```
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Style/IdenticalConditionalBranches)

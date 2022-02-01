@@ -18,6 +18,8 @@ of digits in them.
 10_000_00 # typical representation of $10,000 in cents
 # bad
 10_000_00 # typical representation of $10,000 in cents
+# good
+3000 # You can specify allowed numbers. (e.g. port number)
 ```
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Style/NumericLiterals)

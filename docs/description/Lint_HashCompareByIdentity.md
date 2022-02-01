@@ -1,8 +1,9 @@
 
-Prefer using `Hash#compare_by_identity` than using `object_id` for hash keys.
+Prefer using `Hash#compare_by_identity` rather than using `object_id`
+for hash keys.
 
-This cop is marked as unsafe as a hash possibly can contain other keys
-besides `object_id`s.
+This cop looks for hashes being keyed by objects' `object_id`, using
+one of these methods: `key?`, `has_key?`, `fetch`, `[]` and `[]=`.
 
 # Examples
 

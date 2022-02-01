@@ -2,6 +2,11 @@
 Check for uses of braces or do/end around single line or
 multi-line blocks.
 
+Methods that can be either procedural or functional and cannot be
+categorised from their usage alone is ignored.
+`lambda`, `proc`, and `it` are their defaults.
+Additional methods can be added to the `IgnoredMethods`.
+
 # Examples
 
 ```ruby
@@ -116,6 +121,14 @@ sig {
 }
 def bar(foo)
   puts foo
+end
+# good
+foo = lambda do |x|
+  puts "Hello, #{x}"
+end
+
+foo = lambda do |x|
+  x * 100
 end
 ```
 

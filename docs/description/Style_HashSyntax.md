@@ -15,6 +15,16 @@ all symbols for keys
 * ruby19_no_mixed_keys - forces use of ruby 1.9 syntax and forbids mixed
 syntax hashes
 
+This cop has `EnforcedShorthandSyntax` option.
+It can enforce either the use of the explicit hash value syntax or
+the use of Ruby 3.1's hash value shorthand syntax.
+
+The supported styles are:
+
+* always - forces use of the 3.1 syntax (e.g. {foo:})
+* never - forces use of explicit hash literal value
+* either - accepts both shorthand and explicit use of hash literal value
+
 # Examples
 
 ```ruby
@@ -43,6 +53,21 @@ syntax hashes
 # good
 {a: 1, b: 2}
 {:c => 3, 'd' => 4}
+# bad
+{foo: foo, bar: bar}
+
+# good
+{foo:, bar:}
+# bad
+{foo:, bar:}
+
+# good
+{foo: foo, bar: bar}
+# good
+{foo: foo, bar: bar}
+
+# good
+{foo:, bar:}
 ```
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Style/HashSyntax)

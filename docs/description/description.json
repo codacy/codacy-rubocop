@@ -38,6 +38,26 @@
     ]
   },
   {
+    "patternId": "Bundler_GemFilename",
+    "title": "Enforces the filename for managing gems.",
+    "description": "Enforces the filename for managing gems.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "EnforcedStyle",
+        "description": "EnforcedStyle"
+      },
+      {
+        "name": "SupportedStyles",
+        "description": "SupportedStyles"
+      },
+      {
+        "name": "Include",
+        "description": "Include"
+      }
+    ]
+  },
+  {
     "patternId": "Bundler_GemVersion",
     "title": "Requires or forbids specifying gem versions.",
     "description": "Requires or forbids specifying gem versions.",
@@ -67,6 +87,10 @@
     "description": "The source `:gemcutter`, `:rubygems` and `:rubyforge` are deprecated because HTTP requests are insecure. Please change your source to 'https://rubygems.org' if possible, or 'http://rubygems.org' if not.",
     "timeToFix": 5,
     "parameters": [
+      {
+        "name": "AllowHttpProtocol",
+        "description": "AllowHttpProtocol"
+      },
       {
         "name": "Include",
         "description": "Include"
@@ -131,6 +155,18 @@
         "name": "ConsiderPunctuation",
         "description": "ConsiderPunctuation"
       },
+      {
+        "name": "Include",
+        "description": "Include"
+      }
+    ]
+  },
+  {
+    "patternId": "Gemspec_RequireMFA",
+    "title": "Checks that the gemspec has metadata to require MFA from RubyGems.",
+    "description": "Checks that the gemspec has metadata to require MFA from RubyGems.",
+    "timeToFix": 5,
+    "parameters": [
       {
         "name": "Include",
         "description": "Include"
@@ -277,8 +313,8 @@
   },
   {
     "patternId": "Layout_CaseIndentation",
-    "title": "Indentation of when in a case/when/[else/]end.",
-    "description": "Indentation of when in a case/when/[else/]end.",
+    "title": "Indentation of when in a case/(when|in)/[else/]end.",
+    "description": "Indentation of when in a case/(when|in)/[else/]end.",
     "timeToFix": 5,
     "parameters": [
       {
@@ -331,7 +367,13 @@
     "patternId": "Layout_CommentIndentation",
     "title": "Indentation of comments.",
     "description": "Indentation of comments.",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "AllowForAlignment",
+        "description": "AllowForAlignment"
+      }
+    ]
   },
   {
     "patternId": "Layout_ConditionPosition",
@@ -842,15 +884,31 @@
     "timeToFix": 5
   },
   {
+    "patternId": "Layout_LineEndStringConcatenationIndentation",
+    "title": "Checks the indentation of the next line after a line that ends with a string literal and a backslash.",
+    "description": "Checks the indentation of the next line after a line that ends with a string literal and a backslash.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "EnforcedStyle",
+        "description": "EnforcedStyle"
+      },
+      {
+        "name": "SupportedStyles",
+        "description": "SupportedStyles"
+      },
+      {
+        "name": "IndentationWidth",
+        "description": "IndentationWidth"
+      }
+    ]
+  },
+  {
     "patternId": "Layout_LineLength",
     "title": "Checks that line length does not exceed the configured limit.",
     "description": "Checks that line length does not exceed the configured limit.",
     "timeToFix": 5,
     "parameters": [
-      {
-        "name": "AutoCorrect",
-        "description": "AutoCorrect"
-      },
       {
         "name": "Max",
         "description": "Max"
@@ -1442,6 +1500,28 @@
     "timeToFix": 5
   },
   {
+    "patternId": "Lint_AmbiguousOperatorPrecedence",
+    "title": "Checks for expressions containing multiple binary operations with ambiguous precedence.",
+    "description": "Checks for expressions containing multiple binary operations with ambiguous precedence.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Lint_AmbiguousRange",
+    "title": "Checks for ranges with ambiguous boundaries.",
+    "description": "Checks for ranges with ambiguous boundaries.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "SafeAutoCorrect",
+        "description": "SafeAutoCorrect"
+      },
+      {
+        "name": "RequireParenthesesForMethodChains",
+        "description": "RequireParenthesesForMethodChains"
+      }
+    ]
+  },
+  {
     "patternId": "Lint_AmbiguousRegexpLiteral",
     "title": "Checks for ambiguous regexp literals in the first argument of a method invocation without parentheses.",
     "description": "Checks for ambiguous regexp literals in the first argument of a method invocation without parentheses.",
@@ -1484,8 +1564,8 @@
     "timeToFix": 5,
     "parameters": [
       {
-        "name": "Safe",
-        "description": "Safe"
+        "name": "SafeAutoCorrect",
+        "description": "SafeAutoCorrect"
       }
     ]
   },
@@ -1710,6 +1790,18 @@
     ]
   },
   {
+    "patternId": "Lint_EmptyInPattern",
+    "title": "Checks for the presence of `in` pattern branches without a body.",
+    "description": "Checks for the presence of `in` pattern branches without a body.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "AllowComments",
+        "description": "AllowComments"
+      }
+    ]
+  },
+  {
     "patternId": "Lint_EmptyInterpolation",
     "title": "Checks for empty string interpolation.",
     "description": "Checks for empty string interpolation.",
@@ -1794,6 +1886,24 @@
     "timeToFix": 5
   },
   {
+    "patternId": "Lint_IncompatibleIoSelectWithFiberScheduler",
+    "title": "Checks for `IO.select` that is incompatible with Fiber Scheduler.",
+    "description": "Checks for `IO.select` that is incompatible with Fiber Scheduler.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "SafeAutoCorrect",
+        "description": "SafeAutoCorrect"
+      }
+    ]
+  },
+  {
+    "patternId": "Lint_IneffectiveAccessModifier",
+    "title": "Checks for attempts to use `private` or `protected` to set the visibility of a class method, which does not work.",
+    "description": "Checks for attempts to use `private` or `protected` to set the visibility of a class method, which does not work.",
+    "timeToFix": 5
+  },
+  {
     "patternId": "Lint_InheritException",
     "title": "Avoid inheriting from the `Exception` class.",
     "description": "Avoid inheriting from the `Exception` class.",
@@ -1808,12 +1918,6 @@
         "description": "SupportedStyles"
       }
     ]
-  },
-  {
-    "patternId": "Lint_IneffectiveAccessModifier",
-    "title": "Checks for attempts to use `private` or `protected` to set the visibility of a class method, which does not work.",
-    "description": "Checks for attempts to use `private` or `protected` to set the visibility of a class method, which does not work.",
-    "timeToFix": 5
   },
   {
     "patternId": "Lint_InterpolationCheck",
@@ -1871,8 +1975,8 @@
   },
   {
     "patternId": "Lint_MissingSuper",
-    "title": "This cop checks for the presence of constructors and lifecycle callbacks without calls to `super`'.",
-    "description": "This cop checks for the presence of constructors and lifecycle callbacks without calls to `super`'.",
+    "title": "This cop checks for the presence of constructors and lifecycle callbacks without calls to `super`.",
+    "description": "This cop checks for the presence of constructors and lifecycle callbacks without calls to `super`.",
     "timeToFix": 5
   },
   {
@@ -1885,13 +1989,7 @@
     "patternId": "Lint_MultipleComparison",
     "title": "Use `&&` operator to compare multiple values.",
     "description": "Use `&&` operator to compare multiple values.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "AllowMethodComparison",
-        "description": "AllowMethodComparison"
-      }
-    ]
+    "timeToFix": 5
   },
   {
     "patternId": "Lint_NestedMethodDefinition",
@@ -2111,6 +2209,12 @@
     "patternId": "Lint_RequireParentheses",
     "title": "Use parentheses in the method call to avoid confusion about precedence.",
     "description": "Use parentheses in the method call to avoid confusion about precedence.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Lint_RequireRelativeSelfPath",
+    "title": "Checks for uses a file requiring itself with `require_relative`.",
+    "description": "Checks for uses a file requiring itself with `require_relative`.",
     "timeToFix": 5
   },
   {
@@ -2428,6 +2532,12 @@
     ]
   },
   {
+    "patternId": "Lint_UselessRuby2Keywords",
+    "title": "Finds unnecessary uses of `ruby2_keywords`.",
+    "description": "Finds unnecessary uses of `ruby2_keywords`.",
+    "timeToFix": 5
+  },
+  {
     "patternId": "Lint_UselessSetterCall",
     "title": "Checks for useless setter call to a local variable.",
     "description": "Checks for useless setter call to a local variable.",
@@ -2674,6 +2784,26 @@
     ]
   },
   {
+    "patternId": "Naming_BlockForwarding",
+    "title": "Use anonymous block forwarding.",
+    "description": "Use anonymous block forwarding.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "EnforcedStyle",
+        "description": "EnforcedStyle"
+      },
+      {
+        "name": "SupportedStyles",
+        "description": "SupportedStyles"
+      },
+      {
+        "name": "BlockForwardingName",
+        "description": "BlockForwardingName"
+      }
+    ]
+  },
+  {
     "patternId": "Naming_BlockParameterName",
     "title": "Checks for block parameter names that contain capital letters, end in numbers, or do not meet a minimal length.",
     "description": "Checks for block parameter names that contain capital letters, end in numbers, or do not meet a minimal length.",
@@ -2734,6 +2864,10 @@
         "description": "CheckDefinitionPathHierarchy"
       },
       {
+        "name": "CheckDefinitionPathHierarchyRoots",
+        "description": "CheckDefinitionPathHierarchyRoots"
+      },
+      {
         "name": "Regex",
         "description": "Regex"
       },
@@ -2772,6 +2906,46 @@
       {
         "name": "ForbiddenDelimiters",
         "description": "ForbiddenDelimiters"
+      }
+    ]
+  },
+  {
+    "patternId": "Naming_InclusiveLanguage",
+    "title": "Recommend the use of inclusive language instead of problematic terms.",
+    "description": "Recommend the use of inclusive language instead of problematic terms.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "CheckIdentifiers",
+        "description": "CheckIdentifiers"
+      },
+      {
+        "name": "CheckConstants",
+        "description": "CheckConstants"
+      },
+      {
+        "name": "CheckVariables",
+        "description": "CheckVariables"
+      },
+      {
+        "name": "CheckStrings",
+        "description": "CheckStrings"
+      },
+      {
+        "name": "CheckSymbols",
+        "description": "CheckSymbols"
+      },
+      {
+        "name": "CheckComments",
+        "description": "CheckComments"
+      },
+      {
+        "name": "CheckFilepaths",
+        "description": "CheckFilepaths"
+      },
+      {
+        "name": "FlaggedTerms",
+        "description": "FlaggedTerms"
       }
     ]
   },
@@ -2991,6 +3165,10 @@
     "description": "Use &&/|| instead of and/or.",
     "timeToFix": 5,
     "parameters": [
+      {
+        "name": "SafeAutoCorrect",
+        "description": "SafeAutoCorrect"
+      },
       {
         "name": "EnforcedStyle",
         "description": "EnforcedStyle"
@@ -3316,6 +3494,10 @@
       {
         "name": "Keywords",
         "description": "Keywords"
+      },
+      {
+        "name": "RequireColon",
+        "description": "RequireColon"
       }
     ]
   },
@@ -3323,7 +3505,13 @@
     "patternId": "Style_CommentedKeyword",
     "title": "Do not place comments on the same line as certain keywords.",
     "description": "Do not place comments on the same line as certain keywords.",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "SafeAutoCorrect",
+        "description": "SafeAutoCorrect"
+      }
+    ]
   },
   {
     "patternId": "Style_ConditionalAssignment",
@@ -3618,6 +3806,18 @@
     ]
   },
   {
+    "patternId": "Style_FileRead",
+    "title": "Favor `File.(bin)read` convenience methods.",
+    "description": "Favor `File.(bin)read` convenience methods.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Style_FileWrite",
+    "title": "Favor `File.(bin)write` convenience methods.",
+    "description": "Favor `File.(bin)write` convenience methods.",
+    "timeToFix": 5
+  },
+  {
     "patternId": "Style_FloatDivision",
     "title": "For performing float division, coerce one side only.",
     "description": "For performing float division, coerce one side only.",
@@ -3786,6 +3986,10 @@
       {
         "name": "Safe",
         "description": "Safe"
+      },
+      {
+        "name": "AllowedReceivers",
+        "description": "AllowedReceivers"
       }
     ]
   },
@@ -3820,6 +4024,14 @@
       {
         "name": "SupportedStyles",
         "description": "SupportedStyles"
+      },
+      {
+        "name": "EnforcedShorthandSyntax",
+        "description": "EnforcedShorthandSyntax"
+      },
+      {
+        "name": "SupportedShorthandSyntax",
+        "description": "SupportedShorthandSyntax"
       },
       {
         "name": "UseHashRocketsWithSymbolValues",
@@ -3859,7 +4071,13 @@
     "patternId": "Style_IdenticalConditionalBranches",
     "title": "Checks that conditional statements do not have an identical line at the end of each branch, which can validly be moved out of the conditional.",
     "description": "Checks that conditional statements do not have an identical line at the end of each branch, which can validly be moved out of the conditional.",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "SafeAutoCorrect",
+        "description": "SafeAutoCorrect"
+      }
+    ]
   },
   {
     "patternId": "Style_IfInsideElse",
@@ -3914,9 +4132,15 @@
     "timeToFix": 5
   },
   {
+    "patternId": "Style_InPatternThen",
+    "title": "Checks for `in;` uses in `case` expressions.",
+    "description": "Checks for `in;` uses in `case` expressions.",
+    "timeToFix": 5
+  },
+  {
     "patternId": "Style_InfiniteLoop",
-    "title": "Use Kernel#loop for infinite loops. This cop is unsafe in the body may raise a `StopIteration` exception.",
-    "description": "Use Kernel#loop for infinite loops. This cop is unsafe in the body may raise a `StopIteration` exception.",
+    "title": "Use Kernel#loop for infinite loops. This cop is unsafe if the body may raise a `StopIteration` exception.",
+    "description": "Use Kernel#loop for infinite loops. This cop is unsafe if the body may raise a `StopIteration` exception.",
     "timeToFix": 5,
     "parameters": [
       {
@@ -4018,6 +4242,18 @@
     ]
   },
   {
+    "patternId": "Style_MapToHash",
+    "title": "Prefer `to_h` with a block over `map.to_h`.",
+    "description": "Prefer `to_h` with a block over `map.to_h`.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Safe",
+        "description": "Safe"
+      }
+    ]
+  },
+  {
     "patternId": "Style_MethodCallWithoutArgsParentheses",
     "title": "Do not use parentheses for method calls with no arguments.",
     "description": "Do not use parentheses for method calls with no arguments.",
@@ -4078,6 +4314,34 @@
     ]
   },
   {
+    "patternId": "Style_MultilineInPatternThen",
+    "title": "Do not use `then` for multi-line `in` statement.",
+    "description": "Do not use `then` for multi-line `in` statement.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Style_NumberedParameters",
+    "title": "Restrict the usage of numbered parameters.",
+    "description": "Restrict the usage of numbered parameters.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "EnforcedStyle",
+        "description": "EnforcedStyle"
+      },
+      {
+        "name": "SupportedStyles",
+        "description": "SupportedStyles"
+      }
+    ]
+  },
+  {
+    "patternId": "Style_OpenStructUse",
+    "title": "Avoid using OpenStruct. As of Ruby 3.0, use is officially discouraged due to performance, version compatibility, and potential security issues.",
+    "description": "Avoid using OpenStruct. As of Ruby 3.0, use is officially discouraged due to performance, version compatibility, and potential security issues.",
+    "timeToFix": 5
+  },
+  {
     "patternId": "Style_RedundantAssignment",
     "title": "Checks for redundant assignment before returning.",
     "description": "Checks for redundant assignment before returning.",
@@ -4116,6 +4380,12 @@
         "description": "Safe"
       }
     ]
+  },
+  {
+    "patternId": "Style_RedundantSelfAssignmentBranch",
+    "title": "Checks for places where conditional branch makes redundant self-assignment.",
+    "description": "Checks for places where conditional branch makes redundant self-assignment.",
+    "timeToFix": 5
   },
   {
     "patternId": "Style_SoleNestedConditional",
@@ -4293,7 +4563,13 @@
     "patternId": "Style_MultipleComparison",
     "title": "Avoid comparing a variable with multiple items in a conditional, use Array#include? instead.",
     "description": "Avoid comparing a variable with multiple items in a conditional, use Array#include? instead.",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "AllowMethodComparison",
+        "description": "AllowMethodComparison"
+      }
+    ]
   },
   {
     "patternId": "Style_MutableConstant",
@@ -4444,6 +4720,18 @@
     "timeToFix": 5
   },
   {
+    "patternId": "Style_NumberedParametersLimit",
+    "title": "Avoid excessive numbered params in a single block.",
+    "description": "Avoid excessive numbered params in a single block.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Max",
+        "description": "Max"
+      }
+    ]
+  },
+  {
     "patternId": "Style_NumericLiterals",
     "title": "Add underscores to large numeric literals to improve their readability.",
     "description": "Add underscores to large numeric literals to improve their readability.",
@@ -4456,6 +4744,10 @@
       {
         "name": "Strict",
         "description": "Strict"
+      },
+      {
+        "name": "AllowedNumbers",
+        "description": "AllowedNumbers"
       }
     ]
   },
@@ -4534,6 +4826,10 @@
       {
         "name": "SuspiciousParamNames",
         "description": "SuspiciousParamNames"
+      },
+      {
+        "name": "Allowlist",
+        "description": "Allowlist"
       }
     ]
   },
@@ -4646,6 +4942,22 @@
     "title": "Use proc instead of Proc.new.",
     "description": "Use proc instead of Proc.new.",
     "timeToFix": 5
+  },
+  {
+    "patternId": "Style_QuotedSymbols",
+    "title": "Use a consistent style for quoted symbols.",
+    "description": "Use a consistent style for quoted symbols.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "EnforcedStyle",
+        "description": "EnforcedStyle"
+      },
+      {
+        "name": "SupportedStyles",
+        "description": "SupportedStyles"
+      }
+    ]
   },
   {
     "patternId": "Style_RaiseArgs",
@@ -4777,7 +5089,13 @@
     "patternId": "Style_RedundantSort",
     "title": "Use `min` instead of `sort.first`, `max_by` instead of `sort_by...last`, etc.",
     "description": "Use `min` instead of `sort.first`, `max_by` instead of `sort_by...last`, etc.",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Safe",
+        "description": "Safe"
+      }
+    ]
   },
   {
     "patternId": "Style_RedundantSortBy",
@@ -4868,6 +5186,18 @@
     "title": "Use `sample` instead of `shuffle.first`, `shuffle.last`, and `shuffle[Integer]`.",
     "description": "Use `sample` instead of `shuffle.first`, `shuffle.last`, and `shuffle[Integer]`.",
     "timeToFix": 5
+  },
+  {
+    "patternId": "Style_SelectByRegexp",
+    "title": "Prefer grep/grep_v to select/reject with a regexp match.",
+    "description": "Prefer grep/grep_v to select/reject with a regexp match.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "SafeAutoCorrect",
+        "description": "SafeAutoCorrect"
+      }
+    ]
   },
   {
     "patternId": "Style_SelfAssignment",
@@ -4968,6 +5298,10 @@
         "description": "SafeAutoCorrect"
       },
       {
+        "name": "RequireEnglish",
+        "description": "RequireEnglish"
+      },
+      {
         "name": "EnforcedStyle",
         "description": "EnforcedStyle"
       },
@@ -5020,6 +5354,10 @@
       {
         "name": "Safe",
         "description": "Safe"
+      },
+      {
+        "name": "Mode",
+        "description": "Mode"
       }
     ]
   },
@@ -5093,7 +5431,13 @@
     "patternId": "Style_StructInheritance",
     "title": "Checks for inheritance from Struct.new.",
     "description": "Checks for inheritance from Struct.new.",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "SafeAutoCorrect",
+        "description": "SafeAutoCorrect"
+      }
+    ]
   },
   {
     "patternId": "Style_SwapValues",
@@ -5418,15 +5762,23 @@
     "timeToFix": 5
   },
   {
+    "patternId": "Security_IoMethods",
+    "title": "Checks for the first argument to `IO.read`, `IO.binread`, `IO.write`, `IO.binwrite`, `IO.foreach`, and `IO.readlines`.",
+    "description": "Checks for the first argument to `IO.read`, `IO.binread`, `IO.write`, `IO.binwrite`, `IO.foreach`, and `IO.readlines`.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Safe",
+        "description": "Safe"
+      }
+    ]
+  },
+  {
     "patternId": "Security_JSONLoad",
     "title": "Prefer usage of `JSON.parse` over `JSON.load` due to potential security issues. See reference for more information.",
     "description": "Prefer usage of `JSON.parse` over `JSON.load` due to potential security issues. See reference for more information.",
     "timeToFix": 5,
     "parameters": [
-      {
-        "name": "AutoCorrect",
-        "description": "AutoCorrect"
-      },
       {
         "name": "SafeAutoCorrect",
         "description": "SafeAutoCorrect"
@@ -5489,8 +5841,8 @@
   },
   {
     "patternId": "Performance_BigDecimalWithNumericArgument",
-    "title": "Convert numeric argument to string before passing to BigDecimal.",
-    "description": "Convert numeric argument to string before passing to BigDecimal.",
+    "title": "Convert numeric literal to string and pass it to `BigDecimal`.",
+    "description": "Convert numeric literal to string and pass it to `BigDecimal`.",
     "timeToFix": 5
   },
   {
@@ -5517,10 +5869,6 @@
     "description": "Reordering `when` conditions with a splat to the end of the `when` branches can improve performance.",
     "timeToFix": 5,
     "parameters": [
-      {
-        "name": "AutoCorrect",
-        "description": "AutoCorrect"
-      },
       {
         "name": "SafeAutoCorrect",
         "description": "SafeAutoCorrect"
@@ -5558,6 +5906,12 @@
     "timeToFix": 5
   },
   {
+    "patternId": "Performance_ConcurrentMonotonicTime",
+    "title": "Use `Process.clock_gettime(Process::CLOCK_MONOTONIC)` instead of `Concurrent.monotonic_time`.",
+    "description": "Use `Process.clock_gettime(Process::CLOCK_MONOTONIC)` instead of `Concurrent.monotonic_time`.",
+    "timeToFix": 5
+  },
+  {
     "patternId": "Performance_ConstantRegexp",
     "title": "Finds regular expressions with dynamic components that are all constants.",
     "description": "Finds regular expressions with dynamic components that are all constants.",
@@ -5582,6 +5936,10 @@
     "timeToFix": 5,
     "parameters": [
       {
+        "name": "Safe",
+        "description": "Safe"
+      },
+      {
         "name": "SafeMultiline",
         "description": "SafeMultiline"
       }
@@ -5593,6 +5951,10 @@
     "description": "Use `delete_suffix` instead of `gsub`.",
     "timeToFix": 5,
     "parameters": [
+      {
+        "name": "Safe",
+        "description": "Safe"
+      },
       {
         "name": "SafeMultiline",
         "description": "SafeMultiline"
@@ -5834,15 +6196,17 @@
     ]
   },
   {
+    "patternId": "Performance_StringIdentifierArgument",
+    "title": "Use symbol identifier argument instead of string identifier argument.",
+    "description": "Use symbol identifier argument instead of string identifier argument.",
+    "timeToFix": 5
+  },
+  {
     "patternId": "Performance_StringInclude",
     "title": "Use `String#include?` instead of a regex match with literal-only pattern.",
     "description": "Use `String#include?` instead of a regex match with literal-only pattern.",
     "timeToFix": 5,
     "parameters": [
-      {
-        "name": "AutoCorrect",
-        "description": "AutoCorrect"
-      },
       {
         "name": "SafeAutoCorrect",
         "description": "SafeAutoCorrect"
@@ -5859,7 +6223,17 @@
     "patternId": "Performance_Sum",
     "title": "Use `sum` instead of a custom array summation.",
     "description": "Use `sum` instead of a custom array summation.",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "SafeAutoCorrect",
+        "description": "SafeAutoCorrect"
+      },
+      {
+        "name": "OnlySumOrWithInitialValue",
+        "description": "OnlySumOrWithInitialValue"
+      }
+    ]
   },
   {
     "patternId": "Performance_TimesMap",
@@ -5867,10 +6241,6 @@
     "description": "Checks for .times.map calls.",
     "timeToFix": 5,
     "parameters": [
-      {
-        "name": "AutoCorrect",
-        "description": "AutoCorrect"
-      },
       {
         "name": "SafeAutoCorrect",
         "description": "SafeAutoCorrect"
@@ -5962,6 +6332,18 @@
     "title": "Avoid ActiveSupport aliases of standard ruby methods: `String#starts_with?`, `String#ends_with?`, `Array#append`, `Array#prepend`.",
     "description": "Avoid ActiveSupport aliases of standard ruby methods: `String#starts_with?`, `String#ends_with?`, `Array#append`, `Array#prepend`.",
     "timeToFix": 5
+  },
+  {
+    "patternId": "Rails_AddColumnIndex",
+    "title": "Rails migrations don't make use of a given `index` key, but also doesn't given an error when it's used, so it makes it seem like an index might be used.",
+    "description": "Rails migrations don't make use of a given `index` key, but also doesn't given an error when it's used, so it makes it seem like an index might be used.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Include",
+        "description": "Include"
+      }
+    ]
   },
   {
     "patternId": "Rails_AfterCommitOverride",
@@ -6104,10 +6486,28 @@
     ]
   },
   {
+    "patternId": "Rails_CompactBlank",
+    "title": "Checks if collection can be blank-compacted with `compact_blank`.",
+    "description": "Checks if collection can be blank-compacted with `compact_blank`.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Safe",
+        "description": "Safe"
+      }
+    ]
+  },
+  {
     "patternId": "Rails_ContentTag",
-    "title": "Use `tag` instead of `content_tag`.",
-    "description": "Use `tag` instead of `content_tag`.",
-    "timeToFix": 5
+    "title": "Use `tag.something` instead of `tag(:something)`.",
+    "description": "Use `tag.something` instead of `tag(:something)`.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Exclude",
+        "description": "Exclude"
+      }
+    ]
   },
   {
     "patternId": "Rails_CreateTableWithTimestamps",
@@ -6118,6 +6518,10 @@
       {
         "name": "Include",
         "description": "Include"
+      },
+      {
+        "name": "Exclude",
+        "description": "Exclude"
       }
     ]
   },
@@ -6134,6 +6538,10 @@
       {
         "name": "SupportedStyles",
         "description": "SupportedStyles"
+      },
+      {
+        "name": "AllowToTime",
+        "description": "AllowToTime"
       }
     ]
   },
@@ -6162,6 +6570,12 @@
     "timeToFix": 5
   },
   {
+    "patternId": "Rails_DurationArithmetic",
+    "title": "Do not use duration as arithmetic operand with `Time.current`.",
+    "description": "Do not use duration as arithmetic operand with `Time.current`.",
+    "timeToFix": 5
+  },
+  {
     "patternId": "Rails_DynamicFindBy",
     "title": "Use `find_by` instead of dynamic `find_by_*`.",
     "description": "Use `find_by` instead of dynamic `find_by_*`.",
@@ -6184,6 +6598,12 @@
         "description": "AllowedReceivers"
       }
     ]
+  },
+  {
+    "patternId": "Rails_EagerEvaluationLogMessage",
+    "title": "Checks that blocks are used for interpolated strings passed to `Rails.logger.debug`.",
+    "description": "Checks that blocks are used for interpolated strings passed to `Rails.logger.debug`.",
+    "timeToFix": 5
   },
   {
     "patternId": "Rails_EnumHash",
@@ -6256,6 +6676,12 @@
     ]
   },
   {
+    "patternId": "Rails_ExpandedDateRange",
+    "title": "Checks for expanded date range.",
+    "description": "Checks for expanded date range.",
+    "timeToFix": 5
+  },
+  {
     "patternId": "Rails_FilePath",
     "title": "Use `Rails.root.join` for file path joining.",
     "description": "Use `Rails.root.join` for file path joining.",
@@ -6277,6 +6703,10 @@
     "description": "Prefer find_by over where.first.",
     "timeToFix": 5,
     "parameters": [
+      {
+        "name": "IgnoreWhereFirst",
+        "description": "IgnoreWhereFirst"
+      },
       {
         "name": "Include",
         "description": "Include"
@@ -6370,6 +6800,18 @@
     ]
   },
   {
+    "patternId": "Rails_I18nLocaleAssignment",
+    "title": "Prefer the usage of `I18n.with_locale` instead of manually updating `I18n.locale` value.",
+    "description": "Prefer the usage of `I18n.with_locale` instead of manually updating `I18n.locale` value.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Include",
+        "description": "Include"
+      }
+    ]
+  },
+  {
     "patternId": "Rails_IgnoredSkipActionFilterOption",
     "title": "Checks that `if` and `only` (or `except`) are not used together as options of `skip_*` action filter.",
     "description": "Checks that `if` and `only` (or `except`) are not used together as options of `skip_*` action filter.",
@@ -6405,6 +6847,10 @@
     "description": "Checks for associations where the inverse cannot be determined automatically.",
     "timeToFix": 5,
     "parameters": [
+      {
+        "name": "IgnoreScopes",
+        "description": "IgnoreScopes"
+      },
       {
         "name": "Include",
         "description": "Include"
@@ -6497,6 +6943,10 @@
     "description": "Checks for calls to puts, print, etc.",
     "timeToFix": 5,
     "parameters": [
+      {
+        "name": "SafeAutoCorrect",
+        "description": "SafeAutoCorrect"
+      },
       {
         "name": "Include",
         "description": "Include"
@@ -6642,10 +7092,34 @@
     "timeToFix": 5
   },
   {
+    "patternId": "Rails_RedundantPresenceValidationOnBelongsTo",
+    "title": "Checks for redundant presence validation on belongs_to association.",
+    "description": "Checks for redundant presence validation on belongs_to association.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "SafeAutoCorrect",
+        "description": "SafeAutoCorrect"
+      }
+    ]
+  },
+  {
     "patternId": "Rails_RedundantReceiverInWithOptions",
     "title": "Checks for redundant receiver in `with_options`.",
     "description": "Checks for redundant receiver in `with_options`.",
     "timeToFix": 5
+  },
+  {
+    "patternId": "Rails_RedundantTravelBack",
+    "title": "This cop checks for redundant `travel_back` calls.",
+    "description": "This cop checks for redundant `travel_back` calls.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Include",
+        "description": "Include"
+      }
+    ]
   },
   {
     "patternId": "Rails_ReflectionClassName",
@@ -6686,8 +7160,8 @@
     "timeToFix": 5,
     "parameters": [
       {
-        "name": "AutoCorrect",
-        "description": "AutoCorrect"
+        "name": "SafeAutoCorrect",
+        "description": "SafeAutoCorrect"
       }
     ]
   },
@@ -6756,6 +7230,12 @@
     ]
   },
   {
+    "patternId": "Rails_RootJoinChain",
+    "title": "Use a single `#join` instead of chaining on `Rails.root` or `Rails.public_path`.",
+    "description": "Use a single `#join` instead of chaining on `Rails.root` or `Rails.public_path`.",
+    "timeToFix": 5
+  },
+  {
     "patternId": "Rails_SafeNavigation",
     "title": "Use Ruby's safe navigation operator (`&.`) instead of `try!`.",
     "description": "Use Ruby's safe navigation operator (`&.`) instead of `try!`.",
@@ -6798,6 +7278,12 @@
         "description": "SafeAutoCorrect"
       }
     ]
+  },
+  {
+    "patternId": "Rails_SchemaComment",
+    "title": "This cop enforces the use of the `comment` option when adding a new table or column to the database during a migration.",
+    "description": "This cop enforces the use of the `comment` option when adding a new table or column to the database during a migration.",
+    "timeToFix": 5
   },
   {
     "patternId": "Rails_ScopeArgs",
@@ -6862,8 +7348,8 @@
     "timeToFix": 5,
     "parameters": [
       {
-        "name": "Safe",
-        "description": "Safe"
+        "name": "SafeAutoCorrect",
+        "description": "SafeAutoCorrect"
       },
       {
         "name": "EnforcedStyle",
@@ -6908,17 +7394,13 @@
       {
         "name": "SafeAutoCorrect",
         "description": "SafeAutoCorrect"
-      },
-      {
-        "name": "AutoCorrect",
-        "description": "AutoCorrect"
       }
     ]
   },
   {
     "patternId": "Rails_UniqueValidationWithoutIndex",
-    "title": "Uniqueness validation should be with a unique index.",
-    "description": "Uniqueness validation should be with a unique index.",
+    "title": "Uniqueness validation should have a unique index on the database column.",
+    "description": "Uniqueness validation should have a unique index on the database column.",
     "timeToFix": 5,
     "parameters": [
       {
@@ -6936,6 +7418,18 @@
       {
         "name": "Environments",
         "description": "Environments"
+      }
+    ]
+  },
+  {
+    "patternId": "Rails_UnusedIgnoredColumns",
+    "title": "Remove a column that does not exist from `ignored_columns`.",
+    "description": "Remove a column that does not exist from `ignored_columns`.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Include",
+        "description": "Include"
       }
     ]
   },
@@ -7002,18 +7496,6 @@
     "timeToFix": 5
   },
   {
-    "patternId": "Sorbet_ForbidExtendTSigHelpersInShims",
-    "title": "Forbid the use of `extend T::Sig` and `extend T::Helpers` in RBI shims",
-    "description": "Forbid the use of `extend T::Sig` and `extend T::Helpers` in RBI shims",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Include",
-        "description": "Include"
-      }
-    ]
-  },
-  {
     "patternId": "Sorbet_ForbidSuperclassConstLiteral",
     "title": "Forbid superclasses which are non-literal constants.",
     "description": "Forbid superclasses which are non-literal constants.",
@@ -7038,6 +7520,58 @@
     "timeToFix": 5
   },
   {
+    "patternId": "Sorbet_OneAncestorPerLine",
+    "title": "Enforces one ancestor per call to requires_ancestor",
+    "description": "Enforces one ancestor per call to requires_ancestor",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Sorbet_CallbackConditionalsBinding",
+    "title": "Ensures callback conditionals are bound to the right type.",
+    "description": "Ensures callback conditionals are bound to the right type.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Safe",
+        "description": "Safe"
+      }
+    ]
+  },
+  {
+    "patternId": "Sorbet_ForbidTUnsafe",
+    "title": "Forbid usage of T.unsafe.",
+    "description": "Forbid usage of T.unsafe.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Sorbet_ForbidExtendTSigHelpersInShims",
+    "title": "Forbid the use of `extend T::Sig` and `extend T::Helpers` in RBI shims",
+    "description": "Forbid the use of `extend T::Sig` and `extend T::Helpers` in RBI shims",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Include",
+        "description": "Include"
+      }
+    ]
+  },
+  {
+    "patternId": "Sorbet_ForbidRBIOutsideOfAllowedPaths",
+    "title": "Forbids RBI files outside of the allowed paths",
+    "description": "Forbids RBI files outside of the allowed paths",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "AllowedPaths",
+        "description": "AllowedPaths"
+      },
+      {
+        "name": "Include",
+        "description": "Include"
+      }
+    ]
+  },
+  {
     "patternId": "Sorbet_SingleLineRbiClassModuleDefinitions",
     "title": "Empty class and module definitions in RBI must be on a single line.",
     "description": "Empty class and module definitions in RBI must be on a single line.",
@@ -7048,12 +7582,6 @@
         "description": "Include"
       }
     ]
-  },
-  {
-    "patternId": "Sorbet_OneAncestorPerLine",
-    "title": "Enforces one ancestor per call to requires_ancestor",
-    "description": "Enforces one ancestor per call to requires_ancestor",
-    "timeToFix": 5
   },
   {
     "patternId": "Sorbet_AllowIncompatibleOverride",
@@ -7074,12 +7602,6 @@
     "timeToFix": 5
   },
   {
-    "patternId": "Sorbet_ParametersOrderingInSignature",
-    "title": "Enforces same parameter order between a method and its signature.",
-    "description": "Enforces same parameter order between a method and its signature.",
-    "timeToFix": 5
-  },
-  {
     "patternId": "Sorbet_SignatureBuildOrder",
     "title": "Enforces the order of parts in a signature.\nThe order is first inheritance related builders, then params, then return and finally the modifier such as: `abstract.params(...).returns(...).soft`.'",
     "description": "Enforces the order of parts in a signature.\nThe order is first inheritance related builders, then params, then return and finally the modifier such as: `abstract.params(...).returns(...).soft`.'",
@@ -7095,19 +7617,73 @@
     "patternId": "Sorbet_ValidSigil",
     "title": "All files must have a valid sigil.",
     "description": "All files must have a valid sigil.",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "RequireSigilOnAllFiles",
+        "description": "RequireSigilOnAllFiles"
+      },
+      {
+        "name": "SuggestedStrictness",
+        "description": "SuggestedStrictness"
+      },
+      {
+        "name": "MinimumStrictness",
+        "description": "MinimumStrictness"
+      },
+      {
+        "name": "Include",
+        "description": "Include"
+      },
+      {
+        "name": "Exclude",
+        "description": "Exclude"
+      }
+    ]
   },
   {
     "patternId": "Sorbet_HasSigil",
     "title": "Makes the Sorbet typed sigil mandatory in all files.",
     "description": "Makes the Sorbet typed sigil mandatory in all files.",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "SuggestedStrictness",
+        "description": "SuggestedStrictness"
+      },
+      {
+        "name": "MinimumStrictness",
+        "description": "MinimumStrictness"
+      },
+      {
+        "name": "Include",
+        "description": "Include"
+      },
+      {
+        "name": "Exclude",
+        "description": "Exclude"
+      }
+    ]
   },
   {
     "patternId": "Sorbet_IgnoreSigil",
     "title": "All files must be at least at strictness `ignore`.",
     "description": "All files must be at least at strictness `ignore`.",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "SuggestedStrictness",
+        "description": "SuggestedStrictness"
+      },
+      {
+        "name": "Include",
+        "description": "Include"
+      },
+      {
+        "name": "Exclude",
+        "description": "Exclude"
+      }
+    ]
   },
   {
     "patternId": "Sorbet_FalseSigil",
@@ -7133,24 +7709,72 @@
     "patternId": "Sorbet_TrueSigil",
     "title": "All files must be at least at strictness `true`.",
     "description": "All files must be at least at strictness `true`.",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "SuggestedStrictness",
+        "description": "SuggestedStrictness"
+      },
+      {
+        "name": "Include",
+        "description": "Include"
+      },
+      {
+        "name": "Exclude",
+        "description": "Exclude"
+      }
+    ]
   },
   {
     "patternId": "Sorbet_StrictSigil",
     "title": "All files must be at least at strictness `strict`.",
     "description": "All files must be at least at strictness `strict`.",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "SuggestedStrictness",
+        "description": "SuggestedStrictness"
+      },
+      {
+        "name": "Include",
+        "description": "Include"
+      },
+      {
+        "name": "Exclude",
+        "description": "Exclude"
+      }
+    ]
   },
   {
     "patternId": "Sorbet_StrongSigil",
     "title": "All files must be at least at strictness `strong`.",
     "description": "All files must be at least at strictness `strong`.",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "SuggestedStrictness",
+        "description": "SuggestedStrictness"
+      },
+      {
+        "name": "Include",
+        "description": "Include"
+      },
+      {
+        "name": "Exclude",
+        "description": "Exclude"
+      }
+    ]
   },
   {
     "patternId": "Sorbet_EnforceSigilOrder",
     "title": "Ensures that Sorbet sigil comes first in a file.",
     "description": "Ensures that Sorbet sigil comes first in a file.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Sorbet_EnforceSingleSigil",
+    "title": "Enforce Single Sigil",
+    "description": "Enforce Single Sigil",
     "timeToFix": 5
   },
   {
@@ -7163,6 +7787,12 @@
     "patternId": "GraphQL_ArgumentName",
     "title": "This cop checks whether argument names are snake_case",
     "description": "This cop checks whether argument names are snake_case",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "GraphQL_ArgumentUniqueness",
+    "title": "This cop enforces arguments to be defined once per block",
+    "description": "This cop enforces arguments to be defined once per block",
     "timeToFix": 5
   },
   {
@@ -7231,6 +7861,18 @@
     "patternId": "GraphQL_FieldName",
     "title": "This cop checks whether field names are snake_case",
     "description": "This cop checks whether field names are snake_case",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "SafeAutoCorrect",
+        "description": "SafeAutoCorrect"
+      }
+    ]
+  },
+  {
+    "patternId": "GraphQL_FieldUniqueness",
+    "title": "This cop enforces fields to be defined once",
+    "description": "This cop enforces fields to be defined once",
     "timeToFix": 5
   },
   {
@@ -7270,5 +7912,11 @@
         "description": "Exclude"
       }
     ]
+  },
+  {
+    "patternId": "GraphQL_UnusedArgument",
+    "title": "Arguments should either be listed explicitly or **rest should be in the resolve signature",
+    "description": "Arguments should either be listed explicitly or **rest should be in the resolve signature",
+    "timeToFix": 5
   }
 ]

@@ -3,11 +3,6 @@ This cop is used to identify usages of `first`, `last`, `[0]` or `[-1]`
 chained to `select`, `find_all` or `filter` and change them to use
 `detect` instead.
 
-`ActiveRecord` compatibility:
-`ActiveRecord` does not implement a `detect` method and `find` has its
-own meaning. Correcting ActiveRecord methods with this cop should be
-considered unsafe.
-
 # Examples
 
 ```ruby

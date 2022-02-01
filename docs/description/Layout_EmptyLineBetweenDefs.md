@@ -63,6 +63,24 @@ end
 class ErrorA < BaseError; end
 class ErrorB < BaseError; end
 class ErrorC < BaseError; end
+
+# good
+class ErrorA < BaseError; end
+
+class ErrorB < BaseError; end
+
+class ErrorC < BaseError; end
+# bad
+class ErrorA < BaseError; end
+class ErrorB < BaseError; end
+class ErrorC < BaseError; end
+
+# good
+class ErrorA < BaseError; end
+
+class ErrorB < BaseError; end
+
+class ErrorC < BaseError; end
 ```
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Layout/EmptyLineBetweenDefs)

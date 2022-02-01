@@ -3,19 +3,6 @@ This cop is used to identify usages of `count` on an `Enumerable` that
 follow calls to `select`, `find_all`, `filter` or `reject`. Querying logic can instead be
 passed to the `count` call.
 
-`ActiveRecord` compatibility:
-`ActiveRecord` will ignore the block that is passed to `count`.
-Other methods, such as `select`, will convert the association to an
-array and then run the block on the array. A simple work around to
-make `count` work with a block is to call `to_a.count {...}`.
-
-Example:
-  `Model.where(id: [1, 2, 3]).select { |m| m.method == true }.size`
-
-  becomes:
-
-  `Model.where(id: [1, 2, 3]).to_a.count { |m| m.method == true }`
-
 # Examples
 
 ```ruby

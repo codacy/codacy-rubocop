@@ -23,11 +23,19 @@ def foo(...)
 end# good
 def foo(*args)
   bar(*args)
+end
+
+def foo(**kwargs)
+  bar(**kwargs)
 end# bad
 # The following code can replace the arguments with `...`,
 # but it will change the behavior. Because `...` forwards block also.
 def foo(*args)
   bar(*args)
+end
+
+def foo(**kwargs)
+  bar(**kwargs)
 end
 ```
 
