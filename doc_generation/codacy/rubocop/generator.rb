@@ -29,7 +29,7 @@ module RubocopDoc
 
       def self.run(baseDir = "", file_path = "rubocop-doc.yml")
         @baseDir = baseDir
-        cops_data = YAML.load_file(file_path)
+        cops_data = YAML.unsafe_load_file(file_path)
         cops_data.each do |cop_data|
           generate_markdown_file(
             file_name(cop_data),
@@ -73,7 +73,7 @@ module RubocopDoc
 
       def self.run(baseDir = "", file_path = "rubocop-doc.yml")
         @baseDir = baseDir
-        cops_data    = YAML.load_file(file_path)
+        cops_data    = YAML.unsafe_load_file(file_path)
         descriptions = cops_data.map do |cop_data|
           if cop_data[:name].nil? || cop_data[:configuration]['Description'].nil?
             puts "Skipping #{cop_data[:name]}"
@@ -153,7 +153,7 @@ module RubocopDoc
 
       def self.run(default_patterns, baseDir = "", file_path = "rubocop-doc.yml")
         @baseDir=baseDir
-        cops_data = YAML.load_file(file_path)
+        cops_data = YAML.unsafe_load_file(file_path)
         patterns  = cops_data.map do |cop_data|
           patternIdValue = cop_data[:name].gsub("/", "_")
 

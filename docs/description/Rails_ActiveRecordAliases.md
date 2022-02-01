@@ -6,10 +6,10 @@ are more clear and easier to read.
 
 ```ruby
 #bad
-Book.update_attributes!(author: 'Alice')
+book.update_attributes!(author: 'Alice')
 
 #good
-Book.update!(author: 'Alice')
+book.update!(author: 'Alice')
 ```
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Rails/ActiveRecordAliases)

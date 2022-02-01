@@ -113,6 +113,12 @@ end
 class Patient < ApplicationRecord
   has_many :appointments
   has_many :physicians, through: :appointments
+end# bad
+class Blog < ApplicationRecord
+  has_many :posts, -> { order(published_at: :desc) }
+end# good
+class Blog < ApplicationRecord
+  has_many :posts, -> { order(published_at: :desc) }
 end
 ```
 

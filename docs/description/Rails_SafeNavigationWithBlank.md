@@ -2,10 +2,6 @@
 This cop checks to make sure safe navigation isn't used with `blank?` in
 a conditional.
 
-While the safe navigation operator is generally a good idea, when
-checking `foo&.blank?` in a conditional, `foo` being `nil` will actually
-do the opposite of what the author intends.
-
 # Examples
 
 ```ruby

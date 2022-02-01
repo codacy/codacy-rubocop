@@ -13,12 +13,6 @@ conditions can be true for any given condition. A likely scenario for
 this defining a higher level when condition to override a condition
 that is inside of the splat expansion.
 
-This is not a guaranteed performance improvement. If the data being
-processed by the `case` condition is normalized in a manner that favors
-hitting a condition in the splat expansion, it is possible that
-moving the splat condition to the end will use more memory,
-and run slightly slower.
-
 # Examples
 
 ```ruby

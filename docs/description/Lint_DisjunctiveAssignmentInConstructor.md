@@ -1,5 +1,5 @@
 
-This cop checks constructors for disjunctive assignments that should
+This cop checks constructors for disjunctive assignments (`||=`) that should
 be plain assignments.
 
 So far, this cop is only concerned with disjunctive assignment of

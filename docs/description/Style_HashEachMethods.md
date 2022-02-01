@@ -14,7 +14,9 @@ hash.values.each { |v| p v }
 
 # good
 hash.each_key { |k| p k }
-hash.each_value { |v| p v }
+hash.each_value { |v| p v }# good
+execute(sql).keys.each { |v| p v }
+execute(sql).values.each { |v| p v }
 ```
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Style/HashEachMethods)

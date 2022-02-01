@@ -1,6 +1,8 @@
 ARG GEM_FOLDER="/usr/local/bundle"
 
-FROM alpine:3.13 as doc-generator
+ARG BASE_IMAGE=alpine:3.15
+
+FROM $BASE_IMAGE as doc-generator
 
 ARG GEM_FOLDER
 ENV GEM_HOME=$GEM_FOLDER
@@ -15,7 +17,7 @@ COPY Gemfile .
 COPY Gemfile.lock .
 
 RUN echo 'gem: --no-document' > /etc/gemrc \
-    && gem install bundler -v 2.2.7 \
+    && gem install bundler -v 2.2.16 \
     && bundle install \
     && gem cleanup \
     && rm -rf /tmp/* /var/cache/apk/*
@@ -26,7 +28,7 @@ COPY docs docs
 
 RUN bundle update && bundle config set --local path 'vendor/bundle' && bundle install && ./scripts/doc_generate.sh .
 
-FROM alpine:3.13
+FROM $BASE_IMAGE
 
 ARG GEM_FOLDER
 ENV GEM_HOME=$GEM_FOLDER

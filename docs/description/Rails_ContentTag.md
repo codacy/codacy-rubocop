@@ -1,21 +1,21 @@
 
-This cop checks that `tag` is used instead of `content_tag`
-because `content_tag` is legacy syntax.
+This cop checks legacy syntax usage of `tag`
 
-NOTE: Allow `content_tag` when the first argument is a variable because
-     `content_tag(name)` is simpler rather than `tag.public_send(name)`.
+NOTE: Allow `tag` when the first argument is a variable because
+`tag(name)` is simpler rather than `tag.public_send(name)`.
+And this cop will be renamed to something like `LegacyTag` in the future. (e.g. RuboCop Rails 2.0)
 
 # Examples
 
 ```ruby
 # bad
-content_tag(:p, 'Hello world!')
-content_tag(:br)
+tag(:p)
+tag(:br, class: 'classname')
 
 # good
-tag.p('Hello world!')
-tag.br
-content_tag(name, 'Hello world!')
+tag.p
+tag.br(class: 'classname')
+tag(name, class: 'classname')
 ```
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Rails/ContentTag)

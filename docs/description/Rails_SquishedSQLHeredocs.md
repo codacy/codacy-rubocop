@@ -1,7 +1,5 @@
 
 Checks SQL heredocs to use `.squish`.
-Some SQL syntax (e.g. PostgreSQL comments and functions) requires newlines
-to be preserved in order to work, thus auto-correction for this cop is not safe.
 
 # Examples
 
