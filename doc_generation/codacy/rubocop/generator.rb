@@ -75,18 +75,17 @@ module RubocopDoc
         @baseDir = baseDir
         cops_data    = YAML.unsafe_load_file(file_path)
         descriptions = cops_data.map do |cop_data|
-          if cop_data[:name].nil? || cop_data[:configuration]['Description'].nil?
-            puts "Skipping #{cop_data[:name]}"
-            nil
-          else
-            GenerationCommons.withoutNilValues({
-              patternId:   cop_data[:name].gsub("/", "_"),
-              title:       get_title(cop_data[:configuration]['Description']),
-              description: cop_data[:configuration]['Description'],
-              timeToFix:   5,
-              parameters:  GenerationCommons.parametersFieldValue(parameters(cop_data))
-            })
-          end
+          descriptionObj = cop_data[:configuration]['Description']
+          fallbackTitle = cop_data[:name].split('/')[1].split(/(?=[A-Z])/).join(" ")
+          title = descriptionObj.nil? ? fallbackTitle : get_title(descriptionObj)
+          description = descriptionObj.nil? ? fallbackTitle : descriptionObj
+          GenerationCommons.withoutNilValues({
+            patternId:   cop_data[:name].gsub("/", "_"),
+            title:       title,
+            description: description,
+            timeToFix:   5,
+            parameters:  GenerationCommons.parametersFieldValue(parameters(cop_data))
+          })
         end.compact
         generate_json_file(descriptions)
       end

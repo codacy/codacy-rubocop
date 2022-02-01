@@ -7772,6 +7772,12 @@
     "timeToFix": 5
   },
   {
+    "patternId": "Sorbet_EnforceSingleSigil",
+    "title": "Enforce Single Sigil",
+    "description": "Enforce Single Sigil",
+    "timeToFix": 5
+  },
+  {
     "patternId": "GraphQL_ArgumentDescription",
     "title": "Ensures all arguments have a description",
     "description": "Ensures all arguments have a description",
