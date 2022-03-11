@@ -15,6 +15,8 @@ gem "safe_yaml"
 gem "dark_finger"
 gem "rubocop-migrations"
 gem "rubocop", "1.26.0"
+#Needed to be referenced on some user configs
+gem "graphql"
 #Rubocop official modules
 gem "rubocop-performance"
 gem "rubocop-rails"

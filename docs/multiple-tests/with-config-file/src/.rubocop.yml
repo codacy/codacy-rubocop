@@ -1,6 +1,8 @@
 require:
   - rubocop-performance
   - rubocop-rails
+  - graphql/rubocop/graphql/default_null_true
+  - graphql/rubocop/graphql/default_required_true
 
 AllCops:
   Exclude:
