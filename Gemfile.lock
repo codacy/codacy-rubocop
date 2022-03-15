@@ -11,6 +11,7 @@ GEM
     concurrent-ruby (1.1.9)
     dark_finger (0.6.1)
       rubocop (>= 0.51.0)
+    graphql (2.0.2)
     i18n (1.10.0)
       concurrent-ruby (~> 1.0)
     method_source (1.0.0)
@@ -48,7 +49,7 @@ GEM
     rubocop-performance (1.13.3)
       rubocop (>= 1.7.0, < 2.0)
       rubocop-ast (>= 0.4.0)
-    rubocop-rails (2.13.2)
+    rubocop-rails (2.14.0)
       activesupport (>= 4.2.0)
       rack (>= 1.1)
       rubocop (>= 1.7.0, < 2.0)
@@ -76,6 +77,7 @@ PLATFORMS
 DEPENDENCIES
   activesupport
   dark_finger
+  graphql
   parser
   pry
   rake
