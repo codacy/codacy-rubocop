@@ -13,16 +13,31 @@ if condition_a
   end
 end
 
+# bad
+if condition_b
+  do_something
+end if condition_a
+
 # good
 if condition_a && condition_b
   do_something
 end# bad
 if condition_a
   do_something if condition_b
-end# good
+end
+
+# bad
+if condition_b
+  do_something
+end if condition_a# good
 if condition_a
   do_something if condition_b
 end
+
+# good
+if condition_b
+  do_something
+end if condition_a
 ```
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Style/SoleNestedConditional)

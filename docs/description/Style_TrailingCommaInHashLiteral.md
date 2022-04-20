@@ -6,7 +6,7 @@ The configuration options are:
 last item of all non-empty, multiline hash literals.
 * `comma`: Requires a comma after the last item in a hash,
 but only when each item is on its own line.
-* `no_comma`: Does not requires a comma after the
+* `no_comma`: Does not require a comma after the
 last item in a hash
 
 # Examples

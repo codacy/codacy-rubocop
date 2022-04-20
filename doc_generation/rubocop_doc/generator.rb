@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
 # Plugins with patterns documentation should be added here
-$plugins = ["rubocop-performance","rubocop-rails", "rubocop-sorbet", "rubocop-graphql"]
+$plugins = ["rubocop-performance","rubocop-rails", "rubocop-sorbet", "rubocop-graphql", "rubocop-thread_safety"]
 
 # frozen_string_literal: true
 require 'rubocop'

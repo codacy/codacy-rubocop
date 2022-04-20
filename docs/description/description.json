@@ -163,8 +163,8 @@
   },
   {
     "patternId": "Gemspec_RequireMFA",
-    "title": "Checks that the gemspec has metadata to require MFA from RubyGems.",
-    "description": "Checks that the gemspec has metadata to require MFA from RubyGems.",
+    "title": "Checks that the gemspec has metadata to require Multi-Factor Authentication from RubyGems.",
+    "description": "Checks that the gemspec has metadata to require Multi-Factor Authentication from RubyGems.",
     "timeToFix": 5,
     "parameters": [
       {
@@ -1910,6 +1910,10 @@
     "timeToFix": 5,
     "parameters": [
       {
+        "name": "SafeAutoCorrect",
+        "description": "SafeAutoCorrect"
+      },
+      {
         "name": "EnforcedStyle",
         "description": "EnforcedStyle"
       },
@@ -2145,7 +2149,13 @@
     "patternId": "Lint_RedundantDirGlobSort",
     "title": "Checks for redundant `sort` method to `Dir.glob` and `Dir[]`.",
     "description": "Checks for redundant `sort` method to `Dir.glob` and `Dir[]`.",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "SafeAutoCorrect",
+        "description": "SafeAutoCorrect"
+      }
+    ]
   },
   {
     "patternId": "Lint_RedundantRequireStatement",
@@ -2198,6 +2208,18 @@
     "title": "Checks for redundant `with_object`.",
     "description": "Checks for redundant `with_object`.",
     "timeToFix": 5
+  },
+  {
+    "patternId": "Lint_RefinementImportMethods",
+    "title": "Use `Refinement#import_methods` when using `include` or `prepend` in `refine` block.",
+    "description": "Use `Refinement#import_methods` when using `include` or `prepend` in `refine` block.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "SafeAutoCorrect",
+        "description": "SafeAutoCorrect"
+      }
+    ]
   },
   {
     "patternId": "Lint_RegexpAsCondition",
@@ -2524,10 +2546,6 @@
       {
         "name": "Safe",
         "description": "Safe"
-      },
-      {
-        "name": "AllowComments",
-        "description": "AllowComments"
       }
     ]
   },
@@ -3844,6 +3862,10 @@
     "timeToFix": 5,
     "parameters": [
       {
+        "name": "SafeAutoCorrect",
+        "description": "SafeAutoCorrect"
+      },
+      {
         "name": "EnforcedStyle",
         "description": "EnforcedStyle"
       },
@@ -4370,6 +4392,12 @@
     "timeToFix": 5
   },
   {
+    "patternId": "Style_RedundantInitialize",
+    "title": "Checks for redundant `initialize` methods.",
+    "description": "Checks for redundant `initialize` methods.",
+    "timeToFix": 5
+  },
+  {
     "patternId": "Style_RedundantSelfAssignment",
     "title": "Checks for places where redundant assignments are made for in place modification methods.",
     "description": "Checks for places where redundant assignments are made for in place modification methods.",
@@ -4633,6 +4661,12 @@
     "patternId": "Style_NegatedWhile",
     "title": "Favor until over while for negative conditions.",
     "description": "Favor until over while for negative conditions.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Style_NestedFileDirname",
+    "title": "Checks for nested `File.dirname`.",
+    "description": "Checks for nested `File.dirname`.",
     "timeToFix": 5
   },
   {
@@ -5178,6 +5212,10 @@
       {
         "name": "SafeAutoCorrect",
         "description": "SafeAutoCorrect"
+      },
+      {
+        "name": "MaxChainLength",
+        "description": "MaxChainLength"
       }
     ]
   },
@@ -6272,6 +6310,22 @@
     "timeToFix": 5
   },
   {
+    "patternId": "Rails_ActionControllerTestCase",
+    "title": "Use `ActionDispatch::IntegrationTest` instead of `ActionController::TestCase`.",
+    "description": "Use `ActionDispatch::IntegrationTest` instead of `ActionController::TestCase`.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "SafeAutocorrect",
+        "description": "SafeAutocorrect"
+      },
+      {
+        "name": "Include",
+        "description": "Include"
+      }
+    ]
+  },
+  {
     "patternId": "Rails_ActionFilter",
     "title": "Enforces consistent use of action filter methods.",
     "description": "Enforces consistent use of action filter methods.",
@@ -6570,6 +6624,30 @@
     "timeToFix": 5
   },
   {
+    "patternId": "Rails_DeprecatedActiveModelErrorsMethods",
+    "title": "Avoid manipulating ActiveModel errors hash directly.",
+    "description": "Avoid manipulating ActiveModel errors hash directly.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Safe",
+        "description": "Safe"
+      }
+    ]
+  },
+  {
+    "patternId": "Rails_DuplicateAssociation",
+    "title": "Don't repeat associations in a model.",
+    "description": "Don't repeat associations in a model.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Rails_DuplicateScope",
+    "title": "Multiple scopes share this same where clause.",
+    "description": "Multiple scopes share this same where clause.",
+    "timeToFix": 5
+  },
+  {
     "patternId": "Rails_DurationArithmetic",
     "title": "Do not use duration as arithmetic operand with `Time.current`.",
     "description": "Do not use duration as arithmetic operand with `Time.current`.",
@@ -6800,6 +6878,18 @@
     ]
   },
   {
+    "patternId": "Rails_I18nLazyLookup",
+    "title": "Checks for places where I18n \"lazy\" lookup can be used.",
+    "description": "Checks for places where I18n \"lazy\" lookup can be used.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Include",
+        "description": "Include"
+      }
+    ]
+  },
+  {
     "patternId": "Rails_I18nLocaleAssignment",
     "title": "Prefer the usage of `I18n.with_locale` instead of manually updating `I18n.locale` value.",
     "description": "Prefer the usage of `I18n.with_locale` instead of manually updating `I18n.locale` value.",
@@ -6810,6 +6900,12 @@
         "description": "Include"
       }
     ]
+  },
+  {
+    "patternId": "Rails_I18nLocaleTexts",
+    "title": "Enforces use of I18n and locale files instead of locale specific strings.",
+    "description": "Enforces use of I18n and locale files instead of locale specific strings.",
+    "timeToFix": 5
   },
   {
     "patternId": "Rails_IgnoredSkipActionFilterOption",
@@ -6899,6 +6995,18 @@
     "patternId": "Rails_MatchRoute",
     "title": "Don't use `match` to define any routes unless there is a need to map multiple request types among [:get, :post, :patch, :put, :delete] to a single action using the `:via` option.",
     "description": "Don't use `match` to define any routes unless there is a need to map multiple request types among [:get, :post, :patch, :put, :delete] to a single action using the `:via` option.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Include",
+        "description": "Include"
+      }
+    ]
+  },
+  {
+    "patternId": "Rails_MigrationClassName",
+    "title": "The class name of the migration should match its file name.",
+    "description": "The class name of the migration should match its file name.",
     "timeToFix": 5,
     "parameters": [
       {
@@ -7342,6 +7450,18 @@
     ]
   },
   {
+    "patternId": "Rails_TableNameAssignment",
+    "title": "Do not use `self.table_name =`. Use Inflections or `table_name_prefix` instead.",
+    "description": "Do not use `self.table_name =`. Use Inflections or `table_name_prefix` instead.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Include",
+        "description": "Include"
+      }
+    ]
+  },
+  {
     "patternId": "Rails_TimeZone",
     "title": "Checks the correct usage of time zone aware methods.",
     "description": "Checks the correct usage of time zone aware methods.",
@@ -7376,6 +7496,12 @@
         "description": "Include"
       }
     ]
+  },
+  {
+    "patternId": "Rails_TransactionExitStatement",
+    "title": "Avoid the usage of `return`, `break` and `throw` in transaction blocks.",
+    "description": "Avoid the usage of `return`, `break` and `throw` in transaction blocks.",
+    "timeToFix": 5
   },
   {
     "patternId": "Rails_UniqBeforePluck",
@@ -7542,6 +7668,22 @@
     "title": "Forbid usage of T.unsafe.",
     "description": "Forbid usage of T.unsafe.",
     "timeToFix": 5
+  },
+  {
+    "patternId": "Sorbet_TypeAliasName",
+    "title": "Type alias constant names must be in CamelCase.",
+    "description": "Type alias constant names must be in CamelCase.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Include",
+        "description": "Include"
+      },
+      {
+        "name": "Exclude",
+        "description": "Exclude"
+      }
+    ]
   },
   {
     "patternId": "Sorbet_ForbidExtendTSigHelpersInShims",
@@ -7773,8 +7915,8 @@
   },
   {
     "patternId": "Sorbet_EnforceSingleSigil",
-    "title": "Enforce Single Sigil",
-    "description": "Enforce Single Sigil",
+    "title": "Ensures that there is only one Sorbet sigil in a file.",
+    "description": "Ensures that there is only one Sorbet sigil in a file.",
     "timeToFix": 5
   },
   {
@@ -7917,6 +8059,40 @@
     "patternId": "GraphQL_UnusedArgument",
     "title": "Arguments should either be listed explicitly or **rest should be in the resolve signature",
     "description": "Arguments should either be listed explicitly or **rest should be in the resolve signature",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "ThreadSafety_InstanceVariableInClassMethod",
+    "title": "Avoid using instance variables in class methods.",
+    "description": "Avoid using instance variables in class methods.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "ThreadSafety_ClassAndModuleAttributes",
+    "title": "Avoid mutating class and module attributes.",
+    "description": "Avoid mutating class and module attributes.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "ThreadSafety_MutableClassInstanceVariable",
+    "title": "Do not assign mutable objects to class instance variables.",
+    "description": "Do not assign mutable objects to class instance variables.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "EnforcedStyle",
+        "description": "EnforcedStyle"
+      },
+      {
+        "name": "SupportedStyles",
+        "description": "SupportedStyles"
+      }
+    ]
+  },
+  {
+    "patternId": "ThreadSafety_NewThread",
+    "title": "Avoid starting new threads. Let a framework like Sidekiq handle the threads.",
+    "description": "Avoid starting new threads. Let a framework like Sidekiq handle the threads.",
     "timeToFix": 5
   }
 ]

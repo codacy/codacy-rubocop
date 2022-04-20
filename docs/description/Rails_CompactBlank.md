@@ -13,8 +13,10 @@ collection.reject { |_k, v| v.blank? }
 collection.compact_blank
 
 # bad
-collection.reject!(&:blank?)
-collection.reject! { |_k, v| v.blank? }
+collection.delete_if(&:blank?)            # Same behavior as `Array#compact_blank!` and `Hash#compact_blank!`
+collection.delete_if { |_k, v| v.blank? } # Same behavior as `Array#compact_blank!` and `Hash#compact_blank!`
+collection.reject!(&:blank?)              # Same behavior as `ActionController::Parameters#compact_blank!`
+collection.reject! { |_k, v| v.blank? }   # Same behavior as `ActionController::Parameters#compact_blank!`
 
 # good
 collection.compact_blank!

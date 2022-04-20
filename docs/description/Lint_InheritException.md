@@ -1,8 +1,7 @@
 
-This cop looks for error classes inheriting from `Exception`
-and its standard library subclasses, excluding subclasses of
-`StandardError`. It is configurable to suggest using either
-`RuntimeError` (default) or `StandardError` instead.
+This cop looks for error classes inheriting from `Exception`.
+It is configurable to suggest using either `StandardError` (default) or
+`RuntimeError` instead.
 
 # Examples
 
@@ -15,9 +14,9 @@ C = Class.new(Exception)
 
 # good
 
-class C < RuntimeError; end
+class C < StandardError; end
 
-C = Class.new(RuntimeError)# bad
+C = Class.new(StandardError)# bad
 
 class C < Exception; end
 
@@ -25,9 +24,9 @@ C = Class.new(Exception)
 
 # good
 
-class C < StandardError; end
+class C < RuntimeError; end
 
-C = Class.new(StandardError)
+C = Class.new(RuntimeError)
 ```
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Lint/InheritException)
