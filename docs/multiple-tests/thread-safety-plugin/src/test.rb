@@ -1,7 +1,5 @@
-class FollowupFaxer
-  def self.fax(params)
-    @params = params
-    validate(@params)
-    send_fax(@params)
+module Test
+  class << self
+    attr :foobar
   end
 end

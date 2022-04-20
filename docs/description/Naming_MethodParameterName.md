@@ -24,7 +24,7 @@ def foo(num1, num2)
   num1 * num2
 end
 
-# With `MinArgNameLength` set to number greater than 1
+# With `MinNameLength` set to number greater than 1
 def baz(a, b, c)
   do_stuff(a, b, c)
 end
