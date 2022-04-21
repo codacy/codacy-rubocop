@@ -31,13 +31,13 @@ GEM
       psych (>= 4.0.0)
     regexp_parser (2.3.0)
     rexml (3.2.5)
-    rubocop (1.27.0)
+    rubocop (1.28.1)
       parallel (~> 1.10)
       parser (>= 3.1.0.0)
       rainbow (>= 2.2.2, < 4.0)
       regexp_parser (>= 1.8, < 3.0)
       rexml
-      rubocop-ast (>= 1.16.0, < 2.0)
+      rubocop-ast (>= 1.17.0, < 2.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (>= 1.4.0, < 3.0)
     rubocop-ast (1.17.0)
@@ -61,6 +61,8 @@ GEM
       rubocop (~> 1.25)
     rubocop-sorbet (0.6.7)
       rubocop (>= 0.90.0)
+    rubocop-thread_safety (0.4.4)
+      rubocop (>= 0.53.0)
     ruby-progressbar (1.11.0)
     safe_yaml (1.0.5)
     stringio (3.0.1)
@@ -82,7 +84,7 @@ DEPENDENCIES
   pry
   rake
   rdoc
-  rubocop (= 1.27.0)
+  rubocop (= 1.28.1)
   rubocop-graphql
   rubocop-migrations
   rubocop-performance
@@ -91,6 +93,7 @@ DEPENDENCIES
   rubocop-rspec
   rubocop-shopify
   rubocop-sorbet
+  rubocop-thread_safety
   safe_yaml
   yard
 
