@@ -11,7 +11,7 @@ GEM
     concurrent-ruby (1.1.10)
     dark_finger (0.6.1)
       rubocop (>= 0.51.0)
-    graphql (2.0.8)
+    graphql (2.0.9)
     i18n (1.10.0)
       concurrent-ruby (~> 1.0)
     method_source (1.0.0)
