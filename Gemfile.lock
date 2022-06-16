@@ -59,7 +59,7 @@ GEM
       rubocop (~> 1.19)
     rubocop-shopify (2.5.0)
       rubocop (~> 1.25)
-    rubocop-sorbet (0.6.8)
+    rubocop-sorbet (0.6.10)
       rubocop (>= 0.90.0)
     rubocop-thread_safety (0.4.4)
       rubocop (>= 0.53.0)
