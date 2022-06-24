@@ -68,7 +68,7 @@ GEM
     stringio (3.0.2)
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
-    unicode-display_width (2.1.0)
+    unicode-display_width (2.2.0)
     webrick (1.7.0)
     yard (0.9.28)
       webrick (~> 1.7.0)
