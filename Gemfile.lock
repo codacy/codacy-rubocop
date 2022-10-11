@@ -44,7 +44,7 @@ GEM
       unicode-display_width (>= 1.4.0, < 3.0)
     rubocop-ast (1.21.0)
       parser (>= 3.1.1.0)
-    rubocop-graphql (0.15.0)
+    rubocop-graphql (0.15.1)
       rubocop (>= 0.87, < 2)
     rubocop-migrations (0.1.0)
       rubocop (>= 0.42.0)
