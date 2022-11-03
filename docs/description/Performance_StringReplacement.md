@@ -1,6 +1,5 @@
 
-This cop identifies places where `gsub` can be replaced by
-`tr` or `delete`.
+Identifies places where `gsub` can be replaced by `tr` or `delete`.
 
 # Examples
 

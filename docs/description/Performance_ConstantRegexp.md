@@ -1,5 +1,5 @@
 
-This cop finds regular expressions with dynamic components that are all constants.
+Finds regular expressions with dynamic components that are all constants.
 
 Ruby allocates a new Regexp object every time it executes a code containing such
 a regular expression. It is more efficient to extract it into a constant,

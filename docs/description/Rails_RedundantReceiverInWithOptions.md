@@ -1,5 +1,5 @@
 
-This cop checks for redundant receiver in `with_options`.
+Checks for redundant receiver in `with_options`.
 Receiver is implicit from Rails 4.2 or higher.
 
 # Examples

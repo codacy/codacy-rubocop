@@ -1,5 +1,5 @@
 
-This cop checks hash literal syntax.
+Checks hash literal syntax.
 
 It can enforce either the use of the class hash rocket syntax or
 the use of the newer Ruby 1.9 syntax (when applicable).
@@ -24,6 +24,7 @@ The supported styles are:
 * always - forces use of the 3.1 syntax (e.g. {foo:})
 * never - forces use of explicit hash literal value
 * either - accepts both shorthand and explicit use of hash literal value
+* consistent - like "either", but will avoid mixing styles in a single hash
 
 # Examples
 
@@ -68,6 +69,17 @@ The supported styles are:
 
 # good
 {foo:, bar:}
+# bad
+{foo: , bar: bar}
+
+# good
+{foo:, bar:}
+
+# bad
+{foo: , bar: baz}
+
+# good
+{foo: foo, bar: baz}
 ```
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Style/HashSyntax)

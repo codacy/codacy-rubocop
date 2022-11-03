@@ -1,5 +1,5 @@
 
-This cop checks for the use of the `read_attribute` or `write_attribute`
+Checks for the use of the `read_attribute` or `write_attribute`
 methods and recommends square brackets instead.
 
 If an attribute is missing from the instance (for example, when

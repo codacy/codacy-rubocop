@@ -1,5 +1,5 @@
 
-This cop checks for redundant `travel_back` calls.
+Checks for redundant `travel_back` calls.
 Since Rails 5.2, `travel_back` is automatically called at the end of the test.
 
 # Examples

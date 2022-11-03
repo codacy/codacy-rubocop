@@ -1,5 +1,5 @@
 
-This cop checks for scope calls where it was passed
+Checks for scope calls where it was passed
 a method (usually a scope) instead of a lambda/proc.
 
 # Examples

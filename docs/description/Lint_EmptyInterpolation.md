@@ -1,5 +1,5 @@
 
-This cop checks for empty interpolation.
+Checks for empty interpolation.
 
 # Examples
 

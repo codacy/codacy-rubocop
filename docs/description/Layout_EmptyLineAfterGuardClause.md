@@ -1,5 +1,5 @@
 
-This cop enforces empty line after guard clause
+Enforces empty line after guard clause
 
 # Examples
 

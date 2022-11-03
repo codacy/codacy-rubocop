@@ -1,5 +1,5 @@
 
-This cop checks if the length of a block exceeds some maximum value.
+Checks if the length of a block exceeds some maximum value.
 Comment lines can optionally be ignored.
 The maximum allowed length is configurable.
 The cop can be configured to ignore blocks passed to certain methods.
@@ -10,7 +10,8 @@ will be counted as one line regardless of its actual size.
 
 
 NOTE: The `ExcludedMethods` configuration is deprecated and only kept
-for backwards compatibility. Please use `IgnoredMethods` instead.
+for backwards compatibility. Please use `AllowedMethods` and `AllowedPatterns`
+instead. By default, there are no methods to allowed.
 
 NOTE: This cop does not apply for `Struct` definitions.
 

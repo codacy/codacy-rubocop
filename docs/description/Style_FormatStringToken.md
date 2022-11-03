@@ -7,7 +7,8 @@ which are passed as arguments to those methods:
 The reason is that _unannotated_ format is very similar
 to encoded URLs or Date/Time formatting strings.
 
-This cop can be customized ignored methods with `IgnoredMethods`.
+This cop can be customized allowed methods with `AllowedMethods`.
+By default, there are no methods to allowed.
 
 It is allowed to contain unannotated token
 if the number of them is less than or equals to
@@ -46,6 +47,12 @@ format('%s %s.', 'Hello', 'world')
 
 # good
 format('%06d', 10)
+# bad
+redirect('foo/%{bar_id}')
+# good
+redirect('foo/%{bar_id}')
+# bad
+redirect('foo/%{bar_id}')
 # good
 redirect('foo/%{bar_id}')
 ```

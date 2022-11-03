@@ -1,5 +1,5 @@
 
-This cop identifies places where `lstrip.rstrip` can be replaced by
+Identifies places where `lstrip.rstrip` can be replaced by
 `strip`.
 
 # Examples

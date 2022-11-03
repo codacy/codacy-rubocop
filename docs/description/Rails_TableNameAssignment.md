@@ -1,5 +1,5 @@
 
-This cop enforces the absence of explicit table name assignment.
+Enforces the absence of explicit table name assignment.
 
 `self.table_name=` should only be used for very good reasons,
 such as not having control over the database, or working

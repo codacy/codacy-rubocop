@@ -1,5 +1,5 @@
 
-This cop checks expressions wrapping styles for multiline memoization.
+Checks expressions wrapping styles for multiline memoization.
 
 # Examples
 

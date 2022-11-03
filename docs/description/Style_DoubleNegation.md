@@ -1,5 +1,5 @@
 
-This cop checks for uses of double negation (`!!`) to convert something to a boolean value.
+Checks for uses of double negation (`!!`) to convert something to a boolean value.
 
 When using `EnforcedStyle: allowed_in_returns`, allow double negation in contexts
 that use boolean as a return value. When using `EnforcedStyle: forbidden`, double negation
@@ -20,8 +20,24 @@ this is rarely a problem in practice.
 !something.nil?# good
 def foo?
   !!return_value
+end
+
+define_method :foo? do
+  !!return_value
+end
+
+define_singleton_method :foo? do
+  !!return_value
 end# bad
 def foo?
+  !!return_value
+end
+
+define_method :foo? do
+  !!return_value
+end
+
+define_singleton_method :foo? do
   !!return_value
 end
 ```

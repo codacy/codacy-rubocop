@@ -1,5 +1,5 @@
 
-This cop checks for unnecessary single-element Regexp character classes.
+Checks for unnecessary single-element Regexp character classes.
 
 # Examples
 

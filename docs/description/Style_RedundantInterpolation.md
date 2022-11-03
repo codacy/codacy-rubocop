@@ -1,5 +1,5 @@
 
-This cop checks for strings that are just an interpolated expression.
+Checks for strings that are just an interpolated expression.
 
 # Examples
 

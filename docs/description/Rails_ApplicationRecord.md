@@ -1,5 +1,5 @@
 
-This cop checks that models subclass `ApplicationRecord` with Rails 5.0.
+Checks that models subclass `ApplicationRecord` with Rails 5.0.
 
 # Examples
 

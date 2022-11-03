@@ -1,5 +1,5 @@
 
-This cop checks for the use of `Time.zone=` method.
+Checks for the use of `Time.zone=` method.
 
 The `zone` attribute persists for the rest of the Ruby runtime, potentially causing
 unexpected behavior at a later time.

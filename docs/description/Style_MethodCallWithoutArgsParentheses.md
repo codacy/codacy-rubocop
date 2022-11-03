@@ -1,5 +1,8 @@
 
-This cop checks for unwanted parentheses in parameterless method calls.
+Checks for unwanted parentheses in parameterless method calls.
+
+This cop can be customized allowed methods with `AllowedMethods`.
+By default, there are no methods to allowed.
 
 # Examples
 
@@ -8,7 +11,9 @@ This cop checks for unwanted parentheses in parameterless method calls.
 object.some_method()
 
 # good
-object.some_method
+object.some_method# bad
+object.foo()# good
+object.foo()
 ```
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Style/MethodCallWithoutArgsParentheses)

@@ -1,5 +1,5 @@
 
-This cop checks for .times.map calls.
+Checks for .times.map calls.
 In most cases such calls can be replaced
 with an explicit array creation.
 

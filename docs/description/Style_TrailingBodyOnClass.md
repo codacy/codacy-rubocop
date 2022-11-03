@@ -1,5 +1,5 @@
 
-This cop checks for trailing code after the class definition.
+Checks for trailing code after the class definition.
 
 # Examples
 

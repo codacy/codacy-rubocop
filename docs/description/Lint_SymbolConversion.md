@@ -1,5 +1,5 @@
 
-This cop checks for uses of literal strings converted to
+Checks for uses of literal strings converted to
 a symbol where a literal symbol could be used instead.
 
 There are two possible styles for this cop.

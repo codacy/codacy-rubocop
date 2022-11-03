@@ -1,5 +1,5 @@
 
-This cop checks for redundant returning of true/false in conditionals.
+Checks for redundant returning of true/false in conditionals.
 
 # Examples
 

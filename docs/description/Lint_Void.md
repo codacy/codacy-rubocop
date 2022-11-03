@@ -1,5 +1,5 @@
 
-This cop checks for operators, variables, literals, and nonmutating
+Checks for operators, variables, literals, and nonmutating
 methods used in void context.
 
 # Examples

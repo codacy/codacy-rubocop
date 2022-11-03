@@ -1,5 +1,5 @@
 
-This cop checks the . position in multi-line method calls.
+Checks the . position in multi-line method calls.
 
 # Examples
 

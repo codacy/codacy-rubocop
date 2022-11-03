@@ -1,5 +1,5 @@
 
-This cop identifies places where `pluck` is used in `where` query methods
+Identifies places where `pluck` is used in `where` query methods
 and can be replaced with `select`.
 
 Since `pluck` is an eager method and hits the database immediately,

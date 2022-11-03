@@ -1,5 +1,5 @@
 
-This cop looks for belongs_to associations where we control whether the
+Looks for belongs_to associations where we control whether the
 association is required via the deprecated `required` option instead.
 
 Since Rails 5, belongs_to associations are required by default and this

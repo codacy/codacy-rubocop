@@ -1,11 +1,11 @@
 
-This cop checks for uses of rescue in its modifier form.
+Checks for uses of rescue in its modifier form.
 
 The cop to check `rescue` in its modifier form is added for following
 reasons:
 
 * The syntax of modifier form `rescue` can be misleading because it
-  might led us to believe that `rescue` handles the given exception
+  might lead us to believe that `rescue` handles the given exception
   but it actually rescue all exceptions to return the given rescue
   block. In this case, value returned by handle_error or
   SomeException.

@@ -1,5 +1,5 @@
 
-This cop makes sure that each migration file defines a migration class
+Makes sure that each migration file defines a migration class
 whose name matches the file name.
 (e.g. `20220224111111_create_users.rb` should define `CreateUsers` class.)
 

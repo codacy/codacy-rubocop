@@ -1,5 +1,5 @@
 
-This cop checks that `include`, `extend` and `prepend` statements appear
+Checks that `include`, `extend` and `prepend` statements appear
 inside classes and modules, not at the top level, so as to not affect
 the behavior of `Object`.
 

@@ -1,5 +1,5 @@
 
-This cop checks for the use of a return with a value in a context
+Checks for the use of a return with a value in a context
 where the value will be ignored. (initialize and setter methods)
 
 # Examples

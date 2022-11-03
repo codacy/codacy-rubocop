@@ -1,6 +1,5 @@
 
-This cop is used to identify usages of `ancestors.include?` and
-change them to use `<=` instead.
+Identifies usages of `ancestors.include?` and change them to use `<=` instead.
 
 # Examples
 

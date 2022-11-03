@@ -1,5 +1,5 @@
 
-This cop checks for places where redundant assignments are made for in place
+Checks for places where redundant assignments are made for in place
 modification methods.
 
 # Examples

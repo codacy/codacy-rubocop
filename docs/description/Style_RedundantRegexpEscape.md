@@ -1,5 +1,5 @@
 
-This cop checks for redundant escapes inside Regexp literals.
+Checks for redundant escapes inside Regexp literals.
 
 # Examples
 

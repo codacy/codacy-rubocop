@@ -1,5 +1,5 @@
 
-This cop checks for redundant `String#chars`.
+Checks for redundant `String#chars`.
 
 # Examples
 

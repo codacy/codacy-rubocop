@@ -1,5 +1,5 @@
 
-This cop flags uses of OpenStruct, as it is now officially discouraged
+Flags uses of OpenStruct, as it is now officially discouraged
 to be used for performance, version compatibility, and potential security issues.
 
 # Examples

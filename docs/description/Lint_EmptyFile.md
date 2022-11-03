@@ -1,5 +1,5 @@
 
-This cop enforces that Ruby source files are not empty.
+Enforces that Ruby source files are not empty.
 
 # Examples
 

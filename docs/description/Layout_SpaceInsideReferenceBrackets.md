@@ -29,6 +29,8 @@ array[ index ]# The `no_space` EnforcedStyleForEmptyBrackets style enforces that
 # bad
 foo[ ]
 foo[     ]
+foo[
+]
 
 # good
 foo[]# The `space` EnforcedStyleForEmptyBrackets style enforces that
@@ -37,6 +39,8 @@ foo[]# The `space` EnforcedStyleForEmptyBrackets style enforces that
 # bad
 foo[]
 foo[    ]
+foo[
+]
 
 # good
 foo[ ]

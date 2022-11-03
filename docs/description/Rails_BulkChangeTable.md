@@ -1,5 +1,5 @@
 
-This Cop checks whether alter queries are combinable.
+Checks whether alter queries are combinable.
 If combinable queries are detected, it suggests to you
 to use `change_table` with `bulk: true` instead.
 This option causes the migration to generate a single

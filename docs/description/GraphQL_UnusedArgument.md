@@ -1,5 +1,6 @@
 
-Arguments should either be listed explicitly or **rest should be in the resolve signature.
+Arguments should either be listed explicitly or **rest should be in the resolve signature
+(and similar methods, such as #authorized?).
 
 # Examples
 
@@ -12,6 +13,7 @@ class SomeResolver < Resolvers::Base
   argument :post_id, String, loads: Types::PostType, as: :article
   argument :comment_ids, String, loads: Types::CommentType
 
+  def authorized?(arg1:, user:, article:, comments:); end
   def resolve(arg1:, user:, article:, comments:); end
 end
 
@@ -44,6 +46,7 @@ class SomeResolver < Resolvers::Base
   argument :arg1, String, required: true
   argument :arg2, String, required: true
 
+  def authorized?; end
   def resolve(arg1:); end
 end
 

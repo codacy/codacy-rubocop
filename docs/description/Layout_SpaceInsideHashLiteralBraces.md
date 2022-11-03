@@ -35,10 +35,13 @@ foo = {{ a: 1 } => { b: { c: 2 }}}# The `no_space` EnforcedStyleForEmptyBraces s
 # bad
 foo = { }
 bar = {    }
+baz = {
+}
 
 # good
 foo = {}
-bar = {}# The `space` EnforcedStyleForEmptyBraces style enforces that
+bar = {}
+baz = {}# The `space` EnforcedStyleForEmptyBraces style enforces that
 # empty hash braces contain space.
 
 # bad
@@ -46,8 +49,9 @@ foo = {}
 
 # good
 foo = { }
-foo = {  }
-foo = {     }
+foo = {    }
+foo = {
+}
 ```
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Layout/SpaceInsideHashLiteralBraces)

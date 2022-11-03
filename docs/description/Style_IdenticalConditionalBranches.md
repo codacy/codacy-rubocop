@@ -1,5 +1,5 @@
 
-This cop checks for identical expressions at the beginning or end of
+Checks for identical expressions at the beginning or end of
 each branch of a conditional expression. Such expressions should normally
 be placed outside the conditional expression - before or after it.
 

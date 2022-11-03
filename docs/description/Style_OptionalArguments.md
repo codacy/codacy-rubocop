@@ -1,5 +1,5 @@
 
-This cop checks for optional arguments to methods
+Checks for optional arguments to methods
 that do not come at the end of the argument list.
 
 # Examples

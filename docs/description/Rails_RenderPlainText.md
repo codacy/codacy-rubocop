@@ -1,5 +1,5 @@
 
-This cop identifies places where `render text:` can be
+Identifies places where `render text:` can be
 replaced with `render plain:`.
 
 # Examples

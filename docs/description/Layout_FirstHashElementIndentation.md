@@ -1,5 +1,5 @@
 
-This cop checks the indentation of the first key in a hash literal
+Checks the indentation of the first key in a hash literal
 where the opening brace and the first key are on separate lines. The
 other keys' indentations are handled by the HashAlignment cop.
 
@@ -30,6 +30,14 @@ hash = {
 and_in_a_method_call({
   no: :difference
                      })
+takes_multi_pairs_hash(x: {
+  a: 1,
+  b: 2
+},
+                       y: {
+                         c: 1,
+                         d: 2
+                       })
 
 # good
 special_inside_parentheses
@@ -38,7 +46,15 @@ hash = {
 }
 but_in_a_method_call({
                        its_like: :this
-                     })# The `consistent` style enforces that the first key in a hash
+                     })
+takes_multi_pairs_hash(x: {
+                         a: 1,
+                         b: 2
+                       },
+                       y: {
+                         c: 1,
+                         d: 2
+                       })# The `consistent` style enforces that the first key in a hash
 # literal where the opening brace and the first key are on
 # separate lines is indented the same as a hash literal which is not
 # defined inside a method call.
@@ -64,11 +80,27 @@ and_in_a_method_call({
 and_now_for_something = {
                           completely: :different
 }
+takes_multi_pairs_hash(x: {
+  a: 1,
+  b: 2
+},
+                        y: {
+                             c: 1,
+                             d: 2
+                           })
 
 # good
 and_now_for_something = {
                           completely: :different
                         }
+takes_multi_pairs_hash(x: {
+                            a: 1,
+                            b: 2
+                          },
+                       y: {
+                            c: 1,
+                            d: 2
+                          })
 ```
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Layout/FirstHashElementIndentation)

@@ -1,5 +1,5 @@
 
-This cop checks for potential uses of `Enumerable#minmax`.
+Checks for potential uses of `Enumerable#minmax`.
 
 # Examples
 

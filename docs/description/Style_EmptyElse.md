@@ -5,7 +5,32 @@ explicit `nil` depending on the EnforcedStyle.
 # Examples
 
 ```ruby
-# warn only on empty else
+# warn on empty else and else with nil in it
+
+# bad
+if condition
+  statement
+else
+  nil
+end
+
+# bad
+if condition
+  statement
+else
+end
+
+# good
+if condition
+  statement
+else
+  statement
+end
+
+# good
+if condition
+  statement
+end# warn only on empty else
 
 # bad
 if condition
@@ -55,12 +80,12 @@ end
 # good
 if condition
   statement
-end# warn on empty else and else with nil in it
-
+end
 # bad
 if condition
   statement
 else
+  # something comment
   nil
 end
 
@@ -68,18 +93,21 @@ end
 if condition
   statement
 else
+  # something comment
+end
+# good
+if condition
+  statement
+else
+  # something comment
+  nil
 end
 
 # good
 if condition
   statement
 else
-  statement
-end
-
-# good
-if condition
-  statement
+  # something comment
 end
 ```
 

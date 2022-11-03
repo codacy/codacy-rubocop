@@ -1,5 +1,5 @@
 
-This cop is used to identify usages of `first`, `last`, `[0]` or `[-1]`
+Identifies usages of `first`, `last`, `[0]` or `[-1]`
 chained to `select`, `find_all` or `filter` and change them to use
 `detect` instead.
 

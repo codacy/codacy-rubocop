@@ -1,5 +1,5 @@
 
-This cop enforces the use of `ids` over `pluck(:id)` and `pluck(primary_key)`.
+Enforces the use of `ids` over `pluck(:id)` and `pluck(primary_key)`.
 
 # Examples
 

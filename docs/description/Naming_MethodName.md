@@ -1,11 +1,11 @@
 
-This cop makes sure that all methods use the configured style,
+Makes sure that all methods use the configured style,
 snake_case or camelCase, for their names.
 
-This cop has `IgnoredPatterns` configuration option.
+This cop has `AllowedPatterns` configuration option.
 
   Naming/MethodName:
-    IgnoredPatterns:
+    AllowedPatterns:
       - '\A\s*onSelectionBulkChange\s*'
       - '\A\s*onSelectionCleared\s*'
 

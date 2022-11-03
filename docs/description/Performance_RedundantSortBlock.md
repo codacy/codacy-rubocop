@@ -1,6 +1,5 @@
 
-This cop identifies places where `sort { |a, b| a <=> b }`
-can be replaced with `sort`.
+Identifies places where `sort { |a, b| a <=> b }` can be replaced with `sort`.
 
 # Examples
 

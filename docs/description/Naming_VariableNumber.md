@@ -1,5 +1,5 @@
 
-This cop makes sure that all numbered variables use the
+Makes sure that all numbered variables use the
 configured style, snake_case, normalcase, or non_integer,
 for their numbering.
 
@@ -11,20 +11,6 @@ Both are enabled by default.
 
 ```ruby
 # bad
-:some_sym1
-variable1 = 1
-
-def some_method1; end
-
-def some_method_1(arg1); end
-
-# good
-:some_sym_1
-variable_1 = 1
-
-def some_method_1; end
-
-def some_method_1(arg_1); end# bad
 :some_sym_1
 variable_1 = 1
 
@@ -39,6 +25,20 @@ variable1 = 1
 def some_method1; end
 
 def some_method1(arg1); end# bad
+:some_sym1
+variable1 = 1
+
+def some_method1; end
+
+def some_method_1(arg1); end
+
+# good
+:some_sym_1
+variable_1 = 1
+
+def some_method_1; end
+
+def some_method_1(arg_1); end# bad
 :some_sym1
 :some_sym_1
 
@@ -71,7 +71,8 @@ def some_method_1; end# good
 def some_method_1; end# bad
 :some_sym_1# good
 :some_sym_1# good
-expect(Open3).to receive(:capture3)
+expect(Open3).to receive(:capture3)# good
+:some_sym_v1
 ```
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Naming/VariableNumber)

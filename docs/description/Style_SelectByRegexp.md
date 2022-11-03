@@ -1,5 +1,5 @@
 
-This cop looks for places where an subset of an Enumerable (array,
+Looks for places where an subset of an Enumerable (array,
 range, set, etc.; see note below) is calculated based on a `Regexp`
 match, and suggests `grep` or `grep_v` instead.
 

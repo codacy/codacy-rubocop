@@ -1,5 +1,5 @@
 
-This cop checks for inheritance from Struct.new.
+Checks for inheritance from Struct.new.
 
 # Examples
 

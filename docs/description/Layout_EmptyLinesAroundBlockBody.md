@@ -1,5 +1,5 @@
 
-This cop checks if empty lines around the bodies of blocks match
+Checks if empty lines around the bodies of blocks match
 the configuration.
 
 # Examples
@@ -8,13 +8,13 @@ the configuration.
 # good
 
 foo do |bar|
-
   # ...
-
 end# good
 
 foo do |bar|
+
   # ...
+
 end
 ```
 

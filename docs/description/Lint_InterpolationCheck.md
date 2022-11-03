@@ -1,5 +1,5 @@
 
-This cop checks for interpolation in a single quoted string.
+Checks for interpolation in a single quoted string.
 
 # Examples
 

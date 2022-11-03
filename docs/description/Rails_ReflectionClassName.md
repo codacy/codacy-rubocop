@@ -1,5 +1,5 @@
 
-This cop checks if the value of the option `class_name`, in
+Checks if the value of the option `class_name`, in
 the definition of a reflection is a string.
 
 # Examples

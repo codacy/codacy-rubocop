@@ -1,5 +1,5 @@
 
-This cop checks for add_column call with NOT NULL constraint
+Checks for add_column call with NOT NULL constraint
 in migration file.
 
 # Examples

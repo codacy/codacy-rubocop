@@ -1,5 +1,5 @@
 
-This cop identifies places where `sort_by { ... }` can be replaced by
+Identifies places where `sort_by { ... }` can be replaced by
 `sort`.
 
 # Examples

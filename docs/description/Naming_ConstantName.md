@@ -1,5 +1,5 @@
 
-This cop checks whether constant names are written using
+Checks whether constant names are written using
 SCREAMING_SNAKE_CASE.
 
 To avoid false positives, it ignores cases in which we cannot know

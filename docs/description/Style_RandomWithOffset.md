@@ -1,5 +1,5 @@
 
-This cop checks for the use of randomly generated numbers,
+Checks for the use of randomly generated numbers,
 added/subtracted with integer literals, as well as those with
 Integer#succ and Integer#pred methods. Prefer using ranges instead,
 as it clearly states the intentions.

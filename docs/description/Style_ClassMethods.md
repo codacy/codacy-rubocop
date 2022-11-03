@@ -1,5 +1,5 @@
 
-This cop checks for uses of the class/module name instead of
+Checks for uses of the class/module name instead of
 self, when defining class/module methods.
 
 # Examples

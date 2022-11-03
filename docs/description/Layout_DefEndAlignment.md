@@ -1,5 +1,5 @@
 
-This cop checks whether the end keywords of method definitions are
+Checks whether the end keywords of method definitions are
 aligned properly.
 
 Two modes are supported through the EnforcedStyleAlignWith configuration

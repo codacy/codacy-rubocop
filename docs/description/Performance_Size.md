@@ -1,6 +1,5 @@
 
-This cop is used to identify usages of `count` on an
-`Array` and `Hash` and change them to `size`.
+Identifies usages of `count` on an `Array` and `Hash` and change them to `size`.
 
 TODO: Add advanced detection of variables that could
 have been assigned to an array or a hash.

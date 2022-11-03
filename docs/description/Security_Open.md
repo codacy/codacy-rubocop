@@ -1,5 +1,5 @@
 
-This cop checks for the use of `Kernel#open` and `URI.open` with dynamic
+Checks for the use of `Kernel#open` and `URI.open` with dynamic
 data.
 
 `Kernel#open` and `URI.open` enable not only file access but also process

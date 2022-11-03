@@ -1,5 +1,5 @@
 
-This cop checks for trailing inline comments.
+Checks for trailing inline comments.
 
 # Examples
 

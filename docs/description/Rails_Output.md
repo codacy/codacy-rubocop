@@ -1,5 +1,5 @@
 
-This cop checks for the use of output calls like puts and print
+Checks for the use of output calls like puts and print
 
 # Examples
 

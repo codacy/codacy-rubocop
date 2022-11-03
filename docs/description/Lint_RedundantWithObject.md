@@ -1,5 +1,5 @@
 
-This cop checks for redundant `with_object`.
+Checks for redundant `with_object`.
 
 # Examples
 

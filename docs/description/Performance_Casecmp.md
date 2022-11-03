@@ -1,5 +1,5 @@
 
-This cop identifies places where a case-insensitive string comparison
+Identifies places where a case-insensitive string comparison
 can better be implemented using `casecmp`.
 
 # Examples

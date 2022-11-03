@@ -1,5 +1,5 @@
 
-This cop identifies places where numeric argument to BigDecimal should be
+Identifies places where numeric argument to BigDecimal should be
 converted to string. Initializing from String is faster
 than from Numeric for BigDecimal.
 

@@ -1,5 +1,5 @@
 
-This cop checks for pipes for empty block parameters. Pipes for empty
+Checks for pipes for empty block parameters. Pipes for empty
 block parameters do not cause syntax errors, but they are redundant.
 
 # Examples

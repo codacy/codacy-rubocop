@@ -1,5 +1,5 @@
 
-This cop ensures that each item in a multi-line array
+Ensures that each item in a multi-line array
 starts on a separate line.
 
 # Examples

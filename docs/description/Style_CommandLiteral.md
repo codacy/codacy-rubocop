@@ -1,5 +1,5 @@
 
-This cop enforces using `` or %x around command literals.
+Enforces using `` or %x around command literals.
 
 # Examples
 

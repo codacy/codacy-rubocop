@@ -1,5 +1,5 @@
 
-This cop looks for has_(one|many) and belongs_to associations where
+Looks for has_(one|many) and belongs_to associations where
 Active Record can't automatically determine the inverse association
 because of a scope or the options used. Using the blog with order scope
 example below, traversing the a Blog's association in both directions

@@ -1,5 +1,5 @@
 
-This cop checks that ActiveSupport aliases to core ruby methods
+Checks that ActiveSupport aliases to core ruby methods
 are not used.
 
 # Examples

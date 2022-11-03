@@ -1,5 +1,5 @@
 
-This cop checks for the presence of `in` pattern branches without a body.
+Checks for the presence of `in` pattern branches without a body.
 
 # Examples
 

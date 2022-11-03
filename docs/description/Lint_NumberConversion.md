@@ -1,5 +1,5 @@
 
-This cop warns the usage of unsafe number conversions. Unsafe
+Warns the usage of unsafe number conversions. Unsafe
 number conversion can cause unexpected error if auto type conversion
 fails. Cop prefer parsing with number class instead.
 
@@ -12,7 +12,8 @@ always correct to raise if a value is not numeric.
 NOTE: Some values cannot be converted properly using one of the `Kernel`
 method (for instance, `Time` and `DateTime` values are allowed by this
 cop by default). Similarly, Rails' duration methods do not work well
-with `Integer()` and can be ignored with `IgnoredMethods`.
+with `Integer()` and can be allowed with `AllowedMethods`. By default,
+there are no methods to allowed.
 
 # Examples
 
@@ -37,6 +38,12 @@ Rational('1/3')
 ['1', '2', '3'].map { |i| Integer(i, 10) }
 foo.try { |i| Float(i) }
 bar.send { |i| Complex(i) }
+# bad
+10.minutes.to_i
+# good
+10.minutes.to_i
+# bad
+10.minutes.to_i
 # good
 10.minutes.to_i
 # good

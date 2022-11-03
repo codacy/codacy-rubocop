@@ -1,5 +1,5 @@
 
-This cop checks for excessive nesting of conditional and looping
+Checks for excessive nesting of conditional and looping
 constructs.
 
 You can configure if blocks are considered using the `CountBlocks`

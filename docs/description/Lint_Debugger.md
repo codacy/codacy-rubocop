@@ -1,5 +1,5 @@
 
-This cop checks for debug calls (such as `debugger` or `binding.pry`) that should
+Checks for debug calls (such as `debugger` or `binding.pry`) that should
 not be kept for production code.
 
 The cop can be configured using `DebuggerMethods`. By default, a number of gems
@@ -11,7 +11,18 @@ Specific default groups can be disabled if necessary:
 [source,yaml]
 ----
 Lint/Debugger:
-  WebConsole: ~
+  DebuggerMethods:
+    WebConsole: ~
+----
+
+You can also add your own methods by adding a new category:
+
+[source,yaml]
+----
+Lint/Debugger:
+  DebuggerMethods:
+    MyDebugger:
+      MyDebugger.debug_this
 ----
 
 # Examples

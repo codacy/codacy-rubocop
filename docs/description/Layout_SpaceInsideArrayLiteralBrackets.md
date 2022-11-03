@@ -5,21 +5,21 @@ surrounding space depending on configuration.
 # Examples
 
 ```ruby
-# The `space` style enforces that array literals have
-# surrounding space.
-
-# bad
-array = [a, b, c, d]
-
-# good
-array = [ a, b, c, d ]# The `no_space` style enforces that array literals have
+# The `no_space` style enforces that array literals have
 # no surrounding space.
 
 # bad
 array = [ a, b, c, d ]
 
 # good
-array = [a, b, c, d]# The `compact` style normally requires a space inside
+array = [a, b, c, d]# The `space` style enforces that array literals have
+# surrounding space.
+
+# bad
+array = [a, b, c, d]
+
+# good
+array = [ a, b, c, d ]# The `compact` style normally requires a space inside
 # array brackets, with the exception that successive left
 # or right brackets are collapsed together in nested arrays.
 

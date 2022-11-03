@@ -1,11 +1,13 @@
 
-This cop checks for use of `extend self` or `module_function` in a
-module.
+Checks for use of `extend self` or `module_function` in a module.
 
-Supported styles are: module_function, extend_self, forbidden. `forbidden`
-style prohibits the usage of both styles.
+Supported styles are: `module_function` (default), `extend_self` and `forbidden`.
 
-NOTE: the cop won't be activated when the module contains any private methods.
+A couple of things to keep in mind:
+
+- `forbidden` style prohibits the usage of both styles
+- in default mode (`module_function`), the cop won't be activated when the module
+  contains any private methods
 
 # Examples
 
@@ -20,12 +22,21 @@ end
 module Test
   module_function
   # ...
-end# good
+end
+
+# good
 module Test
   extend self
   # ...
   private
   # ...
+end
+
+# good
+module Test
+  class << self
+    # ...
+  end
 end# bad
 module Test
   module_function
@@ -36,6 +47,13 @@ end
 module Test
   extend self
   # ...
+end
+
+# good
+module Test
+  class << self
+    # ...
+  end
 end# bad
 module Test
   module_function
@@ -54,6 +72,13 @@ module Test
   # ...
   private
   # ...
+end
+
+# good
+module Test
+  class << self
+    # ...
+  end
 end
 ```
 
