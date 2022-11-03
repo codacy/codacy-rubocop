@@ -1,5 +1,5 @@
 
-This cop enforces the use of `pluck` over `map`.
+Enforces the use of `pluck` over `map`.
 
 `pluck` can be used instead of `map` to extract a single key from each
 element in an enumerable. When called on an Active Record relation, it

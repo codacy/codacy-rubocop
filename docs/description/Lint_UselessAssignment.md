@@ -1,5 +1,5 @@
 
-This cop checks for every useless assignment to local variable in every
+Checks for every useless assignment to local variable in every
 scope.
 The basic idea for this cop was from the warning of `ruby -cw`:
 

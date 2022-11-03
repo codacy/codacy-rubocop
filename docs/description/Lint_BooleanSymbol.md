@@ -1,5 +1,5 @@
 
-This cop checks for `:true` and `:false` symbols.
+Checks for `:true` and `:false` symbols.
 In most cases it would be a typo.
 
 # Examples

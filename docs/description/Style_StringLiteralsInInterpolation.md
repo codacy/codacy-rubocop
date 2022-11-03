@@ -1,5 +1,5 @@
 
-This cop checks that quotes inside the string interpolation
+Checks that quotes inside the string interpolation
 match the configured preference.
 
 # Examples

@@ -1,8 +1,9 @@
 
-This cop checks for multi-line ternary op expressions.
+Checks for multi-line ternary op expressions.
 
 NOTE: `return if ... else ... end` is syntax error. If `return` is used before
-multiline ternary operator expression, it cannot be auto-corrected.
+multiline ternary operator expression, it will be autocorrected to single-line
+ternary operator. The same is true for `break`, `next`, and method call.
 
 # Examples
 
@@ -16,6 +17,10 @@ a = cond ?
     b :
     c
 
+return cond ?
+       b :
+       c
+
 # good
 a = cond ? b : c
 a = if cond
@@ -23,6 +28,8 @@ a = if cond
 else
   c
 end
+
+return cond ? b : c
 ```
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Style/MultilineTernaryOperator)

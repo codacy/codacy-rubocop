@@ -1,5 +1,5 @@
 
-This cop enforces the use of `collection.exclude?(obj)`
+Enforces the use of `collection.exclude?(obj)`
 over `!collection.include?(obj)`.
 
 # Examples

@@ -1,5 +1,5 @@
 
-This cop checks for redundant access modifiers, including those with no
+Checks for redundant access modifiers, including those with no
 code, those which are repeated, and leading `public` modifiers in a
 class or module body. Conditionally-defined methods are considered as
 always being defined, and thus access modifiers guarding such methods
@@ -29,8 +29,8 @@ end
 # bad
 class Foo
   # The following is redundant (methods defined on the class'
-  # singleton class are not affected by the public modifier)
-  public
+  # singleton class are not affected by the private modifier)
+  private
 
   def self.method3
   end

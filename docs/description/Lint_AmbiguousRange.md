@@ -1,7 +1,7 @@
 
-This cop checks for ambiguous ranges.
+Checks for ambiguous ranges.
 
-Ranges have quite low precedence, which leads to unexpected behaviour when
+Ranges have quite low precedence, which leads to unexpected behavior when
 using a range with other operators. This cop avoids that by making ranges
 explicit by requiring parenthesis around complex range boundaries (anything
 that is not a literal: numerics, strings, symbols, etc.).

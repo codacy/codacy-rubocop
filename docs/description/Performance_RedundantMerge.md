@@ -1,6 +1,5 @@
 
-This cop identifies places where `Hash#merge!` can be replaced by
-`Hash#[]=`.
+Identifies places where `Hash#merge!` can be replaced by `Hash#[]=`.
 You can set the maximum number of key-value pairs to consider
 an offense with `MaxKeyValuePairs`.
 

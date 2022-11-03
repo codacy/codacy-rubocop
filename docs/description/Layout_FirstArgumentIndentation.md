@@ -1,5 +1,5 @@
 
-This cop checks the indentation of the first argument in a method call.
+Checks the indentation of the first argument in a method call.
 Arguments after the first one are checked by `Layout/ArgumentAlignment`,
 not by this cop.
 
@@ -33,6 +33,30 @@ second_param)
 
 some_method nested_call(
 nested_first_param),
+second_param# Same as `special_for_inner_method_call` except that the special rule
+# only applies if the outer method call encloses its arguments in
+# parentheses.
+
+# good
+some_method(
+  first_param,
+second_param)
+
+foo = some_method(
+  first_param,
+second_param)
+
+foo = some_method(nested_call(
+                    nested_first_param),
+second_param)
+
+foo = some_method(
+  nested_call(
+    nested_first_param),
+second_param)
+
+some_method nested_call(
+  nested_first_param),
 second_param# The first argument should always be indented one step more than the
 # preceding line.
 
@@ -104,30 +128,6 @@ second_param)
 
 some_method nested_call(
               nested_first_param),
-second_param# Same as `special_for_inner_method_call` except that the special rule
-# only applies if the outer method call encloses its arguments in
-# parentheses.
-
-# good
-some_method(
-  first_param,
-second_param)
-
-foo = some_method(
-  first_param,
-second_param)
-
-foo = some_method(nested_call(
-                    nested_first_param),
-second_param)
-
-foo = some_method(
-  nested_call(
-    nested_first_param),
-second_param)
-
-some_method nested_call(
-  nested_first_param),
 second_param
 ```
 

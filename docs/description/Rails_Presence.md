@@ -1,5 +1,5 @@
 
-This cop checks code that can be written more easily using
+Checks code that can be written more easily using
 `Object#presence` defined by Active Support.
 
 # Examples

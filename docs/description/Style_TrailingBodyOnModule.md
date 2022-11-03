@@ -1,5 +1,5 @@
 
-This cop checks for trailing code after the module definition.
+Checks for trailing code after the module definition.
 
 # Examples
 

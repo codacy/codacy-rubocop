@@ -14,30 +14,6 @@ operations):
 This helps make your gem more secure, as users can be more
 confident that gem updates were pushed by maintainers.
 
- # bad
- Gem::Specification.new do |spec|
-   spec.metadata = {
-     'rubygems_mfa_required' => 'false'
-   }
- end
-
- # good
- Gem::Specification.new do |spec|
-   spec.metadata = {
-     'rubygems_mfa_required' => 'true'
-   }
- end
-
- # bad
- Gem::Specification.new do |spec|
-   spec.metadata['rubygems_mfa_required'] = 'false'
- end
-
- # good
- Gem::Specification.new do |spec|
-   spec.metadata['rubygems_mfa_required'] = 'true'
- end
-
 # Examples
 
 ```ruby
@@ -51,6 +27,30 @@ Gem::Specification.new do |spec|
   spec.metadata = {
     'rubygems_mfa_required' => 'true'
   }
+end
+
+# good
+Gem::Specification.new do |spec|
+  spec.metadata['rubygems_mfa_required'] = 'true'
+end
+
+# bad
+Gem::Specification.new do |spec|
+  spec.metadata = {
+    'rubygems_mfa_required' => 'false'
+  }
+end
+
+# good
+Gem::Specification.new do |spec|
+  spec.metadata = {
+    'rubygems_mfa_required' => 'true'
+  }
+end
+
+# bad
+Gem::Specification.new do |spec|
+  spec.metadata['rubygems_mfa_required'] = 'false'
 end
 
 # good

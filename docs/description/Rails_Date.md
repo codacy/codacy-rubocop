@@ -1,5 +1,5 @@
 
-This cop checks for the correct use of Date methods,
+Checks for the correct use of Date methods,
 such as Date.today, Date.current etc.
 
 Using `Date.today` is dangerous, because it doesn't know anything about
@@ -22,13 +22,6 @@ And you can set a warning for `to_time` with `AllowToTime: false`.
 
 ```ruby
 # bad
-Date.current
-Date.yesterday
-Date.today
-
-# good
-Time.zone.today
-Time.zone.today - 1.day# bad
 Date.today
 
 # good
@@ -36,7 +29,14 @@ Time.zone.today
 Time.zone.today - 1.day
 Date.current
 Date.yesterday
-date.in_time_zone# good
+date.in_time_zone# bad
+Date.current
+Date.yesterday
+Date.today
+
+# good
+Time.zone.today
+Time.zone.today - 1.day# good
 date.to_time# bad
 date.to_time
 ```

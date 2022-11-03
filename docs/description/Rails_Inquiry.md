@@ -1,5 +1,5 @@
 
-This cop checks that Active Support's `inquiry` method is not used.
+Checks that Active Support's `inquiry` method is not used.
 
 # Examples
 

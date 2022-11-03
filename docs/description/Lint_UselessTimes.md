@@ -1,5 +1,5 @@
 
-This cop checks for uses of `Integer#times` that will never yield
+Checks for uses of `Integer#times` that will never yield
 (when the integer <= 0) or that will only ever yield once
 (`1.times`).
 

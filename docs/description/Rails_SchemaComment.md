@@ -1,5 +1,5 @@
 
-This cop enforces the use of the `comment` option when adding a new table or column
+Enforces the use of the `comment` option when adding a new table or column
 to the database during a migration.
 
 # Examples

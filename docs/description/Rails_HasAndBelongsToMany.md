@@ -1,5 +1,5 @@
 
-This cop checks for the use of the has_and_belongs_to_many macro.
+Checks for the use of the has_and_belongs_to_many macro.
 
 # Examples
 

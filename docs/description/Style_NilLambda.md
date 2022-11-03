@@ -1,5 +1,5 @@
 
-This cop checks for lambdas and procs that always return nil,
+Checks for lambdas and procs that always return nil,
 which can be replaced with an empty lambda or proc instead.
 
 # Examples

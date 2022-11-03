@@ -1,5 +1,5 @@
 
-This cop looks for inline rendering within controller actions.
+Looks for inline rendering within controller actions.
 
 # Examples
 

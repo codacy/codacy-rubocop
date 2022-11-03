@@ -1,5 +1,5 @@
 
-This cop checks that Active Record callbacks are declared
+Checks that Active Record callbacks are declared
 in the order in which they will be executed.
 
 # Examples

@@ -1,5 +1,5 @@
 
-This cop checks for the use of local variable names from an outer scope
+Checks for the use of local variable names from an outer scope
 in block arguments or block-local variables. This mirrors the warning
 given by `ruby -cw` prior to Ruby 2.6:
 "shadowing outer local variable - foo".
@@ -8,9 +8,12 @@ NOTE: Shadowing of variables in block passed to `Ractor.new` is allowed
 because `Ractor` should not access outer variables.
 eg. following style is encouraged:
 
+  [source,ruby]
+  ----
   worker_id, pipe = env
   Ractor.new(worker_id, pipe) do |worker_id, pipe|
   end
+  ----
 
 # Examples
 

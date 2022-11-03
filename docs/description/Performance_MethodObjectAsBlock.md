@@ -1,5 +1,5 @@
 
-This cop identifies places where methods are converted to blocks, with the
+Identifies places where methods are converted to blocks, with the
 use of `&method`, and passed as arguments to method calls.
 It is faster to replace those with explicit blocks, calling those methods inside.
 

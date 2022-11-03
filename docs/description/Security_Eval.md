@@ -1,5 +1,5 @@
 
-This cop checks for the use of `Kernel#eval` and `Binding#eval`.
+Checks for the use of `Kernel#eval` and `Binding#eval`.
 
 # Examples
 

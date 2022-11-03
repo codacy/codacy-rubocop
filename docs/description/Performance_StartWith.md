@@ -1,5 +1,5 @@
 
-This cop identifies unnecessary use of a regex where `String#start_with?` would suffice.
+Identifies unnecessary use of a regex where `String#start_with?` would suffice.
 
 This cop has `SafeMultiline` configuration option that `true` by default because
 `^start` is unsafe as it will behave incompatible with `start_with?`

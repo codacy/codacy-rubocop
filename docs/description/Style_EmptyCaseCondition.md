@@ -1,5 +1,5 @@
 
-This cop checks for case statements with an empty condition.
+Checks for case statements with an empty condition.
 
 # Examples
 

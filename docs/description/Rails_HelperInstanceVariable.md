@@ -1,12 +1,12 @@
 
-This cop checks for use of the helper methods which reference
+Checks for use of the helper methods which reference
 instance variables.
 
 Relying on instance variables makes it difficult to re-use helper
 methods.
 
 If it seems awkward to explicitly pass in each dependent
-variable, consider moving the behaviour elsewhere, for
+variable, consider moving the behavior elsewhere, for
 example to a model, decorator or presenter.
 
 Provided that a class inherits `ActionView::Helpers::FormBuilder`,

@@ -1,5 +1,5 @@
 
-This cop checks that controllers subclass `ApplicationController`.
+Checks that controllers subclass `ApplicationController`.
 
 # Examples
 

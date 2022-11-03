@@ -1,5 +1,5 @@
 
-This cop checks for consistent uses of `request.referer` or
+Checks for consistent uses of `request.referer` or
 `request.referrer`, depending on the cop's configuration.
 
 # Examples

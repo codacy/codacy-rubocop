@@ -1,5 +1,5 @@
 
-This cop checks for the presence of parentheses around ternary
+Checks for the presence of parentheses around ternary
 conditions. It is configurable to enforce inclusion or omission of
 parentheses using `EnforcedStyle`. Omission is only enforced when
 removing the parentheses won't cause a different behavior.

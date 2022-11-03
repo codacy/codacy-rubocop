@@ -1,5 +1,5 @@
 
-This cop identifies places where manually constructed SQL
+Identifies places where manually constructed SQL
 in `where` can be replaced with `where.not(...)`.
 
 # Examples

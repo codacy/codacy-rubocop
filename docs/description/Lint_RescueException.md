@@ -1,5 +1,5 @@
 
-This cop checks for `rescue` blocks targeting the Exception class.
+Checks for `rescue` blocks targeting the Exception class.
 
 # Examples
 

@@ -1,5 +1,5 @@
 
-This cop checks for double `#start_with?` or `#end_with?` calls
+Checks for double `#start_with?` or `#end_with?` calls
 separated by `||`. In some cases such calls can be replaced
 with an single `#start_with?`/`#end_with?` call.
 

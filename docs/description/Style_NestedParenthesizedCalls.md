@@ -1,6 +1,10 @@
 
-This cop checks for unparenthesized method calls in the argument list
+Checks for unparenthesized method calls in the argument list
 of a parenthesized method call.
+`be`, `be_a`, `be_an`, `be_between`, `be_falsey`, `be_kind_of`, `be_instance_of`,
+`be_truthy`, `be_within`, `eq`, `eql`, `end_with`, `include`, `match`, `raise_error`,
+`respond_to`, and `start_with` methods are allowed by default.
+These are customizable with `AllowedMethods` option.
 
 # Examples
 
@@ -9,7 +13,8 @@ of a parenthesized method call.
 method1(method2(arg))
 
 # bad
-method1(method2 arg)
+method1(method2 arg)# good
+method1(foo arg)
 ```
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Style/NestedParenthesizedCalls)

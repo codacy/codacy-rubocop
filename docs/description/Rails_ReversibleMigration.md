@@ -1,5 +1,5 @@
 
-This cop checks whether the change method of the migration file is
+Checks whether the change method of the migration file is
 reversible.
 
 # Examples

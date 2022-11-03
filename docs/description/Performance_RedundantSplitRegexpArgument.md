@@ -1,5 +1,5 @@
 
-This cop identifies places where `split` argument can be replaced from
+Identifies places where `split` argument can be replaced from
 a deterministic regexp to a string.
 
 # Examples

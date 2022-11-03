@@ -1,6 +1,5 @@
 
-This cop identifies places where `URI::Parser.new`
-can be replaced by `URI::DEFAULT_PARSER`.
+Identifies places where `URI::Parser.new` can be replaced by `URI::DEFAULT_PARSER`.
 
 # Examples
 

@@ -1,8 +1,6 @@
 
-This cop checks for uses of the case equality operator(===).
-
-If `AllowOnConstant` option is enabled, the cop will ignore violations when the receiver of
-the case equality operator is a constant.
+If `AllowOnSelfClass` option is enabled, the cop will ignore violations when the receiver of
+the case equality operator is `self.class`. Note intermediate variables are not accepted.
 
 # Examples
 
@@ -16,7 +14,9 @@ something.is_a?(Array)
 (1..100).include?(7)
 /something/.match?(some_string)# bad
 Array === something# good
-Array === something
+Array === something# bad
+self.class === something# good
+self.class === something
 ```
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Style/CaseEquality)

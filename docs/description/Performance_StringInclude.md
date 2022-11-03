@@ -1,6 +1,5 @@
 
-This cop identifies unnecessary use of a regex where
-`String#include?` would suffice.
+Identifies unnecessary use of a regex where `String#include?` would suffice.
 
 # Examples
 

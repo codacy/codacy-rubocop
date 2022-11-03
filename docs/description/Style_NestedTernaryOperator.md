@@ -1,5 +1,5 @@
 
-This cop checks for nested ternary op expressions.
+Checks for nested ternary op expressions.
 
 # Examples
 

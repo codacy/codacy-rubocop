@@ -1,5 +1,5 @@
 
-This cop checks for useless method definitions, specifically: empty constructors
+Checks for useless method definitions, specifically: empty constructors
 and methods just delegating to `super`.
 
 # Examples

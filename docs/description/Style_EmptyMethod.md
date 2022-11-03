@@ -1,11 +1,15 @@
 
-This cop checks for the formatting of empty method definitions.
+Checks for the formatting of empty method definitions.
 By default it enforces empty method definitions to go on a single
 line (compact style), but it can be configured to enforce the `end`
 to go on its own line (expanded style).
 
 NOTE: A method definition is not considered empty if it contains
 comments.
+
+NOTE: Autocorrection will not be applied for the `compact` style
+if the resulting code is longer than the `Max` configuration for
+`Layout/LineLength`, but an offense will still be registered.
 
 # Examples
 

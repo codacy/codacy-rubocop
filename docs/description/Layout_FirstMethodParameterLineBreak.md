@@ -1,5 +1,5 @@
 
-This cop checks for a line break before the first parameter in a
+Checks for a line break before the first parameter in a
 multi-line method parameter definition.
 
 # Examples

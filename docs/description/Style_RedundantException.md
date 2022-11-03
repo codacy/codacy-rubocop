@@ -1,5 +1,5 @@
 
-This cop checks for RuntimeError as the argument of raise/fail.
+Checks for RuntimeError as the argument of raise/fail.
 
 It checks for code like this:
 

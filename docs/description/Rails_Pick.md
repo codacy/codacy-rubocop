@@ -1,5 +1,5 @@
 
-This cop enforces the use of `pick` over `pluck(...).first`.
+Enforces the use of `pick` over `pluck(...).first`.
 
 Using `pluck` followed by `first` creates an intermediate array, which
 `pick` avoids. When called on an Active Record relation, `pick` adds a

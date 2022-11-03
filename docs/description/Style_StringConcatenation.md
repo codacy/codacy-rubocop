@@ -1,5 +1,5 @@
 
-This cop checks for places where string concatenation
+Checks for places where string concatenation
 can be replaced with string interpolation.
 
 The cop can autocorrect simple cases but will skip autocorrecting

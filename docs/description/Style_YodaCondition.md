@@ -1,5 +1,5 @@
 
-This cop can either enforce or forbid Yoda conditions,
+Enforces or forbids Yoda conditions,
 i.e. comparison operations where the order of expression is reversed.
 eg. `5 == x`
 

@@ -5,7 +5,7 @@ multi-line blocks.
 Methods that can be either procedural or functional and cannot be
 categorised from their usage alone is ignored.
 `lambda`, `proc`, and `it` are their defaults.
-Additional methods can be added to the `IgnoredMethods`.
+Additional methods can be added to the `AllowedMethods`.
 
 # Examples
 
@@ -60,7 +60,7 @@ map { |x|
   x
 }.inspect
 
-# The AllowBracesOnProceduralOneLiners option is ignored unless the
+# The AllowBracesOnProceduralOneLiners option is allowed unless the
 # EnforcedStyle is set to `semantic`. If so:
 
 # If the AllowBracesOnProceduralOneLiners option is unspecified, or
@@ -101,7 +101,7 @@ words.each { |word|
 }
 # Methods listed in the BracesRequiredMethods list, such as 'sig'
 # in this example, will require `{...}` braces. This option takes
-# precedence over all other configurations except IgnoredMethods.
+# precedence over all other configurations except AllowedMethods.
 
 # bad
 sig do
@@ -130,6 +130,16 @@ end
 foo = lambda do |x|
   x * 100
 end
+# bad
+things.map { |thing|
+  something = thing.some_method
+  process(something)
+}
+# good
+things.map { |thing|
+  something = thing.some_method
+  process(something)
+}
 ```
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Style/BlockDelimiters)

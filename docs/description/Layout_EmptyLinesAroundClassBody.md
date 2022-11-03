@@ -1,11 +1,17 @@
 
-This cop checks if empty lines around the bodies of classes match
+Checks if empty lines around the bodies of classes match
 the configuration.
 
 # Examples
 
 ```ruby
 # good
+
+class Foo
+  def bar
+    # ...
+  end
+end# good
 
 class Foo
 
@@ -40,12 +46,6 @@ class Foo
     # ...
   end
 
-end# good
-
-class Foo
-  def bar
-    # ...
-  end
 end
 ```
 

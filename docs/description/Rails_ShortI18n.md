@@ -1,5 +1,5 @@
 
-This cop enforces that short forms of `I18n` methods are used:
+Enforces that short forms of `I18n` methods are used:
 `t` instead of `translate` and `l` instead of `localize`.
 
 This cop has two different enforcement modes. When the EnforcedStyle

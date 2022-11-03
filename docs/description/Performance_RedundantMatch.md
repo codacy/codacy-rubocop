@@ -1,5 +1,5 @@
 
-This cop identifies the use of `Regexp#match` or `String#match`, which
+Identifies the use of `Regexp#match` or `String#match`, which
 returns `#<MatchData>`/`nil`. The return value of `=~` is an integral
 index/`nil` and is more performant.
 

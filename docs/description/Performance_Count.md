@@ -1,5 +1,5 @@
 
-This cop is used to identify usages of `count` on an `Enumerable` that
+Identifies usages of `count` on an `Enumerable` that
 follow calls to `select`, `find_all`, `filter` or `reject`. Querying logic can instead be
 passed to the `count` call.
 

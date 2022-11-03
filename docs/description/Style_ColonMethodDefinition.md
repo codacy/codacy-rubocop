@@ -1,5 +1,5 @@
 
-This cop checks for class methods that are defined using the `::`
+Checks for class methods that are defined using the `::`
 operator instead of the `.` operator.
 
 # Examples

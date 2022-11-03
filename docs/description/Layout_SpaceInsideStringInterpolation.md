@@ -1,5 +1,5 @@
 
-This cop checks for whitespace within string interpolations.
+Checks for whitespace within string interpolations.
 
 # Examples
 

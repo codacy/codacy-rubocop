@@ -1,5 +1,5 @@
 
-This cop identifies places where defining routes with `match`
+Identifies places where defining routes with `match`
 can be replaced with a specific HTTP method.
 
 Don't use `match` to define any routes unless there is a need to map multiple request types

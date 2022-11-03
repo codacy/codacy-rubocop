@@ -1,5 +1,5 @@
 
-This cop looks for trailing whitespace in the source code.
+Looks for trailing whitespace in the source code.
 
 # Examples
 

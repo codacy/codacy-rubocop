@@ -1,5 +1,5 @@
 
-This cop checks for redundant `return` expressions.
+Checks for redundant `return` expressions.
 
 # Examples
 

@@ -1,5 +1,5 @@
 
-This cop checks that methods specified in the filter's `only` or
+Checks that methods specified in the filter's `only` or
 `except` options are defined within the same class or module.
 
 # Examples
@@ -54,7 +54,7 @@ end
 class ArticlesController < ContentController
   before_action :load_article, only: [:update]
 
-  # the cop requires this method, but it relies on behaviour defined
+  # the cop requires this method, but it relies on behavior defined
   # in the superclass, so needs to invoke `super`
   def update
     super

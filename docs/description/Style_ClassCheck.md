@@ -1,5 +1,5 @@
 
-This cop enforces consistent use of `Object#is_a?` or `Object#kind_of?`.
+Enforces consistent use of `Object#is_a?` or `Object#kind_of?`.
 
 # Examples
 

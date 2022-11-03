@@ -1,5 +1,5 @@
 
-This cop identifies places where `sort { |a, b| b <=> a }`
+Identifies places where `sort { |a, b| b <=> a }`
 can be replaced by a faster `sort.reverse`.
 
 # Examples

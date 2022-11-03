@@ -1,5 +1,5 @@
 
-This cop checks for uses of `and` and `or`, and suggests using `&&` and
+Checks for uses of `and` and `or`, and suggests using `&&` and
 `||` instead. It can be configured to check only in conditions or in
 all contexts.
 
@@ -7,6 +7,18 @@ all contexts.
 
 ```ruby
 # bad
+if foo and bar
+end
+
+# good
+foo.save && return
+
+# good
+foo.save and return
+
+# good
+if foo && bar
+end# bad
 foo.save and return
 
 # bad
@@ -15,18 +27,6 @@ end
 
 # good
 foo.save && return
-
-# good
-if foo && bar
-end# bad
-if foo and bar
-end
-
-# good
-foo.save && return
-
-# good
-foo.save and return
 
 # good
 if foo && bar

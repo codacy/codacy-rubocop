@@ -1,6 +1,5 @@
 
-This cop is used to identify usages of `reverse.each` and
-change them to use `reverse_each` instead.
+Identifies usages of `reverse.each` and change them to use `reverse_each` instead.
 
 If the return value is used, it will not be detected because the result will be different.
 

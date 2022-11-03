@@ -1,5 +1,5 @@
 
-This cop identifies places where `URI.regexp` is obsolete and should
+Identifies places where `URI.regexp` is obsolete and should
 not be used. Instead, use `URI::DEFAULT_PARSER.make_regexp`.
 
 # Examples

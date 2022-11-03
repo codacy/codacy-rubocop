@@ -1,5 +1,5 @@
 
-This cop checks for nested method definitions.
+Checks for nested method definitions.
 
 # Examples
 
@@ -22,6 +22,9 @@ def foo
 end
 # good
 
+# `class_eval`, `instance_eval`, `module_eval`, `class_exec`, `instance_exec`, and
+# `module_exec` blocks are allowed by default.
+
 def foo
   self.class.class_eval do
     def bar
@@ -39,6 +42,30 @@ end
 
 def foo
   class << self
+    def bar
+    end
+  end
+end# bad
+def do_something
+  has_many :articles do
+    def find_or_create_by_name(name)
+    end
+  end
+end# bad
+def do_something
+  has_many :articles do
+    def find_or_create_by_name(name)
+    end
+  end
+end# bad
+def foo(obj)
+  obj.do_baz do
+    def bar
+    end
+  end
+end# good
+def foo(obj)
+  obj.do_baz do
     def bar
     end
   end

@@ -1,5 +1,5 @@
 
-This cop checks the indentation of the first parameter in a method
+Checks the indentation of the first parameter in a method
 definition. Parameters after the first one are checked by
 Layout/ParameterAlignment, not by this cop.
 

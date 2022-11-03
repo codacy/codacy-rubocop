@@ -1,5 +1,5 @@
 
-This cop checks for non-ascii characters in identifier and constant names.
+Checks for non-ascii characters in identifier and constant names.
 Identifiers are always checked and whether constants are checked
 can be controlled using AsciiConstants config.
 

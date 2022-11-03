@@ -1,5 +1,5 @@
 
-This cop checks for redundant parentheses.
+Checks for redundant parentheses.
 
 # Examples
 

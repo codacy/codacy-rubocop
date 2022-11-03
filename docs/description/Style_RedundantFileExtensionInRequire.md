@@ -1,5 +1,5 @@
 
-This cop checks for the presence of superfluous `.rb` extension in
+Checks for the presence of superfluous `.rb` extension in
 the filename provided to `require` and `require_relative`.
 
 Note: If the extension is omitted, Ruby tries adding '.rb', '.so',

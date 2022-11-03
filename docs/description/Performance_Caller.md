@@ -1,6 +1,5 @@
 
-This cop identifies places where `caller[n]`
-can be replaced by `caller(n..n).first`.
+Identifies places where `caller[n]` can be replaced by `caller(n..n).first`.
 
 # Examples
 

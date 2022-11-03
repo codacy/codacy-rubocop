@@ -1,5 +1,5 @@
 
-This cop checks that there are no repeated conditions used in if 'elsif'.
+Checks that there are no repeated conditions used in if 'elsif'.
 
 # Examples
 

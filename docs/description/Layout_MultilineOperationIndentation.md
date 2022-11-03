@@ -1,5 +1,5 @@
 
-This cop checks the indentation of the right hand side operand in binary operations that
+Checks the indentation of the right hand side operand in binary operations that
 span more than one line.
 
 The `aligned` style checks that operators are aligned if they are part of an `if` or `while`

@@ -1,5 +1,5 @@
 
-This cop checks that mailers subclass `ApplicationMailer` with Rails 5.0.
+Checks that mailers subclass `ApplicationMailer` with Rails 5.0.
 
 # Examples
 

@@ -1,5 +1,5 @@
 
-This cop checks for uses of `fail` and `raise`.
+Checks for uses of `fail` and `raise`.
 
 # Examples
 

@@ -1,5 +1,5 @@
 
-This cop checks that there are no repeated bodies
+Checks that there are no repeated bodies
 within `if/unless`, `case-when`, `case-in` and `rescue` constructs.
 
 With `IgnoreLiteralBranches: true`, branches are not registered

@@ -1,5 +1,5 @@
 
-This cop checks for `rescue` blocks with no body.
+Checks for `rescue` blocks with no body.
 
 # Examples
 

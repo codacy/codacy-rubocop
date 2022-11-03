@@ -1,5 +1,5 @@
 
-This cop checks for ambiguous regexp literals in the first argument of
+Checks for ambiguous regexp literals in the first argument of
 a method invocation without parentheses.
 
 # Examples

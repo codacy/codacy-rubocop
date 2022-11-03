@@ -1,5 +1,5 @@
 
-This cop checks whether the multiline assignments have a newline
+Checks whether the multiline assignments have a newline
 after the assignment operator.
 
 # Examples

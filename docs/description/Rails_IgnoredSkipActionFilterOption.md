@@ -1,5 +1,5 @@
 
-This cop checks that `if` and `only` (or `except`) are not used together
+Checks that `if` and `only` (or `except`) are not used together
 as options of `skip_*` action filter.
 
 The `if` option will be ignored when `if` and `only` are used together.

@@ -1,5 +1,5 @@
 
-This cop identifies the use of a `&block` parameter and `block.call`
+Identifies the use of a `&block` parameter and `block.call`
 where `yield` would do just as well.
 
 # Examples

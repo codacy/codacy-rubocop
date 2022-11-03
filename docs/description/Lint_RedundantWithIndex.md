@@ -1,5 +1,5 @@
 
-This cop checks for redundant `with_index`.
+Checks for redundant `with_index`.
 
 # Examples
 

@@ -1,5 +1,5 @@
 
-This cop checks for mistyped shorthand assignments.
+Checks for mistyped shorthand assignments.
 
 # Examples
 

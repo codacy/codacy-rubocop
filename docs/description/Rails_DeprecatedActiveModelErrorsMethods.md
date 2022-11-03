@@ -1,5 +1,5 @@
 
-This cop checks direct manipulation of ActiveModel#errors as hash.
+Checks direct manipulation of ActiveModel#errors as hash.
 These operations are deprecated in Rails 6.1 and will not work in Rails 7.
 
 # Examples
@@ -18,6 +18,12 @@ user.errors.messages[:name].clear
 
 # good
 user.errors.delete(:name)
+
+# bad
+user.errors.keys.include?(:attr)
+
+# good
+user.errors.attribute_names.include?(:attr)
 ```
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Rails/DeprecatedActiveModelErrorsMethods)
