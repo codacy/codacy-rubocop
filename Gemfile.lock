@@ -30,7 +30,7 @@ GEM
     rake (13.0.6)
     rdoc (6.4.0)
       psych (>= 4.0.0)
-    regexp_parser (2.6.0)
+    regexp_parser (2.6.1)
     rexml (3.2.5)
     rubocop (1.39.0)
       json (~> 2.3)
