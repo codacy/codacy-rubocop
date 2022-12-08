@@ -14,7 +14,7 @@ GEM
     graphql (2.0.15)
     i18n (1.12.0)
       concurrent-ruby (~> 1.0)
-    json (2.6.2)
+    json (2.6.3)
     method_source (1.0.0)
     minitest (5.16.3)
     parallel (1.22.1)
@@ -32,7 +32,7 @@ GEM
       psych (>= 4.0.0)
     regexp_parser (2.6.1)
     rexml (3.2.5)
-    rubocop (1.39.0)
+    rubocop (1.40.0)
       json (~> 2.3)
       parallel (~> 1.10)
       parser (>= 3.1.2.1)
@@ -86,7 +86,7 @@ DEPENDENCIES
   pry
   rake
   rdoc
-  rubocop (= 1.39.0)
+  rubocop (= 1.40.0)
   rubocop-graphql
   rubocop-migrations
   rubocop-performance
