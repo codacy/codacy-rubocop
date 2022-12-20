@@ -14,7 +14,7 @@ gem "pry"
 gem "safe_yaml"
 gem "dark_finger"
 gem "rubocop-migrations"
-gem "rubocop", "1.39.0"
+gem "rubocop", "1.41.0"
 #Needed to be referenced on some user configs
 gem "graphql"
 #Rubocop official modules
