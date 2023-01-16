@@ -25,7 +25,7 @@ GEM
       method_source (~> 1.0)
     psych (4.0.6)
       stringio
-    rack (3.0.1)
+    rack (3.0.4)
     rainbow (3.1.1)
     rake (13.0.6)
     rdoc (6.4.0)
