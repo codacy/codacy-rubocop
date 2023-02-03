@@ -67,7 +67,7 @@ GEM
       rubocop (>= 0.53.0)
     ruby-progressbar (1.11.0)
     safe_yaml (1.0.5)
-    stringio (3.0.2)
+    stringio (3.0.5)
     tzinfo (2.0.5)
       concurrent-ruby (~> 1.0)
     unicode-display_width (2.3.0)
