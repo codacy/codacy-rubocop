@@ -11,7 +11,7 @@ GEM
     concurrent-ruby (1.1.10)
     dark_finger (0.6.1)
       rubocop (>= 0.51.0)
-    graphql (2.0.15)
+    graphql (2.0.18)
     i18n (1.12.0)
       concurrent-ruby (~> 1.0)
     json (2.6.2)
