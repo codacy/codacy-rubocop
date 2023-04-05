@@ -1,6 +1,6 @@
 ARG GEM_FOLDER="/usr/local/bundle"
 
-ARG BASE_IMAGE=alpine:3.17
+ARG BASE_IMAGE=alpine:3.17.3
 
 FROM $BASE_IMAGE as doc-generator
 
