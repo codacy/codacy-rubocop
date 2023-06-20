@@ -1,6 +1,5 @@
 
-Identifies usages of `all.each` and
-change them to use `all.find_each` instead.
+Identifies usages of `all.each` and change them to use `all.find_each` instead.
 
 # Examples
 

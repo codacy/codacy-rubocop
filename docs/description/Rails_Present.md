@@ -4,7 +4,7 @@ using `Object#present?` defined by Active Support.
 
 Interaction with `Style/UnlessElse`:
 The configuration of `NotBlank` will not produce an offense in the
-context of `unless else` if `Style/UnlessElse` is inabled. This is
+context of `unless else` if `Style/UnlessElse` is enabled. This is
 to prevent interference between the autocorrection of the two cops.
 
 # Examples

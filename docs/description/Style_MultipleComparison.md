@@ -31,7 +31,9 @@ foo if a == b.lightweight || a == b.heavyweight# bad
 foo if a == b.lightweight || a == b.heavyweight
 
 # good
-foo if [b.lightweight, b.heavyweight].include?(a)
+foo if [b.lightweight, b.heavyweight].include?(a)# bad
+foo if a == 'a' || a == 'b'# good
+foo if a == 'a' || a == 'b'
 ```
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Style/MultipleComparison)

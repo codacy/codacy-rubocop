@@ -22,6 +22,14 @@ end
 # good
 delegate :bar, to: :foo
 
+# bad
+def bar
+  self.bar
+end
+
+# good
+delegate :bar, to: :self
+
 # good
 def bar
   foo&.bar

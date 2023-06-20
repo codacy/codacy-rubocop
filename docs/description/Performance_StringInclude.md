@@ -5,15 +5,15 @@ Identifies unnecessary use of a regex where `String#include?` would suffice.
 
 ```ruby
 # bad
-'abc'.match?(/ab/)
-/ab/.match?('abc')
-'abc' =~ /ab/
-/ab/ =~ 'abc'
-'abc'.match(/ab/)
-/ab/.match('abc')
+str.match?(/ab/)
+/ab/.match?(str)
+str =~ /ab/
+/ab/ =~ str
+str.match(/ab/)
+/ab/.match(str)
 
 # good
-'abc'.include?('ab')
+str.include?('ab')
 ```
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Performance/StringInclude)

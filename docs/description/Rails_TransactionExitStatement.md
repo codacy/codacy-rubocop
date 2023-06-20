@@ -32,6 +32,11 @@ user.with_lock do
   throw if user.active?
 end
 
+# bad, as `with_lock` implicitly opens a transaction too
+ApplicationRecord.with_lock do
+  break if user.active?
+end
+
 # good
 ApplicationRecord.transaction do
   # Rollback

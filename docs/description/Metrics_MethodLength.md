@@ -3,8 +3,8 @@ Checks if the length of a method exceeds some maximum value.
 Comment lines can optionally be allowed.
 The maximum allowed length is configurable.
 
-You can set literals you want to fold with `CountAsOne`.
-Available are: 'array', 'hash', and 'heredoc'. Each literal
+You can set constructs you want to fold with `CountAsOne`.
+Available are: 'array', 'hash', 'heredoc', and 'method_call'. Each construct
 will be counted as one line regardless of its actual size.
 
 NOTE: The `ExcludedMethods` and `IgnoredMethods` configuration is
@@ -30,7 +30,12 @@ def m
     Heredoc
     content.
   HEREDOC
-end               # 5 points
+
+  foo(            # +1
+    1,
+    2
+  )
+end               # 6 points
 ```
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Metrics/MethodLength)

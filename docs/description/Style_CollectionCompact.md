@@ -7,7 +7,9 @@ and hashes can be replaced with `{Array,Hash}#{compact,compact!}`.
 ```ruby
 # bad
 array.reject(&:nil?)
+array.delete_if(&:nil?)
 array.reject { |e| e.nil? }
+array.delete_if { |e| e.nil? }
 array.select { |e| !e.nil? }
 
 # good
@@ -19,7 +21,8 @@ hash.reject! { |k, v| v.nil? }
 hash.select! { |k, v| !v.nil? }
 
 # good
-hash.compact!
+hash.compact!# good
+params.reject(&:nil?)
 ```
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Style/CollectionCompact)

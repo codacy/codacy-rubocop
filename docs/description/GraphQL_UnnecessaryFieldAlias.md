@@ -1,20 +1,22 @@
 
-This cop checks if a field has an unnecessary alias.
+This cop prevents defining an unnecessary alias, method, or resolver_method.
 
 # Examples
 
 ```ruby
 # good
 
-class UserType < BaseType
-  field :name, String, "Name of the user", null: true, alias: :real_name
-end
+field :name, String, "Name of the user", null: true, alias: :real_name
+field :name, String, "Name of the user", null: true, method: :real_name
+field :name, String, "Name of the user", null: true, resolver_method: :real_name
+field :name, String, "Name of the user", null: true, hash_key: :real_name
 
 # bad
 
-class UserType < BaseType
-  field :name, "Name of the user" String, null: true, alias: :name
-end
+field :name, "Name of the user" String, null: true, alias: :name
+field :name, String, "Name of the user", null: true, method: :name
+field :name, String, "Name of the user", null: true, resolver_method: :name
+field :name, String, "Name of the user", null: true, hash_key: :name
 ```
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/GraphQL/UnnecessaryFieldAlias)

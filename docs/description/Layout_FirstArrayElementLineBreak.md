@@ -14,6 +14,23 @@ multi-line array.
 [
   :a,
   :b]
+
+# good
+[:a, :b]
+# bad
+[ :a, {
+  :b => :c
+}]
+
+# good
+[
+  :a, {
+  :b => :c
+}]
+# good
+[:a, {
+  :b => :c
+}]
 ```
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Layout/FirstArrayElementLineBreak)

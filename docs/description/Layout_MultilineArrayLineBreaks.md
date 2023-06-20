@@ -18,6 +18,23 @@ starts on a separate line.
   b,
   c
 ]
+
+# good
+[
+  a,
+  b,
+  foo(
+    bar
+  )
+]
+# bad
+[a, b, foo(
+  bar
+)]
+# good
+[a, b, foo(
+  bar
+)]
 ```
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Layout/MultilineArrayLineBreaks)

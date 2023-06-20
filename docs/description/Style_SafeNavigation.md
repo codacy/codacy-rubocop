@@ -37,6 +37,11 @@ foo && foo.bar(param1, param2)
 foo && foo.bar { |e| e.something }
 foo && foo.bar(param) { |e| e.something }
 
+foo ? foo.bar : nil
+foo.nil? ? nil : foo.bar
+!foo.nil? ? foo.bar : nil
+!foo ? nil : foo.bar
+
 # good
 foo&.bar
 foo&.bar&.baz

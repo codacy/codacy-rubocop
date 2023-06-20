@@ -6,6 +6,9 @@ If you are running Rails < 5 you should disable the
 Rails/HttpPositionalArguments cop or set your TargetRailsVersion in your
 .rubocop.yml file to 4.2.
 
+NOTE: It does not detect any cases where `include Rack::Test::Methods` is used
+which makes the http methods incompatible behavior.
+
 # Examples
 
 ```ruby
