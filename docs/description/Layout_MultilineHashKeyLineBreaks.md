@@ -18,6 +18,22 @@ starts on a separate line.
   b: 2,
   c: 3
 }
+
+# good
+{
+  a: 1,
+  b: {
+    c: 3,
+  }
+}
+# bad
+{ a: 1, b: {
+  c: 3,
+}}
+# good
+{ a: 1, b: {
+  c: 3,
+}}
 ```
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Layout/MultilineHashKeyLineBreaks)

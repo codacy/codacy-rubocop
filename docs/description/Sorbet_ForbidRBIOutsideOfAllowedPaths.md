@@ -3,7 +3,7 @@ This cop makes sure that RBI files are always located under the defined allowed 
 
 Options:
 
-* `AllowedPaths`: A list of the paths where RBI files are allowed (default: ["sorbet/rbi/**"])
+* `AllowedPaths`: A list of the paths where RBI files are allowed (default: ["rbi/**", "sorbet/rbi/**"])
 
 # Examples
 
@@ -13,6 +13,7 @@ Options:
 # other_file.rbi
 
 # good
+# rbi/external_interface.rbi
 # sorbet/rbi/some_file.rbi
 # sorbet/rbi/any/path/for/file.rbi
 ```

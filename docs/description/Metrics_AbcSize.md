@@ -21,7 +21,7 @@ And `AllowedPatterns` (defaults to `[]`)
 
 ```ruby
 
-# `model` and `current_user`, refenced 3 times each,
+# `model` and `current_user`, referenced 3 times each,
 # are each counted as only 1 branch each if
 # `CountRepeatedAttributes` is set to 'false'
 

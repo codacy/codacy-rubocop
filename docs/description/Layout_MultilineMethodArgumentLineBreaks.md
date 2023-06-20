@@ -14,6 +14,11 @@ foo(a, b,
   c
 )
 
+# bad
+foo(a, b, {
+  foo: "bar",
+})
+
 # good
 foo(
   a,
@@ -23,6 +28,22 @@ foo(
 
 # good
 foo(a, b, c)
+# good
+foo(
+  a,
+  b,
+  {
+    foo: "bar",
+  }
+)
+# good
+foo(
+  a,
+  b,
+  {
+    foo: "bar",
+  }
+)
 ```
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Layout/MultilineMethodArgumentLineBreaks)

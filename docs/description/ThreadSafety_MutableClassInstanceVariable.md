@@ -1,5 +1,5 @@
 
-This cop checks whether some class instance variable isn't a
+Checks whether some class instance variable isn't a
 mutable literal (e.g. array or hash).
 
 It is based on Style/MutableConstant from RuboCop.
