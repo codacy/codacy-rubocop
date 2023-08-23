@@ -1,10 +1,10 @@
 
-Checks if the length a module exceeds some maximum value.
+Checks if the length of a module exceeds some maximum value.
 Comment lines can optionally be ignored.
 The maximum allowed length is configurable.
 
-You can set literals you want to fold with `CountAsOne`.
-Available are: 'array', 'hash', and 'heredoc'. Each literal
+You can set constructs you want to fold with `CountAsOne`.
+Available are: 'array', 'hash', 'heredoc', and 'method_call'. Each construct
 will be counted as one line regardless of its actual size.
 
 # Examples
@@ -25,7 +25,12 @@ module M
     Heredoc
     content.
   HEREDOC
-end                 # 5 points
+
+  foo(              # +1
+    1,
+    2
+  )
+end                 # 6 points
 ```
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Metrics/ModuleLength)

@@ -24,7 +24,26 @@ def foo(
 end
 
 # good
+def foo(
+  a,
+  b = {
+    foo: "bar",
+  }
+)
+end
+
+# good
 def foo(a, b, c)
+end
+# bad
+def foo(a, b = {
+  foo: "bar",
+})
+end
+# good
+def foo(a, b = {
+  foo: "bar",
+})
 end
 ```
 

@@ -1,5 +1,5 @@
 
-Checks that deprecated attribute attributes are not set in a gemspec file.
+Checks that deprecated attributes are not set in a gemspec file.
 Removing deprecated attributes allows the user to receive smaller packed gems.
 
 # Examples

@@ -7,6 +7,9 @@ because in some cases it makes sense to overtake what is considered a
 missing method. In other cases, the theoretical ideal handling could be
 challenging or verbose for no actual gain.
 
+Autocorrection is not supported because the position of `super` cannot be
+determined automatically.
+
 # Examples
 
 ```ruby
@@ -19,6 +22,21 @@ end
 
 # good
 class Employee < Person
+  def initialize(name, salary)
+    super(name)
+    @salary = salary
+  end
+end
+
+# bad
+Employee = Class.new(Person) do
+  def initialize(name, salary)
+    @salary = salary
+  end
+end
+
+# good
+Employee = Class.new(Person) do
   def initialize(name, salary)
     super(name)
     @salary = salary

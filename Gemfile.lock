@@ -38,20 +38,24 @@ GEM
     rubocop (1.39.0)
       json (~> 2.3)
       parallel (~> 1.10)
-      parser (>= 3.1.2.1)
+      parser (>= 3.2.2.3)
       rainbow (>= 2.2.2, < 4.0)
       regexp_parser (>= 1.8, < 3.0)
       rexml (>= 3.2.5, < 4.0)
-      rubocop-ast (>= 1.23.0, < 2.0)
+      rubocop-ast (>= 1.28.0, < 2.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (>= 1.4.0, < 3.0)
     rubocop-ast (1.29.0)
       parser (>= 3.2.1.0)
     rubocop-graphql (1.4.0)
       rubocop (>= 0.90, < 2)
+    rubocop-capybara (2.18.0)
+      rubocop (~> 1.41)
+    rubocop-factory_bot (2.23.1)
+      rubocop (~> 1.33)
     rubocop-migrations (0.1.0)
       rubocop (>= 0.42.0)
-    rubocop-performance (1.15.1)
+    rubocop-performance (1.18.0)
       rubocop (>= 1.7.0, < 2.0)
       rubocop-ast (>= 0.4.0)
     rubocop-rails (2.20.2)
@@ -60,10 +64,6 @@ GEM
       rubocop (>= 1.33.0, < 2.0)
     rubocop-rake (0.6.0)
       rubocop (~> 1.0)
-    rubocop-rspec (2.17.1)
-      rubocop (~> 1.33)
-    rubocop-shopify (2.10.1)
-      rubocop (~> 1.35)
     rubocop-sorbet (0.7.3)
       rubocop (>= 0.90.0)
     rubocop-thread_safety (0.5.1)
@@ -75,6 +75,12 @@ GEM
       rubocop (= 1.39.0)
       rubocop-performance (= 1.15.1)
     stringio (3.0.8)
+    rubocop-rspec (2.22.0)
+      rubocop (~> 1.33)
+      rubocop-capybara (~> 2.17)
+      rubocop-factory_bot (~> 2.22)
+    rubocop-shopify (2.14.0)
+      rubocop (~> 1.51)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
     unicode-display_width (2.4.2)
@@ -91,7 +97,7 @@ DEPENDENCIES
   pry
   rake
   rdoc
-  rubocop (= 1.39.0)
+  rubocop (= 1.52.1)
   rubocop-graphql
   rubocop-migrations
   rubocop-performance
@@ -106,4 +112,4 @@ DEPENDENCIES
   yard
 
 BUNDLED WITH
-   2.3.11
+   2.4.2

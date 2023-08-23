@@ -1,6 +1,6 @@
 {
   "name": "rubocop",
-  "version": "1.39.0",
+  "version": "1.52.1",
   "patterns": [
     {
       "patternId": "Migration_DepartmentName",
@@ -13,6 +13,10 @@
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [
+        {
+          "name": "Severity",
+          "default": "warning"
+        },
         {
           "name": "Include",
           "default": [
@@ -119,6 +123,10 @@
       "category": "CodeStyle",
       "parameters": [
         {
+          "name": "Severity",
+          "default": "warning"
+        },
+        {
           "name": "AllowHttpProtocol",
           "default": "true"
         },
@@ -194,9 +202,47 @@
       "category": "CodeStyle",
       "parameters": [
         {
+          "name": "Severity",
+          "default": "warning"
+        },
+        {
           "name": "Include",
           "default": [
             "**/*.gemspec"
+          ]
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "Gemspec_DevelopmentDependencies",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "Gemfile"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": [
+            "Gemfile",
+            "gems.rb",
+            "gemspec"
+          ]
+        },
+        {
+          "name": "AllowedGems",
+          "default": [
+
+          ]
+        },
+        {
+          "name": "Include",
+          "default": [
+            "**/*.gemspec",
+            "**/Gemfile",
+            "**/gems.rb"
           ]
         }
       ],
@@ -207,6 +253,10 @@
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [
+        {
+          "name": "Severity",
+          "default": "warning"
+        },
         {
           "name": "Include",
           "default": [
@@ -244,6 +294,10 @@
       "category": "CodeStyle",
       "parameters": [
         {
+          "name": "Severity",
+          "default": "warning"
+        },
+        {
           "name": "Include",
           "default": [
             "**/*.gemspec"
@@ -258,6 +312,10 @@
       "category": "CodeStyle",
       "parameters": [
         {
+          "name": "Severity",
+          "default": "warning"
+        },
+        {
           "name": "Include",
           "default": [
             "**/*.gemspec"
@@ -271,6 +329,10 @@
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [
+        {
+          "name": "Severity",
+          "default": "warning"
+        },
         {
           "name": "Include",
           "default": [
@@ -851,6 +913,12 @@
       "patternId": "Layout_FirstArrayElementLineBreak",
       "level": "Info",
       "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "AllowMultilineFinalElement",
+          "default": "false"
+        }
+      ],
       "enabled": false
     },
     {
@@ -881,18 +949,36 @@
       "patternId": "Layout_FirstHashElementLineBreak",
       "level": "Info",
       "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "AllowMultilineFinalElement",
+          "default": "false"
+        }
+      ],
       "enabled": false
     },
     {
       "patternId": "Layout_FirstMethodArgumentLineBreak",
       "level": "Info",
       "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "AllowMultilineFinalElement",
+          "default": "false"
+        }
+      ],
       "enabled": false
     },
     {
       "patternId": "Layout_FirstMethodParameterLineBreak",
       "level": "Info",
       "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "AllowMultilineFinalElement",
+          "default": "false"
+        }
+      ],
       "enabled": false
     },
     {
@@ -1035,12 +1121,6 @@
           "default": [
 
           ]
-        },
-        {
-          "name": "IgnoredPatterns",
-          "default": [
-
-          ]
         }
       ],
       "enabled": false
@@ -1079,14 +1159,6 @@
       "category": "CodeStyle",
       "parameters": [
         {
-          "name": "AutoCorrect",
-          "default": "false"
-        },
-        {
-          "name": "SafeAutoCorrect",
-          "default": "false"
-        },
-        {
           "name": "EnforcedStyle",
           "default": "trailing"
         },
@@ -1105,14 +1177,6 @@
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [
-        {
-          "name": "AutoCorrect",
-          "default": "true"
-        },
-        {
-          "name": "SafeAutoCorrect",
-          "default": "true"
-        },
         {
           "name": "EnforcedStyle",
           "default": "space"
@@ -1183,12 +1247,6 @@
           "default": [
 
           ]
-        },
-        {
-          "name": "IgnoredPatterns",
-          "default": [
-
-          ]
         }
       ],
       "enabled": false
@@ -1217,6 +1275,12 @@
       "patternId": "Layout_MultilineArrayLineBreaks",
       "level": "Info",
       "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "AllowMultilineFinalElement",
+          "default": "false"
+        }
+      ],
       "enabled": false
     },
     {
@@ -1279,12 +1343,24 @@
       "patternId": "Layout_MultilineHashKeyLineBreaks",
       "level": "Info",
       "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "AllowMultilineFinalElement",
+          "default": "false"
+        }
+      ],
       "enabled": false
     },
     {
       "patternId": "Layout_MultilineMethodArgumentLineBreaks",
       "level": "Info",
       "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "AllowMultilineFinalElement",
+          "default": "false"
+        }
+      ],
       "enabled": false
     },
     {
@@ -1355,6 +1431,12 @@
       "patternId": "Layout_MultilineMethodParameterLineBreaks",
       "level": "Info",
       "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "AllowMultilineFinalElement",
+          "default": "false"
+        }
+      ],
       "enabled": false
     },
     {
@@ -1851,12 +1933,6 @@
           "default": [
 
           ]
-        },
-        {
-          "name": "IgnoredMethods",
-          "default": [
-
-          ]
         }
       ],
       "enabled": false
@@ -1900,6 +1976,10 @@
       "level": "Warning",
       "category": "ErrorProne",
       "parameters": [
+        {
+          "name": "SafeAutoCorrect",
+          "default": "false"
+        },
         {
           "name": "AllowSafeAssignment",
           "default": "true"
@@ -1989,14 +2069,8 @@
       "category": "ErrorProne",
       "parameters": [
         {
-          "name": "DebuggerReceivers",
-          "default": [
-
-          ]
-        },
-        {
           "name": "DebuggerMethods",
-          "default": "{\"Kernel\"=>[\"binding.irb\", \"Kernel.binding.irb\"], \"Byebug\"=>[\"byebug\", \"remote_byebug\", \"Kernel.byebug\", \"Kernel.remote_byebug\"], \"Capybara\"=>[\"save_and_open_page\", \"save_and_open_screenshot\"], \"debug.rb\"=>[\"binding.b\", \"binding.break\", \"Kernel.binding.b\", \"Kernel.binding.break\"], \"Pry\"=>[\"binding.pry\", \"binding.remote_pry\", \"binding.pry_remote\", \"Kernel.binding.pry\", \"Kernel.binding.remote_pry\", \"Kernel.binding.pry_remote\", \"Pry.rescue\"], \"Rails\"=>[\"debugger\", \"Kernel.debugger\"], \"RubyJard\"=>[\"jard\"], \"WebConsole\"=>[\"binding.console\"]}"
+          "default": "{\"Kernel\"=>[\"binding.irb\", \"Kernel.binding.irb\"], \"Byebug\"=>[\"byebug\", \"remote_byebug\", \"Kernel.byebug\", \"Kernel.remote_byebug\"], \"Capybara\"=>[\"save_and_open_page\", \"save_and_open_screenshot\"], \"debug.rb\"=>[\"binding.b\", \"binding.break\", \"Kernel.binding.b\", \"Kernel.binding.break\"], \"Pry\"=>[\"binding.pry\", \"binding.remote_pry\", \"binding.pry_remote\", \"Kernel.binding.pry\", \"Kernel.binding.remote_pry\", \"Kernel.binding.pry_remote\", \"Pry.rescue\", \"pry\"], \"Rails\"=>[\"debugger\", \"Kernel.debugger\"], \"RubyJard\"=>[\"jard\"], \"WebConsole\"=>[\"binding.console\"]}"
         }
       ],
       "enabled": true
@@ -2014,7 +2088,7 @@
       "parameters": [
         {
           "name": "DeprecatedConstants",
-          "default": "{\"NIL\"=>{\"Alternative\"=>\"nil\", \"DeprecatedVersion\"=>\"2.4\"}, \"TRUE\"=>{\"Alternative\"=>\"true\", \"DeprecatedVersion\"=>\"2.4\"}, \"FALSE\"=>{\"Alternative\"=>\"false\", \"DeprecatedVersion\"=>\"2.4\"}, \"Net::HTTPServerException\"=>{\"Alternative\"=>\"Net::HTTPClientException\", \"DeprecatedVersion\"=>\"2.6\"}, \"Random::DEFAULT\"=>{\"Alternative\"=>\"Random.new\", \"DeprecatedVersion\"=>\"3.0\"}}"
+          "default": "{\"NIL\"=>{\"Alternative\"=>\"nil\", \"DeprecatedVersion\"=>\"2.4\"}, \"TRUE\"=>{\"Alternative\"=>\"true\", \"DeprecatedVersion\"=>\"2.4\"}, \"FALSE\"=>{\"Alternative\"=>\"false\", \"DeprecatedVersion\"=>\"2.4\"}, \"Net::HTTPServerException\"=>{\"Alternative\"=>\"Net::HTTPClientException\", \"DeprecatedVersion\"=>\"2.6\"}, \"Random::DEFAULT\"=>{\"Alternative\"=>\"Random.new\", \"DeprecatedVersion\"=>\"3.0\"}, \"Struct::Group\"=>{\"Alternative\"=>\"Etc::Group\", \"DeprecatedVersion\"=>\"3.0\"}, \"Struct::Passwd\"=>{\"Alternative\"=>\"Etc::Passwd\", \"DeprecatedVersion\"=>\"3.0\"}}"
         }
       ],
       "enabled": false
@@ -2073,6 +2147,12 @@
     },
     {
       "patternId": "Lint_DuplicateMagicComment",
+      "level": "Warning",
+      "category": "ErrorProne",
+      "enabled": false
+    },
+    {
+      "patternId": "Lint_DuplicateMatchPattern",
       "level": "Warning",
       "category": "ErrorProne",
       "enabled": false
@@ -2330,7 +2410,7 @@
       "category": "ErrorProne",
       "parameters": [
         {
-          "name": "Safe",
+          "name": "SafeAutoCorrect",
           "default": "false"
         }
       ],
@@ -2886,6 +2966,14 @@
       "patternId": "Lint_TopLevelReturnWithArgument",
       "level": "Warning",
       "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "Exclude",
+          "default": [
+            "**/*.jb"
+          ]
+        }
+      ],
       "enabled": false
     },
     {
@@ -2955,12 +3043,6 @@
           "name": "AllowedPatterns",
           "default": [
             "(?-mix:(exactly|at_least|at_most)\\(\\d+\\)\\.times)"
-          ]
-        },
-        {
-          "name": "IgnoredPatterns",
-          "default": [
-
           ]
         }
       ],
@@ -3038,6 +3120,12 @@
       "patternId": "Lint_UselessAssignment",
       "level": "Warning",
       "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "SafeAutoCorrect",
+          "default": "false"
+        }
+      ],
       "enabled": true
     },
     {
@@ -3059,6 +3147,12 @@
       "enabled": false
     },
     {
+      "patternId": "Lint_UselessRescue",
+      "level": "Warning",
+      "category": "ErrorProne",
+      "enabled": false
+    },
+    {
       "patternId": "Lint_UselessRuby2Keywords",
       "level": "Warning",
       "category": "ErrorProne",
@@ -3069,10 +3163,6 @@
       "level": "Warning",
       "category": "ErrorProne",
       "parameters": [
-        {
-          "name": "SafeAutoCorrect",
-          "default": "false"
-        },
         {
           "name": "Safe",
           "default": "false"
@@ -3122,12 +3212,6 @@
           ]
         },
         {
-          "name": "IgnoredMethods",
-          "default": [
-
-          ]
-        },
-        {
           "name": "Max",
           "default": "7"
         }
@@ -3147,12 +3231,6 @@
         },
         {
           "name": "AllowedPatterns",
-          "default": [
-
-          ]
-        },
-        {
-          "name": "IgnoredMethods",
           "default": [
 
           ]
@@ -3188,12 +3266,6 @@
           ]
         },
         {
-          "name": "ExcludedMethods",
-          "default": [
-
-          ]
-        },
-        {
           "name": "AllowedMethods",
           "default": [
             "refine"
@@ -3201,12 +3273,6 @@
         },
         {
           "name": "AllowedPatterns",
-          "default": [
-
-          ]
-        },
-        {
-          "name": "IgnoredMethods",
           "default": [
 
           ]
@@ -3259,6 +3325,18 @@
       "enabled": false
     },
     {
+      "patternId": "Metrics_CollectionLiteralLength",
+      "level": "Warning",
+      "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "LengthThreshold",
+          "default": "250"
+        }
+      ],
+      "enabled": false
+    },
+    {
       "patternId": "Metrics_MethodLength",
       "level": "Warning",
       "category": "ErrorProne",
@@ -3278,12 +3356,6 @@
           ]
         },
         {
-          "name": "ExcludedMethods",
-          "default": [
-
-          ]
-        },
-        {
           "name": "AllowedMethods",
           "default": [
 
@@ -3291,12 +3363,6 @@
         },
         {
           "name": "AllowedPatterns",
-          "default": [
-
-          ]
-        },
-        {
-          "name": "IgnoredMethods",
           "default": [
 
           ]
@@ -3359,12 +3425,6 @@
         },
         {
           "name": "AllowedPatterns",
-          "default": [
-
-          ]
-        },
-        {
-          "name": "IgnoredMethods",
           "default": [
 
           ]
@@ -3576,7 +3636,7 @@
         {
           "name": "ForbiddenDelimiters",
           "default": [
-            "(?-mix:(^|\\s)(EO[A-Z]{1}|END)(\\s|$))"
+            "(?i-mx:(^|\\s)(EO[A-Z]{1}|END)(\\s|$))"
           ]
         }
       ],
@@ -3667,12 +3727,6 @@
           "default": [
 
           ]
-        },
-        {
-          "name": "IgnoredPatterns",
-          "default": [
-
-          ]
         }
       ],
       "enabled": false
@@ -3696,6 +3750,7 @@
             "as",
             "at",
             "by",
+            "cc",
             "db",
             "id",
             "if",
@@ -3843,7 +3898,8 @@
             "rfc1123_date",
             "rfc822",
             "rfc2822",
-            "rfc3339"
+            "rfc3339",
+            "x86_64"
           ]
         },
         {
@@ -3957,6 +4013,18 @@
     },
     {
       "patternId": "Style_ArrayCoercion",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "Safe",
+          "default": "false"
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "Style_ArrayIntersect",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [
@@ -4093,12 +4161,6 @@
           ]
         },
         {
-          "name": "IgnoredMethods",
-          "default": [
-
-          ]
-        },
-        {
           "name": "AllowBracesOnProceduralOneLiners",
           "default": "false"
         },
@@ -4135,6 +4197,10 @@
         {
           "name": "Safe",
           "default": "false"
+        },
+        {
+          "name": "MinBranchesCount",
+          "default": "3"
         }
       ],
       "enabled": false
@@ -4205,12 +4271,6 @@
           "default": [
 
           ]
-        },
-        {
-          "name": "IgnoredMethods",
-          "default": [
-
-          ]
         }
       ],
       "enabled": false
@@ -4254,6 +4314,12 @@
         {
           "name": "Safe",
           "default": "false"
+        },
+        {
+          "name": "AllowedReceivers",
+          "default": [
+
+          ]
         }
       ],
       "enabled": false
@@ -4365,6 +4431,24 @@
       "enabled": false
     },
     {
+      "patternId": "Style_ComparableClamp",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "Style_ConcatArrayLiterals",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "Safe",
+          "default": "false"
+        }
+      ],
+      "enabled": false
+    },
+    {
       "patternId": "Style_ConditionalAssignment",
       "level": "Info",
       "category": "CodeStyle",
@@ -4420,6 +4504,18 @@
       "enabled": false
     },
     {
+      "patternId": "Style_DataInheritance",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "SafeAutoCorrect",
+          "default": "false"
+        }
+      ],
+      "enabled": false
+    },
+    {
       "patternId": "Style_DateTime",
       "level": "Info",
       "category": "CodeStyle",
@@ -4443,6 +4539,12 @@
     },
     {
       "patternId": "Style_Dir",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "Style_DirEmpty",
       "level": "Info",
       "category": "CodeStyle",
       "enabled": false
@@ -4678,6 +4780,12 @@
       "enabled": true
     },
     {
+      "patternId": "Style_ExactRegexpMatch",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
       "patternId": "Style_ExpandPathArguments",
       "level": "Info",
       "category": "CodeStyle",
@@ -4719,6 +4827,18 @@
           "default": [
 
           ]
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "Style_FileEmpty",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "Safe",
+          "default": "false"
         }
       ],
       "enabled": false
@@ -4835,12 +4955,6 @@
           "default": [
 
           ]
-        },
-        {
-          "name": "IgnoredMethods",
-          "default": [
-
-          ]
         }
       ],
       "enabled": false
@@ -4954,7 +5068,7 @@
         {
           "name": "AllowedReceivers",
           "default": [
-
+            "Thread.current"
           ]
         }
       ],
@@ -5161,6 +5275,22 @@
       "enabled": false
     },
     {
+      "patternId": "Style_InvertibleUnlessCondition",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "Safe",
+          "default": "false"
+        },
+        {
+          "name": "InverseMethods",
+          "default": "{:!==>:==, :>=>:<=, :<==>:>, :<=>:>=, :>==>:<, :!~=>:=~, :zero?=>:nonzero?, :nonzero?=>:zero?, :any?=>:none?, :none?=>:any?, :even?=>:odd?, :odd?=>:even?}"
+        }
+      ],
+      "enabled": false
+    },
+    {
       "patternId": "Style_IpAddresses",
       "level": "Info",
       "category": "CodeStyle",
@@ -5287,6 +5417,18 @@
       "enabled": false
     },
     {
+      "patternId": "Style_MapToSet",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "Safe",
+          "default": "false"
+        }
+      ],
+      "enabled": false
+    },
+    {
       "patternId": "Style_MethodCallWithoutArgsParentheses",
       "level": "Info",
       "category": "CodeStyle",
@@ -5299,12 +5441,6 @@
         },
         {
           "name": "AllowedPatterns",
-          "default": [
-
-          ]
-        },
-        {
-          "name": "IgnoredMethods",
           "default": [
 
           ]
@@ -5328,19 +5464,7 @@
           ]
         },
         {
-          "name": "IgnoredMethods",
-          "default": [
-
-          ]
-        },
-        {
           "name": "AllowedPatterns",
-          "default": [
-
-          ]
-        },
-        {
-          "name": "IgnoredPatterns",
           "default": [
 
           ]
@@ -5382,6 +5506,18 @@
       "enabled": false
     },
     {
+      "patternId": "Style_MinMaxComparison",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "Safe",
+          "default": "false"
+        }
+      ],
+      "enabled": false
+    },
+    {
       "patternId": "Style_MultilineInPatternThen",
       "level": "Info",
       "category": "CodeStyle",
@@ -5410,6 +5546,12 @@
       "patternId": "Style_OpenStructUse",
       "level": "Info",
       "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "Safe",
+          "default": "false"
+        }
+      ],
       "enabled": false
     },
     {
@@ -5419,7 +5561,25 @@
       "enabled": false
     },
     {
+      "patternId": "Style_RedundantArrayConstructor",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
       "patternId": "Style_RedundantAssignment",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "Style_RedundantConstantBase",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "Style_RedundantDoubleSplatHashBraces",
       "level": "Info",
       "category": "CodeStyle",
       "enabled": false
@@ -5459,6 +5619,18 @@
       "enabled": false
     },
     {
+      "patternId": "Style_RedundantFilterChain",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "Style_RedundantHeredocDelimiterQuotes",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
       "patternId": "Style_RedundantInitialize",
       "level": "Info",
       "category": "CodeStyle",
@@ -5472,6 +5644,18 @@
           "default": "true"
         }
       ],
+      "enabled": false
+    },
+    {
+      "patternId": "Style_RedundantLineContinuation",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "Style_RedundantRegexpConstructor",
+      "level": "Info",
+      "category": "CodeStyle",
       "enabled": false
     },
     {
@@ -5490,6 +5674,18 @@
       "patternId": "Style_RedundantSelfAssignmentBranch",
       "level": "Info",
       "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "Style_RequireOrder",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "SafeAutoCorrect",
+          "default": "false"
+        }
+      ],
       "enabled": false
     },
     {
@@ -5696,6 +5892,10 @@
         {
           "name": "AllowMethodComparison",
           "default": "true"
+        },
+        {
+          "name": "ComparisonsThreshold",
+          "default": "2"
         }
       ],
       "enabled": false
@@ -5958,10 +6158,6 @@
           "default": "false"
         },
         {
-          "name": "SafeAutoCorrect",
-          "default": "false"
-        },
-        {
           "name": "EnforcedStyle",
           "default": "predicate"
         },
@@ -5980,12 +6176,6 @@
         },
         {
           "name": "AllowedPatterns",
-          "default": [
-
-          ]
-        },
-        {
-          "name": "IgnoredMethods",
           "default": [
 
           ]
@@ -6240,7 +6430,7 @@
         },
         {
           "name": "Methods",
-          "default": "{\"join\"=>\"\", \"split\"=>\" \", \"chomp\"=>\"\\n\", \"chomp!\"=>\"\\n\"}"
+          "default": "{\"join\"=>\"\", \"sum\"=>0, \"split\"=>\" \", \"chomp\"=>\"\\n\", \"chomp!\"=>\"\\n\"}"
         }
       ],
       "enabled": false
@@ -6814,12 +7004,6 @@
           ]
         },
         {
-          "name": "IgnoredMethods",
-          "default": [
-
-          ]
-        },
-        {
           "name": "AllowComments",
           "default": "false"
         }
@@ -7118,6 +7302,28 @@
       "enabled": false
     },
     {
+      "patternId": "Style_YodaExpression",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "Safe",
+          "default": "false"
+        },
+        {
+          "name": "SupportedOperators",
+          "default": [
+            "*",
+            "+",
+            "&",
+            "|",
+            "^"
+          ]
+        }
+      ],
+      "enabled": false
+    },
+    {
       "patternId": "Style_ZeroLengthPredicate",
       "level": "Info",
       "category": "CodeStyle",
@@ -7133,6 +7339,12 @@
       "patternId": "Security_CompoundHash",
       "level": "Error",
       "category": "Security",
+      "parameters": [
+        {
+          "name": "Safe",
+          "default": "false"
+        }
+      ],
       "enabled": false
     },
     {
@@ -7478,6 +7690,10 @@
         {
           "name": "Safe",
           "default": "false"
+        },
+        {
+          "name": "AllowRegexpMatch",
+          "default": "true"
         }
       ],
       "enabled": false

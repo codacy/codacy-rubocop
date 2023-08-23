@@ -24,6 +24,26 @@ def method foo,
     bar
   do_something
 end
+# bad
+def method(foo, bar, baz = {
+  :a => "b",
+})
+  do_something
+end
+
+# good
+def method(
+  foo, bar, baz = {
+  :a => "b",
+})
+  do_something
+end
+# good
+def method(foo, bar, baz = {
+  :a => "b",
+})
+  do_something
+end
 ```
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Layout/FirstMethodParameterLineBreak)
