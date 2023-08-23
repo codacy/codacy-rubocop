@@ -1,5 +1,5 @@
 
-This cop disallows using `T.unsafe` anywhere.
+Disallows using `T.unsafe` anywhere.
 
 # Examples
 

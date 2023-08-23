@@ -1,6 +1,6 @@
 {
   "name": "rubocop",
-  "version": "1.38.0",
+  "version": "1.39.0",
   "patterns": [
     {
       "patternId": "Migration_DepartmentName",
@@ -2502,21 +2502,7 @@
         {
           "name": "IgnoredMethods",
           "default": [
-            "ago",
-            "from_now",
-            "second",
-            "seconds",
-            "minute",
-            "minutes",
-            "hour",
-            "hours",
-            "day",
-            "days",
-            "week",
-            "weeks",
-            "fortnight",
-            "fortnights",
-            "in_milliseconds"
+
           ]
         },
         {
@@ -2656,7 +2642,9 @@
             "is_a?",
             "eql?",
             "respond_to?",
-            "equal?"
+            "equal?",
+            "presence",
+            "present?"
           ]
         },
         {
@@ -3710,6 +3698,7 @@
             "by",
             "db",
             "id",
+            "if",
             "in",
             "io",
             "ip",
@@ -4838,7 +4827,7 @@
         {
           "name": "AllowedMethods",
           "default": [
-
+            "redirect"
           ]
         },
         {
@@ -4975,6 +4964,12 @@
       "patternId": "Style_HashExcept",
       "level": "Info",
       "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "Safe",
+          "default": "false"
+        }
+      ],
       "enabled": false
     },
     {
@@ -7775,6 +7770,10 @@
       "category": "ErrorProne",
       "parameters": [
         {
+          "name": "Severity",
+          "default": "warning"
+        },
+        {
           "name": "Include",
           "default": [
             "app/models/**/*.rb"
@@ -7809,7 +7808,7 @@
         {
           "name": "Include",
           "default": [
-            "db/migrate/*.rb"
+            "db/**/*.rb"
           ]
         }
       ],
@@ -7958,7 +7957,7 @@
         {
           "name": "Include",
           "default": [
-            "db/migrate/*.rb"
+            "db/**/*.rb"
           ]
         }
       ],
@@ -7999,13 +7998,14 @@
         {
           "name": "Include",
           "default": [
-            "db/migrate/*.rb"
+            "db/**/*.rb"
           ]
         },
         {
           "name": "Exclude",
           "default": [
-            "db/migrate/*_create_active_storage_tables.active_storage.rb"
+            "db/**/*_create_active_storage_tables.active_storage.rb",
+            "db/**/*_create_active_storage_variant_records.active_storage.rb"
           ]
         }
       ],
@@ -8016,6 +8016,10 @@
       "level": "Warning",
       "category": "ErrorProne",
       "parameters": [
+        {
+          "name": "SafeAutoCorrect",
+          "default": "false"
+        },
         {
           "name": "EnforcedStyle",
           "default": "flexible"
@@ -8064,6 +8068,10 @@
       "category": "ErrorProne",
       "parameters": [
         {
+          "name": "Severity",
+          "default": "warning"
+        },
+        {
           "name": "Safe",
           "default": "false"
         }
@@ -8080,12 +8088,24 @@
       "patternId": "Rails_DuplicateAssociation",
       "level": "Warning",
       "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "Severity",
+          "default": "warning"
+        }
+      ],
       "enabled": false
     },
     {
       "patternId": "Rails_DuplicateScope",
       "level": "Warning",
       "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "Severity",
+          "default": "warning"
+        }
+      ],
       "enabled": false
     },
     {
@@ -8273,6 +8293,10 @@
       "category": "ErrorProne",
       "parameters": [
         {
+          "name": "Safe",
+          "default": "false"
+        },
+        {
           "name": "Include",
           "default": [
             "app/models/**/*.rb"
@@ -8291,15 +8315,6 @@
           "name": "AllowedPatterns",
           "default": [
 
-          ]
-        },
-        {
-          "name": "IgnoredMethods",
-          "default": [
-            "order",
-            "limit",
-            "select",
-            "lock"
           ]
         }
       ],
@@ -8401,7 +8416,7 @@
         {
           "name": "Include",
           "default": [
-            "controllers/**/*"
+            "app/controllers/**/*.rb"
           ]
         }
       ],
@@ -8557,7 +8572,7 @@
         {
           "name": "Include",
           "default": [
-            "db/migrate/*.rb"
+            "db/**/*.rb"
           ]
         }
       ],
@@ -8583,7 +8598,7 @@
         {
           "name": "Include",
           "default": [
-            "db/migrate/*.rb"
+            "db/**/*.rb"
           ]
         }
       ],
@@ -8638,6 +8653,12 @@
       "patternId": "Rails_Pluck",
       "level": "Warning",
       "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "Safe",
+          "default": "false"
+        }
+      ],
       "enabled": false
     },
     {
@@ -8892,6 +8913,27 @@
       "enabled": false
     },
     {
+      "patternId": "Rails_ResponseParsedBody",
+      "level": "Warning",
+      "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "Safe",
+          "default": "false"
+        },
+        {
+          "name": "Include",
+          "default": [
+            "spec/controllers/**/*.rb",
+            "spec/requests/**/*.rb",
+            "test/controllers/**/*.rb",
+            "test/integration/**/*.rb"
+          ]
+        }
+      ],
+      "enabled": false
+    },
+    {
       "patternId": "Rails_ReversibleMigration",
       "level": "Warning",
       "category": "ErrorProne",
@@ -9098,6 +9140,20 @@
       "enabled": false
     },
     {
+      "patternId": "Rails_ThreeStateBooleanColumn",
+      "level": "Warning",
+      "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "Include",
+          "default": [
+            "db/**/*.rb"
+          ]
+        }
+      ],
+      "enabled": false
+    },
+    {
       "patternId": "Rails_TimeZone",
       "level": "Warning",
       "category": "ErrorProne",
@@ -9176,6 +9232,12 @@
       "patternId": "Rails_TopLevelHashWithIndifferentAccess",
       "level": "Warning",
       "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "Severity",
+          "default": "warning"
+        }
+      ],
       "enabled": false
     },
     {
@@ -9226,6 +9288,10 @@
       "level": "Warning",
       "category": "ErrorProne",
       "parameters": [
+        {
+          "name": "Severity",
+          "default": "warning"
+        },
         {
           "name": "Environments",
           "default": [
@@ -9316,6 +9382,12 @@
       "patternId": "Rails_WhereNotWithMultipleConditions",
       "level": "Warning",
       "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "Severity",
+          "default": "warning"
+        }
+      ],
       "enabled": false
     },
     {
@@ -9357,6 +9429,12 @@
       "enabled": false
     },
     {
+      "patternId": "Sorbet_ImplicitConversionMethod",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
       "patternId": "Sorbet_OneAncestorPerLine",
       "level": "Info",
       "category": "CodeStyle",
@@ -9387,6 +9465,18 @@
       "enabled": false
     },
     {
+      "patternId": "Sorbet_RedundantExtendTSig",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "Safe",
+          "default": "false"
+        }
+      ],
+      "enabled": false
+    },
+    {
       "patternId": "Sorbet_TypeAliasName",
       "level": "Info",
       "category": "CodeStyle",
@@ -9404,6 +9494,22 @@
             "db/**/*.rb",
             "script/**/*"
           ]
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "Sorbet_ObsoleteStrictMemoization",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "Safe",
+          "default": "true"
+        },
+        {
+          "name": "SafeAutoCorrect",
+          "default": "true"
         }
       ],
       "enabled": false
@@ -9430,6 +9536,7 @@
         {
           "name": "AllowedPaths",
           "default": [
+            "rbi/**",
             "sorbet/rbi/**"
           ]
         },
@@ -9487,6 +9594,12 @@
       "enabled": false
     },
     {
+      "patternId": "Sorbet_EmptyLineAfterSig",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
       "patternId": "Sorbet_ValidSigil",
       "level": "Info",
       "category": "CodeStyle",
@@ -9501,7 +9614,11 @@
         },
         {
           "name": "MinimumStrictness",
-          "default": "false"
+          "default": "nil"
+        },
+        {
+          "name": "ExactStrictness",
+          "default": "nil"
         },
         {
           "name": "Include",
@@ -9531,7 +9648,11 @@
         },
         {
           "name": "MinimumStrictness",
-          "default": "false"
+          "default": "nil"
+        },
+        {
+          "name": "ExactStrictness",
+          "default": "nil"
         },
         {
           "name": "Include",
@@ -9722,7 +9843,7 @@
         {
           "name": "Include",
           "default": [
-            "graphql/mutations/**/*.rb"
+            "**/graphql/mutations/**/*.rb"
           ]
         }
       ],
@@ -9807,15 +9928,89 @@
       "enabled": false
     },
     {
+      "patternId": "GraphQL_GraphqlName",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "Include",
+          "default": [
+            "**/graphql/types/**/*",
+            "**/graphql/mutations/**/*"
+          ]
+        },
+        {
+          "name": "EnforcedStyle",
+          "default": "only_override"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": [
+            "required",
+            "only_override"
+          ]
+        }
+      ],
+      "enabled": false
+    },
+    {
       "patternId": "GraphQL_LegacyDsl",
       "level": "Info",
       "category": "CodeStyle",
       "enabled": false
     },
     {
+      "patternId": "GraphQL_MaxComplexitySchema",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "Include",
+          "default": [
+            "**/graphql/**/*_schema.rb"
+          ]
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "GraphQL_MaxDepthSchema",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "Include",
+          "default": [
+            "**/graphql/**/*_schema.rb"
+          ]
+        }
+      ],
+      "enabled": false
+    },
+    {
       "patternId": "GraphQL_MultipleFieldDefinitions",
       "level": "Info",
       "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "GraphQL_NotAuthorizedNodeType",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "Include",
+          "default": [
+            "**/graphql/types/**/*"
+          ]
+        },
+        {
+          "name": "SafeBaseClasses",
+          "default": [
+
+          ]
+        }
+      ],
       "enabled": false
     },
     {
@@ -9902,6 +10097,10 @@
           "default": "literals"
         },
         {
+          "name": "SafeAutoCorrect",
+          "default": "false"
+        },
+        {
           "name": "SupportedStyles",
           "default": [
             "literals",
@@ -9913,6 +10112,12 @@
     },
     {
       "patternId": "ThreadSafety_NewThread",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "Standard_BlockSingleLineBraces",
       "level": "Info",
       "category": "CodeStyle",
       "enabled": false

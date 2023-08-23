@@ -23,7 +23,8 @@ object Rubocop extends Tool {
       "rubocop-rspec",
       "rubocop-sorbet",
       "rubocop-graphql",
-      "rubocop-thread_safety"
+      "rubocop-thread_safety",
+      "standard"
     )
 
   // Gemfile is analysed

@@ -4303,7 +4303,13 @@
     "patternId": "Style_HashExcept",
     "title": "Checks for usages of `Hash#reject`, `Hash#select`, and `Hash#filter` methods that can be replaced with `Hash#except` method.",
     "description": "Checks for usages of `Hash#reject`, `Hash#select`, and `Hash#filter` methods that can be replaced with `Hash#except` method.",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Safe",
+        "description": "Safe"
+      }
+    ]
   },
   {
     "patternId": "Style_HashLikeCase",
@@ -6824,6 +6830,10 @@
     "timeToFix": 5,
     "parameters": [
       {
+        "name": "Severity",
+        "description": "Severity"
+      },
+      {
         "name": "Include",
         "description": "Include"
       }
@@ -7046,6 +7056,10 @@
     "timeToFix": 5,
     "parameters": [
       {
+        "name": "SafeAutoCorrect",
+        "description": "SafeAutoCorrect"
+      },
+      {
         "name": "EnforcedStyle",
         "description": "EnforcedStyle"
       },
@@ -7090,6 +7104,10 @@
     "timeToFix": 5,
     "parameters": [
       {
+        "name": "Severity",
+        "description": "Severity"
+      },
+      {
         "name": "Safe",
         "description": "Safe"
       }
@@ -7105,13 +7123,25 @@
     "patternId": "Rails_DuplicateAssociation",
     "title": "Don't repeat associations in a model.",
     "description": "Don't repeat associations in a model.",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Severity",
+        "description": "Severity"
+      }
+    ]
   },
   {
     "patternId": "Rails_DuplicateScope",
     "title": "Multiple scopes share this same where clause.",
     "description": "Multiple scopes share this same where clause.",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Severity",
+        "description": "Severity"
+      }
+    ]
   },
   {
     "patternId": "Rails_DurationArithmetic",
@@ -7265,10 +7295,14 @@
   },
   {
     "patternId": "Rails_FindEach",
-    "title": "Prefer all.find_each over all.find.",
-    "description": "Prefer all.find_each over all.find.",
+    "title": "Prefer all.find_each over all.each.",
+    "description": "Prefer all.find_each over all.each.",
     "timeToFix": 5,
     "parameters": [
+      {
+        "name": "Safe",
+        "description": "Safe"
+      },
       {
         "name": "Include",
         "description": "Include"
@@ -7280,10 +7314,6 @@
       {
         "name": "AllowedPatterns",
         "description": "AllowedPatterns"
-      },
-      {
-        "name": "IgnoredMethods",
-        "description": "IgnoredMethods"
       }
     ]
   },
@@ -7581,7 +7611,13 @@
     "patternId": "Rails_Pluck",
     "title": "Prefer `pluck` over `map { ... }`.",
     "description": "Prefer `pluck` over `map { ... }`.",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Safe",
+        "description": "Safe"
+      }
+    ]
   },
   {
     "patternId": "Rails_PluckId",
@@ -7812,6 +7848,22 @@
     "timeToFix": 5
   },
   {
+    "patternId": "Rails_ResponseParsedBody",
+    "title": "Prefer `response.parsed_body` to `JSON.parse(response.body)`.",
+    "description": "Prefer `response.parsed_body` to `JSON.parse(response.body)`.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Safe",
+        "description": "Safe"
+      },
+      {
+        "name": "Include",
+        "description": "Include"
+      }
+    ]
+  },
+  {
     "patternId": "Rails_ReversibleMigration",
     "title": "Checks whether the change method of the migration file is reversible.",
     "description": "Checks whether the change method of the migration file is reversible.",
@@ -7984,6 +8036,18 @@
     ]
   },
   {
+    "patternId": "Rails_ThreeStateBooleanColumn",
+    "title": "Add a default value and a `NOT NULL` constraint to boolean columns.",
+    "description": "Add a default value and a `NOT NULL` constraint to boolean columns.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Include",
+        "description": "Include"
+      }
+    ]
+  },
+  {
     "patternId": "Rails_TimeZone",
     "title": "Checks the correct usage of time zone aware methods.",
     "description": "Checks the correct usage of time zone aware methods.",
@@ -8051,7 +8115,13 @@
     "patternId": "Rails_TopLevelHashWithIndifferentAccess",
     "title": "Identifies top-level `HashWithIndifferentAccess`.",
     "description": "Identifies top-level `HashWithIndifferentAccess`.",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Severity",
+        "description": "Severity"
+      }
+    ]
   },
   {
     "patternId": "Rails_TransactionExitStatement",
@@ -8097,6 +8167,10 @@
     "description": "Use correct environment name.",
     "timeToFix": 5,
     "parameters": [
+      {
+        "name": "Severity",
+        "description": "Severity"
+      },
       {
         "name": "Environments",
         "description": "Environments"
@@ -8175,7 +8249,13 @@
     "patternId": "Rails_WhereNotWithMultipleConditions",
     "title": "Do not use `where.not(...)` with multiple conditions.",
     "description": "Do not use `where.not(...)` with multiple conditions.",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Severity",
+        "description": "Severity"
+      }
+    ]
   },
   {
     "patternId": "Sorbet_BindingConstantWithoutTypeAlias",
@@ -8214,6 +8294,12 @@
     "timeToFix": 5
   },
   {
+    "patternId": "Sorbet_ImplicitConversionMethod",
+    "title": "This cop disallows declaring implicit conversion methods, as sorbet does not support implicit conversion.",
+    "description": "This cop disallows declaring implicit conversion methods, as sorbet does not support implicit conversion.",
+    "timeToFix": 5
+  },
+  {
     "patternId": "Sorbet_OneAncestorPerLine",
     "title": "Enforces one ancestor per call to requires_ancestor",
     "description": "Enforces one ancestor per call to requires_ancestor",
@@ -8244,6 +8330,18 @@
     "timeToFix": 5
   },
   {
+    "patternId": "Sorbet_RedundantExtendTSig",
+    "title": "Forbid the usage of redundant `extend T::Sig`.\nOnly for use in applications that monkey patch `Module.include(T::Sig)` directly, where it is useful to reduce noise.",
+    "description": "Forbid the usage of redundant `extend T::Sig`.\nOnly for use in applications that monkey patch `Module.include(T::Sig)` directly, where it is useful to reduce noise.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Safe",
+        "description": "Safe"
+      }
+    ]
+  },
+  {
     "patternId": "Sorbet_TypeAliasName",
     "title": "Type alias constant names must be in CamelCase.",
     "description": "Type alias constant names must be in CamelCase.",
@@ -8256,6 +8354,22 @@
       {
         "name": "Exclude",
         "description": "Exclude"
+      }
+    ]
+  },
+  {
+    "patternId": "Sorbet_ObsoleteStrictMemoization",
+    "title": "This cop checks for the obsolete pattern for initializing instance variables that was required for older Sorbet versions in `#typed: strict` files.\nIt's no longer required, as of Sorbet 0.5.10210 See https://sorbet.",
+    "description": "This cop checks for the obsolete pattern for initializing instance variables that was required for older Sorbet versions in `#typed: strict` files.\nIt's no longer required, as of Sorbet 0.5.10210 See https://sorbet.org/docs/type-assertions#put-type-assertions-behind-memoization",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Safe",
+        "description": "Safe"
+      },
+      {
+        "name": "SafeAutoCorrect",
+        "description": "SafeAutoCorrect"
       }
     ]
   },
@@ -8330,6 +8444,12 @@
     "timeToFix": 5
   },
   {
+    "patternId": "Sorbet_EmptyLineAfterSig",
+    "title": "Ensures that there are no blank lines after signatures",
+    "description": "Ensures that there are no blank lines after signatures",
+    "timeToFix": 5
+  },
+  {
     "patternId": "Sorbet_ValidSigil",
     "title": "All files must have a valid sigil.",
     "description": "All files must have a valid sigil.",
@@ -8346,6 +8466,10 @@
       {
         "name": "MinimumStrictness",
         "description": "MinimumStrictness"
+      },
+      {
+        "name": "ExactStrictness",
+        "description": "ExactStrictness"
       },
       {
         "name": "Include",
@@ -8370,6 +8494,10 @@
       {
         "name": "MinimumStrictness",
         "description": "MinimumStrictness"
+      },
+      {
+        "name": "ExactStrictness",
+        "description": "ExactStrictness"
       },
       {
         "name": "Include",
@@ -8596,16 +8724,76 @@
     "timeToFix": 5
   },
   {
+    "patternId": "GraphQL_GraphqlName",
+    "title": "This cop check proper configuration of graphql_name",
+    "description": "This cop check proper configuration of graphql_name",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Include",
+        "description": "Include"
+      },
+      {
+        "name": "EnforcedStyle",
+        "description": "EnforcedStyle"
+      },
+      {
+        "name": "SupportedStyles",
+        "description": "SupportedStyles"
+      }
+    ]
+  },
+  {
     "patternId": "GraphQL_LegacyDsl",
     "title": "Checks that types are defined with class-based API",
     "description": "Checks that types are defined with class-based API",
     "timeToFix": 5
   },
   {
+    "patternId": "GraphQL_MaxComplexitySchema",
+    "title": "Enforces max_complexity configuration in schema",
+    "description": "Enforces max_complexity configuration in schema",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Include",
+        "description": "Include"
+      }
+    ]
+  },
+  {
+    "patternId": "GraphQL_MaxDepthSchema",
+    "title": "Enforces max_depth configuration in schema",
+    "description": "Enforces max_depth configuration in schema",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Include",
+        "description": "Include"
+      }
+    ]
+  },
+  {
     "patternId": "GraphQL_MultipleFieldDefinitions",
     "title": "Ensures that fields with multiple definitions are grouped together",
     "description": "Ensures that fields with multiple definitions are grouped together",
     "timeToFix": 5
+  },
+  {
+    "patternId": "GraphQL_NotAuthorizedNodeType",
+    "title": "Detects types that implement Node interface and not have `.authorized?` check",
+    "description": "Detects types that implement Node interface and not have `.authorized?` check",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Include",
+        "description": "Include"
+      },
+      {
+        "name": "SafeBaseClasses",
+        "description": "SafeBaseClasses"
+      }
+    ]
   },
   {
     "patternId": "GraphQL_ResolverMethodLength",
@@ -8686,6 +8874,10 @@
         "description": "EnforcedStyle"
       },
       {
+        "name": "SafeAutoCorrect",
+        "description": "SafeAutoCorrect"
+      },
+      {
         "name": "SupportedStyles",
         "description": "SupportedStyles"
       }
@@ -8695,6 +8887,12 @@
     "patternId": "ThreadSafety_NewThread",
     "title": "Avoid starting new threads. Let a framework like Sidekiq handle the threads.",
     "description": "Avoid starting new threads. Let a framework like Sidekiq handle the threads.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Standard_BlockSingleLineBraces",
+    "title": "Block Single Line Braces",
+    "description": "Block Single Line Braces",
     "timeToFix": 5
   }
 ]

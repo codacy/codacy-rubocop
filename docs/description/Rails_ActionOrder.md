@@ -2,7 +2,8 @@
 Enforces consistent ordering of the standard Rails RESTful controller actions.
 
 The cop is configurable and can enforce any ordering of the standard actions.
-All other methods are ignored.
+All other methods are ignored. So, the actions specified in `ExpectedOrder` should be
+defined before actions not specified.
 
 [source,yaml]
 ----

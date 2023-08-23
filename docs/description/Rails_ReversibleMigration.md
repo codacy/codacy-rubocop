@@ -14,23 +14,15 @@ end
 
 # good
 def change
-  create_table :users do |t|
-    t.string :name
+  change_table :users do |t|
+    t.remove :name, :string
   end
 end
 
 # good
 def change
-  reversible do |dir|
-    change_table :users do |t|
-      dir.up do
-        t.column :name, :string
-      end
-
-      dir.down do
-        t.remove :name
-      end
-    end
+  create_table :users do |t|
+    t.string :name
   end
 end# drop_table
 
@@ -94,21 +86,6 @@ end
 def change
   change_table :users do |t|
     t.string :name
-  end
-end
-
-# good
-def change
-  reversible do |dir|
-    change_table :users do |t|
-      dir.up do
-        t.change :price, :string
-      end
-
-      dir.down do
-        t.change :price, :integer
-      end
-    end
   end
 end# remove_columns
 

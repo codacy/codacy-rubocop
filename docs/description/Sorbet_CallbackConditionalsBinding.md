@@ -1,5 +1,5 @@
 
-This cop ensures that callback conditionals are bound to the right type
+Ensures that callback conditionals are bound to the right type
 so that they are type checked properly.
 
 Auto-correction is unsafe because other libraries define similar style callbacks as Rails, but don't always need

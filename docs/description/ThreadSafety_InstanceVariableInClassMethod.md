@@ -35,6 +35,30 @@ module Example
     end
   end
 end
+
+module Example
+  class_methods do
+    def test(params)
+      @params = params
+    end
+  end
+end
+
+module Example
+  module_function
+
+  def test(params)
+    @params = params
+  end
+end
+
+module Example
+  def test(params)
+    @params = params
+  end
+
+  module_function :test
+end
 ```
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/ThreadSafety/InstanceVariableInClassMethod)

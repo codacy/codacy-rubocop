@@ -26,3 +26,4 @@ gem "rubocop-sorbet"
 gem "rubocop-shopify"
 gem "rubocop-graphql"
 gem 'rubocop-thread_safety', require: false
+gem 'standard'
