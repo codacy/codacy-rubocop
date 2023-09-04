@@ -1,6 +1,6 @@
 ARG GEM_FOLDER="/usr/local/bundle"
 
-ARG BASE_IMAGE=alpine:3.17
+ARG BASE_IMAGE=alpine:3.18
 
 FROM $BASE_IMAGE as doc-generator
 
@@ -17,7 +17,7 @@ COPY Gemfile .
 COPY Gemfile.lock .
 
 RUN echo 'gem: --no-document' > /etc/gemrc \
-    && gem install bundler -v 2.4.14 \
+    && gem install bundler -v 2.4.19 \
     && bundle install \
     && gem cleanup \
     && rm -rf /tmp/* /var/cache/apk/*

@@ -1,5 +1,5 @@
 
-This cop checks for blank lines after signatures.
+Checks for blank lines after signatures.
 
 It also suggests an autocorrect
 

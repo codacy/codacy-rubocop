@@ -1,5 +1,5 @@
 
-This cop checks for the ordering of keyword arguments required by
+Checks for the ordering of keyword arguments required by
 sorbet-runtime. The ordering requires that all keyword arguments
 are at the end of the parameters list, and all keyword arguments
 with a default value must be after those without default values.

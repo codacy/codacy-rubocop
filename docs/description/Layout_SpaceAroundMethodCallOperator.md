@@ -17,7 +17,7 @@ foo &.bar
 foo &. bar
 foo &. bar&. buzz
 RuboCop:: Cop
-RuboCop:: Cop:: Cop
+RuboCop:: Cop:: Base
 :: RuboCop::Cop
 
 # good
@@ -29,7 +29,7 @@ foo
 foo&.bar
 foo&.bar&.buzz
 RuboCop::Cop
-RuboCop::Cop::Cop
+RuboCop::Cop::Base
 ::RuboCop::Cop
 ```
 

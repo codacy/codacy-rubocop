@@ -18,7 +18,16 @@ array of 2 or fewer elements.
 %i[foo bar baz]
 
 # bad
-[:foo, :bar, :baz]# good
+[:foo, :bar, :baz]
+
+# bad (contains spaces)
+%i[foo\ bar baz\ quux]
+
+# bad (contains [] with spaces)
+%i[foo \[ \]]
+
+# bad (contains () with spaces)
+%i(foo \( \))# good
 [:foo, :bar, :baz]
 
 # bad

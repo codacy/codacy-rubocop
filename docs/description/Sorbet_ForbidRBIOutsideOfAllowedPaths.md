@@ -1,5 +1,5 @@
 
-This cop makes sure that RBI files are always located under the defined allowed paths.
+Makes sure that RBI files are always located under the defined allowed paths.
 
 Options:
 

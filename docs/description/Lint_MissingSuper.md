@@ -10,6 +10,13 @@ challenging or verbose for no actual gain.
 Autocorrection is not supported because the position of `super` cannot be
 determined automatically.
 
+`Object` and `BasicObject` are allowed by this cop because of their
+stateless nature. However, sometimes you might want to allow other parent
+classes from this cop, for example in the case of an abstract class that is
+not meant to be called with `super`. In those cases, you can use the
+`AllowedParentClasses` option to specify which classes should be allowed
+*in addition to* `Object` and `BasicObject`.
+
 # Examples
 
 ```ruby
@@ -54,6 +61,18 @@ end
 class Parent
   def self.inherited(base)
     super
+    do_something
+  end
+end
+
+# good
+class ClassWithNoParent
+  def initialize
+    do_something
+  end
+end# good
+class MyConcreteClass < MyAbstractClass
+  def initialize
     do_something
   end
 end

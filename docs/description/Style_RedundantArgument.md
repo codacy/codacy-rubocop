@@ -23,6 +23,8 @@ Methods:
 array.join('')
 [1, 2, 3].join("")
 array.sum(0)
+exit(true)
+exit!(false)
 string.split(" ")
 "first\nsecond".split(" ")
 string.chomp("\n")
@@ -33,6 +35,8 @@ A.foo(2)
 array.join
 [1, 2, 3].join
 array.sum
+exit
+exit!
 string.split
 "first second".split
 string.chomp

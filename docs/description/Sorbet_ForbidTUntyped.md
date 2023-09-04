@@ -1,5 +1,5 @@
 
-This cop disallows using `T.untyped` anywhere.
+Disallows using `T.untyped` anywhere.
 
 # Examples
 

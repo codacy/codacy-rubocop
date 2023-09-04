@@ -1,5 +1,5 @@
 
-This cop makes the Sorbet typed sigil mandatory in all files.
+Makes the Sorbet typed sigil mandatory in all files.
 
 Options:
 
