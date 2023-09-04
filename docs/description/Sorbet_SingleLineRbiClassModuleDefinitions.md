@@ -1,5 +1,5 @@
 
-This cop ensures empty class/module definitions in RBI files are
+Ensures empty class/module definitions in RBI files are
 done on a single line rather than being split across multiple lines.
 
 # Examples

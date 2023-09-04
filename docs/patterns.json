@@ -1,6 +1,6 @@
 {
   "name": "rubocop",
-  "version": "1.52.1",
+  "version": "1.56.1",
   "patterns": [
     {
       "patternId": "Migration_DepartmentName",
@@ -10,6 +10,26 @@
     },
     {
       "patternId": "Bundler_DuplicatedGem",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "Severity",
+          "default": "warning"
+        },
+        {
+          "name": "Include",
+          "default": [
+            "**/*.gemfile",
+            "**/Gemfile",
+            "**/gems.rb"
+          ]
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "Bundler_DuplicatedGroup",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [
@@ -505,6 +525,10 @@
       "category": "CodeStyle",
       "parameters": [
         {
+          "name": "SafeAutoCorrect",
+          "default": "false"
+        },
+        {
           "name": "Categories",
           "default": "{\"module_inclusion\"=>[\"include\", \"prepend\", \"extend\"]}"
         },
@@ -651,6 +675,12 @@
         {
           "name": "EmptyLineBetweenModuleDefs",
           "default": "true"
+        },
+        {
+          "name": "DefLikeMacros",
+          "default": [
+
+          ]
         },
         {
           "name": "AllowAdjacentOneLineDefs",
@@ -2462,6 +2492,26 @@
       "patternId": "Lint_MissingSuper",
       "level": "Warning",
       "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "AllowedParentClasses",
+          "default": [
+
+          ]
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "Lint_MixedCaseRange",
+      "level": "Warning",
+      "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "SafeAutoCorrect",
+          "default": "false"
+        }
+      ],
       "enabled": false
     },
     {
@@ -2695,6 +2745,12 @@
           "default": "false"
         }
       ],
+      "enabled": false
+    },
+    {
+      "patternId": "Lint_RedundantRegexpQuantifiers",
+      "level": "Warning",
+      "category": "ErrorProne",
       "enabled": false
     },
     {
@@ -4001,6 +4057,10 @@
         {
           "name": "AllowOnlyRestArgument",
           "default": "true"
+        },
+        {
+          "name": "UseAnonymousForwarding",
+          "default": "true"
         }
       ],
       "enabled": false
@@ -5044,6 +5104,10 @@
       "category": "CodeStyle",
       "parameters": [
         {
+          "name": "SafeAutoCorrect",
+          "default": "false"
+        },
+        {
           "name": "AllowSplatArgument",
           "default": "true"
         }
@@ -5573,6 +5637,12 @@
       "enabled": false
     },
     {
+      "patternId": "Style_RedundantCurrentDirectoryInPath",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
       "patternId": "Style_RedundantDoubleSplatHashBraces",
       "level": "Info",
       "category": "CodeStyle",
@@ -5642,6 +5712,12 @@
     },
     {
       "patternId": "Style_RedundantLineContinuation",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "Style_RedundantRegexpArgument",
       "level": "Info",
       "category": "CodeStyle",
       "enabled": false
@@ -6424,7 +6500,7 @@
         },
         {
           "name": "Methods",
-          "default": "{\"join\"=>\"\", \"sum\"=>0, \"split\"=>\" \", \"chomp\"=>\"\\n\", \"chomp!\"=>\"\\n\"}"
+          "default": "{\"join\"=>\"\", \"sum\"=>0, \"exit\"=>true, \"exit!\"=>false, \"split\"=>\" \", \"chomp\"=>\"\\n\", \"chomp!\"=>\"\\n\"}"
         }
       ],
       "enabled": false
@@ -6606,6 +6682,30 @@
           "default": [
             "return",
             "return_nil"
+          ]
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "Style_ReturnNilInPredicateMethodDefinition",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "SafeAutoCorrect",
+          "default": "false"
+        },
+        {
+          "name": "AllowedMethods",
+          "default": [
+
+          ]
+        },
+        {
+          "name": "AllowedPatterns",
+          "default": [
+
           ]
         }
       ],
@@ -7271,6 +7371,12 @@
       "enabled": false
     },
     {
+      "patternId": "Style_YAMLFileRead",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
       "patternId": "Style_YodaCondition",
       "level": "Info",
       "category": "CodeStyle",
@@ -7629,6 +7735,18 @@
       "parameters": [
         {
           "name": "SafeAutoCorrect",
+          "default": "false"
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "Performance_MapMethodChain",
+      "level": "Warning",
+      "category": "Performance",
+      "parameters": [
+        {
+          "name": "Safe",
           "default": "false"
         }
       ],
@@ -9639,6 +9757,12 @@
       "enabled": false
     },
     {
+      "patternId": "Sorbet_ImplicitConversionMethod",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
       "patternId": "Sorbet_OneAncestorPerLine",
       "level": "Info",
       "category": "CodeStyle",
@@ -9698,6 +9822,22 @@
             "db/**/*.rb",
             "script/**/*"
           ]
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "Sorbet_ObsoleteStrictMemoization",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "Safe",
+          "default": "true"
+        },
+        {
+          "name": "SafeAutoCorrect",
+          "default": "true"
         }
       ],
       "enabled": false
@@ -9802,7 +9942,11 @@
         },
         {
           "name": "MinimumStrictness",
-          "default": "false"
+          "default": "nil"
+        },
+        {
+          "name": "ExactStrictness",
+          "default": "nil"
         },
         {
           "name": "Include",
@@ -9832,7 +9976,11 @@
         },
         {
           "name": "MinimumStrictness",
-          "default": "false"
+          "default": "nil"
+        },
+        {
+          "name": "ExactStrictness",
+          "default": "nil"
         },
         {
           "name": "Include",

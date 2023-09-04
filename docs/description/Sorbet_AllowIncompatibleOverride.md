@@ -1,8 +1,8 @@
 
-This cop disallows using `.override(allow_incompatible: true)`.
+Disallows using `.override(allow_incompatible: true)`.
 Using `allow_incompatible` suggests a violation of the Liskov
 Substitution Principle, meaning that a subclass is not a valid
-subtype of it's superclass. This Cop prevents these design smells
+subtype of its superclass. This Cop prevents these design smells
 from occurring.
 
 # Examples

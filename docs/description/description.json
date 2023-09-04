@@ -22,6 +22,22 @@
     ]
   },
   {
+    "patternId": "Bundler_DuplicatedGroup",
+    "title": "Checks for duplicate group entries in Gemfile.",
+    "description": "Checks for duplicate group entries in Gemfile.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Severity",
+        "description": "Severity"
+      },
+      {
+        "name": "Include",
+        "description": "Include"
+      }
+    ]
+  },
+  {
     "patternId": "Bundler_GemComment",
     "title": "Add a comment describing each gem.",
     "description": "Add a comment describing each gem.",
@@ -418,6 +434,10 @@
     "timeToFix": 5,
     "parameters": [
       {
+        "name": "SafeAutoCorrect",
+        "description": "SafeAutoCorrect"
+      },
+      {
         "name": "Categories",
         "description": "Categories"
       },
@@ -550,6 +570,10 @@
       {
         "name": "EmptyLineBetweenModuleDefs",
         "description": "EmptyLineBetweenModuleDefs"
+      },
+      {
+        "name": "DefLikeMacros",
+        "description": "DefLikeMacros"
       },
       {
         "name": "AllowAdjacentOneLineDefs",
@@ -2175,7 +2199,25 @@
     "patternId": "Lint_MissingSuper",
     "title": "Checks for the presence of constructors and lifecycle callbacks without calls to `super`.",
     "description": "Checks for the presence of constructors and lifecycle callbacks without calls to `super`.",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "AllowedParentClasses",
+        "description": "AllowedParentClasses"
+      }
+    ]
+  },
+  {
+    "patternId": "Lint_MixedCaseRange",
+    "title": "Checks for mixed-case character ranges since they include likely unintended characters.",
+    "description": "Checks for mixed-case character ranges since they include likely unintended characters.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "SafeAutoCorrect",
+        "description": "SafeAutoCorrect"
+      }
+    ]
   },
   {
     "patternId": "Lint_MixedRegexpCaptureTypes",
@@ -2382,6 +2424,12 @@
         "description": "SafeAutoCorrect"
       }
     ]
+  },
+  {
+    "patternId": "Lint_RedundantRegexpQuantifiers",
+    "title": "Checks for redundant quantifiers in Regexps.",
+    "description": "Checks for redundant quantifiers in Regexps.",
+    "timeToFix": 5
   },
   {
     "patternId": "Lint_RedundantRequireStatement",
@@ -3488,6 +3536,10 @@
       {
         "name": "AllowOnlyRestArgument",
         "description": "AllowOnlyRestArgument"
+      },
+      {
+        "name": "UseAnonymousForwarding",
+        "description": "UseAnonymousForwarding"
       }
     ]
   },
@@ -4404,6 +4456,10 @@
     "timeToFix": 5,
     "parameters": [
       {
+        "name": "SafeAutoCorrect",
+        "description": "SafeAutoCorrect"
+      },
+      {
         "name": "AllowSplatArgument",
         "description": "AllowSplatArgument"
       }
@@ -4882,6 +4938,12 @@
     "timeToFix": 5
   },
   {
+    "patternId": "Style_RedundantCurrentDirectoryInPath",
+    "title": "Checks for uses a redundant current directory in path.",
+    "description": "Checks for uses a redundant current directory in path.",
+    "timeToFix": 5
+  },
+  {
     "patternId": "Style_RedundantDoubleSplatHashBraces",
     "title": "Checks for redundant uses of double splat hash braces.",
     "description": "Checks for redundant uses of double splat hash braces.",
@@ -4953,6 +5015,12 @@
     "patternId": "Style_RedundantLineContinuation",
     "title": "Check for redundant line continuation.",
     "description": "Check for redundant line continuation.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Style_RedundantRegexpArgument",
+    "title": "Identifies places where argument can be replaced from a deterministic regexp to a string.",
+    "description": "Identifies places where argument can be replaced from a deterministic regexp to a string.",
     "timeToFix": 5
   },
   {
@@ -5814,6 +5882,26 @@
     ]
   },
   {
+    "patternId": "Style_ReturnNilInPredicateMethodDefinition",
+    "title": "Checks if uses of `return` or `return nil` in predicate method definition.",
+    "description": "Checks if uses of `return` or `return nil` in predicate method definition.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "SafeAutoCorrect",
+        "description": "SafeAutoCorrect"
+      },
+      {
+        "name": "AllowedMethods",
+        "description": "AllowedMethods"
+      },
+      {
+        "name": "AllowedPatterns",
+        "description": "AllowedPatterns"
+      }
+    ]
+  },
+  {
     "patternId": "Style_SafeNavigation",
     "title": "Transforms usages of a method call safeguarded by a check for the existence of the object to safe navigation (`&.`). Autocorrection is unsafe as it assumes the object will be `nil` or truthy, but never `false`.",
     "description": "Transforms usages of a method call safeguarded by a check for the existence of the object to safe navigation (`&.`). Autocorrection is unsafe as it assumes the object will be `nil` or truthy, but never `false`.",
@@ -6388,6 +6476,12 @@
     ]
   },
   {
+    "patternId": "Style_YAMLFileRead",
+    "title": "Checks for the use of `YAML.load`, `YAML.safe_load`, and `YAML.parse` with `File.read` argument.",
+    "description": "Checks for the use of `YAML.load`, `YAML.safe_load`, and `YAML.parse` with `File.read` argument.",
+    "timeToFix": 5
+  },
+  {
     "patternId": "Style_YodaCondition",
     "title": "Forbid or enforce yoda conditions.",
     "description": "Forbid or enforce yoda conditions.",
@@ -6732,6 +6826,18 @@
       {
         "name": "SafeAutoCorrect",
         "description": "SafeAutoCorrect"
+      }
+    ]
+  },
+  {
+    "patternId": "Performance_MapMethodChain",
+    "title": "Checks if the `map` method is used in a chain.",
+    "description": "Checks if the `map` method is used in a chain.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Safe",
+        "description": "Safe"
       }
     ]
   },
@@ -8526,6 +8632,12 @@
     "timeToFix": 5
   },
   {
+    "patternId": "Sorbet_ImplicitConversionMethod",
+    "title": "This cop disallows declaring implicit conversion methods, as sorbet does not support implicit conversion.",
+    "description": "This cop disallows declaring implicit conversion methods, as sorbet does not support implicit conversion.",
+    "timeToFix": 5
+  },
+  {
     "patternId": "Sorbet_OneAncestorPerLine",
     "title": "Enforces one ancestor per call to requires_ancestor",
     "description": "Enforces one ancestor per call to requires_ancestor",
@@ -8580,6 +8692,22 @@
       {
         "name": "Exclude",
         "description": "Exclude"
+      }
+    ]
+  },
+  {
+    "patternId": "Sorbet_ObsoleteStrictMemoization",
+    "title": "This cop checks for the obsolete pattern for initializing instance variables that was required for older Sorbet versions in `#typed: strict` files.\nIt's no longer required, as of Sorbet 0.5.10210 See https://sorbet.",
+    "description": "This cop checks for the obsolete pattern for initializing instance variables that was required for older Sorbet versions in `#typed: strict` files.\nIt's no longer required, as of Sorbet 0.5.10210 See https://sorbet.org/docs/type-assertions#put-type-assertions-behind-memoization",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Safe",
+        "description": "Safe"
+      },
+      {
+        "name": "SafeAutoCorrect",
+        "description": "SafeAutoCorrect"
       }
     ]
   },
@@ -8678,6 +8806,10 @@
         "description": "MinimumStrictness"
       },
       {
+        "name": "ExactStrictness",
+        "description": "ExactStrictness"
+      },
+      {
         "name": "Include",
         "description": "Include"
       },
@@ -8700,6 +8832,10 @@
       {
         "name": "MinimumStrictness",
         "description": "MinimumStrictness"
+      },
+      {
+        "name": "ExactStrictness",
+        "description": "ExactStrictness"
       },
       {
         "name": "Include",

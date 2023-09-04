@@ -1,5 +1,5 @@
 
-This cop checks that the Sorbet sigil comes as the first magic comment in the file.
+Checks that the Sorbet sigil comes as the first magic comment in the file.
 
 The expected order for magic comments is: (en)?coding, typed, warn_indent then frozen_string_literal.
 

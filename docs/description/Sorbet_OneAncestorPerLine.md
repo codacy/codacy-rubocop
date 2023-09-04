@@ -1,5 +1,5 @@
 
-This cop ensures one ancestor per requires_ancestor line
+Ensures one ancestor per requires_ancestor line
 rather than chaining them as a comma-separated list.
 
 # Examples

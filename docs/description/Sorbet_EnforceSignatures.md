@@ -1,5 +1,5 @@
 
-This cop checks that every method definition and attribute accessor has a Sorbet signature.
+Checks that every method definition and attribute accessor has a Sorbet signature.
 
 It also suggest an autocorrect with placeholders so the following code:
 

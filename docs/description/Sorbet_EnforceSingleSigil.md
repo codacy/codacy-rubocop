@@ -1,5 +1,5 @@
 
-This cop checks that there is only one Sorbet sigil in a given file
+Checks that there is only one Sorbet sigil in a given file
 
 For example, the following class with two sigils
 

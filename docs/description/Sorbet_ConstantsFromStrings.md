@@ -1,5 +1,5 @@
 
-This cop disallows the calls that are used to get constants fom Strings
+Disallows the calls that are used to get constants fom Strings
 such as +constantize+, +const_get+, and +constants+.
 
 The goal of this cop is to make the code easier to statically analyze,
