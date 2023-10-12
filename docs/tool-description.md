@@ -1,1 +1,1 @@
-[RuboCop](https://github.com/bbatsov/rubocop) is a Ruby static code analyzer. Out of the box it will enforce many of the guidelines outlined in the community [Ruby Style Guide](https://github.com/bbatsov/ruby-style-guide).
+RuboCop is a Ruby static code analyzer that enforces many of the guidelines outlined in the community Ruby Style Guide. [Learn more](https://github.com/bbatsov/rubocop)
