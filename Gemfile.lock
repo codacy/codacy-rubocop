@@ -26,7 +26,7 @@ GEM
     pry (0.14.2)
       coderay (~> 1.1)
       method_source (~> 1.0)
-    psych (4.0.6)
+    psych (5.1.1)
       stringio
     racc (1.7.1)
     rack (3.0.8)
