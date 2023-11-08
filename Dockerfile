@@ -17,7 +17,7 @@ COPY Gemfile .
 COPY Gemfile.lock .
 
 RUN echo 'gem: --no-document' > /etc/gemrc \
-    && gem install bundler -v 2.4.19 \
+    && gem install bundler -v 2.4.21 \
     && bundle install \
     && gem cleanup \
     && rm -rf /tmp/* /var/cache/apk/*
