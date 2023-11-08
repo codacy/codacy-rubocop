@@ -21,11 +21,20 @@ arr.none? { |x| x > 1 }
 # good
 relation.select(:name).any?
 arr.select { |x| x > 1 }.any?(&:odd?)# good
-arr.select { |x| x > 1 }.many?# bad
+arr.select { |x| x > 1 }.many?
+
+# good
+arr.select { |x| x > 1 }.present?# bad
 arr.select { |x| x > 1 }.many?
 
 # good
 arr.many? { |x| x > 1 }
+
+# bad
+arr.select { |x| x > 1 }.present?
+
+# good
+arr.any? { |x| x > 1 }
 ```
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Style/RedundantFilterChain)

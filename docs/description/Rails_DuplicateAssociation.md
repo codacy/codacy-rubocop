@@ -17,6 +17,15 @@ has_one :foo
 # good
 belongs_to :bar
 has_one :foo
+
+# bad
+has_many :foo, class_name: 'Foo'
+has_many :bar, class_name: 'Foo'
+has_one :baz
+
+# good
+has_many :bar, class_name: 'Foo'
+has_one :foo
 ```
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Rails/DuplicateAssociation)

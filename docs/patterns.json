@@ -1,6 +1,6 @@
 {
   "name": "rubocop",
-  "version": "1.56.1",
+  "version": "1.57.2",
   "patterns": [
     {
       "patternId": "Migration_DepartmentName",
@@ -2757,6 +2757,12 @@
       "patternId": "Lint_RedundantRequireStatement",
       "level": "Warning",
       "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "SafeAutoCorrect",
+          "default": "false"
+        }
+      ],
       "enabled": false
     },
     {
@@ -2897,6 +2903,7 @@
             "present?",
             "blank?",
             "presence",
+            "presence_in",
             "try",
             "try!",
             "in?"
@@ -4313,6 +4320,10 @@
       "category": "CodeStyle",
       "parameters": [
         {
+          "name": "SafeAutoCorrect",
+          "default": "false"
+        },
+        {
           "name": "AllowedMethods",
           "default": [
             "==",
@@ -4389,7 +4400,7 @@
         },
         {
           "name": "PreferredMethods",
-          "default": "{\"collect\"=>\"map\", \"collect!\"=>\"map!\", \"inject\"=>\"reduce\", \"detect\"=>\"find\", \"find_all\"=>\"select\", \"member?\"=>\"include?\"}"
+          "default": "{\"collect\"=>\"map\", \"collect!\"=>\"map!\", \"collect_concat\"=>\"flat_map\", \"inject\"=>\"reduce\", \"detect\"=>\"find\", \"find_all\"=>\"select\", \"member?\"=>\"include?\"}"
         },
         {
           "name": "MethodsAcceptingSymbol",
@@ -5343,7 +5354,7 @@
         },
         {
           "name": "InverseMethods",
-          "default": "{:!==>:==, :>=>:<=, :<==>:>, :<=>:>=, :>==>:<, :!~=>:=~, :zero?=>:nonzero?, :nonzero?=>:zero?, :any?=>:none?, :none?=>:any?, :even?=>:odd?, :odd?=>:even?}"
+          "default": "{:!==>:==, :>=>:<=, :<==>:>, :<=>:>=, :>==>:<, :!~=>:=~, :zero?=>:nonzero?, :nonzero?=>:zero?, :any?=>:none?, :none?=>:any?, :even?=>:odd?, :odd?=>:even?, :present?=>:blank?, :blank?=>:present?, :include?=>:exclude?, :exclude?=>:include?}"
         }
       ],
       "enabled": false
@@ -5686,6 +5697,12 @@
       "patternId": "Style_RedundantFilterChain",
       "level": "Info",
       "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "SafeAutoCorrect",
+          "default": "false"
+        }
+      ],
       "enabled": false
     },
     {
@@ -5756,6 +5773,12 @@
           "default": "false"
         }
       ],
+      "enabled": false
+    },
+    {
+      "patternId": "Style_SingleLineDoEndBlock",
+      "level": "Info",
+      "category": "CodeStyle",
       "enabled": false
     },
     {
@@ -8340,6 +8363,24 @@
       "enabled": false
     },
     {
+      "patternId": "Rails_DangerousColumnNames",
+      "level": "Warning",
+      "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "Severity",
+          "default": "warning"
+        },
+        {
+          "name": "Include",
+          "default": [
+            "db/**/*.rb"
+          ]
+        }
+      ],
+      "enabled": false
+    },
+    {
       "patternId": "Rails_Date",
       "level": "Warning",
       "category": "ErrorProne",
@@ -8510,6 +8551,12 @@
       "enabled": false
     },
     {
+      "patternId": "Rails_EnvLocal",
+      "level": "Warning",
+      "category": "ErrorProne",
+      "enabled": false
+    },
+    {
       "patternId": "Rails_EnvironmentComparison",
       "level": "Warning",
       "category": "ErrorProne",
@@ -8599,12 +8646,6 @@
         {
           "name": "IgnoreWhereFirst",
           "default": "true"
-        },
-        {
-          "name": "Include",
-          "default": [
-            "app/models/**/*.rb"
-          ]
         }
       ],
       "enabled": false
@@ -8623,12 +8664,6 @@
         {
           "name": "Safe",
           "default": "false"
-        },
-        {
-          "name": "Include",
-          "default": [
-            "app/models/**/*.rb"
-          ]
         },
         {
           "name": "AllowedMethods",
@@ -8741,6 +8776,17 @@
       "level": "Warning",
       "category": "ErrorProne",
       "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "lazy"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": [
+            "lazy",
+            "explicit"
+          ]
+        },
         {
           "name": "Include",
           "default": [
@@ -8924,6 +8970,16 @@
       "category": "ErrorProne",
       "parameters": [
         {
+          "name": "Database",
+          "default": ""
+        },
+        {
+          "name": "SupportedDatabases",
+          "default": [
+            "mysql"
+          ]
+        },
+        {
           "name": "Include",
           "default": [
             "db/**/*.rb"
@@ -9090,6 +9146,25 @@
           "name": "Include",
           "default": [
             "app/models/**/*.rb"
+          ]
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "Rails_RedundantActiveRecordAllMethod",
+      "level": "Warning",
+      "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "Safe",
+          "default": "false"
+        },
+        {
+          "name": "AllowedReceivers",
+          "default": [
+            "ActionMailer::Preview",
+            "ActiveSupport::TimeZone"
           ]
         }
       ],
@@ -9380,6 +9455,18 @@
       "enabled": false
     },
     {
+      "patternId": "Rails_SelectMap",
+      "level": "Warning",
+      "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "Safe",
+          "default": "false"
+        }
+      ],
+      "enabled": false
+    },
+    {
       "patternId": "Rails_ShortI18n",
       "level": "Warning",
       "category": "ErrorProne",
@@ -9572,6 +9659,14 @@
       "patternId": "Rails_TransactionExitStatement",
       "level": "Warning",
       "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "TransactionMethods",
+          "default": [
+
+          ]
+        }
+      ],
       "enabled": false
     },
     {
@@ -9641,6 +9736,18 @@
           "default": [
             "app/models/**/*.rb"
           ]
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "Rails_UnusedRenderContent",
+      "level": "Warning",
+      "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "Severity",
+          "default": "warning"
         }
       ],
       "enabled": false
@@ -9781,6 +9888,18 @@
       "enabled": false
     },
     {
+      "patternId": "Sorbet_ForbidTStruct",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "Safe",
+          "default": "false"
+        }
+      ],
+      "enabled": false
+    },
+    {
       "patternId": "Sorbet_ForbidTUnsafe",
       "level": "Info",
       "category": "CodeStyle",
@@ -9838,6 +9957,22 @@
         {
           "name": "SafeAutoCorrect",
           "default": "true"
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "Sorbet_BuggyObsoleteStrictMemoization",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "Safe",
+          "default": "true"
+        },
+        {
+          "name": "SafeAutoCorrect",
+          "default": "false"
         }
       ],
       "enabled": false
