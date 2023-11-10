@@ -34,9 +34,9 @@ ARG GEM_FOLDER
 ENV GEM_HOME=$GEM_FOLDER
 ENV PATH $GEM_HOME/bin:$GEM_HOME/gems/bin:$PATH
 
-#RUN apk add --no-cache ruby ruby-etc ruby-dev ruby-irb ruby-rake ruby-io-console ruby-bigdecimal ruby-json \ 
+RUN apk add --no-cache ruby ruby-etc ruby-dev ruby-irb ruby-rake ruby-io-console ruby-bigdecimal ruby-json \ 
 #    openjdk8-jre \
-#    bash
+    bash
 
 COPY --from=doc-generator /usr/local/bundle /usr/local/bundle
 COPY --from=doc-generator /doc_generator/docs /docs
