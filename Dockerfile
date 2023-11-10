@@ -18,6 +18,7 @@ COPY Gemfile.lock .
 
 RUN echo 'gem: --no-document' > /etc/gemrc \
     && gem install bundler -v 2.4.21 \
+    && gem install nokogiri -- --use-system-libraries \
     && bundle install \
     && gem cleanup \
     && rm -rf /tmp/* /var/cache/apk/*
