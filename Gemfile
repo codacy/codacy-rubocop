@@ -20,7 +20,7 @@ gem "rubocop", "1.57.2"
 gem "graphql"
 #Rubocop official modules
 gem "rubocop-performance"
-gem "rubocop-rails"
+gem "rubocop-rails", "2.20.2"
 gem "rubocop-rake"
 gem "rubocop-rspec"
 gem "rubocop-sorbet"
