@@ -1,6 +1,6 @@
 ARG GEM_FOLDER="/usr/local/bundle"
 
-ARG BASE_IMAGE=alpine:3.18
+ARG BASE_IMAGE=ruby:alpine3.18
 
 FROM $BASE_IMAGE as doc-generator
 
@@ -9,9 +9,9 @@ ENV GEM_HOME=$GEM_FOLDER
 ENV PATH $GEM_HOME/bin:$GEM_HOME/gems/bin:$PATH
 WORKDIR /doc_generator
 
-RUN apk add --no-cache ruby ruby-etc ruby-dev ruby-irb ruby-rake ruby-io-console \
-    ruby-bigdecimal make gcc ruby-json libstdc++ tzdata bash \
-    ca-certificates libc-dev openjdk11 openjdk8-jre
+#RUN apk add --no-cache ruby ruby-etc ruby-dev ruby-irb ruby-rake ruby-io-console \
+#    ruby-bigdecimal make gcc ruby-json libstdc++ tzdata bash \
+#    ca-certificates libc-dev openjdk11 openjdk8-jre
 
 COPY Gemfile .
 COPY Gemfile.lock .
@@ -34,9 +34,9 @@ ARG GEM_FOLDER
 ENV GEM_HOME=$GEM_FOLDER
 ENV PATH $GEM_HOME/bin:$GEM_HOME/gems/bin:$PATH
 
-RUN apk add --no-cache ruby ruby-etc ruby-dev ruby-irb ruby-rake ruby-io-console ruby-bigdecimal ruby-json \ 
-    openjdk8-jre \
-    bash
+#RUN apk add --no-cache ruby ruby-etc ruby-dev ruby-irb ruby-rake ruby-io-console ruby-bigdecimal ruby-json \ 
+#    openjdk8-jre \
+#    bash
 
 COPY --from=doc-generator /usr/local/bundle /usr/local/bundle
 COPY --from=doc-generator /doc_generator/docs /docs
