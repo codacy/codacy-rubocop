@@ -9,9 +9,9 @@ ENV GEM_HOME=$GEM_FOLDER
 ENV PATH $GEM_HOME/bin:$GEM_HOME/gems/bin:$PATH
 WORKDIR /doc_generator
 
-#RUN apk add --no-cache ruby ruby-etc ruby-dev ruby-irb ruby-rake ruby-io-console \
-#    ruby-bigdecimal make gcc ruby-json libstdc++ tzdata bash \
-#    ca-certificates libc-dev openjdk11 openjdk8-jre
+RUN apk add --no-cache ruby ruby-etc ruby-dev ruby-irb ruby-rake ruby-io-console \
+    ruby-bigdecimal make gcc ruby-json libstdc++ tzdata bash \
+    ca-certificates libc-dev openjdk11 openjdk8-jre
 
 COPY Gemfile .
 COPY Gemfile.lock .
