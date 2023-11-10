@@ -35,7 +35,7 @@ ENV GEM_HOME=$GEM_FOLDER
 ENV PATH $GEM_HOME/bin:$GEM_HOME/gems/bin:$PATH
 
 RUN apk add --no-cache ruby ruby-etc ruby-dev ruby-irb ruby-rake ruby-io-console ruby-bigdecimal ruby-json \ 
-#    openjdk8-jre \
+    openjdk8-jre \
     bash
 
 COPY --from=doc-generator /usr/local/bundle /usr/local/bundle
