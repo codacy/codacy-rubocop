@@ -26,6 +26,8 @@ COPY doc_generation /doc_generator/doc_generation
 COPY scripts /doc_generator/scripts
 COPY docs docs
 
+RUN apk libpq-dev
+
 RUN bundle config set --local path 'vendor/bundle' && bundle install && ./scripts/doc_generate.sh .
 
 FROM $BASE_IMAGE
