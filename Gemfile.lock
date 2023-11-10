@@ -101,6 +101,7 @@ PLATFORMS
 
 DEPENDENCIES
   activesupport
+  bigdecimal
   dark_finger
   graphql
   parser
