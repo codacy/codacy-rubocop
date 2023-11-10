@@ -16,17 +16,17 @@ WORKDIR /doc_generator
 COPY Gemfile .
 COPY Gemfile.lock .
 
-RUN echo 'gem: --no-document' > /etc/gemrc \
-    && gem install bundler -v 2.4.22 \
-    && bundle install \
-    && gem cleanup \
-    && rm -rf /tmp/* /var/cache/apk/*
+#RUN echo 'gem: --no-document' > /etc/gemrc \
+#    && gem install bundler -v 2.4.22 \
+#    && bundle install \
+#    && gem cleanup \
+#    && rm -rf /tmp/* /var/cache/apk/*
 
 COPY doc_generation /doc_generator/doc_generation
 COPY scripts /doc_generator/scripts
 COPY docs docs
 
-RUN bundle config set --local path 'vendor/bundle' && bundle install && ./scripts/doc_generate.sh .
+#RUN bundle config set --local path 'vendor/bundle' && bundle install && ./scripts/doc_generate.sh .
 
 FROM $BASE_IMAGE
 
