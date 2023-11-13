@@ -21,11 +21,11 @@ COPY scripts /doc_generator/scripts
 COPY docs docs
 
 RUN echo 'gem: --no-document' > /etc/gemrc \
-    && bundle config set --local path 'vendor/bundle' \
     && bundle install \
     && gem cleanup \
     && rm -rf /tmp/* /var/cache/apk/* \
-    && ./scripts/doc_generate.sh .
+
+RUN bundle config set --local path 'vendor/bundle' && bundle install && ./scripts/doc_generate.sh .
 
 FROM $BASE_IMAGE
 
