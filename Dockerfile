@@ -23,7 +23,7 @@ COPY docs docs
 RUN echo 'gem: --no-document' > /etc/gemrc \
     && bundle install \
     && gem cleanup \
-    && rm -rf /tmp/* /var/cache/apk/* \
+    && rm -rf /tmp/* /var/cache/apk/*
 
 RUN bundle config set --local path 'vendor/bundle' && bundle install && ./scripts/doc_generate.sh .
 
