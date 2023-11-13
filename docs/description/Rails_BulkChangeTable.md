@@ -8,8 +8,9 @@ ALTER TABLE statement combining multiple column alterations.
 The `bulk` option is only supported on the MySQL and
 the PostgreSQL (5.2 later) adapter; thus it will
 automatically detect an adapter from `development` environment
-in `config/database.yml` when the `Database` option is not set.
-If the adapter is not `mysql2` or `postgresql`,
+in `config/database.yml` or the environment variable `DATABASE_URL`
+when the `Database` option is not set.
+If the adapter is not `mysql2`, `trilogy`, or `postgresql`,
 this Cop ignores offenses.
 
 # Examples

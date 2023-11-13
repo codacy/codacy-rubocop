@@ -9,6 +9,8 @@ As alternatives, it would be more intuitive to explicitly raise an
 error when rollback is desired, and to use `next` when commit is
 desired.
 
+If you are defining custom transaction methods, you can configure it with `TransactionMethods`.
+
 # Examples
 
 ```ruby
@@ -47,6 +49,9 @@ end
 ApplicationRecord.transaction do
   # Commit
   next if user.active?
+end# bad
+CustomModel.custom_transaction do
+  return if user.active?
 end
 ```
 

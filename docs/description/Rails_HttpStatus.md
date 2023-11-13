@@ -6,6 +6,7 @@ Enforces use of symbolic or numeric value to define HTTP status.
 ```ruby
 # bad
 render :foo, status: 200
+render :foo, status: '200'
 render json: { foo: 'bar' }, status: 200
 render plain: 'foo/bar', status: 304
 redirect_to root_url, status: 301

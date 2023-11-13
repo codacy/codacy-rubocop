@@ -1,12 +1,9 @@
 
 Checks for blank lines after signatures.
 
-It also suggests an autocorrect
-
 # Examples
 
 ```ruby
-
 # bad
 sig { void }
 

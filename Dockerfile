@@ -1,6 +1,6 @@
 ARG GEM_FOLDER="/usr/local/bundle"
 
-ARG BASE_IMAGE=alpine:3.18
+ARG BASE_IMAGE=ruby:alpine3.18
 
 FROM $BASE_IMAGE as doc-generator
 
@@ -11,20 +11,19 @@ WORKDIR /doc_generator
 
 RUN apk add --no-cache ruby ruby-etc ruby-dev ruby-irb ruby-rake ruby-io-console \
     ruby-bigdecimal make gcc ruby-json libstdc++ tzdata bash \
-    ca-certificates libc-dev openjdk11 openjdk8-jre
+    libc-dev libpq-dev openjdk17-jre
 
 COPY Gemfile .
 COPY Gemfile.lock .
 
-RUN echo 'gem: --no-document' > /etc/gemrc \
-    && gem install bundler -v 2.4.19 \
-    && bundle install \
-    && gem cleanup \
-    && rm -rf /tmp/* /var/cache/apk/*
-
 COPY doc_generation /doc_generator/doc_generation
 COPY scripts /doc_generator/scripts
 COPY docs docs
+
+RUN echo 'gem: --no-document' > /etc/gemrc \
+    && bundle install \
+    && gem cleanup \
+    && rm -rf /tmp/* /var/cache/apk/*
 
 RUN bundle config set --local path 'vendor/bundle' && bundle install && ./scripts/doc_generate.sh .
 
@@ -35,7 +34,7 @@ ENV GEM_HOME=$GEM_FOLDER
 ENV PATH $GEM_HOME/bin:$GEM_HOME/gems/bin:$PATH
 
 RUN apk add --no-cache ruby ruby-etc ruby-dev ruby-irb ruby-rake ruby-io-console ruby-bigdecimal ruby-json \ 
-    openjdk8-jre \
+    openjdk17-jre \
     bash
 
 COPY --from=doc-generator /usr/local/bundle /usr/local/bundle

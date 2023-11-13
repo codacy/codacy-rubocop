@@ -2435,7 +2435,13 @@
     "patternId": "Lint_RedundantRequireStatement",
     "title": "Checks for unnecessary `require` statement.",
     "description": "Checks for unnecessary `require` statement.",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "SafeAutoCorrect",
+        "description": "SafeAutoCorrect"
+      }
+    ]
   },
   {
     "patternId": "Lint_RedundantSafeNavigation",
@@ -3752,6 +3758,10 @@
     "timeToFix": 5,
     "parameters": [
       {
+        "name": "SafeAutoCorrect",
+        "description": "SafeAutoCorrect"
+      },
+      {
         "name": "AllowedMethods",
         "description": "AllowedMethods"
       },
@@ -4987,7 +4997,13 @@
     "patternId": "Style_RedundantFilterChain",
     "title": "Identifies usages of `any?`, `empty?`, `none?` or `one?` predicate methods chained to `select`/`filter`/`find_all` and change them to use predicate method instead.",
     "description": "Identifies usages of `any?`, `empty?`, `none?` or `one?` predicate methods chained to `select`/`filter`/`find_all` and change them to use predicate method instead.",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "SafeAutoCorrect",
+        "description": "SafeAutoCorrect"
+      }
+    ]
   },
   {
     "patternId": "Style_RedundantHeredocDelimiterQuotes",
@@ -5058,6 +5074,12 @@
         "description": "SafeAutoCorrect"
       }
     ]
+  },
+  {
+    "patternId": "Style_SingleLineDoEndBlock",
+    "title": "Checks for single-line `do`...`end` blocks.",
+    "description": "Checks for single-line `do`...`end` blocks.",
+    "timeToFix": 5
   },
   {
     "patternId": "Style_SoleNestedConditional",
@@ -7388,6 +7410,22 @@
     ]
   },
   {
+    "patternId": "Rails_DangerousColumnNames",
+    "title": "Avoid dangerous column names.",
+    "description": "Avoid dangerous column names.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Severity",
+        "description": "Severity"
+      },
+      {
+        "name": "Include",
+        "description": "Include"
+      }
+    ]
+  },
+  {
     "patternId": "Rails_Date",
     "title": "Checks the correct usage of date aware methods, such as Date.today, Date.current etc.",
     "description": "Checks the correct usage of date aware methods, such as Date.today, Date.current etc.",
@@ -7542,6 +7580,12 @@
     ]
   },
   {
+    "patternId": "Rails_EnvLocal",
+    "title": "Use `Rails.env.local?` instead of `Rails.env.development? || Rails.env.test?`.",
+    "description": "Use `Rails.env.local?` instead of `Rails.env.development? || Rails.env.test?`.",
+    "timeToFix": 5
+  },
+  {
     "patternId": "Rails_EnvironmentComparison",
     "title": "Favor `Rails.env.production?` over `Rails.env == 'production'`.",
     "description": "Favor `Rails.env.production?` over `Rails.env == 'production'`.",
@@ -7618,10 +7662,6 @@
       {
         "name": "IgnoreWhereFirst",
         "description": "IgnoreWhereFirst"
-      },
-      {
-        "name": "Include",
-        "description": "Include"
       }
     ]
   },
@@ -7640,10 +7680,6 @@
       {
         "name": "Safe",
         "description": "Safe"
-      },
-      {
-        "name": "Include",
-        "description": "Include"
       },
       {
         "name": "AllowedMethods",
@@ -7737,6 +7773,14 @@
     "description": "Checks for places where I18n \"lazy\" lookup can be used.",
     "timeToFix": 5,
     "parameters": [
+      {
+        "name": "EnforcedStyle",
+        "description": "EnforcedStyle"
+      },
+      {
+        "name": "SupportedStyles",
+        "description": "SupportedStyles"
+      },
       {
         "name": "Include",
         "description": "Include"
@@ -7900,6 +7944,14 @@
     "timeToFix": 5,
     "parameters": [
       {
+        "name": "Database",
+        "description": "Database"
+      },
+      {
+        "name": "SupportedDatabases",
+        "description": "SupportedDatabases"
+      },
+      {
         "name": "Include",
         "description": "Include"
       }
@@ -8050,6 +8102,22 @@
       {
         "name": "Include",
         "description": "Include"
+      }
+    ]
+  },
+  {
+    "patternId": "Rails_RedundantActiveRecordAllMethod",
+    "title": "Detect redundant `all` used as a receiver for Active Record query methods.",
+    "description": "Detect redundant `all` used as a receiver for Active Record query methods.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Safe",
+        "description": "Safe"
+      },
+      {
+        "name": "AllowedReceivers",
+        "description": "AllowedReceivers"
       }
     ]
   },
@@ -8312,6 +8380,18 @@
     ]
   },
   {
+    "patternId": "Rails_SelectMap",
+    "title": "Checks for uses of `select(:column_name)` with `map(&:column_name)`.",
+    "description": "Checks for uses of `select(:column_name)` with `map(&:column_name)`.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Safe",
+        "description": "Safe"
+      }
+    ]
+  },
+  {
     "patternId": "Rails_ShortI18n",
     "title": "Use the short form of the I18n methods: `t` instead of `translate` and `l` instead of `localize`.",
     "description": "Use the short form of the I18n methods: `t` instead of `translate` and `l` instead of `localize`.",
@@ -8465,7 +8545,13 @@
     "patternId": "Rails_TransactionExitStatement",
     "title": "Avoid the usage of `return`, `break` and `throw` in transaction blocks.",
     "description": "Avoid the usage of `return`, `break` and `throw` in transaction blocks.",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "TransactionMethods",
+        "description": "TransactionMethods"
+      }
+    ]
   },
   {
     "patternId": "Rails_UniqBeforePluck",
@@ -8524,6 +8610,18 @@
       {
         "name": "Include",
         "description": "Include"
+      }
+    ]
+  },
+  {
+    "patternId": "Rails_UnusedRenderContent",
+    "title": "Do not specify body content for a response with a non-content status code.",
+    "description": "Do not specify body content for a response with a non-content status code.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Severity",
+        "description": "Severity"
       }
     ]
   },
@@ -8656,6 +8754,18 @@
     ]
   },
   {
+    "patternId": "Sorbet_ForbidTStruct",
+    "title": "Forbid usage of T::Struct.",
+    "description": "Forbid usage of T::Struct.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Safe",
+        "description": "Safe"
+      }
+    ]
+  },
+  {
     "patternId": "Sorbet_ForbidTUnsafe",
     "title": "Forbid usage of T.unsafe.",
     "description": "Forbid usage of T.unsafe.",
@@ -8699,6 +8809,22 @@
     "patternId": "Sorbet_ObsoleteStrictMemoization",
     "title": "This cop checks for the obsolete pattern for initializing instance variables that was required for older Sorbet versions in `#typed: strict` files.\nIt's no longer required, as of Sorbet 0.5.10210 See https://sorbet.",
     "description": "This cop checks for the obsolete pattern for initializing instance variables that was required for older Sorbet versions in `#typed: strict` files.\nIt's no longer required, as of Sorbet 0.5.10210 See https://sorbet.org/docs/type-assertions#put-type-assertions-behind-memoization",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Safe",
+        "description": "Safe"
+      },
+      {
+        "name": "SafeAutoCorrect",
+        "description": "SafeAutoCorrect"
+      }
+    ]
+  },
+  {
+    "patternId": "Sorbet_BuggyObsoleteStrictMemoization",
+    "title": "Checks for the a mistaken variant of the \"obsolete memoization pattern\" that used to be required for older Sorbet versions in `#typed: strict` files.",
+    "description": "Checks for the a mistaken variant of the \"obsolete memoization pattern\" that used to be required for older Sorbet versions in `#typed: strict` files. The mistaken variant would overwrite the ivar with `nil` on every call, causing the memoized value to be discarded and recomputed on every call.\nThis cop will correct it to read from the ivar instead of `nil`, which will memoize it correctly.\nThe result of this correction will be the \"obsolete memoization pattern\", which can further be corrected by the `Sorbet/ObsoleteStrictMemoization` cop.\nSee `Sorbet/ObsoleteStrictMemoization` for more details.",
     "timeToFix": 5,
     "parameters": [
       {

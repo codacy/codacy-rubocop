@@ -1,7 +1,11 @@
 
 Checks for redundant safe navigation calls.
-`instance_of?`, `kind_of?`, `is_a?`, `eql?`, `respond_to?`, and `equal?` methods
-are checked by default. These are customizable with `AllowedMethods` option.
+Use cases where a constant, named in camel case for classes and modules is `nil` are rare,
+and an offense is not detected when the receiver is a snake case constant.
+
+For all receivers, the `instance_of?`, `kind_of?`, `is_a?`, `eql?`, `respond_to?`,
+and `equal?` methods are checked by default.
+These are customizable with `AllowedMethods` option.
 
 The `AllowedMethods` option specifies nil-safe methods,
 in other words, it is a method that is allowed to skip safe navigation.
@@ -15,6 +19,9 @@ because `NilClass` has methods like `respond_to?` and `is_a?`.
 
 ```ruby
 # bad
+CamelCaseConst&.do_something
+
+# bad
 do_something if attrs&.respond_to?(:[])
 
 # good
@@ -24,6 +31,9 @@ do_something if attrs.respond_to?(:[])
 while node&.is_a?(BeginNode)
   node = node.parent
 end
+
+# good
+CamelCaseConst.do_something
 
 # good
 while node.is_a?(BeginNode)
