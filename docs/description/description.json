@@ -2968,6 +2968,10 @@
       {
         "name": "Exclude",
         "description": "Exclude"
+      },
+      {
+        "name": "inherit_mode",
+        "description": "inherit_mode"
       }
     ]
   },
@@ -9351,6 +9355,1840 @@
     "patternId": "ThreadSafety_NewThread",
     "title": "Avoid starting new threads. Let a framework like Sidekiq handle the threads.",
     "description": "Avoid starting new threads. Let a framework like Sidekiq handle the threads.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Minitest_AssertEmpty",
+    "title": "This cop enforces the test to use `assert_empty` instead of using `assert(object.empty?)`.",
+    "description": "This cop enforces the test to use `assert_empty` instead of using `assert(object.empty?)`.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Minitest_AssertEmptyLiteral",
+    "title": "This cop enforces the test to use `assert_empty` instead of using `assert_equal([], object)`.",
+    "description": "This cop enforces the test to use `assert_empty` instead of using `assert_equal([], object)`.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Minitest_AssertEqual",
+    "title": "This cop enforces the test to use `assert_equal` instead of using `assert(expected == actual)`.",
+    "description": "This cop enforces the test to use `assert_equal` instead of using `assert(expected == actual)`.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Minitest_AssertInDelta",
+    "title": "This cop enforces the test to use `assert_in_delta` instead of using `assert_equal` to compare floats.",
+    "description": "This cop enforces the test to use `assert_in_delta` instead of using `assert_equal` to compare floats.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Minitest_AssertOperator",
+    "title": "This cop enforces the use of `assert_operator(expected, :<, actual)` over `assert(expected < actual)`.",
+    "description": "This cop enforces the use of `assert_operator(expected, :<, actual)` over `assert(expected < actual)`.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Minitest_AssertPredicate",
+    "title": "This cop enforces the test to use `assert_predicate` instead of using `assert(obj.a_predicate_method?)`.",
+    "description": "This cop enforces the test to use `assert_predicate` instead of using `assert(obj.a_predicate_method?)`.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Minitest_AssertRaisesCompoundBody",
+    "title": "This cop enforces the block body of `assert_raises { ... }` to be reduced to only the raising code.",
+    "description": "This cop enforces the block body of `assert_raises { ... }` to be reduced to only the raising code.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Minitest_AssertRaisesWithRegexpArgument",
+    "title": "This cop enforces checks for regular expression literals passed to `assert_raises`.",
+    "description": "This cop enforces checks for regular expression literals passed to `assert_raises`.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Severity",
+        "description": "Severity"
+      }
+    ]
+  },
+  {
+    "patternId": "Minitest_AssertWithExpectedArgument",
+    "title": "This cop tries to detect when a user accidentally used `assert` when they meant to use `assert_equal`.",
+    "description": "This cop tries to detect when a user accidentally used `assert` when they meant to use `assert_equal`.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Severity",
+        "description": "Severity"
+      },
+      {
+        "name": "Safe",
+        "description": "Safe"
+      }
+    ]
+  },
+  {
+    "patternId": "Minitest_AssertionInLifecycleHook",
+    "title": "This cop checks for usage of assertions in lifecycle hooks.",
+    "description": "This cop checks for usage of assertions in lifecycle hooks.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Minitest_AssertKindOf",
+    "title": "This cop enforces the test to use `assert_kind_of(Class, object)` over `assert(object.kind_of?(Class))`",
+    "description": "This cop enforces the test to use `assert_kind_of(Class, object)` over `assert(object.kind_of?(Class))`",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Minitest_AssertNil",
+    "title": "This cop enforces the test to use `assert_nil` instead of using `assert_equal(nil, something)` or `assert(something.nil?)`.",
+    "description": "This cop enforces the test to use `assert_nil` instead of using `assert_equal(nil, something)` or `assert(something.nil?)`.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Minitest_AssertIncludes",
+    "title": "This cop enforces the test to use `assert_includes` instead of using `assert(collection.include?(object))`.",
+    "description": "This cop enforces the test to use `assert_includes` instead of using `assert(collection.include?(object))`.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Minitest_AssertInstanceOf",
+    "title": "This cop enforces the test to use `assert_instance_of(Class, object)` over `assert(object.instance_of?(Class))`",
+    "description": "This cop enforces the test to use `assert_instance_of(Class, object)` over `assert(object.instance_of?(Class))`",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Minitest_AssertMatch",
+    "title": "This cop enforces the test to use `assert_match` instead of using `assert(matcher.match(object))`.",
+    "description": "This cop enforces the test to use `assert_match` instead of using `assert(matcher.match(object))`.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Minitest_AssertOutput",
+    "title": "This cop checks for opportunities to use `assert_output`.",
+    "description": "This cop checks for opportunities to use `assert_output`.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Minitest_AssertPathExists",
+    "title": "This cop enforces the test to use `assert_path_exists` instead of using `assert(File.exist?(path))`.",
+    "description": "This cop enforces the test to use `assert_path_exists` instead of using `assert(File.exist?(path))`.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Minitest_AssertRespondTo",
+    "title": "This cop enforces the test to use `assert_respond_to(object, :do_something)` over `assert(object.respond_to?(:do_something))`.",
+    "description": "This cop enforces the test to use `assert_respond_to(object, :do_something)` over `assert(object.respond_to?(:do_something))`.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Minitest_AssertSame",
+    "title": "Enforces the use of `assert_same(expected, actual)` over `assert(expected.equal?(actual))`.",
+    "description": "Enforces the use of `assert_same(expected, actual)` over `assert(expected.equal?(actual))`.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Minitest_AssertSilent",
+    "title": "This cop enforces the test to use `assert_silent { ... }` instead of using `assert_output('', '') { ... }`.",
+    "description": "This cop enforces the test to use `assert_silent { ... }` instead of using `assert_output('', '') { ... }`.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Minitest_AssertTruthy",
+    "title": "This cop enforces the test to use `assert(actual)` instead of using `assert_equal(true, actual)`.",
+    "description": "This cop enforces the test to use `assert(actual)` instead of using `assert_equal(true, actual)`.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Safe",
+        "description": "Safe"
+      }
+    ]
+  },
+  {
+    "patternId": "Minitest_DuplicateTestRun",
+    "title": "This cop detects duplicate test runs caused by one test class inheriting from another.",
+    "description": "This cop detects duplicate test runs caused by one test class inheriting from another.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Minitest_EmptyLineBeforeAssertionMethods",
+    "title": "Add empty line before assertion methods.",
+    "description": "Add empty line before assertion methods.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Minitest_ReturnInTestMethod",
+    "title": "Enforces the use of `skip` instead of `return` in test methods.",
+    "description": "Enforces the use of `skip` instead of `return` in test methods.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Minitest_TestFileName",
+    "title": "Checks if test file names start with `test_` or end with `_test.rb`.",
+    "description": "Checks if test file names start with `test_` or end with `_test.rb`.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Minitest_GlobalExpectations",
+    "title": "This cop checks for deprecated global expectations.",
+    "description": "This cop checks for deprecated global expectations.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Severity",
+        "description": "Severity"
+      },
+      {
+        "name": "EnforcedStyle",
+        "description": "EnforcedStyle"
+      },
+      {
+        "name": "Include",
+        "description": "Include"
+      },
+      {
+        "name": "SupportedStyles",
+        "description": "SupportedStyles"
+      }
+    ]
+  },
+  {
+    "patternId": "Minitest_LifecycleHooksOrder",
+    "title": "Checks that lifecycle hooks are declared in the order in which they will be executed.",
+    "description": "Checks that lifecycle hooks are declared in the order in which they will be executed.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Minitest_LiteralAsActualArgument",
+    "title": "This cop enforces correct order of `expected` and `actual` arguments for `assert_equal`.",
+    "description": "This cop enforces correct order of `expected` and `actual` arguments for `assert_equal`.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Minitest_MultipleAssertions",
+    "title": "This cop checks if test cases contain too many assertion calls.",
+    "description": "This cop checks if test cases contain too many assertion calls.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Max",
+        "description": "Max"
+      }
+    ]
+  },
+  {
+    "patternId": "Minitest_NoAssertions",
+    "title": "This cop checks for at least one assertion (or flunk) in tests.",
+    "description": "This cop checks for at least one assertion (or flunk) in tests.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Minitest_NoTestCases",
+    "title": "Checks if test class contains any test cases.",
+    "description": "Checks if test class contains any test cases.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Minitest_NonPublicTestMethod",
+    "title": "Detects non `public` (marked as `private` or `protected`) test methods.",
+    "description": "Detects non `public` (marked as `private` or `protected`) test methods.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Severity",
+        "description": "Severity"
+      }
+    ]
+  },
+  {
+    "patternId": "Minitest_RefuteEmpty",
+    "title": "This cop enforces to use `refute_empty` instead of using `refute(object.empty?)`.",
+    "description": "This cop enforces to use `refute_empty` instead of using `refute(object.empty?)`.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Minitest_RefuteFalse",
+    "title": "Check if your test uses `refute(actual)` instead of `assert_equal(false, actual)`.",
+    "description": "Check if your test uses `refute(actual)` instead of `assert_equal(false, actual)`.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Safe",
+        "description": "Safe"
+      }
+    ]
+  },
+  {
+    "patternId": "Minitest_RefuteEqual",
+    "title": "Check if your test uses `refute_equal` instead of `assert(expected != object)` or `assert(! expected == object))`.",
+    "description": "Check if your test uses `refute_equal` instead of `assert(expected != object)` or `assert(! expected == object))`.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Minitest_RefuteInDelta",
+    "title": "This cop enforces the test to use `refute_in_delta` instead of using `refute_equal` to compare floats.",
+    "description": "This cop enforces the test to use `refute_in_delta` instead of using `refute_equal` to compare floats.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Minitest_RefuteIncludes",
+    "title": "This cop enforces the test to use `refute_includes` instead of using `refute(collection.include?(object))`.",
+    "description": "This cop enforces the test to use `refute_includes` instead of using `refute(collection.include?(object))`.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Minitest_RefuteInstanceOf",
+    "title": "This cop enforces the test to use `refute_instance_of(Class, object)` over `refute(object.instance_of?(Class))`.",
+    "description": "This cop enforces the test to use `refute_instance_of(Class, object)` over `refute(object.instance_of?(Class))`.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Minitest_RefuteKindOf",
+    "title": "This cop enforces the test to use `refute_kind_of(Class, object)` over `refute(object.kind_of?(Class))`.",
+    "description": "This cop enforces the test to use `refute_kind_of(Class, object)` over `refute(object.kind_of?(Class))`.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Minitest_RefuteMatch",
+    "title": "This cop enforces the test to use `refute_match` instead of using `refute(matcher.match(object))`.",
+    "description": "This cop enforces the test to use `refute_match` instead of using `refute(matcher.match(object))`.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Minitest_RefuteNil",
+    "title": "This cop enforces the test to use `refute_nil` instead of using `refute_equal(nil, something)` or `refute(something.nil?)`.",
+    "description": "This cop enforces the test to use `refute_nil` instead of using `refute_equal(nil, something)` or `refute(something.nil?)`.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Minitest_RefuteOperator",
+    "title": "This cop enforces the use of `refute_operator(expected, :<, actual)` over `refute(expected < actual)`.",
+    "description": "This cop enforces the use of `refute_operator(expected, :<, actual)` over `refute(expected < actual)`.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Minitest_RefutePathExists",
+    "title": "This cop enforces the test to use `refute_path_exists` instead of using `refute(File.exist?(path))`.",
+    "description": "This cop enforces the test to use `refute_path_exists` instead of using `refute(File.exist?(path))`.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Minitest_RefutePredicate",
+    "title": "This cop enforces the test to use `refute_predicate` instead of using `refute(obj.a_predicate_method?)`.",
+    "description": "This cop enforces the test to use `refute_predicate` instead of using `refute(obj.a_predicate_method?)`.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Minitest_RefuteRespondTo",
+    "title": "This cop enforces the test to use `refute_respond_to(object, :do_something)` over `refute(object.respond_to?(:do_something))`.",
+    "description": "This cop enforces the test to use `refute_respond_to(object, :do_something)` over `refute(object.respond_to?(:do_something))`.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Minitest_RefuteSame",
+    "title": "Enforces the use of `refute_same(expected, actual)` over `refute(expected.equal?(actual))`.",
+    "description": "Enforces the use of `refute_same(expected, actual)` over `refute(expected.equal?(actual))`.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Minitest_SkipEnsure",
+    "title": "Checks that `ensure` call even if `skip`.",
+    "description": "Checks that `ensure` call even if `skip`.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Severity",
+        "description": "Severity"
+      }
+    ]
+  },
+  {
+    "patternId": "Minitest_SkipWithoutReason",
+    "title": "Checks for skipped tests missing the skipping reason.",
+    "description": "Checks for skipped tests missing the skipping reason.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Minitest_TestMethodName",
+    "title": "This cop enforces that test method names start with `test_` prefix.",
+    "description": "This cop enforces that test method names start with `test_` prefix.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Minitest_UnreachableAssertion",
+    "title": "This cop checks for an `assert_raises` block containing any unreachable assertions.",
+    "description": "This cop checks for an `assert_raises` block containing any unreachable assertions.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Severity",
+        "description": "Severity"
+      }
+    ]
+  },
+  {
+    "patternId": "Minitest_UnspecifiedException",
+    "title": "This cop checks for a specified error in `assert_raises`.",
+    "description": "This cop checks for a specified error in `assert_raises`.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Minitest_UselessAssertion",
+    "title": "Detects useless assertions (assertions that either always pass or always fail).",
+    "description": "Detects useless assertions (assertions that either always pass or always fail).",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Rake_ClassDefinitionInTask",
+    "title": "Do not define a class or module in rake task, because it will be defined to the top level.",
+    "description": "Do not define a class or module in rake task, because it will be defined to the top level.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Rake_Desc",
+    "title": "Describe the task with `desc` method.",
+    "description": "Describe the task with `desc` method.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Rake_DuplicateTask",
+    "title": "Do not define tasks with the same name",
+    "description": "Do not define tasks with the same name",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Rake_DuplicateNamespace",
+    "title": "Do not define namespace with the same name",
+    "description": "Do not define namespace with the same name",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Rake_MethodDefinitionInTask",
+    "title": "Do not define a method in rake task, because it will be defined to the top level.",
+    "description": "Do not define a method in rake task, because it will be defined to the top level.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Capybara_RSpec_HaveSelector",
+    "title": "Use `have_css` or `have_xpath` instead of `have_selector`.",
+    "description": "Use `have_css` or `have_xpath` instead of `have_selector`.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "DefaultSelector",
+        "description": "DefaultSelector"
+      }
+    ]
+  },
+  {
+    "patternId": "Capybara_RSpec_PredicateMatcher",
+    "title": "Prefer using predicate matcher over using predicate method directly.",
+    "description": "Prefer using predicate matcher over using predicate method directly.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Strict",
+        "description": "Strict"
+      },
+      {
+        "name": "EnforcedStyle",
+        "description": "EnforcedStyle"
+      },
+      {
+        "name": "AllowedExplicitMatchers",
+        "description": "AllowedExplicitMatchers"
+      },
+      {
+        "name": "SupportedStyles",
+        "description": "SupportedStyles"
+      }
+    ]
+  },
+  {
+    "patternId": "Capybara_ClickLinkOrButtonStyle",
+    "title": "Checks for click button or link style.",
+    "description": "Checks for click button or link style.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "EnforcedStyle",
+        "description": "EnforcedStyle"
+      },
+      {
+        "name": "SupportedStyles",
+        "description": "SupportedStyles"
+      }
+    ]
+  },
+  {
+    "patternId": "Capybara_CurrentPathExpectation",
+    "title": "Checks that no expectations are set on Capybara's `current_path`.",
+    "description": "Checks that no expectations are set on Capybara's `current_path`.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Capybara_MatchStyle",
+    "title": "Checks for usage of deprecated style methods.",
+    "description": "Checks for usage of deprecated style methods.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Capybara_NegationMatcher",
+    "title": "Enforces use of `have_no_*` or `not_to` for negated expectations.",
+    "description": "Enforces use of `have_no_*` or `not_to` for negated expectations.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "EnforcedStyle",
+        "description": "EnforcedStyle"
+      },
+      {
+        "name": "SupportedStyles",
+        "description": "SupportedStyles"
+      }
+    ]
+  },
+  {
+    "patternId": "Capybara_SpecificActions",
+    "title": "Checks for there is a more specific actions offered by Capybara.",
+    "description": "Checks for there is a more specific actions offered by Capybara.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Capybara_SpecificFinders",
+    "title": "Checks if there is a more specific finder offered by Capybara.",
+    "description": "Checks if there is a more specific finder offered by Capybara.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Capybara_SpecificMatcher",
+    "title": "Checks for there is a more specific matcher offered by Capybara.",
+    "description": "Checks for there is a more specific matcher offered by Capybara.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Capybara_VisibilityMatcher",
+    "title": "Checks for boolean visibility in Capybara finders.",
+    "description": "Checks for boolean visibility in Capybara finders.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "FactoryBot_AssociationStyle",
+    "title": "Use a consistent style to define associations.",
+    "description": "Use a consistent style to define associations.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Safe",
+        "description": "Safe"
+      },
+      {
+        "name": "EnforcedStyle",
+        "description": "EnforcedStyle"
+      },
+      {
+        "name": "SupportedStyles",
+        "description": "SupportedStyles"
+      },
+      {
+        "name": "NonImplicitAssociationMethodNames",
+        "description": "NonImplicitAssociationMethodNames"
+      }
+    ]
+  },
+  {
+    "patternId": "FactoryBot_AttributeDefinedStatically",
+    "title": "Always declare attribute values as blocks.",
+    "description": "Always declare attribute values as blocks.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "FactoryBot_ConsistentParenthesesStyle",
+    "title": "Use a consistent style for parentheses in factory_bot calls.",
+    "description": "Use a consistent style for parentheses in factory_bot calls.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Include",
+        "description": "Include"
+      },
+      {
+        "name": "EnforcedStyle",
+        "description": "EnforcedStyle"
+      },
+      {
+        "name": "SupportedStyles",
+        "description": "SupportedStyles"
+      },
+      {
+        "name": "ExplicitOnly",
+        "description": "ExplicitOnly"
+      }
+    ]
+  },
+  {
+    "patternId": "FactoryBot_CreateList",
+    "title": "Checks for create_list usage.",
+    "description": "Checks for create_list usage.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Include",
+        "description": "Include"
+      },
+      {
+        "name": "EnforcedStyle",
+        "description": "EnforcedStyle"
+      },
+      {
+        "name": "SupportedStyles",
+        "description": "SupportedStyles"
+      },
+      {
+        "name": "ExplicitOnly",
+        "description": "ExplicitOnly"
+      },
+      {
+        "name": "SafeAutoCorrect",
+        "description": "SafeAutoCorrect"
+      }
+    ]
+  },
+  {
+    "patternId": "FactoryBot_FactoryAssociationWithStrategy",
+    "title": "Use definition in factory association instead of hard coding a strategy.",
+    "description": "Use definition in factory association instead of hard coding a strategy.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Include",
+        "description": "Include"
+      }
+    ]
+  },
+  {
+    "patternId": "FactoryBot_FactoryClassName",
+    "title": "Use string value when setting the class attribute explicitly.",
+    "description": "Use string value when setting the class attribute explicitly.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "FactoryBot_FactoryNameStyle",
+    "title": "Checks for name style for argument of FactoryBot::Syntax::Methods.",
+    "description": "Checks for name style for argument of FactoryBot::Syntax::Methods.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Include",
+        "description": "Include"
+      },
+      {
+        "name": "EnforcedStyle",
+        "description": "EnforcedStyle"
+      },
+      {
+        "name": "SupportedStyles",
+        "description": "SupportedStyles"
+      },
+      {
+        "name": "ExplicitOnly",
+        "description": "ExplicitOnly"
+      }
+    ]
+  },
+  {
+    "patternId": "FactoryBot_IdSequence",
+    "title": "Do not create a FactoryBot sequence for an id column.",
+    "description": "Do not create a FactoryBot sequence for an id column.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "FactoryBot_RedundantFactoryOption",
+    "title": "Checks for redundant `factory` option.",
+    "description": "Checks for redundant `factory` option.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Include",
+        "description": "Include"
+      }
+    ]
+  },
+  {
+    "patternId": "FactoryBot_SyntaxMethods",
+    "title": "Use shorthands from `FactoryBot::Syntax::Methods` in your specs.",
+    "description": "Use shorthands from `FactoryBot::Syntax::Methods` in your specs.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Include",
+        "description": "Include"
+      },
+      {
+        "name": "SafeAutoCorrect",
+        "description": "SafeAutoCorrect"
+      }
+    ]
+  },
+  {
+    "patternId": "RSpec_Capybara_FeatureMethods",
+    "title": "Checks for consistent method usage in feature specs.",
+    "description": "Checks for consistent method usage in feature specs.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "EnabledMethods",
+        "description": "EnabledMethods"
+      }
+    ]
+  },
+  {
+    "patternId": "RSpec_Rails_AvoidSetupHook",
+    "title": "Checks that tests use RSpec `before` hook over Rails `setup` method.",
+    "description": "Checks that tests use RSpec `before` hook over Rails `setup` method.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "RSpec_Rails_HaveHttpStatus",
+    "title": "Checks that tests use `have_http_status` instead of equality matchers.",
+    "description": "Checks that tests use `have_http_status` instead of equality matchers.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "SafeAutoCorrect",
+        "description": "SafeAutoCorrect"
+      }
+    ]
+  },
+  {
+    "patternId": "RSpec_Rails_NegationBeValid",
+    "title": "Enforces use of `be_invalid` or `not_to` for negated be_valid.",
+    "description": "Enforces use of `be_invalid` or `not_to` for negated be_valid.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Safe",
+        "description": "Safe"
+      },
+      {
+        "name": "EnforcedStyle",
+        "description": "EnforcedStyle"
+      },
+      {
+        "name": "SupportedStyles",
+        "description": "SupportedStyles"
+      }
+    ]
+  },
+  {
+    "patternId": "RSpec_Rails_HttpStatus",
+    "title": "Enforces use of symbolic or numeric value to describe HTTP status.",
+    "description": "Enforces use of symbolic or numeric value to describe HTTP status.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "EnforcedStyle",
+        "description": "EnforcedStyle"
+      },
+      {
+        "name": "SupportedStyles",
+        "description": "SupportedStyles"
+      }
+    ]
+  },
+  {
+    "patternId": "RSpec_Rails_InferredSpecType",
+    "title": "Identifies redundant spec type.",
+    "description": "Identifies redundant spec type.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Safe",
+        "description": "Safe"
+      },
+      {
+        "name": "Inferences",
+        "description": "Inferences"
+      }
+    ]
+  },
+  {
+    "patternId": "RSpec_Rails_MinitestAssertions",
+    "title": "Check if using Minitest matchers.",
+    "description": "Check if using Minitest matchers.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "RSpec_Rails_TravelAround",
+    "title": "Prefer to travel in `before` rather than `around`.",
+    "description": "Prefer to travel in `before` rather than `around`.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Safe",
+        "description": "Safe"
+      }
+    ]
+  },
+  {
+    "patternId": "RSpec_AlignLeftLetBrace",
+    "title": "Checks that left braces for adjacent single line lets are aligned.",
+    "description": "Checks that left braces for adjacent single line lets are aligned.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "RSpec_AlignRightLetBrace",
+    "title": "Checks that right braces for adjacent single line lets are aligned.",
+    "description": "Checks that right braces for adjacent single line lets are aligned.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "RSpec_AnyInstance",
+    "title": "Check that instances are not being stubbed globally.",
+    "description": "Check that instances are not being stubbed globally.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "RSpec_AroundBlock",
+    "title": "Checks that around blocks actually run the test.",
+    "description": "Checks that around blocks actually run the test.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "RSpec_Be",
+    "title": "Check for expectations where `be` is used without argument.",
+    "description": "Check for expectations where `be` is used without argument.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "RSpec_BeEmpty",
+    "title": "Prefer using `be_empty` when checking for an empty array.",
+    "description": "Prefer using `be_empty` when checking for an empty array.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "RSpec_BeEq",
+    "title": "Check for expectations where `be(...)` can replace `eq(...)`.",
+    "description": "Check for expectations where `be(...)` can replace `eq(...)`.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Safe",
+        "description": "Safe"
+      }
+    ]
+  },
+  {
+    "patternId": "RSpec_BeEql",
+    "title": "Check for expectations where `be(...)` can replace `eql(...)`.",
+    "description": "Check for expectations where `be(...)` can replace `eql(...)`.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Safe",
+        "description": "Safe"
+      }
+    ]
+  },
+  {
+    "patternId": "RSpec_BeNil",
+    "title": "Ensures a consistent style is used when matching `nil`.",
+    "description": "Ensures a consistent style is used when matching `nil`.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "EnforcedStyle",
+        "description": "EnforcedStyle"
+      },
+      {
+        "name": "SupportedStyles",
+        "description": "SupportedStyles"
+      }
+    ]
+  },
+  {
+    "patternId": "RSpec_BeforeAfterAll",
+    "title": "Check that before/after(:all) isn't being used.",
+    "description": "Check that before/after(:all) isn't being used.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Exclude",
+        "description": "Exclude"
+      }
+    ]
+  },
+  {
+    "patternId": "RSpec_ChangeByZero",
+    "title": "Prefer negated matchers over `to change.by(0)`.",
+    "description": "Prefer negated matchers over `to change.by(0)`.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "NegatedMatcher",
+        "description": "NegatedMatcher"
+      }
+    ]
+  },
+  {
+    "patternId": "RSpec_ClassCheck",
+    "title": "Enforces consistent use of `be_a` or `be_kind_of`.",
+    "description": "Enforces consistent use of `be_a` or `be_kind_of`.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "EnforcedStyle",
+        "description": "EnforcedStyle"
+      },
+      {
+        "name": "SupportedStyles",
+        "description": "SupportedStyles"
+      }
+    ]
+  },
+  {
+    "patternId": "RSpec_ContainExactly",
+    "title": "Checks where `contain_exactly` is used.",
+    "description": "Checks where `contain_exactly` is used.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "RSpec_ContextMethod",
+    "title": "`context` should not be used for specifying methods.",
+    "description": "`context` should not be used for specifying methods.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "RSpec_ContextWording",
+    "title": "Checks that `context` docstring starts with an allowed prefix.",
+    "description": "Checks that `context` docstring starts with an allowed prefix.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Prefixes",
+        "description": "Prefixes"
+      },
+      {
+        "name": "AllowedPatterns",
+        "description": "AllowedPatterns"
+      }
+    ]
+  },
+  {
+    "patternId": "RSpec_DescribeClass",
+    "title": "Check that the first argument to the top-level describe is a constant.",
+    "description": "Check that the first argument to the top-level describe is a constant.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Exclude",
+        "description": "Exclude"
+      },
+      {
+        "name": "IgnoredMetadata",
+        "description": "IgnoredMetadata"
+      }
+    ]
+  },
+  {
+    "patternId": "RSpec_DescribeMethod",
+    "title": "Checks that the second argument to `describe` specifies a method.",
+    "description": "Checks that the second argument to `describe` specifies a method.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "RSpec_DescribeSymbol",
+    "title": "Avoid describing symbols.",
+    "description": "Avoid describing symbols.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "RSpec_DescribedClass",
+    "title": "Checks that tests use `described_class`.",
+    "description": "Checks that tests use `described_class`.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "SkipBlocks",
+        "description": "SkipBlocks"
+      },
+      {
+        "name": "EnforcedStyle",
+        "description": "EnforcedStyle"
+      },
+      {
+        "name": "SupportedStyles",
+        "description": "SupportedStyles"
+      },
+      {
+        "name": "SafeAutoCorrect",
+        "description": "SafeAutoCorrect"
+      }
+    ]
+  },
+  {
+    "patternId": "RSpec_DescribedClassModuleWrapping",
+    "title": "Avoid opening modules and defining specs within them.",
+    "description": "Avoid opening modules and defining specs within them.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "RSpec_Dialect",
+    "title": "Enforces custom RSpec dialects.",
+    "description": "Enforces custom RSpec dialects.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "PreferredMethods",
+        "description": "PreferredMethods"
+      }
+    ]
+  },
+  {
+    "patternId": "RSpec_DuplicatedMetadata",
+    "title": "Avoid duplicated metadata.",
+    "description": "Avoid duplicated metadata.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "RSpec_EmptyExampleGroup",
+    "title": "Checks if an example group does not include any tests.",
+    "description": "Checks if an example group does not include any tests.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "SafeAutoCorrect",
+        "description": "SafeAutoCorrect"
+      }
+    ]
+  },
+  {
+    "patternId": "RSpec_EmptyHook",
+    "title": "Checks for empty before and after hooks.",
+    "description": "Checks for empty before and after hooks.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "RSpec_EmptyLineAfterExample",
+    "title": "Checks if there is an empty line after example blocks.",
+    "description": "Checks if there is an empty line after example blocks.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "AllowConsecutiveOneLiners",
+        "description": "AllowConsecutiveOneLiners"
+      }
+    ]
+  },
+  {
+    "patternId": "RSpec_EmptyLineAfterExampleGroup",
+    "title": "Checks if there is an empty line after example group blocks.",
+    "description": "Checks if there is an empty line after example group blocks.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "RSpec_EmptyLineAfterFinalLet",
+    "title": "Checks if there is an empty line after the last let block.",
+    "description": "Checks if there is an empty line after the last let block.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "RSpec_EmptyLineAfterHook",
+    "title": "Checks if there is an empty line after hook blocks.",
+    "description": "Checks if there is an empty line after hook blocks.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "AllowConsecutiveOneLiners",
+        "description": "AllowConsecutiveOneLiners"
+      }
+    ]
+  },
+  {
+    "patternId": "RSpec_EmptyLineAfterSubject",
+    "title": "Checks if there is an empty line after subject block.",
+    "description": "Checks if there is an empty line after subject block.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "RSpec_EmptyMetadata",
+    "title": "Avoid empty metadata hash.",
+    "description": "Avoid empty metadata hash.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "RSpec_Eq",
+    "title": "Use `eq` instead of `be ==` to compare objects.",
+    "description": "Use `eq` instead of `be ==` to compare objects.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "RSpec_ExampleLength",
+    "title": "Checks for long examples.",
+    "description": "Checks for long examples.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Max",
+        "description": "Max"
+      },
+      {
+        "name": "CountAsOne",
+        "description": "CountAsOne"
+      }
+    ]
+  },
+  {
+    "patternId": "RSpec_ExampleWithoutDescription",
+    "title": "Checks for examples without a description.",
+    "description": "Checks for examples without a description.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "EnforcedStyle",
+        "description": "EnforcedStyle"
+      },
+      {
+        "name": "SupportedStyles",
+        "description": "SupportedStyles"
+      }
+    ]
+  },
+  {
+    "patternId": "RSpec_ExampleWording",
+    "title": "Checks for common mistakes in example descriptions.",
+    "description": "Checks for common mistakes in example descriptions.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "CustomTransform",
+        "description": "CustomTransform"
+      },
+      {
+        "name": "IgnoredWords",
+        "description": "IgnoredWords"
+      },
+      {
+        "name": "DisallowedExamples",
+        "description": "DisallowedExamples"
+      }
+    ]
+  },
+  {
+    "patternId": "RSpec_ExcessiveDocstringSpacing",
+    "title": "Checks for excessive whitespace in example descriptions.",
+    "description": "Checks for excessive whitespace in example descriptions.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "RSpec_ExpectActual",
+    "title": "Checks for `expect(...)` calls containing literal values.",
+    "description": "Checks for `expect(...)` calls containing literal values.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Exclude",
+        "description": "Exclude"
+      }
+    ]
+  },
+  {
+    "patternId": "RSpec_ExpectChange",
+    "title": "Checks for consistent style of change matcher.",
+    "description": "Checks for consistent style of change matcher.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "EnforcedStyle",
+        "description": "EnforcedStyle"
+      },
+      {
+        "name": "SupportedStyles",
+        "description": "SupportedStyles"
+      },
+      {
+        "name": "SafeAutoCorrect",
+        "description": "SafeAutoCorrect"
+      }
+    ]
+  },
+  {
+    "patternId": "RSpec_ExpectInHook",
+    "title": "Do not use `expect` in hooks such as `before`.",
+    "description": "Do not use `expect` in hooks such as `before`.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "RSpec_ExpectOutput",
+    "title": "Checks for opportunities to use `expect { ... }.to output`.",
+    "description": "Checks for opportunities to use `expect { ... }.to output`.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "RSpec_FilePath",
+    "title": "Checks that spec file paths are consistent and well-formed.",
+    "description": "Checks that spec file paths are consistent and well-formed.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Include",
+        "description": "Include"
+      },
+      {
+        "name": "CustomTransform",
+        "description": "CustomTransform"
+      },
+      {
+        "name": "IgnoreMethods",
+        "description": "IgnoreMethods"
+      },
+      {
+        "name": "SpecSuffixOnly",
+        "description": "SpecSuffixOnly"
+      }
+    ]
+  },
+  {
+    "patternId": "RSpec_Focus",
+    "title": "Checks if examples are focused.",
+    "description": "Checks if examples are focused.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "RSpec_HookArgument",
+    "title": "Checks the arguments passed to `before`, `around`, and `after`.",
+    "description": "Checks the arguments passed to `before`, `around`, and `after`.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "EnforcedStyle",
+        "description": "EnforcedStyle"
+      },
+      {
+        "name": "SupportedStyles",
+        "description": "SupportedStyles"
+      }
+    ]
+  },
+  {
+    "patternId": "RSpec_HooksBeforeExamples",
+    "title": "Checks for before/around/after hooks that come after an example.",
+    "description": "Checks for before/around/after hooks that come after an example.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "RSpec_IdenticalEqualityAssertion",
+    "title": "Checks for equality assertions with identical expressions on both sides.",
+    "description": "Checks for equality assertions with identical expressions on both sides.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "RSpec_ImplicitBlockExpectation",
+    "title": "Check that implicit block expectation syntax is not used.",
+    "description": "Check that implicit block expectation syntax is not used.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "RSpec_ImplicitExpect",
+    "title": "Check that a consistent implicit expectation style is used.",
+    "description": "Check that a consistent implicit expectation style is used.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "EnforcedStyle",
+        "description": "EnforcedStyle"
+      },
+      {
+        "name": "SupportedStyles",
+        "description": "SupportedStyles"
+      }
+    ]
+  },
+  {
+    "patternId": "RSpec_ImplicitSubject",
+    "title": "Checks for usage of implicit subject (`is_expected` / `should`).",
+    "description": "Checks for usage of implicit subject (`is_expected` / `should`).",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "EnforcedStyle",
+        "description": "EnforcedStyle"
+      },
+      {
+        "name": "SupportedStyles",
+        "description": "SupportedStyles"
+      }
+    ]
+  },
+  {
+    "patternId": "RSpec_IndexedLet",
+    "title": "Do not set up test data using indexes (e.g., `item_1`, `item_2`).",
+    "description": "Do not set up test data using indexes (e.g., `item_1`, `item_2`).",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Max",
+        "description": "Max"
+      },
+      {
+        "name": "AllowedIdentifiers",
+        "description": "AllowedIdentifiers"
+      },
+      {
+        "name": "AllowedPatterns",
+        "description": "AllowedPatterns"
+      }
+    ]
+  },
+  {
+    "patternId": "RSpec_InstanceSpy",
+    "title": "Checks for `instance_double` used with `have_received`.",
+    "description": "Checks for `instance_double` used with `have_received`.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "RSpec_InstanceVariable",
+    "title": "Checks for instance variable usage in specs.",
+    "description": "Checks for instance variable usage in specs.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "AssignmentOnly",
+        "description": "AssignmentOnly"
+      }
+    ]
+  },
+  {
+    "patternId": "RSpec_ItBehavesLike",
+    "title": "Checks that only one `it_behaves_like` style is used.",
+    "description": "Checks that only one `it_behaves_like` style is used.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "EnforcedStyle",
+        "description": "EnforcedStyle"
+      },
+      {
+        "name": "SupportedStyles",
+        "description": "SupportedStyles"
+      }
+    ]
+  },
+  {
+    "patternId": "RSpec_IteratedExpectation",
+    "title": "Check that `all` matcher is used instead of iterating over an array.",
+    "description": "Check that `all` matcher is used instead of iterating over an array.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "RSpec_LeadingSubject",
+    "title": "Enforce that subject is the first definition in the test.",
+    "description": "Enforce that subject is the first definition in the test.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "RSpec_LeakyConstantDeclaration",
+    "title": "Checks that no class, module, or constant is declared.",
+    "description": "Checks that no class, module, or constant is declared.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "RSpec_LetBeforeExamples",
+    "title": "Checks for `let` definitions that come after an example.",
+    "description": "Checks for `let` definitions that come after an example.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "RSpec_LetSetup",
+    "title": "Checks unreferenced `let!` calls being used for test setup.",
+    "description": "Checks unreferenced `let!` calls being used for test setup.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "RSpec_MatchArray",
+    "title": "Checks where `match_array` is used.",
+    "description": "Checks where `match_array` is used.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "RSpec_MessageChain",
+    "title": "Check that chains of messages are not being stubbed.",
+    "description": "Check that chains of messages are not being stubbed.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "RSpec_MessageExpectation",
+    "title": "Checks for consistent message expectation style.",
+    "description": "Checks for consistent message expectation style.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "EnforcedStyle",
+        "description": "EnforcedStyle"
+      },
+      {
+        "name": "SupportedStyles",
+        "description": "SupportedStyles"
+      }
+    ]
+  },
+  {
+    "patternId": "RSpec_MessageSpies",
+    "title": "Checks that message expectations are set using spies.",
+    "description": "Checks that message expectations are set using spies.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "EnforcedStyle",
+        "description": "EnforcedStyle"
+      },
+      {
+        "name": "SupportedStyles",
+        "description": "SupportedStyles"
+      }
+    ]
+  },
+  {
+    "patternId": "RSpec_MetadataStyle",
+    "title": "Use consistent metadata style.",
+    "description": "Use consistent metadata style.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "EnforcedStyle",
+        "description": "EnforcedStyle"
+      },
+      {
+        "name": "SupportedStyles",
+        "description": "SupportedStyles"
+      }
+    ]
+  },
+  {
+    "patternId": "RSpec_MissingExampleGroupArgument",
+    "title": "Checks that the first argument to an example group is not empty.",
+    "description": "Checks that the first argument to an example group is not empty.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "RSpec_MultipleDescribes",
+    "title": "Checks for multiple top-level example groups.",
+    "description": "Checks for multiple top-level example groups.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "RSpec_MultipleExpectations",
+    "title": "Checks if examples contain too many `expect` calls.",
+    "description": "Checks if examples contain too many `expect` calls.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Max",
+        "description": "Max"
+      }
+    ]
+  },
+  {
+    "patternId": "RSpec_MultipleMemoizedHelpers",
+    "title": "Checks if example groups contain too many `let` and `subject` calls.",
+    "description": "Checks if example groups contain too many `let` and `subject` calls.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "AllowSubject",
+        "description": "AllowSubject"
+      },
+      {
+        "name": "Max",
+        "description": "Max"
+      }
+    ]
+  },
+  {
+    "patternId": "RSpec_MultipleSubjects",
+    "title": "Checks if an example group defines `subject` multiple times.",
+    "description": "Checks if an example group defines `subject` multiple times.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "RSpec_NamedSubject",
+    "title": "Checks for explicitly referenced test subjects.",
+    "description": "Checks for explicitly referenced test subjects.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "EnforcedStyle",
+        "description": "EnforcedStyle"
+      },
+      {
+        "name": "SupportedStyles",
+        "description": "SupportedStyles"
+      },
+      {
+        "name": "IgnoreSharedExamples",
+        "description": "IgnoreSharedExamples"
+      }
+    ]
+  },
+  {
+    "patternId": "RSpec_NestedGroups",
+    "title": "Checks for nested example groups.",
+    "description": "Checks for nested example groups.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Max",
+        "description": "Max"
+      },
+      {
+        "name": "AllowedGroups",
+        "description": "AllowedGroups"
+      }
+    ]
+  },
+  {
+    "patternId": "RSpec_NoExpectationExample",
+    "title": "Checks if an example contains any expectation.",
+    "description": "Checks if an example contains any expectation.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Safe",
+        "description": "Safe"
+      },
+      {
+        "name": "AllowedPatterns",
+        "description": "AllowedPatterns"
+      }
+    ]
+  },
+  {
+    "patternId": "RSpec_NotToNot",
+    "title": "Checks for consistent method usage for negating expectations.",
+    "description": "Checks for consistent method usage for negating expectations.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "EnforcedStyle",
+        "description": "EnforcedStyle"
+      },
+      {
+        "name": "SupportedStyles",
+        "description": "SupportedStyles"
+      }
+    ]
+  },
+  {
+    "patternId": "RSpec_OverwritingSetup",
+    "title": "Checks if there is a let/subject that overwrites an existing one.",
+    "description": "Checks if there is a let/subject that overwrites an existing one.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "RSpec_Pending",
+    "title": "Checks for any pending or skipped examples.",
+    "description": "Checks for any pending or skipped examples.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "RSpec_PendingWithoutReason",
+    "title": "Checks for pending or skipped examples without reason.",
+    "description": "Checks for pending or skipped examples without reason.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "RSpec_PredicateMatcher",
+    "title": "Prefer using predicate matcher over using predicate method directly.",
+    "description": "Prefer using predicate matcher over using predicate method directly.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Strict",
+        "description": "Strict"
+      },
+      {
+        "name": "EnforcedStyle",
+        "description": "EnforcedStyle"
+      },
+      {
+        "name": "AllowedExplicitMatchers",
+        "description": "AllowedExplicitMatchers"
+      },
+      {
+        "name": "SupportedStyles",
+        "description": "SupportedStyles"
+      },
+      {
+        "name": "SafeAutoCorrect",
+        "description": "SafeAutoCorrect"
+      }
+    ]
+  },
+  {
+    "patternId": "RSpec_ReceiveCounts",
+    "title": "Check for `once` and `twice` receive counts matchers usage.",
+    "description": "Check for `once` and `twice` receive counts matchers usage.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "RSpec_ReceiveMessages",
+    "title": "Checks for multiple messages stubbed on the same object.",
+    "description": "Checks for multiple messages stubbed on the same object.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "SafeAutoCorrect",
+        "description": "SafeAutoCorrect"
+      }
+    ]
+  },
+  {
+    "patternId": "RSpec_ReceiveNever",
+    "title": "Prefer `not_to receive(...)` over `receive(...).never`.",
+    "description": "Prefer `not_to receive(...)` over `receive(...).never`.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "RSpec_RedundantAround",
+    "title": "Remove redundant `around` hook.",
+    "description": "Remove redundant `around` hook.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "RSpec_RepeatedDescription",
+    "title": "Check for repeated description strings in example groups.",
+    "description": "Check for repeated description strings in example groups.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "RSpec_RepeatedExample",
+    "title": "Check for repeated examples within example groups.",
+    "description": "Check for repeated examples within example groups.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "RSpec_RepeatedExampleGroupBody",
+    "title": "Check for repeated describe and context block body.",
+    "description": "Check for repeated describe and context block body.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "RSpec_RepeatedExampleGroupDescription",
+    "title": "Check for repeated example group descriptions.",
+    "description": "Check for repeated example group descriptions.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "RSpec_RepeatedIncludeExample",
+    "title": "Check for repeated include of shared examples.",
+    "description": "Check for repeated include of shared examples.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "RSpec_ReturnFromStub",
+    "title": "Checks for consistent style of stub's return setting.",
+    "description": "Checks for consistent style of stub's return setting.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "EnforcedStyle",
+        "description": "EnforcedStyle"
+      },
+      {
+        "name": "SupportedStyles",
+        "description": "SupportedStyles"
+      }
+    ]
+  },
+  {
+    "patternId": "RSpec_ScatteredLet",
+    "title": "Checks for let scattered across the example group.",
+    "description": "Checks for let scattered across the example group.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "RSpec_ScatteredSetup",
+    "title": "Checks for setup scattered across multiple hooks in an example group.",
+    "description": "Checks for setup scattered across multiple hooks in an example group.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "RSpec_SharedContext",
+    "title": "Checks for proper shared_context and shared_examples usage.",
+    "description": "Checks for proper shared_context and shared_examples usage.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "RSpec_SharedExamples",
+    "title": "Enforces use of string to titleize shared examples.",
+    "description": "Enforces use of string to titleize shared examples.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "RSpec_SingleArgumentMessageChain",
+    "title": "Checks that chains of messages contain more than one element.",
+    "description": "Checks that chains of messages contain more than one element.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "RSpec_SkipBlockInsideExample",
+    "title": "Checks for passing a block to `skip` within examples.",
+    "description": "Checks for passing a block to `skip` within examples.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "RSpec_SortMetadata",
+    "title": "Sort RSpec metadata alphabetically.",
+    "description": "Sort RSpec metadata alphabetically.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "RSpec_SpecFilePathFormat",
+    "title": "Checks that spec file paths are consistent and well-formed.",
+    "description": "Checks that spec file paths are consistent and well-formed.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Include",
+        "description": "Include"
+      },
+      {
+        "name": "Exclude",
+        "description": "Exclude"
+      },
+      {
+        "name": "CustomTransform",
+        "description": "CustomTransform"
+      },
+      {
+        "name": "IgnoreMethods",
+        "description": "IgnoreMethods"
+      },
+      {
+        "name": "IgnoreMetadata",
+        "description": "IgnoreMetadata"
+      }
+    ]
+  },
+  {
+    "patternId": "RSpec_SpecFilePathSuffix",
+    "title": "Checks that spec file paths suffix are consistent and well-formed.",
+    "description": "Checks that spec file paths suffix are consistent and well-formed.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Include",
+        "description": "Include"
+      }
+    ]
+  },
+  {
+    "patternId": "RSpec_StubbedMock",
+    "title": "Checks that message expectations do not have a configured response.",
+    "description": "Checks that message expectations do not have a configured response.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "RSpec_SubjectDeclaration",
+    "title": "Ensure that subject is defined using subject helper.",
+    "description": "Ensure that subject is defined using subject helper.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "RSpec_SubjectStub",
+    "title": "Checks for stubbed test subjects.",
+    "description": "Checks for stubbed test subjects.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "RSpec_UnspecifiedException",
+    "title": "Checks for a specified error in checking raised errors.",
+    "description": "Checks for a specified error in checking raised errors.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "RSpec_VariableDefinition",
+    "title": "Checks that memoized helpers names are symbols or strings.",
+    "description": "Checks that memoized helpers names are symbols or strings.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "EnforcedStyle",
+        "description": "EnforcedStyle"
+      },
+      {
+        "name": "SupportedStyles",
+        "description": "SupportedStyles"
+      }
+    ]
+  },
+  {
+    "patternId": "RSpec_VariableName",
+    "title": "Checks that memoized helper names use the configured style.",
+    "description": "Checks that memoized helper names use the configured style.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "EnforcedStyle",
+        "description": "EnforcedStyle"
+      },
+      {
+        "name": "SupportedStyles",
+        "description": "SupportedStyles"
+      },
+      {
+        "name": "AllowedPatterns",
+        "description": "AllowedPatterns"
+      }
+    ]
+  },
+  {
+    "patternId": "RSpec_VerifiedDoubleReference",
+    "title": "Checks for consistent verified double reference style.",
+    "description": "Checks for consistent verified double reference style.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "SafeAutoCorrect",
+        "description": "SafeAutoCorrect"
+      },
+      {
+        "name": "EnforcedStyle",
+        "description": "EnforcedStyle"
+      },
+      {
+        "name": "SupportedStyles",
+        "description": "SupportedStyles"
+      }
+    ]
+  },
+  {
+    "patternId": "RSpec_VerifiedDoubles",
+    "title": "Prefer using verifying doubles over normal doubles.",
+    "description": "Prefer using verifying doubles over normal doubles.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "IgnoreNameless",
+        "description": "IgnoreNameless"
+      },
+      {
+        "name": "IgnoreSymbolicNames",
+        "description": "IgnoreSymbolicNames"
+      }
+    ]
+  },
+  {
+    "patternId": "RSpec_VoidExpect",
+    "title": "Checks void `expect()`.",
+    "description": "Checks void `expect()`.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "RSpec_Yield",
+    "title": "Checks for calling a block within a stub.",
+    "description": "Checks for calling a block within a stub.",
     "timeToFix": 5
   }
 ]

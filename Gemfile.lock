@@ -1,7 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    activesupport (7.1.1)
+    activesupport (7.1.2)
       base64
       bigdecimal
       concurrent-ruby (~> 1.0, >= 1.0.2)
@@ -68,13 +68,16 @@ GEM
       rubocop (>= 0.90, < 2)
     rubocop-migrations (0.1.0)
       rubocop (>= 0.42.0)
+    rubocop-minitest (0.33.0)
+      rubocop (>= 1.39, < 2.0)
     rubocop-performance (1.19.1)
       rubocop (>= 1.7.0, < 2.0)
       rubocop-ast (>= 0.4.0)
-    rubocop-rails (2.22.1)
+    rubocop-rails (2.22.2)
       activesupport (>= 4.2.0)
       rack (>= 1.1)
       rubocop (>= 1.33.0, < 2.0)
+      rubocop-ast (>= 1.30.0, < 2.0)
     rubocop-rake (0.6.0)
       rubocop (~> 1.0)
     rubocop-rspec (2.25.0)
@@ -90,7 +93,7 @@ GEM
     ruby-progressbar (1.13.0)
     ruby2_keywords (0.0.5)
     safe_yaml (1.0.5)
-    stringio (3.0.9)
+    stringio (3.1.0)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
     unicode-display_width (2.5.0)
@@ -111,6 +114,7 @@ DEPENDENCIES
   rubocop
   rubocop-graphql
   rubocop-migrations
+  rubocop-minitest
   rubocop-performance
   rubocop-rails
   rubocop-rake

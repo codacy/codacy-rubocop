@@ -5,10 +5,10 @@ are more clear and easier to read.
 # Examples
 
 ```ruby
-#bad
+# bad
 book.update_attributes!(author: 'Alice')
 
-#good
+# good
 book.update!(author: 'Alice')
 ```
 
