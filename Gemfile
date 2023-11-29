@@ -15,6 +15,7 @@ gem "pry"
 gem "safe_yaml"
 gem "dark_finger"
 gem "rubocop-migrations"
+gem "rubocop-minitest"
 gem "rubocop"
 #Needed to be referenced on some user configs
 gem "graphql"
