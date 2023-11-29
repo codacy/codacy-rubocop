@@ -19,6 +19,7 @@ gem "rubocop-minitest"
 gem "rubocop"
 #Needed to be referenced on some user configs
 gem "graphql"
+gem "prettier"
 #Rubocop official modules
 gem "rubocop-performance"
 gem "rubocop-rails"
