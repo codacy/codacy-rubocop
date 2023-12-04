@@ -22,7 +22,7 @@ GEM
       rubocop (>= 0.51.0)
     drb (2.2.0)
       ruby2_keywords
-    graphql (2.1.6)
+    graphql (2.1.7)
       racc (~> 1.4)
     haml (6.2.3)
       temple (>= 0.8.2)
@@ -126,6 +126,7 @@ GEM
 
 PLATFORMS
   x86_64-darwin-22
+  x86_64-linux
 
 DEPENDENCIES
   activesupport
