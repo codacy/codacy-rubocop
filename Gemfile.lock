@@ -55,7 +55,7 @@ GEM
     rake (13.1.0)
     rbs (3.3.2)
       abbrev
-    rdoc (6.6.0)
+    rdoc (6.6.1)
       psych (>= 4.0.0)
     regexp_parser (2.8.2)
     rexml (3.2.6)
@@ -126,6 +126,7 @@ GEM
 
 PLATFORMS
   x86_64-darwin-22
+  x86_64-linux
 
 DEPENDENCIES
   activesupport
