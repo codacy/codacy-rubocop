@@ -22,8 +22,7 @@ GEM
       rubocop (>= 0.51.0)
     drb (2.2.0)
       ruby2_keywords
-    graphql (2.1.7)
-      racc (~> 1.4)
+    graphql (2.2.7)
     haml (6.2.3)
       temple (>= 0.8.2)
       thor
