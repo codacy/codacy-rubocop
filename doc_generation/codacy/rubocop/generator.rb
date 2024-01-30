@@ -10,7 +10,8 @@ module RubocopDoc
     module Markdown
       @baseDir
       def self.generate_markdown_file(file_name, content)
-        File.write("docs/description/#{file_name}.md" , content)
+        markdownFilePath = File.join(@baseDir,"/docs/description/#{file_name}.md")
+        File.write(markdownFilePath , content)
       end
 
       def self.file_name(cop_data)
@@ -26,7 +27,7 @@ module RubocopDoc
         "http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/#{cop_data[:name]}"
       end
 
-      def self.run(baseDir = "", file_path = "rubocop-doc.yml")
+      def self.run(baseDir = ".", file_path = "rubocop-doc.yml")
         @baseDir = baseDir
         cops_data = YAML.unsafe_load_file(file_path)
         cops_data.each do |cop_data|
@@ -53,7 +54,8 @@ module RubocopDoc
     module DescriptionJSON
       @baseDir
       def self.generate_json_file(hash)
-        File.write("docs/description/description.json", JSON.pretty_generate(hash))
+        descriptionFilePath = File.join(@baseDir,"/docs/description/description.json")
+        File.write(descriptionFilePath, JSON.pretty_generate(hash))
       end
 
       def self.get_title(description)
@@ -69,7 +71,7 @@ module RubocopDoc
         end
       end
 
-      def self.run(baseDir = "", file_path = "rubocop-doc.yml")
+      def self.run(baseDir = ".", file_path = "rubocop-doc.yml")
         @baseDir = baseDir
         cops_data    = YAML.unsafe_load_file(file_path)
         descriptions = cops_data.map do |cop_data|
@@ -78,12 +80,12 @@ module RubocopDoc
           title = descriptionObj.nil? ? fallbackTitle : get_title(descriptionObj)
           description = descriptionObj.nil? ? fallbackTitle : descriptionObj
           GenerationCommons.withoutNilValues({
-            patternId:   cop_data[:name].gsub("/", "_"),
-            title:       title,
-            description: description,
-            timeToFix:   5,
-            parameters:  GenerationCommons.parametersFieldValue(parameters(cop_data))
-          })
+                                               patternId:   cop_data[:name].gsub("/", "_"),
+                                               title:       title,
+                                               description: description,
+                                               timeToFix:   5,
+                                               parameters:  GenerationCommons.parametersFieldValue(parameters(cop_data))
+                                             })
         end.compact
         generate_json_file(descriptions)
       end
@@ -93,7 +95,8 @@ module RubocopDoc
     module PattersJSON
       @baseDir
       def self.generate_json_file(hash)
-        File.write("docs/patterns.json", JSON.pretty_generate(hash))
+        patternsFilePath = File.join(@baseDir,"/docs/patterns.json")
+        File.write(patternsFilePath, JSON.pretty_generate(hash))
       end
 
       def self.level(cop_data)
@@ -130,7 +133,7 @@ module RubocopDoc
 
       def self.subcategory(cop_data)
         if category(cop_data) == "Security"
-          case cop_data[:name] 
+          case cop_data[:name]
           when "Security/JSONLoad", "Security/MarshalLoad", "Security/YAMLLoad"
             "InsecureModulesLibraries"
           when "Security/Open"
@@ -147,20 +150,20 @@ module RubocopDoc
         end
       end
 
-      def self.run(default_patterns, baseDir = "", file_path = "rubocop-doc.yml")
+      def self.run(default_patterns, baseDir = ".", file_path = "rubocop-doc.yml")
         @baseDir=baseDir
         cops_data = YAML.unsafe_load_file(file_path)
         patterns  = cops_data.map do |cop_data|
           patternIdValue = cop_data[:name].gsub("/", "_")
 
           GenerationCommons.withoutNilValues({
-            patternId:  patternIdValue,
-            level:      level(cop_data),
-            category:   category(cop_data),
-            subcategory: subcategory(cop_data),
-            parameters: GenerationCommons.parametersFieldValue(parameters(cop_data)),
-            enabled: default_patterns.include?(patternIdValue)
-          })
+                                               patternId:  patternIdValue,
+                                               level:      level(cop_data),
+                                               category:   category(cop_data),
+                                               subcategory: subcategory(cop_data),
+                                               parameters: GenerationCommons.parametersFieldValue(parameters(cop_data)),
+                                               enabled: default_patterns.include?(patternIdValue)
+                                             })
         end
         data      = {
           name:     "rubocop",
@@ -173,8 +176,8 @@ module RubocopDoc
   end
 end
 
-baseDir=""
-if ARGV.length == 1 
+baseDir="."
+if ARGV.length == 1
   baseDir=ARGV[0]
 end
 
