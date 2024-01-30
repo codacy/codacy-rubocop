@@ -5,12 +5,12 @@ defining `respond_to_missing?`.
 # Examples
 
 ```ruby
-#bad
+# bad
 def method_missing(name, *args)
   # ...
 end
 
-#good
+# good
 def respond_to_missing?(name, include_private)
   # ...
 end

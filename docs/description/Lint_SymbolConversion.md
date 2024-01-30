@@ -17,6 +17,7 @@ all keys to be quoted).
 'underscored_string'.to_sym
 :'underscored_symbol'
 'hyphenated-string'.to_sym
+"string_#{interpolation}".to_sym
 
 # good
 :string
@@ -24,6 +25,7 @@ all keys to be quoted).
 :underscored_string
 :underscored_symbol
 :'hyphenated-string'
+:"string_#{interpolation}"
 # bad
 {
   'a': 1,

@@ -10,10 +10,16 @@ NOTE: If you have an array of two-element arrays, you can put
 ```ruby
 # bad
 hash.keys.each { |k| p k }
-hash.values.each { |v| p v }
+hash.each { |k, unused_value| p k }
 
 # good
 hash.each_key { |k| p k }
+
+# bad
+hash.values.each { |v| p v }
+hash.each { |unused_key, v| p v }
+
+# good
 hash.each_value { |v| p v }# good
 execute(sql).keys.each { |v| p v }
 execute(sql).values.each { |v| p v }

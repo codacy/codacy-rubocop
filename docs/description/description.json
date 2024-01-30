@@ -1404,6 +1404,14 @@
       {
         "name": "SupportedStylesForExponentOperator",
         "description": "SupportedStylesForExponentOperator"
+      },
+      {
+        "name": "EnforcedStyleForRationalLiterals",
+        "description": "EnforcedStyleForRationalLiterals"
+      },
+      {
+        "name": "SupportedStylesForRationalLiterals",
+        "description": "SupportedStylesForRationalLiterals"
       }
     ]
   },
@@ -2154,6 +2162,12 @@
     ]
   },
   {
+    "patternId": "Lint_ItWithoutArgumentsInBlock",
+    "title": "Checks uses of `it` calls without arguments in block.",
+    "description": "Checks uses of `it` calls without arguments in block.",
+    "timeToFix": 5
+  },
+  {
     "patternId": "Lint_LambdaWithoutLiteralBlock",
     "title": "Checks uses of lambda without a literal block.",
     "description": "Checks uses of lambda without a literal block.",
@@ -2163,6 +2177,12 @@
     "patternId": "Lint_LiteralAsCondition",
     "title": "Checks of literals used in conditions.",
     "description": "Checks of literals used in conditions.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Lint_LiteralAssignmentInCondition",
+    "title": "Checks for literal assignments in the conditions.",
+    "description": "Checks for literal assignments in the conditions.",
     "timeToFix": 5
   },
   {
@@ -3550,6 +3570,18 @@
       {
         "name": "UseAnonymousForwarding",
         "description": "UseAnonymousForwarding"
+      },
+      {
+        "name": "RedundantRestArgumentNames",
+        "description": "RedundantRestArgumentNames"
+      },
+      {
+        "name": "RedundantKeywordRestArgumentNames",
+        "description": "RedundantKeywordRestArgumentNames"
+      },
+      {
+        "name": "RedundantBlockArgumentNames",
+        "description": "RedundantBlockArgumentNames"
       }
     ]
   },
@@ -3557,6 +3589,18 @@
     "patternId": "Style_ArrayCoercion",
     "title": "Use Array() instead of explicit Array check or [*var], when dealing with a variable you want to treat as an Array, but you're not certain it's an array.",
     "description": "Use Array() instead of explicit Array check or [*var], when dealing with a variable you want to treat as an Array, but you're not certain it's an array.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Safe",
+        "description": "Safe"
+      }
+    ]
+  },
+  {
+    "patternId": "Style_ArrayFirstLast",
+    "title": "Use `arr.first` and `arr.last` instead of `arr[0]` and `arr[-1]`.",
+    "description": "Use `arr.first` and `arr.last` instead of `arr[0]` and `arr[-1]`.",
     "timeToFix": 5,
     "parameters": [
       {
@@ -6047,8 +6091,8 @@
   },
   {
     "patternId": "Style_SlicingWithRange",
-    "title": "Checks array slicing is done with endless ranges when suitable.",
-    "description": "Checks array slicing is done with endless ranges when suitable.",
+    "title": "Checks array slicing is done with redundant, endless, and beginless ranges when suitable.",
+    "description": "Checks array slicing is done with redundant, endless, and beginless ranges when suitable.",
     "timeToFix": 5,
     "parameters": [
       {
@@ -6208,6 +6252,12 @@
         "description": "SafeAutoCorrect"
       }
     ]
+  },
+  {
+    "patternId": "Style_SuperWithArgsParentheses",
+    "title": "Use parentheses for `super` with arguments.",
+    "description": "Use parentheses for `super` with arguments.",
+    "timeToFix": 5
   },
   {
     "patternId": "Style_SwapValues",
@@ -8259,8 +8309,8 @@
   },
   {
     "patternId": "Rails_ResponseParsedBody",
-    "title": "Prefer `response.parsed_body` to `JSON.parse(response.body)`.",
-    "description": "Prefer `response.parsed_body` to `JSON.parse(response.body)`.",
+    "title": "Prefer `response.parsed_body` to custom parsing logic for `response.body`.",
+    "description": "Prefer `response.parsed_body` to custom parsing logic for `response.body`.",
     "timeToFix": 5,
     "parameters": [
       {
@@ -8725,6 +8775,12 @@
     "patternId": "Sorbet_ForbidIncludeConstLiteral",
     "title": "Forbids include of non-literal constants.",
     "description": "Forbids include of non-literal constants.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Sorbet_ForbidTypeAliasedShapes",
+    "title": "Forbids defining type aliases that contain shapes",
+    "description": "Forbids defining type aliases that contain shapes",
     "timeToFix": 5
   },
   {
@@ -9518,6 +9574,24 @@
     "timeToFix": 5
   },
   {
+    "patternId": "Minitest_NonExecutableTestMethod",
+    "title": "Checks uses of test methods outside test class.",
+    "description": "Checks uses of test methods outside test class.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Severity",
+        "description": "Severity"
+      }
+    ]
+  },
+  {
+    "patternId": "Minitest_RedundantMessageArgument",
+    "title": "Detects redundant message argument in assertion methods.",
+    "description": "Detects redundant message argument in assertion methods.",
+    "timeToFix": 5
+  },
+  {
     "patternId": "Minitest_ReturnInTestMethod",
     "title": "Enforces the use of `skip` instead of `return` in test methods.",
     "description": "Enforces the use of `skip` instead of `return` in test methods.",
@@ -9952,6 +10026,22 @@
       {
         "name": "SafeAutoCorrect",
         "description": "SafeAutoCorrect"
+      }
+    ]
+  },
+  {
+    "patternId": "FactoryBot_ExcessiveCreateList",
+    "title": "Check for excessive model creation in a list.",
+    "description": "Check for excessive model creation in a list.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Include",
+        "description": "Include"
+      },
+      {
+        "name": "MaxAmount",
+        "description": "MaxAmount"
       }
     ]
   },

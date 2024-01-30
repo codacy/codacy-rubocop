@@ -1,6 +1,6 @@
 {
   "name": "rubocop",
-  "version": "1.57.2",
+  "version": "1.60.2",
   "patterns": [
     {
       "patternId": "Migration_DepartmentName",
@@ -1638,6 +1638,17 @@
             "space",
             "no_space"
           ]
+        },
+        {
+          "name": "EnforcedStyleForRationalLiterals",
+          "default": "no_space"
+        },
+        {
+          "name": "SupportedStylesForRationalLiterals",
+          "default": [
+            "space",
+            "no_space"
+          ]
         }
       ],
       "enabled": false
@@ -2447,6 +2458,12 @@
       "enabled": false
     },
     {
+      "patternId": "Lint_ItWithoutArgumentsInBlock",
+      "level": "Warning",
+      "category": "ErrorProne",
+      "enabled": false
+    },
+    {
       "patternId": "Lint_LambdaWithoutLiteralBlock",
       "level": "Warning",
       "category": "ErrorProne",
@@ -2454,6 +2471,12 @@
     },
     {
       "patternId": "Lint_LiteralAsCondition",
+      "level": "Warning",
+      "category": "ErrorProne",
+      "enabled": false
+    },
+    {
+      "patternId": "Lint_LiteralAssignmentInCondition",
       "level": "Warning",
       "category": "ErrorProne",
       "enabled": false
@@ -4074,12 +4097,47 @@
         {
           "name": "UseAnonymousForwarding",
           "default": "true"
+        },
+        {
+          "name": "RedundantRestArgumentNames",
+          "default": [
+            "args",
+            "arguments"
+          ]
+        },
+        {
+          "name": "RedundantKeywordRestArgumentNames",
+          "default": [
+            "kwargs",
+            "options",
+            "opts"
+          ]
+        },
+        {
+          "name": "RedundantBlockArgumentNames",
+          "default": [
+            "blk",
+            "block",
+            "proc"
+          ]
         }
       ],
       "enabled": false
     },
     {
       "patternId": "Style_ArrayCoercion",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "Safe",
+          "default": "false"
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "Style_ArrayFirstLast",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [
@@ -7059,6 +7117,12 @@
       "enabled": false
     },
     {
+      "patternId": "Style_SuperWithArgsParentheses",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
       "patternId": "Style_SwapValues",
       "level": "Info",
       "category": "CodeStyle",
@@ -9864,6 +9928,12 @@
       "enabled": false
     },
     {
+      "patternId": "Sorbet_ForbidTypeAliasedShapes",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
       "patternId": "Sorbet_ForbidUntypedStructProps",
       "level": "Info",
       "category": "CodeStyle",
@@ -10746,6 +10816,24 @@
       "enabled": false
     },
     {
+      "patternId": "Minitest_NonExecutableTestMethod",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "Severity",
+          "default": "warning"
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "Minitest_RedundantMessageArgument",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
       "patternId": "Minitest_ReturnInTestMethod",
       "level": "Info",
       "category": "CodeStyle",
@@ -11219,6 +11307,27 @@
         {
           "name": "SafeAutoCorrect",
           "default": "false"
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "FactoryBot_ExcessiveCreateList",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "Include",
+          "default": [
+            "**/*_spec.rb",
+            "**/spec/**/*",
+            "**/test/**/*",
+            "**/features/support/factories/**/*.rb"
+          ]
+        },
+        {
+          "name": "MaxAmount",
+          "default": "10"
         }
       ],
       "enabled": false
