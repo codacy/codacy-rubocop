@@ -41,7 +41,23 @@ while node.is_a?(BeginNode)
 end
 
 # good - without `&.` this will always return `true`
-foo&.respond_to?(:to_a)# bad
+foo&.respond_to?(:to_a)
+
+# bad - for `nil`s conversion methods return default values for the type
+foo&.to_h || {}
+foo&.to_h { |k, v| [k, v] } || {}
+foo&.to_a || []
+foo&.to_i || 0
+foo&.to_f || 0.0
+foo&.to_s || ''
+
+# good
+foo.to_h
+foo.to_h { |k, v| [k, v] }
+foo.to_a
+foo.to_i
+foo.to_f
+foo.to_s# bad
 do_something if attrs&.nil_safe_method(:[])
 
 # good

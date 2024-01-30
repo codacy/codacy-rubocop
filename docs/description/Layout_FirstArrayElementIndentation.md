@@ -1,7 +1,10 @@
 
 Checks the indentation of the first element in an array literal
 where the opening bracket and the first element are on separate lines.
-The other elements' indentations are handled by the ArrayAlignment cop.
+The other elements' indentations are handled by `Layout/ArrayAlignment` cop.
+
+This cop will respect `Layout/ArrayAlignment` and will not work when
+`EnforcedStyle: with_fixed_indentation` is specified for `Layout/ArrayAlignment`.
 
 By default, array literals that are arguments in a method call with
 parentheses, and where the opening square bracket of the array is on the
@@ -23,7 +26,7 @@ styles are 'consistent' and 'align_brackets'. Here are examples:
 # element are on separate lines is indented one step (two spaces) more
 # than the position inside the opening parenthesis.
 
-#bad
+# bad
 array = [
   :value
 ]
@@ -31,7 +34,7 @@ and_in_a_method_call([
   :no_difference
                      ])
 
-#good
+# good
 array = [
   :value
 ]
@@ -42,7 +45,7 @@ but_in_a_method_call([
 # separate lines is indented the same as an array literal which is not
 # defined inside a method call.
 
-#bad
+# bad
 # consistent
 array = [
   :value
@@ -51,7 +54,7 @@ but_in_a_method_call([
                        :its_like_this
 ])
 
-#good
+# good
 array = [
   :value
 ]
@@ -60,13 +63,13 @@ and_in_a_method_call([
 ])# The `align_brackets` style enforces that the opening and closing
 # brackets are indented to the same position.
 
-#bad
+# bad
 # align_brackets
 and_now_for_something = [
                           :completely_different
 ]
 
-#good
+# good
 # align_brackets
 and_now_for_something = [
                           :completely_different

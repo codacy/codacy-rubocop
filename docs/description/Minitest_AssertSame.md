@@ -10,6 +10,7 @@ NOTE: Use `assert_same` only when there is a need to compare by identity.
 ```ruby
 # bad
 assert(expected.equal?(actual))
+assert_equal(expected.object_id, actual.object_id)
 
 # good
 assert_same(expected, actual)

@@ -10,8 +10,7 @@ module RubocopDoc
     module Markdown
       @baseDir
       def self.generate_markdown_file(file_name, content)
-        markdownFilePath = File.join(@baseDir,"/docs/description/#{file_name}.md")
-        File.write(markdownFilePath , content)
+        File.write("docs/description/#{file_name}.md" , content)
       end
 
       def self.file_name(cop_data)
@@ -54,8 +53,7 @@ module RubocopDoc
     module DescriptionJSON
       @baseDir
       def self.generate_json_file(hash)
-        descriptionFilePath = File.join(@baseDir,"/docs/description/description.json")
-        File.write(descriptionFilePath, JSON.pretty_generate(hash))
+        File.write("docs/description/description.json", JSON.pretty_generate(hash))
       end
 
       def self.get_title(description)
@@ -95,8 +93,7 @@ module RubocopDoc
     module PattersJSON
       @baseDir
       def self.generate_json_file(hash)
-        patternsFilePath = File.join(@baseDir,"/docs/patterns.json")
-        File.write(patternsFilePath, JSON.pretty_generate(hash))
+        File.write("docs/patterns.json", JSON.pretty_generate(hash))
       end
 
       def self.level(cop_data)

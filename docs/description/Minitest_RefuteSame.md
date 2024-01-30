@@ -10,6 +10,7 @@ NOTE: Use `refute_same` only when there is a need to compare by identity.
 ```ruby
 # bad
 refute(expected.equal?(actual))
+refute_equal(expected.object_id, actual.object_id)
 
 # good
 refute_same(expected, actual)
