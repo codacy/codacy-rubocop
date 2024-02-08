@@ -25,9 +25,7 @@ object Rubocop extends Tool {
       "rubocop-graphql",
       "rubocop-thread_safety",
       "rubocop-minitest",
-      "rubocop-migrations",
-      "rubocop-rake",
-      "rubocop-shopify"
+      "rubocop-rake"
     )
   // Gemfile is analysed
   private val filesToIgnore: Set[String] =

@@ -133,6 +133,7 @@ DEPENDENCIES
   bigdecimal
   dark_finger
   graphql
+  minitest
   parser
   prettier
   pry
