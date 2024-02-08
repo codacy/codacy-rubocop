@@ -23,9 +23,12 @@ object Rubocop extends Tool {
       "rubocop-rspec",
       "rubocop-sorbet",
       "rubocop-graphql",
-      "rubocop-thread_safety"
+      "rubocop-thread_safety",
+      "rubocop-minitest",
+      "rubocop-migrations",
+      "rubocop-rake",
+      "rubocop-shopify"
     )
-
   // Gemfile is analysed
   private val filesToIgnore: Set[String] =
     Set("Gemfile.lock").map(_.toLowerCase())

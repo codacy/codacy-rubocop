@@ -9352,6 +9352,12 @@
     ]
   },
   {
+    "patternId": "GraphQL_PrepareMethod",
+    "title": "Prepare Method",
+    "description": "Prepare Method",
+    "timeToFix": 5
+  },
+  {
     "patternId": "GraphQL_UnusedArgument",
     "title": "Arguments should either be listed explicitly or **rest should be in the resolve signature",
     "description": "Arguments should either be listed explicitly or **rest should be in the resolve signature",
@@ -9881,8 +9887,8 @@
   },
   {
     "patternId": "Capybara_ClickLinkOrButtonStyle",
-    "title": "Checks for click button or link style.",
-    "description": "Checks for click button or link style.",
+    "title": "Checks for methods of button or link clicks.",
+    "description": "Checks for methods of button or link clicks.",
     "timeToFix": 5,
     "parameters": [
       {
@@ -9922,6 +9928,12 @@
         "description": "SupportedStyles"
       }
     ]
+  },
+  {
+    "patternId": "Capybara_RedundantWithinFind",
+    "title": "Checks for redundant `within find(...)` calls.",
+    "description": "Checks for redundant `within find(...)` calls.",
+    "timeToFix": 5
   },
   {
     "patternId": "Capybara_SpecificActions",
@@ -10299,8 +10311,8 @@
   },
   {
     "patternId": "RSpec_BeforeAfterAll",
-    "title": "Check that before/after(:all) isn't being used.",
-    "description": "Check that before/after(:all) isn't being used.",
+    "title": "Check that before/after(:all/:context) isn't being used.",
+    "description": "Check that before/after(:all/:context) isn't being used.",
     "timeToFix": 5,
     "parameters": [
       {
@@ -11046,6 +11058,18 @@
     "timeToFix": 5
   },
   {
+    "patternId": "RSpec_RedundantPredicateMatcher",
+    "title": "Checks for redundant predicate matcher.",
+    "description": "Checks for redundant predicate matcher.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "RSpec_RemoveConst",
+    "title": "Checks that `remove_const` is not used in specs.",
+    "description": "Checks that `remove_const` is not used in specs.",
+    "timeToFix": 5
+  },
+  {
     "patternId": "RSpec_RepeatedDescription",
     "title": "Check for repeated description strings in example groups.",
     "description": "Check for repeated description strings in example groups.",
@@ -11111,9 +11135,19 @@
   },
   {
     "patternId": "RSpec_SharedExamples",
-    "title": "Enforces use of string to titleize shared examples.",
-    "description": "Enforces use of string to titleize shared examples.",
-    "timeToFix": 5
+    "title": "Checks for consistent style for shared example names.",
+    "description": "Checks for consistent style for shared example names.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "EnforcedStyle",
+        "description": "EnforcedStyle"
+      },
+      {
+        "name": "SupportedStyles",
+        "description": "SupportedStyles"
+      }
+    ]
   },
   {
     "patternId": "RSpec_SingleArgumentMessageChain",
