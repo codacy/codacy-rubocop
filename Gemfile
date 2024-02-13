@@ -28,5 +28,4 @@ gem "rubocop-rspec"
 gem "rubocop-sorbet"
 gem "rubocop-shopify"
 gem "rubocop-graphql"
-gem "minitest"
 gem 'rubocop-thread_safety', require: false
