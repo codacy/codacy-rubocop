@@ -171,6 +171,7 @@ object Rubocop extends Tool {
          |    - "vendor/**/*"
          |    - "db/schema.rb"
          |    - ".git/**/*"
+         |    - "usr/local/bundle/**/*"
          |  DisplayCopNames: false
          |  StyleGuideCopsOnly: false
          |  UseCache: false
