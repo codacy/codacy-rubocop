@@ -4,14 +4,14 @@ This cop checks if each argument has an unnecessary camelize.
  # bad
 
   class UserType < BaseType
-    argument :filter, String, required: false, camelize: false
+    argument :filter, String, required: false
   end
 
  # bad
 
   class UserType < BaseType
     field :name, String, "Name of the user", null: true do
-      argument :filter, String, required: false, camelize: false
+      argument :filter, String, required: false
     end
   end
 
@@ -22,20 +22,14 @@ This cop checks if each argument has an unnecessary camelize.
 
 class UserType < BaseType
   field :name, String, "Name of the user", null: true do
-    argument :filter, String, required: false
+    argument :filter, String, required: false, camelize: false
   end
 end
 
 # good
 
 class UserType < BaseType
-  argument :filter, String, required: false
-end
-
-# good
-
-class UserType < BaseType
-  argument :email_filter, String, required: false, camelize: true
+  argument :filter, String, required: false, camelize: false
 end
 ```
 

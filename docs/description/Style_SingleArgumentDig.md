@@ -1,9 +1,6 @@
 
-Sometimes using `dig` method ends up with just a single
-argument. In such cases, dig should be replaced with `[]`.
-
-Since replacing `hash&.dig(:key)` with `hash[:key]` could potentially lead to error,
-calls to the `dig` method using safe navigation will be ignored.
+Sometimes using dig method ends up with just a single
+argument. In such cases, dig should be replaced with [].
 
 # Examples
 

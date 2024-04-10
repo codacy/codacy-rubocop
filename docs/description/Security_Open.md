@@ -17,7 +17,6 @@ cop.
 # bad
 open(something)
 open("| #{something}")
-open("| foo")
 URI.open(something)
 
 # good
@@ -27,6 +26,7 @@ URI.parse(something).open
 
 # good (literal strings)
 open("foo.text")
+open("| foo")
 URI.open("http://example.com")
 ```
 

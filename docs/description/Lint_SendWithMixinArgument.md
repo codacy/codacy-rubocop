@@ -1,5 +1,5 @@
 
-Checks for `send`, `public_send`, and `__send__` methods
+This cop checks for `send`, `public_send`, and `__send__` methods
 when using mix-in.
 
 `include` and `prepend` methods were private methods until Ruby 2.0,

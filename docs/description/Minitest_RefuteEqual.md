@@ -7,9 +7,7 @@ over `assert(expected != actual)` or `assert(! expected == actual)`.
 ```ruby
 # bad
 assert("rubocop-minitest" != actual)
-refute("rubocop-minitest" == actual)
-assert_operator("rubocop-minitest", :!=, actual)
-refute_operator("rubocop-minitest", :==, actual)
+assert(! "rubocop-minitest" == actual)
 
 # good
 refute_equal("rubocop-minitest", actual)

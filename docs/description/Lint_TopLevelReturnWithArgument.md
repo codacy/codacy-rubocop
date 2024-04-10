@@ -6,11 +6,9 @@ always ignored. This is detected automatically since Ruby 2.7.
 # Examples
 
 ```ruby
-# bad
-return 1
 
-# good
-return
+# Detected since Ruby 2.7
+return 1 # 1 is always ignored.
 ```
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Lint/TopLevelReturnWithArgument)

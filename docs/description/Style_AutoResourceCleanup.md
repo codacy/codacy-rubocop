@@ -14,14 +14,6 @@ f = File.open('file')
 File.open('file') do |f|
   # ...
 end
-
-# bad
-f = Tempfile.open('temp')
-
-# good
-Tempfile.open('temp') do |f|
-  # ...
-end
 ```
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Style/AutoResourceCleanup)

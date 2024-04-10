@@ -20,14 +20,9 @@ def test
   return something
 end
 
-# bad
-def test
-  return something if something_else
-end
-
 # good
 def test
-  something if something_else
+  return something if something_else
 end
 
 # good

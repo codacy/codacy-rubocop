@@ -51,26 +51,7 @@ end
 
 # good
 foo || raise('exception') if something
-ok
-
-# bad
-define_method(:test) do
-  if something
-    work
-  end
-end
-
-# good
-define_method(:test) do
-  return unless something
-
-  work
-end
-
-# also good
-define_method(:test) do
-  work if something
-end# bad
+ok# bad
 def test
   if foo?
     work

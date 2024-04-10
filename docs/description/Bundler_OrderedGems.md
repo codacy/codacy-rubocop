@@ -15,11 +15,9 @@ gem 'rubocop'
 # good
 gem 'rubocop'
 
-gem 'rspec'# good
-# For code quality
-gem 'rubocop'
-# For tests
-gem 'rspec'# bad
+gem 'rspec'
+
+# good only if TreatCommentsAsGroupSeparators is true
 # For code quality
 gem 'rubocop'
 # For tests

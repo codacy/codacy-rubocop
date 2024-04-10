@@ -12,10 +12,10 @@ when no output would be produced anyway.
 # Examples
 
 ```ruby
-# bad
+#bad
 Rails.logger.debug "The time is #{Time.zone.now}."
 
-# good
+#good
 Rails.logger.debug { "The time is #{Time.zone.now}." }
 ```
 

@@ -9,8 +9,6 @@ instead of using `refute(matcher.match(string))`.
 refute(matcher.match(string))
 refute(matcher.match?(string))
 refute(matcher =~ string)
-refute_operator(matcher, :=~, string)
-assert_operator(matcher, :!~, string)
 refute(matcher.match(string), 'message')
 
 # good

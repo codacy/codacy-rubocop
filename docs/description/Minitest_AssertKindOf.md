@@ -9,11 +9,6 @@ over `assert(object.kind_of?(Class))`.
 assert(object.kind_of?(Class))
 assert(object.kind_of?(Class), 'message')
 
-# bad
-# `is_a?` is an alias for `kind_of?`
-assert(object.is_a?(Class))
-assert(object.is_a?(Class), 'message')
-
 # good
 assert_kind_of(Class, object)
 assert_kind_of(Class, object, 'message')

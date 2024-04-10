@@ -5,10 +5,9 @@ A long example is usually more difficult to understand. Consider
 extracting out some behavior, e.g. with a `let` block, or a helper
 method.
 
-You can set constructs you want to fold with `CountAsOne`.
-Available are: 'array', 'hash', 'heredoc', and 'method_call'.
-Each construct will be counted as one line regardless of
-its actual size.
+You can set literals you want to fold with `CountAsOne`.
+Available are: 'array', 'hash', and 'heredoc'. Each literal
+will be counted as one line regardless of its actual size.
 
 # Examples
 
@@ -42,12 +41,7 @@ it do
     Heredoc
     content.
   HEREDOC
-
-  foo(            # +1
-    1,
-    2
-  )
-end               # 6 points
+end                 # 5 points
 ```
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/RSpec/ExampleLength)

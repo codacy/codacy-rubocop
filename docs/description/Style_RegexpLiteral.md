@@ -1,14 +1,5 @@
 
-Enforces using `//` or `%r` around regular expressions.
-
-NOTE: The following `%r` cases using a regexp starts with a blank or `=`
-as a method argument allowed to prevent syntax errors.
-
-[source,ruby]
-----
-do_something %r{ regexp} # `do_something / regexp/` is an invalid syntax.
-do_something %r{=regexp} # `do_something /=regexp/` is an invalid syntax.
-----
+Enforces using // or %r around regular expressions.
 
 # Examples
 

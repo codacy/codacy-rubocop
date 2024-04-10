@@ -2,7 +2,7 @@
 Checks for use of the helper methods which reference
 instance variables.
 
-Relying on instance variables makes it difficult to reuse helper
+Relying on instance variables makes it difficult to re-use helper
 methods.
 
 If it seems awkward to explicitly pass in each dependent

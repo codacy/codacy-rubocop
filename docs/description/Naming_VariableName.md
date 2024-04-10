@@ -13,8 +13,7 @@ foo_bar = 1# bad
 foo_bar = 1
 
 # good
-fooBar = 1# good (with EnforcedStyle: snake_case)
-fooBar = 1# good (with EnforcedStyle: camelCase)
+fooBar = 1# good
 :release_v1
 ```
 

@@ -1,22 +1,19 @@
 
 Checks for RuntimeError as the argument of raise/fail.
 
+It checks for code like this:
+
 # Examples
 
 ```ruby
-# bad
+# Bad
 raise RuntimeError, 'message'
+
+# Bad
 raise RuntimeError.new('message')
 
-# good
+# Good
 raise 'message'
-
-# bad - message is not a string
-raise RuntimeError, Object.new
-raise RuntimeError.new(Object.new)
-
-# good
-raise Object.new.to_s
 ```
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Style/RedundantException)

@@ -35,15 +35,7 @@ a**b# bad
 a**b
 
 # good
-a ** b# bad
-1 / 48r
-
-# good
-1/48r# bad
-1/48r
-
-# good
-1 / 48r
+a ** b
 ```
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Layout/SpaceAroundOperators)

@@ -14,6 +14,11 @@ is wanted.
 
 # good
 ('a'..'z').cover?('b') # => true
+
+# Example of a case where `Range#cover?` may not provide
+# the desired result:
+
+('a'..'z').cover?('yellow') # => true
 ```
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Performance/RangeInclude)

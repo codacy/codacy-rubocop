@@ -1,5 +1,5 @@
 
-Looks for uses of Perl-style global variables.
+This cop looks for uses of Perl-style global variables.
 Correcting to global variables in the 'English' library
 will add a require statement to the top of the file if
 enabled by RequireEnglish config.

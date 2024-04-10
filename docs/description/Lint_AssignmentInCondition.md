@@ -11,18 +11,18 @@ as a condition. It's not a mistake."
 
 ```ruby
 # bad
-if some_var = value
+if some_var = true
   do_something
 end
 
 # good
-if some_var == value
+if some_var == true
   do_something
 end# good
-if (some_var = value)
+if (some_var = true)
   do_something
 end# bad
-if (some_var = value)
+if (some_var = true)
   do_something
 end
 ```

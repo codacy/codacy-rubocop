@@ -1,5 +1,5 @@
 
-Checks for BEGIN blocks.
+This cop checks for BEGIN blocks.
 
 # Examples
 

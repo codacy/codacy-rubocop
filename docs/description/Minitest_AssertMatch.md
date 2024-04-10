@@ -9,7 +9,6 @@ instead of using `assert(matcher.match(string))`.
 assert(matcher.match(string))
 assert(matcher.match?(string))
 assert(matcher =~ string)
-assert_operator(matcher, :=~, string)
 assert(matcher.match(string), 'message')
 
 # good

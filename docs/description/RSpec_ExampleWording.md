@@ -18,9 +18,6 @@ case sensitive.
 it 'should find nothing' do
 end
 
-it 'will find nothing' do
-end
-
 # good
 it 'finds nothing' do
 end# bad

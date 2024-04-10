@@ -18,7 +18,6 @@ e.g. to use `detect` over `find`:
 # bad
 items.collect
 items.collect!
-items.collect_concat
 items.inject
 items.detect
 items.find_all
@@ -27,7 +26,6 @@ items.member?
 # good
 items.map
 items.map!
-items.flat_map
 items.reduce
 items.find
 items.select

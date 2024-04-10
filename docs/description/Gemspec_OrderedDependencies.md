@@ -41,11 +41,9 @@ spec.add_runtime_dependency 'rubocop'
 # good
 spec.add_runtime_dependency 'rubocop'
 
-spec.add_runtime_dependency 'rspec'# good
-# For code quality
-spec.add_dependency 'rubocop'
-# For tests
-spec.add_dependency 'rspec'# bad
+spec.add_runtime_dependency 'rspec'
+
+# good only if TreatCommentsAsGroupSeparators is true
 # For code quality
 spec.add_dependency 'rubocop'
 # For tests

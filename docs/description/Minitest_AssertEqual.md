@@ -7,7 +7,6 @@ over `assert(expected == actual)`.
 ```ruby
 # bad
 assert("rubocop-minitest" == actual)
-assert_operator("rubocop-minitest", :==, actual)
 
 # good
 assert_equal("rubocop-minitest", actual)

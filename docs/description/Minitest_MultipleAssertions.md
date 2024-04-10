@@ -1,6 +1,5 @@
 
-Checks if test cases contain too many assertion calls. If conditional code with assertions
-is used, the branch with maximum assertions is counted.
+Checks if test cases contain too many assertion calls.
 The maximum allowed assertion calls is configurable.
 
 # Examples

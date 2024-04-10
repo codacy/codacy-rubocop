@@ -11,7 +11,6 @@ str =~ /ab/
 /ab/ =~ str
 str.match(/ab/)
 /ab/.match(str)
-/ab/ === str
 
 # good
 str.include?('ab')

@@ -7,8 +7,8 @@ Unary plus operator is faster than `String#dup`.
 
 ```ruby
 # bad
-''.dup          # when Ruby 3.2 or lower
-"something".dup # when Ruby 3.2 or lower
+''.dup
+"something".dup
 String.new
 String.new('')
 String.new('something')

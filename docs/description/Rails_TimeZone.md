@@ -16,7 +16,6 @@ to use `Time#in_time_zone`.
 # bad
 Time.now
 Time.parse('2015-03-02T19:05:37')
-'2015-03-02T19:05:37'.to_time
 
 # good
 Time.current
