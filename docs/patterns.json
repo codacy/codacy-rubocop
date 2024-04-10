@@ -1,6 +1,6 @@
 {
   "name": "rubocop",
-  "version": "1.60.2",
+  "version": "1.63.0",
   "patterns": [
     {
       "patternId": "Migration_DepartmentName",
@@ -630,6 +630,10 @@
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [
+        {
+          "name": "AutoCorrect",
+          "default": "contextual"
+        },
         {
           "name": "AllowBorderComment",
           "default": "true"
@@ -2111,7 +2115,11 @@
       "parameters": [
         {
           "name": "DebuggerMethods",
-          "default": "{\"Kernel\"=>[\"binding.irb\", \"Kernel.binding.irb\"], \"Byebug\"=>[\"byebug\", \"remote_byebug\", \"Kernel.byebug\", \"Kernel.remote_byebug\"], \"Capybara\"=>[\"save_and_open_page\", \"save_and_open_screenshot\"], \"debug.rb\"=>[\"binding.b\", \"binding.break\", \"Kernel.binding.b\", \"Kernel.binding.break\"], \"Pry\"=>[\"binding.pry\", \"binding.remote_pry\", \"binding.pry_remote\", \"Kernel.binding.pry\", \"Kernel.binding.remote_pry\", \"Kernel.binding.pry_remote\", \"Pry.rescue\", \"pry\"], \"Rails\"=>[\"debugger\", \"Kernel.debugger\"], \"RubyJard\"=>[\"jard\"], \"WebConsole\"=>[\"binding.console\"]}"
+          "default": "{\"Kernel\"=>[\"binding.irb\", \"Kernel.binding.irb\"], \"Byebug\"=>[\"byebug\", \"remote_byebug\", \"Kernel.byebug\", \"Kernel.remote_byebug\"], \"Capybara\"=>[\"page.save_and_open_page\", \"page.save_and_open_screenshot\", \"page.save_page\", \"page.save_screenshot\", \"save_and_open_page\", \"save_and_open_screenshot\", \"save_page\", \"save_screenshot\"], \"debug.rb\"=>[\"binding.b\", \"binding.break\", \"Kernel.binding.b\", \"Kernel.binding.break\"], \"Pry\"=>[\"binding.pry\", \"binding.remote_pry\", \"binding.pry_remote\", \"Kernel.binding.pry\", \"Kernel.binding.remote_pry\", \"Kernel.binding.pry_remote\", \"Pry.rescue\", \"pry\"], \"Rails\"=>[\"debugger\", \"Kernel.debugger\"], \"RubyJard\"=>[\"jard\"], \"WebConsole\"=>[\"binding.console\"]}"
+        },
+        {
+          "name": "DebuggerRequires",
+          "default": "{\"debug.rb\"=>[\"debug/open\", \"debug/open_nonstop\", \"debug/start\"]}"
         }
       ],
       "enabled": true
@@ -2274,6 +2282,10 @@
       "category": "ErrorProne",
       "parameters": [
         {
+          "name": "AutoCorrect",
+          "default": "contextual"
+        },
+        {
           "name": "SafeAutoCorrect",
           "default": "false"
         },
@@ -2288,6 +2300,12 @@
       "patternId": "Lint_EmptyEnsure",
       "level": "Warning",
       "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "AutoCorrect",
+          "default": "contextual"
+        }
+      ],
       "enabled": true
     },
     {
@@ -2324,6 +2342,12 @@
       "patternId": "Lint_EmptyInterpolation",
       "level": "Warning",
       "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "AutoCorrect",
+          "default": "contextual"
+        }
+      ],
       "enabled": true
     },
     {
@@ -3060,6 +3084,12 @@
       "patternId": "Lint_TrailingCommaInAttributeDeclaration",
       "level": "Warning",
       "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "AutoCorrect",
+          "default": "contextual"
+        }
+      ],
       "enabled": false
     },
     {
@@ -3134,6 +3164,10 @@
       "category": "ErrorProne",
       "parameters": [
         {
+          "name": "AutoCorrect",
+          "default": "contextual"
+        },
+        {
           "name": "IgnoreEmptyBlocks",
           "default": "true"
         },
@@ -3149,6 +3183,10 @@
       "level": "Warning",
       "category": "ErrorProne",
       "parameters": [
+        {
+          "name": "AutoCorrect",
+          "default": "contextual"
+        },
         {
           "name": "AllowUnusedKeywordArguments",
           "default": "false"
@@ -3182,6 +3220,10 @@
       "category": "ErrorProne",
       "parameters": [
         {
+          "name": "AutoCorrect",
+          "default": "contextual"
+        },
+        {
           "name": "ContextCreatingMethods",
           "default": [
 
@@ -3202,6 +3244,10 @@
       "category": "ErrorProne",
       "parameters": [
         {
+          "name": "AutoCorrect",
+          "default": "contextual"
+        },
+        {
           "name": "SafeAutoCorrect",
           "default": "false"
         }
@@ -3219,6 +3265,10 @@
       "level": "Warning",
       "category": "ErrorProne",
       "parameters": [
+        {
+          "name": "AutoCorrect",
+          "default": "contextual"
+        },
         {
           "name": "Safe",
           "default": "false"
@@ -3258,6 +3308,10 @@
         {
           "name": "Safe",
           "default": "false"
+        },
+        {
+          "name": "AutoCorrect",
+          "default": "contextual"
         }
       ],
       "enabled": false
@@ -3267,6 +3321,10 @@
       "level": "Warning",
       "category": "ErrorProne",
       "parameters": [
+        {
+          "name": "AutoCorrect",
+          "default": "contextual"
+        },
         {
           "name": "CheckForMethodsWithNoSideEffects",
           "default": "false"
@@ -3619,7 +3677,7 @@
         {
           "name": "Exclude",
           "default": [
-
+            "Rakefile.rb"
           ]
         },
         {
@@ -4797,6 +4855,10 @@
       "category": "CodeStyle",
       "parameters": [
         {
+          "name": "AutoCorrect",
+          "default": "contextual"
+        },
+        {
           "name": "EnforcedStyle",
           "default": "both"
         },
@@ -4819,6 +4881,12 @@
       "patternId": "Style_EmptyHeredoc",
       "level": "Info",
       "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "AutoCorrect",
+          "default": "contextual"
+        }
+      ],
       "enabled": false
     },
     {
@@ -4838,6 +4906,10 @@
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [
+        {
+          "name": "AutoCorrect",
+          "default": "contextual"
+        },
         {
           "name": "EnforcedStyle",
           "default": "compact"
@@ -5538,6 +5610,18 @@
       "enabled": false
     },
     {
+      "patternId": "Style_MapIntoArray",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "Safe",
+          "default": "false"
+        }
+      ],
+      "enabled": false
+    },
+    {
       "patternId": "Style_MapToHash",
       "level": "Info",
       "category": "CodeStyle",
@@ -5780,6 +5864,10 @@
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [
+        {
+          "name": "AutoCorrect",
+          "default": "contextual"
+        },
         {
           "name": "Safe",
           "default": "false"
@@ -6550,6 +6638,10 @@
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [
+        {
+          "name": "Safe",
+          "default": "false"
+        },
         {
           "name": "EnforcedStyle",
           "default": "exploded"
@@ -8641,6 +8733,7 @@
           "name": "Include",
           "default": [
             "app/**/*.rb",
+            "config/initializers/**/*.rb",
             "lib/**/*.rb"
           ]
         },
@@ -10130,6 +10223,26 @@
       "patternId": "Sorbet_SignatureBuildOrder",
       "level": "Info",
       "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "Order",
+          "default": [
+            "final",
+            "abstract",
+            "implementation",
+            "override",
+            "overridable",
+            "type_parameters",
+            "params",
+            "bind",
+            "returns",
+            "void",
+            "soft",
+            "checked",
+            "on_failure"
+          ]
+        }
+      ],
       "enabled": false
     },
     {
@@ -10576,6 +10689,12 @@
           "default": [
 
           ]
+        },
+        {
+          "name": "CountAsOne",
+          "default": [
+
+          ]
         }
       ],
       "enabled": false
@@ -10827,6 +10946,18 @@
       "patternId": "Minitest_EmptyLineBeforeAssertionMethods",
       "level": "Info",
       "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "Minitest_Focus",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "AutoCorrect",
+          "default": "contextual"
+        }
+      ],
       "enabled": false
     },
     {
@@ -11452,30 +11583,23 @@
       "enabled": false
     },
     {
-      "patternId": "RSpec_Capybara_FeatureMethods",
+      "patternId": "RSpecRails_AvoidSetupHook",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "RSpecRails_HaveHttpStatus",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [
         {
-          "name": "EnabledMethods",
+          "name": "ResponseMethods",
           "default": [
-
+            "response",
+            "last_response"
           ]
-        }
-      ],
-      "enabled": false
-    },
-    {
-      "patternId": "RSpec_Rails_AvoidSetupHook",
-      "level": "Info",
-      "category": "CodeStyle",
-      "enabled": false
-    },
-    {
-      "patternId": "RSpec_Rails_HaveHttpStatus",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
+        },
         {
           "name": "SafeAutoCorrect",
           "default": "false"
@@ -11484,7 +11608,49 @@
       "enabled": false
     },
     {
-      "patternId": "RSpec_Rails_NegationBeValid",
+      "patternId": "RSpecRails_HttpStatus",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "symbolic"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": [
+            "numeric",
+            "symbolic",
+            "be_status"
+          ]
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "RSpecRails_InferredSpecType",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "Safe",
+          "default": "false"
+        },
+        {
+          "name": "Inferences",
+          "default": "{\"channels\"=>\"channel\", \"controllers\"=>\"controller\", \"features\"=>\"feature\", \"generator\"=>\"generator\", \"helpers\"=>\"helper\", \"jobs\"=>\"job\", \"mailboxes\"=>\"mailbox\", \"mailers\"=>\"mailer\", \"models\"=>\"model\", \"requests\"=>\"request\", \"integration\"=>\"request\", \"api\"=>\"request\", \"routing\"=>\"routing\", \"system\"=>\"system\", \"views\"=>\"view\"}"
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "RSpecRails_MinitestAssertions",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "RSpecRails_NegationBeValid",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [
@@ -11507,55 +11673,27 @@
       "enabled": false
     },
     {
-      "patternId": "RSpec_Rails_HttpStatus",
+      "patternId": "RSpecRails_TravelAround",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [
         {
-          "name": "EnforcedStyle",
-          "default": "symbolic"
-        },
+          "name": "Safe",
+          "default": "false"
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "RSpec_Capybara_FeatureMethods",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
         {
-          "name": "SupportedStyles",
+          "name": "EnabledMethods",
           "default": [
-            "numeric",
-            "symbolic",
-            "be_status"
+
           ]
-        }
-      ],
-      "enabled": false
-    },
-    {
-      "patternId": "RSpec_Rails_InferredSpecType",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "Safe",
-          "default": "false"
-        },
-        {
-          "name": "Inferences",
-          "default": "{\"channels\"=>\"channel\", \"controllers\"=>\"controller\", \"features\"=>\"feature\", \"generator\"=>\"generator\", \"helpers\"=>\"helper\", \"jobs\"=>\"job\", \"mailboxes\"=>\"mailbox\", \"mailers\"=>\"mailer\", \"models\"=>\"model\", \"requests\"=>\"request\", \"integration\"=>\"request\", \"api\"=>\"request\", \"routing\"=>\"routing\", \"system\"=>\"system\", \"views\"=>\"view\"}"
-        }
-      ],
-      "enabled": false
-    },
-    {
-      "patternId": "RSpec_Rails_MinitestAssertions",
-      "level": "Info",
-      "category": "CodeStyle",
-      "enabled": false
-    },
-    {
-      "patternId": "RSpec_Rails_TravelAround",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "Safe",
-          "default": "false"
         }
       ],
       "enabled": false
@@ -11775,6 +11913,10 @@
           ]
         },
         {
+          "name": "OnlyStaticConstants",
+          "default": "true"
+        },
+        {
           "name": "SafeAutoCorrect",
           "default": "false"
         }
@@ -11867,6 +12009,12 @@
     },
     {
       "patternId": "RSpec_EmptyMetadata",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "RSpec_EmptyOutput",
       "level": "Info",
       "category": "CodeStyle",
       "enabled": false
@@ -12145,6 +12293,12 @@
           "default": "false"
         }
       ],
+      "enabled": false
+    },
+    {
+      "patternId": "RSpec_IsExpectedSpecify",
+      "level": "Info",
+      "category": "CodeStyle",
       "enabled": false
     },
     {
@@ -12514,6 +12668,12 @@
       "enabled": false
     },
     {
+      "patternId": "RSpec_RepeatedSubjectCall",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
       "patternId": "RSpec_ReturnFromStub",
       "level": "Info",
       "category": "CodeStyle",
@@ -12648,6 +12808,12 @@
     },
     {
       "patternId": "RSpec_SubjectStub",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "RSpec_UndescriptiveLiteralsDescription",
       "level": "Info",
       "category": "CodeStyle",
       "enabled": false

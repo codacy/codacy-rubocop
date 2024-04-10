@@ -526,6 +526,10 @@
     "timeToFix": 5,
     "parameters": [
       {
+        "name": "AutoCorrect",
+        "description": "AutoCorrect"
+      },
+      {
         "name": "AllowBorderComment",
         "description": "AllowBorderComment"
       },
@@ -1820,6 +1824,10 @@
       {
         "name": "DebuggerMethods",
         "description": "DebuggerMethods"
+      },
+      {
+        "name": "DebuggerRequires",
+        "description": "DebuggerRequires"
       }
     ]
   },
@@ -1982,6 +1990,10 @@
     "timeToFix": 5,
     "parameters": [
       {
+        "name": "AutoCorrect",
+        "description": "AutoCorrect"
+      },
+      {
         "name": "SafeAutoCorrect",
         "description": "SafeAutoCorrect"
       },
@@ -1995,7 +2007,13 @@
     "patternId": "Lint_EmptyEnsure",
     "title": "Checks for empty ensure block.",
     "description": "Checks for empty ensure block.",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "AutoCorrect",
+        "description": "AutoCorrect"
+      }
+    ]
   },
   {
     "patternId": "Lint_EmptyExpression",
@@ -2031,7 +2049,13 @@
     "patternId": "Lint_EmptyInterpolation",
     "title": "Checks for empty string interpolation.",
     "description": "Checks for empty string interpolation.",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "AutoCorrect",
+        "description": "AutoCorrect"
+      }
+    ]
   },
   {
     "patternId": "Lint_EmptyWhen",
@@ -2707,7 +2731,13 @@
     "patternId": "Lint_TrailingCommaInAttributeDeclaration",
     "title": "Checks for trailing commas in attribute declarations.",
     "description": "Checks for trailing commas in attribute declarations.",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "AutoCorrect",
+        "description": "AutoCorrect"
+      }
+    ]
   },
   {
     "patternId": "Lint_TripleQuotes",
@@ -2780,6 +2810,10 @@
     "timeToFix": 5,
     "parameters": [
       {
+        "name": "AutoCorrect",
+        "description": "AutoCorrect"
+      },
+      {
         "name": "IgnoreEmptyBlocks",
         "description": "IgnoreEmptyBlocks"
       },
@@ -2795,6 +2829,10 @@
     "description": "Checks for unused method arguments.",
     "timeToFix": 5,
     "parameters": [
+      {
+        "name": "AutoCorrect",
+        "description": "AutoCorrect"
+      },
       {
         "name": "AllowUnusedKeywordArguments",
         "description": "AllowUnusedKeywordArguments"
@@ -2828,6 +2866,10 @@
     "timeToFix": 5,
     "parameters": [
       {
+        "name": "AutoCorrect",
+        "description": "AutoCorrect"
+      },
+      {
         "name": "ContextCreatingMethods",
         "description": "ContextCreatingMethods"
       },
@@ -2843,6 +2885,10 @@
     "description": "Checks for useless assignment to a local variable.",
     "timeToFix": 5,
     "parameters": [
+      {
+        "name": "AutoCorrect",
+        "description": "AutoCorrect"
+      },
       {
         "name": "SafeAutoCorrect",
         "description": "SafeAutoCorrect"
@@ -2861,6 +2907,10 @@
     "description": "Checks for useless method definitions.",
     "timeToFix": 5,
     "parameters": [
+      {
+        "name": "AutoCorrect",
+        "description": "AutoCorrect"
+      },
       {
         "name": "Safe",
         "description": "Safe"
@@ -2900,6 +2950,10 @@
       {
         "name": "Safe",
         "description": "Safe"
+      },
+      {
+        "name": "AutoCorrect",
+        "description": "AutoCorrect"
       }
     ]
   },
@@ -2909,6 +2963,10 @@
     "description": "Possible use of operator/literal/variable in void context.",
     "timeToFix": 5,
     "parameters": [
+      {
+        "name": "AutoCorrect",
+        "description": "AutoCorrect"
+      },
       {
         "name": "CheckForMethodsWithNoSideEffects",
         "description": "CheckForMethodsWithNoSideEffects"
@@ -4178,6 +4236,10 @@
     "timeToFix": 5,
     "parameters": [
       {
+        "name": "AutoCorrect",
+        "description": "AutoCorrect"
+      },
+      {
         "name": "EnforcedStyle",
         "description": "EnforcedStyle"
       },
@@ -4195,7 +4257,13 @@
     "patternId": "Style_EmptyHeredoc",
     "title": "Checks for using empty heredoc to reduce redundancy.",
     "description": "Checks for using empty heredoc to reduce redundancy.",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "AutoCorrect",
+        "description": "AutoCorrect"
+      }
+    ]
   },
   {
     "patternId": "Style_EmptyLambdaParameter",
@@ -4215,6 +4283,10 @@
     "description": "Checks the formatting of empty method definitions.",
     "timeToFix": 5,
     "parameters": [
+      {
+        "name": "AutoCorrect",
+        "description": "AutoCorrect"
+      },
       {
         "name": "EnforcedStyle",
         "description": "EnforcedStyle"
@@ -4838,6 +4910,18 @@
     ]
   },
   {
+    "patternId": "Style_MapIntoArray",
+    "title": "Checks for usages of `each` with `<<`, `push`, or `append` which can be replaced by `map`.",
+    "description": "Checks for usages of `each` with `<<`, `push`, or `append` which can be replaced by `map`.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Safe",
+        "description": "Safe"
+      }
+    ]
+  },
+  {
     "patternId": "Style_MapToHash",
     "title": "Prefer `to_h` with a block over `map.to_h`.",
     "description": "Prefer `to_h` with a block over `map.to_h`.",
@@ -5065,6 +5149,10 @@
     "description": "Checks for redundant `initialize` methods.",
     "timeToFix": 5,
     "parameters": [
+      {
+        "name": "AutoCorrect",
+        "description": "AutoCorrect"
+      },
       {
         "name": "Safe",
         "description": "Safe"
@@ -5743,6 +5831,10 @@
     "description": "Checks the arguments passed to raise/fail.",
     "timeToFix": 5,
     "parameters": [
+      {
+        "name": "Safe",
+        "description": "Safe"
+      },
       {
         "name": "EnforcedStyle",
         "description": "EnforcedStyle"
@@ -8965,7 +9057,13 @@
     "patternId": "Sorbet_SignatureBuildOrder",
     "title": "Enforces the order of parts in a signature.\nThe order is first inheritance related builders, then params, then return and finally the modifier such as: `abstract.params(...).returns(...).soft`.'",
     "description": "Enforces the order of parts in a signature.\nThe order is first inheritance related builders, then params, then return and finally the modifier such as: `abstract.params(...).returns(...).soft`.'",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Order",
+        "description": "Order"
+      }
+    ]
   },
   {
     "patternId": "Sorbet_EnforceSignatures",
@@ -9342,6 +9440,10 @@
       {
         "name": "ExcludedMethods",
         "description": "ExcludedMethods"
+      },
+      {
+        "name": "CountAsOne",
+        "description": "CountAsOne"
       }
     ]
   },
@@ -9584,6 +9686,18 @@
     "title": "Add empty line before assertion methods.",
     "description": "Add empty line before assertion methods.",
     "timeToFix": 5
+  },
+  {
+    "patternId": "Minitest_Focus",
+    "title": "Checks for focused tests.",
+    "description": "Checks for focused tests.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "AutoCorrect",
+        "description": "AutoCorrect"
+      }
+    ]
   },
   {
     "patternId": "Minitest_NonExecutableTestMethod",
@@ -10140,29 +10254,21 @@
     ]
   },
   {
-    "patternId": "RSpec_Capybara_FeatureMethods",
-    "title": "Checks for consistent method usage in feature specs.",
-    "description": "Checks for consistent method usage in feature specs.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "EnabledMethods",
-        "description": "EnabledMethods"
-      }
-    ]
-  },
-  {
-    "patternId": "RSpec_Rails_AvoidSetupHook",
+    "patternId": "RSpecRails_AvoidSetupHook",
     "title": "Checks that tests use RSpec `before` hook over Rails `setup` method.",
     "description": "Checks that tests use RSpec `before` hook over Rails `setup` method.",
     "timeToFix": 5
   },
   {
-    "patternId": "RSpec_Rails_HaveHttpStatus",
+    "patternId": "RSpecRails_HaveHttpStatus",
     "title": "Checks that tests use `have_http_status` instead of equality matchers.",
     "description": "Checks that tests use `have_http_status` instead of equality matchers.",
     "timeToFix": 5,
     "parameters": [
+      {
+        "name": "ResponseMethods",
+        "description": "ResponseMethods"
+      },
       {
         "name": "SafeAutoCorrect",
         "description": "SafeAutoCorrect"
@@ -10170,7 +10276,45 @@
     ]
   },
   {
-    "patternId": "RSpec_Rails_NegationBeValid",
+    "patternId": "RSpecRails_HttpStatus",
+    "title": "Enforces use of symbolic or numeric value to describe HTTP status.",
+    "description": "Enforces use of symbolic or numeric value to describe HTTP status.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "EnforcedStyle",
+        "description": "EnforcedStyle"
+      },
+      {
+        "name": "SupportedStyles",
+        "description": "SupportedStyles"
+      }
+    ]
+  },
+  {
+    "patternId": "RSpecRails_InferredSpecType",
+    "title": "Identifies redundant spec type.",
+    "description": "Identifies redundant spec type.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Safe",
+        "description": "Safe"
+      },
+      {
+        "name": "Inferences",
+        "description": "Inferences"
+      }
+    ]
+  },
+  {
+    "patternId": "RSpecRails_MinitestAssertions",
+    "title": "Check if using Minitest-like matchers.",
+    "description": "Check if using Minitest-like matchers.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "RSpecRails_NegationBeValid",
     "title": "Enforces use of `be_invalid` or `not_to` for negated be_valid.",
     "description": "Enforces use of `be_invalid` or `not_to` for negated be_valid.",
     "timeToFix": 5,
@@ -10190,45 +10334,7 @@
     ]
   },
   {
-    "patternId": "RSpec_Rails_HttpStatus",
-    "title": "Enforces use of symbolic or numeric value to describe HTTP status.",
-    "description": "Enforces use of symbolic or numeric value to describe HTTP status.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "EnforcedStyle",
-        "description": "EnforcedStyle"
-      },
-      {
-        "name": "SupportedStyles",
-        "description": "SupportedStyles"
-      }
-    ]
-  },
-  {
-    "patternId": "RSpec_Rails_InferredSpecType",
-    "title": "Identifies redundant spec type.",
-    "description": "Identifies redundant spec type.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Safe",
-        "description": "Safe"
-      },
-      {
-        "name": "Inferences",
-        "description": "Inferences"
-      }
-    ]
-  },
-  {
-    "patternId": "RSpec_Rails_MinitestAssertions",
-    "title": "Check if using Minitest matchers.",
-    "description": "Check if using Minitest matchers.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "RSpec_Rails_TravelAround",
+    "patternId": "RSpecRails_TravelAround",
     "title": "Prefer to travel in `before` rather than `around`.",
     "description": "Prefer to travel in `before` rather than `around`.",
     "timeToFix": 5,
@@ -10236,6 +10342,18 @@
       {
         "name": "Safe",
         "description": "Safe"
+      }
+    ]
+  },
+  {
+    "patternId": "RSpec_Capybara_FeatureMethods",
+    "title": "Checks for consistent method usage in feature specs.",
+    "description": "Checks for consistent method usage in feature specs.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "EnabledMethods",
+        "description": "EnabledMethods"
       }
     ]
   },
@@ -10430,6 +10548,10 @@
         "description": "SupportedStyles"
       },
       {
+        "name": "OnlyStaticConstants",
+        "description": "OnlyStaticConstants"
+      },
+      {
         "name": "SafeAutoCorrect",
         "description": "SafeAutoCorrect"
       }
@@ -10523,6 +10645,12 @@
     "patternId": "RSpec_EmptyMetadata",
     "title": "Avoid empty metadata hash.",
     "description": "Avoid empty metadata hash.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "RSpec_EmptyOutput",
+    "title": "Check that the `output` matcher is not called with an empty string.",
+    "description": "Check that the `output` matcher is not called with an empty string.",
     "timeToFix": 5
   },
   {
@@ -10766,6 +10894,12 @@
         "description": "AssignmentOnly"
       }
     ]
+  },
+  {
+    "patternId": "RSpec_IsExpectedSpecify",
+    "title": "Check for `specify` with `is_expected` and one-liner expectations.",
+    "description": "Check for `specify` with `is_expected` and one-liner expectations.",
+    "timeToFix": 5
   },
   {
     "patternId": "RSpec_ItBehavesLike",
@@ -11106,6 +11240,12 @@
     "timeToFix": 5
   },
   {
+    "patternId": "RSpec_RepeatedSubjectCall",
+    "title": "Checks for repeated calls to subject missing that it is memoized.",
+    "description": "Checks for repeated calls to subject missing that it is memoized.",
+    "timeToFix": 5
+  },
+  {
     "patternId": "RSpec_ReturnFromStub",
     "title": "Checks for consistent style of stub's return setting.",
     "description": "Checks for consistent style of stub's return setting.",
@@ -11229,6 +11369,12 @@
     "patternId": "RSpec_SubjectStub",
     "title": "Checks for stubbed test subjects.",
     "description": "Checks for stubbed test subjects.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "RSpec_UndescriptiveLiteralsDescription",
+    "title": "Description should be descriptive.",
+    "description": "Description should be descriptive.",
     "timeToFix": 5
   },
   {

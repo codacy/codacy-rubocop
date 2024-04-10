@@ -4,6 +4,12 @@ In Ruby 2.7, arguments forwarding has been added.
 This cop identifies places where `do_something(*args, &block)`
 can be replaced by `do_something(...)`.
 
+In Ruby 3.1, anonymous block forwarding has been added.
+
+This cop identifies places where `do_something(&block)` can be replaced
+by `do_something(&)`; if desired, this functionality can be disabled
+by setting `UseAnonymousForwarding: false`.
+
 In Ruby 3.2, anonymous args/kwargs forwarding has been added.
 
 This cop also identifies places where `use_args(*args)`/`use_kwargs(**kwargs)` can be
@@ -36,19 +42,22 @@ end
 def foo(...)
   bar(...)
 end# bad
-def foo(*args, **kwargs)
+def foo(*args, **kwargs, &block)
   args_only(*args)
   kwargs_only(**kwargs)
+  block_only(&block)
 end
 
 # good
-def foo(*, **)
+def foo(*, **, &)
   args_only(*)
   kwargs_only(**)
+  block_only(&)
 end# good
-def foo(*args, **kwargs)
+def foo(*args, **kwargs, &block)
   args_only(*args)
   kwargs_only(**kwargs)
+  block_only(&block)
 end# good
 def foo(*args)
   bar(*args)
