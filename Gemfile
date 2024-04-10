@@ -17,6 +17,7 @@ gem "dark_finger"
 gem "rubocop-migrations"
 gem "rubocop-minitest"
 gem "rubocop"
+gem "base64"
 #Needed to be referenced on some user configs
 gem "graphql"
 gem "prettier"
