@@ -21,7 +21,7 @@ describe MyClass do
   it { expect(foo).to be_empty }
 end# rubocop.yml
 # RSpec/InstanceVariable:
-#   AssignmentOnly: false
+#   AssignmentOnly: true
 
 # bad
 describe MyClass do

@@ -1,10 +1,9 @@
 
-Checks for the correct order of sig builder methods:
-- abstract, override, or overridable
-- type_parameters
-- params
-- returns, or void
-- soft, checked, or on_failure
+Checks for the correct order of `sig` builder methods.
+
+Options:
+
+* `Order`: The order in which to enforce the builder methods are called.
 
 # Examples
 

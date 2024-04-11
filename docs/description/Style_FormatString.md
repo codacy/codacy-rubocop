@@ -23,21 +23,21 @@ format('%s', [1, 2, 3]) #=> '[1, 2, 3]'
 
 ```ruby
 # bad
-puts sprintf('%10s', 'hoge')
-puts '%10s' % 'hoge'
+puts sprintf('%10s', 'foo')
+puts '%10s' % 'foo'
 
 # good
-puts format('%10s', 'hoge')# bad
-puts format('%10s', 'hoge')
-puts '%10s' % 'hoge'
+puts format('%10s', 'foo')# bad
+puts format('%10s', 'foo')
+puts '%10s' % 'foo'
 
 # good
-puts sprintf('%10s', 'hoge')# bad
-puts format('%10s', 'hoge')
-puts sprintf('%10s', 'hoge')
+puts sprintf('%10s', 'foo')# bad
+puts format('%10s', 'foo')
+puts sprintf('%10s', 'foo')
 
 # good
-puts '%10s' % 'hoge'
+puts '%10s' % 'foo'
 ```
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Style/FormatString)

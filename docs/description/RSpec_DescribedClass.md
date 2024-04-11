@@ -4,8 +4,10 @@ Checks that tests use `described_class`.
 If the first argument of describe is a class, the class is exposed to
 each example via described_class.
 
-This cop can be configured using the `EnforcedStyle` and `SkipBlocks`
-options.
+This cop can be configured using the `EnforcedStyle`, `SkipBlocks`
+and `OnlyStaticConstants` options.
+`OnlyStaticConstants` is only relevant when `EnforcedStyle` is
+`described_class`.
 
 There's a known caveat with rspec-rails's `controller` helper that
 runs its block in a different context, and `described_class` is not
@@ -27,6 +29,12 @@ end
 # good
 describe MyClass do
   subject { described_class.do_something }
+end# good
+describe MyClass do
+  subject { MyClass::CONSTANT }
+end# bad
+describe MyClass do
+  subject { MyClass::CONSTANT }
 end# bad
 describe MyClass do
   subject { described_class.do_something }
