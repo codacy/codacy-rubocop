@@ -21,8 +21,7 @@ GEM
     dark_finger (0.6.1)
       rubocop (>= 0.51.0)
     drb (2.2.1)
-    graphql (2.3.0)
-      base64
+    graphql (2.2.8)
     haml (6.3.0)
       temple (>= 0.8.2)
       thor
@@ -58,7 +57,7 @@ GEM
       psych (>= 4.0.0)
     regexp_parser (2.9.0)
     rexml (3.2.6)
-    rubocop (1.63.0)
+    rubocop (1.63.1)
       json (~> 2.3)
       language_server-protocol (>= 3.17.0)
       parallel (~> 1.10)
