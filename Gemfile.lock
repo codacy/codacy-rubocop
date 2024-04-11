@@ -74,7 +74,7 @@ GEM
       rubocop (~> 1.41)
     rubocop-factory_bot (2.25.1)
       rubocop (~> 1.41)
-    rubocop-graphql (1.5.0)
+    rubocop-graphql (1.5.1)
       rubocop (>= 0.90, < 2)
     rubocop-migrations (0.1.0)
       rubocop (>= 0.42.0)
