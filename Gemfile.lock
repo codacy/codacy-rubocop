@@ -20,8 +20,7 @@ GEM
     connection_pool (2.4.1)
     dark_finger (0.6.1)
       rubocop (>= 0.51.0)
-    drb (2.2.0)
-      ruby2_keywords
+    drb (2.2.1)
     graphql (2.2.8)
     haml (6.3.0)
       temple (>= 0.8.2)
@@ -103,7 +102,6 @@ GEM
     rubocop-thread_safety (0.5.1)
       rubocop (>= 0.90.0)
     ruby-progressbar (1.13.0)
-    ruby2_keywords (0.0.5)
     safe_yaml (1.0.5)
     stringio (3.1.0)
     syntax_tree (6.2.0)
