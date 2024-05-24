@@ -112,8 +112,9 @@ object Rubocop extends Tool {
         Option.when(Files.exists(customCodacyConfigFile))(customCodacyConfigFile)
     }
 
-    val configFileOptions = configFile.map { file =>
-      List("-c", file.toString)
+    val configFileOptions = configFile match {
+      case Some(file) => List("-c", file.toString)
+      case None => List.empty
     }
 
     val patternsCmd = (for {
