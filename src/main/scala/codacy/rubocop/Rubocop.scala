@@ -113,7 +113,7 @@ object Rubocop extends Tool {
     }
 
     val configFileOptions = configFile.map { file =>
-        List("-c", file.toString)
+      List("-c", file.toString)
     }
 
     val patternsCmd = (for {
