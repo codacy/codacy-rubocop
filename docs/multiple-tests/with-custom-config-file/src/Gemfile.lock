@@ -1,0 +1,19 @@
+GIT
+  remote: git://github.com/fgrehm/vagrant-lxc.git
+  revision: c9cd671a32f730fff4b6e4fdd3687a531af0663c
+  specs:
+    vagrant-lxc (1.1.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  rake
+  vagrant!
+  vagrant-cachier!
+  vagrant-lxc!
+  vagrant-omnibus
+  vagrant-pristine!
+
+BUNDLED WITH
+   1.10.4

@@ -103,11 +103,19 @@ object Rubocop extends Tool {
       spec: Specification,
       outputFilePath: Path
   ): List[String] = {
-    val configPath = conf
-      .flatMap(getConfigFile(_).map { configFile =>
-        List("-c", configFile.toAbsolutePath.toString)
-      })
-      .getOrElse(List.empty)
+    val configFile = conf match {
+      // is using UI configuration
+      case Some(patterns) => getConfigFile(patterns)
+      // is not using UI configuration
+      case None =>
+        val customCodacyConfigFile = path.resolve(".rubocop-codacy.yml")
+        Option.when(Files.exists(customCodacyConfigFile))(customCodacyConfigFile)
+    }
+
+    val configFileOptions = configFile match {
+      case Some(file) => List("-c", file.toString)
+      case None => List.empty
+    }
 
     val patternsCmd = (for {
       patterns <- conf.getOrElse(List.empty)
@@ -124,7 +132,7 @@ object Rubocop extends Tool {
           file.toString
       }
 
-    List("rubocop", "--force-exclusion", "-f", "json", "-o", outputFilePath.toAbsolutePath.toString) ++ configPath ++ patternsCmd ++ filesCmd
+    List("rubocop", "--force-exclusion", "-f", "json", "-o", outputFilePath.toAbsolutePath.toString) ++ configFileOptions ++ patternsCmd ++ filesCmd
   }
 
   private[this] lazy val resultFilePath =
