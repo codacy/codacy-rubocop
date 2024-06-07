@@ -40,7 +40,6 @@ gem "rubocop-sorbet"
 gem "rubocop-shopify"
 gem "rubocop-graphql"
 gem 'rubocop-thread_safety', require: false
-gem "rubocop-shopify"
 gem "rollbar"
 gem "sprockets-rails"
 gem "sqlite3"
