@@ -1,6 +1,6 @@
 {
   "name": "rubocop",
-  "version": "1.63.0",
+  "version": "1.64.1",
   "patterns": [
     {
       "patternId": "Migration_DepartmentName",
@@ -2119,7 +2119,7 @@
         },
         {
           "name": "DebuggerRequires",
-          "default": "{\"debug.rb\"=>[\"debug/open\", \"debug/open_nonstop\", \"debug/start\"]}"
+          "default": "{\"debug.rb\"=>[\"debug/open\", \"debug/start\"]}"
         }
       ],
       "enabled": true
@@ -4076,6 +4076,10 @@
           "default": "true"
         },
         {
+          "name": "AllowModifiersOnAttrs",
+          "default": "true"
+        },
+        {
           "name": "SafeAutoCorrect",
           "default": "false"
         }
@@ -4756,6 +4760,12 @@
       "category": "CodeStyle",
       "parameters": [
         {
+          "name": "AllowedMethods",
+          "default": [
+
+          ]
+        },
+        {
           "name": "Exclude",
           "default": [
             "spec/**/*",
@@ -5331,7 +5341,8 @@
             "always",
             "never",
             "either",
-            "consistent"
+            "consistent",
+            "either_consistent"
           ]
         },
         {
@@ -6963,6 +6974,22 @@
       "enabled": false
     },
     {
+      "patternId": "Style_SendWithLiteralMethodName",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "Safe",
+          "default": "false"
+        },
+        {
+          "name": "AllowSend",
+          "default": "true"
+        }
+      ],
+      "enabled": false
+    },
+    {
       "patternId": "Style_SignalException",
       "level": "Info",
       "category": "CodeStyle",
@@ -7206,6 +7233,12 @@
           "default": "false"
         }
       ],
+      "enabled": false
+    },
+    {
+      "patternId": "Style_SuperArguments",
+      "level": "Info",
+      "category": "CodeStyle",
       "enabled": false
     },
     {
@@ -9989,6 +10022,12 @@
       "enabled": false
     },
     {
+      "patternId": "Rails_WhereRange",
+      "level": "Warning",
+      "category": "ErrorProne",
+      "enabled": false
+    },
+    {
       "patternId": "Sorbet_BindingConstantWithoutTypeAlias",
       "level": "Info",
       "category": "CodeStyle",
@@ -10034,12 +10073,6 @@
     },
     {
       "patternId": "Sorbet_ImplicitConversionMethod",
-      "level": "Info",
-      "category": "CodeStyle",
-      "enabled": false
-    },
-    {
-      "patternId": "Sorbet_OneAncestorPerLine",
       "level": "Info",
       "category": "CodeStyle",
       "enabled": false
@@ -10467,6 +10500,18 @@
     },
     {
       "patternId": "Sorbet_EnforceSingleSigil",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "Sorbet_ForbidComparableTEnum",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "Sorbet_MultipleTEnumValues",
       "level": "Info",
       "category": "CodeStyle",
       "enabled": false
@@ -11732,6 +11777,12 @@
       "patternId": "RSpec_BeEmpty",
       "level": "Info",
       "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "AutoCorrect",
+          "default": "contextual"
+        }
+      ],
       "enabled": false
     },
     {
@@ -11953,6 +12004,10 @@
       "category": "CodeStyle",
       "parameters": [
         {
+          "name": "AutoCorrect",
+          "default": "contextual"
+        },
+        {
           "name": "SafeAutoCorrect",
           "default": "false"
         }
@@ -11963,6 +12018,12 @@
       "patternId": "RSpec_EmptyHook",
       "level": "Info",
       "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "AutoCorrect",
+          "default": "contextual"
+        }
+      ],
       "enabled": false
     },
     {
@@ -12011,6 +12072,12 @@
       "patternId": "RSpec_EmptyMetadata",
       "level": "Info",
       "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "AutoCorrect",
+          "default": "contextual"
+        }
+      ],
       "enabled": false
     },
     {
@@ -12137,6 +12204,12 @@
       "enabled": false
     },
     {
+      "patternId": "RSpec_ExpectInLet",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
       "patternId": "RSpec_ExpectOutput",
       "level": "Info",
       "category": "CodeStyle",
@@ -12173,6 +12246,12 @@
       "patternId": "RSpec_Focus",
       "level": "Info",
       "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "AutoCorrect",
+          "default": "contextual"
+        }
+      ],
       "enabled": false
     },
     {
@@ -12199,6 +12278,12 @@
       "patternId": "RSpec_HooksBeforeExamples",
       "level": "Info",
       "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "AutoCorrect",
+          "default": "contextual"
+        }
+      ],
       "enabled": false
     },
     {
@@ -12342,6 +12427,12 @@
       "patternId": "RSpec_LetBeforeExamples",
       "level": "Info",
       "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "AutoCorrect",
+          "default": "contextual"
+        }
+      ],
       "enabled": false
     },
     {
@@ -12696,12 +12787,24 @@
       "patternId": "RSpec_ScatteredLet",
       "level": "Info",
       "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "AutoCorrect",
+          "default": "contextual"
+        }
+      ],
       "enabled": false
     },
     {
       "patternId": "RSpec_ScatteredSetup",
       "level": "Info",
       "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "AutoCorrect",
+          "default": "contextual"
+        }
+      ],
       "enabled": false
     },
     {

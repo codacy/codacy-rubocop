@@ -4,32 +4,6 @@ Correcting to global variables in the 'English' library
 will add a require statement to the top of the file if
 enabled by RequireEnglish config.
 
-Like `use_perl_names` but allows builtin global vars.
-
-  # good
-  puts $LOAD_PATH
-  puts $LOADED_FEATURES
-  puts $PROGRAM_NAME
-  puts ARGV
-  puts $:
-  puts $"
-  puts $0
-  puts $!
-  puts $@
-  puts $;
-  puts $,
-  puts $/
-  puts $\
-  puts $.
-  puts $_
-  puts $>
-  puts $<
-  puts $$
-  puts $?
-  puts $~
-  puts $=
-  puts $*
-
 # Examples
 
 ```ruby
@@ -54,6 +28,30 @@ puts $CHILD_STATUS
 puts $LAST_MATCH_INFO
 puts $IGNORECASE
 puts $ARGV # or ARGV# good
+puts $:
+puts $"
+puts $0
+puts $!
+puts $@
+puts $;
+puts $,
+puts $/
+puts $\
+puts $.
+puts $_
+puts $>
+puts $<
+puts $$
+puts $?
+puts $~
+puts $=
+puts $*
+# good
+# Like `use_perl_names` but allows builtin global vars.
+puts $LOAD_PATH
+puts $LOADED_FEATURES
+puts $PROGRAM_NAME
+puts ARGV
 puts $:
 puts $"
 puts $0

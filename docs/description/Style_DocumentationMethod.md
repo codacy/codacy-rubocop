@@ -86,6 +86,14 @@ class Foo
   def do_something
   end
 end
+# good
+class Foo
+  def method_missing(name, *args)
+  end
+
+  def respond_to_missing?(symbol, include_private)
+  end
+end
 ```
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Style/DocumentationMethod)

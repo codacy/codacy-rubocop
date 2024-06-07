@@ -25,7 +25,28 @@ object Rubocop extends Tool {
       "rubocop-graphql",
       "rubocop-thread_safety",
       "rubocop-minitest",
-      "rubocop-rake"
+      "rubocop-rake",
+      "rubocop-shopify",
+      "rollbar",
+      "sprockets-rails",
+      "sqlite3",
+      "stimulus-rails",
+      "sanitize_email",
+      "selenium-webdriver",
+      "simplecov",
+      "simplecov-cobertura",
+      "web-console",
+      "turbo-rails",
+      "puma",
+      "bootsnap",
+      "capybara",
+      "importmap-rails",
+      "jbuilder",
+      "mocha",
+      "actiontext",
+      "actionmailbox",
+      "actioncable",
+      "actionmailer"
     )
   // Gemfile is analysed
   private val filesToIgnore: Set[String] =

@@ -3558,6 +3558,10 @@
         "description": "AllowModifiersOnSymbols"
       },
       {
+        "name": "AllowModifiersOnAttrs",
+        "description": "AllowModifiersOnAttrs"
+      },
+      {
         "name": "SafeAutoCorrect",
         "description": "SafeAutoCorrect"
       }
@@ -4147,6 +4151,10 @@
     "description": "Checks for missing documentation comment for public methods.",
     "timeToFix": 5,
     "parameters": [
+      {
+        "name": "AllowedMethods",
+        "description": "AllowedMethods"
+      },
       {
         "name": "Exclude",
         "description": "Exclude"
@@ -6130,6 +6138,22 @@
     "timeToFix": 5
   },
   {
+    "patternId": "Style_SendWithLiteralMethodName",
+    "title": "Detects the use of the `public_send` method with a static method name argument.",
+    "description": "Detects the use of the `public_send` method with a static method name argument.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Safe",
+        "description": "Safe"
+      },
+      {
+        "name": "AllowSend",
+        "description": "AllowSend"
+      }
+    ]
+  },
+  {
     "patternId": "Style_SignalException",
     "title": "Checks for proper usage of fail and raise.",
     "description": "Checks for proper usage of fail and raise.",
@@ -6344,6 +6368,12 @@
         "description": "SafeAutoCorrect"
       }
     ]
+  },
+  {
+    "patternId": "Style_SuperArguments",
+    "title": "Call `super` without arguments and parentheses when the signature is identical.",
+    "description": "Call `super` without arguments and parentheses when the signature is identical.",
+    "timeToFix": 5
   },
   {
     "patternId": "Style_SuperWithArgsParentheses",
@@ -8085,8 +8115,8 @@
   },
   {
     "patternId": "Rails_NotNullColumn",
-    "title": "Do not add a NOT NULL column without a default value.",
-    "description": "Do not add a NOT NULL column without a default value.",
+    "title": "Do not add a NOT NULL column without a default value to existing tables.",
+    "description": "Do not add a NOT NULL column without a default value to existing tables.",
     "timeToFix": 5,
     "parameters": [
       {
@@ -8840,6 +8870,12 @@
     ]
   },
   {
+    "patternId": "Rails_WhereRange",
+    "title": "Use ranges in `where` instead of manually constructing SQL.",
+    "description": "Use ranges in `where` instead of manually constructing SQL.",
+    "timeToFix": 5
+  },
+  {
     "patternId": "Sorbet_BindingConstantWithoutTypeAlias",
     "title": "Disallows binding the return value of `T.any`, `T.all`, `T.enum` to a constant directly. To bind the value, one must use `T.type_alias`.",
     "description": "Disallows binding the return value of `T.any`, `T.all`, `T.enum` to a constant directly. To bind the value, one must use `T.type_alias`.",
@@ -8885,12 +8921,6 @@
     "patternId": "Sorbet_ImplicitConversionMethod",
     "title": "This cop disallows declaring implicit conversion methods, as sorbet does not support implicit conversion.",
     "description": "This cop disallows declaring implicit conversion methods, as sorbet does not support implicit conversion.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "Sorbet_OneAncestorPerLine",
-    "title": "Enforces one ancestor per call to requires_ancestor",
-    "description": "Enforces one ancestor per call to requires_ancestor",
     "timeToFix": 5
   },
   {
@@ -9247,6 +9277,18 @@
     "patternId": "Sorbet_EnforceSingleSigil",
     "title": "Ensures that there is only one Sorbet sigil in a file.",
     "description": "Ensures that there is only one Sorbet sigil in a file.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Sorbet_ForbidComparableTEnum",
+    "title": "Disallows including the `Comparable` module in a `T::Enum`.",
+    "description": "Disallows including the `Comparable` module in a `T::Enum`.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Sorbet_MultipleTEnumValues",
+    "title": "Ensures that all `T::Enum`s have multiple values.",
+    "description": "Ensures that all `T::Enum`s have multiple values.",
     "timeToFix": 5
   },
   {
@@ -10391,7 +10433,13 @@
     "patternId": "RSpec_BeEmpty",
     "title": "Prefer using `be_empty` when checking for an empty array.",
     "description": "Prefer using `be_empty` when checking for an empty array.",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "AutoCorrect",
+        "description": "AutoCorrect"
+      }
+    ]
   },
   {
     "patternId": "RSpec_BeEq",
@@ -10588,6 +10636,10 @@
     "timeToFix": 5,
     "parameters": [
       {
+        "name": "AutoCorrect",
+        "description": "AutoCorrect"
+      },
+      {
         "name": "SafeAutoCorrect",
         "description": "SafeAutoCorrect"
       }
@@ -10597,7 +10649,13 @@
     "patternId": "RSpec_EmptyHook",
     "title": "Checks for empty before and after hooks.",
     "description": "Checks for empty before and after hooks.",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "AutoCorrect",
+        "description": "AutoCorrect"
+      }
+    ]
   },
   {
     "patternId": "RSpec_EmptyLineAfterExample",
@@ -10645,7 +10703,13 @@
     "patternId": "RSpec_EmptyMetadata",
     "title": "Avoid empty metadata hash.",
     "description": "Avoid empty metadata hash.",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "AutoCorrect",
+        "description": "AutoCorrect"
+      }
+    ]
   },
   {
     "patternId": "RSpec_EmptyOutput",
@@ -10756,6 +10820,12 @@
     "timeToFix": 5
   },
   {
+    "patternId": "RSpec_ExpectInLet",
+    "title": "Do not use `expect` in let.",
+    "description": "Do not use `expect` in let.",
+    "timeToFix": 5
+  },
+  {
     "patternId": "RSpec_ExpectOutput",
     "title": "Checks for opportunities to use `expect { ... }.to output`.",
     "description": "Checks for opportunities to use `expect { ... }.to output`.",
@@ -10789,7 +10859,13 @@
     "patternId": "RSpec_Focus",
     "title": "Checks if examples are focused.",
     "description": "Checks if examples are focused.",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "AutoCorrect",
+        "description": "AutoCorrect"
+      }
+    ]
   },
   {
     "patternId": "RSpec_HookArgument",
@@ -10811,7 +10887,13 @@
     "patternId": "RSpec_HooksBeforeExamples",
     "title": "Checks for before/around/after hooks that come after an example.",
     "description": "Checks for before/around/after hooks that come after an example.",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "AutoCorrect",
+        "description": "AutoCorrect"
+      }
+    ]
   },
   {
     "patternId": "RSpec_IdenticalEqualityAssertion",
@@ -10939,7 +11021,13 @@
     "patternId": "RSpec_LetBeforeExamples",
     "title": "Checks for `let` definitions that come after an example.",
     "description": "Checks for `let` definitions that come after an example.",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "AutoCorrect",
+        "description": "AutoCorrect"
+      }
+    ]
   },
   {
     "patternId": "RSpec_LetSetup",
@@ -11265,13 +11353,25 @@
     "patternId": "RSpec_ScatteredLet",
     "title": "Checks for let scattered across the example group.",
     "description": "Checks for let scattered across the example group.",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "AutoCorrect",
+        "description": "AutoCorrect"
+      }
+    ]
   },
   {
     "patternId": "RSpec_ScatteredSetup",
     "title": "Checks for setup scattered across multiple hooks in an example group.",
     "description": "Checks for setup scattered across multiple hooks in an example group.",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "AutoCorrect",
+        "description": "AutoCorrect"
+      }
+    ]
   },
   {
     "patternId": "RSpec_SharedContext",
