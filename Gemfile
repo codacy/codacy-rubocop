@@ -32,6 +32,7 @@ gem "turbo-rails"
 gem "graphql"
 gem "prettier"
 #Rubocop official modules
+gem "rubocop-i18n"
 gem "rubocop-performance"
 gem "rubocop-rails"
 gem "rubocop-rake"

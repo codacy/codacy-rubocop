@@ -10012,394 +10012,6 @@
     "timeToFix": 5
   },
   {
-    "patternId": "Capybara_RSpec_HaveSelector",
-    "title": "Use `have_css` or `have_xpath` instead of `have_selector`.",
-    "description": "Use `have_css` or `have_xpath` instead of `have_selector`.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "DefaultSelector",
-        "description": "DefaultSelector"
-      }
-    ]
-  },
-  {
-    "patternId": "Capybara_RSpec_PredicateMatcher",
-    "title": "Prefer using predicate matcher over using predicate method directly.",
-    "description": "Prefer using predicate matcher over using predicate method directly.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Strict",
-        "description": "Strict"
-      },
-      {
-        "name": "EnforcedStyle",
-        "description": "EnforcedStyle"
-      },
-      {
-        "name": "AllowedExplicitMatchers",
-        "description": "AllowedExplicitMatchers"
-      },
-      {
-        "name": "SupportedStyles",
-        "description": "SupportedStyles"
-      }
-    ]
-  },
-  {
-    "patternId": "Capybara_ClickLinkOrButtonStyle",
-    "title": "Checks for methods of button or link clicks.",
-    "description": "Checks for methods of button or link clicks.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "EnforcedStyle",
-        "description": "EnforcedStyle"
-      },
-      {
-        "name": "SupportedStyles",
-        "description": "SupportedStyles"
-      }
-    ]
-  },
-  {
-    "patternId": "Capybara_CurrentPathExpectation",
-    "title": "Checks that no expectations are set on Capybara's `current_path`.",
-    "description": "Checks that no expectations are set on Capybara's `current_path`.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "Capybara_MatchStyle",
-    "title": "Checks for usage of deprecated style methods.",
-    "description": "Checks for usage of deprecated style methods.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "Capybara_NegationMatcher",
-    "title": "Enforces use of `have_no_*` or `not_to` for negated expectations.",
-    "description": "Enforces use of `have_no_*` or `not_to` for negated expectations.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "EnforcedStyle",
-        "description": "EnforcedStyle"
-      },
-      {
-        "name": "SupportedStyles",
-        "description": "SupportedStyles"
-      }
-    ]
-  },
-  {
-    "patternId": "Capybara_RedundantWithinFind",
-    "title": "Checks for redundant `within find(...)` calls.",
-    "description": "Checks for redundant `within find(...)` calls.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "Capybara_SpecificActions",
-    "title": "Checks for there is a more specific actions offered by Capybara.",
-    "description": "Checks for there is a more specific actions offered by Capybara.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "Capybara_SpecificFinders",
-    "title": "Checks if there is a more specific finder offered by Capybara.",
-    "description": "Checks if there is a more specific finder offered by Capybara.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "Capybara_SpecificMatcher",
-    "title": "Checks for there is a more specific matcher offered by Capybara.",
-    "description": "Checks for there is a more specific matcher offered by Capybara.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "Capybara_VisibilityMatcher",
-    "title": "Checks for boolean visibility in Capybara finders.",
-    "description": "Checks for boolean visibility in Capybara finders.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "FactoryBot_AssociationStyle",
-    "title": "Use a consistent style to define associations.",
-    "description": "Use a consistent style to define associations.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Safe",
-        "description": "Safe"
-      },
-      {
-        "name": "EnforcedStyle",
-        "description": "EnforcedStyle"
-      },
-      {
-        "name": "SupportedStyles",
-        "description": "SupportedStyles"
-      },
-      {
-        "name": "NonImplicitAssociationMethodNames",
-        "description": "NonImplicitAssociationMethodNames"
-      }
-    ]
-  },
-  {
-    "patternId": "FactoryBot_AttributeDefinedStatically",
-    "title": "Always declare attribute values as blocks.",
-    "description": "Always declare attribute values as blocks.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "FactoryBot_ConsistentParenthesesStyle",
-    "title": "Use a consistent style for parentheses in factory_bot calls.",
-    "description": "Use a consistent style for parentheses in factory_bot calls.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Include",
-        "description": "Include"
-      },
-      {
-        "name": "EnforcedStyle",
-        "description": "EnforcedStyle"
-      },
-      {
-        "name": "SupportedStyles",
-        "description": "SupportedStyles"
-      },
-      {
-        "name": "ExplicitOnly",
-        "description": "ExplicitOnly"
-      }
-    ]
-  },
-  {
-    "patternId": "FactoryBot_CreateList",
-    "title": "Checks for create_list usage.",
-    "description": "Checks for create_list usage.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Include",
-        "description": "Include"
-      },
-      {
-        "name": "EnforcedStyle",
-        "description": "EnforcedStyle"
-      },
-      {
-        "name": "SupportedStyles",
-        "description": "SupportedStyles"
-      },
-      {
-        "name": "ExplicitOnly",
-        "description": "ExplicitOnly"
-      },
-      {
-        "name": "SafeAutoCorrect",
-        "description": "SafeAutoCorrect"
-      }
-    ]
-  },
-  {
-    "patternId": "FactoryBot_ExcessiveCreateList",
-    "title": "Check for excessive model creation in a list.",
-    "description": "Check for excessive model creation in a list.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Include",
-        "description": "Include"
-      },
-      {
-        "name": "MaxAmount",
-        "description": "MaxAmount"
-      }
-    ]
-  },
-  {
-    "patternId": "FactoryBot_FactoryAssociationWithStrategy",
-    "title": "Use definition in factory association instead of hard coding a strategy.",
-    "description": "Use definition in factory association instead of hard coding a strategy.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Include",
-        "description": "Include"
-      }
-    ]
-  },
-  {
-    "patternId": "FactoryBot_FactoryClassName",
-    "title": "Use string value when setting the class attribute explicitly.",
-    "description": "Use string value when setting the class attribute explicitly.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "FactoryBot_FactoryNameStyle",
-    "title": "Checks for name style for argument of FactoryBot::Syntax::Methods.",
-    "description": "Checks for name style for argument of FactoryBot::Syntax::Methods.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Include",
-        "description": "Include"
-      },
-      {
-        "name": "EnforcedStyle",
-        "description": "EnforcedStyle"
-      },
-      {
-        "name": "SupportedStyles",
-        "description": "SupportedStyles"
-      },
-      {
-        "name": "ExplicitOnly",
-        "description": "ExplicitOnly"
-      }
-    ]
-  },
-  {
-    "patternId": "FactoryBot_IdSequence",
-    "title": "Do not create a FactoryBot sequence for an id column.",
-    "description": "Do not create a FactoryBot sequence for an id column.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "FactoryBot_RedundantFactoryOption",
-    "title": "Checks for redundant `factory` option.",
-    "description": "Checks for redundant `factory` option.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Include",
-        "description": "Include"
-      }
-    ]
-  },
-  {
-    "patternId": "FactoryBot_SyntaxMethods",
-    "title": "Use shorthands from `FactoryBot::Syntax::Methods` in your specs.",
-    "description": "Use shorthands from `FactoryBot::Syntax::Methods` in your specs.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Include",
-        "description": "Include"
-      },
-      {
-        "name": "SafeAutoCorrect",
-        "description": "SafeAutoCorrect"
-      }
-    ]
-  },
-  {
-    "patternId": "RSpecRails_AvoidSetupHook",
-    "title": "Checks that tests use RSpec `before` hook over Rails `setup` method.",
-    "description": "Checks that tests use RSpec `before` hook over Rails `setup` method.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "RSpecRails_HaveHttpStatus",
-    "title": "Checks that tests use `have_http_status` instead of equality matchers.",
-    "description": "Checks that tests use `have_http_status` instead of equality matchers.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "ResponseMethods",
-        "description": "ResponseMethods"
-      },
-      {
-        "name": "SafeAutoCorrect",
-        "description": "SafeAutoCorrect"
-      }
-    ]
-  },
-  {
-    "patternId": "RSpecRails_HttpStatus",
-    "title": "Enforces use of symbolic or numeric value to describe HTTP status.",
-    "description": "Enforces use of symbolic or numeric value to describe HTTP status.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "EnforcedStyle",
-        "description": "EnforcedStyle"
-      },
-      {
-        "name": "SupportedStyles",
-        "description": "SupportedStyles"
-      }
-    ]
-  },
-  {
-    "patternId": "RSpecRails_InferredSpecType",
-    "title": "Identifies redundant spec type.",
-    "description": "Identifies redundant spec type.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Safe",
-        "description": "Safe"
-      },
-      {
-        "name": "Inferences",
-        "description": "Inferences"
-      }
-    ]
-  },
-  {
-    "patternId": "RSpecRails_MinitestAssertions",
-    "title": "Check if using Minitest-like matchers.",
-    "description": "Check if using Minitest-like matchers.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "RSpecRails_NegationBeValid",
-    "title": "Enforces use of `be_invalid` or `not_to` for negated be_valid.",
-    "description": "Enforces use of `be_invalid` or `not_to` for negated be_valid.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Safe",
-        "description": "Safe"
-      },
-      {
-        "name": "EnforcedStyle",
-        "description": "EnforcedStyle"
-      },
-      {
-        "name": "SupportedStyles",
-        "description": "SupportedStyles"
-      }
-    ]
-  },
-  {
-    "patternId": "RSpecRails_TravelAround",
-    "title": "Prefer to travel in `before` rather than `around`.",
-    "description": "Prefer to travel in `before` rather than `around`.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Safe",
-        "description": "Safe"
-      }
-    ]
-  },
-  {
-    "patternId": "RSpec_Capybara_FeatureMethods",
-    "title": "Checks for consistent method usage in feature specs.",
-    "description": "Checks for consistent method usage in feature specs.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "EnabledMethods",
-        "description": "EnabledMethods"
-      }
-    ]
-  },
-  {
     "patternId": "RSpec_AlignLeftLetBrace",
     "title": "Checks that left braces for adjacent single line lets are aligned.",
     "description": "Checks that left braces for adjacent single line lets are aligned.",
@@ -10832,30 +10444,6 @@
     "timeToFix": 5
   },
   {
-    "patternId": "RSpec_FilePath",
-    "title": "Checks that spec file paths are consistent and well-formed.",
-    "description": "Checks that spec file paths are consistent and well-formed.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Include",
-        "description": "Include"
-      },
-      {
-        "name": "CustomTransform",
-        "description": "CustomTransform"
-      },
-      {
-        "name": "IgnoreMethods",
-        "description": "IgnoreMethods"
-      },
-      {
-        "name": "SpecSuffixOnly",
-        "description": "SpecSuffixOnly"
-      }
-    ]
-  },
-  {
     "patternId": "RSpec_Focus",
     "title": "Checks if examples are focused.",
     "description": "Checks if examples are focused.",
@@ -11099,6 +10687,12 @@
     "patternId": "RSpec_MissingExampleGroupArgument",
     "title": "Checks that the first argument to an example group is not empty.",
     "description": "Checks that the first argument to an example group is not empty.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "RSpec_MissingExpectationTargetMethod",
+    "title": "Checks if `.to`, `not_to` or `to_not` are used.",
+    "description": "Checks if `.to`, `not_to` or `to_not` are used.",
     "timeToFix": 5
   },
   {
@@ -11565,6 +11159,42 @@
     "patternId": "RSpec_Yield",
     "title": "Checks for calling a block within a stub.",
     "description": "Checks for calling a block within a stub.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "I18n_GetText_DecorateString",
+    "title": "Get Text",
+    "description": "Get Text",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "I18n_GetText_DecorateFunctionMessage",
+    "title": "Get Text",
+    "description": "Get Text",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "I18n_GetText_DecorateStringFormattingUsingInterpolation",
+    "title": "Get Text",
+    "description": "Get Text",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "I18n_GetText_DecorateStringFormattingUsingPercent",
+    "title": "Get Text",
+    "description": "Get Text",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "I18n_RailsI18n_DecorateString",
+    "title": "Rails I18n",
+    "description": "Rails I18n",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "I18n_RailsI18n_DecorateStringFormattingUsingInterpolation",
+    "title": "Rails I18n",
+    "description": "Rails I18n",
     "timeToFix": 5
   }
 ]

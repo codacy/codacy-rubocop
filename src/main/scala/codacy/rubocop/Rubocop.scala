@@ -18,6 +18,7 @@ import scala.util.{Failure, Properties, Success, Try}
 object Rubocop extends Tool {
   private val plugins: List[String] =
     List(
+      "rubocop-i18n",
       "rubocop-performance",
       "rubocop-rails",
       "rubocop-rspec",

@@ -8,7 +8,8 @@ $plugins = ["rubocop-performance",
             "rubocop-thread_safety",
             "rubocop-minitest",
             "rubocop-rake",
-            "rubocop-rspec"
+            "rubocop-rspec",
+            "rubocop-i18n"
           ]
 
 # frozen_string_literal: true
