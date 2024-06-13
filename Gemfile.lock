@@ -21,7 +21,8 @@ GEM
     dark_finger (0.6.1)
       rubocop (>= 0.51.0)
     drb (2.2.1)
-    graphql (2.2.8)
+    graphql (2.3.5)
+      base64
     haml (6.3.0)
       temple (>= 0.8.2)
       thor
