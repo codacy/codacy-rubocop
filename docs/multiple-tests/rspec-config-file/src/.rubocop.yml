@@ -13,6 +13,9 @@ RSpec/AlignLeftLetBrace:
   Enabled: true
   StyleGuide: https://www.rubydoc.info/gems/rubocop-rspec/RuboCop/Cop/RSpec/AlignLeftLetBrace
 
+RSpec/SpecFilePathFormat:
+  Enabled: false
+
 RSpec/EmptyLineAfterFinalLet:
   Enabled: false
 
