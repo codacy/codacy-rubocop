@@ -18,35 +18,15 @@ import scala.util.{Failure, Properties, Success, Try}
 object Rubocop extends Tool {
   private val plugins: List[String] =
     List(
-      "rubocop-i18n",
       "rubocop-performance",
-      "rubocop-rails",
-      "rubocop-rspec",
-      "rubocop-sorbet",
-      "rubocop-graphql",
+      "rubocop-rails", 
+      "rubocop-sorbet", 
+      "rubocop-graphql", 
       "rubocop-thread_safety",
       "rubocop-minitest",
       "rubocop-rake",
-      "rollbar",
-      "sprockets-rails",
-      "sqlite3",
-      "stimulus-rails",
-      "sanitize_email",
-      "selenium-webdriver",
-      "simplecov",
-      "simplecov-cobertura",
-      "web-console",
-      "turbo-rails",
-      "puma",
-      "bootsnap",
-      "capybara",
-      "importmap-rails",
-      "jbuilder",
-      "mocha",
-      "actiontext",
-      "actionmailbox",
-      "actioncable",
-      "actionmailer"
+      "rubocop-rspec",
+      "rubocop-i18n"
     )
   // Gemfile is analysed
   private val filesToIgnore: Set[String] =
