@@ -1,6 +1,6 @@
 {
   "name": "rubocop",
-  "version": "1.63.0",
+  "version": "1.64.1",
   "patterns": [
     {
       "patternId": "Migration_DepartmentName",
@@ -2119,7 +2119,7 @@
         },
         {
           "name": "DebuggerRequires",
-          "default": "{\"debug.rb\"=>[\"debug/open\", \"debug/open_nonstop\", \"debug/start\"]}"
+          "default": "{\"debug.rb\"=>[\"debug/open\", \"debug/start\"]}"
         }
       ],
       "enabled": true
@@ -4076,6 +4076,10 @@
           "default": "true"
         },
         {
+          "name": "AllowModifiersOnAttrs",
+          "default": "true"
+        },
+        {
           "name": "SafeAutoCorrect",
           "default": "false"
         }
@@ -4756,6 +4760,12 @@
       "category": "CodeStyle",
       "parameters": [
         {
+          "name": "AllowedMethods",
+          "default": [
+
+          ]
+        },
+        {
           "name": "Exclude",
           "default": [
             "spec/**/*",
@@ -5331,7 +5341,8 @@
             "always",
             "never",
             "either",
-            "consistent"
+            "consistent",
+            "either_consistent"
           ]
         },
         {
@@ -6963,6 +6974,22 @@
       "enabled": false
     },
     {
+      "patternId": "Style_SendWithLiteralMethodName",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "Safe",
+          "default": "false"
+        },
+        {
+          "name": "AllowSend",
+          "default": "true"
+        }
+      ],
+      "enabled": false
+    },
+    {
       "patternId": "Style_SignalException",
       "level": "Info",
       "category": "CodeStyle",
@@ -7206,6 +7233,12 @@
           "default": "false"
         }
       ],
+      "enabled": false
+    },
+    {
+      "patternId": "Style_SuperArguments",
+      "level": "Info",
+      "category": "CodeStyle",
       "enabled": false
     },
     {
@@ -9989,6 +10022,12 @@
       "enabled": false
     },
     {
+      "patternId": "Rails_WhereRange",
+      "level": "Warning",
+      "category": "ErrorProne",
+      "enabled": false
+    },
+    {
       "patternId": "Sorbet_BindingConstantWithoutTypeAlias",
       "level": "Info",
       "category": "CodeStyle",
@@ -10034,12 +10073,6 @@
     },
     {
       "patternId": "Sorbet_ImplicitConversionMethod",
-      "level": "Info",
-      "category": "CodeStyle",
-      "enabled": false
-    },
-    {
-      "patternId": "Sorbet_OneAncestorPerLine",
       "level": "Info",
       "category": "CodeStyle",
       "enabled": false
@@ -10467,6 +10500,18 @@
     },
     {
       "patternId": "Sorbet_EnforceSingleSigil",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "Sorbet_ForbidComparableTEnum",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "Sorbet_MultipleTEnumValues",
       "level": "Info",
       "category": "CodeStyle",
       "enabled": false
@@ -11241,464 +11286,6 @@
       "enabled": false
     },
     {
-      "patternId": "Capybara_RSpec_HaveSelector",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "DefaultSelector",
-          "default": "css"
-        }
-      ],
-      "enabled": false
-    },
-    {
-      "patternId": "Capybara_RSpec_PredicateMatcher",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "Strict",
-          "default": "true"
-        },
-        {
-          "name": "EnforcedStyle",
-          "default": "inflected"
-        },
-        {
-          "name": "AllowedExplicitMatchers",
-          "default": [
-
-          ]
-        },
-        {
-          "name": "SupportedStyles",
-          "default": [
-            "inflected",
-            "explicit"
-          ]
-        }
-      ],
-      "enabled": false
-    },
-    {
-      "patternId": "Capybara_ClickLinkOrButtonStyle",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "EnforcedStyle",
-          "default": "link_or_button"
-        },
-        {
-          "name": "SupportedStyles",
-          "default": [
-            "link_or_button",
-            "strict"
-          ]
-        }
-      ],
-      "enabled": false
-    },
-    {
-      "patternId": "Capybara_CurrentPathExpectation",
-      "level": "Info",
-      "category": "CodeStyle",
-      "enabled": false
-    },
-    {
-      "patternId": "Capybara_MatchStyle",
-      "level": "Info",
-      "category": "CodeStyle",
-      "enabled": false
-    },
-    {
-      "patternId": "Capybara_NegationMatcher",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "EnforcedStyle",
-          "default": "have_no"
-        },
-        {
-          "name": "SupportedStyles",
-          "default": [
-            "have_no",
-            "not_to"
-          ]
-        }
-      ],
-      "enabled": false
-    },
-    {
-      "patternId": "Capybara_RedundantWithinFind",
-      "level": "Info",
-      "category": "CodeStyle",
-      "enabled": false
-    },
-    {
-      "patternId": "Capybara_SpecificActions",
-      "level": "Info",
-      "category": "CodeStyle",
-      "enabled": false
-    },
-    {
-      "patternId": "Capybara_SpecificFinders",
-      "level": "Info",
-      "category": "CodeStyle",
-      "enabled": false
-    },
-    {
-      "patternId": "Capybara_SpecificMatcher",
-      "level": "Info",
-      "category": "CodeStyle",
-      "enabled": false
-    },
-    {
-      "patternId": "Capybara_VisibilityMatcher",
-      "level": "Info",
-      "category": "CodeStyle",
-      "enabled": false
-    },
-    {
-      "patternId": "FactoryBot_AssociationStyle",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "Safe",
-          "default": "false"
-        },
-        {
-          "name": "EnforcedStyle",
-          "default": "implicit"
-        },
-        {
-          "name": "SupportedStyles",
-          "default": [
-            "explicit",
-            "implicit"
-          ]
-        },
-        {
-          "name": "NonImplicitAssociationMethodNames",
-          "default": ""
-        }
-      ],
-      "enabled": false
-    },
-    {
-      "patternId": "FactoryBot_AttributeDefinedStatically",
-      "level": "Info",
-      "category": "CodeStyle",
-      "enabled": false
-    },
-    {
-      "patternId": "FactoryBot_ConsistentParenthesesStyle",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "Include",
-          "default": [
-            "**/*_spec.rb",
-            "**/spec/**/*",
-            "**/test/**/*",
-            "**/features/support/factories/**/*.rb"
-          ]
-        },
-        {
-          "name": "EnforcedStyle",
-          "default": "require_parentheses"
-        },
-        {
-          "name": "SupportedStyles",
-          "default": [
-            "require_parentheses",
-            "omit_parentheses"
-          ]
-        },
-        {
-          "name": "ExplicitOnly",
-          "default": "false"
-        }
-      ],
-      "enabled": false
-    },
-    {
-      "patternId": "FactoryBot_CreateList",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "Include",
-          "default": [
-            "**/*_spec.rb",
-            "**/spec/**/*",
-            "**/test/**/*",
-            "**/features/support/factories/**/*.rb"
-          ]
-        },
-        {
-          "name": "EnforcedStyle",
-          "default": "create_list"
-        },
-        {
-          "name": "SupportedStyles",
-          "default": [
-            "create_list",
-            "n_times"
-          ]
-        },
-        {
-          "name": "ExplicitOnly",
-          "default": "false"
-        },
-        {
-          "name": "SafeAutoCorrect",
-          "default": "false"
-        }
-      ],
-      "enabled": false
-    },
-    {
-      "patternId": "FactoryBot_ExcessiveCreateList",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "Include",
-          "default": [
-            "**/*_spec.rb",
-            "**/spec/**/*",
-            "**/test/**/*",
-            "**/features/support/factories/**/*.rb"
-          ]
-        },
-        {
-          "name": "MaxAmount",
-          "default": "10"
-        }
-      ],
-      "enabled": false
-    },
-    {
-      "patternId": "FactoryBot_FactoryAssociationWithStrategy",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "Include",
-          "default": [
-            "**/*_spec.rb",
-            "**/spec/**/*",
-            "**/test/**/*",
-            "**/features/support/factories/**/*.rb"
-          ]
-        }
-      ],
-      "enabled": false
-    },
-    {
-      "patternId": "FactoryBot_FactoryClassName",
-      "level": "Info",
-      "category": "CodeStyle",
-      "enabled": false
-    },
-    {
-      "patternId": "FactoryBot_FactoryNameStyle",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "Include",
-          "default": [
-            "**/*_spec.rb",
-            "**/spec/**/*",
-            "**/test/**/*",
-            "**/features/support/factories/**/*.rb"
-          ]
-        },
-        {
-          "name": "EnforcedStyle",
-          "default": "symbol"
-        },
-        {
-          "name": "SupportedStyles",
-          "default": [
-            "symbol",
-            "string"
-          ]
-        },
-        {
-          "name": "ExplicitOnly",
-          "default": "false"
-        }
-      ],
-      "enabled": false
-    },
-    {
-      "patternId": "FactoryBot_IdSequence",
-      "level": "Info",
-      "category": "CodeStyle",
-      "enabled": false
-    },
-    {
-      "patternId": "FactoryBot_RedundantFactoryOption",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "Include",
-          "default": [
-            "**/*_spec.rb",
-            "**/spec/**/*",
-            "**/test/**/*",
-            "**/features/support/factories/**/*.rb"
-          ]
-        }
-      ],
-      "enabled": false
-    },
-    {
-      "patternId": "FactoryBot_SyntaxMethods",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "Include",
-          "default": [
-            "**/*_spec.rb",
-            "**/spec/**/*",
-            "**/test/**/*",
-            "**/features/support/factories/**/*.rb"
-          ]
-        },
-        {
-          "name": "SafeAutoCorrect",
-          "default": "false"
-        }
-      ],
-      "enabled": false
-    },
-    {
-      "patternId": "RSpecRails_AvoidSetupHook",
-      "level": "Info",
-      "category": "CodeStyle",
-      "enabled": false
-    },
-    {
-      "patternId": "RSpecRails_HaveHttpStatus",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "ResponseMethods",
-          "default": [
-            "response",
-            "last_response"
-          ]
-        },
-        {
-          "name": "SafeAutoCorrect",
-          "default": "false"
-        }
-      ],
-      "enabled": false
-    },
-    {
-      "patternId": "RSpecRails_HttpStatus",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "EnforcedStyle",
-          "default": "symbolic"
-        },
-        {
-          "name": "SupportedStyles",
-          "default": [
-            "numeric",
-            "symbolic",
-            "be_status"
-          ]
-        }
-      ],
-      "enabled": false
-    },
-    {
-      "patternId": "RSpecRails_InferredSpecType",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "Safe",
-          "default": "false"
-        },
-        {
-          "name": "Inferences",
-          "default": "{\"channels\"=>\"channel\", \"controllers\"=>\"controller\", \"features\"=>\"feature\", \"generator\"=>\"generator\", \"helpers\"=>\"helper\", \"jobs\"=>\"job\", \"mailboxes\"=>\"mailbox\", \"mailers\"=>\"mailer\", \"models\"=>\"model\", \"requests\"=>\"request\", \"integration\"=>\"request\", \"api\"=>\"request\", \"routing\"=>\"routing\", \"system\"=>\"system\", \"views\"=>\"view\"}"
-        }
-      ],
-      "enabled": false
-    },
-    {
-      "patternId": "RSpecRails_MinitestAssertions",
-      "level": "Info",
-      "category": "CodeStyle",
-      "enabled": false
-    },
-    {
-      "patternId": "RSpecRails_NegationBeValid",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "Safe",
-          "default": "false"
-        },
-        {
-          "name": "EnforcedStyle",
-          "default": "not_to"
-        },
-        {
-          "name": "SupportedStyles",
-          "default": [
-            "not_to",
-            "be_invalid"
-          ]
-        }
-      ],
-      "enabled": false
-    },
-    {
-      "patternId": "RSpecRails_TravelAround",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "Safe",
-          "default": "false"
-        }
-      ],
-      "enabled": false
-    },
-    {
-      "patternId": "RSpec_Capybara_FeatureMethods",
-      "level": "Info",
-      "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "EnabledMethods",
-          "default": [
-
-          ]
-        }
-      ],
-      "enabled": false
-    },
-    {
       "patternId": "RSpec_AlignLeftLetBrace",
       "level": "Info",
       "category": "CodeStyle",
@@ -11732,6 +11319,12 @@
       "patternId": "RSpec_BeEmpty",
       "level": "Info",
       "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "AutoCorrect",
+          "default": "contextual"
+        }
+      ],
       "enabled": false
     },
     {
@@ -11953,6 +11546,10 @@
       "category": "CodeStyle",
       "parameters": [
         {
+          "name": "AutoCorrect",
+          "default": "contextual"
+        },
+        {
           "name": "SafeAutoCorrect",
           "default": "false"
         }
@@ -11963,6 +11560,12 @@
       "patternId": "RSpec_EmptyHook",
       "level": "Info",
       "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "AutoCorrect",
+          "default": "contextual"
+        }
+      ],
       "enabled": false
     },
     {
@@ -12011,6 +11614,12 @@
       "patternId": "RSpec_EmptyMetadata",
       "level": "Info",
       "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "AutoCorrect",
+          "default": "contextual"
+        }
+      ],
       "enabled": false
     },
     {
@@ -12137,42 +11746,27 @@
       "enabled": false
     },
     {
+      "patternId": "RSpec_ExpectInLet",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
       "patternId": "RSpec_ExpectOutput",
       "level": "Info",
       "category": "CodeStyle",
       "enabled": false
     },
     {
-      "patternId": "RSpec_FilePath",
+      "patternId": "RSpec_Focus",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [
         {
-          "name": "Include",
-          "default": [
-            "**/*_spec*rb*",
-            "**/spec/**/*"
-          ]
-        },
-        {
-          "name": "CustomTransform",
-          "default": "{\"RuboCop\"=>\"rubocop\", \"RSpec\"=>\"rspec\"}"
-        },
-        {
-          "name": "IgnoreMethods",
-          "default": "false"
-        },
-        {
-          "name": "SpecSuffixOnly",
-          "default": "false"
+          "name": "AutoCorrect",
+          "default": "contextual"
         }
       ],
-      "enabled": false
-    },
-    {
-      "patternId": "RSpec_Focus",
-      "level": "Info",
-      "category": "CodeStyle",
       "enabled": false
     },
     {
@@ -12199,6 +11793,12 @@
       "patternId": "RSpec_HooksBeforeExamples",
       "level": "Info",
       "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "AutoCorrect",
+          "default": "contextual"
+        }
+      ],
       "enabled": false
     },
     {
@@ -12342,6 +11942,12 @@
       "patternId": "RSpec_LetBeforeExamples",
       "level": "Info",
       "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "AutoCorrect",
+          "default": "contextual"
+        }
+      ],
       "enabled": false
     },
     {
@@ -12421,6 +12027,12 @@
     },
     {
       "patternId": "RSpec_MissingExampleGroupArgument",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "RSpec_MissingExpectationTargetMethod",
       "level": "Info",
       "category": "CodeStyle",
       "enabled": false
@@ -12696,12 +12308,24 @@
       "patternId": "RSpec_ScatteredLet",
       "level": "Info",
       "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "AutoCorrect",
+          "default": "contextual"
+        }
+      ],
       "enabled": false
     },
     {
       "patternId": "RSpec_ScatteredSetup",
       "level": "Info",
       "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "AutoCorrect",
+          "default": "contextual"
+        }
+      ],
       "enabled": false
     },
     {
@@ -12915,6 +12539,42 @@
     },
     {
       "patternId": "RSpec_Yield",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "I18n_GetText_DecorateString",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "I18n_GetText_DecorateFunctionMessage",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "I18n_GetText_DecorateStringFormattingUsingInterpolation",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "I18n_GetText_DecorateStringFormattingUsingPercent",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "I18n_RailsI18n_DecorateString",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "I18n_RailsI18n_DecorateStringFormattingUsingInterpolation",
       "level": "Info",
       "category": "CodeStyle",
       "enabled": false

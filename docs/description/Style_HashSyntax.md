@@ -25,6 +25,8 @@ The supported styles are:
 * never - forces use of explicit hash literal value
 * either - accepts both shorthand and explicit use of hash literal value
 * consistent - forces use of the 3.1 syntax only if all values can be omitted in the hash
+* either_consistent - accepts both shorthand and explicit use of hash literal value,
+                      but they must be consistent
 
 # Examples
 
@@ -73,6 +75,20 @@ The supported styles are:
 # good
 {foo:, bar:}
 # bad - `foo` and `bar` values can be omitted
+{foo: foo, bar: bar}
+
+# bad - `bar` value can be omitted
+{foo:, bar: bar}
+
+# bad - mixed syntaxes
+{foo:, bar: baz}
+
+# good
+{foo:, bar:}
+
+# good - can't omit `baz`
+{foo: foo, bar: baz}
+# good - `foo` and `bar` values can be omitted, but they are consistent, so it's accepted
 {foo: foo, bar: bar}
 
 # bad - `bar` value can be omitted

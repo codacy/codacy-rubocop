@@ -32,7 +32,18 @@ something.do_something do |s| # some comment
 end# good
 define_method(:foo) { |foo| foo.bar }# bad
 something.map { |s| s.upcase }# good
-something.map { |s| s.upcase }
+something.map { |s| s.upcase }# bad
+->(x) { x.foo }
+proc { |x| x.foo }
+Proc.new { |x| x.foo }
+
+# good
+lambda(&:foo)
+proc(&:foo)
+Proc.new(&:foo)# good
+->(x) { x.foo }
+proc { |x| x.foo }
+Proc.new { |x| x.foo }
 ```
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Style/SymbolProc)

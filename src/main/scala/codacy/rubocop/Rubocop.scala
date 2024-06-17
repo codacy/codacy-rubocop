@@ -20,13 +20,15 @@ object Rubocop extends Tool {
     List(
       "rubocop-performance",
       "rubocop-rails",
-      "rubocop-rspec",
       "rubocop-sorbet",
       "rubocop-graphql",
       "rubocop-thread_safety",
       "rubocop-minitest",
-      "rubocop-rake"
+      "rubocop-rake",
+      "rubocop-rspec",
+      "rubocop-i18n"
     )
+
   // Gemfile is analysed
   private val filesToIgnore: Set[String] =
     Set("Gemfile.lock").map(_.toLowerCase())

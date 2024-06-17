@@ -27,42 +27,42 @@ class Person
 end
 
 # allowed
-  # Class without body
+# Class without body
+class Person
+end
+
+# Namespace - A namespace can be a class or a module
+# Containing a class
+module Namespace
+  # Description/Explanation of Person class
   class Person
+    # ...
+  end
+end
+
+# Containing constant visibility declaration
+module Namespace
+  class Private
   end
 
-  # Namespace - A namespace can be a class or a module
-  # Containing a class
-  module Namespace
-    # Description/Explanation of Person class
-    class Person
-      # ...
-    end
-  end
+  private_constant :Private
+end
 
-  # Containing constant visibility declaration
-  module Namespace
-    class Private
-    end
+# Containing constant definition
+module Namespace
+  Public = Class.new
+end
 
-    private_constant :Private
-  end
-
-  # Containing constant definition
-  module Namespace
-    Public = Class.new
-  end
-
-  # Macro calls
-  module Namespace
-    extend Foo
-  end
+# Macro calls
+module Namespace
+  extend Foo
+end
 # good
 module A
   module ClassMethods
     # ...
   end
- end
+end
 ```
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Style/Documentation)

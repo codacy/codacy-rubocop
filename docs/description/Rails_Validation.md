@@ -27,7 +27,7 @@ validates :foo, length: true
 validates :foo, numericality: true
 validates :foo, presence: true
 validates :foo, absence: true
-validates :foo, size: true
+validates :foo, length: true
 validates :foo, uniqueness: true
 ```
 

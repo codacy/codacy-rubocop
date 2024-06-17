@@ -5,12 +5,12 @@ Checks for the use of the send method.
 
 ```ruby
 # bad
-Foo.send(:bar)
-quuz.send(:fred)
+Foo.send(bar)
+quuz.send(fred)
 
 # good
-Foo.__send__(:bar)
-quuz.public_send(:fred)
+Foo.__send__(bar)
+quuz.public_send(fred)
 ```
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Style/Send)
