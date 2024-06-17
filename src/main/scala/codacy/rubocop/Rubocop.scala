@@ -19,15 +19,16 @@ object Rubocop extends Tool {
   private val plugins: List[String] =
     List(
       "rubocop-performance",
-      "rubocop-rails", 
-      "rubocop-sorbet", 
-      "rubocop-graphql", 
+      "rubocop-rails",
+      "rubocop-sorbet",
+      "rubocop-graphql",
       "rubocop-thread_safety",
       "rubocop-minitest",
       "rubocop-rake",
       "rubocop-rspec",
       "rubocop-i18n"
     )
+
   // Gemfile is analysed
   private val filesToIgnore: Set[String] =
     Set("Gemfile.lock").map(_.toLowerCase())
