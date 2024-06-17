@@ -27,7 +27,6 @@ object Rubocop extends Tool {
       "rubocop-thread_safety",
       "rubocop-minitest",
       "rubocop-rake",
-      "rubocop-shopify",
       "rollbar",
       "sprockets-rails",
       "sqlite3",
