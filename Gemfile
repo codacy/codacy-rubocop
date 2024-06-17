@@ -38,7 +38,7 @@ gem "rubocop-rails"
 gem "rubocop-rake"
 gem "rubocop-rspec"
 gem "rubocop-sorbet"
-gem "rubocop-shopify"
+gem "rubocop-shopify", require: false
 gem "rubocop-graphql"
 gem 'rubocop-thread_safety', require: false
 gem "rollbar"
