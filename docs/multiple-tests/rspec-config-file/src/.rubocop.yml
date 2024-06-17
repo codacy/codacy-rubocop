@@ -8,9 +8,6 @@ Lint/AmbiguousOperator:
   StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#parens-as-args'
   Enabled: false
 
-RSpec/FilePath:
-  Enabled: false
-
 RSpec/AlignLeftLetBrace:
   Description: Checks that left braces for adjacent single line lets are aligned.
   Enabled: true
