@@ -9,7 +9,13 @@ $plugins = ["rubocop-performance",
             "rubocop-minitest",
             "rubocop-rake",
             "rubocop-rspec",
-            "rubocop-i18n"
+            "rubocop-i18n",
+            "rubocop-faker",
+            "rubocop-factory_bot",
+            "rubocop-md",
+            "rubocop-mdsol",
+            "rubocop-rspec_rails",
+            "rubocop-capybara"
           ]
 
 # frozen_string_literal: true

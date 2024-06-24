@@ -567,6 +567,13 @@
         {
           "name": "AllowForAlignment",
           "default": "false"
+        },
+        {
+          "name": "Exclude",
+          "default": [
+            "**/*.md",
+            "**/*.markdown"
+          ]
         }
       ],
       "enabled": false
@@ -693,6 +700,13 @@
         {
           "name": "NumberOfEmptyLines",
           "default": "1"
+        },
+        {
+          "name": "Exclude",
+          "default": [
+            "**/*.md",
+            "**/*.markdown"
+          ]
         }
       ],
       "enabled": false
@@ -1177,6 +1191,13 @@
         {
           "name": "AllowGemfileRubyComment",
           "default": "false"
+        },
+        {
+          "name": "Exclude",
+          "default": [
+            "**/*.md",
+            "**/*.markdown"
+          ]
         }
       ],
       "enabled": false
@@ -1280,6 +1301,12 @@
           "name": "AllowedPatterns",
           "default": [
 
+          ]
+        },
+        {
+          "name": "IgnoredPatterns",
+          "default": [
+            "(?-mix:^\\#)"
           ]
         }
       ],
@@ -1940,6 +1967,13 @@
             "final_newline",
             "final_blank_line"
           ]
+        },
+        {
+          "name": "Exclude",
+          "default": [
+            "**/*.md",
+            "**/*.markdown"
+          ]
         }
       ],
       "enabled": false
@@ -2210,6 +2244,15 @@
       "patternId": "Lint_DuplicateMethods",
       "level": "Warning",
       "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "Exclude",
+          "default": [
+            "**/*.md",
+            "**/*.markdown"
+          ]
+        }
+      ],
       "enabled": true
     },
     {
@@ -2226,6 +2269,13 @@
         {
           "name": "SafeAutoCorrect",
           "default": "false"
+        },
+        {
+          "name": "Exclude",
+          "default": [
+            "**/*.md",
+            "**/*.markdown"
+          ]
         }
       ],
       "enabled": false
@@ -2780,6 +2830,15 @@
       "patternId": "Lint_RedundantCopEnableDirective",
       "level": "Warning",
       "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "Exclude",
+          "default": [
+            "**/*.md",
+            "**/*.markdown"
+          ]
+        }
+      ],
       "enabled": false
     },
     {
@@ -2808,6 +2867,13 @@
         {
           "name": "SafeAutoCorrect",
           "default": "false"
+        },
+        {
+          "name": "Exclude",
+          "default": [
+            "**/*.md",
+            "**/*.markdown"
+          ]
         }
       ],
       "enabled": false
@@ -3174,6 +3240,13 @@
         {
           "name": "AllowUnusedKeywordArguments",
           "default": "false"
+        },
+        {
+          "name": "Exclude",
+          "default": [
+            "**/*.md",
+            "**/*.markdown"
+          ]
         }
       ],
       "enabled": true
@@ -3198,6 +3271,13 @@
         {
           "name": "IgnoreNotImplementedMethods",
           "default": "true"
+        },
+        {
+          "name": "Exclude",
+          "default": [
+            "**/*.md",
+            "**/*.markdown"
+          ]
         }
       ],
       "enabled": true
@@ -3234,6 +3314,13 @@
           "default": [
 
           ]
+        },
+        {
+          "name": "Exclude",
+          "default": [
+            "**/*.md",
+            "**/*.markdown"
+          ]
         }
       ],
       "enabled": true
@@ -3250,6 +3337,13 @@
         {
           "name": "SafeAutoCorrect",
           "default": "false"
+        },
+        {
+          "name": "Exclude",
+          "default": [
+            "**/*.md",
+            "**/*.markdown"
+          ]
         }
       ],
       "enabled": true
@@ -3272,6 +3366,13 @@
         {
           "name": "Safe",
           "default": "false"
+        },
+        {
+          "name": "Exclude",
+          "default": [
+            "**/*.md",
+            "**/*.markdown"
+          ]
         }
       ],
       "enabled": false
@@ -3328,6 +3429,13 @@
         {
           "name": "CheckForMethodsWithNoSideEffects",
           "default": "false"
+        },
+        {
+          "name": "Exclude",
+          "default": [
+            "**/*.md",
+            "**/*.markdown"
+          ]
         }
       ],
       "enabled": false
@@ -3677,7 +3785,8 @@
         {
           "name": "Exclude",
           "default": [
-            "Rakefile.rb"
+            "**/*.md",
+            "**/*.markdown"
           ]
         },
         {
@@ -4238,6 +4347,13 @@
           "default": [
             "©"
           ]
+        },
+        {
+          "name": "Exclude",
+          "default": [
+            "**/*.md",
+            "**/*.markdown"
+          ]
         }
       ],
       "enabled": false
@@ -4605,6 +4721,13 @@
         {
           "name": "RequireColon",
           "default": "true"
+        },
+        {
+          "name": "Exclude",
+          "default": [
+            "**/*.md",
+            "**/*.markdown"
+          ]
         }
       ],
       "enabled": false
@@ -4793,8 +4916,8 @@
         {
           "name": "Exclude",
           "default": [
-            "spec/**/*",
-            "test/**/*"
+            "**/*.md",
+            "**/*.markdown"
           ]
         }
       ],
@@ -5190,6 +5313,13 @@
         {
           "name": "SafeAutoCorrect",
           "default": "false"
+        },
+        {
+          "name": "Exclude",
+          "default": [
+            "**/*.md",
+            "**/*.markdown"
+          ]
         }
       ],
       "enabled": false
@@ -12575,6 +12705,482 @@
     },
     {
       "patternId": "I18n_RailsI18n_DecorateStringFormattingUsingInterpolation",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "Faker_DeprecatedArguments",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "ArgumentKeywords",
+          "default": "{\"Faker::Dune\"=>{\"quote\"=>[\"character\"], \"saying\"=>[\"source\"]}, \"Faker::Books::Lovecraft\"=>{\"fhtagn\"=>[\"number\"], \"sentence\"=>[\"word_count\", \"random_words_to_add\"], \"words\"=>[\"number\", \"spaces_allowed\"], \"sentences\"=>[\"number\"], \"paragraph\"=>[\"sentence_count\", \"random_sentences_to_add\"], \"paragraphs\"=>[\"number\"], \"paragraph_by_chars\"=>[\"characters\"]}, \"Faker::Address\"=>{\"city\"=>[\"options\"], \"street_address\"=>[\"include_secondary\"], \"zip_code\"=>[\"state_abbreviation\"], \"country_by_code\"=>[\"code\"], \"country_name_to_code\"=>[\"name\"]}, \"Faker::Alphanumeric\"=>{\"alpha\"=>[\"number\"], \"alphanumeric\"=>[\"number\"]}, \"Faker::App\"=>{\"semantic_version\"=>[\"major\", \"minor\", \"patch\"]}, \"Faker::Avatar\"=>{\"image\"=>[\"slug\", \"size\", \"format\", \"set\", \"bgset\"]}, \"Faker::Bank\"=>{\"account_number\"=>[\"digits\"], \"iban\"=>[\"country_code\"]}, \"Faker::Boolean\"=>{\"boolean\"=>[\"true_ratio\"]}, \"Faker::ChileRut\"=>{\"rut\"=>[\"min_rut\", \"fixed\"], \"full_rut\"=>[\"min_rut\", \"fixed\"]}, \"Faker::Code\"=>{\"isbn\"=>[\"base\"], \"ean\"=>[\"base\"], \"nric\"=>[\"min_age\", \"max_age\"]}, \"Faker::Commerce\"=>{\"promotion_code\"=>[\"digits\"], \"department\"=>[\"max\", \"fixed_amount\"], \"price\"=>[\"range\", \"as_string\"]}, \"Faker::Company\"=>{\"polish_register_of_national_economy\"=>[\"length\"], \"brazilian_company_number\"=>[\"formatted\"]}, \"Faker::CryptoCoin\"=>{\"coin_name\"=>[\"coin\"], \"acronym\"=>[\"coin\"], \"url_logo\"=>[\"coin\"]}, \"Faker::Date\"=>{\"between\"=>[\"from\", \"to\"], \"between_except\"=>[\"from\", \"to\", \"excepted\"], \"forward\"=>[\"days\"], \"backward\"=>[\"days\"], \"birthday\"=>[\"min_age\", \"max_age\"]}, \"Faker::Demographic\"=>{\"height\"=>[\"unit\"]}, \"Faker::DrivingLicence\"=>{\"british_driving_licence\"=>[\"last_name\", \"initials\", \"gender\", \"date_of_birth\"]}, \"Faker::File\"=>{\"dir\"=>[\"segment_count\", \"root\", \"directory_separator\"], \"file_name\"=>[\"dir\", \"name\", \"ext\", \"directory_separator\"]}, \"Faker::Fillmurray\"=>{\"image\"=>[\"grayscale\", \"width\", \"height\"]}, \"Faker::Finance\"=>{\"vat_number\"=>[\"country\"]}, \"Faker::Hipster\"=>{\"words\"=>[\"number\", \"supplemental\", \"spaces_allowed\"], \"sentence\"=>[\"word_count\", \"supplemental\", \"random_words_to_add\"], \"sentences\"=>[\"number\", \"supplemental\"], \"paragraph\"=>[\"sentence_count\", \"supplemental\", \"random_sentences_to_add\"], \"paragraphs\"=>[\"number\", \"supplemental\"], \"paragraph_by_chars\"=>[\"characters\", \"supplemental\"]}, \"Faker::IDNumber\"=>{\"brazilian_citizen_number\"=>[\"formatted\"], \"brazilian_id\"=>[\"formatted\"]}, \"Faker::Internet\"=>{\"email\"=>[\"name\", \"separators\"], \"free_email\"=>[\"name\"], \"safe_email\"=>[\"name\"], \"username\"=>[\"specifier\", \"separators\"], \"password\"=>[\"min_length\", \"max_length\", \"mix_case\", \"special_characters\"], \"domain_name\"=>[\"subdomain\"], \"fix_umlauts\"=>[\"string\"], \"mac_address\"=>[\"prefix\"], \"url\"=>[\"host\", \"path\", \"scheme\"], \"slug\"=>[\"words\", \"glue\"], \"user_agent\"=>[\"vendor\"]}, \"Faker::Invoice\"=>{\"amount_between\"=>[\"from\", \"to\"], \"creditor_reference\"=>[\"ref\"], \"reference\"=>[\"ref\"]}, \"Faker::Json\"=>{\"shallow_json\"=>[\"width\", \"options\"], \"add_depth_to_json\"=>[\"json\", \"width\", \"options\"]}, \"Faker::Lorem\"=>{\"words\"=>[\"number\", \"supplemental\"], \"characters\"=>[\"number\"], \"sentence\"=>[\"word_count\", \"supplemental\", \"random_words_to_add\"], \"sentences\"=>[\"number\", \"supplemental\"], \"paragraph\"=>[\"sentence_count\", \"supplemental\", \"random_sentences_to_add\"], \"paragraphs\"=>[\"number\", \"supplemental\"], \"paragraph_by_chars\"=>[\"number\", \"supplemental\"], \"question\"=>[\"word_count\", \"supplemental\", \"random_words_to_add\"], \"questions\"=>[\"number\", \"supplemental\"]}, \"Faker::LoremFlickr\"=>{\"image\"=>[\"size\", \"search_terms\", \"match_all\"], \"grayscale_image\"=>[\"size\", \"search_terms\", \"match_all\"], \"pixelated_image\"=>[\"size\", \"search_terms\", \"match_all\"], \"colorized_image\"=>[\"size\", \"color\", \"search_terms\", \"match_all\"]}, \"Faker::LoremPixel\"=>{\"image\"=>[\"size\", \"is_gray\", \"category\", \"number\", \"text\", \"secure\"]}, \"Faker::Markdown\"=>{\"sandwich\"=>[\"sentences\", \"repeat\"]}, \"Faker::Measurement\"=>{\"height\"=>[\"amount\"], \"length\"=>[\"amount\"], \"volume\"=>[\"amount\"], \"weight\"=>[\"amount\"], \"metric_height\"=>[\"amount\"], \"metric_length\"=>[\"amount\"], \"metric_volume\"=>[\"amount\"], \"metric_weight\"=>[\"amount\"]}, \"Faker::Name\"=>{\"initials\"=>[\"number\"]}, \"Faker::NationalHealthService\"=>{\"check_digit\"=>[\"number\"]}, \"Faker::Number\"=>{\"number\"=>[\"digits\"], \"leading_zero_number\"=>[\"digits\"], \"decimal_part\"=>[\"digits\"], \"decimal\"=>[\"l_digits\", \"r_digits\"], \"hexadecimal\"=>[\"digits\"], \"normal\"=>[\"mean\", \"standard_deviation\"], \"between\"=>[\"from\", \"to\"], \"within\"=>[\"range\"], \"positive\"=>[\"from\", \"to\"], \"negative\"=>[\"from\", \"to\"]}, \"Faker::Omniauth\"=>{\"google\"=>[\"name\", \"email\", \"uid\"], \"facebook\"=>[\"name\", \"email\", \"username\", \"uid\"], \"twitter\"=>[\"name\", \"nickname\", \"uid\"], \"linkedin\"=>[\"name\", \"email\", \"uid\"], \"github\"=>[\"name\", \"email\", \"uid\"]}, \"Faker::PhoneNumber\"=>{\"subscriber_number\"=>[\"length\"]}, \"Faker::Placeholdit\"=>{\"image\"=>[\"size\", \"format\", \"background_color\", \"text_color\", \"text\"]}, \"Faker::Relationship\"=>{\"familial\"=>[\"connection\"]}, \"Faker::Source\"=>{\"hello_world\"=>[\"lang\"], \"print\"=>[\"str\", \"lang\"], \"print_1_to_10\"=>[\"lang\"]}, \"Faker::String\"=>{\"random\"=>[\"length\"]}, \"Faker::Stripe\"=>{\"valid_card\"=>[\"card_type\"], \"valid_token\"=>[\"card_type\"], \"invalid_card\"=>[\"card_error\"], \"ccv\"=>[\"card_type\"]}, \"Faker::Time\"=>{\"between\"=>[\"from\", \"to\", \"format\"], \"between_dates\"=>[\"from\", \"to\", \"period\", \"format\"], \"forward\"=>[\"days\", \"period\", \"format\"], \"backward\"=>[\"days\", \"period\", \"format\"]}, \"Faker::Twitter\"=>{\"user\"=>[\"include_status\", \"include_email\"], \"status\"=>[\"include_user\", \"include_photo\"], \"status_entities\"=>[\"include_photo\"]}, \"Faker::Types\"=>{\"rb_string\"=>[\"words\"], \"rb_integer\"=>[\"from\", \"to\"], \"rb_hash\"=>[\"number\", \"type\"], \"complex_rb_hash\"=>[\"number\"], \"rb_array\"=>[\"len\"]}, \"Faker::Vehicle\"=>{\"model\"=>[\"make_of_model\"], \"mileage\"=>[\"min\", \"max\"], \"license_plate\"=>[\"state_abbreviation\"]}, \"Faker::WorldCup\"=>{\"group\"=>[\"group\"], \"roster\"=>[\"country\", \"type\"]}, \"Faker::Dota\"=>{\"quote\"=>[\"hero\"]}, \"Faker::Movies::StarWars\"=>{\"quote\"=>[\"character\"]}}"
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "FactoryBot_AssociationStyle",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "Safe",
+          "default": "false"
+        },
+        {
+          "name": "EnforcedStyle",
+          "default": "implicit"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": [
+            "explicit",
+            "implicit"
+          ]
+        },
+        {
+          "name": "NonImplicitAssociationMethodNames",
+          "default": ""
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "FactoryBot_AttributeDefinedStatically",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "FactoryBot_ConsistentParenthesesStyle",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "Include",
+          "default": [
+            "**/*_spec.rb",
+            "**/spec/**/*",
+            "**/test/**/*",
+            "**/features/support/factories/**/*.rb"
+          ]
+        },
+        {
+          "name": "EnforcedStyle",
+          "default": "require_parentheses"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": [
+            "require_parentheses",
+            "omit_parentheses"
+          ]
+        },
+        {
+          "name": "ExplicitOnly",
+          "default": "false"
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "FactoryBot_CreateList",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "AutoCorrect",
+          "default": "contextual"
+        },
+        {
+          "name": "Include",
+          "default": [
+            "**/*_spec.rb",
+            "**/spec/**/*",
+            "**/test/**/*",
+            "**/features/support/factories/**/*.rb"
+          ]
+        },
+        {
+          "name": "EnforcedStyle",
+          "default": "create_list"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": [
+            "create_list",
+            "n_times"
+          ]
+        },
+        {
+          "name": "ExplicitOnly",
+          "default": "false"
+        },
+        {
+          "name": "SafeAutoCorrect",
+          "default": "false"
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "FactoryBot_ExcessiveCreateList",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "Include",
+          "default": [
+            "**/*_spec.rb",
+            "**/spec/**/*",
+            "**/test/**/*",
+            "**/features/support/factories/**/*.rb"
+          ]
+        },
+        {
+          "name": "MaxAmount",
+          "default": "10"
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "FactoryBot_FactoryAssociationWithStrategy",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "Include",
+          "default": [
+            "**/*_spec.rb",
+            "**/spec/**/*",
+            "**/test/**/*",
+            "**/features/support/factories/**/*.rb"
+          ]
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "FactoryBot_FactoryClassName",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "FactoryBot_FactoryNameStyle",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "Include",
+          "default": [
+            "**/*_spec.rb",
+            "**/spec/**/*",
+            "**/test/**/*",
+            "**/features/support/factories/**/*.rb"
+          ]
+        },
+        {
+          "name": "EnforcedStyle",
+          "default": "symbol"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": [
+            "symbol",
+            "string"
+          ]
+        },
+        {
+          "name": "ExplicitOnly",
+          "default": "false"
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "FactoryBot_IdSequence",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "FactoryBot_RedundantFactoryOption",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "Include",
+          "default": [
+            "**/*_spec.rb",
+            "**/spec/**/*",
+            "**/test/**/*",
+            "**/features/support/factories/**/*.rb"
+          ]
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "FactoryBot_SyntaxMethods",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "Include",
+          "default": [
+            "**/*_spec.rb",
+            "**/spec/**/*",
+            "**/test/**/*",
+            "**/features/support/factories/**/*.rb"
+          ]
+        },
+        {
+          "name": "SafeAutoCorrect",
+          "default": "false"
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "Mdsol_LogWithData",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "Mdsol_UnlessNotEqual",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "RSpecRails_AvoidSetupHook",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "RSpecRails_HaveHttpStatus",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "ResponseMethods",
+          "default": [
+            "response",
+            "last_response"
+          ]
+        },
+        {
+          "name": "SafeAutoCorrect",
+          "default": "false"
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "RSpecRails_HttpStatus",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "symbolic"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": [
+            "numeric",
+            "symbolic",
+            "be_status"
+          ]
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "RSpecRails_InferredSpecType",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "Safe",
+          "default": "false"
+        },
+        {
+          "name": "Inferences",
+          "default": "{\"channels\"=>\"channel\", \"controllers\"=>\"controller\", \"features\"=>\"feature\", \"generator\"=>\"generator\", \"helpers\"=>\"helper\", \"jobs\"=>\"job\", \"mailboxes\"=>\"mailbox\", \"mailers\"=>\"mailer\", \"models\"=>\"model\", \"requests\"=>\"request\", \"integration\"=>\"request\", \"api\"=>\"request\", \"routing\"=>\"routing\", \"system\"=>\"system\", \"views\"=>\"view\"}"
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "RSpecRails_MinitestAssertions",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "RSpecRails_NegationBeValid",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "AutoCorrect",
+          "default": "contextual"
+        },
+        {
+          "name": "Safe",
+          "default": "false"
+        },
+        {
+          "name": "EnforcedStyle",
+          "default": "not_to"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": [
+            "not_to",
+            "be_invalid"
+          ]
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "RSpecRails_TravelAround",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "Safe",
+          "default": "false"
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "Capybara_RSpec_HaveSelector",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "DefaultSelector",
+          "default": "css"
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "Capybara_RSpec_PredicateMatcher",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "Strict",
+          "default": "true"
+        },
+        {
+          "name": "EnforcedStyle",
+          "default": "inflected"
+        },
+        {
+          "name": "AllowedExplicitMatchers",
+          "default": [
+
+          ]
+        },
+        {
+          "name": "SupportedStyles",
+          "default": [
+            "inflected",
+            "explicit"
+          ]
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "Capybara_ClickLinkOrButtonStyle",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "link_or_button"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": [
+            "link_or_button",
+            "strict"
+          ]
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "Capybara_CurrentPathExpectation",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "Capybara_MatchStyle",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "Capybara_NegationMatcher",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "have_no"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": [
+            "have_no",
+            "not_to"
+          ]
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "Capybara_RedundantWithinFind",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "Capybara_SpecificActions",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "Capybara_SpecificFinders",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "Capybara_SpecificMatcher",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "Capybara_VisibilityMatcher",
       "level": "Info",
       "category": "CodeStyle",
       "enabled": false
