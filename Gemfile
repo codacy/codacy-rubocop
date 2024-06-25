@@ -8,6 +8,7 @@ end
 gem "yard"
 gem "rake"
 gem "rdoc"
+gem "rails"
 gem "activesupport"
 gem "actiontext"
 gem "actionmailbox"
