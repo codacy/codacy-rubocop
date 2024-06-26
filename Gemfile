@@ -41,7 +41,7 @@ gem "rubocop-i18n"
 gem "rubocop-md"
 gem "rubocop-mdsol"
 gem "rubocop-performance"
-gem "rubocop-rails"
+gem 'rubocop-rails', require: false
 gem "rubocop-rake"
 gem "rubocop-rspec"
 gem "rubocop-rspec_rails"
