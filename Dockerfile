@@ -22,10 +22,10 @@ COPY docs docs
 
 RUN echo 'gem: --no-document' > /etc/gemrc \
     && bundle install \
-    && gem cleanup --dry-run \
+    && gem cleanup  \
     && rm -rf /tmp/* /var/cache/apk/* 
 
-RUN bundle config set --local path 'vendor/bundle' && bundle install && gem cleanup --dry-run && ./scripts/doc_generate.sh .
+RUN bundle config set --local path 'vendor/bundle' && bundle install && gem cleanup && ./scripts/doc_generate.sh .
 
 FROM $BASE_IMAGE
 
