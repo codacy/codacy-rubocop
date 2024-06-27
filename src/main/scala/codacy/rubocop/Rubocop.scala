@@ -140,7 +140,7 @@ object Rubocop extends Tool {
           file.toString
       }
 
-    List("rubocop", "--force-exclusion", "-f", "json", "-o", outputFilePath.toAbsolutePath.toString) ++ configFileOptions ++ patternsCmd ++ filesCmd
+    List("bundle exec rubocop", "--force-exclusion", "-f", "json", "-o", outputFilePath.toAbsolutePath.toString) ++ configFileOptions ++ patternsCmd ++ filesCmd
   }
 
   private[this] lazy val resultFilePath =
