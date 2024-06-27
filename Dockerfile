@@ -37,6 +37,9 @@ RUN apk add --no-cache ruby ruby-etc ruby-dev ruby-irb ruby-rake ruby-io-console
     openjdk17-jre \
     bash
 
+COPY Gemfile .
+COPY Gemfile.lock .
+
 COPY --from=doc-generator /usr/local/bundle /usr/local/bundle
 COPY --from=doc-generator /doc_generator/docs /docs
 
