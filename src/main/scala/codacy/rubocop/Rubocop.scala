@@ -45,11 +45,10 @@ object Rubocop extends Tool {
       files: Option[Set[api.Source.File]],
       options: Map[Options.Key, Options.Value]
   )(implicit specification: Tool.Specification): Try[List[Result]] = {
-
     val cmd = getCommandFor(Paths.get(source.path), configuration, files, specification, resultFilePath)
     CommandRunner.exec(cmd, Some(new File(source.path))) match {
 
-      case Right(resultFromTool) if resultFromTool.exitCode < 2 =>
+      case Right(resultFromTool) =>
         parseResult(resultFilePath.toFile) match {
           case s @ Success(_) => s
           case Failure(e) =>
@@ -62,15 +61,6 @@ object Rubocop extends Tool {
                 """.stripMargin
             Failure(new Exception(msg))
         }
-
-      case Right(resultFromTool) =>
-        val msg =
-          s"""
-             |Rubocop exited with code ${resultFromTool.exitCode}
-             |stdout: ${resultFromTool.stdout.mkString(Properties.lineSeparator)}
-             |stderr: ${resultFromTool.stderr.mkString(Properties.lineSeparator)}
-                """.stripMargin
-        Failure(new Exception(msg))
 
       case Left(e) =>
         Failure(e)
@@ -140,7 +130,14 @@ object Rubocop extends Tool {
           file.toString
       }
 
-    List("rubocop", "--force-exclusion", "-f", "json", "-o", outputFilePath.toAbsolutePath.toString) ++ configFileOptions ++ patternsCmd ++ filesCmd
+    List(
+      "rubocop",
+      "--force-exclusion",
+      "-f",
+      "json",
+      "-o",
+      outputFilePath.toAbsolutePath.toString
+    ) ++ configFileOptions ++ patternsCmd ++ filesCmd
   }
 
   private[this] lazy val resultFilePath =

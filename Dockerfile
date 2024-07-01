@@ -29,10 +29,6 @@ RUN bundle config set --local path 'vendor/bundle' && bundle install && gem clea
 
 FROM $BASE_IMAGE
 
-ARG GEM_FOLDER
-ENV GEM_HOME=$GEM_FOLDER
-ENV PATH $GEM_HOME/bin:$GEM_HOME/gems/bin:$PATH
-
 RUN apk add --no-cache ruby ruby-etc ruby-dev ruby-irb ruby-rake ruby-io-console ruby-bigdecimal ruby-json \ 
     openjdk17-jre \
     bash
