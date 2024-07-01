@@ -13,7 +13,7 @@ import com.codacy.tools.scala.seed.utils.CommandRunner
 import play.api.libs.json._
 
 import scala.io.Source
-import scala.util.{Failure, Properties, Success, Try}
+import scala.util.{Failure, Properties, Try}
 
 object Rubocop extends Tool {
   private val plugins: List[String] =
@@ -39,49 +39,43 @@ object Rubocop extends Tool {
   private val filesToIgnore: Set[String] =
     Set("Gemfile.lock").map(_.toLowerCase())
 
-  override def apply(
-      source: api.Source.Directory,
-      configuration: Option[List[Pattern.Definition]],
-      files: Option[Set[api.Source.File]],
-      options: Map[Options.Key, Options.Value]
-  )(implicit specification: Tool.Specification): Try[List[Result]] = {
-    val cmd = getCommandFor(Paths.get(source.path), configuration, files, specification, resultFilePath)
-    CommandRunner.exec(cmd, Some(new File(source.path))) match {
-
-      case Right(resultFromTool) =>
-        parseResult(resultFilePath.toFile) match {
-          case s @ Success(_) => s
-          case Failure(e) =>
-            val msg =
-              s"""
-                 |Rubocop exited with code ${resultFromTool.exitCode}
-                 |message: ${e.getMessage}
-                 |stdout: ${resultFromTool.stdout.mkString(Properties.lineSeparator)}
-                 |stderr: ${resultFromTool.stderr.mkString(Properties.lineSeparator)}
-                """.stripMargin
-            Failure(new Exception(msg))
-        }
-
-      case Left(e) =>
-        Failure(e)
-    }
-  }
-
-  private[this] def parseResult(filename: File): Try[List[Result]] = {
-    Try {
-      val resultFromTool = Source.fromFile(filename).getLines().mkString
-      Json.parse(resultFromTool)
-    }.flatMap { json =>
-      json.validate[RubocopResult] match {
-        case JsSuccess(rubocopResult, _) =>
-          Success(rubocopResult.files.getOrElse(List.empty).flatMap { file =>
-            ruboFileToResult(file)
-          })
-        case JsError(err) =>
-          Failure(new Throwable(Json.stringify(JsError.toJson(err))))
+override def apply(
+    source: api.Source.Directory,
+    configuration: Option[List[Pattern.Definition]],
+    files: Option[Set[api.Source.File]],
+    options: Map[Options.Key, Options.Value]
+)(implicit specification: Tool.Specification): Try[List[Result]] = {
+  val cmd = getCommandFor(Paths.get(source.path), configuration, files, specification, resultFilePath)
+  CommandRunner.exec(cmd, Some(new File(source.path))) match {
+    case Right(resultFromTool) =>
+      Try(parseResult(resultFilePath.toFile)).recover {
+        case e =>
+          val msg =
+            s"""
+               |Rubocop exited with code ${resultFromTool.exitCode}
+               |message: ${e.getMessage}
+               |stdout: ${resultFromTool.stdout.mkString(Properties.lineSeparator)}
+               |stderr: ${resultFromTool.stderr.mkString(Properties.lineSeparator)}
+              """.stripMargin
+          println(msg+resultFilePath)
+          List.empty[Result]
       }
-    }
+
+    case Left(e) =>
+      Failure(e)
   }
+}
+
+private[this] def parseResult(filename: File): List[Result] = {
+  val resultFromTool = Source.fromFile(filename).getLines().mkString
+  val json = Json.parse(resultFromTool)
+  json.validate[RubocopResult] match {
+    case JsSuccess(rubocopResult, _) =>
+      rubocopResult.files.getOrElse(List.empty).flatMap(ruboFileToResult)
+    case JsError(_) =>
+      List.empty[Result] // Return an empty list in case of parsing errors
+  }
+}
 
   private[this] def ruboFileToResult(rubocopFiles: RubocopFiles): List[Result] = {
     rubocopFiles.offenses.getOrElse(List.empty).map { offense =>
