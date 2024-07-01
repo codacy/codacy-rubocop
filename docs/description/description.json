@@ -8666,6 +8666,10 @@
     "timeToFix": 5,
     "parameters": [
       {
+        "name": "Safe",
+        "description": "Safe"
+      },
+      {
         "name": "ForbiddenMethods",
         "description": "ForbiddenMethods"
       },
@@ -8949,7 +8953,13 @@
     "patternId": "Rails_WhereRange",
     "title": "Use ranges in `where` instead of manually constructing SQL.",
     "description": "Use ranges in `where` instead of manually constructing SQL.",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "SafeAutoCorrect",
+        "description": "SafeAutoCorrect"
+      }
+    ]
   },
   {
     "patternId": "Sorbet_BindingConstantWithoutTypeAlias",
