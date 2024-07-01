@@ -39,43 +39,44 @@ object Rubocop extends Tool {
   private val filesToIgnore: Set[String] =
     Set("Gemfile.lock").map(_.toLowerCase())
 
-override def apply(
-    source: api.Source.Directory,
-    configuration: Option[List[Pattern.Definition]],
-    files: Option[Set[api.Source.File]],
-    options: Map[Options.Key, Options.Value]
-)(implicit specification: Tool.Specification): Try[List[Result]] = {
-  val cmd = getCommandFor(Paths.get(source.path), configuration, files, specification, resultFilePath)
-  CommandRunner.exec(cmd, Some(new File(source.path))) match {
-    case Right(resultFromTool) =>
-      Try(parseResult(resultFilePath.toFile)).recover {
-        case e =>
-          val msg =
-            s"""
+  override def apply(
+      source: api.Source.Directory,
+      configuration: Option[List[Pattern.Definition]],
+      files: Option[Set[api.Source.File]],
+      options: Map[Options.Key, Options.Value]
+  )(implicit specification: Tool.Specification): Try[List[Result]] = {
+    val cmd = getCommandFor(Paths.get(source.path), configuration, files, specification, resultFilePath)
+    CommandRunner.exec(cmd, Some(new File(source.path))) match {
+      case Right(resultFromTool) =>
+        Try(parseResult(resultFilePath.toFile)).recover {
+          case e =>
+            val msg =
+              s"""
                |Rubocop exited with code ${resultFromTool.exitCode}
                |message: ${e.getMessage}
                |stdout: ${resultFromTool.stdout.mkString(Properties.lineSeparator)}
                |stderr: ${resultFromTool.stderr.mkString(Properties.lineSeparator)}
               """.stripMargin
-          println(msg+resultFilePath)
-          List.empty[Result]
-      }
+            List.empty[Result]
+        }
 
-    case Left(e) =>
-      Failure(e)
+      case Left(e) =>
+        Failure(e)
+    }
   }
-}
 
-private[this] def parseResult(filename: File): List[Result] = {
-  val resultFromTool = Source.fromFile(filename).getLines().mkString
-  val json = Json.parse(resultFromTool)
-  json.validate[RubocopResult] match {
-    case JsSuccess(rubocopResult, _) =>
-      rubocopResult.files.getOrElse(List.empty).flatMap(ruboFileToResult)
-    case JsError(_) =>
-      List.empty[Result] // Return an empty list in case of parsing errors
+  private[this] def parseResult(filename: File): List[Result] = {
+    val resultFromTool = Source.fromFile(filename).getLines().mkString
+    val json = Json.parse(resultFromTool)
+    json.validate[RubocopResult] match {
+      case JsSuccess(rubocopResult, _) =>
+        Success(rubocopResult.files.getOrElse(List.empty).flatMap { file =>
+          ruboFileToResult(file)
+        })
+      case JsError(_) =>
+        List.empty[Result] // Return an empty list in case of parsing errors
+    }
   }
-}
 
   private[this] def ruboFileToResult(rubocopFiles: RubocopFiles): List[Result] = {
     rubocopFiles.offenses.getOrElse(List.empty).map { offense =>
