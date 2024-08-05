@@ -105,11 +105,13 @@ GEM
     erubi (1.13.0)
     faker (3.4.1)
       i18n (>= 1.8.11, < 2)
+    fiber-storage (0.1.2)
     git_diff_parser (3.2.0)
     globalid (1.2.1)
       activesupport (>= 6.1)
-    graphql (2.3.6)
+    graphql (2.3.12)
       base64
+      fiber-storage
     haml (6.3.0)
       temple (>= 0.8.2)
       thor
@@ -159,6 +161,8 @@ GEM
       net-protocol
     nio4r (2.7.3)
     nokogiri (1.16.6-x86_64-darwin)
+      racc (~> 1.4)
+    nokogiri (1.16.6-x86_64-linux)
       racc (~> 1.4)
     parallel (1.25.1)
     parser (3.3.3.0)
@@ -314,6 +318,7 @@ GEM
       activesupport (>= 6.1)
       sprockets (>= 3.0.0)
     sqlite3 (2.0.2-x86_64-darwin)
+    sqlite3 (2.0.2-x86_64-linux-gnu)
     standard (1.39.0)
       language_server-protocol (~> 3.17.0.2)
       lint_roller (~> 1.0)
@@ -369,6 +374,7 @@ GEM
 
 PLATFORMS
   x86_64-darwin-23
+  x86_64-linux
 
 DEPENDENCIES
   actioncable
