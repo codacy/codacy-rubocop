@@ -6,6 +6,7 @@ Checks for the use of old-style attribute validation macros.
 ```ruby
 # bad
 validates_acceptance_of :foo
+validates_comparison_of :foo
 validates_confirmation_of :foo
 validates_exclusion_of :foo
 validates_format_of :foo
@@ -20,6 +21,7 @@ validates_uniqueness_of :foo
 # good
 validates :foo, acceptance: true
 validates :foo, confirmation: true
+validates :foo, comparison: true
 validates :foo, exclusion: true
 validates :foo, format: true
 validates :foo, inclusion: true

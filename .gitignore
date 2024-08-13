@@ -16,3 +16,4 @@ rubocop-doc.yml
 .metals
 .bloop
 .vscode
+bin/
