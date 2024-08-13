@@ -9817,6 +9817,10 @@
       "category": "ErrorProne",
       "parameters": [
         {
+          "name": "Safe",
+          "default": "false"
+        },
+        {
           "name": "ForbiddenMethods",
           "default": [
             "decrement!",
@@ -10155,6 +10159,12 @@
       "patternId": "Rails_WhereRange",
       "level": "Warning",
       "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "SafeAutoCorrect",
+          "default": "false"
+        }
+      ],
       "enabled": false
     },
     {
@@ -10356,6 +10366,12 @@
           ]
         }
       ],
+      "enabled": false
+    },
+    {
+      "patternId": "Sorbet_ValidGemVersionAnnotations",
+      "level": "Info",
+      "category": "CodeStyle",
       "enabled": false
     },
     {
@@ -13181,6 +13197,12 @@
     },
     {
       "patternId": "Capybara_VisibilityMatcher",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "Rubycw_Rubycw",
       "level": "Info",
       "category": "CodeStyle",
       "enabled": false

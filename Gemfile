@@ -45,6 +45,7 @@ gem 'rubocop-rails', require: false
 gem "rubocop-rake"
 gem "rubocop-rspec"
 gem "rubocop-rspec_rails"
+gem "rubocop-rubycw"
 gem "rubocop-sorbet"
 gem "rubocop-shopify", require: false
 gem "rubocop-graphql"
