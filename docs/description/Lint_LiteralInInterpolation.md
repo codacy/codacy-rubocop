@@ -6,10 +6,9 @@ Checks for interpolated literals.
 ```ruby
 
 # bad
-
 "result is #{10}"
-# good
 
+# good
 "result is 10"
 ```
 

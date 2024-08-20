@@ -11,6 +11,7 @@ By default, there are no methods to allowed.
 
 # bad
 some_method a { |val| puts val }
+
 # good
 # With parentheses, there's no ambiguity.
 some_method(a { |val| puts val })

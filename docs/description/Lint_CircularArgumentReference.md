@@ -9,27 +9,26 @@ This cop mirrors a warning produced by MRI since 2.2.
 ```ruby
 
 # bad
-
 def bake(pie: pie)
   pie.heat_up
 end
-# good
 
+# good
 def bake(pie:)
   pie.refrigerate
 end
-# good
 
+# good
 def bake(pie: self.pie)
   pie.feed_to(user)
 end
-# bad
 
+# bad
 def cook(dry_ingredients = dry_ingredients)
   dry_ingredients.reduce(&:+)
 end
-# good
 
+# good
 def cook(dry_ingredients = self.dry_ingredients)
   dry_ingredients.combine
 end

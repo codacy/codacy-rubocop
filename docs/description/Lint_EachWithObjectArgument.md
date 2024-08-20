@@ -10,10 +10,9 @@ It's definitely a bug.
 ```ruby
 
 # bad
-
 sum = numbers.each_with_object(0) { |e, a| a += e }
-# good
 
+# good
 num = 0
 sum = numbers.each_with_object(num) { |e, a| a += e }
 ```

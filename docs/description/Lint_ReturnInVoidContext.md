@@ -16,6 +16,7 @@ end
 def foo=(bar)
   return 42
 end
+
 # good
 def initialize
   foo

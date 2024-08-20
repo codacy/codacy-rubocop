@@ -13,12 +13,11 @@ an operand of &&/||.
 ```ruby
 
 # bad
-
 if day.is? :tuesday && month == :jan
   # ...
 end
-# good
 
+# good
 if day.is?(:tuesday) && month == :jan
   # ...
 end

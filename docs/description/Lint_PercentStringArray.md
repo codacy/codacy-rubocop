@@ -10,10 +10,9 @@ rather than meant to be part of the resulting strings.
 ```ruby
 
 # bad
-
 %w('foo', "bar")
-# good
 
+# good
 %w(foo bar)
 ```
 

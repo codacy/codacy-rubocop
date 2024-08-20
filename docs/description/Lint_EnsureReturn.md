@@ -11,15 +11,14 @@ If you want to rescue some (or all) exceptions, best to do it explicitly
 ```ruby
 
 # bad
-
 def foo
   do_something
 ensure
   cleanup
   return self
 end
-# good
 
+# good
 def foo
   do_something
   self
@@ -27,8 +26,7 @@ ensure
   cleanup
 end
 
-# also good
-
+# good
 def foo
   begin
     do_something

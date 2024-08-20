@@ -142,6 +142,18 @@
     ]
   },
   {
+    "patternId": "Gemspec_AddRuntimeDependency",
+    "title": "Prefer `add_dependency` over `add_runtime_dependency`.",
+    "description": "Prefer `add_dependency` over `add_runtime_dependency`.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Include",
+        "description": "Include"
+      }
+    ]
+  },
+  {
     "patternId": "Gemspec_DependencyVersion",
     "title": "Requires or forbids specifying gem dependency versions.",
     "description": "Requires or forbids specifying gem dependency versions.",
@@ -3126,6 +3138,10 @@
       {
         "name": "CountBlocks",
         "description": "CountBlocks"
+      },
+      {
+        "name": "CountModifierForms",
+        "description": "CountModifierForms"
       },
       {
         "name": "Max",

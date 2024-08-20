@@ -11,6 +11,7 @@ In most cases it would be a typo.
 
 # good
 true
+
 # bad
 :false
 

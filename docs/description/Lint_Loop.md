@@ -11,12 +11,7 @@ Checks for uses of `begin...end while/until something`.
 begin
   do_something
 end while some_condition
-# bad
 
-# using until
-begin
-  do_something
-end until some_condition
 # good
 
 # while replacement
@@ -24,6 +19,14 @@ loop do
   do_something
   break unless some_condition
 end
+
+# bad
+
+# using until
+begin
+  do_something
+end until some_condition
+
 # good
 
 # until replacement

@@ -12,16 +12,15 @@ the same format string.
 ```ruby
 
 # bad
-
 format('A value: %s and another: %i', a_value)
-# good
 
+# good
 format('A value: %s and another: %i', a_value, another)
+
 # bad
-
 format('Unnumbered format: %s and numbered: %2$s', a_value, another)
-# good
 
+# good
 format('Numbered format: %1$s and numbered %2$s', a_value, another)
 ```
 

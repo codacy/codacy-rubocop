@@ -8,12 +8,15 @@ that cop checks whether any cop was actually enabled.
 # Examples
 
 ```ruby
+
 # bad
 foo = 1
 # rubocop:enable Layout/LineLength
 
 # good
-foo = 1# bad
+foo = 1
+
+# bad
 # rubocop:disable Style/StringLiterals
 foo = "1"
 # rubocop:enable Style/StringLiterals

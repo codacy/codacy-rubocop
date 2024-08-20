@@ -7,15 +7,14 @@ used in case 'when' expressions.
 ```ruby
 
 # bad
-
 case x
 when 'first'
   do_something
 when 'first'
   do_something_else
 end
-# good
 
+# good
 case x
 when 'first'
   do_something

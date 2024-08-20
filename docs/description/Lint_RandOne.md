@@ -7,13 +7,12 @@ Such calls always return `0`.
 ```ruby
 
 # bad
-
 rand 1
 Kernel.rand(-1)
 rand 1.0
 rand(-1.0)
-# good
 
+# good
 0 # just use 0 instead
 ```
 

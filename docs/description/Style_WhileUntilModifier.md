@@ -12,7 +12,9 @@ while x < 10
 end
 
 # good
-x += 1 while x < 10# bad
+x += 1 while x < 10
+
+# bad
 until x > 10
   x += 1
 end

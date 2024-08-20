@@ -9,14 +9,13 @@ method, possibly leading to unexpected behavior.
 ```ruby
 
 # bad
-
 @some_variable ||= begin
   return some_value if some_condition_is_met
 
   do_something
 end
-# good
 
+# good
 @some_variable ||= begin
   if some_condition_is_met
     some_value
@@ -26,7 +25,6 @@ end
 end
 
 # good
-
 some_variable = if some_condition_is_met
                   return if another_condition_is_met
 

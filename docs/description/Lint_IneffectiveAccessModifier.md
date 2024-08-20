@@ -9,7 +9,6 @@ used for that.
 ```ruby
 
 # bad
-
 class C
   private
 
@@ -17,8 +16,8 @@ class C
     puts 'hi'
   end
 end
-# good
 
+# good
 class C
   def self.method
     puts 'hi'
@@ -26,8 +25,8 @@ class C
 
   private_class_method :method
 end
-# good
 
+# good
 class C
   class << self
     private
