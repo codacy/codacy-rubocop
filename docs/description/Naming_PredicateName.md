@@ -1,28 +1,17 @@
 
-Checks that predicate methods names end with a question mark and
+Checks that predicate method names end with a question mark and
 do not start with a forbidden prefix.
 
-A method is determined to be a predicate method if its name starts
-with one of the prefixes defined in the `NamePrefix` configuration.
-You can change what prefixes are considered by changing this option.
-Any method name that starts with one of these prefixes is required by
-the cop to end with a `?`. Other methods can be allowed by adding to
-the `AllowedMethods` configuration.
+A method is determined to be a predicate method if its name starts with
+one of the prefixes listed in the `NamePrefix` configuration. The list
+defaults to `is_`, `has_`, and `have_` but may be overridden.
 
-NOTE: The `is_a?` method is allowed by default.
+Predicate methods must end with a question mark.
 
-If `ForbiddenPrefixes` is set, methods that start with the configured
-prefixes will not be allowed and will be removed by autocorrection.
-
-In other words, if `ForbiddenPrefixes` is empty, a method named `is_foo`
-will register an offense only due to the lack of question mark (and will be
-autocorrected to `is_foo?`). If `ForbiddenPrefixes` contains `is_`,
-`is_foo` will register an offense both because the ? is missing and because of
-the `is_` prefix, and will be corrected to `foo?`.
-
-NOTE: `ForbiddenPrefixes` is only applied to prefixes in `NamePrefix`;
-a prefix in the former but not the latter will not be considered by
-this cop.
+When `ForbiddenPrefixes` is also set (as it is by default), predicate
+methods which begin with a forbidden prefix are not allowed, even if
+they end with a `?`. These methods should be changed to remove the
+prefix.
 
 # Examples
 
@@ -31,25 +20,40 @@ this cop.
 def is_even(value)
 end
 
-def is_even?(value)
-end
-
+# When ForbiddenPrefixes: ['is_', 'has_', 'have_'] (default)
 # good
 def even?(value)
 end
 
-# bad
-def has_value
+# When ForbiddenPrefixes: []
+# good
+def is_even?(value)
+end# bad
+def seems_to_be_even(value)
 end
 
-def has_value?
+# When ForbiddenPrefixes: ['seems_to_be_']
+# good
+def even?(value)
 end
+
+# When ForbiddenPrefixes: []
+# good
+def seems_to_be_even?(value)
+end# Despite starting with the `is_` prefix, this method is allowed
+# good
+def is_a?(value)
+end# good
+def is_even?(value)
+end# bad
+define_method(:is_even) { |value| }
 
 # good
-def value?
-end# good
-def is_a?(value)
-end
+define_method(:even?) { |value| }# bad
+def_node_matcher(:is_even) { |value| }
+
+# good
+# def_node_matcher(:even?) { |value| }
 ```
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Naming/PredicateName)

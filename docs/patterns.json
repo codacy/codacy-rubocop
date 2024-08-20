@@ -1,6 +1,6 @@
 {
   "name": "rubocop",
-  "version": "1.64.1",
+  "version": "1.65.1",
   "patterns": [
     {
       "patternId": "Migration_DepartmentName",
@@ -180,6 +180,20 @@
             "**/*.gemfile",
             "**/Gemfile",
             "**/gems.rb"
+          ]
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "Gemspec_AddRuntimeDependency",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "Include",
+          "default": [
+            "**/*.gemspec"
           ]
         }
       ],
@@ -3545,6 +3559,10 @@
       "parameters": [
         {
           "name": "CountBlocks",
+          "default": "false"
+        },
+        {
+          "name": "CountModifierForms",
           "default": "false"
         },
         {

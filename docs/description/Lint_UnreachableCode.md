@@ -8,14 +8,12 @@ statement in non-final position in `begin` (implicit) blocks.
 ```ruby
 
 # bad
-
 def some_method
   return
   do_something
 end
 
 # bad
-
 def some_method
   if cond
     return
@@ -24,8 +22,8 @@ def some_method
   end
   do_something
 end
-# good
 
+# good
 def some_method
   do_something
 end

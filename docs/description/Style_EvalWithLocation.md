@@ -13,8 +13,17 @@ values. However, if `eval` is called without a binding argument, the cop
 will not attempt to automatically add a binding, or add filename and
 line values.
 
-This cop works only when a string literal is given as a code string.
+NOTE: This cop works only when a string literal is given as a code string.
 No offense is reported if a string variable is given as below:
+
+[source,ruby]
+----
+code = <<-RUBY
+  def do_something
+  end
+RUBY
+eval code # not checked.
+----
 
 # Examples
 
@@ -41,12 +50,7 @@ RUBY
 C.class_eval <<-RUBY, __FILE__, __LINE__ + 1
   def do_something
   end
-RUBY# not checked
-code = <<-RUBY
-  def do_something
-  end
 RUBY
-eval code
 ```
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Style/EvalWithLocation)

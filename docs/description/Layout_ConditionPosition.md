@@ -7,13 +7,12 @@ if/while/until.
 ```ruby
 
 # bad
-
 if
   some_condition
   do_something
 end
-# good
 
+# good
 if some_condition
   do_something
 end

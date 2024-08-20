@@ -41,6 +41,7 @@ def some_method
   binding.pry
   do_something
 end
+
 # bad (ok during development)
 
 # using byebug
@@ -48,6 +49,7 @@ def some_method
   byebug
   do_something
 end
+
 # good
 
 def some_method

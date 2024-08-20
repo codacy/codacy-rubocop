@@ -14,12 +14,14 @@ def foo
   def bar
   end
 end
+
 # good
 
 def foo
   bar = -> { puts 'hello' }
   bar.call
 end
+
 # good
 
 # `class_eval`, `instance_eval`, `module_eval`, `class_exec`, `instance_exec`, and
@@ -38,6 +40,7 @@ def foo
     end
   end
 end
+
 # good
 
 def foo

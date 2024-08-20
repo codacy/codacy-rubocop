@@ -104,8 +104,8 @@ second_param)
 some_method nested_call(
               nested_first_param),
 second_params# The first argument should normally be indented one step more than
-# the preceding line, but if it's a argument for a method call that
-# is itself a argument in a method call, then the inner argument
+# the preceding line, but if it's an argument for a method call that
+# is itself an argument in a method call, then the inner argument
 # should be indented relative to the inner method.
 
 # good

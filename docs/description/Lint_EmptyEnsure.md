@@ -1,31 +1,30 @@
 
-Checks for empty `ensure` blocks
+Checks for empty `ensure` blocks.
 
 # Examples
 
 ```ruby
 
 # bad
-
 def some_method
   do_something
 ensure
 end
-# bad
 
+# bad
 begin
   do_something
 ensure
 end
-# good
 
+# good
 def some_method
   do_something
 ensure
   do_something_else
 end
-# good
 
+# good
 begin
   do_something
 ensure

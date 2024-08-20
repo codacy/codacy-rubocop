@@ -10,12 +10,11 @@ This cop checks for the problem outlined above.
 ```ruby
 
 # bad
-
 x&.foo.bar
 x&.foo + bar
 x&.foo[bar]
-# good
 
+# good
 x&.foo&.bar
 x&.foo || bar
 ```

@@ -15,16 +15,16 @@ end
 # Examples
 
 ```ruby
-## text mode
-# bad
+# bad - text mode
 File.open(filename, 'w').write(content)
 File.open(filename, 'w') do |f|
   f.write(content)
 end
 
 # good
-File.write(filename, content)## binary mode
-# bad
+File.write(filename, content)
+
+# bad - binary mode
 File.open(filename, 'wb').write(content)
 File.open(filename, 'wb') do |f|
   f.write(content)

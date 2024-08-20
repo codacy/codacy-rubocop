@@ -11,6 +11,7 @@ when bar
   do_something
 when baz
 end
+
 # good
 case condition
 when foo

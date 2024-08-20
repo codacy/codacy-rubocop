@@ -6,10 +6,9 @@ Checks for interpolation in a single quoted string.
 ```ruby
 
 # bad
-
 foo = 'something with #{interpolation} inside'
-# good
 
+# good
 foo = "something with #{interpolation} inside"
 ```
 

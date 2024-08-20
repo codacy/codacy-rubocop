@@ -8,7 +8,9 @@ Checks for unnecessary conditional expressions.
 a = b ? b : c
 
 # good
-a = b || c# bad
+a = b || c
+
+# bad
 if b
   b
 else

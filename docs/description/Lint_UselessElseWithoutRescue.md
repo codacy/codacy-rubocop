@@ -8,14 +8,13 @@ NOTE: This syntax is no longer valid on Ruby 2.6 or higher.
 ```ruby
 
 # bad
-
 begin
   do_something
 else
   do_something_else # This will never be run.
 end
-# good
 
+# good
 begin
   do_something
 rescue
