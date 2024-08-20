@@ -7,10 +7,9 @@ which are on the same line.
 ```ruby
 
 # bad
-
 array = ['Item 1' 'Item 2']
-# good
 
+# good
 array = ['Item 1Item 2']
 array = ['Item 1' + 'Item 2']
 array = [

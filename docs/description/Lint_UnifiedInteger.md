@@ -6,11 +6,10 @@ Checks for using Fixnum or Bignum constant.
 ```ruby
 
 # bad
-
 1.is_a?(Fixnum)
 1.is_a?(Bignum)
-# good
 
+# good
 1.is_a?(Integer)
 ```
 

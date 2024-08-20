@@ -20,13 +20,12 @@ can lead to a syntax error, so this case is not autocorrected.
 ```ruby
 
 # bad
-
 def some_method
   some_var = 1
   do_something
 end
-# good
 
+# good
 def some_method
   some_var = 1
   do_something(some_var)

@@ -10,10 +10,9 @@ rather than meant to be part of the resulting symbols.
 ```ruby
 
 # bad
-
 %i(:foo, :bar)
-# good
 
+# good
 %i(foo bar)
 ```
 

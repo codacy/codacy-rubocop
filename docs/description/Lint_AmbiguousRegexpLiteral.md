@@ -12,6 +12,7 @@ a method invocation without parentheses.
 # but it could possibly be `/` method invocations.
 # (i.e. `do_something./(pattern)./(i)`)
 do_something /pattern/i
+
 # good
 
 # With parentheses, there's no ambiguity.

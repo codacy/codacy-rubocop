@@ -7,7 +7,6 @@ definitions.
 ```ruby
 
 # bad
-
 def foo
   1
 end
@@ -15,15 +14,15 @@ end
 def foo
   2
 end
-# bad
 
+# bad
 def foo
   1
 end
 
 alias foo bar
-# good
 
+# good
 def foo
   1
 end
@@ -31,8 +30,8 @@ end
 def bar
   2
 end
-# good
 
+# good
 def foo
   1
 end

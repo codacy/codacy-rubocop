@@ -18,6 +18,7 @@ if something
 else do_this
   do_that
 end
+
 # good
 
 # This code is compatible with the bad case. It will be autocorrected like this.

@@ -1,5 +1,6 @@
 
 Prefer `select` or `reject` over `map { ... }.compact`.
+This cop also handles `filter_map { ... }`, similar to `map { ... }.compact`.
 
 # Examples
 
@@ -7,6 +8,9 @@ Prefer `select` or `reject` over `map { ... }.compact`.
 
 # bad
 array.map { |e| some_condition? ? e : next }.compact
+
+# bad
+array.filter_map { |e| some_condition? ? e : next }
 
 # bad
 array.map do |e|

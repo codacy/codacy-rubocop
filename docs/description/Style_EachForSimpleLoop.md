@@ -12,7 +12,9 @@ This check only applies if the block takes no parameters.
 (1..5).each { }
 
 # good
-5.times { }# bad
+5.times { }
+
+# bad
 (0...10).each {}
 
 # good

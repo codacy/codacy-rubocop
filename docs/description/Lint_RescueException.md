@@ -6,14 +6,13 @@ Checks for `rescue` blocks targeting the Exception class.
 ```ruby
 
 # bad
-
 begin
   do_something
 rescue Exception
   handle_exception
 end
-# good
 
+# good
 begin
   do_something
 rescue ArgumentError

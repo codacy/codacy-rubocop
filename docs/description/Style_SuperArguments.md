@@ -1,6 +1,23 @@
 
-Checks for redundant argument forwarding when calling super
-with arguments identical to the method definition.
+Checks for redundant argument forwarding when calling super with arguments identical to
+the method definition.
+
+Using zero arity `super` within a `define_method` block results in `RuntimeError`:
+
+[source,ruby]
+----
+def m
+  define_method(:foo) { super() } # => OK
+end
+
+def m
+  define_method(:foo) { super }   # => RuntimeError
+end
+----
+
+Furthermore, any arguments accompanied by a block may potentially be delegating to
+`define_method`, therefore, `super` used within these blocks will be allowed.
+This approach might result in false negatives, yet ensuring safe detection takes precedence.
 
 # Examples
 

@@ -9,10 +9,9 @@ This cop mirrors a warning in Ruby 2.2.
 ```ruby
 
 # bad
-
 hash = { food: 'apple', food: 'orange' }
-# good
 
+# good
 hash = { food: 'apple', other_food: 'orange' }
 ```
 

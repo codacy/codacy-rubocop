@@ -6,10 +6,9 @@ Checks for empty interpolation.
 ```ruby
 
 # bad
-
 "result is #{}"
-# good
 
+# good
 "result is #{some_result}"
 ```
 

@@ -8,10 +8,9 @@ that big. If you need a float that big, something is wrong with you.
 ```ruby
 
 # bad
-
 float = 3.0e400
-# good
 
+# good
 float = 42.9
 ```
 

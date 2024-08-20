@@ -36,7 +36,9 @@ end
 foo == bar ? true : false
 
 # good
-foo == bar# bad
+foo == bar
+
+# bad
 if foo.do_something?
   true
 else

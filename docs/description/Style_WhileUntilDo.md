@@ -14,6 +14,7 @@ end
 while x.any?
   do_something(x.pop)
 end
+
 # bad
 until x.empty? do
   do_something(x.pop)
