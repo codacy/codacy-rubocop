@@ -119,7 +119,7 @@ GEM
       activesupport (>= 6.0.0)
       railties (>= 6.0.0)
     io-console (0.7.2)
-    irb (1.14.0)
+    irb (1.14.1)
       rdoc (>= 4.0.0)
       reline (>= 0.4.2)
     jbuilder (2.12.0)
@@ -229,7 +229,7 @@ GEM
     rdoc (6.7.0)
       psych (>= 4.0.0)
     regexp_parser (2.9.2)
-    reline (0.5.9)
+    reline (0.5.10)
       io-console (~> 0.5)
     rexml (3.3.5)
       strscan
