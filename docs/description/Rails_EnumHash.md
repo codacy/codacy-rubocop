@@ -10,6 +10,12 @@ value for each key prevents this from happening.
 
 ```ruby
 # bad
+enum :status, [:active, :archived]
+
+# good
+enum :status, { active: 0, archived: 1 }
+
+# bad
 enum status: [:active, :archived]
 
 # good

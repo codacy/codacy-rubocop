@@ -17,6 +17,8 @@ File.read(Rails.root.join('db', 'schema.rb'))
 File.binread(Rails.root.join('db', 'schema.rb'))
 File.write(Rails.root.join('db', 'schema.rb'), content)
 File.binwrite(Rails.root.join('db', 'schema.rb'), content)
+Dir.glob(Rails.root.join('db', 'schema.rb'))
+Dir[Rails.root.join('db', 'schema.rb')]
 
 # good
 Rails.root.join('db', 'schema.rb').open
@@ -25,6 +27,7 @@ Rails.root.join('db', 'schema.rb').read
 Rails.root.join('db', 'schema.rb').binread
 Rails.root.join('db', 'schema.rb').write(content)
 Rails.root.join('db', 'schema.rb').binwrite(content)
+Rails.root.glob("db/schema.rb")
 ```
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Rails/RootPathnameMethods)

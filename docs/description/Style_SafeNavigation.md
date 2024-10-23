@@ -13,9 +13,9 @@ of the method is. If this is converted to safe navigation,
 `foo&.bar` can start returning `nil` as well as what the method
 returns.
 
-The default for `MaxChainLength` is `2`
+The default for `MaxChainLength` is `2`.
 We have limited the cop to not register an offense for method chains
-that exceed this option is set.
+that exceed this option's value.
 
 # Examples
 

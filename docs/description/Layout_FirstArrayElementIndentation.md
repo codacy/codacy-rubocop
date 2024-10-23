@@ -46,7 +46,6 @@ but_in_a_method_call([
 # defined inside a method call.
 
 # bad
-# consistent
 array = [
   :value
 ]
@@ -64,13 +63,11 @@ and_in_a_method_call([
 # brackets are indented to the same position.
 
 # bad
-# align_brackets
 and_now_for_something = [
                           :completely_different
 ]
 
 # good
-# align_brackets
 and_now_for_something = [
                           :completely_different
                         ]

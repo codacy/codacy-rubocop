@@ -7,8 +7,8 @@ which are passed as arguments to those methods:
 The reason is that _unannotated_ format is very similar
 to encoded URLs or Date/Time formatting strings.
 
-This cop can be customized allowed methods with `AllowedMethods`.
-By default, there are no methods to allowed.
+This cop's allowed methods can be customized with `AllowedMethods`.
+By default, there are no allowed methods.
 
 It is allowed to contain unannotated token
 if the number of them is less than or equals to
