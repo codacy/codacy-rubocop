@@ -79,6 +79,18 @@ module RubocopDoc
           fallbackTitle = cop_data[:name].split('/')[1].split(/(?=[A-Z])/).join(" ")
           title = descriptionObj.nil? ? fallbackTitle : get_title(descriptionObj)
           description = descriptionObj.nil? ? fallbackTitle : descriptionObj
+          max_length = 500
+
+          while description.length > max_length
+            cutoff_point = description[0...max_length].rindex(".")
+            if cutoff_point.nil?
+              puts "No period found within the limit. Truncating to max_length."
+              break
+            else
+              description = description[0..cutoff_point]
+            end
+          end
+
           GenerationCommons.withoutNilValues({
                                                patternId:   cop_data[:name].gsub("/", "_"),
                                                title:       title,

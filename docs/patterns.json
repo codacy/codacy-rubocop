@@ -1,6 +1,6 @@
 {
   "name": "rubocop",
-  "version": "1.65.1",
+  "version": "1.66.1",
   "patterns": [
     {
       "patternId": "Migration_DepartmentName",
@@ -586,7 +586,16 @@
           "name": "Exclude",
           "default": [
             "**/*.md",
-            "**/*.markdown"
+            "**/*.livemd",
+            "**/*.markdown",
+            "**/*.mdown",
+            "**/*.mdwn",
+            "**/*.mkd",
+            "**/*.mkdn",
+            "**/*.mkdown",
+            "**/*.ronn",
+            "**/*.scd",
+            "**/*.workbook"
           ]
         }
       ],
@@ -719,7 +728,16 @@
           "name": "Exclude",
           "default": [
             "**/*.md",
-            "**/*.markdown"
+            "**/*.livemd",
+            "**/*.markdown",
+            "**/*.mdown",
+            "**/*.mdwn",
+            "**/*.mkd",
+            "**/*.mkdn",
+            "**/*.mkdown",
+            "**/*.ronn",
+            "**/*.scd",
+            "**/*.workbook"
           ]
         }
       ],
@@ -1210,7 +1228,16 @@
           "name": "Exclude",
           "default": [
             "**/*.md",
-            "**/*.markdown"
+            "**/*.livemd",
+            "**/*.markdown",
+            "**/*.mdown",
+            "**/*.mdwn",
+            "**/*.mkd",
+            "**/*.mkdn",
+            "**/*.mkdown",
+            "**/*.ronn",
+            "**/*.scd",
+            "**/*.workbook"
           ]
         }
       ],
@@ -1986,7 +2013,16 @@
           "name": "Exclude",
           "default": [
             "**/*.md",
-            "**/*.markdown"
+            "**/*.livemd",
+            "**/*.markdown",
+            "**/*.mdown",
+            "**/*.mdwn",
+            "**/*.mkd",
+            "**/*.mkdn",
+            "**/*.mkdown",
+            "**/*.ronn",
+            "**/*.scd",
+            "**/*.workbook"
           ]
         }
       ],
@@ -2263,7 +2299,16 @@
           "name": "Exclude",
           "default": [
             "**/*.md",
-            "**/*.markdown"
+            "**/*.livemd",
+            "**/*.markdown",
+            "**/*.mdown",
+            "**/*.mdwn",
+            "**/*.mkd",
+            "**/*.mkdn",
+            "**/*.mkdown",
+            "**/*.ronn",
+            "**/*.scd",
+            "**/*.workbook"
           ]
         }
       ],
@@ -2288,7 +2333,16 @@
           "name": "Exclude",
           "default": [
             "**/*.md",
-            "**/*.markdown"
+            "**/*.livemd",
+            "**/*.markdown",
+            "**/*.mdown",
+            "**/*.mdwn",
+            "**/*.mkd",
+            "**/*.mkdn",
+            "**/*.mkdown",
+            "**/*.ronn",
+            "**/*.scd",
+            "**/*.workbook"
           ]
         }
       ],
@@ -2849,7 +2903,16 @@
           "name": "Exclude",
           "default": [
             "**/*.md",
-            "**/*.markdown"
+            "**/*.livemd",
+            "**/*.markdown",
+            "**/*.mdown",
+            "**/*.mdwn",
+            "**/*.mkd",
+            "**/*.mkdn",
+            "**/*.mkdown",
+            "**/*.ronn",
+            "**/*.scd",
+            "**/*.workbook"
           ]
         }
       ],
@@ -2886,7 +2949,16 @@
           "name": "Exclude",
           "default": [
             "**/*.md",
-            "**/*.markdown"
+            "**/*.livemd",
+            "**/*.markdown",
+            "**/*.mdown",
+            "**/*.mdwn",
+            "**/*.mkd",
+            "**/*.mkdn",
+            "**/*.mkdown",
+            "**/*.ronn",
+            "**/*.scd",
+            "**/*.workbook"
           ]
         }
       ],
@@ -3259,7 +3331,16 @@
           "name": "Exclude",
           "default": [
             "**/*.md",
-            "**/*.markdown"
+            "**/*.livemd",
+            "**/*.markdown",
+            "**/*.mdown",
+            "**/*.mdwn",
+            "**/*.mkd",
+            "**/*.mkdn",
+            "**/*.mkdown",
+            "**/*.ronn",
+            "**/*.scd",
+            "**/*.workbook"
           ]
         }
       ],
@@ -3290,7 +3371,16 @@
           "name": "Exclude",
           "default": [
             "**/*.md",
-            "**/*.markdown"
+            "**/*.livemd",
+            "**/*.markdown",
+            "**/*.mdown",
+            "**/*.mdwn",
+            "**/*.mkd",
+            "**/*.mkdn",
+            "**/*.mkdown",
+            "**/*.ronn",
+            "**/*.scd",
+            "**/*.workbook"
           ]
         }
       ],
@@ -3333,7 +3423,16 @@
           "name": "Exclude",
           "default": [
             "**/*.md",
-            "**/*.markdown"
+            "**/*.livemd",
+            "**/*.markdown",
+            "**/*.mdown",
+            "**/*.mdwn",
+            "**/*.mkd",
+            "**/*.mkdn",
+            "**/*.mkdown",
+            "**/*.ronn",
+            "**/*.scd",
+            "**/*.workbook"
           ]
         }
       ],
@@ -3349,14 +3448,19 @@
           "default": "contextual"
         },
         {
-          "name": "SafeAutoCorrect",
-          "default": "false"
-        },
-        {
           "name": "Exclude",
           "default": [
             "**/*.md",
-            "**/*.markdown"
+            "**/*.livemd",
+            "**/*.markdown",
+            "**/*.mdown",
+            "**/*.mdwn",
+            "**/*.mkd",
+            "**/*.mkdn",
+            "**/*.mkdown",
+            "**/*.ronn",
+            "**/*.scd",
+            "**/*.workbook"
           ]
         }
       ],
@@ -3385,10 +3489,25 @@
           "name": "Exclude",
           "default": [
             "**/*.md",
-            "**/*.markdown"
+            "**/*.livemd",
+            "**/*.markdown",
+            "**/*.mdown",
+            "**/*.mdwn",
+            "**/*.mkd",
+            "**/*.mkdn",
+            "**/*.mkdown",
+            "**/*.ronn",
+            "**/*.scd",
+            "**/*.workbook"
           ]
         }
       ],
+      "enabled": false
+    },
+    {
+      "patternId": "Lint_UselessNumericOperation",
+      "level": "Warning",
+      "category": "ErrorProne",
       "enabled": false
     },
     {
@@ -3448,7 +3567,16 @@
           "name": "Exclude",
           "default": [
             "**/*.md",
-            "**/*.markdown"
+            "**/*.livemd",
+            "**/*.markdown",
+            "**/*.mdown",
+            "**/*.mdwn",
+            "**/*.mkd",
+            "**/*.mkdn",
+            "**/*.mkdown",
+            "**/*.ronn",
+            "**/*.scd",
+            "**/*.workbook"
           ]
         }
       ],
@@ -3803,8 +3931,18 @@
         {
           "name": "Exclude",
           "default": [
+            "Rakefile.rb",
             "**/*.md",
-            "**/*.markdown"
+            "**/*.livemd",
+            "**/*.markdown",
+            "**/*.mdown",
+            "**/*.mdwn",
+            "**/*.mkd",
+            "**/*.mkdn",
+            "**/*.mkdown",
+            "**/*.ronn",
+            "**/*.scd",
+            "**/*.workbook"
           ]
         },
         {
@@ -4370,7 +4508,16 @@
           "name": "Exclude",
           "default": [
             "**/*.md",
-            "**/*.markdown"
+            "**/*.livemd",
+            "**/*.markdown",
+            "**/*.mdown",
+            "**/*.mdwn",
+            "**/*.mkd",
+            "**/*.mkdn",
+            "**/*.mkdown",
+            "**/*.ronn",
+            "**/*.scd",
+            "**/*.workbook"
           ]
         }
       ],
@@ -4643,7 +4790,7 @@
         {
           "name": "AllowedReceivers",
           "default": [
-
+            "params"
           ]
         }
       ],
@@ -4744,7 +4891,16 @@
           "name": "Exclude",
           "default": [
             "**/*.md",
-            "**/*.markdown"
+            "**/*.livemd",
+            "**/*.markdown",
+            "**/*.mdown",
+            "**/*.mdwn",
+            "**/*.mkd",
+            "**/*.mkdn",
+            "**/*.mkdown",
+            "**/*.ronn",
+            "**/*.scd",
+            "**/*.workbook"
           ]
         }
       ],
@@ -4934,8 +5090,19 @@
         {
           "name": "Exclude",
           "default": [
+            "spec/**/*",
+            "test/**/*",
             "**/*.md",
-            "**/*.markdown"
+            "**/*.livemd",
+            "**/*.markdown",
+            "**/*.mdown",
+            "**/*.mdwn",
+            "**/*.mkd",
+            "**/*.mkdn",
+            "**/*.mkdown",
+            "**/*.ronn",
+            "**/*.scd",
+            "**/*.workbook"
           ]
         }
       ],
@@ -5336,7 +5503,16 @@
           "name": "Exclude",
           "default": [
             "**/*.md",
-            "**/*.markdown"
+            "**/*.livemd",
+            "**/*.markdown",
+            "**/*.mdown",
+            "**/*.mdwn",
+            "**/*.mkd",
+            "**/*.mkdn",
+            "**/*.mkdown",
+            "**/*.ronn",
+            "**/*.scd",
+            "**/*.workbook"
           ]
         }
       ],
@@ -6036,6 +6212,12 @@
           "default": "true"
         }
       ],
+      "enabled": false
+    },
+    {
+      "patternId": "Style_RedundantInterpolationUnfreeze",
+      "level": "Info",
+      "category": "CodeStyle",
       "enabled": false
     },
     {
@@ -8558,6 +8740,12 @@
         {
           "name": "SafeAutoCorrect",
           "default": "false"
+        },
+        {
+          "name": "Exclude",
+          "default": [
+            "db/**/*.rb"
+          ]
         }
       ],
       "enabled": false
@@ -8870,6 +9058,24 @@
       "level": "Warning",
       "category": "ErrorProne",
       "parameters": [
+        {
+          "name": "Include",
+          "default": [
+            "app/models/**/*.rb"
+          ]
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "Rails_EnumSyntax",
+      "level": "Warning",
+      "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "Severity",
+          "default": "warning"
+        },
         {
           "name": "Include",
           "default": [
@@ -10281,6 +10487,12 @@
           "default": "false"
         }
       ],
+      "enabled": false
+    },
+    {
+      "patternId": "Sorbet_Refinement",
+      "level": "Info",
+      "category": "CodeStyle",
       "enabled": false
     },
     {
@@ -12578,6 +12790,18 @@
             "**/*_spec*rb*",
             "**/spec/**/*"
           ]
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "RSpec_StringAsInstanceDoubleConstant",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "Safe",
+          "default": "false"
         }
       ],
       "enabled": false

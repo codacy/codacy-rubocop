@@ -2954,10 +2954,6 @@
         "description": "AutoCorrect"
       },
       {
-        "name": "SafeAutoCorrect",
-        "description": "SafeAutoCorrect"
-      },
-      {
         "name": "Exclude",
         "description": "Exclude"
       }
@@ -2988,6 +2984,12 @@
         "description": "Exclude"
       }
     ]
+  },
+  {
+    "patternId": "Lint_UselessNumericOperation",
+    "title": "Checks for useless numeric operations.",
+    "description": "Checks for useless numeric operations.",
+    "timeToFix": 5
   },
   {
     "patternId": "Lint_UselessRescue",
@@ -5262,6 +5264,12 @@
         "description": "AllowComments"
       }
     ]
+  },
+  {
+    "patternId": "Style_RedundantInterpolationUnfreeze",
+    "title": "Checks for redundant unfreezing of interpolated strings.",
+    "description": "Checks for redundant unfreezing of interpolated strings.",
+    "timeToFix": 5
   },
   {
     "patternId": "Style_RedundantLineContinuation",
@@ -7548,6 +7556,10 @@
       {
         "name": "SafeAutoCorrect",
         "description": "SafeAutoCorrect"
+      },
+      {
+        "name": "Exclude",
+        "description": "Exclude"
       }
     ]
   },
@@ -7829,6 +7841,22 @@
     "description": "Prefer hash syntax over array syntax when defining enums.",
     "timeToFix": 5,
     "parameters": [
+      {
+        "name": "Include",
+        "description": "Include"
+      }
+    ]
+  },
+  {
+    "patternId": "Rails_EnumSyntax",
+    "title": "Use positional arguments over keyword arguments when defining enums.",
+    "description": "Use positional arguments over keyword arguments when defining enums.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Severity",
+        "description": "Severity"
+      },
       {
         "name": "Include",
         "description": "Include"
@@ -8911,8 +8939,8 @@
   },
   {
     "patternId": "Rails_WhereEquals",
-    "title": "Pass conditions to `where` as a hash instead of manually constructing SQL.",
-    "description": "Pass conditions to `where` as a hash instead of manually constructing SQL.",
+    "title": "Pass conditions to `where` and `where.not` as a hash instead of manually constructing SQL.",
+    "description": "Pass conditions to `where` and `where.not` as a hash instead of manually constructing SQL.",
     "timeToFix": 5,
     "parameters": [
       {
@@ -9074,6 +9102,12 @@
     ]
   },
   {
+    "patternId": "Sorbet_Refinement",
+    "title": "Checks for the use of Ruby Refinements library. Refinements add complexity and incur a performance penalty that can be significant for large code bases. They are also not supported by Sorbet.",
+    "description": "Checks for the use of Ruby Refinements library. Refinements add complexity and incur a performance penalty that can be significant for large code bases. They are also not supported by Sorbet.",
+    "timeToFix": 5
+  },
+  {
     "patternId": "Sorbet_TypeAliasName",
     "title": "Type alias constant names must be in CamelCase.",
     "description": "Type alias constant names must be in CamelCase.",
@@ -9108,7 +9142,7 @@
   {
     "patternId": "Sorbet_BuggyObsoleteStrictMemoization",
     "title": "Checks for the a mistaken variant of the \"obsolete memoization pattern\" that used to be required for older Sorbet versions in `#typed: strict` files.",
-    "description": "Checks for the a mistaken variant of the \"obsolete memoization pattern\" that used to be required for older Sorbet versions in `#typed: strict` files. The mistaken variant would overwrite the ivar with `nil` on every call, causing the memoized value to be discarded and recomputed on every call.\nThis cop will correct it to read from the ivar instead of `nil`, which will memoize it correctly.\nThe result of this correction will be the \"obsolete memoization pattern\", which can further be corrected by the `Sorbet/ObsoleteStrictMemoization` cop.\nSee `Sorbet/ObsoleteStrictMemoization` for more details.",
+    "description": "Checks for the a mistaken variant of the \"obsolete memoization pattern\" that used to be required for older Sorbet versions in `#typed: strict` files. The mistaken variant would overwrite the ivar with `nil` on every call, causing the memoized value to be discarded and recomputed on every call.\nThis cop will correct it to read from the ivar instead of `nil`, which will memoize it correctly.",
     "timeToFix": 5,
     "parameters": [
       {
@@ -11152,6 +11186,18 @@
       {
         "name": "Include",
         "description": "Include"
+      }
+    ]
+  },
+  {
+    "patternId": "RSpec_StringAsInstanceDoubleConstant",
+    "title": "Do not use a string as `instance_double` constant.",
+    "description": "Do not use a string as `instance_double` constant.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Safe",
+        "description": "Safe"
       }
     ]
   },

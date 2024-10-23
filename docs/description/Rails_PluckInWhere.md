@@ -3,11 +3,12 @@ Identifies places where `pluck` is used in `where` query methods
 and can be replaced with `select`.
 
 Since `pluck` is an eager method and hits the database immediately,
-using `select` helps to avoid additional database queries.
+using `select` helps to avoid additional database queries by running as
+a subquery.
 
-This cop has two different enforcement modes. When the `EnforcedStyle`
-is `conservative` (the default) then only calls to `pluck` on a constant
-(i.e. a model class) in the `where` is used as offenses.
+This cop has two modes of enforcement. When the `EnforcedStyle` is set
+to `conservative` (the default), only calls to `pluck` on a constant
+(e.g. a model class) within `where` are considered offenses.
 
 # Examples
 
