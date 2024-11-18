@@ -1,6 +1,6 @@
 {
   "name": "rubocop",
-  "version": "1.66.1",
+  "version": "1.68.0",
   "patterns": [
     {
       "patternId": "Migration_DepartmentName",
@@ -63,15 +63,11 @@
         },
         {
           "name": "IgnoredGems",
-          "default": [
-
-          ]
+          "default": []
         },
         {
           "name": "OnlyFor",
-          "default": [
-
-          ]
+          "default": []
         }
       ],
       "enabled": false
@@ -130,9 +126,7 @@
         },
         {
           "name": "AllowedGems",
-          "default": [
-
-          ]
+          "default": []
         }
       ],
       "enabled": false
@@ -223,9 +217,7 @@
         },
         {
           "name": "AllowedGems",
-          "default": [
-
-          ]
+          "default": []
         }
       ],
       "enabled": false
@@ -267,9 +259,7 @@
         },
         {
           "name": "AllowedGems",
-          "default": [
-
-          ]
+          "default": []
         },
         {
           "name": "Include",
@@ -712,9 +702,7 @@
         },
         {
           "name": "DefLikeMacros",
-          "default": [
-
-          ]
+          "default": []
         },
         {
           "name": "AllowAdjacentOneLineDefs",
@@ -1045,6 +1033,10 @@
         {
           "name": "AllowMultilineFinalElement",
           "default": "false"
+        },
+        {
+          "name": "AllowedMethods",
+          "default": []
         }
       ],
       "enabled": false
@@ -1198,9 +1190,7 @@
         },
         {
           "name": "AllowedPatterns",
-          "default": [
-
-          ]
+          "default": []
         }
       ],
       "enabled": false
@@ -1222,6 +1212,14 @@
         },
         {
           "name": "AllowGemfileRubyComment",
+          "default": "false"
+        },
+        {
+          "name": "AllowRBSInlineAnnotation",
+          "default": "false"
+        },
+        {
+          "name": "AllowSteepAnnotation",
           "default": "false"
         },
         {
@@ -1340,9 +1338,7 @@
         },
         {
           "name": "AllowedPatterns",
-          "default": [
-
-          ]
+          "default": []
         },
         {
           "name": "IgnoredPatterns",
@@ -2053,15 +2049,11 @@
       "parameters": [
         {
           "name": "AllowedMethods",
-          "default": [
-
-          ]
+          "default": []
         },
         {
           "name": "AllowedPatterns",
-          "default": [
-
-          ]
+          "default": []
         }
       ],
       "enabled": false
@@ -2179,15 +2171,11 @@
       "parameters": [
         {
           "name": "Only",
-          "default": [
-
-          ]
+          "default": []
         },
         {
           "name": "Ignore",
-          "default": [
-
-          ]
+          "default": []
         }
       ],
       "enabled": false
@@ -2255,6 +2243,10 @@
         },
         {
           "name": "IgnoreConstantBranches",
+          "default": "false"
+        },
+        {
+          "name": "IgnoreDuplicateElseBranch",
           "default": "false"
         }
       ],
@@ -2350,6 +2342,12 @@
     },
     {
       "patternId": "Lint_DuplicateRescueException",
+      "level": "Warning",
+      "category": "ErrorProne",
+      "enabled": false
+    },
+    {
+      "patternId": "Lint_DuplicateSetElement",
       "level": "Warning",
       "category": "ErrorProne",
       "enabled": false
@@ -2660,9 +2658,7 @@
       "parameters": [
         {
           "name": "AllowedParentClasses",
-          "default": [
-
-          ]
+          "default": []
         }
       ],
       "enabled": false
@@ -2698,15 +2694,11 @@
       "parameters": [
         {
           "name": "AllowedMethods",
-          "default": [
-
-          ]
+          "default": []
         },
         {
           "name": "AllowedPatterns",
-          "default": [
-
-          ]
+          "default": []
         }
       ],
       "enabled": true
@@ -2790,9 +2782,7 @@
         },
         {
           "name": "AllowedPatterns",
-          "default": [
-
-          ]
+          "default": []
         },
         {
           "name": "IgnoredClasses",
@@ -3263,6 +3253,12 @@
       "enabled": false
     },
     {
+      "patternId": "Lint_UnescapedBracketInRegexp",
+      "level": "Warning",
+      "category": "ErrorProne",
+      "enabled": false
+    },
+    {
       "patternId": "Lint_UnexpectedBlockArity",
       "level": "Warning",
       "category": "ErrorProne",
@@ -3409,15 +3405,11 @@
         },
         {
           "name": "ContextCreatingMethods",
-          "default": [
-
-          ]
+          "default": []
         },
         {
           "name": "MethodCreatingMethods",
-          "default": [
-
-          ]
+          "default": []
         },
         {
           "name": "Exclude",
@@ -3589,15 +3581,11 @@
       "parameters": [
         {
           "name": "AllowedMethods",
-          "default": [
-
-          ]
+          "default": []
         },
         {
           "name": "AllowedPatterns",
-          "default": [
-
-          ]
+          "default": []
         },
         {
           "name": "Max",
@@ -3613,15 +3601,11 @@
       "parameters": [
         {
           "name": "AllowedMethods",
-          "default": [
-
-          ]
+          "default": []
         },
         {
           "name": "AllowedPatterns",
-          "default": [
-
-          ]
+          "default": []
         },
         {
           "name": "CountRepeatedAttributes",
@@ -3649,9 +3633,7 @@
         },
         {
           "name": "CountAsOne",
-          "default": [
-
-          ]
+          "default": []
         },
         {
           "name": "AllowedMethods",
@@ -3661,9 +3643,7 @@
         },
         {
           "name": "AllowedPatterns",
-          "default": [
-
-          ]
+          "default": []
         },
         {
           "name": "Exclude",
@@ -3715,9 +3695,7 @@
         },
         {
           "name": "CountAsOne",
-          "default": [
-
-          ]
+          "default": []
         }
       ],
       "enabled": false
@@ -3749,21 +3727,15 @@
         },
         {
           "name": "CountAsOne",
-          "default": [
-
-          ]
+          "default": []
         },
         {
           "name": "AllowedMethods",
-          "default": [
-
-          ]
+          "default": []
         },
         {
           "name": "AllowedPatterns",
-          "default": [
-
-          ]
+          "default": []
         }
       ],
       "enabled": false
@@ -3783,9 +3755,7 @@
         },
         {
           "name": "CountAsOne",
-          "default": [
-
-          ]
+          "default": []
         }
       ],
       "enabled": false
@@ -3817,15 +3787,11 @@
       "parameters": [
         {
           "name": "AllowedMethods",
-          "default": [
-
-          ]
+          "default": []
         },
         {
           "name": "AllowedPatterns",
-          "default": [
-
-          ]
+          "default": []
         },
         {
           "name": "Max",
@@ -3890,15 +3856,11 @@
         },
         {
           "name": "AllowedNames",
-          "default": [
-
-          ]
+          "default": []
         },
         {
           "name": "ForbiddenNames",
-          "default": [
-
-          ]
+          "default": []
         }
       ],
       "enabled": false
@@ -4133,9 +4095,7 @@
         },
         {
           "name": "AllowedPatterns",
-          "default": [
-
-          ]
+          "default": []
         }
       ],
       "enabled": false
@@ -4175,9 +4135,7 @@
         },
         {
           "name": "ForbiddenNames",
-          "default": [
-
-          ]
+          "default": []
         }
       ],
       "enabled": false
@@ -4261,15 +4219,11 @@
         },
         {
           "name": "AllowedIdentifiers",
-          "default": [
-
-          ]
+          "default": []
         },
         {
           "name": "AllowedPatterns",
-          "default": [
-
-          ]
+          "default": []
         }
       ],
       "enabled": false
@@ -4313,9 +4267,7 @@
         },
         {
           "name": "AllowedPatterns",
-          "default": [
-
-          ]
+          "default": []
         }
       ],
       "enabled": false
@@ -4388,6 +4340,12 @@
         }
       ],
       "enabled": true
+    },
+    {
+      "patternId": "Style_AmbiguousEndlessMethodDefinition",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
     },
     {
       "patternId": "Style_AndOr",
@@ -4567,6 +4525,18 @@
       "enabled": false
     },
     {
+      "patternId": "Style_BitwisePredicate",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "Safe",
+          "default": "false"
+        }
+      ],
+      "enabled": false
+    },
+    {
       "patternId": "Style_BlockComments",
       "level": "Info",
       "category": "CodeStyle",
@@ -4624,9 +4594,7 @@
         },
         {
           "name": "AllowedPatterns",
-          "default": [
-
-          ]
+          "default": []
         },
         {
           "name": "AllowBracesOnProceduralOneLiners",
@@ -4634,9 +4602,7 @@
         },
         {
           "name": "BracesRequiredMethods",
-          "default": [
-
-          ]
+          "default": []
         }
       ],
       "enabled": false
@@ -4740,9 +4706,7 @@
         },
         {
           "name": "AllowedPatterns",
-          "default": [
-
-          ]
+          "default": []
         }
       ],
       "enabled": false
@@ -4827,6 +4791,12 @@
     },
     {
       "patternId": "Style_ColonMethodDefinition",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "Style_CombinableDefined",
       "level": "Info",
       "category": "CodeStyle",
       "enabled": false
@@ -5044,9 +5014,7 @@
       "parameters": [
         {
           "name": "AllowedCops",
-          "default": [
-
-          ]
+          "default": []
         }
       ],
       "enabled": false
@@ -5058,9 +5026,7 @@
       "parameters": [
         {
           "name": "AllowedMethods",
-          "default": [
-
-          ]
+          "default": []
         },
         {
           "name": "Exclude",
@@ -5083,9 +5049,7 @@
       "parameters": [
         {
           "name": "AllowedConstants",
-          "default": [
-
-          ]
+          "default": []
         },
         {
           "name": "Exclude",
@@ -5343,9 +5307,7 @@
       "parameters": [
         {
           "name": "AllowedVars",
-          "default": [
-
-          ]
+          "default": []
         }
       ],
       "enabled": false
@@ -5471,9 +5433,7 @@
         },
         {
           "name": "AllowedPatterns",
-          "default": [
-
-          ]
+          "default": []
         }
       ],
       "enabled": false
@@ -5537,9 +5497,7 @@
       "parameters": [
         {
           "name": "AllowedVariables",
-          "default": [
-
-          ]
+          "default": []
         }
       ],
       "enabled": false
@@ -5657,7 +5615,7 @@
         },
         {
           "name": "EnforcedShorthandSyntax",
-          "default": "always"
+          "default": "either"
         },
         {
           "name": "SupportedShorthandSyntax",
@@ -5854,6 +5812,12 @@
       "enabled": false
     },
     {
+      "patternId": "Style_KeywordArgumentsMerging",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
       "patternId": "Style_KeywordParametersOrder",
       "level": "Info",
       "category": "CodeStyle",
@@ -5987,15 +5951,11 @@
       "parameters": [
         {
           "name": "AllowedMethods",
-          "default": [
-
-          ]
+          "default": []
         },
         {
           "name": "AllowedPatterns",
-          "default": [
-
-          ]
+          "default": []
         }
       ],
       "enabled": false
@@ -6011,21 +5971,15 @@
         },
         {
           "name": "AllowedMethods",
-          "default": [
-
-          ]
+          "default": []
         },
         {
           "name": "AllowedPatterns",
-          "default": [
-
-          ]
+          "default": []
         },
         {
           "name": "IncludedMacros",
-          "default": [
-
-          ]
+          "default": []
         },
         {
           "name": "AllowParenthesesInMultilineCall",
@@ -6264,6 +6218,18 @@
         {
           "name": "SafeAutoCorrect",
           "default": "false"
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "Style_SafeNavigationChainLength",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "Max",
+          "default": "2"
         }
       ],
       "enabled": false
@@ -6702,15 +6668,11 @@
         },
         {
           "name": "AllowedNumbers",
-          "default": [
-
-          ]
+          "default": []
         },
         {
           "name": "AllowedPatterns",
-          "default": [
-
-          ]
+          "default": []
         }
       ],
       "enabled": false
@@ -6756,15 +6718,11 @@
         },
         {
           "name": "AllowedMethods",
-          "default": [
-
-          ]
+          "default": []
         },
         {
           "name": "AllowedPatterns",
-          "default": [
-
-          ]
+          "default": []
         },
         {
           "name": "Exclude",
@@ -6829,9 +6787,7 @@
         },
         {
           "name": "Allowlist",
-          "default": [
-
-          ]
+          "default": []
         }
       ],
       "enabled": false
@@ -6996,9 +6952,7 @@
         },
         {
           "name": "AllowedCompactTypes",
-          "default": [
-
-          ]
+          "default": []
         }
       ],
       "enabled": false
@@ -7218,15 +7172,11 @@
         },
         {
           "name": "AllowedMethods",
-          "default": [
-
-          ]
+          "default": []
         },
         {
           "name": "AllowedPatterns",
-          "default": [
-
-          ]
+          "default": []
         }
       ],
       "enabled": false
@@ -7641,9 +7591,7 @@
         },
         {
           "name": "AllowedPatterns",
-          "default": [
-
-          ]
+          "default": []
         },
         {
           "name": "AllowComments",
@@ -9226,9 +9174,7 @@
         },
         {
           "name": "AllowedPatterns",
-          "default": [
-
-          ]
+          "default": []
         }
       ],
       "enabled": false
@@ -9973,9 +9919,7 @@
         },
         {
           "name": "AllowedReceivers",
-          "default": [
-
-          ]
+          "default": []
         },
         {
           "name": "SafeAutoCorrect",
@@ -10069,9 +10013,7 @@
         },
         {
           "name": "AllowedMethods",
-          "default": [
-
-          ]
+          "default": []
         }
       ],
       "enabled": false
@@ -10216,9 +10158,7 @@
       "parameters": [
         {
           "name": "TransactionMethods",
-          "default": [
-
-          ]
+          "default": []
         }
       ],
       "enabled": false
@@ -11085,9 +11025,7 @@
         },
         {
           "name": "SafeBaseClasses",
-          "default": [
-
-          ]
+          "default": []
         }
       ],
       "enabled": false
@@ -11107,15 +11045,11 @@
         },
         {
           "name": "ExcludedMethods",
-          "default": [
-
-          ]
+          "default": []
         },
         {
           "name": "CountAsOne",
-          "default": [
-
-          ]
+          "default": []
         }
       ],
       "enabled": false
@@ -11169,7 +11103,7 @@
       "enabled": false
     },
     {
-      "patternId": "ThreadSafety_InstanceVariableInClassMethod",
+      "patternId": "ThreadSafety_ClassInstanceVariable",
       "level": "Info",
       "category": "CodeStyle",
       "enabled": false
@@ -11178,6 +11112,12 @@
       "patternId": "ThreadSafety_ClassAndModuleAttributes",
       "level": "Info",
       "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "ActiveSupportClassAttributeAllowed",
+          "default": "false"
+        }
+      ],
       "enabled": false
     },
     {
@@ -11207,6 +11147,33 @@
       "patternId": "ThreadSafety_NewThread",
       "level": "Info",
       "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "ThreadSafety_DirChdir",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "ThreadSafety_RackMiddlewareInstanceVariable",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "Include",
+          "default": [
+            "app/middleware/**/*.rb",
+            "lib/middleware/**/*.rb",
+            "app/middlewares/**/*.rb",
+            "lib/middlewares/**/*.rb"
+          ]
+        },
+        {
+          "name": "AllowedIdentifiers",
+          "default": []
+        }
+      ],
       "enabled": false
     },
     {
@@ -11820,9 +11787,7 @@
         },
         {
           "name": "AllowedPatterns",
-          "default": [
-
-          ]
+          "default": []
         }
       ],
       "enabled": false
@@ -12021,9 +11986,7 @@
         },
         {
           "name": "CountAsOne",
-          "default": [
-
-          ]
+          "default": []
         }
       ],
       "enabled": false
@@ -12059,9 +12022,7 @@
         },
         {
           "name": "IgnoredWords",
-          "default": [
-
-          ]
+          "default": []
         },
         {
           "name": "DisallowedExamples",
@@ -12240,15 +12201,11 @@
         },
         {
           "name": "AllowedIdentifiers",
-          "default": [
-
-          ]
+          "default": []
         },
         {
           "name": "AllowedPatterns",
-          "default": [
-
-          ]
+          "default": []
         }
       ],
       "enabled": false
@@ -12487,9 +12444,7 @@
         },
         {
           "name": "AllowedGroups",
-          "default": [
-
-          ]
+          "default": []
         }
       ],
       "enabled": false
@@ -12565,9 +12520,7 @@
         },
         {
           "name": "AllowedExplicitMatchers",
-          "default": [
-
-          ]
+          "default": []
         },
         {
           "name": "SupportedStyles",
@@ -12873,9 +12826,7 @@
         },
         {
           "name": "AllowedPatterns",
-          "default": [
-
-          ]
+          "default": []
         }
       ],
       "enabled": false
@@ -13349,9 +13300,7 @@
         },
         {
           "name": "AllowedExplicitMatchers",
-          "default": [
-
-          ]
+          "default": []
         },
         {
           "name": "SupportedStyles",

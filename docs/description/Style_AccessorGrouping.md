@@ -6,6 +6,9 @@ but it can be configured to enforce separating them in multiple declarations.
 NOTE: If there is a method call before the accessor method it is always allowed
 as it might be intended like Sorbet.
 
+NOTE: If there is a RBS::Inline annotation comment just after the accessor method
+it is always allowed.
+
 # Examples
 
 ```ruby

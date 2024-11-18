@@ -868,6 +868,10 @@
       {
         "name": "AllowMultilineFinalElement",
         "description": "AllowMultilineFinalElement"
+      },
+      {
+        "name": "AllowedMethods",
+        "description": "AllowedMethods"
       }
     ]
   },
@@ -1022,6 +1026,14 @@
       {
         "name": "AllowGemfileRubyComment",
         "description": "AllowGemfileRubyComment"
+      },
+      {
+        "name": "AllowRBSInlineAnnotation",
+        "description": "AllowRBSInlineAnnotation"
+      },
+      {
+        "name": "AllowSteepAnnotation",
+        "description": "AllowSteepAnnotation"
       },
       {
         "name": "Exclude",
@@ -1912,6 +1924,10 @@
       {
         "name": "IgnoreConstantBranches",
         "description": "IgnoreConstantBranches"
+      },
+      {
+        "name": "IgnoreDuplicateElseBranch",
+        "description": "IgnoreDuplicateElseBranch"
       }
     ]
   },
@@ -1983,6 +1999,12 @@
     "patternId": "Lint_DuplicateRescueException",
     "title": "Checks that there are no repeated exceptions used in `rescue` expressions.",
     "description": "Checks that there are no repeated exceptions used in `rescue` expressions.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Lint_DuplicateSetElement",
+    "title": "Checks for duplicate elements in Set.",
+    "description": "Checks for duplicate elements in Set.",
     "timeToFix": 5
   },
   {
@@ -2641,8 +2663,8 @@
   },
   {
     "patternId": "Lint_SafeNavigationConsistency",
-    "title": "Check to make sure that if safe navigation is used for a method call in an `&&` or `||` condition that safe navigation is used for all method calls on that same object.",
-    "description": "Check to make sure that if safe navigation is used for a method call in an `&&` or `||` condition that safe navigation is used for all method calls on that same object.",
+    "title": "Check to make sure that if safe navigation is used in an `&&` or `||` condition, consistent and appropriate safe navigation, without excess or deficiency, is used for all method calls on the same object.",
+    "description": "Check to make sure that if safe navigation is used in an `&&` or `||` condition, consistent and appropriate safe navigation, without excess or deficiency, is used for all method calls on the same object.",
     "timeToFix": 5,
     "parameters": [
       {
@@ -2808,6 +2830,12 @@
         "description": "AllowKeywordBlockArguments"
       }
     ]
+  },
+  {
+    "patternId": "Lint_UnescapedBracketInRegexp",
+    "title": "Checks for unescaped literal `]` in Regexp.",
+    "description": "Checks for unescaped literal `]` in Regexp.",
+    "timeToFix": 5
   },
   {
     "patternId": "Lint_UnexpectedBlockArity",
@@ -3682,6 +3710,12 @@
     ]
   },
   {
+    "patternId": "Style_AmbiguousEndlessMethodDefinition",
+    "title": "Checks for endless methods inside operators of lower precedence.",
+    "description": "Checks for endless methods inside operators of lower precedence.",
+    "timeToFix": 5
+  },
+  {
     "patternId": "Style_AndOr",
     "title": "Use &&/|| instead of and/or.",
     "description": "Use &&/|| instead of and/or.",
@@ -3826,6 +3860,18 @@
     "title": "Checks for places where `attr_reader` and `attr_writer` for the same method can be combined into single `attr_accessor`.",
     "description": "Checks for places where `attr_reader` and `attr_writer` for the same method can be combined into single `attr_accessor`.",
     "timeToFix": 5
+  },
+  {
+    "patternId": "Style_BitwisePredicate",
+    "title": "Prefer bitwise predicate methods over direct comparison operations.",
+    "description": "Prefer bitwise predicate methods over direct comparison operations.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Safe",
+        "description": "Safe"
+      }
+    ]
   },
   {
     "patternId": "Style_BlockComments",
@@ -4041,6 +4087,12 @@
     "patternId": "Style_ColonMethodDefinition",
     "title": "Do not use :: for defining class methods.",
     "description": "Do not use :: for defining class methods.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Style_CombinableDefined",
+    "title": "Checks successive `defined?` calls that can be combined into a single call.",
+    "description": "Checks successive `defined?` calls that can be combined into a single call.",
     "timeToFix": 5
   },
   {
@@ -4934,6 +4986,12 @@
     ]
   },
   {
+    "patternId": "Style_KeywordArgumentsMerging",
+    "title": "When passing an existing hash as keyword arguments, provide additional arguments directly rather than using `merge`.",
+    "description": "When passing an existing hash as keyword arguments, provide additional arguments directly rather than using `merge`.",
+    "timeToFix": 5
+  },
+  {
     "patternId": "Style_KeywordParametersOrder",
     "title": "Enforces that optional keyword parameters are placed at the end of the parameters list.",
     "description": "Enforces that optional keyword parameters are placed at the end of the parameters list.",
@@ -5316,6 +5374,18 @@
       {
         "name": "SafeAutoCorrect",
         "description": "SafeAutoCorrect"
+      }
+    ]
+  },
+  {
+    "patternId": "Style_SafeNavigationChainLength",
+    "title": "Enforces safe navigation chains length to not exceed the configured maximum.",
+    "description": "Enforces safe navigation chains length to not exceed the configured maximum.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Max",
+        "description": "Max"
       }
     ]
   },
@@ -9674,16 +9744,22 @@
     "timeToFix": 5
   },
   {
-    "patternId": "ThreadSafety_InstanceVariableInClassMethod",
-    "title": "Avoid using instance variables in class methods.",
-    "description": "Avoid using instance variables in class methods.",
+    "patternId": "ThreadSafety_ClassInstanceVariable",
+    "title": "Class Instance Variable",
+    "description": "Class Instance Variable",
     "timeToFix": 5
   },
   {
     "patternId": "ThreadSafety_ClassAndModuleAttributes",
     "title": "Avoid mutating class and module attributes.",
     "description": "Avoid mutating class and module attributes.",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "ActiveSupportClassAttributeAllowed",
+        "description": "ActiveSupportClassAttributeAllowed"
+      }
+    ]
   },
   {
     "patternId": "ThreadSafety_MutableClassInstanceVariable",
@@ -9710,6 +9786,28 @@
     "title": "Avoid starting new threads. Let a framework like Sidekiq handle the threads.",
     "description": "Avoid starting new threads. Let a framework like Sidekiq handle the threads.",
     "timeToFix": 5
+  },
+  {
+    "patternId": "ThreadSafety_DirChdir",
+    "title": "Avoid using `Dir.chdir` due to its process-wide effect.",
+    "description": "Avoid using `Dir.chdir` due to its process-wide effect.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "ThreadSafety_RackMiddlewareInstanceVariable",
+    "title": "Avoid instance variables in Rack middleware.",
+    "description": "Avoid instance variables in Rack middleware.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Include",
+        "description": "Include"
+      },
+      {
+        "name": "AllowedIdentifiers",
+        "description": "AllowedIdentifiers"
+      }
+    ]
   },
   {
     "patternId": "Minitest_AssertEmpty",
