@@ -55,11 +55,15 @@ end# good
 class Foo
 
   private :bar, :baz
+  private *%i[qux quux]
+  private *METHOD_NAMES
 
 end# bad
 class Foo
 
   private :bar, :baz
+  private *%i[qux quux]
+  private *METHOD_NAMES
 
 end# good
 class Foo

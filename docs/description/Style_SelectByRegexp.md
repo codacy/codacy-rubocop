@@ -16,7 +16,7 @@ See https://bugs.ruby-lang.org/issues/17030
 # Examples
 
 ```ruby
-# bad (select or find_all)
+# bad (select, filter, or find_all)
 array.select { |x| x.match? /regexp/ }
 array.select { |x| /regexp/.match?(x) }
 array.select { |x| x =~ /regexp/ }

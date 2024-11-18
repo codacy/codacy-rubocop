@@ -17,6 +17,11 @@ The default for `MaxChainLength` is `2`.
 We have limited the cop to not register an offense for method chains
 that exceed this option's value.
 
+NOTE: This cop will recognize offenses but not autocorrect code when the
+right hand side (RHS) of the `&&` statement is an `||` statement
+(eg. `foo && (foo.bar? || foo.baz?)`). It can be corrected
+manually by removing the `foo &&` and adding `&.` to each `foo` on the RHS.
+
 # Examples
 
 ```ruby

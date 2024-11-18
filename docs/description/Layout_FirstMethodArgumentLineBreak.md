@@ -54,6 +54,9 @@ method(
     qux: "b",
   }
 )
+# good
+some_method(foo, bar,
+  baz)
 ```
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Layout/FirstMethodArgumentLineBreak)

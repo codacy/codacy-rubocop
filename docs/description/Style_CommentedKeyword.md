@@ -4,7 +4,7 @@ These keywords are: `class`, `module`, `def`, `begin`, `end`.
 
 Note that some comments
 (`:nodoc:`, `:yields:`, `rubocop:disable` and `rubocop:todo`)
-are allowed.
+and RBS::Inline annotation comments are allowed.
 
 Autocorrection removes comments from `end` keyword and keeps comments
 for `class`, `module`, `def` and `begin` above the keyword.
