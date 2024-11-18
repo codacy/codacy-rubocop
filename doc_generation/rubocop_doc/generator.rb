@@ -2,9 +2,9 @@
 
 # Plugins with patterns documentation should be added here
 $plugins = ["rubocop-performance",
-            "rubocop-rails", 
-            "rubocop-sorbet", 
-            "rubocop-graphql", 
+            "rubocop-rails",
+            "rubocop-sorbet",
+            "rubocop-graphql",
             "rubocop-thread_safety",
             "rubocop-minitest",
             "rubocop-rake",
@@ -16,7 +16,8 @@ $plugins = ["rubocop-performance",
             "rubocop-mdsol",
             "rubocop-rspec_rails",
             "rubocop-capybara",
-            "rubocop-rubycw"
+            "rubocop-rubycw",
+            "standard"
           ]
 
 # frozen_string_literal: true
