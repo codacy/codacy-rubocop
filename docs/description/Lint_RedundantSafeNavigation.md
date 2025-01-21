@@ -2,7 +2,7 @@
 Checks for redundant safe navigation calls.
 Use cases where a constant, named in camel case for classes and modules is `nil` are rare,
 and an offense is not detected when the receiver is a constant. The detection also applies
-to literal receivers, except for `nil`.
+to `self`, and to literal receivers, except for `nil`.
 
 For all receivers, the `instance_of?`, `kind_of?`, `is_a?`, `eql?`, `respond_to?`,
 and `equal?` methods are checked by default.
@@ -22,6 +22,9 @@ because `NilClass` has methods like `respond_to?` and `is_a?`.
 # bad
 CamelCaseConst&.do_something
 
+# good
+CamelCaseConst.do_something
+
 # bad
 do_something if attrs&.respond_to?(:[])
 
@@ -32,9 +35,6 @@ do_something if attrs.respond_to?(:[])
 while node&.is_a?(BeginNode)
   node = node.parent
 end
-
-# good
-CamelCaseConst.do_something
 
 # good
 while node.is_a?(BeginNode)
@@ -58,7 +58,13 @@ foo.to_h { |k, v| [k, v] }
 foo.to_a
 foo.to_i
 foo.to_f
-foo.to_s# bad
+foo.to_s
+
+# bad
+self&.foo
+
+# good
+self.foo# bad
 do_something if attrs&.nil_safe_method(:[])
 
 # good

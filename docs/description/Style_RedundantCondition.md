@@ -1,6 +1,19 @@
 
 Checks for unnecessary conditional expressions.
 
+NOTE: Since the intention of the comment cannot be automatically determined,
+autocorrection is not applied when a comment is used, as shown below:
+
+[source,ruby]
+-----
+if b
+  # Important note.
+  b
+else
+  c
+end
+-----
+
 # Examples
 
 ```ruby

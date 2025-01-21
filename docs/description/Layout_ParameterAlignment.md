@@ -1,9 +1,8 @@
 
-Here we check if the parameters on a multi-line method call or
-definition are aligned.
+Check that the parameters on a multi-line method call or definition are aligned.
 
-To set the alignment of the first argument, use the cop
-FirstParameterIndentation.
+To set the alignment of the first argument, use the
+`Layout/FirstParameterIndentation` cop.
 
 # Examples
 

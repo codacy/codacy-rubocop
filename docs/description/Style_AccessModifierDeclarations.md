@@ -57,6 +57,7 @@ class Foo
   private :bar, :baz
   private *%i[qux quux]
   private *METHOD_NAMES
+  private *private_methods
 
 end# bad
 class Foo
@@ -64,6 +65,7 @@ class Foo
   private :bar, :baz
   private *%i[qux quux]
   private *METHOD_NAMES
+  private *private_methods
 
 end# good
 class Foo
@@ -86,6 +88,20 @@ class Foo
   protected attr_writer :baz
   private attr_accessor :qux
   private attr :quux
+
+end# good
+class Foo
+
+  public alias_method :bar, :foo
+  protected alias_method :baz, :foo
+  private alias_method :qux, :foo
+
+end# bad
+class Foo
+
+  public alias_method :bar, :foo
+  protected alias_method :baz, :foo
+  private alias_method :qux, :foo
 
 end
 ```

@@ -10,20 +10,25 @@ surrounding space depending on configuration.
 
 # bad
 array = [ a, b, c, d ]
+array = [ a, [ b, c ]]
 
 # good
-array = [a, b, c, d]# The `space` style enforces that array literals have
+array = [a, b, c, d]
+array = [a, [b, c]]# The `space` style enforces that array literals have
 # surrounding space.
 
 # bad
 array = [a, b, c, d]
+array = [ a, [ b, c ]]
 
 # good
-array = [ a, b, c, d ]# The `compact` style normally requires a space inside
+array = [ a, b, c, d ]
+array = [ a, [ b, c ] ]# The `compact` style normally requires a space inside
 # array brackets, with the exception that successive left
 # or right brackets are collapsed together in nested arrays.
 
 # bad
+array = [a, b, c, d]
 array = [ a, [ b, c ] ]
 array = [
   [ a ],
@@ -31,6 +36,7 @@ array = [
 ]
 
 # good
+array = [ a, b, c, d ]
 array = [ a, [ b, c ]]
 array = [[ a ],
   [ b, c ]]# The `no_space` EnforcedStyleForEmptyBrackets style enforces that

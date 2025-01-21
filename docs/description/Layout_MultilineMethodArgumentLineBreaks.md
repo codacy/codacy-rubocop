@@ -28,6 +28,18 @@ foo(
 
 # good
 foo(a, b, c)
+# bad
+foo(a, b,
+  c
+)
+
+# bad
+foo(
+  a, b, {
+    foo: "bar",
+  }
+)
+
 # good
 foo(
   a,
@@ -36,6 +48,18 @@ foo(
     foo: "bar",
   }
 )
+# bad
+foo(a, b,
+  c
+)
+
+# good
+foo(
+  a, b, {
+    foo: "bar",
+  }
+)
+
 # good
 foo(
   a,

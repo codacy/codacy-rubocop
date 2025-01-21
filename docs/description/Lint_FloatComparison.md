@@ -27,6 +27,9 @@ x != 0.0
 tolerance = 0.0001
 (x - 0.1).abs < tolerance
 
+# good - comparing against nil
+Float(x, exception: false) == nil
+
 # Or some other epsilon based type of comparison:
 # https://www.embeddeduse.com/2019/08/26/qt-compare-two-floats/
 ```

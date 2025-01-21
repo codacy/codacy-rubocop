@@ -1130,6 +1130,10 @@
         "description": "AllowedPatterns"
       },
       {
+        "name": "SplitStrings",
+        "description": "SplitStrings"
+      },
+      {
         "name": "IgnoredPatterns",
         "description": "IgnoredPatterns"
       }
@@ -1844,6 +1848,12 @@
     "timeToFix": 5
   },
   {
+    "patternId": "Lint_ConstantReassignment",
+    "title": "Checks for constant reassignments.",
+    "description": "Checks for constant reassignments.",
+    "timeToFix": 5
+  },
+  {
     "patternId": "Lint_ConstantResolution",
     "title": "Check that constants are fully qualified with `::`.",
     "description": "Check that constants are fully qualified with `::`.",
@@ -2140,6 +2150,12 @@
     "timeToFix": 5
   },
   {
+    "patternId": "Lint_SharedMutableDefault",
+    "title": "Checks for mutable literals used as default arguments during Hash initialization.",
+    "description": "Checks for mutable literals used as default arguments during Hash initialization.",
+    "timeToFix": 5
+  },
+  {
     "patternId": "Lint_ErbNewArguments",
     "title": "Use `:trim_mode` and `:eoutvar` keyword arguments to `ERB.new`.",
     "description": "Use `:trim_mode` and `:eoutvar` keyword arguments to `ERB.new`.",
@@ -2180,6 +2196,12 @@
         "description": "Safe"
       }
     ]
+  },
+  {
+    "patternId": "Lint_HashNewWithKeywordArgumentsAsDefault",
+    "title": "Checks for the deprecated use of keyword arguments for hash default in `Hash.new`.",
+    "description": "Checks for the deprecated use of keyword arguments for hash default in `Hash.new`.",
+    "timeToFix": 5
   },
   {
     "patternId": "Lint_HeredocMethodCallPosition",
@@ -2431,6 +2453,12 @@
     "patternId": "Lint_NumberedParameterAssignment",
     "title": "Checks for uses of numbered parameter assignment.",
     "description": "Checks for uses of numbered parameter assignment.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Lint_NumericOperationWithConstantResult",
+    "title": "Checks for numeric operations with constant results.",
+    "description": "Checks for numeric operations with constant results.",
     "timeToFix": 5
   },
   {
@@ -2930,6 +2958,10 @@
         "description": "IgnoreNotImplementedMethods"
       },
       {
+        "name": "NotImplementedExceptions",
+        "description": "NotImplementedExceptions"
+      },
+      {
         "name": "Exclude",
         "description": "Exclude"
       }
@@ -2986,6 +3018,12 @@
         "description": "Exclude"
       }
     ]
+  },
+  {
+    "patternId": "Lint_UselessDefined",
+    "title": "Checks for calls to `defined?` with strings and symbols. The result of such a call will always be truthy.",
+    "description": "Checks for calls to `defined?` with strings and symbols. The result of such a call will always be truthy.",
+    "timeToFix": 5
   },
   {
     "patternId": "Lint_UselessElseWithoutRescue",
@@ -3672,6 +3710,10 @@
         "description": "AllowModifiersOnAttrs"
       },
       {
+        "name": "AllowModifiersOnAliasMethod",
+        "description": "AllowModifiersOnAliasMethod"
+      },
+      {
         "name": "SafeAutoCorrect",
         "description": "SafeAutoCorrect"
       }
@@ -4264,6 +4306,18 @@
     "timeToFix": 5
   },
   {
+    "patternId": "Style_DigChain",
+    "title": "Use `dig` with multiple parameters instead of chaining multiple calls.",
+    "description": "Use `dig` with multiple parameters instead of chaining multiple calls.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Safe",
+        "description": "Safe"
+      }
+    ]
+  },
+  {
     "patternId": "Style_Dir",
     "title": "Use the `__dir__` method to retrieve the canonicalized absolute path to the current file.",
     "description": "Use the `__dir__` method to retrieve the canonicalized absolute path to the current file.",
@@ -4558,10 +4612,34 @@
     ]
   },
   {
+    "patternId": "Style_FileNull",
+    "title": "Use `File::NULL` instead of hardcoding \"dev/null\".",
+    "description": "Use `File::NULL` instead of hardcoding \"dev/null\".",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "SafeAutoCorrect",
+        "description": "SafeAutoCorrect"
+      }
+    ]
+  },
+  {
     "patternId": "Style_FileRead",
     "title": "Favor `File.(bin)read` convenience methods.",
     "description": "Favor `File.(bin)read` convenience methods.",
     "timeToFix": 5
+  },
+  {
+    "patternId": "Style_FileTouch",
+    "title": "Favor `FileUtils.touch` for touching files.",
+    "description": "Favor `FileUtils.touch` for touching files.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "SafeAutoCorrect",
+        "description": "SafeAutoCorrect"
+      }
+    ]
   },
   {
     "patternId": "Style_FileWrite",
@@ -4986,6 +5064,12 @@
     ]
   },
   {
+    "patternId": "Style_ItAssignment",
+    "title": "Checks for assignment to `it` inside a block.",
+    "description": "Checks for assignment to `it` inside a block.",
+    "timeToFix": 5
+  },
+  {
     "patternId": "Style_KeywordArgumentsMerging",
     "title": "When passing an existing hash as keyword arguments, provide additional arguments directly rather than using `merge`.",
     "description": "When passing an existing hash as keyword arguments, provide additional arguments directly rather than using `merge`.",
@@ -5241,8 +5325,8 @@
   },
   {
     "patternId": "Style_RedundantCurrentDirectoryInPath",
-    "title": "Checks for uses a redundant current directory in path.",
-    "description": "Checks for uses a redundant current directory in path.",
+    "title": "Checks for a redundant current directory in a path given to `require_relative`.",
+    "description": "Checks for a redundant current directory in a path given to `require_relative`.",
     "timeToFix": 5
   },
   {
@@ -7350,6 +7434,18 @@
     "timeToFix": 5
   },
   {
+    "patternId": "Performance_StringBytesize",
+    "title": "Use `String#bytesize` instead of calculating the size of the bytes array.",
+    "description": "Use `String#bytesize` instead of calculating the size of the bytes array.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Safe",
+        "description": "Safe"
+      }
+    ]
+  },
+  {
     "patternId": "Performance_StartWith",
     "title": "Use `start_with?` instead of a regex match anchored to the beginning of a string.",
     "description": "Use `start_with?` instead of a regex match anchored to the beginning of a string.",
@@ -7447,6 +7543,22 @@
     "description": "Use `flash.now` instead of `flash` before `render`.",
     "timeToFix": 5,
     "parameters": [
+      {
+        "name": "SafeAutoCorrect",
+        "description": "SafeAutoCorrect"
+      }
+    ]
+  },
+  {
+    "patternId": "Rails_StrongParametersExpect",
+    "title": "Enforces the use of `ActionController::Parameters#expect` as a method for strong parameter handling.",
+    "description": "Enforces the use of `ActionController::Parameters#expect` as a method for strong parameter handling.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Include",
+        "description": "Include"
+      },
       {
         "name": "SafeAutoCorrect",
         "description": "SafeAutoCorrect"
@@ -8285,6 +8397,22 @@
     "description": "The class name of the migration should match its file name.",
     "timeToFix": 5,
     "parameters": [
+      {
+        "name": "Include",
+        "description": "Include"
+      }
+    ]
+  },
+  {
+    "patternId": "Rails_MultipleRoutePaths",
+    "title": "Checks for mapping a route with multiple paths, which is deprecated and will be removed in Rails 8.1.",
+    "description": "Checks for mapping a route with multiple paths, which is deprecated and will be removed in Rails 8.1.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Severity",
+        "description": "Severity"
+      },
       {
         "name": "Include",
         "description": "Include"
@@ -11288,18 +11416,6 @@
     ]
   },
   {
-    "patternId": "RSpec_StringAsInstanceDoubleConstant",
-    "title": "Do not use a string as `instance_double` constant.",
-    "description": "Do not use a string as `instance_double` constant.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Safe",
-        "description": "Safe"
-      }
-    ]
-  },
-  {
     "patternId": "RSpec_StubbedMock",
     "title": "Checks that message expectations do not have a configured response.",
     "description": "Checks that message expectations do not have a configured response.",
@@ -11374,14 +11490,6 @@
       {
         "name": "SafeAutoCorrect",
         "description": "SafeAutoCorrect"
-      },
-      {
-        "name": "EnforcedStyle",
-        "description": "EnforcedStyle"
-      },
-      {
-        "name": "SupportedStyles",
-        "description": "SupportedStyles"
       }
     ]
   },
@@ -11417,7 +11525,13 @@
     "patternId": "I18n_GetText_DecorateString",
     "title": "Get Text",
     "description": "Get Text",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "AutoCorrect",
+        "description": "AutoCorrect"
+      }
+    ]
   },
   {
     "patternId": "I18n_GetText_DecorateFunctionMessage",
