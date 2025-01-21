@@ -10,16 +10,20 @@ surrounding space depending on configuration.
 
 # bad
 h = {a: 1, b: 2}
+foo = {{ a: 1 } => { b: { c: 2 }}}
 
 # good
-h = { a: 1, b: 2 }# The `no_space` style enforces that hash literals have
+h = { a: 1, b: 2 }
+foo = { { a: 1 } => { b: { c: 2 } } }# The `no_space` style enforces that hash literals have
 # no surrounding space.
 
 # bad
 h = { a: 1, b: 2 }
+foo = {{ a: 1 } => { b: { c: 2 }}}
 
 # good
-h = {a: 1, b: 2}# The `compact` style normally requires a space inside
+h = {a: 1, b: 2}
+foo = {{a: 1} => {b: {c: 2}}}# The `compact` style normally requires a space inside
 # hash braces, with the exception that successive left
 # braces or right braces are collapsed together in nested hashes.
 

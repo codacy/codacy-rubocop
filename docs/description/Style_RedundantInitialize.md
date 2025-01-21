@@ -7,6 +7,9 @@ an argument that accepts multiple values (`restarg`, `kwrestarg`, etc.) it
 will not register an offense, because it allows the initializer to take a different
 number of arguments as its superclass potentially does.
 
+NOTE: If an initializer takes any arguments and has an empty body, RuboCop
+assumes it to *not* be redundant. This is to prevent potential `ArgumentError`.
+
 NOTE: If an initializer argument has a default value, RuboCop assumes it
 to *not* be redundant.
 
@@ -60,6 +63,10 @@ end
 # good (default value)
 def initialize(a, b: 5)
   super
+end
+
+# good (changes the parameter requirements)
+def initialize(_)
 end
 
 # good (changes the parameter requirements)

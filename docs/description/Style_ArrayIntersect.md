@@ -22,6 +22,7 @@ so it will not be detected when using block argument.
 # bad
 (array1 & array2).any?
 (array1 & array2).empty?
+(array1 & array2).none?
 
 # good
 array1.intersect?(array2)

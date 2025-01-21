@@ -6,18 +6,16 @@ blocks.
 
 ```ruby
 
-# good
-
+# bad
 begin
+
   # ...
+
 end
 
-# bad
-
+# good
 begin
-
   # ...
-
 end
 ```
 

@@ -19,6 +19,10 @@ Furthermore, any arguments accompanied by a block may potentially be delegating 
 `define_method`, therefore, `super` used within these blocks will be allowed.
 This approach might result in false negatives, yet ensuring safe detection takes precedence.
 
+NOTE: When forwarding the same arguments but replacing the block argument with a new inline
+block, it is not necessary to explicitly list the non-block arguments. As such, an offense
+will be registered in this case.
+
 # Examples
 
 ```ruby
@@ -40,6 +44,16 @@ end
 # good - forwarding no arguments
 def method(*args, **kwargs)
   super()
+end
+
+# bad - forwarding with overridden block
+def method(*args, **kwargs, &block)
+  super(*args, **kwargs) { do_something }
+end
+
+# good - implicitly passing all non-block arguments
+def method(*args, **kwargs, &block)
+  super { do_something }
 end
 
 # good - assigning to the block variable before calling super

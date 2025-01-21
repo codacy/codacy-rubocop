@@ -1,5 +1,5 @@
 
-Checks for duplicate literal, constant, or variable elements in Set.
+Checks for duplicate literal, constant, or variable elements in Set and SortedSet.
 
 # Examples
 
@@ -22,6 +22,18 @@ Set.new([:foo, :bar])
 
 # good
 [:foo, :bar].to_set
+
+# bad
+SortedSet[:foo, :bar, :foo]
+
+# good
+SortedSet[:foo, :bar]
+
+# bad
+SortedSet.new([:foo, :bar, :foo])
+
+# good
+SortedSet.new([:foo, :bar])
 ```
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Lint/DuplicateSetElement)
