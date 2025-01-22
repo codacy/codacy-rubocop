@@ -32,7 +32,8 @@ object Rubocop extends Tool {
       "rubocop-md",
       "rubocop-mdsol",
       "rubocop-rspec_rails",
-      "rubocop-capybara"
+      "rubocop-capybara",
+      "standard"
     )
 
   // Gemfile is analysed
