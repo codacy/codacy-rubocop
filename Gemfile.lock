@@ -107,9 +107,10 @@ GEM
     git_diff_parser (3.2.0)
     globalid (1.2.1)
       activesupport (>= 6.1)
-    graphql (2.4.8)
+    graphql (2.4.13)
       base64
       fiber-storage
+      logger
     haml (6.3.0)
       temple (>= 0.8.2)
       thor
