@@ -26,6 +26,15 @@ modify the receiver.
 {foo: 1, bar: 2, baz: 3}.select {|k, v| !%i[bar].include?(k) }
 {foo: 1, bar: 2, baz: 3}.filter {|k, v| !%i[bar].include?(k) }
 
+# good
+{foo: 1, bar: 2, baz: 3}.except(:bar)
+# good
+{foo: 1, bar: 2, baz: 3}.reject {|k, v| !%i[bar].exclude?(k) }
+{foo: 1, bar: 2, baz: 3}.select {|k, v| %i[bar].exclude?(k) }
+
+# good
+{foo: 1, bar: 2, baz: 3}.reject {|k, v| k.in?(%i[bar]) }
+{foo: 1, bar: 2, baz: 3}.select {|k, v| !k.in?(%i[bar]) }
 # bad
 {foo: 1, bar: 2, baz: 3}.reject {|k, v| !%i[bar].exclude?(k) }
 {foo: 1, bar: 2, baz: 3}.select {|k, v| %i[bar].exclude?(k) }

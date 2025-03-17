@@ -1,5 +1,5 @@
 
-Checks for RuntimeError as the argument of raise/fail.
+Checks for `RuntimeError` as the argument of `raise`/`fail`.
 
 # Examples
 

@@ -11,6 +11,11 @@ around do |example|
   end
 end
 
+# bad
+around do |example|
+  freeze_time(&example)
+end
+
 # good
 before { freeze_time }
 ```

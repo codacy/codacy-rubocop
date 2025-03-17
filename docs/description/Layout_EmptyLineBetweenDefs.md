@@ -19,6 +19,7 @@ def a
 end
 def b
 end
+
 # good
 def a
 end
@@ -33,6 +34,7 @@ class B
 end
 def b
 end
+
 # good
 class A
 end
@@ -50,6 +52,7 @@ module B
 end
 def b
 end
+
 # good
 module A
 end

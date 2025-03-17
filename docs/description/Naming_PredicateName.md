@@ -13,6 +13,10 @@ methods which begin with a forbidden prefix are not allowed, even if
 they end with a `?`. These methods should be changed to remove the
 prefix.
 
+When `UseSorbetSigs` set to true (optional), the cop will only report
+offenses if the method has a Sorbet `sig` with a return type of
+`T::Boolean`. Dynamic methods are not supported with this configuration.
+
 # Examples
 
 ```ruby
@@ -45,6 +49,24 @@ end# Despite starting with the `is_` prefix, this method is allowed
 def is_a?(value)
 end# good
 def is_even?(value)
+end# bad
+sig { returns(String) }
+def is_this_thing_on
+  "yes"
+end
+
+# good - Sorbet signature is not evaluated
+sig { returns(String) }
+def is_this_thing_on?
+  "yes"
+end# bad
+sig { returns(T::Boolean) }
+def odd(value)
+end
+
+# good
+sig { returns(T::Boolean) }
+def odd?(value)
 end# bad
 define_method(:is_even) { |value| }
 

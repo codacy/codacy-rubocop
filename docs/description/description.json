@@ -480,10 +480,6 @@
       {
         "name": "AllowForAlignment",
         "description": "AllowForAlignment"
-      },
-      {
-        "name": "Exclude",
-        "description": "Exclude"
       }
     ]
   },
@@ -602,10 +598,6 @@
       {
         "name": "NumberOfEmptyLines",
         "description": "NumberOfEmptyLines"
-      },
-      {
-        "name": "Exclude",
-        "description": "Exclude"
       }
     ]
   },
@@ -1034,10 +1026,6 @@
       {
         "name": "AllowSteepAnnotation",
         "description": "AllowSteepAnnotation"
-      },
-      {
-        "name": "Exclude",
-        "description": "Exclude"
       }
     ]
   },
@@ -1132,10 +1120,6 @@
       {
         "name": "SplitStrings",
         "description": "SplitStrings"
-      },
-      {
-        "name": "IgnoredPatterns",
-        "description": "IgnoredPatterns"
       }
     ]
   },
@@ -1702,10 +1686,6 @@
       {
         "name": "SupportedStyles",
         "description": "SupportedStyles"
-      },
-      {
-        "name": "Exclude",
-        "description": "Exclude"
       }
     ]
   },
@@ -1776,6 +1756,18 @@
     "title": "Checks for ambiguous regexp literals in the first argument of a method invocation without parentheses.",
     "description": "Checks for ambiguous regexp literals in the first argument of a method invocation without parentheses.",
     "timeToFix": 5
+  },
+  {
+    "patternId": "Lint_ArrayLiteralInRegexp",
+    "title": "Checks for an array literal interpolated inside a regexp.",
+    "description": "Checks for an array literal interpolated inside a regexp.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "SafeAutoCorrect",
+        "description": "SafeAutoCorrect"
+      }
+    ]
   },
   {
     "patternId": "Lint_AssignmentInCondition",
@@ -1868,6 +1860,12 @@
         "description": "Ignore"
       }
     ]
+  },
+  {
+    "patternId": "Lint_CopDirectiveSyntax",
+    "title": "Checks that `# rubocop:` directives are strictly formatted.",
+    "description": "Checks that `# rubocop:` directives are strictly formatted.",
+    "timeToFix": 5
   },
   {
     "patternId": "Lint_Debugger",
@@ -1975,13 +1973,7 @@
     "patternId": "Lint_DuplicateMethods",
     "title": "Check for duplicate method definitions.",
     "description": "Check for duplicate method definitions.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Exclude",
-        "description": "Exclude"
-      }
-    ]
+    "timeToFix": 5
   },
   {
     "patternId": "Lint_DuplicateRegexpCharacterClassElement",
@@ -1998,10 +1990,6 @@
       {
         "name": "SafeAutoCorrect",
         "description": "SafeAutoCorrect"
-      },
-      {
-        "name": "Exclude",
-        "description": "Exclude"
       }
     ]
   },
@@ -2066,10 +2054,6 @@
       {
         "name": "AutoCorrect",
         "description": "AutoCorrect"
-      },
-      {
-        "name": "SafeAutoCorrect",
-        "description": "SafeAutoCorrect"
       },
       {
         "name": "AllowComments",
@@ -2287,7 +2271,13 @@
     "patternId": "Lint_LiteralAsCondition",
     "title": "Checks of literals used in conditions.",
     "description": "Checks of literals used in conditions.",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "AutoCorrect",
+        "description": "AutoCorrect"
+      }
+    ]
   },
   {
     "patternId": "Lint_LiteralAssignmentInCondition",
@@ -2547,13 +2537,7 @@
     "patternId": "Lint_RedundantCopEnableDirective",
     "title": "Checks for rubocop:enable comments that can be removed.",
     "description": "Checks for rubocop:enable comments that can be removed.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Exclude",
-        "description": "Exclude"
-      }
-    ]
+    "timeToFix": 5
   },
   {
     "patternId": "Lint_RedundantDirGlobSort",
@@ -2577,17 +2561,7 @@
     "patternId": "Lint_RedundantRequireStatement",
     "title": "Checks for unnecessary `require` statement.",
     "description": "Checks for unnecessary `require` statement.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "SafeAutoCorrect",
-        "description": "SafeAutoCorrect"
-      },
-      {
-        "name": "Exclude",
-        "description": "Exclude"
-      }
-    ]
+    "timeToFix": 5
   },
   {
     "patternId": "Lint_RedundantSafeNavigation",
@@ -2621,6 +2595,12 @@
     "patternId": "Lint_RedundantStringCoercion",
     "title": "Checks for Object#to_s usage in string interpolation.",
     "description": "Checks for Object#to_s usage in string interpolation.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Lint_RedundantTypeConversion",
+    "title": "Checks for redundantly converting a literal to the same type.",
+    "description": "Checks for redundantly converting a literal to the same type.",
     "timeToFix": 5
   },
   {
@@ -2784,6 +2764,18 @@
     ]
   },
   {
+    "patternId": "Lint_SuppressedExceptionInNumberConversion",
+    "title": "Checks for cases where exceptions unrelated to the numeric constructors may be unintentionally swallowed.",
+    "description": "Checks for cases where exceptions unrelated to the numeric constructors may be unintentionally swallowed.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "SafeAutoCorrect",
+        "description": "SafeAutoCorrect"
+      }
+    ]
+  },
+  {
     "patternId": "Lint_SymbolConversion",
     "title": "Checks for unnecessary symbol conversions.",
     "description": "Checks for unnecessary symbol conversions.",
@@ -2928,10 +2920,6 @@
       {
         "name": "AllowUnusedKeywordArguments",
         "description": "AllowUnusedKeywordArguments"
-      },
-      {
-        "name": "Exclude",
-        "description": "Exclude"
       }
     ]
   },
@@ -2960,10 +2948,6 @@
       {
         "name": "NotImplementedExceptions",
         "description": "NotImplementedExceptions"
-      },
-      {
-        "name": "Exclude",
-        "description": "Exclude"
       }
     ]
   },
@@ -2996,10 +2980,6 @@
       {
         "name": "MethodCreatingMethods",
         "description": "MethodCreatingMethods"
-      },
-      {
-        "name": "Exclude",
-        "description": "Exclude"
       }
     ]
   },
@@ -3012,12 +2992,14 @@
       {
         "name": "AutoCorrect",
         "description": "AutoCorrect"
-      },
-      {
-        "name": "Exclude",
-        "description": "Exclude"
       }
     ]
+  },
+  {
+    "patternId": "Lint_UselessConstantScoping",
+    "title": "Checks for useless constant scoping.",
+    "description": "Checks for useless constant scoping.",
+    "timeToFix": 5
   },
   {
     "patternId": "Lint_UselessDefined",
@@ -3044,10 +3026,6 @@
       {
         "name": "Safe",
         "description": "Safe"
-      },
-      {
-        "name": "Exclude",
-        "description": "Exclude"
       }
     ]
   },
@@ -3110,10 +3088,6 @@
       {
         "name": "CheckForMethodsWithNoSideEffects",
         "description": "CheckForMethodsWithNoSideEffects"
-      },
-      {
-        "name": "Exclude",
-        "description": "Exclude"
       }
     ]
   },
@@ -3190,10 +3164,6 @@
       {
         "name": "Exclude",
         "description": "Exclude"
-      },
-      {
-        "name": "inherit_mode",
-        "description": "inherit_mode"
       }
     ]
   },
@@ -3614,6 +3584,10 @@
         "description": "MethodDefinitionMacros"
       },
       {
+        "name": "UseSorbetSigs",
+        "description": "UseSorbetSigs"
+      },
+      {
         "name": "Exclude",
         "description": "Exclude"
       }
@@ -3652,6 +3626,14 @@
       {
         "name": "AllowedPatterns",
         "description": "AllowedPatterns"
+      },
+      {
+        "name": "ForbiddenIdentifiers",
+        "description": "ForbiddenIdentifiers"
+      },
+      {
+        "name": "ForbiddenPatterns",
+        "description": "ForbiddenPatterns"
       }
     ]
   },
@@ -3856,10 +3838,6 @@
       {
         "name": "AllowedChars",
         "description": "AllowedChars"
-      },
-      {
-        "name": "Exclude",
-        "description": "Exclude"
       }
     ]
   },
@@ -4182,10 +4160,6 @@
       {
         "name": "RequireColon",
         "description": "RequireColon"
-      },
-      {
-        "name": "Exclude",
-        "description": "Exclude"
       }
     ]
   },
@@ -4868,6 +4842,18 @@
     ]
   },
   {
+    "patternId": "Style_HashSlice",
+    "title": "Checks for usages of `Hash#reject`, `Hash#select`, and `Hash#filter` methods that can be replaced with `Hash#slice` method.",
+    "description": "Checks for usages of `Hash#reject`, `Hash#select`, and `Hash#filter` methods that can be replaced with `Hash#slice` method.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Safe",
+        "description": "Safe"
+      }
+    ]
+  },
+  {
     "patternId": "Style_HashSyntax",
     "title": "Prefer Ruby 1.9 hash syntax { a: 1, b: 2 } over 1.8 syntax { :a => 1, :b => 2 }.",
     "description": "Prefer Ruby 1.9 hash syntax { a: 1, b: 2 } over 1.8 syntax { :a => 1, :b => 2 }.",
@@ -5373,6 +5359,18 @@
     "patternId": "Style_RedundantFilterChain",
     "title": "Identifies usages of `any?`, `empty?`, `none?` or `one?` predicate methods chained to `select`/`filter`/`find_all` and change them to use predicate method instead.",
     "description": "Identifies usages of `any?`, `empty?`, `none?` or `one?` predicate methods chained to `select`/`filter`/`find_all` and change them to use predicate method instead.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "SafeAutoCorrect",
+        "description": "SafeAutoCorrect"
+      }
+    ]
+  },
+  {
+    "patternId": "Style_RedundantFormat",
+    "title": "Checks for usages of `Kernel#format` or `Kernel#sprintf` with only a single argument.",
+    "description": "Checks for usages of `Kernel#format` or `Kernel#sprintf` with only a single argument.",
     "timeToFix": 5,
     "parameters": [
       {
@@ -6149,7 +6147,13 @@
     "patternId": "Style_RedundantCondition",
     "title": "Checks for unnecessary conditional expressions.",
     "description": "Checks for unnecessary conditional expressions.",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "AllowedMethods",
+        "description": "AllowedMethods"
+      }
+    ]
   },
   {
     "patternId": "Style_RedundantConditional",
@@ -7055,2153 +7059,1113 @@
   },
   {
     "patternId": "Performance_AncestorsInclude",
-    "title": "Use `A <= B` instead of `A.ancestors.include?(B)`.",
-    "description": "Use `A <= B` instead of `A.ancestors.include?(B)`.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Safe",
-        "description": "Safe"
-      }
-    ]
+    "title": "Ancestors Include",
+    "description": "Ancestors Include",
+    "timeToFix": 5
   },
   {
     "patternId": "Performance_ArraySemiInfiniteRangeSlice",
-    "title": "Identifies places where slicing arrays with semi-infinite ranges can be replaced by `Array#take` and `Array#drop`.",
-    "description": "Identifies places where slicing arrays with semi-infinite ranges can be replaced by `Array#take` and `Array#drop`.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Safe",
-        "description": "Safe"
-      }
-    ]
+    "title": "Array Semi Infinite Range Slice",
+    "description": "Array Semi Infinite Range Slice",
+    "timeToFix": 5
   },
   {
     "patternId": "Performance_BigDecimalWithNumericArgument",
-    "title": "Convert numeric literal to string and pass it to `BigDecimal`.",
-    "description": "Convert numeric literal to string and pass it to `BigDecimal`.",
+    "title": "Big Decimal With Numeric Argument",
+    "description": "Big Decimal With Numeric Argument",
     "timeToFix": 5
   },
   {
     "patternId": "Performance_BindCall",
-    "title": "Use `bind_call(obj, args, ...)` instead of `bind(obj).call(args, ...)`.",
-    "description": "Use `bind_call(obj, args, ...)` instead of `bind(obj).call(args, ...)`.",
+    "title": "Bind Call",
+    "description": "Bind Call",
     "timeToFix": 5
   },
   {
     "patternId": "Performance_BlockGivenWithExplicitBlock",
-    "title": "Check block argument explicitly instead of using `block_given?`.",
-    "description": "Check block argument explicitly instead of using `block_given?`.",
+    "title": "Block Given With Explicit Block",
+    "description": "Block Given With Explicit Block",
     "timeToFix": 5
   },
   {
     "patternId": "Performance_Caller",
-    "title": "Use `caller(n..n)` instead of `caller`.",
-    "description": "Use `caller(n..n)` instead of `caller`.",
+    "title": "Caller",
+    "description": "Caller",
     "timeToFix": 5
   },
   {
     "patternId": "Performance_CaseWhenSplat",
-    "title": "Reordering `when` conditions with a splat to the end of the `when` branches can improve performance.",
-    "description": "Reordering `when` conditions with a splat to the end of the `when` branches can improve performance.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "SafeAutoCorrect",
-        "description": "SafeAutoCorrect"
-      }
-    ]
+    "title": "Case When Splat",
+    "description": "Case When Splat",
+    "timeToFix": 5
   },
   {
     "patternId": "Performance_Casecmp",
-    "title": "Use `casecmp` rather than `downcase ==`, `upcase ==`, `== downcase`, or `== upcase`..",
-    "description": "Use `casecmp` rather than `downcase ==`, `upcase ==`, `== downcase`, or `== upcase`..",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Safe",
-        "description": "Safe"
-      }
-    ]
+    "title": "Casecmp",
+    "description": "Casecmp",
+    "timeToFix": 5
   },
   {
     "patternId": "Performance_CollectionLiteralInLoop",
-    "title": "Extract Array and Hash literals outside of loops into local variables or constants.",
-    "description": "Extract Array and Hash literals outside of loops into local variables or constants.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "MinSize",
-        "description": "MinSize"
-      }
-    ]
+    "title": "Collection Literal In Loop",
+    "description": "Collection Literal In Loop",
+    "timeToFix": 5
   },
   {
     "patternId": "Performance_CompareWithBlock",
-    "title": "Use `sort_by(&:foo)` instead of `sort { |a, b| a.foo <=> b.foo }`.",
-    "description": "Use `sort_by(&:foo)` instead of `sort { |a, b| a.foo <=> b.foo }`.",
+    "title": "Compare With Block",
+    "description": "Compare With Block",
     "timeToFix": 5
   },
   {
     "patternId": "Performance_ConcurrentMonotonicTime",
-    "title": "Use `Process.clock_gettime(Process::CLOCK_MONOTONIC)` instead of `Concurrent.monotonic_time`.",
-    "description": "Use `Process.clock_gettime(Process::CLOCK_MONOTONIC)` instead of `Concurrent.monotonic_time`.",
+    "title": "Concurrent Monotonic Time",
+    "description": "Concurrent Monotonic Time",
     "timeToFix": 5
   },
   {
     "patternId": "Performance_ConstantRegexp",
-    "title": "Finds regular expressions with dynamic components that are all constants.",
-    "description": "Finds regular expressions with dynamic components that are all constants.",
+    "title": "Constant Regexp",
+    "description": "Constant Regexp",
     "timeToFix": 5
   },
   {
     "patternId": "Performance_Count",
-    "title": "Use `count` instead of `{select,find_all,filter,reject}...{size,count,length}`.",
-    "description": "Use `count` instead of `{select,find_all,filter,reject}...{size,count,length}`.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "SafeAutoCorrect",
-        "description": "SafeAutoCorrect"
-      }
-    ]
+    "title": "Count",
+    "description": "Count",
+    "timeToFix": 5
   },
   {
     "patternId": "Performance_DeletePrefix",
-    "title": "Use `delete_prefix` instead of `gsub`.",
-    "description": "Use `delete_prefix` instead of `gsub`.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Safe",
-        "description": "Safe"
-      },
-      {
-        "name": "SafeMultiline",
-        "description": "SafeMultiline"
-      }
-    ]
+    "title": "Delete Prefix",
+    "description": "Delete Prefix",
+    "timeToFix": 5
   },
   {
     "patternId": "Performance_DeleteSuffix",
-    "title": "Use `delete_suffix` instead of `gsub`.",
-    "description": "Use `delete_suffix` instead of `gsub`.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Safe",
-        "description": "Safe"
-      },
-      {
-        "name": "SafeMultiline",
-        "description": "SafeMultiline"
-      }
-    ]
+    "title": "Delete Suffix",
+    "description": "Delete Suffix",
+    "timeToFix": 5
   },
   {
     "patternId": "Performance_Detect",
-    "title": "Use `detect` instead of `select.first`, `find_all.first`, `filter.first`, `select.last`, `find_all.last`, and `filter.last`.",
-    "description": "Use `detect` instead of `select.first`, `find_all.first`, `filter.first`, `select.last`, `find_all.last`, and `filter.last`.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "SafeAutoCorrect",
-        "description": "SafeAutoCorrect"
-      }
-    ]
+    "title": "Detect",
+    "description": "Detect",
+    "timeToFix": 5
   },
   {
     "patternId": "Performance_DoubleStartEndWith",
-    "title": "Use `str.{start,end}_with?(x, ..., y, ...)` instead of `str.{start,end}_with?(x, ...) || str.{start,end}_with?(y, ...)`.",
-    "description": "Use `str.{start,end}_with?(x, ..., y, ...)` instead of `str.{start,end}_with?(x, ...) || str.{start,end}_with?(y, ...)`.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "IncludeActiveSupportAliases",
-        "description": "IncludeActiveSupportAliases"
-      }
-    ]
+    "title": "Double Start End With",
+    "description": "Double Start End With",
+    "timeToFix": 5
   },
   {
     "patternId": "Performance_EndWith",
-    "title": "Use `end_with?` instead of a regex match anchored to the end of a string.",
-    "description": "Use `end_with?` instead of a regex match anchored to the end of a string.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "SafeAutoCorrect",
-        "description": "SafeAutoCorrect"
-      },
-      {
-        "name": "SafeMultiline",
-        "description": "SafeMultiline"
-      }
-    ]
+    "title": "End With",
+    "description": "End With",
+    "timeToFix": 5
   },
   {
     "patternId": "Performance_FixedSize",
-    "title": "Do not compute the size of statically sized objects except in constants.",
-    "description": "Do not compute the size of statically sized objects except in constants.",
+    "title": "Fixed Size",
+    "description": "Fixed Size",
     "timeToFix": 5
   },
   {
     "patternId": "Performance_FlatMap",
-    "title": "Use `Enumerable#flat_map` instead of `Enumerable#map...Array#flatten(1)` or `Enumerable#collect..Array#flatten(1)`.",
-    "description": "Use `Enumerable#flat_map` instead of `Enumerable#map...Array#flatten(1)` or `Enumerable#collect..Array#flatten(1)`.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "EnabledForFlattenWithoutParams",
-        "description": "EnabledForFlattenWithoutParams"
-      }
-    ]
+    "title": "Flat Map",
+    "description": "Flat Map",
+    "timeToFix": 5
   },
   {
     "patternId": "Performance_InefficientHashSearch",
-    "title": "Use `key?` or `value?` instead of `keys.include?` or `values.include?`.",
-    "description": "Use `key?` or `value?` instead of `keys.include?` or `values.include?`.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Safe",
-        "description": "Safe"
-      }
-    ]
+    "title": "Inefficient Hash Search",
+    "description": "Inefficient Hash Search",
+    "timeToFix": 5
   },
   {
     "patternId": "Performance_MapCompact",
-    "title": "Use `filter_map` instead of `collection.map(&:do_something).compact`.",
-    "description": "Use `filter_map` instead of `collection.map(&:do_something).compact`.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "SafeAutoCorrect",
-        "description": "SafeAutoCorrect"
-      }
-    ]
+    "title": "Map Compact",
+    "description": "Map Compact",
+    "timeToFix": 5
   },
   {
     "patternId": "Performance_MapMethodChain",
-    "title": "Checks if the `map` method is used in a chain.",
-    "description": "Checks if the `map` method is used in a chain.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Safe",
-        "description": "Safe"
-      }
-    ]
+    "title": "Map Method Chain",
+    "description": "Map Method Chain",
+    "timeToFix": 5
   },
   {
     "patternId": "Performance_MethodObjectAsBlock",
-    "title": "Use block explicitly instead of block-passing a method object.",
-    "description": "Use block explicitly instead of block-passing a method object.",
+    "title": "Method Object As Block",
+    "description": "Method Object As Block",
     "timeToFix": 5
   },
   {
     "patternId": "Performance_OpenStruct",
-    "title": "Use `Struct` instead of `OpenStruct`.",
-    "description": "Use `Struct` instead of `OpenStruct`.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Safe",
-        "description": "Safe"
-      }
-    ]
+    "title": "Open Struct",
+    "description": "Open Struct",
+    "timeToFix": 5
   },
   {
     "patternId": "Performance_RangeInclude",
-    "title": "Use `Range#cover?` instead of `Range#include?` (or `Range#member?`).",
-    "description": "Use `Range#cover?` instead of `Range#include?` (or `Range#member?`).",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Safe",
-        "description": "Safe"
-      }
-    ]
+    "title": "Range Include",
+    "description": "Range Include",
+    "timeToFix": 5
   },
   {
     "patternId": "Performance_IoReadlines",
-    "title": "Use `IO.each_line` (`IO#each_line`) instead of `IO.readlines` (`IO#readlines`).",
-    "description": "Use `IO.each_line` (`IO#each_line`) instead of `IO.readlines` (`IO#readlines`).",
+    "title": "Io Readlines",
+    "description": "Io Readlines",
     "timeToFix": 5
   },
   {
     "patternId": "Performance_RedundantBlockCall",
-    "title": "Use `yield` instead of `block.call`.",
-    "description": "Use `yield` instead of `block.call`.",
+    "title": "Redundant Block Call",
+    "description": "Redundant Block Call",
     "timeToFix": 5
   },
   {
     "patternId": "Performance_RedundantEqualityComparisonBlock",
-    "title": "Checks for uses `Enumerable#all?`, `Enumerable#any?`, `Enumerable#one?`, or `Enumerable#none?` are compared with `===` or similar methods in block.",
-    "description": "Checks for uses `Enumerable#all?`, `Enumerable#any?`, `Enumerable#one?`, or `Enumerable#none?` are compared with `===` or similar methods in block.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Safe",
-        "description": "Safe"
-      },
-      {
-        "name": "AllowRegexpMatch",
-        "description": "AllowRegexpMatch"
-      }
-    ]
+    "title": "Redundant Equality Comparison Block",
+    "description": "Redundant Equality Comparison Block",
+    "timeToFix": 5
   },
   {
     "patternId": "Performance_RedundantMatch",
-    "title": "Use `=~` instead of `String#match` or `Regexp#match` in a context where the returned `MatchData` is not needed.",
-    "description": "Use `=~` instead of `String#match` or `Regexp#match` in a context where the returned `MatchData` is not needed.",
+    "title": "Redundant Match",
+    "description": "Redundant Match",
     "timeToFix": 5
   },
   {
     "patternId": "Performance_RedundantMerge",
-    "title": "Use Hash#[]=, rather than Hash#merge! with a single key-value pair.",
-    "description": "Use Hash#[]=, rather than Hash#merge! with a single key-value pair.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Safe",
-        "description": "Safe"
-      },
-      {
-        "name": "MaxKeyValuePairs",
-        "description": "MaxKeyValuePairs"
-      }
-    ]
+    "title": "Redundant Merge",
+    "description": "Redundant Merge",
+    "timeToFix": 5
   },
   {
     "patternId": "Performance_RedundantSortBlock",
-    "title": "Use `sort` instead of `sort { |a, b| a <=> b }`.",
-    "description": "Use `sort` instead of `sort { |a, b| a <=> b }`.",
+    "title": "Redundant Sort Block",
+    "description": "Redundant Sort Block",
     "timeToFix": 5
   },
   {
     "patternId": "Performance_RedundantSplitRegexpArgument",
-    "title": "Identifies places where `split` argument can be replaced from a deterministic regexp to a string.",
-    "description": "Identifies places where `split` argument can be replaced from a deterministic regexp to a string.",
+    "title": "Redundant Split Regexp Argument",
+    "description": "Redundant Split Regexp Argument",
     "timeToFix": 5
   },
   {
     "patternId": "Performance_RedundantStringChars",
-    "title": "Checks for redundant `String#chars`.",
-    "description": "Checks for redundant `String#chars`.",
+    "title": "Redundant String Chars",
+    "description": "Redundant String Chars",
     "timeToFix": 5
   },
   {
     "patternId": "Performance_RegexpMatch",
-    "title": "Use `match?` instead of `Regexp#match`, `String#match`, `Symbol#match`, `Regexp#===`, or `=~` when `MatchData` is not used.",
-    "description": "Use `match?` instead of `Regexp#match`, `String#match`, `Symbol#match`, `Regexp#===`, or `=~` when `MatchData` is not used.",
+    "title": "Regexp Match",
+    "description": "Regexp Match",
     "timeToFix": 5
   },
   {
     "patternId": "Performance_ReverseEach",
-    "title": "Use `reverse_each` instead of `reverse.each`.",
-    "description": "Use `reverse_each` instead of `reverse.each`.",
+    "title": "Reverse Each",
+    "description": "Reverse Each",
     "timeToFix": 5
   },
   {
     "patternId": "Performance_ReverseFirst",
-    "title": "Use `last(n).reverse` instead of `reverse.first(n)`.",
-    "description": "Use `last(n).reverse` instead of `reverse.first(n)`.",
+    "title": "Reverse First",
+    "description": "Reverse First",
     "timeToFix": 5
   },
   {
     "patternId": "Performance_SelectMap",
-    "title": "Use `filter_map` instead of `ary.select(&:foo).map(&:bar)`.",
-    "description": "Use `filter_map` instead of `ary.select(&:foo).map(&:bar)`.",
+    "title": "Select Map",
+    "description": "Select Map",
     "timeToFix": 5
   },
   {
     "patternId": "Performance_Size",
-    "title": "Use `size` instead of `count` for counting the number of elements in `Array` and `Hash`.",
-    "description": "Use `size` instead of `count` for counting the number of elements in `Array` and `Hash`.",
+    "title": "Size",
+    "description": "Size",
     "timeToFix": 5
   },
   {
     "patternId": "Performance_SortReverse",
-    "title": "Use `sort.reverse` instead of `sort { |a, b| b <=> a }`.",
-    "description": "Use `sort.reverse` instead of `sort { |a, b| b <=> a }`.",
+    "title": "Sort Reverse",
+    "description": "Sort Reverse",
     "timeToFix": 5
   },
   {
     "patternId": "Performance_Squeeze",
-    "title": "Use `squeeze('a')` instead of `gsub(/a+/, 'a')`.",
-    "description": "Use `squeeze('a')` instead of `gsub(/a+/, 'a')`.",
+    "title": "Squeeze",
+    "description": "Squeeze",
     "timeToFix": 5
   },
   {
     "patternId": "Performance_StringBytesize",
-    "title": "Use `String#bytesize` instead of calculating the size of the bytes array.",
-    "description": "Use `String#bytesize` instead of calculating the size of the bytes array.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Safe",
-        "description": "Safe"
-      }
-    ]
+    "title": "String Bytesize",
+    "description": "String Bytesize",
+    "timeToFix": 5
   },
   {
     "patternId": "Performance_StartWith",
-    "title": "Use `start_with?` instead of a regex match anchored to the beginning of a string.",
-    "description": "Use `start_with?` instead of a regex match anchored to the beginning of a string.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "SafeAutoCorrect",
-        "description": "SafeAutoCorrect"
-      },
-      {
-        "name": "SafeMultiline",
-        "description": "SafeMultiline"
-      }
-    ]
+    "title": "Start With",
+    "description": "Start With",
+    "timeToFix": 5
   },
   {
     "patternId": "Performance_StringIdentifierArgument",
-    "title": "Use symbol identifier argument instead of string identifier argument.",
-    "description": "Use symbol identifier argument instead of string identifier argument.",
+    "title": "String Identifier Argument",
+    "description": "String Identifier Argument",
     "timeToFix": 5
   },
   {
     "patternId": "Performance_StringInclude",
-    "title": "Use `String#include?` instead of a regex match with literal-only pattern.",
-    "description": "Use `String#include?` instead of a regex match with literal-only pattern.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "SafeAutoCorrect",
-        "description": "SafeAutoCorrect"
-      }
-    ]
+    "title": "String Include",
+    "description": "String Include",
+    "timeToFix": 5
   },
   {
     "patternId": "Performance_StringReplacement",
-    "title": "Use `tr` instead of `gsub` when you are replacing the same number of characters. Use `delete` instead of `gsub` when you are deleting characters.",
-    "description": "Use `tr` instead of `gsub` when you are replacing the same number of characters. Use `delete` instead of `gsub` when you are deleting characters.",
+    "title": "String Replacement",
+    "description": "String Replacement",
     "timeToFix": 5
   },
   {
     "patternId": "Performance_Sum",
-    "title": "Use `sum` instead of a custom array summation.",
-    "description": "Use `sum` instead of a custom array summation.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "SafeAutoCorrect",
-        "description": "SafeAutoCorrect"
-      },
-      {
-        "name": "OnlySumOrWithInitialValue",
-        "description": "OnlySumOrWithInitialValue"
-      }
-    ]
+    "title": "Sum",
+    "description": "Sum",
+    "timeToFix": 5
   },
   {
     "patternId": "Performance_TimesMap",
-    "title": "Checks for .times.map calls.",
-    "description": "Checks for .times.map calls.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "SafeAutoCorrect",
-        "description": "SafeAutoCorrect"
-      }
-    ]
+    "title": "Times Map",
+    "description": "Times Map",
+    "timeToFix": 5
   },
   {
     "patternId": "Performance_UnfreezeString",
-    "title": "Use unary plus to get an unfrozen string literal.",
-    "description": "Use unary plus to get an unfrozen string literal.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "SafeAutoCorrect",
-        "description": "SafeAutoCorrect"
-      }
-    ]
+    "title": "Unfreeze String",
+    "description": "Unfreeze String",
+    "timeToFix": 5
   },
   {
     "patternId": "Performance_UriDefaultParser",
-    "title": "Use `URI::DEFAULT_PARSER` instead of `URI::Parser.new`.",
-    "description": "Use `URI::DEFAULT_PARSER` instead of `URI::Parser.new`.",
+    "title": "Uri Default Parser",
+    "description": "Uri Default Parser",
     "timeToFix": 5
   },
   {
     "patternId": "Performance_ChainArrayAllocation",
-    "title": "Instead of chaining array methods that allocate new arrays, mutate an existing array.",
-    "description": "Instead of chaining array methods that allocate new arrays, mutate an existing array.",
+    "title": "Chain Array Allocation",
+    "description": "Chain Array Allocation",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Performance_ZipWithoutBlock",
+    "title": "Zip Without Block",
+    "description": "Zip Without Block",
     "timeToFix": 5
   },
   {
     "patternId": "Rails_ActionControllerFlashBeforeRender",
-    "title": "Use `flash.now` instead of `flash` before `render`.",
-    "description": "Use `flash.now` instead of `flash` before `render`.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "SafeAutoCorrect",
-        "description": "SafeAutoCorrect"
-      }
-    ]
+    "title": "Action Controller Flash Before Render",
+    "description": "Action Controller Flash Before Render",
+    "timeToFix": 5
   },
   {
     "patternId": "Rails_StrongParametersExpect",
-    "title": "Enforces the use of `ActionController::Parameters#expect` as a method for strong parameter handling.",
-    "description": "Enforces the use of `ActionController::Parameters#expect` as a method for strong parameter handling.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Include",
-        "description": "Include"
-      },
-      {
-        "name": "SafeAutoCorrect",
-        "description": "SafeAutoCorrect"
-      }
-    ]
+    "title": "Strong Parameters Expect",
+    "description": "Strong Parameters Expect",
+    "timeToFix": 5
   },
   {
     "patternId": "Rails_ActionControllerTestCase",
-    "title": "Use `ActionDispatch::IntegrationTest` instead of `ActionController::TestCase`.",
-    "description": "Use `ActionDispatch::IntegrationTest` instead of `ActionController::TestCase`.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "SafeAutoCorrect",
-        "description": "SafeAutoCorrect"
-      },
-      {
-        "name": "Include",
-        "description": "Include"
-      }
-    ]
+    "title": "Action Controller Test Case",
+    "description": "Action Controller Test Case",
+    "timeToFix": 5
   },
   {
     "patternId": "Rails_ActionFilter",
-    "title": "Enforces consistent use of action filter methods.",
-    "description": "Enforces consistent use of action filter methods.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "EnforcedStyle",
-        "description": "EnforcedStyle"
-      },
-      {
-        "name": "SupportedStyles",
-        "description": "SupportedStyles"
-      },
-      {
-        "name": "Include",
-        "description": "Include"
-      }
-    ]
+    "title": "Action Filter",
+    "description": "Action Filter",
+    "timeToFix": 5
   },
   {
     "patternId": "Rails_ActionOrder",
-    "title": "Enforce consistent ordering of controller actions.",
-    "description": "Enforce consistent ordering of controller actions.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "ExpectedOrder",
-        "description": "ExpectedOrder"
-      },
-      {
-        "name": "Include",
-        "description": "Include"
-      }
-    ]
+    "title": "Action Order",
+    "description": "Action Order",
+    "timeToFix": 5
   },
   {
     "patternId": "Rails_ActiveRecordAliases",
-    "title": "Avoid Active Record aliases: Use `update` instead of `update_attributes`. Use `update!` instead of `update_attributes!`.",
-    "description": "Avoid Active Record aliases: Use `update` instead of `update_attributes`. Use `update!` instead of `update_attributes!`.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "SafeAutoCorrect",
-        "description": "SafeAutoCorrect"
-      }
-    ]
+    "title": "Active Record Aliases",
+    "description": "Active Record Aliases",
+    "timeToFix": 5
   },
   {
     "patternId": "Rails_ActiveRecordCallbacksOrder",
-    "title": "Order callback declarations in the order in which they will be executed.",
-    "description": "Order callback declarations in the order in which they will be executed.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Include",
-        "description": "Include"
-      }
-    ]
+    "title": "Active Record Callbacks Order",
+    "description": "Active Record Callbacks Order",
+    "timeToFix": 5
   },
   {
     "patternId": "Rails_ActiveRecordOverride",
-    "title": "Check for overriding Active Record methods instead of using callbacks.",
-    "description": "Check for overriding Active Record methods instead of using callbacks.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Severity",
-        "description": "Severity"
-      },
-      {
-        "name": "Include",
-        "description": "Include"
-      }
-    ]
+    "title": "Active Record Override",
+    "description": "Active Record Override",
+    "timeToFix": 5
   },
   {
     "patternId": "Rails_ActiveSupportAliases",
-    "title": "Avoid ActiveSupport aliases of standard ruby methods: `String#starts_with?`, `String#ends_with?`, `Array#append`, `Array#prepend`.",
-    "description": "Avoid ActiveSupport aliases of standard ruby methods: `String#starts_with?`, `String#ends_with?`, `Array#append`, `Array#prepend`.",
+    "title": "Active Support Aliases",
+    "description": "Active Support Aliases",
     "timeToFix": 5
   },
   {
     "patternId": "Rails_ActiveSupportOnLoad",
-    "title": "Use `ActiveSupport.on_load(...)` to patch Rails framework classes.",
-    "description": "Use `ActiveSupport.on_load(...)` to patch Rails framework classes.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "SafeAutoCorrect",
-        "description": "SafeAutoCorrect"
-      }
-    ]
+    "title": "Active Support On Load",
+    "description": "Active Support On Load",
+    "timeToFix": 5
   },
   {
     "patternId": "Rails_AddColumnIndex",
-    "title": "Rails migrations don't make use of a given `index` key, but also doesn't given an error when it's used, so it makes it seem like an index might be used.",
-    "description": "Rails migrations don't make use of a given `index` key, but also doesn't given an error when it's used, so it makes it seem like an index might be used.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Include",
-        "description": "Include"
-      }
-    ]
+    "title": "Add Column Index",
+    "description": "Add Column Index",
+    "timeToFix": 5
   },
   {
     "patternId": "Rails_AfterCommitOverride",
-    "title": "Enforces that there is only one call to `after_commit` (and its aliases - `after_create_commit`, `after_update_commit`, and `after_destroy_commit`) with the same callback name per model.",
-    "description": "Enforces that there is only one call to `after_commit` (and its aliases - `after_create_commit`, `after_update_commit`, and `after_destroy_commit`) with the same callback name per model.",
+    "title": "After Commit Override",
+    "description": "After Commit Override",
     "timeToFix": 5
   },
   {
     "patternId": "Rails_ApplicationController",
-    "title": "Check that controllers subclass ApplicationController.",
-    "description": "Check that controllers subclass ApplicationController.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "SafeAutoCorrect",
-        "description": "SafeAutoCorrect"
-      }
-    ]
+    "title": "Application Controller",
+    "description": "Application Controller",
+    "timeToFix": 5
   },
   {
     "patternId": "Rails_ApplicationJob",
-    "title": "Check that jobs subclass ApplicationJob.",
-    "description": "Check that jobs subclass ApplicationJob.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "SafeAutoCorrect",
-        "description": "SafeAutoCorrect"
-      }
-    ]
+    "title": "Application Job",
+    "description": "Application Job",
+    "timeToFix": 5
   },
   {
     "patternId": "Rails_ApplicationMailer",
-    "title": "Check that mailers subclass ApplicationMailer.",
-    "description": "Check that mailers subclass ApplicationMailer.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "SafeAutoCorrect",
-        "description": "SafeAutoCorrect"
-      }
-    ]
+    "title": "Application Mailer",
+    "description": "Application Mailer",
+    "timeToFix": 5
   },
   {
     "patternId": "Rails_ApplicationRecord",
-    "title": "Check that models subclass ApplicationRecord.",
-    "description": "Check that models subclass ApplicationRecord.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "SafeAutoCorrect",
-        "description": "SafeAutoCorrect"
-      },
-      {
-        "name": "Exclude",
-        "description": "Exclude"
-      }
-    ]
+    "title": "Application Record",
+    "description": "Application Record",
+    "timeToFix": 5
   },
   {
     "patternId": "Rails_ArelStar",
-    "title": "Enforces `Arel.star` instead of `\"*\"` for expanded columns.",
-    "description": "Enforces `Arel.star` instead of `\"*\"` for expanded columns.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "SafeAutoCorrect",
-        "description": "SafeAutoCorrect"
-      }
-    ]
+    "title": "Arel Star",
+    "description": "Arel Star",
+    "timeToFix": 5
   },
   {
     "patternId": "Rails_AssertNot",
-    "title": "Use `assert_not` instead of `assert !`.",
-    "description": "Use `assert_not` instead of `assert !`.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Include",
-        "description": "Include"
-      }
-    ]
+    "title": "Assert Not",
+    "description": "Assert Not",
+    "timeToFix": 5
   },
   {
     "patternId": "Rails_AttributeDefaultBlockValue",
-    "title": "Pass method call in block for attribute option `default`.",
-    "description": "Pass method call in block for attribute option `default`.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Include",
-        "description": "Include"
-      }
-    ]
+    "title": "Attribute Default Block Value",
+    "description": "Attribute Default Block Value",
+    "timeToFix": 5
   },
   {
     "patternId": "Rails_BelongsTo",
-    "title": "Use `optional: true` instead of `required: false` for `belongs_to` relations.",
-    "description": "Use `optional: true` instead of `required: false` for `belongs_to` relations.",
+    "title": "Belongs To",
+    "description": "Belongs To",
     "timeToFix": 5
   },
   {
     "patternId": "Rails_Blank",
-    "title": "Enforces use of `blank?`.",
-    "description": "Enforces use of `blank?`.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "SafeAutoCorrect",
-        "description": "SafeAutoCorrect"
-      },
-      {
-        "name": "NilOrEmpty",
-        "description": "NilOrEmpty"
-      },
-      {
-        "name": "NotPresent",
-        "description": "NotPresent"
-      },
-      {
-        "name": "UnlessPresent",
-        "description": "UnlessPresent"
-      }
-    ]
+    "title": "Blank",
+    "description": "Blank",
+    "timeToFix": 5
   },
   {
     "patternId": "Rails_BulkChangeTable",
-    "title": "Check whether alter queries are combinable.",
-    "description": "Check whether alter queries are combinable.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Database",
-        "description": "Database"
-      },
-      {
-        "name": "SupportedDatabases",
-        "description": "SupportedDatabases"
-      },
-      {
-        "name": "Include",
-        "description": "Include"
-      }
-    ]
+    "title": "Bulk Change Table",
+    "description": "Bulk Change Table",
+    "timeToFix": 5
   },
   {
     "patternId": "Rails_CompactBlank",
-    "title": "Checks if collection can be blank-compacted with `compact_blank`.",
-    "description": "Checks if collection can be blank-compacted with `compact_blank`.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Safe",
-        "description": "Safe"
-      }
-    ]
+    "title": "Compact Blank",
+    "description": "Compact Blank",
+    "timeToFix": 5
   },
   {
     "patternId": "Rails_ContentTag",
-    "title": "Use `tag.something` instead of `tag(:something)`.",
-    "description": "Use `tag.something` instead of `tag(:something)`.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Exclude",
-        "description": "Exclude"
-      }
-    ]
+    "title": "Content Tag",
+    "description": "Content Tag",
+    "timeToFix": 5
   },
   {
     "patternId": "Rails_CreateTableWithTimestamps",
-    "title": "Checks the migration for which timestamps are not included when creating a new table.",
-    "description": "Checks the migration for which timestamps are not included when creating a new table.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Include",
-        "description": "Include"
-      },
-      {
-        "name": "Exclude",
-        "description": "Exclude"
-      }
-    ]
+    "title": "Create Table With Timestamps",
+    "description": "Create Table With Timestamps",
+    "timeToFix": 5
   },
   {
     "patternId": "Rails_DangerousColumnNames",
-    "title": "Avoid dangerous column names.",
-    "description": "Avoid dangerous column names.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Severity",
-        "description": "Severity"
-      },
-      {
-        "name": "Include",
-        "description": "Include"
-      }
-    ]
+    "title": "Dangerous Column Names",
+    "description": "Dangerous Column Names",
+    "timeToFix": 5
   },
   {
     "patternId": "Rails_Date",
-    "title": "Checks the correct usage of date aware methods, such as Date.today, Date.current etc.",
-    "description": "Checks the correct usage of date aware methods, such as Date.today, Date.current etc.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "SafeAutoCorrect",
-        "description": "SafeAutoCorrect"
-      },
-      {
-        "name": "EnforcedStyle",
-        "description": "EnforcedStyle"
-      },
-      {
-        "name": "SupportedStyles",
-        "description": "SupportedStyles"
-      },
-      {
-        "name": "AllowToTime",
-        "description": "AllowToTime"
-      }
-    ]
+    "title": "Date",
+    "description": "Date",
+    "timeToFix": 5
   },
   {
     "patternId": "Rails_DefaultScope",
-    "title": "Avoid use of `default_scope`.",
-    "description": "Avoid use of `default_scope`.",
+    "title": "Default Scope",
+    "description": "Default Scope",
     "timeToFix": 5
   },
   {
     "patternId": "Rails_Delegate",
-    "title": "Prefer delegate method for delegations.",
-    "description": "Prefer delegate method for delegations.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "EnforceForPrefixed",
-        "description": "EnforceForPrefixed"
-      }
-    ]
+    "title": "Delegate",
+    "description": "Delegate",
+    "timeToFix": 5
   },
   {
     "patternId": "Rails_DelegateAllowBlank",
-    "title": "Do not use allow_blank as an option to delegate.",
-    "description": "Do not use allow_blank as an option to delegate.",
+    "title": "Delegate Allow Blank",
+    "description": "Delegate Allow Blank",
     "timeToFix": 5
   },
   {
     "patternId": "Rails_DeprecatedActiveModelErrorsMethods",
-    "title": "Avoid manipulating ActiveModel errors hash directly.",
-    "description": "Avoid manipulating ActiveModel errors hash directly.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Severity",
-        "description": "Severity"
-      },
-      {
-        "name": "Safe",
-        "description": "Safe"
-      }
-    ]
+    "title": "Deprecated Active Model Errors Methods",
+    "description": "Deprecated Active Model Errors Methods",
+    "timeToFix": 5
   },
   {
     "patternId": "Rails_DotSeparatedKeys",
-    "title": "Enforces the use of dot-separated keys instead of `:scope` options in `I18n` translation methods.",
-    "description": "Enforces the use of dot-separated keys instead of `:scope` options in `I18n` translation methods.",
+    "title": "Dot Separated Keys",
+    "description": "Dot Separated Keys",
     "timeToFix": 5
   },
   {
     "patternId": "Rails_DuplicateAssociation",
-    "title": "Don't repeat associations in a model.",
-    "description": "Don't repeat associations in a model.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Severity",
-        "description": "Severity"
-      }
-    ]
+    "title": "Duplicate Association",
+    "description": "Duplicate Association",
+    "timeToFix": 5
   },
   {
     "patternId": "Rails_DuplicateScope",
-    "title": "Multiple scopes share this same where clause.",
-    "description": "Multiple scopes share this same where clause.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Severity",
-        "description": "Severity"
-      }
-    ]
+    "title": "Duplicate Scope",
+    "description": "Duplicate Scope",
+    "timeToFix": 5
   },
   {
     "patternId": "Rails_DurationArithmetic",
-    "title": "Do not use duration as arithmetic operand with `Time.current`.",
-    "description": "Do not use duration as arithmetic operand with `Time.current`.",
+    "title": "Duration Arithmetic",
+    "description": "Duration Arithmetic",
     "timeToFix": 5
   },
   {
     "patternId": "Rails_DynamicFindBy",
-    "title": "Use `find_by` instead of dynamic `find_by_*`.",
-    "description": "Use `find_by` instead of dynamic `find_by_*`.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Safe",
-        "description": "Safe"
-      },
-      {
-        "name": "Whitelist",
-        "description": "Whitelist"
-      },
-      {
-        "name": "AllowedMethods",
-        "description": "AllowedMethods"
-      },
-      {
-        "name": "AllowedReceivers",
-        "description": "AllowedReceivers"
-      }
-    ]
+    "title": "Dynamic Find By",
+    "description": "Dynamic Find By",
+    "timeToFix": 5
   },
   {
     "patternId": "Rails_EagerEvaluationLogMessage",
-    "title": "Checks that blocks are used for interpolated strings passed to `Rails.logger.debug`.",
-    "description": "Checks that blocks are used for interpolated strings passed to `Rails.logger.debug`.",
+    "title": "Eager Evaluation Log Message",
+    "description": "Eager Evaluation Log Message",
     "timeToFix": 5
   },
   {
     "patternId": "Rails_EnumHash",
-    "title": "Prefer hash syntax over array syntax when defining enums.",
-    "description": "Prefer hash syntax over array syntax when defining enums.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Include",
-        "description": "Include"
-      }
-    ]
+    "title": "Enum Hash",
+    "description": "Enum Hash",
+    "timeToFix": 5
   },
   {
     "patternId": "Rails_EnumSyntax",
-    "title": "Use positional arguments over keyword arguments when defining enums.",
-    "description": "Use positional arguments over keyword arguments when defining enums.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Severity",
-        "description": "Severity"
-      },
-      {
-        "name": "Include",
-        "description": "Include"
-      }
-    ]
+    "title": "Enum Syntax",
+    "description": "Enum Syntax",
+    "timeToFix": 5
   },
   {
     "patternId": "Rails_EnumUniqueness",
-    "title": "Avoid duplicate integers in hash-syntax `enum` declaration.",
-    "description": "Avoid duplicate integers in hash-syntax `enum` declaration.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Include",
-        "description": "Include"
-      }
-    ]
+    "title": "Enum Uniqueness",
+    "description": "Enum Uniqueness",
+    "timeToFix": 5
   },
   {
     "patternId": "Rails_EnvLocal",
-    "title": "Use `Rails.env.local?` instead of `Rails.env.development? || Rails.env.test?`.",
-    "description": "Use `Rails.env.local?` instead of `Rails.env.development? || Rails.env.test?`.",
+    "title": "Env Local",
+    "description": "Env Local",
     "timeToFix": 5
   },
   {
     "patternId": "Rails_EnvironmentComparison",
-    "title": "Favor `Rails.env.production?` over `Rails.env == 'production'`.",
-    "description": "Favor `Rails.env.production?` over `Rails.env == 'production'`.",
+    "title": "Environment Comparison",
+    "description": "Environment Comparison",
     "timeToFix": 5
   },
   {
     "patternId": "Rails_EnvironmentVariableAccess",
-    "title": "Do not access `ENV` directly after initialization.",
-    "description": "Do not access `ENV` directly after initialization.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Include",
-        "description": "Include"
-      },
-      {
-        "name": "Exclude",
-        "description": "Exclude"
-      },
-      {
-        "name": "AllowReads",
-        "description": "AllowReads"
-      },
-      {
-        "name": "AllowWrites",
-        "description": "AllowWrites"
-      }
-    ]
+    "title": "Environment Variable Access",
+    "description": "Environment Variable Access",
+    "timeToFix": 5
   },
   {
     "patternId": "Rails_Exit",
-    "title": "Favor `fail`, `break`, `return`, etc. over `exit` in application or library code outside of Rake files to avoid exits during unit testing or running in production.",
-    "description": "Favor `fail`, `break`, `return`, etc. over `exit` in application or library code outside of Rake files to avoid exits during unit testing or running in production.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Include",
-        "description": "Include"
-      },
-      {
-        "name": "Exclude",
-        "description": "Exclude"
-      }
-    ]
+    "title": "Exit",
+    "description": "Exit",
+    "timeToFix": 5
   },
   {
     "patternId": "Rails_ExpandedDateRange",
-    "title": "Checks for expanded date range.",
-    "description": "Checks for expanded date range.",
+    "title": "Expanded Date Range",
+    "description": "Expanded Date Range",
     "timeToFix": 5
   },
   {
     "patternId": "Rails_FilePath",
-    "title": "Use `Rails.root.join` for file path joining.",
-    "description": "Use `Rails.root.join` for file path joining.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "EnforcedStyle",
-        "description": "EnforcedStyle"
-      },
-      {
-        "name": "SupportedStyles",
-        "description": "SupportedStyles"
-      }
-    ]
+    "title": "File Path",
+    "description": "File Path",
+    "timeToFix": 5
   },
   {
     "patternId": "Rails_FindBy",
-    "title": "Prefer find_by over where.first.",
-    "description": "Prefer find_by over where.first.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "IgnoreWhereFirst",
-        "description": "IgnoreWhereFirst"
-      }
-    ]
+    "title": "Find By",
+    "description": "Find By",
+    "timeToFix": 5
   },
   {
     "patternId": "Rails_FindById",
-    "title": "Favor the use of `find` over `where.take!`, `find_by!`, and `find_by_id!` when you need to retrieve a single record by primary key when you expect it to be found.",
-    "description": "Favor the use of `find` over `where.take!`, `find_by!`, and `find_by_id!` when you need to retrieve a single record by primary key when you expect it to be found.",
+    "title": "Find By Id",
+    "description": "Find By Id",
     "timeToFix": 5
   },
   {
     "patternId": "Rails_FindEach",
-    "title": "Prefer all.find_each over all.each.",
-    "description": "Prefer all.find_each over all.each.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Safe",
-        "description": "Safe"
-      },
-      {
-        "name": "AllowedMethods",
-        "description": "AllowedMethods"
-      },
-      {
-        "name": "AllowedPatterns",
-        "description": "AllowedPatterns"
-      }
-    ]
+    "title": "Find Each",
+    "description": "Find Each",
+    "timeToFix": 5
   },
   {
     "patternId": "Rails_FreezeTime",
-    "title": "Prefer `freeze_time` over `travel_to` with an argument of the current time.",
-    "description": "Prefer `freeze_time` over `travel_to` with an argument of the current time.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "SafeAutoCorrect",
-        "description": "SafeAutoCorrect"
-      }
-    ]
+    "title": "Freeze Time",
+    "description": "Freeze Time",
+    "timeToFix": 5
   },
   {
     "patternId": "Rails_HasAndBelongsToMany",
-    "title": "Prefer has_many :through to has_and_belongs_to_many.",
-    "description": "Prefer has_many :through to has_and_belongs_to_many.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Include",
-        "description": "Include"
-      }
-    ]
+    "title": "Has And Belongs To Many",
+    "description": "Has And Belongs To Many",
+    "timeToFix": 5
   },
   {
     "patternId": "Rails_HasManyOrHasOneDependent",
-    "title": "Define the dependent option to the has_many and has_one associations.",
-    "description": "Define the dependent option to the has_many and has_one associations.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Include",
-        "description": "Include"
-      }
-    ]
+    "title": "Has Many Or Has One Dependent",
+    "description": "Has Many Or Has One Dependent",
+    "timeToFix": 5
   },
   {
     "patternId": "Rails_HelperInstanceVariable",
-    "title": "Do not use instance variables in helpers.",
-    "description": "Do not use instance variables in helpers.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Include",
-        "description": "Include"
-      }
-    ]
+    "title": "Helper Instance Variable",
+    "description": "Helper Instance Variable",
+    "timeToFix": 5
   },
   {
     "patternId": "Rails_HttpPositionalArguments",
-    "title": "Use keyword arguments instead of positional arguments in http method calls.",
-    "description": "Use keyword arguments instead of positional arguments in http method calls.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Include",
-        "description": "Include"
-      }
-    ]
+    "title": "Http Positional Arguments",
+    "description": "Http Positional Arguments",
+    "timeToFix": 5
   },
   {
     "patternId": "Rails_HttpStatus",
-    "title": "Enforces use of symbolic or numeric value to define HTTP status.",
-    "description": "Enforces use of symbolic or numeric value to define HTTP status.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "EnforcedStyle",
-        "description": "EnforcedStyle"
-      },
-      {
-        "name": "SupportedStyles",
-        "description": "SupportedStyles"
-      }
-    ]
+    "title": "Http Status",
+    "description": "Http Status",
+    "timeToFix": 5
   },
   {
     "patternId": "Rails_I18nLazyLookup",
-    "title": "Checks for places where I18n \"lazy\" lookup can be used.",
-    "description": "Checks for places where I18n \"lazy\" lookup can be used.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "EnforcedStyle",
-        "description": "EnforcedStyle"
-      },
-      {
-        "name": "SupportedStyles",
-        "description": "SupportedStyles"
-      },
-      {
-        "name": "Include",
-        "description": "Include"
-      }
-    ]
+    "title": "I18n Lazy Lookup",
+    "description": "I18n Lazy Lookup",
+    "timeToFix": 5
   },
   {
     "patternId": "Rails_I18nLocaleAssignment",
-    "title": "Prefer the usage of `I18n.with_locale` instead of manually updating `I18n.locale` value.",
-    "description": "Prefer the usage of `I18n.with_locale` instead of manually updating `I18n.locale` value.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Include",
-        "description": "Include"
-      }
-    ]
+    "title": "I18n Locale Assignment",
+    "description": "I18n Locale Assignment",
+    "timeToFix": 5
   },
   {
     "patternId": "Rails_I18nLocaleTexts",
-    "title": "Enforces use of I18n and locale files instead of locale specific strings.",
-    "description": "Enforces use of I18n and locale files instead of locale specific strings.",
+    "title": "I18n Locale Texts",
+    "description": "I18n Locale Texts",
     "timeToFix": 5
   },
   {
     "patternId": "Rails_IgnoredColumnsAssignment",
-    "title": "Looks for assignments of `ignored_columns` that override previous assignments.",
-    "description": "Looks for assignments of `ignored_columns` that override previous assignments.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "SafeAutoCorrect",
-        "description": "SafeAutoCorrect"
-      }
-    ]
+    "title": "Ignored Columns Assignment",
+    "description": "Ignored Columns Assignment",
+    "timeToFix": 5
   },
   {
     "patternId": "Rails_IgnoredSkipActionFilterOption",
-    "title": "Checks that `if` and `only` (or `except`) are not used together as options of `skip_*` action filter.",
-    "description": "Checks that `if` and `only` (or `except`) are not used together as options of `skip_*` action filter.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Include",
-        "description": "Include"
-      }
-    ]
+    "title": "Ignored Skip Action Filter Option",
+    "description": "Ignored Skip Action Filter Option",
+    "timeToFix": 5
   },
   {
     "patternId": "Rails_IndexBy",
-    "title": "Prefer `index_by` over `each_with_object`, `to_h`, or `map`.",
-    "description": "Prefer `index_by` over `each_with_object`, `to_h`, or `map`.",
+    "title": "Index By",
+    "description": "Index By",
     "timeToFix": 5
   },
   {
     "patternId": "Rails_IndexWith",
-    "title": "Prefer `index_with` over `each_with_object`, `to_h`, or `map`.",
-    "description": "Prefer `index_with` over `each_with_object`, `to_h`, or `map`.",
+    "title": "Index With",
+    "description": "Index With",
     "timeToFix": 5
   },
   {
     "patternId": "Rails_Inquiry",
-    "title": "Prefer Ruby's comparison operators over Active Support's `Array#inquiry` and `String#inquiry`.",
-    "description": "Prefer Ruby's comparison operators over Active Support's `Array#inquiry` and `String#inquiry`.",
+    "title": "Inquiry",
+    "description": "Inquiry",
     "timeToFix": 5
   },
   {
     "patternId": "Rails_InverseOf",
-    "title": "Checks for associations where the inverse cannot be determined automatically.",
-    "description": "Checks for associations where the inverse cannot be determined automatically.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "IgnoreScopes",
-        "description": "IgnoreScopes"
-      },
-      {
-        "name": "Include",
-        "description": "Include"
-      }
-    ]
+    "title": "Inverse Of",
+    "description": "Inverse Of",
+    "timeToFix": 5
   },
   {
     "patternId": "Rails_LexicallyScopedActionFilter",
-    "title": "Checks that methods specified in the filter's `only` or `except` options are explicitly defined in the class.",
-    "description": "Checks that methods specified in the filter's `only` or `except` options are explicitly defined in the class.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Safe",
-        "description": "Safe"
-      },
-      {
-        "name": "Include",
-        "description": "Include"
-      }
-    ]
+    "title": "Lexically Scoped Action Filter",
+    "description": "Lexically Scoped Action Filter",
+    "timeToFix": 5
   },
   {
     "patternId": "Rails_LinkToBlank",
-    "title": "Checks that `link_to` with a `target: \"_blank\"` have a `rel: \"noopener\"` option passed to them.",
-    "description": "Checks that `link_to` with a `target: \"_blank\"` have a `rel: \"noopener\"` option passed to them.",
+    "title": "Link To Blank",
+    "description": "Link To Blank",
     "timeToFix": 5
   },
   {
     "patternId": "Rails_MailerName",
-    "title": "Mailer should end with `Mailer` suffix.",
-    "description": "Mailer should end with `Mailer` suffix.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "SafeAutoCorrect",
-        "description": "SafeAutoCorrect"
-      },
-      {
-        "name": "Include",
-        "description": "Include"
-      }
-    ]
+    "title": "Mailer Name",
+    "description": "Mailer Name",
+    "timeToFix": 5
   },
   {
     "patternId": "Rails_MatchRoute",
-    "title": "Don't use `match` to define any routes unless there is a need to map multiple request types among [:get, :post, :patch, :put, :delete] to a single action using the `:via` option.",
-    "description": "Don't use `match` to define any routes unless there is a need to map multiple request types among [:get, :post, :patch, :put, :delete] to a single action using the `:via` option.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Include",
-        "description": "Include"
-      }
-    ]
+    "title": "Match Route",
+    "description": "Match Route",
+    "timeToFix": 5
   },
   {
     "patternId": "Rails_MigrationClassName",
-    "title": "The class name of the migration should match its file name.",
-    "description": "The class name of the migration should match its file name.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Include",
-        "description": "Include"
-      }
-    ]
+    "title": "Migration Class Name",
+    "description": "Migration Class Name",
+    "timeToFix": 5
   },
   {
     "patternId": "Rails_MultipleRoutePaths",
-    "title": "Checks for mapping a route with multiple paths, which is deprecated and will be removed in Rails 8.1.",
-    "description": "Checks for mapping a route with multiple paths, which is deprecated and will be removed in Rails 8.1.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Severity",
-        "description": "Severity"
-      },
-      {
-        "name": "Include",
-        "description": "Include"
-      }
-    ]
+    "title": "Multiple Route Paths",
+    "description": "Multiple Route Paths",
+    "timeToFix": 5
   },
   {
     "patternId": "Rails_NegateInclude",
-    "title": "Prefer `collection.exclude?(obj)` over `!collection.include?(obj)`.",
-    "description": "Prefer `collection.exclude?(obj)` over `!collection.include?(obj)`.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Safe",
-        "description": "Safe"
-      }
-    ]
+    "title": "Negate Include",
+    "description": "Negate Include",
+    "timeToFix": 5
   },
   {
     "patternId": "Rails_NotNullColumn",
-    "title": "Do not add a NOT NULL column without a default value to existing tables.",
-    "description": "Do not add a NOT NULL column without a default value to existing tables.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Database",
-        "description": "Database"
-      },
-      {
-        "name": "SupportedDatabases",
-        "description": "SupportedDatabases"
-      },
-      {
-        "name": "Include",
-        "description": "Include"
-      }
-    ]
+    "title": "Not Null Column",
+    "description": "Not Null Column",
+    "timeToFix": 5
   },
   {
     "patternId": "Rails_OrderById",
-    "title": "Do not use the `id` column for ordering. Use a timestamp column to order chronologically.",
-    "description": "Do not use the `id` column for ordering. Use a timestamp column to order chronologically.",
+    "title": "Order By Id",
+    "description": "Order By Id",
     "timeToFix": 5
   },
   {
     "patternId": "Rails_Output",
-    "title": "Checks for calls to puts, print, etc.",
-    "description": "Checks for calls to puts, print, etc.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "SafeAutoCorrect",
-        "description": "SafeAutoCorrect"
-      },
-      {
-        "name": "Include",
-        "description": "Include"
-      }
-    ]
+    "title": "Output",
+    "description": "Output",
+    "timeToFix": 5
   },
   {
     "patternId": "Rails_OutputSafety",
-    "title": "The use of `html_safe` or `raw` may be a security risk.",
-    "description": "The use of `html_safe` or `raw` may be a security risk.",
+    "title": "Output Safety",
+    "description": "Output Safety",
     "timeToFix": 5
   },
   {
     "patternId": "Rails_Pick",
-    "title": "Prefer `pick` over `pluck(...).first`.",
-    "description": "Prefer `pick` over `pluck(...).first`.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Safe",
-        "description": "Safe"
-      }
-    ]
+    "title": "Pick",
+    "description": "Pick",
+    "timeToFix": 5
   },
   {
     "patternId": "Rails_Pluck",
-    "title": "Prefer `pluck` over `map { ... }`.",
-    "description": "Prefer `pluck` over `map { ... }`.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Safe",
-        "description": "Safe"
-      }
-    ]
+    "title": "Pluck",
+    "description": "Pluck",
+    "timeToFix": 5
   },
   {
     "patternId": "Rails_PluckId",
-    "title": "Use `ids` instead of `pluck(:id)` or `pluck(primary_key)`.",
-    "description": "Use `ids` instead of `pluck(:id)` or `pluck(primary_key)`.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Safe",
-        "description": "Safe"
-      }
-    ]
+    "title": "Pluck Id",
+    "description": "Pluck Id",
+    "timeToFix": 5
   },
   {
     "patternId": "Rails_PluckInWhere",
-    "title": "Use `select` instead of `pluck` in `where` query methods.",
-    "description": "Use `select` instead of `pluck` in `where` query methods.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Safe",
-        "description": "Safe"
-      },
-      {
-        "name": "EnforcedStyle",
-        "description": "EnforcedStyle"
-      },
-      {
-        "name": "SupportedStyles",
-        "description": "SupportedStyles"
-      }
-    ]
+    "title": "Pluck In Where",
+    "description": "Pluck In Where",
+    "timeToFix": 5
   },
   {
     "patternId": "Rails_PluralizationGrammar",
-    "title": "Checks for incorrect grammar when using methods like `3.day.ago`.",
-    "description": "Checks for incorrect grammar when using methods like `3.day.ago`.",
+    "title": "Pluralization Grammar",
+    "description": "Pluralization Grammar",
     "timeToFix": 5
   },
   {
     "patternId": "Rails_Presence",
-    "title": "Checks code that can be written more easily using `Object#presence` defined by Active Support.",
-    "description": "Checks code that can be written more easily using `Object#presence` defined by Active Support.",
+    "title": "Presence",
+    "description": "Presence",
     "timeToFix": 5
   },
   {
     "patternId": "Rails_Present",
-    "title": "Enforces use of `present?`.",
-    "description": "Enforces use of `present?`.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "NotNilAndNotEmpty",
-        "description": "NotNilAndNotEmpty"
-      },
-      {
-        "name": "NotBlank",
-        "description": "NotBlank"
-      },
-      {
-        "name": "UnlessBlank",
-        "description": "UnlessBlank"
-      }
-    ]
+    "title": "Present",
+    "description": "Present",
+    "timeToFix": 5
   },
   {
     "patternId": "Rails_RakeEnvironment",
-    "title": "Include `:environment` as a dependency for all Rake tasks.",
-    "description": "Include `:environment` as a dependency for all Rake tasks.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Safe",
-        "description": "Safe"
-      },
-      {
-        "name": "Include",
-        "description": "Include"
-      },
-      {
-        "name": "Exclude",
-        "description": "Exclude"
-      }
-    ]
+    "title": "Rake Environment",
+    "description": "Rake Environment",
+    "timeToFix": 5
   },
   {
     "patternId": "Rails_ReadWriteAttribute",
-    "title": "Checks for read_attribute(:attr) and write_attribute(:attr, val).",
-    "description": "Checks for read_attribute(:attr) and write_attribute(:attr, val).",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Include",
-        "description": "Include"
-      }
-    ]
+    "title": "Read Write Attribute",
+    "description": "Read Write Attribute",
+    "timeToFix": 5
   },
   {
     "patternId": "Rails_RedundantActiveRecordAllMethod",
-    "title": "Detect redundant `all` used as a receiver for Active Record query methods.",
-    "description": "Detect redundant `all` used as a receiver for Active Record query methods.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Safe",
-        "description": "Safe"
-      },
-      {
-        "name": "AllowedReceivers",
-        "description": "AllowedReceivers"
-      }
-    ]
+    "title": "Redundant Active Record All Method",
+    "description": "Redundant Active Record All Method",
+    "timeToFix": 5
   },
   {
     "patternId": "Rails_RedundantAllowNil",
-    "title": "Finds redundant use of `allow_nil` when `allow_blank` is set to certain values in model validations.",
-    "description": "Finds redundant use of `allow_nil` when `allow_blank` is set to certain values in model validations.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Include",
-        "description": "Include"
-      }
-    ]
+    "title": "Redundant Allow Nil",
+    "description": "Redundant Allow Nil",
+    "timeToFix": 5
   },
   {
     "patternId": "Rails_RedundantForeignKey",
-    "title": "Checks for associations where the `:foreign_key` option is redundant.",
-    "description": "Checks for associations where the `:foreign_key` option is redundant.",
+    "title": "Redundant Foreign Key",
+    "description": "Redundant Foreign Key",
     "timeToFix": 5
   },
   {
     "patternId": "Rails_RedundantPresenceValidationOnBelongsTo",
-    "title": "Checks for redundant presence validation on belongs_to association.",
-    "description": "Checks for redundant presence validation on belongs_to association.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "SafeAutoCorrect",
-        "description": "SafeAutoCorrect"
-      }
-    ]
+    "title": "Redundant Presence Validation On Belongs To",
+    "description": "Redundant Presence Validation On Belongs To",
+    "timeToFix": 5
   },
   {
     "patternId": "Rails_RedundantReceiverInWithOptions",
-    "title": "Checks for redundant receiver in `with_options`.",
-    "description": "Checks for redundant receiver in `with_options`.",
+    "title": "Redundant Receiver In With Options",
+    "description": "Redundant Receiver In With Options",
     "timeToFix": 5
   },
   {
     "patternId": "Rails_RedundantTravelBack",
-    "title": "Checks for redundant `travel_back` calls.",
-    "description": "Checks for redundant `travel_back` calls.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Include",
-        "description": "Include"
-      }
-    ]
+    "title": "Redundant Travel Back",
+    "description": "Redundant Travel Back",
+    "timeToFix": 5
   },
   {
     "patternId": "Rails_ReflectionClassName",
-    "title": "Use a string for `class_name` option value in the definition of a reflection.",
-    "description": "Use a string for `class_name` option value in the definition of a reflection.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Safe",
-        "description": "Safe"
-      }
-    ]
+    "title": "Reflection Class Name",
+    "description": "Reflection Class Name",
+    "timeToFix": 5
   },
   {
     "patternId": "Rails_RefuteMethods",
-    "title": "Use `assert_not` methods instead of `refute` methods.",
-    "description": "Use `assert_not` methods instead of `refute` methods.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "EnforcedStyle",
-        "description": "EnforcedStyle"
-      },
-      {
-        "name": "SupportedStyles",
-        "description": "SupportedStyles"
-      },
-      {
-        "name": "Include",
-        "description": "Include"
-      }
-    ]
+    "title": "Refute Methods",
+    "description": "Refute Methods",
+    "timeToFix": 5
   },
   {
     "patternId": "Rails_RelativeDateConstant",
-    "title": "Do not assign relative date to constants.",
-    "description": "Do not assign relative date to constants.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "SafeAutoCorrect",
-        "description": "SafeAutoCorrect"
-      }
-    ]
+    "title": "Relative Date Constant",
+    "description": "Relative Date Constant",
+    "timeToFix": 5
   },
   {
     "patternId": "Rails_RenderInline",
-    "title": "Prefer using a template over inline rendering.",
-    "description": "Prefer using a template over inline rendering.",
+    "title": "Render Inline",
+    "description": "Render Inline",
     "timeToFix": 5
   },
   {
     "patternId": "Rails_RenderPlainText",
-    "title": "Prefer `render plain:` over `render text:`.",
-    "description": "Prefer `render plain:` over `render text:`.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "ContentTypeCompatibility",
-        "description": "ContentTypeCompatibility"
-      }
-    ]
+    "title": "Render Plain Text",
+    "description": "Render Plain Text",
+    "timeToFix": 5
   },
   {
     "patternId": "Rails_RequestReferer",
-    "title": "Use consistent syntax for request.referer.",
-    "description": "Use consistent syntax for request.referer.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "EnforcedStyle",
-        "description": "EnforcedStyle"
-      },
-      {
-        "name": "SupportedStyles",
-        "description": "SupportedStyles"
-      }
-    ]
+    "title": "Request Referer",
+    "description": "Request Referer",
+    "timeToFix": 5
   },
   {
     "patternId": "Rails_RequireDependency",
-    "title": "Do not use `require_dependency` when running in Zeitwerk mode. `require_dependency` is for autoloading in classic mode.",
-    "description": "Do not use `require_dependency` when running in Zeitwerk mode. `require_dependency` is for autoloading in classic mode.",
+    "title": "Require Dependency",
+    "description": "Require Dependency",
     "timeToFix": 5
   },
   {
     "patternId": "Rails_ResponseParsedBody",
-    "title": "Prefer `response.parsed_body` to custom parsing logic for `response.body`.",
-    "description": "Prefer `response.parsed_body` to custom parsing logic for `response.body`.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Safe",
-        "description": "Safe"
-      },
-      {
-        "name": "Include",
-        "description": "Include"
-      }
-    ]
+    "title": "Response Parsed Body",
+    "description": "Response Parsed Body",
+    "timeToFix": 5
   },
   {
     "patternId": "Rails_ReversibleMigration",
-    "title": "Checks whether the change method of the migration file is reversible.",
-    "description": "Checks whether the change method of the migration file is reversible.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Include",
-        "description": "Include"
-      }
-    ]
+    "title": "Reversible Migration",
+    "description": "Reversible Migration",
+    "timeToFix": 5
   },
   {
     "patternId": "Rails_ReversibleMigrationMethodDefinition",
-    "title": "Checks whether the migration implements either a `change` method or both an `up` and a `down` method.",
-    "description": "Checks whether the migration implements either a `change` method or both an `up` and a `down` method.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Include",
-        "description": "Include"
-      }
-    ]
+    "title": "Reversible Migration Method Definition",
+    "description": "Reversible Migration Method Definition",
+    "timeToFix": 5
   },
   {
     "patternId": "Rails_RootJoinChain",
-    "title": "Use a single `#join` instead of chaining on `Rails.root` or `Rails.public_path`.",
-    "description": "Use a single `#join` instead of chaining on `Rails.root` or `Rails.public_path`.",
+    "title": "Root Join Chain",
+    "description": "Root Join Chain",
     "timeToFix": 5
   },
   {
     "patternId": "Rails_RootPathnameMethods",
-    "title": "Use `Rails.root` IO methods instead of passing it to `File`.",
-    "description": "Use `Rails.root` IO methods instead of passing it to `File`.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "SafeAutoCorrect",
-        "description": "SafeAutoCorrect"
-      }
-    ]
+    "title": "Root Pathname Methods",
+    "description": "Root Pathname Methods",
+    "timeToFix": 5
   },
   {
     "patternId": "Rails_RootPublicPath",
-    "title": "Favor `Rails.public_path` over `Rails.root` with `'public'`.",
-    "description": "Favor `Rails.public_path` over `Rails.root` with `'public'`.",
+    "title": "Root Public Path",
+    "description": "Root Public Path",
     "timeToFix": 5
   },
   {
     "patternId": "Rails_SafeNavigation",
-    "title": "Use Ruby's safe navigation operator (`&.`) instead of `try!`.",
-    "description": "Use Ruby's safe navigation operator (`&.`) instead of `try!`.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "ConvertTry",
-        "description": "ConvertTry"
-      }
-    ]
+    "title": "Safe Navigation",
+    "description": "Safe Navigation",
+    "timeToFix": 5
   },
   {
     "patternId": "Rails_SafeNavigationWithBlank",
-    "title": "Avoid `foo&.blank?` in conditionals.",
-    "description": "Avoid `foo&.blank?` in conditionals.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "SafeAutoCorrect",
-        "description": "SafeAutoCorrect"
-      }
-    ]
+    "title": "Safe Navigation With Blank",
+    "description": "Safe Navigation With Blank",
+    "timeToFix": 5
   },
   {
     "patternId": "Rails_SaveBang",
-    "title": "Identifies possible cases where Active Record save! or related should be used.",
-    "description": "Identifies possible cases where Active Record save! or related should be used.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "AllowImplicitReturn",
-        "description": "AllowImplicitReturn"
-      },
-      {
-        "name": "AllowedReceivers",
-        "description": "AllowedReceivers"
-      },
-      {
-        "name": "SafeAutoCorrect",
-        "description": "SafeAutoCorrect"
-      }
-    ]
+    "title": "Save Bang",
+    "description": "Save Bang",
+    "timeToFix": 5
   },
   {
     "patternId": "Rails_SchemaComment",
-    "title": "Enforces the use of the `comment` option when adding a new table or column to the database during a migration.",
-    "description": "Enforces the use of the `comment` option when adding a new table or column to the database during a migration.",
+    "title": "Schema Comment",
+    "description": "Schema Comment",
     "timeToFix": 5
   },
   {
     "patternId": "Rails_ScopeArgs",
-    "title": "Checks the arguments of ActiveRecord scopes.",
-    "description": "Checks the arguments of ActiveRecord scopes.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Include",
-        "description": "Include"
-      }
-    ]
+    "title": "Scope Args",
+    "description": "Scope Args",
+    "timeToFix": 5
   },
   {
     "patternId": "Rails_SelectMap",
-    "title": "Checks for uses of `select(:column_name)` with `map(&:column_name)`.",
-    "description": "Checks for uses of `select(:column_name)` with `map(&:column_name)`.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Safe",
-        "description": "Safe"
-      }
-    ]
+    "title": "Select Map",
+    "description": "Select Map",
+    "timeToFix": 5
   },
   {
     "patternId": "Rails_ShortI18n",
-    "title": "Use the short form of the I18n methods: `t` instead of `translate` and `l` instead of `localize`.",
-    "description": "Use the short form of the I18n methods: `t` instead of `translate` and `l` instead of `localize`.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "EnforcedStyle",
-        "description": "EnforcedStyle"
-      },
-      {
-        "name": "SupportedStyles",
-        "description": "SupportedStyles"
-      }
-    ]
+    "title": "Short I18n",
+    "description": "Short I18n",
+    "timeToFix": 5
   },
   {
     "patternId": "Rails_SkipsModelValidations",
-    "title": "Use methods that skips model validations with caution. See reference for more information.",
-    "description": "Use methods that skips model validations with caution. See reference for more information.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Safe",
-        "description": "Safe"
-      },
-      {
-        "name": "ForbiddenMethods",
-        "description": "ForbiddenMethods"
-      },
-      {
-        "name": "AllowedMethods",
-        "description": "AllowedMethods"
-      }
-    ]
+    "title": "Skips Model Validations",
+    "description": "Skips Model Validations",
+    "timeToFix": 5
   },
   {
     "patternId": "Rails_SquishedSQLHeredocs",
-    "title": "Checks SQL heredocs to use `.squish`.",
-    "description": "Checks SQL heredocs to use `.squish`.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "SafeAutoCorrect",
-        "description": "SafeAutoCorrect"
-      }
-    ]
+    "title": "Squished S Q L Heredocs",
+    "description": "Squished S Q L Heredocs",
+    "timeToFix": 5
   },
   {
     "patternId": "Rails_StripHeredoc",
-    "title": "Enforces the use of squiggly heredoc over `strip_heredoc`.",
-    "description": "Enforces the use of squiggly heredoc over `strip_heredoc`.",
+    "title": "Strip Heredoc",
+    "description": "Strip Heredoc",
     "timeToFix": 5
   },
   {
     "patternId": "Rails_TableNameAssignment",
-    "title": "Do not use `self.table_name =`. Use Inflections or `table_name_prefix` instead.",
-    "description": "Do not use `self.table_name =`. Use Inflections or `table_name_prefix` instead.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Include",
-        "description": "Include"
-      }
-    ]
+    "title": "Table Name Assignment",
+    "description": "Table Name Assignment",
+    "timeToFix": 5
   },
   {
     "patternId": "Rails_ThreeStateBooleanColumn",
-    "title": "Add a default value and a `NOT NULL` constraint to boolean columns.",
-    "description": "Add a default value and a `NOT NULL` constraint to boolean columns.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Include",
-        "description": "Include"
-      }
-    ]
+    "title": "Three State Boolean Column",
+    "description": "Three State Boolean Column",
+    "timeToFix": 5
   },
   {
     "patternId": "Rails_TimeZone",
-    "title": "Checks the correct usage of time zone aware methods.",
-    "description": "Checks the correct usage of time zone aware methods.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "SafeAutoCorrect",
-        "description": "SafeAutoCorrect"
-      },
-      {
-        "name": "EnforcedStyle",
-        "description": "EnforcedStyle"
-      },
-      {
-        "name": "SupportedStyles",
-        "description": "SupportedStyles"
-      },
-      {
-        "name": "Exclude",
-        "description": "Exclude"
-      }
-    ]
+    "title": "Time Zone",
+    "description": "Time Zone",
+    "timeToFix": 5
   },
   {
     "patternId": "Rails_TimeZoneAssignment",
-    "title": "Prefer the usage of `Time.use_zone` instead of manually updating `Time.zone` value.",
-    "description": "Prefer the usage of `Time.use_zone` instead of manually updating `Time.zone` value.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Include",
-        "description": "Include"
-      }
-    ]
+    "title": "Time Zone Assignment",
+    "description": "Time Zone Assignment",
+    "timeToFix": 5
   },
   {
     "patternId": "Rails_ToFormattedS",
-    "title": "Checks for consistent uses of `to_fs` or `to_formatted_s`.",
-    "description": "Checks for consistent uses of `to_fs` or `to_formatted_s`.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "EnforcedStyle",
-        "description": "EnforcedStyle"
-      },
-      {
-        "name": "SupportedStyles",
-        "description": "SupportedStyles"
-      }
-    ]
+    "title": "To Formatted S",
+    "description": "To Formatted S",
+    "timeToFix": 5
   },
   {
     "patternId": "Rails_ToSWithArgument",
-    "title": "Identifies passing any argument to `#to_s`.",
-    "description": "Identifies passing any argument to `#to_s`.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Safe",
-        "description": "Safe"
-      }
-    ]
+    "title": "To S With Argument",
+    "description": "To S With Argument",
+    "timeToFix": 5
   },
   {
     "patternId": "Rails_TopLevelHashWithIndifferentAccess",
-    "title": "Identifies top-level `HashWithIndifferentAccess`.",
-    "description": "Identifies top-level `HashWithIndifferentAccess`.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Severity",
-        "description": "Severity"
-      }
-    ]
+    "title": "Top Level Hash With Indifferent Access",
+    "description": "Top Level Hash With Indifferent Access",
+    "timeToFix": 5
   },
   {
     "patternId": "Rails_TransactionExitStatement",
-    "title": "Avoid the usage of `return`, `break` and `throw` in transaction blocks.",
-    "description": "Avoid the usage of `return`, `break` and `throw` in transaction blocks.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "TransactionMethods",
-        "description": "TransactionMethods"
-      }
-    ]
+    "title": "Transaction Exit Statement",
+    "description": "Transaction Exit Statement",
+    "timeToFix": 5
   },
   {
     "patternId": "Rails_UniqBeforePluck",
-    "title": "Prefer the use of uniq or distinct before pluck.",
-    "description": "Prefer the use of uniq or distinct before pluck.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "EnforcedStyle",
-        "description": "EnforcedStyle"
-      },
-      {
-        "name": "SupportedStyles",
-        "description": "SupportedStyles"
-      },
-      {
-        "name": "SafeAutoCorrect",
-        "description": "SafeAutoCorrect"
-      }
-    ]
+    "title": "Uniq Before Pluck",
+    "description": "Uniq Before Pluck",
+    "timeToFix": 5
   },
   {
     "patternId": "Rails_UniqueValidationWithoutIndex",
-    "title": "Uniqueness validation should have a unique index on the database column.",
-    "description": "Uniqueness validation should have a unique index on the database column.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Include",
-        "description": "Include"
-      }
-    ]
+    "title": "Unique Validation Without Index",
+    "description": "Unique Validation Without Index",
+    "timeToFix": 5
   },
   {
     "patternId": "Rails_UnknownEnv",
-    "title": "Use correct environment name.",
-    "description": "Use correct environment name.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Severity",
-        "description": "Severity"
-      },
-      {
-        "name": "Environments",
-        "description": "Environments"
-      }
-    ]
+    "title": "Unknown Env",
+    "description": "Unknown Env",
+    "timeToFix": 5
   },
   {
     "patternId": "Rails_UnusedIgnoredColumns",
-    "title": "Remove a column that does not exist from `ignored_columns`.",
-    "description": "Remove a column that does not exist from `ignored_columns`.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Include",
-        "description": "Include"
-      }
-    ]
+    "title": "Unused Ignored Columns",
+    "description": "Unused Ignored Columns",
+    "timeToFix": 5
   },
   {
     "patternId": "Rails_UnusedRenderContent",
-    "title": "Do not specify body content for a response with a non-content status code.",
-    "description": "Do not specify body content for a response with a non-content status code.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Severity",
-        "description": "Severity"
-      }
-    ]
+    "title": "Unused Render Content",
+    "description": "Unused Render Content",
+    "timeToFix": 5
   },
   {
     "patternId": "Rails_Validation",
-    "title": "Use validates :attribute, hash of validations.",
-    "description": "Use validates :attribute, hash of validations.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Include",
-        "description": "Include"
-      }
-    ]
+    "title": "Validation",
+    "description": "Validation",
+    "timeToFix": 5
   },
   {
     "patternId": "Rails_WhereEquals",
-    "title": "Pass conditions to `where` and `where.not` as a hash instead of manually constructing SQL.",
-    "description": "Pass conditions to `where` and `where.not` as a hash instead of manually constructing SQL.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "SafeAutoCorrect",
-        "description": "SafeAutoCorrect"
-      }
-    ]
+    "title": "Where Equals",
+    "description": "Where Equals",
+    "timeToFix": 5
   },
   {
     "patternId": "Rails_WhereExists",
-    "title": "Prefer `exists?(...)` over `where(...).exists?`.",
-    "description": "Prefer `exists?(...)` over `where(...).exists?`.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "SafeAutoCorrect",
-        "description": "SafeAutoCorrect"
-      },
-      {
-        "name": "EnforcedStyle",
-        "description": "EnforcedStyle"
-      },
-      {
-        "name": "SupportedStyles",
-        "description": "SupportedStyles"
-      }
-    ]
+    "title": "Where Exists",
+    "description": "Where Exists",
+    "timeToFix": 5
   },
   {
     "patternId": "Rails_WhereMissing",
-    "title": "Use `where.missing(...)` to find missing relationship records.",
-    "description": "Use `where.missing(...)` to find missing relationship records.",
+    "title": "Where Missing",
+    "description": "Where Missing",
     "timeToFix": 5
   },
   {
     "patternId": "Rails_WhereNot",
-    "title": "Use `where.not(...)` instead of manually constructing negated SQL in `where`.",
-    "description": "Use `where.not(...)` instead of manually constructing negated SQL in `where`.",
+    "title": "Where Not",
+    "description": "Where Not",
     "timeToFix": 5
   },
   {
     "patternId": "Rails_WhereNotWithMultipleConditions",
-    "title": "Do not use `where.not(...)` with multiple conditions.",
-    "description": "Do not use `where.not(...)` with multiple conditions.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Severity",
-        "description": "Severity"
-      }
-    ]
+    "title": "Where Not With Multiple Conditions",
+    "description": "Where Not With Multiple Conditions",
+    "timeToFix": 5
   },
   {
     "patternId": "Rails_WhereRange",
-    "title": "Use ranges in `where` instead of manually constructing SQL.",
-    "description": "Use ranges in `where` instead of manually constructing SQL.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "SafeAutoCorrect",
-        "description": "SafeAutoCorrect"
-      }
-    ]
+    "title": "Where Range",
+    "description": "Where Range",
+    "timeToFix": 5
   },
   {
     "patternId": "Sorbet_BindingConstantWithoutTypeAlias",
@@ -9255,6 +8219,18 @@
     "patternId": "Sorbet_CallbackConditionalsBinding",
     "title": "Ensures callback conditionals are bound to the right type.",
     "description": "Ensures callback conditionals are bound to the right type.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Safe",
+        "description": "Safe"
+      }
+    ]
+  },
+  {
+    "patternId": "Sorbet_ForbidTEnum",
+    "title": "Forbid usage of T::Enum.",
+    "description": "Forbid usage of T::Enum.",
     "timeToFix": 5,
     "parameters": [
       {
@@ -9412,9 +8388,33 @@
     "timeToFix": 5
   },
   {
-    "patternId": "Sorbet_VoidCheckedTests",
-    "title": "Forbid `.void.checked(:tests)`",
-    "description": "Forbid `.void.checked(:tests)`",
+    "patternId": "Sorbet_EmptyLineAfterSig",
+    "title": "Ensures that there are no blank lines after signatures",
+    "description": "Ensures that there are no blank lines after signatures",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Sorbet_EnforceSignatures",
+    "title": "Ensures all methods have a valid signature.",
+    "description": "Ensures all methods have a valid signature.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Sorbet_ForbidSig",
+    "title": "Forbid usage of sig",
+    "description": "Forbid usage of sig",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Sorbet_ForbidSigWithRuntime",
+    "title": "Forbid usage of T::Sig.sig",
+    "description": "Forbid usage of T::Sig.sig",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Sorbet_ForbidSigWithoutRuntime",
+    "title": "Forbid usage of T::Sig::WithoutRuntime.sig",
+    "description": "Forbid usage of T::Sig::WithoutRuntime.sig",
     "timeToFix": 5
   },
   {
@@ -9436,15 +8436,9 @@
     ]
   },
   {
-    "patternId": "Sorbet_EnforceSignatures",
-    "title": "Ensures all methods have a valid signature.",
-    "description": "Ensures all methods have a valid signature.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "Sorbet_EmptyLineAfterSig",
-    "title": "Ensures that there are no blank lines after signatures",
-    "description": "Ensures that there are no blank lines after signatures",
+    "patternId": "Sorbet_VoidCheckedTests",
+    "title": "Forbid `.void.checked(:tests)`",
+    "description": "Forbid `.void.checked(:tests)`",
     "timeToFix": 5
   },
   {
@@ -9573,6 +8567,10 @@
     "description": "All files must be at least at strictness `strict`.",
     "timeToFix": 5,
     "parameters": [
+      {
+        "name": "Safe",
+        "description": "Safe"
+      },
       {
         "name": "SuggestedStrictness",
         "description": "SuggestedStrictness"
@@ -9879,1659 +8877,1059 @@
   },
   {
     "patternId": "ThreadSafety_ClassAndModuleAttributes",
-    "title": "Avoid mutating class and module attributes.",
-    "description": "Avoid mutating class and module attributes.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "ActiveSupportClassAttributeAllowed",
-        "description": "ActiveSupportClassAttributeAllowed"
-      }
-    ]
+    "title": "Class And Module Attributes",
+    "description": "Class And Module Attributes",
+    "timeToFix": 5
   },
   {
     "patternId": "ThreadSafety_MutableClassInstanceVariable",
-    "title": "Do not assign mutable objects to class instance variables.",
-    "description": "Do not assign mutable objects to class instance variables.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "EnforcedStyle",
-        "description": "EnforcedStyle"
-      },
-      {
-        "name": "SafeAutoCorrect",
-        "description": "SafeAutoCorrect"
-      },
-      {
-        "name": "SupportedStyles",
-        "description": "SupportedStyles"
-      }
-    ]
+    "title": "Mutable Class Instance Variable",
+    "description": "Mutable Class Instance Variable",
+    "timeToFix": 5
   },
   {
     "patternId": "ThreadSafety_NewThread",
-    "title": "Avoid starting new threads. Let a framework like Sidekiq handle the threads.",
-    "description": "Avoid starting new threads. Let a framework like Sidekiq handle the threads.",
+    "title": "New Thread",
+    "description": "New Thread",
     "timeToFix": 5
   },
   {
     "patternId": "ThreadSafety_DirChdir",
-    "title": "Avoid using `Dir.chdir` due to its process-wide effect.",
-    "description": "Avoid using `Dir.chdir` due to its process-wide effect.",
+    "title": "Dir Chdir",
+    "description": "Dir Chdir",
     "timeToFix": 5
   },
   {
     "patternId": "ThreadSafety_RackMiddlewareInstanceVariable",
-    "title": "Avoid instance variables in Rack middleware.",
-    "description": "Avoid instance variables in Rack middleware.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Include",
-        "description": "Include"
-      },
-      {
-        "name": "AllowedIdentifiers",
-        "description": "AllowedIdentifiers"
-      }
-    ]
+    "title": "Rack Middleware Instance Variable",
+    "description": "Rack Middleware Instance Variable",
+    "timeToFix": 5
   },
   {
     "patternId": "Minitest_AssertEmpty",
-    "title": "This cop enforces the test to use `assert_empty` instead of using `assert(object.empty?)`.",
-    "description": "This cop enforces the test to use `assert_empty` instead of using `assert(object.empty?)`.",
+    "title": "Assert Empty",
+    "description": "Assert Empty",
     "timeToFix": 5
   },
   {
     "patternId": "Minitest_AssertEmptyLiteral",
-    "title": "This cop enforces the test to use `assert_empty` instead of using `assert_equal([], object)`.",
-    "description": "This cop enforces the test to use `assert_empty` instead of using `assert_equal([], object)`.",
+    "title": "Assert Empty Literal",
+    "description": "Assert Empty Literal",
     "timeToFix": 5
   },
   {
     "patternId": "Minitest_AssertEqual",
-    "title": "This cop enforces the test to use `assert_equal` instead of using `assert(expected == actual)`.",
-    "description": "This cop enforces the test to use `assert_equal` instead of using `assert(expected == actual)`.",
+    "title": "Assert Equal",
+    "description": "Assert Equal",
     "timeToFix": 5
   },
   {
     "patternId": "Minitest_AssertInDelta",
-    "title": "This cop enforces the test to use `assert_in_delta` instead of using `assert_equal` to compare floats.",
-    "description": "This cop enforces the test to use `assert_in_delta` instead of using `assert_equal` to compare floats.",
+    "title": "Assert In Delta",
+    "description": "Assert In Delta",
     "timeToFix": 5
   },
   {
     "patternId": "Minitest_AssertOperator",
-    "title": "This cop enforces the use of `assert_operator(expected, :<, actual)` over `assert(expected < actual)`.",
-    "description": "This cop enforces the use of `assert_operator(expected, :<, actual)` over `assert(expected < actual)`.",
+    "title": "Assert Operator",
+    "description": "Assert Operator",
     "timeToFix": 5
   },
   {
     "patternId": "Minitest_AssertPredicate",
-    "title": "This cop enforces the test to use `assert_predicate` instead of using `assert(obj.a_predicate_method?)`.",
-    "description": "This cop enforces the test to use `assert_predicate` instead of using `assert(obj.a_predicate_method?)`.",
+    "title": "Assert Predicate",
+    "description": "Assert Predicate",
     "timeToFix": 5
   },
   {
     "patternId": "Minitest_AssertRaisesCompoundBody",
-    "title": "This cop enforces the block body of `assert_raises { ... }` to be reduced to only the raising code.",
-    "description": "This cop enforces the block body of `assert_raises { ... }` to be reduced to only the raising code.",
+    "title": "Assert Raises Compound Body",
+    "description": "Assert Raises Compound Body",
     "timeToFix": 5
   },
   {
     "patternId": "Minitest_AssertRaisesWithRegexpArgument",
-    "title": "This cop enforces checks for regular expression literals passed to `assert_raises`.",
-    "description": "This cop enforces checks for regular expression literals passed to `assert_raises`.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Severity",
-        "description": "Severity"
-      }
-    ]
+    "title": "Assert Raises With Regexp Argument",
+    "description": "Assert Raises With Regexp Argument",
+    "timeToFix": 5
   },
   {
     "patternId": "Minitest_AssertWithExpectedArgument",
-    "title": "This cop tries to detect when a user accidentally used `assert` when they meant to use `assert_equal`.",
-    "description": "This cop tries to detect when a user accidentally used `assert` when they meant to use `assert_equal`.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Severity",
-        "description": "Severity"
-      },
-      {
-        "name": "Safe",
-        "description": "Safe"
-      }
-    ]
+    "title": "Assert With Expected Argument",
+    "description": "Assert With Expected Argument",
+    "timeToFix": 5
   },
   {
     "patternId": "Minitest_AssertionInLifecycleHook",
-    "title": "This cop checks for usage of assertions in lifecycle hooks.",
-    "description": "This cop checks for usage of assertions in lifecycle hooks.",
+    "title": "Assertion In Lifecycle Hook",
+    "description": "Assertion In Lifecycle Hook",
     "timeToFix": 5
   },
   {
     "patternId": "Minitest_AssertKindOf",
-    "title": "This cop enforces the test to use `assert_kind_of(Class, object)` over `assert(object.kind_of?(Class))`",
-    "description": "This cop enforces the test to use `assert_kind_of(Class, object)` over `assert(object.kind_of?(Class))`",
+    "title": "Assert Kind Of",
+    "description": "Assert Kind Of",
     "timeToFix": 5
   },
   {
     "patternId": "Minitest_AssertNil",
-    "title": "This cop enforces the test to use `assert_nil` instead of using `assert_equal(nil, something)` or `assert(something.nil?)`.",
-    "description": "This cop enforces the test to use `assert_nil` instead of using `assert_equal(nil, something)` or `assert(something.nil?)`.",
+    "title": "Assert Nil",
+    "description": "Assert Nil",
     "timeToFix": 5
   },
   {
     "patternId": "Minitest_AssertIncludes",
-    "title": "This cop enforces the test to use `assert_includes` instead of using `assert(collection.include?(object))`.",
-    "description": "This cop enforces the test to use `assert_includes` instead of using `assert(collection.include?(object))`.",
+    "title": "Assert Includes",
+    "description": "Assert Includes",
     "timeToFix": 5
   },
   {
     "patternId": "Minitest_AssertInstanceOf",
-    "title": "This cop enforces the test to use `assert_instance_of(Class, object)` over `assert(object.instance_of?(Class))`",
-    "description": "This cop enforces the test to use `assert_instance_of(Class, object)` over `assert(object.instance_of?(Class))`",
+    "title": "Assert Instance Of",
+    "description": "Assert Instance Of",
     "timeToFix": 5
   },
   {
     "patternId": "Minitest_AssertMatch",
-    "title": "This cop enforces the test to use `assert_match` instead of using `assert(matcher.match(object))`.",
-    "description": "This cop enforces the test to use `assert_match` instead of using `assert(matcher.match(object))`.",
+    "title": "Assert Match",
+    "description": "Assert Match",
     "timeToFix": 5
   },
   {
     "patternId": "Minitest_AssertOutput",
-    "title": "This cop checks for opportunities to use `assert_output`.",
-    "description": "This cop checks for opportunities to use `assert_output`.",
+    "title": "Assert Output",
+    "description": "Assert Output",
     "timeToFix": 5
   },
   {
     "patternId": "Minitest_AssertPathExists",
-    "title": "This cop enforces the test to use `assert_path_exists` instead of using `assert(File.exist?(path))`.",
-    "description": "This cop enforces the test to use `assert_path_exists` instead of using `assert(File.exist?(path))`.",
+    "title": "Assert Path Exists",
+    "description": "Assert Path Exists",
     "timeToFix": 5
   },
   {
     "patternId": "Minitest_AssertRespondTo",
-    "title": "This cop enforces the test to use `assert_respond_to(object, :do_something)` over `assert(object.respond_to?(:do_something))`.",
-    "description": "This cop enforces the test to use `assert_respond_to(object, :do_something)` over `assert(object.respond_to?(:do_something))`.",
+    "title": "Assert Respond To",
+    "description": "Assert Respond To",
     "timeToFix": 5
   },
   {
     "patternId": "Minitest_AssertSame",
-    "title": "Enforces the use of `assert_same(expected, actual)` over `assert(expected.equal?(actual))`.",
-    "description": "Enforces the use of `assert_same(expected, actual)` over `assert(expected.equal?(actual))`.",
+    "title": "Assert Same",
+    "description": "Assert Same",
     "timeToFix": 5
   },
   {
     "patternId": "Minitest_AssertSilent",
-    "title": "This cop enforces the test to use `assert_silent { ... }` instead of using `assert_output('', '') { ... }`.",
-    "description": "This cop enforces the test to use `assert_silent { ... }` instead of using `assert_output('', '') { ... }`.",
+    "title": "Assert Silent",
+    "description": "Assert Silent",
     "timeToFix": 5
   },
   {
     "patternId": "Minitest_AssertTruthy",
-    "title": "This cop enforces the test to use `assert(actual)` instead of using `assert_equal(true, actual)`.",
-    "description": "This cop enforces the test to use `assert(actual)` instead of using `assert_equal(true, actual)`.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Safe",
-        "description": "Safe"
-      }
-    ]
+    "title": "Assert Truthy",
+    "description": "Assert Truthy",
+    "timeToFix": 5
   },
   {
     "patternId": "Minitest_DuplicateTestRun",
-    "title": "This cop detects duplicate test runs caused by one test class inheriting from another.",
-    "description": "This cop detects duplicate test runs caused by one test class inheriting from another.",
+    "title": "Duplicate Test Run",
+    "description": "Duplicate Test Run",
     "timeToFix": 5
   },
   {
     "patternId": "Minitest_EmptyLineBeforeAssertionMethods",
-    "title": "Add empty line before assertion methods.",
-    "description": "Add empty line before assertion methods.",
+    "title": "Empty Line Before Assertion Methods",
+    "description": "Empty Line Before Assertion Methods",
     "timeToFix": 5
   },
   {
     "patternId": "Minitest_Focus",
-    "title": "Checks for focused tests.",
-    "description": "Checks for focused tests.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "AutoCorrect",
-        "description": "AutoCorrect"
-      }
-    ]
+    "title": "Focus",
+    "description": "Focus",
+    "timeToFix": 5
   },
   {
     "patternId": "Minitest_NonExecutableTestMethod",
-    "title": "Checks uses of test methods outside test class.",
-    "description": "Checks uses of test methods outside test class.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Severity",
-        "description": "Severity"
-      }
-    ]
+    "title": "Non Executable Test Method",
+    "description": "Non Executable Test Method",
+    "timeToFix": 5
   },
   {
     "patternId": "Minitest_RedundantMessageArgument",
-    "title": "Detects redundant message argument in assertion methods.",
-    "description": "Detects redundant message argument in assertion methods.",
+    "title": "Redundant Message Argument",
+    "description": "Redundant Message Argument",
     "timeToFix": 5
   },
   {
     "patternId": "Minitest_ReturnInTestMethod",
-    "title": "Enforces the use of `skip` instead of `return` in test methods.",
-    "description": "Enforces the use of `skip` instead of `return` in test methods.",
+    "title": "Return In Test Method",
+    "description": "Return In Test Method",
     "timeToFix": 5
   },
   {
     "patternId": "Minitest_TestFileName",
-    "title": "Checks if test file names start with `test_` or end with `_test.rb`.",
-    "description": "Checks if test file names start with `test_` or end with `_test.rb`.",
+    "title": "Test File Name",
+    "description": "Test File Name",
     "timeToFix": 5
   },
   {
     "patternId": "Minitest_GlobalExpectations",
-    "title": "This cop checks for deprecated global expectations.",
-    "description": "This cop checks for deprecated global expectations.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Severity",
-        "description": "Severity"
-      },
-      {
-        "name": "EnforcedStyle",
-        "description": "EnforcedStyle"
-      },
-      {
-        "name": "Include",
-        "description": "Include"
-      },
-      {
-        "name": "SupportedStyles",
-        "description": "SupportedStyles"
-      }
-    ]
+    "title": "Global Expectations",
+    "description": "Global Expectations",
+    "timeToFix": 5
   },
   {
     "patternId": "Minitest_LifecycleHooksOrder",
-    "title": "Checks that lifecycle hooks are declared in the order in which they will be executed.",
-    "description": "Checks that lifecycle hooks are declared in the order in which they will be executed.",
+    "title": "Lifecycle Hooks Order",
+    "description": "Lifecycle Hooks Order",
     "timeToFix": 5
   },
   {
     "patternId": "Minitest_LiteralAsActualArgument",
-    "title": "This cop enforces correct order of `expected` and `actual` arguments for `assert_equal`.",
-    "description": "This cop enforces correct order of `expected` and `actual` arguments for `assert_equal`.",
+    "title": "Literal As Actual Argument",
+    "description": "Literal As Actual Argument",
     "timeToFix": 5
   },
   {
     "patternId": "Minitest_MultipleAssertions",
-    "title": "This cop checks if test cases contain too many assertion calls.",
-    "description": "This cop checks if test cases contain too many assertion calls.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Max",
-        "description": "Max"
-      }
-    ]
+    "title": "Multiple Assertions",
+    "description": "Multiple Assertions",
+    "timeToFix": 5
   },
   {
     "patternId": "Minitest_NoAssertions",
-    "title": "This cop checks for at least one assertion (or flunk) in tests.",
-    "description": "This cop checks for at least one assertion (or flunk) in tests.",
+    "title": "No Assertions",
+    "description": "No Assertions",
     "timeToFix": 5
   },
   {
     "patternId": "Minitest_NoTestCases",
-    "title": "Checks if test class contains any test cases.",
-    "description": "Checks if test class contains any test cases.",
+    "title": "No Test Cases",
+    "description": "No Test Cases",
     "timeToFix": 5
   },
   {
     "patternId": "Minitest_NonPublicTestMethod",
-    "title": "Detects non `public` (marked as `private` or `protected`) test methods.",
-    "description": "Detects non `public` (marked as `private` or `protected`) test methods.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Severity",
-        "description": "Severity"
-      }
-    ]
+    "title": "Non Public Test Method",
+    "description": "Non Public Test Method",
+    "timeToFix": 5
   },
   {
     "patternId": "Minitest_RefuteEmpty",
-    "title": "This cop enforces to use `refute_empty` instead of using `refute(object.empty?)`.",
-    "description": "This cop enforces to use `refute_empty` instead of using `refute(object.empty?)`.",
+    "title": "Refute Empty",
+    "description": "Refute Empty",
     "timeToFix": 5
   },
   {
     "patternId": "Minitest_RefuteFalse",
-    "title": "Check if your test uses `refute(actual)` instead of `assert_equal(false, actual)`.",
-    "description": "Check if your test uses `refute(actual)` instead of `assert_equal(false, actual)`.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Safe",
-        "description": "Safe"
-      }
-    ]
+    "title": "Refute False",
+    "description": "Refute False",
+    "timeToFix": 5
   },
   {
     "patternId": "Minitest_RefuteEqual",
-    "title": "Check if your test uses `refute_equal` instead of `assert(expected != object)` or `assert(! expected == object))`.",
-    "description": "Check if your test uses `refute_equal` instead of `assert(expected != object)` or `assert(! expected == object))`.",
+    "title": "Refute Equal",
+    "description": "Refute Equal",
     "timeToFix": 5
   },
   {
     "patternId": "Minitest_RefuteInDelta",
-    "title": "This cop enforces the test to use `refute_in_delta` instead of using `refute_equal` to compare floats.",
-    "description": "This cop enforces the test to use `refute_in_delta` instead of using `refute_equal` to compare floats.",
+    "title": "Refute In Delta",
+    "description": "Refute In Delta",
     "timeToFix": 5
   },
   {
     "patternId": "Minitest_RefuteIncludes",
-    "title": "This cop enforces the test to use `refute_includes` instead of using `refute(collection.include?(object))`.",
-    "description": "This cop enforces the test to use `refute_includes` instead of using `refute(collection.include?(object))`.",
+    "title": "Refute Includes",
+    "description": "Refute Includes",
     "timeToFix": 5
   },
   {
     "patternId": "Minitest_RefuteInstanceOf",
-    "title": "This cop enforces the test to use `refute_instance_of(Class, object)` over `refute(object.instance_of?(Class))`.",
-    "description": "This cop enforces the test to use `refute_instance_of(Class, object)` over `refute(object.instance_of?(Class))`.",
+    "title": "Refute Instance Of",
+    "description": "Refute Instance Of",
     "timeToFix": 5
   },
   {
     "patternId": "Minitest_RefuteKindOf",
-    "title": "This cop enforces the test to use `refute_kind_of(Class, object)` over `refute(object.kind_of?(Class))`.",
-    "description": "This cop enforces the test to use `refute_kind_of(Class, object)` over `refute(object.kind_of?(Class))`.",
+    "title": "Refute Kind Of",
+    "description": "Refute Kind Of",
     "timeToFix": 5
   },
   {
     "patternId": "Minitest_RefuteMatch",
-    "title": "This cop enforces the test to use `refute_match` instead of using `refute(matcher.match(object))`.",
-    "description": "This cop enforces the test to use `refute_match` instead of using `refute(matcher.match(object))`.",
+    "title": "Refute Match",
+    "description": "Refute Match",
     "timeToFix": 5
   },
   {
     "patternId": "Minitest_RefuteNil",
-    "title": "This cop enforces the test to use `refute_nil` instead of using `refute_equal(nil, something)` or `refute(something.nil?)`.",
-    "description": "This cop enforces the test to use `refute_nil` instead of using `refute_equal(nil, something)` or `refute(something.nil?)`.",
+    "title": "Refute Nil",
+    "description": "Refute Nil",
     "timeToFix": 5
   },
   {
     "patternId": "Minitest_RefuteOperator",
-    "title": "This cop enforces the use of `refute_operator(expected, :<, actual)` over `refute(expected < actual)`.",
-    "description": "This cop enforces the use of `refute_operator(expected, :<, actual)` over `refute(expected < actual)`.",
+    "title": "Refute Operator",
+    "description": "Refute Operator",
     "timeToFix": 5
   },
   {
     "patternId": "Minitest_RefutePathExists",
-    "title": "This cop enforces the test to use `refute_path_exists` instead of using `refute(File.exist?(path))`.",
-    "description": "This cop enforces the test to use `refute_path_exists` instead of using `refute(File.exist?(path))`.",
+    "title": "Refute Path Exists",
+    "description": "Refute Path Exists",
     "timeToFix": 5
   },
   {
     "patternId": "Minitest_RefutePredicate",
-    "title": "This cop enforces the test to use `refute_predicate` instead of using `refute(obj.a_predicate_method?)`.",
-    "description": "This cop enforces the test to use `refute_predicate` instead of using `refute(obj.a_predicate_method?)`.",
+    "title": "Refute Predicate",
+    "description": "Refute Predicate",
     "timeToFix": 5
   },
   {
     "patternId": "Minitest_RefuteRespondTo",
-    "title": "This cop enforces the test to use `refute_respond_to(object, :do_something)` over `refute(object.respond_to?(:do_something))`.",
-    "description": "This cop enforces the test to use `refute_respond_to(object, :do_something)` over `refute(object.respond_to?(:do_something))`.",
+    "title": "Refute Respond To",
+    "description": "Refute Respond To",
     "timeToFix": 5
   },
   {
     "patternId": "Minitest_RefuteSame",
-    "title": "Enforces the use of `refute_same(expected, actual)` over `refute(expected.equal?(actual))`.",
-    "description": "Enforces the use of `refute_same(expected, actual)` over `refute(expected.equal?(actual))`.",
+    "title": "Refute Same",
+    "description": "Refute Same",
     "timeToFix": 5
   },
   {
     "patternId": "Minitest_SkipEnsure",
-    "title": "Checks that `ensure` call even if `skip`.",
-    "description": "Checks that `ensure` call even if `skip`.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Severity",
-        "description": "Severity"
-      }
-    ]
+    "title": "Skip Ensure",
+    "description": "Skip Ensure",
+    "timeToFix": 5
   },
   {
     "patternId": "Minitest_SkipWithoutReason",
-    "title": "Checks for skipped tests missing the skipping reason.",
-    "description": "Checks for skipped tests missing the skipping reason.",
+    "title": "Skip Without Reason",
+    "description": "Skip Without Reason",
     "timeToFix": 5
   },
   {
     "patternId": "Minitest_TestMethodName",
-    "title": "This cop enforces that test method names start with `test_` prefix.",
-    "description": "This cop enforces that test method names start with `test_` prefix.",
+    "title": "Test Method Name",
+    "description": "Test Method Name",
     "timeToFix": 5
   },
   {
     "patternId": "Minitest_UnreachableAssertion",
-    "title": "This cop checks for an `assert_raises` block containing any unreachable assertions.",
-    "description": "This cop checks for an `assert_raises` block containing any unreachable assertions.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Severity",
-        "description": "Severity"
-      }
-    ]
+    "title": "Unreachable Assertion",
+    "description": "Unreachable Assertion",
+    "timeToFix": 5
   },
   {
     "patternId": "Minitest_UnspecifiedException",
-    "title": "This cop checks for a specified error in `assert_raises`.",
-    "description": "This cop checks for a specified error in `assert_raises`.",
+    "title": "Unspecified Exception",
+    "description": "Unspecified Exception",
     "timeToFix": 5
   },
   {
     "patternId": "Minitest_UselessAssertion",
-    "title": "Detects useless assertions (assertions that either always pass or always fail).",
-    "description": "Detects useless assertions (assertions that either always pass or always fail).",
+    "title": "Useless Assertion",
+    "description": "Useless Assertion",
     "timeToFix": 5
   },
   {
     "patternId": "Rake_ClassDefinitionInTask",
-    "title": "Do not define a class or module in rake task, because it will be defined to the top level.",
-    "description": "Do not define a class or module in rake task, because it will be defined to the top level.",
+    "title": "Class Definition In Task",
+    "description": "Class Definition In Task",
     "timeToFix": 5
   },
   {
     "patternId": "Rake_Desc",
-    "title": "Describe the task with `desc` method.",
-    "description": "Describe the task with `desc` method.",
+    "title": "Desc",
+    "description": "Desc",
     "timeToFix": 5
   },
   {
     "patternId": "Rake_DuplicateTask",
-    "title": "Do not define tasks with the same name",
-    "description": "Do not define tasks with the same name",
+    "title": "Duplicate Task",
+    "description": "Duplicate Task",
     "timeToFix": 5
   },
   {
     "patternId": "Rake_DuplicateNamespace",
-    "title": "Do not define namespace with the same name",
-    "description": "Do not define namespace with the same name",
+    "title": "Duplicate Namespace",
+    "description": "Duplicate Namespace",
     "timeToFix": 5
   },
   {
     "patternId": "Rake_MethodDefinitionInTask",
-    "title": "Do not define a method in rake task, because it will be defined to the top level.",
-    "description": "Do not define a method in rake task, because it will be defined to the top level.",
+    "title": "Method Definition In Task",
+    "description": "Method Definition In Task",
     "timeToFix": 5
   },
   {
     "patternId": "RSpec_AlignLeftLetBrace",
-    "title": "Checks that left braces for adjacent single line lets are aligned.",
-    "description": "Checks that left braces for adjacent single line lets are aligned.",
+    "title": "Align Left Let Brace",
+    "description": "Align Left Let Brace",
     "timeToFix": 5
   },
   {
     "patternId": "RSpec_AlignRightLetBrace",
-    "title": "Checks that right braces for adjacent single line lets are aligned.",
-    "description": "Checks that right braces for adjacent single line lets are aligned.",
+    "title": "Align Right Let Brace",
+    "description": "Align Right Let Brace",
     "timeToFix": 5
   },
   {
     "patternId": "RSpec_AnyInstance",
-    "title": "Check that instances are not being stubbed globally.",
-    "description": "Check that instances are not being stubbed globally.",
+    "title": "Any Instance",
+    "description": "Any Instance",
     "timeToFix": 5
   },
   {
     "patternId": "RSpec_AroundBlock",
-    "title": "Checks that around blocks actually run the test.",
-    "description": "Checks that around blocks actually run the test.",
+    "title": "Around Block",
+    "description": "Around Block",
     "timeToFix": 5
   },
   {
     "patternId": "RSpec_Be",
-    "title": "Check for expectations where `be` is used without argument.",
-    "description": "Check for expectations where `be` is used without argument.",
+    "title": "Be",
+    "description": "Be",
     "timeToFix": 5
   },
   {
     "patternId": "RSpec_BeEmpty",
-    "title": "Prefer using `be_empty` when checking for an empty array.",
-    "description": "Prefer using `be_empty` when checking for an empty array.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "AutoCorrect",
-        "description": "AutoCorrect"
-      }
-    ]
+    "title": "Be Empty",
+    "description": "Be Empty",
+    "timeToFix": 5
   },
   {
     "patternId": "RSpec_BeEq",
-    "title": "Check for expectations where `be(...)` can replace `eq(...)`.",
-    "description": "Check for expectations where `be(...)` can replace `eq(...)`.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Safe",
-        "description": "Safe"
-      }
-    ]
+    "title": "Be Eq",
+    "description": "Be Eq",
+    "timeToFix": 5
   },
   {
     "patternId": "RSpec_BeEql",
-    "title": "Check for expectations where `be(...)` can replace `eql(...)`.",
-    "description": "Check for expectations where `be(...)` can replace `eql(...)`.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Safe",
-        "description": "Safe"
-      }
-    ]
+    "title": "Be Eql",
+    "description": "Be Eql",
+    "timeToFix": 5
   },
   {
     "patternId": "RSpec_BeNil",
-    "title": "Ensures a consistent style is used when matching `nil`.",
-    "description": "Ensures a consistent style is used when matching `nil`.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "EnforcedStyle",
-        "description": "EnforcedStyle"
-      },
-      {
-        "name": "SupportedStyles",
-        "description": "SupportedStyles"
-      }
-    ]
+    "title": "Be Nil",
+    "description": "Be Nil",
+    "timeToFix": 5
   },
   {
     "patternId": "RSpec_BeforeAfterAll",
-    "title": "Check that before/after(:all/:context) isn't being used.",
-    "description": "Check that before/after(:all/:context) isn't being used.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Exclude",
-        "description": "Exclude"
-      }
-    ]
+    "title": "Before After All",
+    "description": "Before After All",
+    "timeToFix": 5
   },
   {
     "patternId": "RSpec_ChangeByZero",
-    "title": "Prefer negated matchers over `to change.by(0)`.",
-    "description": "Prefer negated matchers over `to change.by(0)`.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "NegatedMatcher",
-        "description": "NegatedMatcher"
-      }
-    ]
+    "title": "Change By Zero",
+    "description": "Change By Zero",
+    "timeToFix": 5
   },
   {
     "patternId": "RSpec_ClassCheck",
-    "title": "Enforces consistent use of `be_a` or `be_kind_of`.",
-    "description": "Enforces consistent use of `be_a` or `be_kind_of`.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "EnforcedStyle",
-        "description": "EnforcedStyle"
-      },
-      {
-        "name": "SupportedStyles",
-        "description": "SupportedStyles"
-      }
-    ]
+    "title": "Class Check",
+    "description": "Class Check",
+    "timeToFix": 5
   },
   {
     "patternId": "RSpec_ContainExactly",
-    "title": "Checks where `contain_exactly` is used.",
-    "description": "Checks where `contain_exactly` is used.",
+    "title": "Contain Exactly",
+    "description": "Contain Exactly",
     "timeToFix": 5
   },
   {
     "patternId": "RSpec_ContextMethod",
-    "title": "`context` should not be used for specifying methods.",
-    "description": "`context` should not be used for specifying methods.",
+    "title": "Context Method",
+    "description": "Context Method",
     "timeToFix": 5
   },
   {
     "patternId": "RSpec_ContextWording",
-    "title": "Checks that `context` docstring starts with an allowed prefix.",
-    "description": "Checks that `context` docstring starts with an allowed prefix.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Prefixes",
-        "description": "Prefixes"
-      },
-      {
-        "name": "AllowedPatterns",
-        "description": "AllowedPatterns"
-      }
-    ]
+    "title": "Context Wording",
+    "description": "Context Wording",
+    "timeToFix": 5
   },
   {
     "patternId": "RSpec_DescribeClass",
-    "title": "Check that the first argument to the top-level describe is a constant.",
-    "description": "Check that the first argument to the top-level describe is a constant.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Exclude",
-        "description": "Exclude"
-      },
-      {
-        "name": "IgnoredMetadata",
-        "description": "IgnoredMetadata"
-      }
-    ]
+    "title": "Describe Class",
+    "description": "Describe Class",
+    "timeToFix": 5
   },
   {
     "patternId": "RSpec_DescribeMethod",
-    "title": "Checks that the second argument to `describe` specifies a method.",
-    "description": "Checks that the second argument to `describe` specifies a method.",
+    "title": "Describe Method",
+    "description": "Describe Method",
     "timeToFix": 5
   },
   {
     "patternId": "RSpec_DescribeSymbol",
-    "title": "Avoid describing symbols.",
-    "description": "Avoid describing symbols.",
+    "title": "Describe Symbol",
+    "description": "Describe Symbol",
     "timeToFix": 5
   },
   {
     "patternId": "RSpec_DescribedClass",
-    "title": "Checks that tests use `described_class`.",
-    "description": "Checks that tests use `described_class`.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "SkipBlocks",
-        "description": "SkipBlocks"
-      },
-      {
-        "name": "EnforcedStyle",
-        "description": "EnforcedStyle"
-      },
-      {
-        "name": "SupportedStyles",
-        "description": "SupportedStyles"
-      },
-      {
-        "name": "OnlyStaticConstants",
-        "description": "OnlyStaticConstants"
-      },
-      {
-        "name": "SafeAutoCorrect",
-        "description": "SafeAutoCorrect"
-      }
-    ]
+    "title": "Described Class",
+    "description": "Described Class",
+    "timeToFix": 5
   },
   {
     "patternId": "RSpec_DescribedClassModuleWrapping",
-    "title": "Avoid opening modules and defining specs within them.",
-    "description": "Avoid opening modules and defining specs within them.",
+    "title": "Described Class Module Wrapping",
+    "description": "Described Class Module Wrapping",
     "timeToFix": 5
   },
   {
     "patternId": "RSpec_Dialect",
-    "title": "Enforces custom RSpec dialects.",
-    "description": "Enforces custom RSpec dialects.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "PreferredMethods",
-        "description": "PreferredMethods"
-      }
-    ]
+    "title": "Dialect",
+    "description": "Dialect",
+    "timeToFix": 5
   },
   {
     "patternId": "RSpec_DuplicatedMetadata",
-    "title": "Avoid duplicated metadata.",
-    "description": "Avoid duplicated metadata.",
+    "title": "Duplicated Metadata",
+    "description": "Duplicated Metadata",
     "timeToFix": 5
   },
   {
     "patternId": "RSpec_EmptyExampleGroup",
-    "title": "Checks if an example group does not include any tests.",
-    "description": "Checks if an example group does not include any tests.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "AutoCorrect",
-        "description": "AutoCorrect"
-      },
-      {
-        "name": "SafeAutoCorrect",
-        "description": "SafeAutoCorrect"
-      }
-    ]
+    "title": "Empty Example Group",
+    "description": "Empty Example Group",
+    "timeToFix": 5
   },
   {
     "patternId": "RSpec_EmptyHook",
-    "title": "Checks for empty before and after hooks.",
-    "description": "Checks for empty before and after hooks.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "AutoCorrect",
-        "description": "AutoCorrect"
-      }
-    ]
+    "title": "Empty Hook",
+    "description": "Empty Hook",
+    "timeToFix": 5
   },
   {
     "patternId": "RSpec_EmptyLineAfterExample",
-    "title": "Checks if there is an empty line after example blocks.",
-    "description": "Checks if there is an empty line after example blocks.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "AllowConsecutiveOneLiners",
-        "description": "AllowConsecutiveOneLiners"
-      }
-    ]
+    "title": "Empty Line After Example",
+    "description": "Empty Line After Example",
+    "timeToFix": 5
   },
   {
     "patternId": "RSpec_EmptyLineAfterExampleGroup",
-    "title": "Checks if there is an empty line after example group blocks.",
-    "description": "Checks if there is an empty line after example group blocks.",
+    "title": "Empty Line After Example Group",
+    "description": "Empty Line After Example Group",
     "timeToFix": 5
   },
   {
     "patternId": "RSpec_EmptyLineAfterFinalLet",
-    "title": "Checks if there is an empty line after the last let block.",
-    "description": "Checks if there is an empty line after the last let block.",
+    "title": "Empty Line After Final Let",
+    "description": "Empty Line After Final Let",
     "timeToFix": 5
   },
   {
     "patternId": "RSpec_EmptyLineAfterHook",
-    "title": "Checks if there is an empty line after hook blocks.",
-    "description": "Checks if there is an empty line after hook blocks.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "AllowConsecutiveOneLiners",
-        "description": "AllowConsecutiveOneLiners"
-      }
-    ]
+    "title": "Empty Line After Hook",
+    "description": "Empty Line After Hook",
+    "timeToFix": 5
   },
   {
     "patternId": "RSpec_EmptyLineAfterSubject",
-    "title": "Checks if there is an empty line after subject block.",
-    "description": "Checks if there is an empty line after subject block.",
+    "title": "Empty Line After Subject",
+    "description": "Empty Line After Subject",
     "timeToFix": 5
   },
   {
     "patternId": "RSpec_EmptyMetadata",
-    "title": "Avoid empty metadata hash.",
-    "description": "Avoid empty metadata hash.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "AutoCorrect",
-        "description": "AutoCorrect"
-      }
-    ]
+    "title": "Empty Metadata",
+    "description": "Empty Metadata",
+    "timeToFix": 5
   },
   {
     "patternId": "RSpec_EmptyOutput",
-    "title": "Check that the `output` matcher is not called with an empty string.",
-    "description": "Check that the `output` matcher is not called with an empty string.",
+    "title": "Empty Output",
+    "description": "Empty Output",
     "timeToFix": 5
   },
   {
     "patternId": "RSpec_Eq",
-    "title": "Use `eq` instead of `be ==` to compare objects.",
-    "description": "Use `eq` instead of `be ==` to compare objects.",
+    "title": "Eq",
+    "description": "Eq",
     "timeToFix": 5
   },
   {
     "patternId": "RSpec_ExampleLength",
-    "title": "Checks for long examples.",
-    "description": "Checks for long examples.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Max",
-        "description": "Max"
-      },
-      {
-        "name": "CountAsOne",
-        "description": "CountAsOne"
-      }
-    ]
+    "title": "Example Length",
+    "description": "Example Length",
+    "timeToFix": 5
   },
   {
     "patternId": "RSpec_ExampleWithoutDescription",
-    "title": "Checks for examples without a description.",
-    "description": "Checks for examples without a description.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "EnforcedStyle",
-        "description": "EnforcedStyle"
-      },
-      {
-        "name": "SupportedStyles",
-        "description": "SupportedStyles"
-      }
-    ]
+    "title": "Example Without Description",
+    "description": "Example Without Description",
+    "timeToFix": 5
   },
   {
     "patternId": "RSpec_ExampleWording",
-    "title": "Checks for common mistakes in example descriptions.",
-    "description": "Checks for common mistakes in example descriptions.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "CustomTransform",
-        "description": "CustomTransform"
-      },
-      {
-        "name": "IgnoredWords",
-        "description": "IgnoredWords"
-      },
-      {
-        "name": "DisallowedExamples",
-        "description": "DisallowedExamples"
-      }
-    ]
+    "title": "Example Wording",
+    "description": "Example Wording",
+    "timeToFix": 5
   },
   {
     "patternId": "RSpec_ExcessiveDocstringSpacing",
-    "title": "Checks for excessive whitespace in example descriptions.",
-    "description": "Checks for excessive whitespace in example descriptions.",
+    "title": "Excessive Docstring Spacing",
+    "description": "Excessive Docstring Spacing",
     "timeToFix": 5
   },
   {
     "patternId": "RSpec_ExpectActual",
-    "title": "Checks for `expect(...)` calls containing literal values.",
-    "description": "Checks for `expect(...)` calls containing literal values.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Exclude",
-        "description": "Exclude"
-      }
-    ]
+    "title": "Expect Actual",
+    "description": "Expect Actual",
+    "timeToFix": 5
   },
   {
     "patternId": "RSpec_ExpectChange",
-    "title": "Checks for consistent style of change matcher.",
-    "description": "Checks for consistent style of change matcher.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "EnforcedStyle",
-        "description": "EnforcedStyle"
-      },
-      {
-        "name": "SupportedStyles",
-        "description": "SupportedStyles"
-      },
-      {
-        "name": "SafeAutoCorrect",
-        "description": "SafeAutoCorrect"
-      }
-    ]
+    "title": "Expect Change",
+    "description": "Expect Change",
+    "timeToFix": 5
   },
   {
     "patternId": "RSpec_ExpectInHook",
-    "title": "Do not use `expect` in hooks such as `before`.",
-    "description": "Do not use `expect` in hooks such as `before`.",
+    "title": "Expect In Hook",
+    "description": "Expect In Hook",
     "timeToFix": 5
   },
   {
     "patternId": "RSpec_ExpectInLet",
-    "title": "Do not use `expect` in let.",
-    "description": "Do not use `expect` in let.",
+    "title": "Expect In Let",
+    "description": "Expect In Let",
     "timeToFix": 5
   },
   {
     "patternId": "RSpec_ExpectOutput",
-    "title": "Checks for opportunities to use `expect { ... }.to output`.",
-    "description": "Checks for opportunities to use `expect { ... }.to output`.",
+    "title": "Expect Output",
+    "description": "Expect Output",
     "timeToFix": 5
   },
   {
     "patternId": "RSpec_Focus",
-    "title": "Checks if examples are focused.",
-    "description": "Checks if examples are focused.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "AutoCorrect",
-        "description": "AutoCorrect"
-      }
-    ]
+    "title": "Focus",
+    "description": "Focus",
+    "timeToFix": 5
   },
   {
     "patternId": "RSpec_HookArgument",
-    "title": "Checks the arguments passed to `before`, `around`, and `after`.",
-    "description": "Checks the arguments passed to `before`, `around`, and `after`.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "EnforcedStyle",
-        "description": "EnforcedStyle"
-      },
-      {
-        "name": "SupportedStyles",
-        "description": "SupportedStyles"
-      }
-    ]
+    "title": "Hook Argument",
+    "description": "Hook Argument",
+    "timeToFix": 5
   },
   {
     "patternId": "RSpec_HooksBeforeExamples",
-    "title": "Checks for before/around/after hooks that come after an example.",
-    "description": "Checks for before/around/after hooks that come after an example.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "AutoCorrect",
-        "description": "AutoCorrect"
-      }
-    ]
+    "title": "Hooks Before Examples",
+    "description": "Hooks Before Examples",
+    "timeToFix": 5
   },
   {
     "patternId": "RSpec_IdenticalEqualityAssertion",
-    "title": "Checks for equality assertions with identical expressions on both sides.",
-    "description": "Checks for equality assertions with identical expressions on both sides.",
+    "title": "Identical Equality Assertion",
+    "description": "Identical Equality Assertion",
     "timeToFix": 5
   },
   {
     "patternId": "RSpec_ImplicitBlockExpectation",
-    "title": "Check that implicit block expectation syntax is not used.",
-    "description": "Check that implicit block expectation syntax is not used.",
+    "title": "Implicit Block Expectation",
+    "description": "Implicit Block Expectation",
     "timeToFix": 5
   },
   {
     "patternId": "RSpec_ImplicitExpect",
-    "title": "Check that a consistent implicit expectation style is used.",
-    "description": "Check that a consistent implicit expectation style is used.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "EnforcedStyle",
-        "description": "EnforcedStyle"
-      },
-      {
-        "name": "SupportedStyles",
-        "description": "SupportedStyles"
-      }
-    ]
+    "title": "Implicit Expect",
+    "description": "Implicit Expect",
+    "timeToFix": 5
   },
   {
     "patternId": "RSpec_ImplicitSubject",
-    "title": "Checks for usage of implicit subject (`is_expected` / `should`).",
-    "description": "Checks for usage of implicit subject (`is_expected` / `should`).",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "EnforcedStyle",
-        "description": "EnforcedStyle"
-      },
-      {
-        "name": "SupportedStyles",
-        "description": "SupportedStyles"
-      }
-    ]
+    "title": "Implicit Subject",
+    "description": "Implicit Subject",
+    "timeToFix": 5
   },
   {
     "patternId": "RSpec_IndexedLet",
-    "title": "Do not set up test data using indexes (e.g., `item_1`, `item_2`).",
-    "description": "Do not set up test data using indexes (e.g., `item_1`, `item_2`).",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Max",
-        "description": "Max"
-      },
-      {
-        "name": "AllowedIdentifiers",
-        "description": "AllowedIdentifiers"
-      },
-      {
-        "name": "AllowedPatterns",
-        "description": "AllowedPatterns"
-      }
-    ]
+    "title": "Indexed Let",
+    "description": "Indexed Let",
+    "timeToFix": 5
   },
   {
     "patternId": "RSpec_InstanceSpy",
-    "title": "Checks for `instance_double` used with `have_received`.",
-    "description": "Checks for `instance_double` used with `have_received`.",
+    "title": "Instance Spy",
+    "description": "Instance Spy",
     "timeToFix": 5
   },
   {
     "patternId": "RSpec_InstanceVariable",
-    "title": "Checks for instance variable usage in specs.",
-    "description": "Checks for instance variable usage in specs.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "AssignmentOnly",
-        "description": "AssignmentOnly"
-      }
-    ]
+    "title": "Instance Variable",
+    "description": "Instance Variable",
+    "timeToFix": 5
   },
   {
     "patternId": "RSpec_IsExpectedSpecify",
-    "title": "Check for `specify` with `is_expected` and one-liner expectations.",
-    "description": "Check for `specify` with `is_expected` and one-liner expectations.",
+    "title": "Is Expected Specify",
+    "description": "Is Expected Specify",
     "timeToFix": 5
   },
   {
     "patternId": "RSpec_ItBehavesLike",
-    "title": "Checks that only one `it_behaves_like` style is used.",
-    "description": "Checks that only one `it_behaves_like` style is used.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "EnforcedStyle",
-        "description": "EnforcedStyle"
-      },
-      {
-        "name": "SupportedStyles",
-        "description": "SupportedStyles"
-      }
-    ]
+    "title": "It Behaves Like",
+    "description": "It Behaves Like",
+    "timeToFix": 5
   },
   {
     "patternId": "RSpec_IteratedExpectation",
-    "title": "Check that `all` matcher is used instead of iterating over an array.",
-    "description": "Check that `all` matcher is used instead of iterating over an array.",
+    "title": "Iterated Expectation",
+    "description": "Iterated Expectation",
     "timeToFix": 5
   },
   {
     "patternId": "RSpec_LeadingSubject",
-    "title": "Enforce that subject is the first definition in the test.",
-    "description": "Enforce that subject is the first definition in the test.",
+    "title": "Leading Subject",
+    "description": "Leading Subject",
     "timeToFix": 5
   },
   {
     "patternId": "RSpec_LeakyConstantDeclaration",
-    "title": "Checks that no class, module, or constant is declared.",
-    "description": "Checks that no class, module, or constant is declared.",
+    "title": "Leaky Constant Declaration",
+    "description": "Leaky Constant Declaration",
     "timeToFix": 5
   },
   {
     "patternId": "RSpec_LetBeforeExamples",
-    "title": "Checks for `let` definitions that come after an example.",
-    "description": "Checks for `let` definitions that come after an example.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "AutoCorrect",
-        "description": "AutoCorrect"
-      }
-    ]
+    "title": "Let Before Examples",
+    "description": "Let Before Examples",
+    "timeToFix": 5
   },
   {
     "patternId": "RSpec_LetSetup",
-    "title": "Checks unreferenced `let!` calls being used for test setup.",
-    "description": "Checks unreferenced `let!` calls being used for test setup.",
+    "title": "Let Setup",
+    "description": "Let Setup",
     "timeToFix": 5
   },
   {
     "patternId": "RSpec_MatchArray",
-    "title": "Checks where `match_array` is used.",
-    "description": "Checks where `match_array` is used.",
+    "title": "Match Array",
+    "description": "Match Array",
     "timeToFix": 5
   },
   {
     "patternId": "RSpec_MessageChain",
-    "title": "Check that chains of messages are not being stubbed.",
-    "description": "Check that chains of messages are not being stubbed.",
+    "title": "Message Chain",
+    "description": "Message Chain",
     "timeToFix": 5
   },
   {
     "patternId": "RSpec_MessageExpectation",
-    "title": "Checks for consistent message expectation style.",
-    "description": "Checks for consistent message expectation style.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "EnforcedStyle",
-        "description": "EnforcedStyle"
-      },
-      {
-        "name": "SupportedStyles",
-        "description": "SupportedStyles"
-      }
-    ]
+    "title": "Message Expectation",
+    "description": "Message Expectation",
+    "timeToFix": 5
   },
   {
     "patternId": "RSpec_MessageSpies",
-    "title": "Checks that message expectations are set using spies.",
-    "description": "Checks that message expectations are set using spies.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "EnforcedStyle",
-        "description": "EnforcedStyle"
-      },
-      {
-        "name": "SupportedStyles",
-        "description": "SupportedStyles"
-      }
-    ]
+    "title": "Message Spies",
+    "description": "Message Spies",
+    "timeToFix": 5
   },
   {
     "patternId": "RSpec_MetadataStyle",
-    "title": "Use consistent metadata style.",
-    "description": "Use consistent metadata style.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "EnforcedStyle",
-        "description": "EnforcedStyle"
-      },
-      {
-        "name": "SupportedStyles",
-        "description": "SupportedStyles"
-      }
-    ]
+    "title": "Metadata Style",
+    "description": "Metadata Style",
+    "timeToFix": 5
   },
   {
     "patternId": "RSpec_MissingExampleGroupArgument",
-    "title": "Checks that the first argument to an example group is not empty.",
-    "description": "Checks that the first argument to an example group is not empty.",
+    "title": "Missing Example Group Argument",
+    "description": "Missing Example Group Argument",
     "timeToFix": 5
   },
   {
     "patternId": "RSpec_MissingExpectationTargetMethod",
-    "title": "Checks if `.to`, `not_to` or `to_not` are used.",
-    "description": "Checks if `.to`, `not_to` or `to_not` are used.",
+    "title": "Missing Expectation Target Method",
+    "description": "Missing Expectation Target Method",
     "timeToFix": 5
   },
   {
     "patternId": "RSpec_MultipleDescribes",
-    "title": "Checks for multiple top-level example groups.",
-    "description": "Checks for multiple top-level example groups.",
+    "title": "Multiple Describes",
+    "description": "Multiple Describes",
     "timeToFix": 5
   },
   {
     "patternId": "RSpec_MultipleExpectations",
-    "title": "Checks if examples contain too many `expect` calls.",
-    "description": "Checks if examples contain too many `expect` calls.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Max",
-        "description": "Max"
-      }
-    ]
+    "title": "Multiple Expectations",
+    "description": "Multiple Expectations",
+    "timeToFix": 5
   },
   {
     "patternId": "RSpec_MultipleMemoizedHelpers",
-    "title": "Checks if example groups contain too many `let` and `subject` calls.",
-    "description": "Checks if example groups contain too many `let` and `subject` calls.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "AllowSubject",
-        "description": "AllowSubject"
-      },
-      {
-        "name": "Max",
-        "description": "Max"
-      }
-    ]
+    "title": "Multiple Memoized Helpers",
+    "description": "Multiple Memoized Helpers",
+    "timeToFix": 5
   },
   {
     "patternId": "RSpec_MultipleSubjects",
-    "title": "Checks if an example group defines `subject` multiple times.",
-    "description": "Checks if an example group defines `subject` multiple times.",
+    "title": "Multiple Subjects",
+    "description": "Multiple Subjects",
     "timeToFix": 5
   },
   {
     "patternId": "RSpec_NamedSubject",
-    "title": "Checks for explicitly referenced test subjects.",
-    "description": "Checks for explicitly referenced test subjects.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "EnforcedStyle",
-        "description": "EnforcedStyle"
-      },
-      {
-        "name": "SupportedStyles",
-        "description": "SupportedStyles"
-      },
-      {
-        "name": "IgnoreSharedExamples",
-        "description": "IgnoreSharedExamples"
-      }
-    ]
+    "title": "Named Subject",
+    "description": "Named Subject",
+    "timeToFix": 5
   },
   {
     "patternId": "RSpec_NestedGroups",
-    "title": "Checks for nested example groups.",
-    "description": "Checks for nested example groups.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Max",
-        "description": "Max"
-      },
-      {
-        "name": "AllowedGroups",
-        "description": "AllowedGroups"
-      }
-    ]
+    "title": "Nested Groups",
+    "description": "Nested Groups",
+    "timeToFix": 5
   },
   {
     "patternId": "RSpec_NoExpectationExample",
-    "title": "Checks if an example contains any expectation.",
-    "description": "Checks if an example contains any expectation.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Safe",
-        "description": "Safe"
-      },
-      {
-        "name": "AllowedPatterns",
-        "description": "AllowedPatterns"
-      }
-    ]
+    "title": "No Expectation Example",
+    "description": "No Expectation Example",
+    "timeToFix": 5
   },
   {
     "patternId": "RSpec_NotToNot",
-    "title": "Checks for consistent method usage for negating expectations.",
-    "description": "Checks for consistent method usage for negating expectations.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "EnforcedStyle",
-        "description": "EnforcedStyle"
-      },
-      {
-        "name": "SupportedStyles",
-        "description": "SupportedStyles"
-      }
-    ]
+    "title": "Not To Not",
+    "description": "Not To Not",
+    "timeToFix": 5
   },
   {
     "patternId": "RSpec_OverwritingSetup",
-    "title": "Checks if there is a let/subject that overwrites an existing one.",
-    "description": "Checks if there is a let/subject that overwrites an existing one.",
+    "title": "Overwriting Setup",
+    "description": "Overwriting Setup",
     "timeToFix": 5
   },
   {
     "patternId": "RSpec_Pending",
-    "title": "Checks for any pending or skipped examples.",
-    "description": "Checks for any pending or skipped examples.",
+    "title": "Pending",
+    "description": "Pending",
     "timeToFix": 5
   },
   {
     "patternId": "RSpec_PendingWithoutReason",
-    "title": "Checks for pending or skipped examples without reason.",
-    "description": "Checks for pending or skipped examples without reason.",
+    "title": "Pending Without Reason",
+    "description": "Pending Without Reason",
     "timeToFix": 5
   },
   {
     "patternId": "RSpec_PredicateMatcher",
-    "title": "Prefer using predicate matcher over using predicate method directly.",
-    "description": "Prefer using predicate matcher over using predicate method directly.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Strict",
-        "description": "Strict"
-      },
-      {
-        "name": "EnforcedStyle",
-        "description": "EnforcedStyle"
-      },
-      {
-        "name": "AllowedExplicitMatchers",
-        "description": "AllowedExplicitMatchers"
-      },
-      {
-        "name": "SupportedStyles",
-        "description": "SupportedStyles"
-      },
-      {
-        "name": "SafeAutoCorrect",
-        "description": "SafeAutoCorrect"
-      }
-    ]
+    "title": "Predicate Matcher",
+    "description": "Predicate Matcher",
+    "timeToFix": 5
   },
   {
     "patternId": "RSpec_ReceiveCounts",
-    "title": "Check for `once` and `twice` receive counts matchers usage.",
-    "description": "Check for `once` and `twice` receive counts matchers usage.",
+    "title": "Receive Counts",
+    "description": "Receive Counts",
     "timeToFix": 5
   },
   {
     "patternId": "RSpec_ReceiveMessages",
-    "title": "Checks for multiple messages stubbed on the same object.",
-    "description": "Checks for multiple messages stubbed on the same object.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "SafeAutoCorrect",
-        "description": "SafeAutoCorrect"
-      }
-    ]
+    "title": "Receive Messages",
+    "description": "Receive Messages",
+    "timeToFix": 5
   },
   {
     "patternId": "RSpec_ReceiveNever",
-    "title": "Prefer `not_to receive(...)` over `receive(...).never`.",
-    "description": "Prefer `not_to receive(...)` over `receive(...).never`.",
+    "title": "Receive Never",
+    "description": "Receive Never",
     "timeToFix": 5
   },
   {
     "patternId": "RSpec_RedundantAround",
-    "title": "Remove redundant `around` hook.",
-    "description": "Remove redundant `around` hook.",
+    "title": "Redundant Around",
+    "description": "Redundant Around",
     "timeToFix": 5
   },
   {
     "patternId": "RSpec_RedundantPredicateMatcher",
-    "title": "Checks for redundant predicate matcher.",
-    "description": "Checks for redundant predicate matcher.",
+    "title": "Redundant Predicate Matcher",
+    "description": "Redundant Predicate Matcher",
     "timeToFix": 5
   },
   {
     "patternId": "RSpec_RemoveConst",
-    "title": "Checks that `remove_const` is not used in specs.",
-    "description": "Checks that `remove_const` is not used in specs.",
+    "title": "Remove Const",
+    "description": "Remove Const",
     "timeToFix": 5
   },
   {
     "patternId": "RSpec_RepeatedDescription",
-    "title": "Check for repeated description strings in example groups.",
-    "description": "Check for repeated description strings in example groups.",
+    "title": "Repeated Description",
+    "description": "Repeated Description",
     "timeToFix": 5
   },
   {
     "patternId": "RSpec_RepeatedExample",
-    "title": "Check for repeated examples within example groups.",
-    "description": "Check for repeated examples within example groups.",
+    "title": "Repeated Example",
+    "description": "Repeated Example",
     "timeToFix": 5
   },
   {
     "patternId": "RSpec_RepeatedExampleGroupBody",
-    "title": "Check for repeated describe and context block body.",
-    "description": "Check for repeated describe and context block body.",
+    "title": "Repeated Example Group Body",
+    "description": "Repeated Example Group Body",
     "timeToFix": 5
   },
   {
     "patternId": "RSpec_RepeatedExampleGroupDescription",
-    "title": "Check for repeated example group descriptions.",
-    "description": "Check for repeated example group descriptions.",
+    "title": "Repeated Example Group Description",
+    "description": "Repeated Example Group Description",
     "timeToFix": 5
   },
   {
     "patternId": "RSpec_RepeatedIncludeExample",
-    "title": "Check for repeated include of shared examples.",
-    "description": "Check for repeated include of shared examples.",
+    "title": "Repeated Include Example",
+    "description": "Repeated Include Example",
     "timeToFix": 5
   },
   {
     "patternId": "RSpec_RepeatedSubjectCall",
-    "title": "Checks for repeated calls to subject missing that it is memoized.",
-    "description": "Checks for repeated calls to subject missing that it is memoized.",
+    "title": "Repeated Subject Call",
+    "description": "Repeated Subject Call",
     "timeToFix": 5
   },
   {
     "patternId": "RSpec_ReturnFromStub",
-    "title": "Checks for consistent style of stub's return setting.",
-    "description": "Checks for consistent style of stub's return setting.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "EnforcedStyle",
-        "description": "EnforcedStyle"
-      },
-      {
-        "name": "SupportedStyles",
-        "description": "SupportedStyles"
-      }
-    ]
+    "title": "Return From Stub",
+    "description": "Return From Stub",
+    "timeToFix": 5
   },
   {
     "patternId": "RSpec_ScatteredLet",
-    "title": "Checks for let scattered across the example group.",
-    "description": "Checks for let scattered across the example group.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "AutoCorrect",
-        "description": "AutoCorrect"
-      }
-    ]
+    "title": "Scattered Let",
+    "description": "Scattered Let",
+    "timeToFix": 5
   },
   {
     "patternId": "RSpec_ScatteredSetup",
-    "title": "Checks for setup scattered across multiple hooks in an example group.",
-    "description": "Checks for setup scattered across multiple hooks in an example group.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "AutoCorrect",
-        "description": "AutoCorrect"
-      }
-    ]
+    "title": "Scattered Setup",
+    "description": "Scattered Setup",
+    "timeToFix": 5
   },
   {
     "patternId": "RSpec_SharedContext",
-    "title": "Checks for proper shared_context and shared_examples usage.",
-    "description": "Checks for proper shared_context and shared_examples usage.",
+    "title": "Shared Context",
+    "description": "Shared Context",
     "timeToFix": 5
   },
   {
     "patternId": "RSpec_SharedExamples",
-    "title": "Checks for consistent style for shared example names.",
-    "description": "Checks for consistent style for shared example names.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "EnforcedStyle",
-        "description": "EnforcedStyle"
-      },
-      {
-        "name": "SupportedStyles",
-        "description": "SupportedStyles"
-      }
-    ]
+    "title": "Shared Examples",
+    "description": "Shared Examples",
+    "timeToFix": 5
   },
   {
     "patternId": "RSpec_SingleArgumentMessageChain",
-    "title": "Checks that chains of messages contain more than one element.",
-    "description": "Checks that chains of messages contain more than one element.",
+    "title": "Single Argument Message Chain",
+    "description": "Single Argument Message Chain",
     "timeToFix": 5
   },
   {
     "patternId": "RSpec_SkipBlockInsideExample",
-    "title": "Checks for passing a block to `skip` within examples.",
-    "description": "Checks for passing a block to `skip` within examples.",
+    "title": "Skip Block Inside Example",
+    "description": "Skip Block Inside Example",
     "timeToFix": 5
   },
   {
     "patternId": "RSpec_SortMetadata",
-    "title": "Sort RSpec metadata alphabetically.",
-    "description": "Sort RSpec metadata alphabetically.",
+    "title": "Sort Metadata",
+    "description": "Sort Metadata",
     "timeToFix": 5
   },
   {
     "patternId": "RSpec_SpecFilePathFormat",
-    "title": "Checks that spec file paths are consistent and well-formed.",
-    "description": "Checks that spec file paths are consistent and well-formed.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Include",
-        "description": "Include"
-      },
-      {
-        "name": "Exclude",
-        "description": "Exclude"
-      },
-      {
-        "name": "CustomTransform",
-        "description": "CustomTransform"
-      },
-      {
-        "name": "IgnoreMethods",
-        "description": "IgnoreMethods"
-      },
-      {
-        "name": "IgnoreMetadata",
-        "description": "IgnoreMetadata"
-      }
-    ]
+    "title": "Spec File Path Format",
+    "description": "Spec File Path Format",
+    "timeToFix": 5
   },
   {
     "patternId": "RSpec_SpecFilePathSuffix",
-    "title": "Checks that spec file paths suffix are consistent and well-formed.",
-    "description": "Checks that spec file paths suffix are consistent and well-formed.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Include",
-        "description": "Include"
-      }
-    ]
+    "title": "Spec File Path Suffix",
+    "description": "Spec File Path Suffix",
+    "timeToFix": 5
   },
   {
     "patternId": "RSpec_StubbedMock",
-    "title": "Checks that message expectations do not have a configured response.",
-    "description": "Checks that message expectations do not have a configured response.",
+    "title": "Stubbed Mock",
+    "description": "Stubbed Mock",
     "timeToFix": 5
   },
   {
     "patternId": "RSpec_SubjectDeclaration",
-    "title": "Ensure that subject is defined using subject helper.",
-    "description": "Ensure that subject is defined using subject helper.",
+    "title": "Subject Declaration",
+    "description": "Subject Declaration",
     "timeToFix": 5
   },
   {
     "patternId": "RSpec_SubjectStub",
-    "title": "Checks for stubbed test subjects.",
-    "description": "Checks for stubbed test subjects.",
+    "title": "Subject Stub",
+    "description": "Subject Stub",
     "timeToFix": 5
   },
   {
     "patternId": "RSpec_UndescriptiveLiteralsDescription",
-    "title": "Description should be descriptive.",
-    "description": "Description should be descriptive.",
+    "title": "Undescriptive Literals Description",
+    "description": "Undescriptive Literals Description",
     "timeToFix": 5
   },
   {
     "patternId": "RSpec_UnspecifiedException",
-    "title": "Checks for a specified error in checking raised errors.",
-    "description": "Checks for a specified error in checking raised errors.",
+    "title": "Unspecified Exception",
+    "description": "Unspecified Exception",
     "timeToFix": 5
   },
   {
     "patternId": "RSpec_VariableDefinition",
-    "title": "Checks that memoized helpers names are symbols or strings.",
-    "description": "Checks that memoized helpers names are symbols or strings.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "EnforcedStyle",
-        "description": "EnforcedStyle"
-      },
-      {
-        "name": "SupportedStyles",
-        "description": "SupportedStyles"
-      }
-    ]
+    "title": "Variable Definition",
+    "description": "Variable Definition",
+    "timeToFix": 5
   },
   {
     "patternId": "RSpec_VariableName",
-    "title": "Checks that memoized helper names use the configured style.",
-    "description": "Checks that memoized helper names use the configured style.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "EnforcedStyle",
-        "description": "EnforcedStyle"
-      },
-      {
-        "name": "SupportedStyles",
-        "description": "SupportedStyles"
-      },
-      {
-        "name": "AllowedPatterns",
-        "description": "AllowedPatterns"
-      }
-    ]
+    "title": "Variable Name",
+    "description": "Variable Name",
+    "timeToFix": 5
   },
   {
     "patternId": "RSpec_VerifiedDoubleReference",
-    "title": "Checks for consistent verified double reference style.",
-    "description": "Checks for consistent verified double reference style.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "SafeAutoCorrect",
-        "description": "SafeAutoCorrect"
-      }
-    ]
+    "title": "Verified Double Reference",
+    "description": "Verified Double Reference",
+    "timeToFix": 5
   },
   {
     "patternId": "RSpec_VerifiedDoubles",
-    "title": "Prefer using verifying doubles over normal doubles.",
-    "description": "Prefer using verifying doubles over normal doubles.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "IgnoreNameless",
-        "description": "IgnoreNameless"
-      },
-      {
-        "name": "IgnoreSymbolicNames",
-        "description": "IgnoreSymbolicNames"
-      }
-    ]
+    "title": "Verified Doubles",
+    "description": "Verified Doubles",
+    "timeToFix": 5
   },
   {
     "patternId": "RSpec_VoidExpect",
-    "title": "Checks void `expect()`.",
-    "description": "Checks void `expect()`.",
+    "title": "Void Expect",
+    "description": "Void Expect",
     "timeToFix": 5
   },
   {
     "patternId": "RSpec_Yield",
-    "title": "Checks for calling a block within a stub.",
-    "description": "Checks for calling a block within a stub.",
+    "title": "Yield",
+    "description": "Yield",
     "timeToFix": 5
   },
   {
     "patternId": "I18n_GetText_DecorateString",
     "title": "Get Text",
     "description": "Get Text",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "AutoCorrect",
-        "description": "AutoCorrect"
-      }
-    ]
+    "timeToFix": 5
   },
   {
     "patternId": "I18n_GetText_DecorateFunctionMessage",
@@ -11565,193 +9963,75 @@
   },
   {
     "patternId": "Faker_DeprecatedArguments",
-    "title": "Checks that Faker arguments style is based on Faker 2.",
-    "description": "Checks that Faker arguments style is based on Faker 2.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "ArgumentKeywords",
-        "description": "ArgumentKeywords"
-      }
-    ]
+    "title": "Deprecated Arguments",
+    "description": "Deprecated Arguments",
+    "timeToFix": 5
   },
   {
     "patternId": "FactoryBot_AssociationStyle",
-    "title": "Use a consistent style to define associations.",
-    "description": "Use a consistent style to define associations.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Safe",
-        "description": "Safe"
-      },
-      {
-        "name": "EnforcedStyle",
-        "description": "EnforcedStyle"
-      },
-      {
-        "name": "SupportedStyles",
-        "description": "SupportedStyles"
-      },
-      {
-        "name": "NonImplicitAssociationMethodNames",
-        "description": "NonImplicitAssociationMethodNames"
-      }
-    ]
+    "title": "Association Style",
+    "description": "Association Style",
+    "timeToFix": 5
   },
   {
     "patternId": "FactoryBot_AttributeDefinedStatically",
-    "title": "Always declare attribute values as blocks.",
-    "description": "Always declare attribute values as blocks.",
+    "title": "Attribute Defined Statically",
+    "description": "Attribute Defined Statically",
     "timeToFix": 5
   },
   {
     "patternId": "FactoryBot_ConsistentParenthesesStyle",
-    "title": "Use a consistent style for parentheses in factory_bot calls.",
-    "description": "Use a consistent style for parentheses in factory_bot calls.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Include",
-        "description": "Include"
-      },
-      {
-        "name": "EnforcedStyle",
-        "description": "EnforcedStyle"
-      },
-      {
-        "name": "SupportedStyles",
-        "description": "SupportedStyles"
-      },
-      {
-        "name": "ExplicitOnly",
-        "description": "ExplicitOnly"
-      }
-    ]
+    "title": "Consistent Parentheses Style",
+    "description": "Consistent Parentheses Style",
+    "timeToFix": 5
   },
   {
     "patternId": "FactoryBot_CreateList",
-    "title": "Checks for create_list usage.",
-    "description": "Checks for create_list usage.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "AutoCorrect",
-        "description": "AutoCorrect"
-      },
-      {
-        "name": "Include",
-        "description": "Include"
-      },
-      {
-        "name": "EnforcedStyle",
-        "description": "EnforcedStyle"
-      },
-      {
-        "name": "SupportedStyles",
-        "description": "SupportedStyles"
-      },
-      {
-        "name": "ExplicitOnly",
-        "description": "ExplicitOnly"
-      },
-      {
-        "name": "SafeAutoCorrect",
-        "description": "SafeAutoCorrect"
-      }
-    ]
+    "title": "Create List",
+    "description": "Create List",
+    "timeToFix": 5
   },
   {
     "patternId": "FactoryBot_ExcessiveCreateList",
-    "title": "Check for excessive model creation in a list.",
-    "description": "Check for excessive model creation in a list.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Include",
-        "description": "Include"
-      },
-      {
-        "name": "MaxAmount",
-        "description": "MaxAmount"
-      }
-    ]
+    "title": "Excessive Create List",
+    "description": "Excessive Create List",
+    "timeToFix": 5
   },
   {
     "patternId": "FactoryBot_FactoryAssociationWithStrategy",
-    "title": "Use definition in factory association instead of hard coding a strategy.",
-    "description": "Use definition in factory association instead of hard coding a strategy.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Include",
-        "description": "Include"
-      }
-    ]
+    "title": "Factory Association With Strategy",
+    "description": "Factory Association With Strategy",
+    "timeToFix": 5
   },
   {
     "patternId": "FactoryBot_FactoryClassName",
-    "title": "Use string value when setting the class attribute explicitly.",
-    "description": "Use string value when setting the class attribute explicitly.",
+    "title": "Factory Class Name",
+    "description": "Factory Class Name",
     "timeToFix": 5
   },
   {
     "patternId": "FactoryBot_FactoryNameStyle",
-    "title": "Checks for name style for argument of FactoryBot::Syntax::Methods.",
-    "description": "Checks for name style for argument of FactoryBot::Syntax::Methods.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Include",
-        "description": "Include"
-      },
-      {
-        "name": "EnforcedStyle",
-        "description": "EnforcedStyle"
-      },
-      {
-        "name": "SupportedStyles",
-        "description": "SupportedStyles"
-      },
-      {
-        "name": "ExplicitOnly",
-        "description": "ExplicitOnly"
-      }
-    ]
+    "title": "Factory Name Style",
+    "description": "Factory Name Style",
+    "timeToFix": 5
   },
   {
     "patternId": "FactoryBot_IdSequence",
-    "title": "Do not create a FactoryBot sequence for an id column.",
-    "description": "Do not create a FactoryBot sequence for an id column.",
+    "title": "Id Sequence",
+    "description": "Id Sequence",
     "timeToFix": 5
   },
   {
     "patternId": "FactoryBot_RedundantFactoryOption",
-    "title": "Checks for redundant `factory` option.",
-    "description": "Checks for redundant `factory` option.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Include",
-        "description": "Include"
-      }
-    ]
+    "title": "Redundant Factory Option",
+    "description": "Redundant Factory Option",
+    "timeToFix": 5
   },
   {
     "patternId": "FactoryBot_SyntaxMethods",
-    "title": "Use shorthands from `FactoryBot::Syntax::Methods` in your specs.",
-    "description": "Use shorthands from `FactoryBot::Syntax::Methods` in your specs.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Include",
-        "description": "Include"
-      },
-      {
-        "name": "SafeAutoCorrect",
-        "description": "SafeAutoCorrect"
-      }
-    ]
+    "title": "Syntax Methods",
+    "description": "Syntax Methods",
+    "timeToFix": 5
   },
   {
     "patternId": "Mdsol_LogWithData",
@@ -11767,214 +10047,134 @@
   },
   {
     "patternId": "RSpecRails_AvoidSetupHook",
-    "title": "Checks that tests use RSpec `before` hook over Rails `setup` method.",
-    "description": "Checks that tests use RSpec `before` hook over Rails `setup` method.",
+    "title": "Avoid Setup Hook",
+    "description": "Avoid Setup Hook",
     "timeToFix": 5
   },
   {
     "patternId": "RSpecRails_HaveHttpStatus",
-    "title": "Checks that tests use `have_http_status` instead of equality matchers.",
-    "description": "Checks that tests use `have_http_status` instead of equality matchers.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "ResponseMethods",
-        "description": "ResponseMethods"
-      },
-      {
-        "name": "SafeAutoCorrect",
-        "description": "SafeAutoCorrect"
-      }
-    ]
+    "title": "Have Http Status",
+    "description": "Have Http Status",
+    "timeToFix": 5
   },
   {
     "patternId": "RSpecRails_HttpStatus",
-    "title": "Enforces use of symbolic or numeric value to describe HTTP status.",
-    "description": "Enforces use of symbolic or numeric value to describe HTTP status.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "EnforcedStyle",
-        "description": "EnforcedStyle"
-      },
-      {
-        "name": "SupportedStyles",
-        "description": "SupportedStyles"
-      }
-    ]
+    "title": "Http Status",
+    "description": "Http Status",
+    "timeToFix": 5
   },
   {
     "patternId": "RSpecRails_InferredSpecType",
-    "title": "Identifies redundant spec type.",
-    "description": "Identifies redundant spec type.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Safe",
-        "description": "Safe"
-      },
-      {
-        "name": "Inferences",
-        "description": "Inferences"
-      }
-    ]
+    "title": "Inferred Spec Type",
+    "description": "Inferred Spec Type",
+    "timeToFix": 5
   },
   {
     "patternId": "RSpecRails_MinitestAssertions",
-    "title": "Check if using Minitest-like matchers.",
-    "description": "Check if using Minitest-like matchers.",
+    "title": "Minitest Assertions",
+    "description": "Minitest Assertions",
     "timeToFix": 5
   },
   {
     "patternId": "RSpecRails_NegationBeValid",
-    "title": "Enforces use of `be_invalid` or `not_to` for negated be_valid.",
-    "description": "Enforces use of `be_invalid` or `not_to` for negated be_valid.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "AutoCorrect",
-        "description": "AutoCorrect"
-      },
-      {
-        "name": "Safe",
-        "description": "Safe"
-      },
-      {
-        "name": "EnforcedStyle",
-        "description": "EnforcedStyle"
-      },
-      {
-        "name": "SupportedStyles",
-        "description": "SupportedStyles"
-      }
-    ]
+    "title": "Negation Be Valid",
+    "description": "Negation Be Valid",
+    "timeToFix": 5
   },
   {
     "patternId": "RSpecRails_TravelAround",
-    "title": "Prefer to travel in `before` rather than `around`.",
-    "description": "Prefer to travel in `before` rather than `around`.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Safe",
-        "description": "Safe"
-      }
-    ]
+    "title": "Travel Around",
+    "description": "Travel Around",
+    "timeToFix": 5
   },
   {
     "patternId": "Capybara_RSpec_HaveSelector",
-    "title": "Use `have_css` or `have_xpath` instead of `have_selector`.",
-    "description": "Use `have_css` or `have_xpath` instead of `have_selector`.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "DefaultSelector",
-        "description": "DefaultSelector"
-      }
-    ]
+    "title": "R Spec",
+    "description": "R Spec",
+    "timeToFix": 5
   },
   {
     "patternId": "Capybara_RSpec_PredicateMatcher",
-    "title": "Prefer using predicate matcher over using predicate method directly.",
-    "description": "Prefer using predicate matcher over using predicate method directly.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Strict",
-        "description": "Strict"
-      },
-      {
-        "name": "EnforcedStyle",
-        "description": "EnforcedStyle"
-      },
-      {
-        "name": "AllowedExplicitMatchers",
-        "description": "AllowedExplicitMatchers"
-      },
-      {
-        "name": "SupportedStyles",
-        "description": "SupportedStyles"
-      }
-    ]
+    "title": "R Spec",
+    "description": "R Spec",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Capybara_AmbiguousClick",
+    "title": "Ambiguous Click",
+    "description": "Ambiguous Click",
+    "timeToFix": 5
   },
   {
     "patternId": "Capybara_ClickLinkOrButtonStyle",
-    "title": "Checks for methods of button or link clicks.",
-    "description": "Checks for methods of button or link clicks.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "EnforcedStyle",
-        "description": "EnforcedStyle"
-      },
-      {
-        "name": "SupportedStyles",
-        "description": "SupportedStyles"
-      }
-    ]
+    "title": "Click Link Or Button Style",
+    "description": "Click Link Or Button Style",
+    "timeToFix": 5
   },
   {
     "patternId": "Capybara_CurrentPathExpectation",
-    "title": "Checks that no expectations are set on Capybara's `current_path`.",
-    "description": "Checks that no expectations are set on Capybara's `current_path`.",
+    "title": "Current Path Expectation",
+    "description": "Current Path Expectation",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Capybara_FindAllFirst",
+    "title": "Find All First",
+    "description": "Find All First",
     "timeToFix": 5
   },
   {
     "patternId": "Capybara_MatchStyle",
-    "title": "Checks for usage of deprecated style methods.",
-    "description": "Checks for usage of deprecated style methods.",
+    "title": "Match Style",
+    "description": "Match Style",
     "timeToFix": 5
   },
   {
     "patternId": "Capybara_NegationMatcher",
-    "title": "Enforces use of `have_no_*` or `not_to` for negated expectations.",
-    "description": "Enforces use of `have_no_*` or `not_to` for negated expectations.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "EnforcedStyle",
-        "description": "EnforcedStyle"
-      },
-      {
-        "name": "SupportedStyles",
-        "description": "SupportedStyles"
-      }
-    ]
+    "title": "Negation Matcher",
+    "description": "Negation Matcher",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Capybara_NegationMatcherAfterVisit",
+    "title": "Negation Matcher After Visit",
+    "description": "Negation Matcher After Visit",
+    "timeToFix": 5
   },
   {
     "patternId": "Capybara_RedundantWithinFind",
-    "title": "Checks for redundant `within find(...)` calls.",
-    "description": "Checks for redundant `within find(...)` calls.",
+    "title": "Redundant Within Find",
+    "description": "Redundant Within Find",
     "timeToFix": 5
   },
   {
     "patternId": "Capybara_SpecificActions",
-    "title": "Checks for there is a more specific actions offered by Capybara.",
-    "description": "Checks for there is a more specific actions offered by Capybara.",
+    "title": "Specific Actions",
+    "description": "Specific Actions",
     "timeToFix": 5
   },
   {
     "patternId": "Capybara_SpecificFinders",
-    "title": "Checks if there is a more specific finder offered by Capybara.",
-    "description": "Checks if there is a more specific finder offered by Capybara.",
+    "title": "Specific Finders",
+    "description": "Specific Finders",
     "timeToFix": 5
   },
   {
     "patternId": "Capybara_SpecificMatcher",
-    "title": "Checks for there is a more specific matcher offered by Capybara.",
-    "description": "Checks for there is a more specific matcher offered by Capybara.",
+    "title": "Specific Matcher",
+    "description": "Specific Matcher",
     "timeToFix": 5
   },
   {
     "patternId": "Capybara_VisibilityMatcher",
-    "title": "Checks for boolean visibility in Capybara finders.",
-    "description": "Checks for boolean visibility in Capybara finders.",
+    "title": "Visibility Matcher",
+    "description": "Visibility Matcher",
     "timeToFix": 5
   },
   {
     "patternId": "Rubycw_Rubycw",
-    "title": "Execute `ruby -cw` and wrap the warning as RuboCop offense.",
-    "description": "Execute `ruby -cw` and wrap the warning as RuboCop offense.",
+    "title": "Rubycw",
+    "description": "Rubycw",
     "timeToFix": 5
   }
 ]
