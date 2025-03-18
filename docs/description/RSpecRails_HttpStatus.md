@@ -5,6 +5,7 @@ This cop inspects only `have_http_status` calls.
 So, this cop does not check if a method starting with `be_*` is used
 when setting for `EnforcedStyle: symbolic` or
 `EnforcedStyle: numeric`.
+This cop is also capable of detecting unknown HTTP status codes.
 
 # Examples
 
@@ -41,7 +42,11 @@ it { is_expected.to have_http_status "403" }
 it { is_expected.to be_ok }
 it { is_expected.to be_not_found }
 it { is_expected.to have_http_status :success }
-it { is_expected.to have_http_status :error }
+it { is_expected.to have_http_status :error }# bad
+it { is_expected.to have_http_status :oki_doki }
+
+# good
+it { is_expected.to have_http_status :ok }
 ```
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/RSpecRails/HttpStatus)

@@ -1,5 +1,5 @@
 
-Check that the arguments on a multi-line method definition are aligned.
+Check that the arguments on a multi-line method call are aligned.
 
 # Examples
 

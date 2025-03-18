@@ -10,7 +10,7 @@ Simple arithmetic operations are allowed by this cop: `+`, `*`, `**`, `<<` and `
 Although these can be rewritten in a different way, it should not be necessary to
 do so. Operations such as `-` or `/` where the result will always be the same
 (`x - x` will always be 0; `x / x` will always be 1) are offenses, but these
-are covered by Lint/NumericOperationWithConstantResult instead.
+are covered by `Lint/NumericOperationWithConstantResult` instead.
 
 # Examples
 

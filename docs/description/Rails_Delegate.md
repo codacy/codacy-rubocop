@@ -11,6 +11,9 @@ using the target object as a prefix of the method name
 without using the `delegate` method will be a violation.
 When set to `false`, this case is legal.
 
+It is disabled for controllers in order to keep controller actions
+explicitly defined.
+
 # Examples
 
 ```ruby

@@ -14,12 +14,8 @@ args.concat(foo)
 args += foo
 hash.merge!(other)
 
-# bad
-self.foo = foo.concat(ary)
-
 # good
 foo.concat(ary)
-self.foo += ary
 ```
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Style/RedundantSelfAssignment)

@@ -11,6 +11,7 @@ foo = ()
 if ()
   bar
 end
+
 # good
 
 foo = (some_expression)

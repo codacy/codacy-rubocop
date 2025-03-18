@@ -1,6 +1,6 @@
 
 Enforces the use of consistent method names
-from the String class.
+from the `String` class.
 
 # Examples
 

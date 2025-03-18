@@ -34,6 +34,13 @@ end
 if condition
   do_something
 elsif other_condition
+  nil
+end
+
+# good
+if condition
+  do_something
+elsif other_condition
   do_something_else
 end# good
 if condition

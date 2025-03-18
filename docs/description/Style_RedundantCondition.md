@@ -39,6 +39,23 @@ if b
 elsif cond
   c
 end
+
+# bad
+a.nil? ? true : a
+
+# good
+a.nil? || a
+
+# bad
+if a.nil?
+  true
+else
+  a
+end
+
+# good
+a.nil? || a# good
+num.nonzero? ? true : false
 ```
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Style/RedundantCondition)

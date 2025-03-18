@@ -1,5 +1,5 @@
 
-Checks for duplicate literal, constant, or variable elements in Set and SortedSet.
+Checks for duplicate literal, constant, or variable elements in `Set` and `SortedSet`.
 
 # Examples
 

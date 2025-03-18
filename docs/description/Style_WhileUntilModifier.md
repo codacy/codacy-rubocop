@@ -20,7 +20,9 @@ until x > 10
 end
 
 # good
-x += 1 until x > 10# bad
+x += 1 until x > 10
+
+# bad
 x += 100 while x < 500 # a long comment that makes code too long if it were a single line
 
 # good

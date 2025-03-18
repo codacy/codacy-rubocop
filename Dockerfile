@@ -41,6 +41,7 @@ COPY --from=doc-generator /usr/local/bundle /usr/local/bundle
 COPY --from=doc-generator /doc_generator/docs /docs
 
 RUN adduser --uid 2004 --disabled-password --gecos "" docker
+RUN chown -R docker:docker /usr/local/bundle
 COPY target/universal/stage/ /workdir/
 RUN chmod +x /workdir/bin/codacy-rubocop
 USER docker
