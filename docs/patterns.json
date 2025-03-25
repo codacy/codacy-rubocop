@@ -534,7 +534,7 @@
         },
         {
           "name": "Categories",
-          "default": "{\"module_inclusion\"=>[\"include\", \"prepend\", \"extend\"]}"
+          "default": "{\"module_inclusion\" => [\"include\", \"prepend\", \"extend\"]}"
         },
         {
           "name": "ExpectedOrder",
@@ -2145,11 +2145,11 @@
       "parameters": [
         {
           "name": "DebuggerMethods",
-          "default": "{\"Kernel\"=>[\"binding.irb\", \"Kernel.binding.irb\"], \"Byebug\"=>[\"byebug\", \"remote_byebug\", \"Kernel.byebug\", \"Kernel.remote_byebug\"], \"Capybara\"=>[\"page.save_and_open_page\", \"page.save_and_open_screenshot\", \"page.save_page\", \"page.save_screenshot\", \"save_and_open_page\", \"save_and_open_screenshot\", \"save_page\", \"save_screenshot\"], \"debug.rb\"=>[\"binding.b\", \"binding.break\", \"Kernel.binding.b\", \"Kernel.binding.break\"], \"Pry\"=>[\"binding.pry\", \"binding.remote_pry\", \"binding.pry_remote\", \"Kernel.binding.pry\", \"Kernel.binding.remote_pry\", \"Kernel.binding.pry_remote\", \"Pry.rescue\", \"pry\"], \"Rails\"=>[\"debugger\", \"Kernel.debugger\"], \"RubyJard\"=>[\"jard\"], \"WebConsole\"=>[\"binding.console\"]}"
+          "default": "{\"Kernel\" => [\"binding.irb\", \"Kernel.binding.irb\"], \"Byebug\" => [\"byebug\", \"remote_byebug\", \"Kernel.byebug\", \"Kernel.remote_byebug\"], \"Capybara\" => [\"page.save_and_open_page\", \"page.save_and_open_screenshot\", \"page.save_page\", \"page.save_screenshot\", \"save_and_open_page\", \"save_and_open_screenshot\", \"save_page\", \"save_screenshot\"], \"debug.rb\" => [\"binding.b\", \"binding.break\", \"Kernel.binding.b\", \"Kernel.binding.break\"], \"Pry\" => [\"binding.pry\", \"binding.remote_pry\", \"binding.pry_remote\", \"Kernel.binding.pry\", \"Kernel.binding.remote_pry\", \"Kernel.binding.pry_remote\", \"Pry.rescue\", \"pry\"], \"Rails\" => [\"debugger\", \"Kernel.debugger\"], \"RubyJard\" => [\"jard\"], \"WebConsole\" => [\"binding.console\"]}"
         },
         {
           "name": "DebuggerRequires",
-          "default": "{\"debug.rb\"=>[\"debug/open\", \"debug/start\"]}"
+          "default": "{\"debug.rb\" => [\"debug/open\", \"debug/start\"]}"
         }
       ],
       "enabled": true
@@ -2167,7 +2167,7 @@
       "parameters": [
         {
           "name": "DeprecatedConstants",
-          "default": "{\"NIL\"=>{\"Alternative\"=>\"nil\", \"DeprecatedVersion\"=>\"2.4\"}, \"TRUE\"=>{\"Alternative\"=>\"true\", \"DeprecatedVersion\"=>\"2.4\"}, \"FALSE\"=>{\"Alternative\"=>\"false\", \"DeprecatedVersion\"=>\"2.4\"}, \"Net::HTTPServerException\"=>{\"Alternative\"=>\"Net::HTTPClientException\", \"DeprecatedVersion\"=>\"2.6\"}, \"Random::DEFAULT\"=>{\"Alternative\"=>\"Random.new\", \"DeprecatedVersion\"=>\"3.0\"}, \"Struct::Group\"=>{\"Alternative\"=>\"Etc::Group\", \"DeprecatedVersion\"=>\"3.0\"}, \"Struct::Passwd\"=>{\"Alternative\"=>\"Etc::Passwd\", \"DeprecatedVersion\"=>\"3.0\"}}"
+          "default": "{\"NIL\" => {\"Alternative\" => \"nil\", \"DeprecatedVersion\" => \"2.4\"}, \"TRUE\" => {\"Alternative\" => \"true\", \"DeprecatedVersion\" => \"2.4\"}, \"FALSE\" => {\"Alternative\" => \"false\", \"DeprecatedVersion\" => \"2.4\"}, \"Net::HTTPServerException\" => {\"Alternative\" => \"Net::HTTPClientException\", \"DeprecatedVersion\" => \"2.6\"}, \"Random::DEFAULT\" => {\"Alternative\" => \"Random.new\", \"DeprecatedVersion\" => \"3.0\"}, \"Struct::Group\" => {\"Alternative\" => \"Etc::Group\", \"DeprecatedVersion\" => \"3.0\"}, \"Struct::Passwd\" => {\"Alternative\" => \"Etc::Passwd\", \"DeprecatedVersion\" => \"3.0\"}}"
         }
       ],
       "enabled": false
@@ -3172,7 +3172,7 @@
         },
         {
           "name": "Methods",
-          "default": "{\"chunk_while\"=>2, \"each_with_index\"=>2, \"each_with_object\"=>2, \"inject\"=>2, \"max\"=>2, \"min\"=>2, \"minmax\"=>2, \"reduce\"=>2, \"slice_when\"=>2, \"sort\"=>2}"
+          "default": "{\"chunk_while\" => 2, \"each_with_index\" => 2, \"each_with_object\" => 2, \"inject\" => 2, \"max\" => 2, \"min\" => 2, \"minmax\" => 2, \"reduce\" => 2, \"slice_when\" => 2, \"sort\" => 2}"
         }
       ],
       "enabled": false
@@ -3856,7 +3856,7 @@
         },
         {
           "name": "FlaggedTerms",
-          "default": "{\"whitelist\"=>{\"Regex\"=>/white[-_\\s]?list/, \"Suggestions\"=>[\"allowlist\", \"permit\"]}, \"blacklist\"=>{\"Regex\"=>/black[-_\\s]?list/, \"Suggestions\"=>[\"denylist\", \"block\"]}, \"slave\"=>{\"WholeWord\"=>true, \"Suggestions\"=>[\"replica\", \"secondary\", \"follower\"]}}"
+          "default": "{\"whitelist\" => {\"Regex\" => /white[-_\\s]?list/, \"Suggestions\" => [\"allowlist\", \"permit\"]}, \"blacklist\" => {\"Regex\" => /black[-_\\s]?list/, \"Suggestions\" => [\"denylist\", \"block\"]}, \"slave\" => {\"WholeWord\" => true, \"Suggestions\" => [\"replica\", \"secondary\", \"follower\"]}}"
         }
       ],
       "enabled": false
@@ -4577,7 +4577,7 @@
         },
         {
           "name": "PreferredMethods",
-          "default": "{\"collect\"=>\"map\", \"collect!\"=>\"map!\", \"collect_concat\"=>\"flat_map\", \"inject\"=>\"reduce\", \"detect\"=>\"find\", \"find_all\"=>\"select\", \"member?\"=>\"include?\"}"
+          "default": "{\"collect\" => \"map\", \"collect!\" => \"map!\", \"collect_concat\" => \"flat_map\", \"inject\" => \"reduce\", \"detect\" => \"find\", \"find_all\" => \"select\", \"member?\" => \"include?\"}"
         },
         {
           "name": "MethodsAcceptingSymbol",
@@ -5574,11 +5574,11 @@
         },
         {
           "name": "InverseMethods",
-          "default": "{:any?=>:none?, :even?=>:odd?, :===>:!=, :=~=>:!~, :<=>:>=, :>=>:<=}"
+          "default": "{any?: :none?, even?: :odd?, \"==\": :!=, \"=~\": :!~, \"<\": :>=, \">\": :<=}"
         },
         {
           "name": "InverseBlocks",
-          "default": "{:select=>:reject, :select!=>:reject!}"
+          "default": "{select: :reject, select!: :reject!}"
         }
       ],
       "enabled": false
@@ -5600,7 +5600,7 @@
         },
         {
           "name": "InverseMethods",
-          "default": "{:!==>:==, :>=>:<=, :<==>:>, :<=>:>=, :>==>:<, :!~=>:=~, :zero?=>:nonzero?, :nonzero?=>:zero?, :any?=>:none?, :none?=>:any?, :even?=>:odd?, :odd?=>:even?}"
+          "default": "{\"!=\": :==, \">\": :<=, \"<=\": :>, \"<\": :>=, \">=\": :<, \"!~\": :=~, zero?: :nonzero?, nonzero?: :zero?, any?: :none?, none?: :any?, even?: :odd?, odd?: :even?}"
         }
       ],
       "enabled": false
@@ -6686,7 +6686,7 @@
       "parameters": [
         {
           "name": "PreferredDelimiters",
-          "default": "{\"default\"=>\"()\", \"%i\"=>\"[]\", \"%I\"=>\"[]\", \"%r\"=>\"{}\", \"%w\"=>\"[]\", \"%W\"=>\"[]\"}"
+          "default": "{\"default\" => \"()\", \"%i\" => \"[]\", \"%I\" => \"[]\", \"%r\" => \"{}\", \"%w\" => \"[]\", \"%W\" => \"[]\"}"
         }
       ],
       "enabled": false
@@ -6809,7 +6809,7 @@
         },
         {
           "name": "Methods",
-          "default": "{\"join\"=>\"\", \"sum\"=>0, \"exit\"=>true, \"exit!\"=>false, \"split\"=>\" \", \"chomp\"=>\"\\n\", \"chomp!\"=>\"\\n\"}"
+          "default": "{\"join\" => \"\", \"sum\" => 0, \"exit\" => true, \"exit!\" => false, \"split\" => \" \", \"chomp\" => \"\\n\", \"chomp!\" => \"\\n\"}"
         }
       ],
       "enabled": false
@@ -7335,7 +7335,7 @@
       "parameters": [
         {
           "name": "PreferredMethods",
-          "default": "{\"intern\"=>\"to_sym\"}"
+          "default": "{\"intern\" => \"to_sym\"}"
         }
       ],
       "enabled": false
@@ -9518,60 +9518,18 @@
       "patternId": "GraphQL_ExtractInputType",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "MaxArguments",
-          "default": "2"
-        },
-        {
-          "name": "Include",
-          "default": [
-            "**/graphql/mutations/**/*.rb"
-          ]
-        }
-      ],
       "enabled": false
     },
     {
       "patternId": "GraphQL_ExtractType",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "MaxFields",
-          "default": "2"
-        },
-        {
-          "name": "Prefixes",
-          "default": [
-            "is",
-            "has",
-            "with",
-            "avg",
-            "min",
-            "max"
-          ]
-        }
-      ],
       "enabled": false
     },
     {
       "patternId": "GraphQL_FieldDefinitions",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "EnforcedStyle",
-          "default": "group_definitions"
-        },
-        {
-          "name": "SupportedStyles",
-          "default": [
-            "group_definitions",
-            "define_resolver_after_definition"
-          ]
-        }
-      ],
       "enabled": false
     },
     {
@@ -9596,12 +9554,6 @@
       "patternId": "GraphQL_FieldName",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "SafeAutoCorrect",
-          "default": "false"
-        }
-      ],
       "enabled": false
     },
     {
@@ -9614,26 +9566,6 @@
       "patternId": "GraphQL_GraphqlName",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "Include",
-          "default": [
-            "**/graphql/types/**/*",
-            "**/graphql/mutations/**/*"
-          ]
-        },
-        {
-          "name": "EnforcedStyle",
-          "default": "only_override"
-        },
-        {
-          "name": "SupportedStyles",
-          "default": [
-            "required",
-            "only_override"
-          ]
-        }
-      ],
       "enabled": false
     },
     {
@@ -9646,28 +9578,12 @@
       "patternId": "GraphQL_MaxComplexitySchema",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "Include",
-          "default": [
-            "**/graphql/**/*_schema.rb"
-          ]
-        }
-      ],
       "enabled": false
     },
     {
       "patternId": "GraphQL_MaxDepthSchema",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "Include",
-          "default": [
-            "**/graphql/**/*_schema.rb"
-          ]
-        }
-      ],
       "enabled": false
     },
     {
@@ -9680,60 +9596,18 @@
       "patternId": "GraphQL_NotAuthorizedNodeType",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "Include",
-          "default": [
-            "**/graphql/types/**/*"
-          ]
-        },
-        {
-          "name": "SafeBaseClasses",
-          "default": []
-        }
-      ],
       "enabled": false
     },
     {
       "patternId": "GraphQL_ResolverMethodLength",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "Max",
-          "default": "10"
-        },
-        {
-          "name": "CountComments",
-          "default": "false"
-        },
-        {
-          "name": "ExcludedMethods",
-          "default": []
-        },
-        {
-          "name": "CountAsOne",
-          "default": []
-        }
-      ],
       "enabled": false
     },
     {
       "patternId": "GraphQL_ObjectDescription",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "Exclude",
-          "default": [
-            "spec/**/*",
-            "test/**/*",
-            "**/*_schema.rb",
-            "**/base_*.rb",
-            "**/graphql/query_context.rb"
-          ]
-        }
-      ],
       "enabled": false
     },
     {

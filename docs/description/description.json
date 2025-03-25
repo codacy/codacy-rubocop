@@ -8631,213 +8631,117 @@
   },
   {
     "patternId": "GraphQL_ArgumentDescription",
-    "title": "Ensures all arguments have a description",
-    "description": "Ensures all arguments have a description",
+    "title": "Argument Description",
+    "description": "Argument Description",
     "timeToFix": 5
   },
   {
     "patternId": "GraphQL_ArgumentName",
-    "title": "This cop checks whether argument names are snake_case",
-    "description": "This cop checks whether argument names are snake_case",
+    "title": "Argument Name",
+    "description": "Argument Name",
     "timeToFix": 5
   },
   {
     "patternId": "GraphQL_ArgumentUniqueness",
-    "title": "This cop enforces arguments to be defined once per block",
-    "description": "This cop enforces arguments to be defined once per block",
+    "title": "Argument Uniqueness",
+    "description": "Argument Uniqueness",
     "timeToFix": 5
   },
   {
     "patternId": "GraphQL_ExtractInputType",
-    "title": "Suggests using input type instead of many arguments",
-    "description": "Suggests using input type instead of many arguments",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "MaxArguments",
-        "description": "MaxArguments"
-      },
-      {
-        "name": "Include",
-        "description": "Include"
-      }
-    ]
+    "title": "Extract Input Type",
+    "description": "Extract Input Type",
+    "timeToFix": 5
   },
   {
     "patternId": "GraphQL_ExtractType",
-    "title": "Suggests extracting fields with common prefixes to the separate type",
-    "description": "Suggests extracting fields with common prefixes to the separate type",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "MaxFields",
-        "description": "MaxFields"
-      },
-      {
-        "name": "Prefixes",
-        "description": "Prefixes"
-      }
-    ]
+    "title": "Extract Type",
+    "description": "Extract Type",
+    "timeToFix": 5
   },
   {
     "patternId": "GraphQL_FieldDefinitions",
-    "title": "Checks consistency of field definitions",
-    "description": "Checks consistency of field definitions",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "EnforcedStyle",
-        "description": "EnforcedStyle"
-      },
-      {
-        "name": "SupportedStyles",
-        "description": "SupportedStyles"
-      }
-    ]
+    "title": "Field Definitions",
+    "description": "Field Definitions",
+    "timeToFix": 5
   },
   {
     "patternId": "GraphQL_FieldDescription",
-    "title": "Ensures all fields have a description",
-    "description": "Ensures all fields have a description",
+    "title": "Field Description",
+    "description": "Field Description",
     "timeToFix": 5
   },
   {
     "patternId": "GraphQL_FieldHashKey",
-    "title": "Checks :hash_key option is used for appropriate fields",
-    "description": "Checks :hash_key option is used for appropriate fields",
+    "title": "Field Hash Key",
+    "description": "Field Hash Key",
     "timeToFix": 5
   },
   {
     "patternId": "GraphQL_FieldMethod",
-    "title": "Checks :method option is used for appropriate fields",
-    "description": "Checks :method option is used for appropriate fields",
+    "title": "Field Method",
+    "description": "Field Method",
     "timeToFix": 5
   },
   {
     "patternId": "GraphQL_FieldName",
-    "title": "This cop checks whether field names are snake_case",
-    "description": "This cop checks whether field names are snake_case",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "SafeAutoCorrect",
-        "description": "SafeAutoCorrect"
-      }
-    ]
+    "title": "Field Name",
+    "description": "Field Name",
+    "timeToFix": 5
   },
   {
     "patternId": "GraphQL_FieldUniqueness",
-    "title": "This cop enforces fields to be defined once",
-    "description": "This cop enforces fields to be defined once",
+    "title": "Field Uniqueness",
+    "description": "Field Uniqueness",
     "timeToFix": 5
   },
   {
     "patternId": "GraphQL_GraphqlName",
-    "title": "This cop check proper configuration of graphql_name",
-    "description": "This cop check proper configuration of graphql_name",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Include",
-        "description": "Include"
-      },
-      {
-        "name": "EnforcedStyle",
-        "description": "EnforcedStyle"
-      },
-      {
-        "name": "SupportedStyles",
-        "description": "SupportedStyles"
-      }
-    ]
+    "title": "Graphql Name",
+    "description": "Graphql Name",
+    "timeToFix": 5
   },
   {
     "patternId": "GraphQL_LegacyDsl",
-    "title": "Checks that types are defined with class-based API",
-    "description": "Checks that types are defined with class-based API",
+    "title": "Legacy Dsl",
+    "description": "Legacy Dsl",
     "timeToFix": 5
   },
   {
     "patternId": "GraphQL_MaxComplexitySchema",
-    "title": "Enforces max_complexity configuration in schema",
-    "description": "Enforces max_complexity configuration in schema",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Include",
-        "description": "Include"
-      }
-    ]
+    "title": "Max Complexity Schema",
+    "description": "Max Complexity Schema",
+    "timeToFix": 5
   },
   {
     "patternId": "GraphQL_MaxDepthSchema",
-    "title": "Enforces max_depth configuration in schema",
-    "description": "Enforces max_depth configuration in schema",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Include",
-        "description": "Include"
-      }
-    ]
+    "title": "Max Depth Schema",
+    "description": "Max Depth Schema",
+    "timeToFix": 5
   },
   {
     "patternId": "GraphQL_MultipleFieldDefinitions",
-    "title": "Ensures that fields with multiple definitions are grouped together",
-    "description": "Ensures that fields with multiple definitions are grouped together",
+    "title": "Multiple Field Definitions",
+    "description": "Multiple Field Definitions",
     "timeToFix": 5
   },
   {
     "patternId": "GraphQL_NotAuthorizedNodeType",
-    "title": "Detects types that implement Node interface and not have `.authorized?` check",
-    "description": "Detects types that implement Node interface and not have `.authorized?` check",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Include",
-        "description": "Include"
-      },
-      {
-        "name": "SafeBaseClasses",
-        "description": "SafeBaseClasses"
-      }
-    ]
+    "title": "Not Authorized Node Type",
+    "description": "Not Authorized Node Type",
+    "timeToFix": 5
   },
   {
     "patternId": "GraphQL_ResolverMethodLength",
-    "title": "Checks resolver methods are not too long",
-    "description": "Checks resolver methods are not too long",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Max",
-        "description": "Max"
-      },
-      {
-        "name": "CountComments",
-        "description": "CountComments"
-      },
-      {
-        "name": "ExcludedMethods",
-        "description": "ExcludedMethods"
-      },
-      {
-        "name": "CountAsOne",
-        "description": "CountAsOne"
-      }
-    ]
+    "title": "Resolver Method Length",
+    "description": "Resolver Method Length",
+    "timeToFix": 5
   },
   {
     "patternId": "GraphQL_ObjectDescription",
-    "title": "Ensures all types have a description",
-    "description": "Ensures all types have a description",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Exclude",
-        "description": "Exclude"
-      }
-    ]
+    "title": "Object Description",
+    "description": "Object Description",
+    "timeToFix": 5
   },
   {
     "patternId": "GraphQL_PrepareMethod",
@@ -8847,26 +8751,26 @@
   },
   {
     "patternId": "GraphQL_UnusedArgument",
-    "title": "Arguments should either be listed explicitly or **rest should be in the resolve signature",
-    "description": "Arguments should either be listed explicitly or **rest should be in the resolve signature",
+    "title": "Unused Argument",
+    "description": "Unused Argument",
     "timeToFix": 5
   },
   {
     "patternId": "GraphQL_UnnecessaryArgumentCamelize",
-    "title": "Camelize isn't necessary if the argument name doesn't contain underscores",
-    "description": "Camelize isn't necessary if the argument name doesn't contain underscores",
+    "title": "Unnecessary Argument Camelize",
+    "description": "Unnecessary Argument Camelize",
     "timeToFix": 5
   },
   {
     "patternId": "GraphQL_UnnecessaryFieldAlias",
-    "title": "Field aliases should be different than their field names",
-    "description": "Field aliases should be different than their field names",
+    "title": "Unnecessary Field Alias",
+    "description": "Unnecessary Field Alias",
     "timeToFix": 5
   },
   {
     "patternId": "GraphQL_UnnecessaryFieldCamelize",
-    "title": "Camelize isn't necessary if the field name doesn't contain underscores",
-    "description": "Camelize isn't necessary if the field name doesn't contain underscores",
+    "title": "Unnecessary Field Camelize",
+    "description": "Unnecessary Field Camelize",
     "timeToFix": 5
   },
   {
