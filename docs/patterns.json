@@ -1,6 +1,6 @@
 {
   "name": "rubocop",
-  "version": "1.73.2",
+  "version": "1.74.0",
   "patterns": [
     {
       "patternId": "Migration_DepartmentName",
@@ -4076,6 +4076,8 @@
         {
           "name": "AllowedIdentifiers",
           "default": [
+            "TLS1_1",
+            "TLS1_2",
             "capture3",
             "iso8601",
             "rfc1123_date",
@@ -4472,6 +4474,30 @@
             "nested",
             "compact"
           ]
+        },
+        {
+          "name": "EnforcedStyleForClasses",
+          "default": ""
+        },
+        {
+          "name": "SupportedStylesForClasses",
+          "default": [
+            null,
+            "nested",
+            "compact"
+          ]
+        },
+        {
+          "name": "EnforcedStyleForModules",
+          "default": ""
+        },
+        {
+          "name": "SupportedStylesForModules",
+          "default": [
+            null,
+            "nested",
+            "compact"
+          ]
         }
       ],
       "enabled": false
@@ -4676,6 +4702,12 @@
           "default": "false"
         }
       ],
+      "enabled": false
+    },
+    {
+      "patternId": "Style_ComparableBetween",
+      "level": "Info",
+      "category": "CodeStyle",
       "enabled": false
     },
     {
@@ -5241,6 +5273,10 @@
         {
           "name": "MaxUnannotatedPlaceholdersAllowed",
           "default": "1"
+        },
+        {
+          "name": "Mode",
+          "default": "aggressive"
         },
         {
           "name": "AllowedMethods",

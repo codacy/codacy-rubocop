@@ -3994,6 +3994,22 @@
       {
         "name": "SupportedStyles",
         "description": "SupportedStyles"
+      },
+      {
+        "name": "EnforcedStyleForClasses",
+        "description": "EnforcedStyleForClasses"
+      },
+      {
+        "name": "SupportedStylesForClasses",
+        "description": "SupportedStylesForClasses"
+      },
+      {
+        "name": "EnforcedStyleForModules",
+        "description": "EnforcedStyleForModules"
+      },
+      {
+        "name": "SupportedStylesForModules",
+        "description": "SupportedStylesForModules"
       }
     ]
   },
@@ -4174,6 +4190,12 @@
         "description": "SafeAutoCorrect"
       }
     ]
+  },
+  {
+    "patternId": "Style_ComparableBetween",
+    "title": "Enforces the use of `Comparable#between?` instead of logical comparison.",
+    "description": "Enforces the use of `Comparable#between?` instead of logical comparison.",
+    "timeToFix": 5
   },
   {
     "patternId": "Style_ComparableClamp",
@@ -4694,6 +4716,10 @@
       {
         "name": "MaxUnannotatedPlaceholdersAllowed",
         "description": "MaxUnannotatedPlaceholdersAllowed"
+      },
+      {
+        "name": "Mode",
+        "description": "Mode"
       },
       {
         "name": "AllowedMethods",
