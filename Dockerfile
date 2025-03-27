@@ -11,7 +11,7 @@ WORKDIR /doc_generator
 
 RUN apk add --no-cache ruby ruby-etc ruby-dev ruby-irb ruby-rake ruby-io-console \
     ruby-bigdecimal make gcc ruby-json libstdc++ tzdata bash \
-    libc-dev libpq-dev openjdk17-jre
+    libc-dev yaml-dev libpq-dev openjdk17-jre
 
 COPY Gemfile .
 COPY Gemfile.lock . 
