@@ -24,8 +24,6 @@ gem "rubocop-capybara"
 # User as a dependency of some gems
 gem "activesupport"
 gem "rubocop-ast"
-gem "eventmachine"
-gem "zlib"
 
 # Used by customer's config file
 gem "yard"
@@ -34,7 +32,7 @@ gem "rake"
 gem "graphql"
 gem "rubocop-packs"
 gem "rubocop-packaging"
-gem "rubocop-on-rbs"
+# gem "rubocop-on-rbs"
 gem "sorbet-runtime"
 gem "standard-rails"
 gem "rubocop-gitlab-security"
@@ -42,4 +40,4 @@ gem "rubocop-haml"
 # gem "cookstyle" the latest version depends on rubocop = 1.25.1 which is pretty old
 gem "rubocop-anycable-rails"
 gem "rubocop-require_tools"
-gem "jekyll"
+# gem "jekyll"
