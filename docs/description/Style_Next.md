@@ -40,6 +40,31 @@ end
 [1, 2].each do |a|
   next unless a == 1
   puts a
+end# bad
+[1, 2].each do |a|
+  if a == 1
+    puts a
+  end
+  if a == 2
+    puts a
+  end
+end
+
+# good
+[1, 2].each do |a|
+  if a == 1
+    puts a
+  end
+  next unless a == 2
+  puts a
+end# good
+[1, 2].each do |a|
+  if a == 1
+    puts a
+  end
+  if a == 2
+    puts a
+  end
 end
 ```
 

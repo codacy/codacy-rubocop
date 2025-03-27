@@ -11,18 +11,22 @@ foo(
   b
 )
 
+# good
+foo(a, b)
+
+# bad
 puts 'string that fits on ' \
      'a single line'
 
+# good
+puts 'string that fits on a single line'
+
+# bad
 things
   .select { |thing| thing.cond? }
   .join('-')
 
 # good
-foo(a, b)
-
-puts 'string that fits on a single line'
-
 things.select { |thing| thing.cond? }.join('-')# good
 foo(a) do |x|
   puts x

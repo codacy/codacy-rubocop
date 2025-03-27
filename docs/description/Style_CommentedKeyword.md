@@ -3,8 +3,8 @@ Checks for comments put on the same line as some keywords.
 These keywords are: `class`, `module`, `def`, `begin`, `end`.
 
 Note that some comments
-(`:nodoc:`, `:yields:`, `rubocop:disable` and `rubocop:todo`)
-and RBS::Inline annotation comments are allowed.
+(`:nodoc:`, `:yields:`, `rubocop:disable` and `rubocop:todo`),
+RBS::Inline annotation, and Steep annotation (`steep:ignore`) are allowed.
 
 Autocorrection removes comments from `end` keyword and keeps comments
 for `class`, `module`, `def` and `begin` above the keyword.
