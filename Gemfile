@@ -24,6 +24,8 @@ gem "rubocop-capybara"
 # User as a dependency of some gems
 gem "activesupport"
 gem "rubocop-ast"
+gem "eventmachine"
+gem "zlib"
 
 # Used by customer's config file
 gem "yard"
