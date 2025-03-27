@@ -3528,6 +3528,14 @@
       {
         "name": "AllowedPatterns",
         "description": "AllowedPatterns"
+      },
+      {
+        "name": "ForbiddenIdentifiers",
+        "description": "ForbiddenIdentifiers"
+      },
+      {
+        "name": "ForbiddenPatterns",
+        "description": "ForbiddenPatterns"
       }
     ]
   },
@@ -4856,6 +4864,18 @@
     ]
   },
   {
+    "patternId": "Style_HashFetchChain",
+    "title": "Use `Hash#dig` instead of chained `fetch` calls.",
+    "description": "Use `Hash#dig` instead of chained `fetch` calls.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Safe",
+        "description": "Safe"
+      }
+    ]
+  },
+  {
     "patternId": "Style_HashLikeCase",
     "title": "Checks for places where `case-when` represents a simple 1:1 mapping and can be replaced with a hash lookup.",
     "description": "Checks for places where `case-when` represents a simple 1:1 mapping and can be replaced with a hash lookup.",
@@ -5080,6 +5100,22 @@
     "title": "Checks for assignment to `it` inside a block.",
     "description": "Checks for assignment to `it` inside a block.",
     "timeToFix": 5
+  },
+  {
+    "patternId": "Style_ItBlockParameter",
+    "title": "Checks for blocks with one argument where `it` block parameter can be used.",
+    "description": "Checks for blocks with one argument where `it` block parameter can be used.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "EnforcedStyle",
+        "description": "EnforcedStyle"
+      },
+      {
+        "name": "SupportedStyles",
+        "description": "SupportedStyles"
+      }
+    ]
   },
   {
     "patternId": "Style_KeywordArgumentsMerging",
@@ -5804,6 +5840,10 @@
       {
         "name": "MinBodyLength",
         "description": "MinBodyLength"
+      },
+      {
+        "name": "AllowConsecutiveConditionals",
+        "description": "AllowConsecutiveConditionals"
       },
       {
         "name": "SupportedStyles",
@@ -7397,801 +7437,1637 @@
   },
   {
     "patternId": "Rails_ActionControllerFlashBeforeRender",
-    "title": "Action Controller Flash Before Render",
-    "description": "Action Controller Flash Before Render",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "Rails_StrongParametersExpect",
-    "title": "Strong Parameters Expect",
-    "description": "Strong Parameters Expect",
-    "timeToFix": 5
+    "title": "Use `flash.now` instead of `flash` before `render`.",
+    "description": "Use `flash.now` instead of `flash` before `render`.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "SafeAutoCorrect",
+        "description": "SafeAutoCorrect"
+      }
+    ]
   },
   {
     "patternId": "Rails_ActionControllerTestCase",
-    "title": "Action Controller Test Case",
-    "description": "Action Controller Test Case",
-    "timeToFix": 5
+    "title": "Use `ActionDispatch::IntegrationTest` instead of `ActionController::TestCase`.",
+    "description": "Use `ActionDispatch::IntegrationTest` instead of `ActionController::TestCase`.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "SafeAutoCorrect",
+        "description": "SafeAutoCorrect"
+      },
+      {
+        "name": "Include",
+        "description": "Include"
+      }
+    ]
   },
   {
     "patternId": "Rails_ActionFilter",
-    "title": "Action Filter",
-    "description": "Action Filter",
-    "timeToFix": 5
+    "title": "Enforces consistent use of action filter methods.",
+    "description": "Enforces consistent use of action filter methods.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "EnforcedStyle",
+        "description": "EnforcedStyle"
+      },
+      {
+        "name": "SupportedStyles",
+        "description": "SupportedStyles"
+      },
+      {
+        "name": "Include",
+        "description": "Include"
+      }
+    ]
   },
   {
     "patternId": "Rails_ActionOrder",
-    "title": "Action Order",
-    "description": "Action Order",
-    "timeToFix": 5
+    "title": "Enforce consistent ordering of controller actions.",
+    "description": "Enforce consistent ordering of controller actions.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "ExpectedOrder",
+        "description": "ExpectedOrder"
+      },
+      {
+        "name": "Include",
+        "description": "Include"
+      }
+    ]
   },
   {
     "patternId": "Rails_ActiveRecordAliases",
-    "title": "Active Record Aliases",
-    "description": "Active Record Aliases",
-    "timeToFix": 5
+    "title": "Avoid Active Record aliases: Use `update` instead of `update_attributes`. Use `update!` instead of `update_attributes!`.",
+    "description": "Avoid Active Record aliases: Use `update` instead of `update_attributes`. Use `update!` instead of `update_attributes!`.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "SafeAutoCorrect",
+        "description": "SafeAutoCorrect"
+      }
+    ]
   },
   {
     "patternId": "Rails_ActiveRecordCallbacksOrder",
-    "title": "Active Record Callbacks Order",
-    "description": "Active Record Callbacks Order",
-    "timeToFix": 5
+    "title": "Order callback declarations in the order in which they will be executed.",
+    "description": "Order callback declarations in the order in which they will be executed.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Include",
+        "description": "Include"
+      }
+    ]
   },
   {
     "patternId": "Rails_ActiveRecordOverride",
-    "title": "Active Record Override",
-    "description": "Active Record Override",
-    "timeToFix": 5
+    "title": "Check for overriding Active Record methods instead of using callbacks.",
+    "description": "Check for overriding Active Record methods instead of using callbacks.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Severity",
+        "description": "Severity"
+      },
+      {
+        "name": "Include",
+        "description": "Include"
+      }
+    ]
   },
   {
     "patternId": "Rails_ActiveSupportAliases",
-    "title": "Active Support Aliases",
-    "description": "Active Support Aliases",
+    "title": "Avoid ActiveSupport aliases of standard ruby methods: `String#starts_with?`, `String#ends_with?`, `Array#append`, `Array#prepend`.",
+    "description": "Avoid ActiveSupport aliases of standard ruby methods: `String#starts_with?`, `String#ends_with?`, `Array#append`, `Array#prepend`.",
     "timeToFix": 5
   },
   {
     "patternId": "Rails_ActiveSupportOnLoad",
-    "title": "Active Support On Load",
-    "description": "Active Support On Load",
-    "timeToFix": 5
+    "title": "Use `ActiveSupport.on_load(...)` to patch Rails framework classes.",
+    "description": "Use `ActiveSupport.on_load(...)` to patch Rails framework classes.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "SafeAutoCorrect",
+        "description": "SafeAutoCorrect"
+      }
+    ]
   },
   {
     "patternId": "Rails_AddColumnIndex",
-    "title": "Add Column Index",
-    "description": "Add Column Index",
-    "timeToFix": 5
+    "title": "Rails migrations don't make use of a given `index` key, but also doesn't given an error when it's used, so it makes it seem like an index might be used.",
+    "description": "Rails migrations don't make use of a given `index` key, but also doesn't given an error when it's used, so it makes it seem like an index might be used.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Include",
+        "description": "Include"
+      }
+    ]
   },
   {
     "patternId": "Rails_AfterCommitOverride",
-    "title": "After Commit Override",
-    "description": "After Commit Override",
+    "title": "Enforces that there is only one call to `after_commit` (and its aliases - `after_create_commit`, `after_update_commit`, and `after_destroy_commit`) with the same callback name per model.",
+    "description": "Enforces that there is only one call to `after_commit` (and its aliases - `after_create_commit`, `after_update_commit`, and `after_destroy_commit`) with the same callback name per model.",
     "timeToFix": 5
   },
   {
     "patternId": "Rails_ApplicationController",
-    "title": "Application Controller",
-    "description": "Application Controller",
-    "timeToFix": 5
+    "title": "Check that controllers subclass ApplicationController.",
+    "description": "Check that controllers subclass ApplicationController.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "SafeAutoCorrect",
+        "description": "SafeAutoCorrect"
+      }
+    ]
   },
   {
     "patternId": "Rails_ApplicationJob",
-    "title": "Application Job",
-    "description": "Application Job",
-    "timeToFix": 5
+    "title": "Check that jobs subclass ApplicationJob.",
+    "description": "Check that jobs subclass ApplicationJob.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "SafeAutoCorrect",
+        "description": "SafeAutoCorrect"
+      }
+    ]
   },
   {
     "patternId": "Rails_ApplicationMailer",
-    "title": "Application Mailer",
-    "description": "Application Mailer",
-    "timeToFix": 5
+    "title": "Check that mailers subclass ApplicationMailer.",
+    "description": "Check that mailers subclass ApplicationMailer.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "SafeAutoCorrect",
+        "description": "SafeAutoCorrect"
+      }
+    ]
   },
   {
     "patternId": "Rails_ApplicationRecord",
-    "title": "Application Record",
-    "description": "Application Record",
-    "timeToFix": 5
+    "title": "Check that models subclass ApplicationRecord.",
+    "description": "Check that models subclass ApplicationRecord.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "SafeAutoCorrect",
+        "description": "SafeAutoCorrect"
+      },
+      {
+        "name": "Exclude",
+        "description": "Exclude"
+      }
+    ]
   },
   {
     "patternId": "Rails_ArelStar",
-    "title": "Arel Star",
-    "description": "Arel Star",
-    "timeToFix": 5
+    "title": "Enforces `Arel.star` instead of `\"*\"` for expanded columns.",
+    "description": "Enforces `Arel.star` instead of `\"*\"` for expanded columns.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "SafeAutoCorrect",
+        "description": "SafeAutoCorrect"
+      }
+    ]
   },
   {
     "patternId": "Rails_AssertNot",
-    "title": "Assert Not",
-    "description": "Assert Not",
-    "timeToFix": 5
+    "title": "Use `assert_not` instead of `assert !`.",
+    "description": "Use `assert_not` instead of `assert !`.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Include",
+        "description": "Include"
+      }
+    ]
   },
   {
     "patternId": "Rails_AttributeDefaultBlockValue",
-    "title": "Attribute Default Block Value",
-    "description": "Attribute Default Block Value",
-    "timeToFix": 5
+    "title": "Pass method call in block for attribute option `default`.",
+    "description": "Pass method call in block for attribute option `default`.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Include",
+        "description": "Include"
+      }
+    ]
   },
   {
     "patternId": "Rails_BelongsTo",
-    "title": "Belongs To",
-    "description": "Belongs To",
+    "title": "Use `optional: true` instead of `required: false` for `belongs_to` relations.",
+    "description": "Use `optional: true` instead of `required: false` for `belongs_to` relations.",
     "timeToFix": 5
   },
   {
     "patternId": "Rails_Blank",
-    "title": "Blank",
-    "description": "Blank",
-    "timeToFix": 5
+    "title": "Enforces use of `blank?`.",
+    "description": "Enforces use of `blank?`.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "SafeAutoCorrect",
+        "description": "SafeAutoCorrect"
+      },
+      {
+        "name": "NilOrEmpty",
+        "description": "NilOrEmpty"
+      },
+      {
+        "name": "NotPresent",
+        "description": "NotPresent"
+      },
+      {
+        "name": "UnlessPresent",
+        "description": "UnlessPresent"
+      }
+    ]
   },
   {
     "patternId": "Rails_BulkChangeTable",
-    "title": "Bulk Change Table",
-    "description": "Bulk Change Table",
-    "timeToFix": 5
+    "title": "Check whether alter queries are combinable.",
+    "description": "Check whether alter queries are combinable.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Database",
+        "description": "Database"
+      },
+      {
+        "name": "SupportedDatabases",
+        "description": "SupportedDatabases"
+      },
+      {
+        "name": "Include",
+        "description": "Include"
+      }
+    ]
   },
   {
     "patternId": "Rails_CompactBlank",
-    "title": "Compact Blank",
-    "description": "Compact Blank",
-    "timeToFix": 5
+    "title": "Checks if collection can be blank-compacted with `compact_blank`.",
+    "description": "Checks if collection can be blank-compacted with `compact_blank`.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Safe",
+        "description": "Safe"
+      }
+    ]
   },
   {
     "patternId": "Rails_ContentTag",
-    "title": "Content Tag",
-    "description": "Content Tag",
-    "timeToFix": 5
+    "title": "Use `tag.something` instead of `tag(:something)`.",
+    "description": "Use `tag.something` instead of `tag(:something)`.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Exclude",
+        "description": "Exclude"
+      }
+    ]
   },
   {
     "patternId": "Rails_CreateTableWithTimestamps",
-    "title": "Create Table With Timestamps",
-    "description": "Create Table With Timestamps",
-    "timeToFix": 5
+    "title": "Checks the migration for which timestamps are not included when creating a new table.",
+    "description": "Checks the migration for which timestamps are not included when creating a new table.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Include",
+        "description": "Include"
+      },
+      {
+        "name": "Exclude",
+        "description": "Exclude"
+      }
+    ]
   },
   {
     "patternId": "Rails_DangerousColumnNames",
-    "title": "Dangerous Column Names",
-    "description": "Dangerous Column Names",
-    "timeToFix": 5
+    "title": "Avoid dangerous column names.",
+    "description": "Avoid dangerous column names.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Severity",
+        "description": "Severity"
+      },
+      {
+        "name": "Include",
+        "description": "Include"
+      }
+    ]
   },
   {
     "patternId": "Rails_Date",
-    "title": "Date",
-    "description": "Date",
-    "timeToFix": 5
+    "title": "Checks the correct usage of date aware methods, such as Date.today, Date.current etc.",
+    "description": "Checks the correct usage of date aware methods, such as Date.today, Date.current etc.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "SafeAutoCorrect",
+        "description": "SafeAutoCorrect"
+      },
+      {
+        "name": "EnforcedStyle",
+        "description": "EnforcedStyle"
+      },
+      {
+        "name": "SupportedStyles",
+        "description": "SupportedStyles"
+      },
+      {
+        "name": "AllowToTime",
+        "description": "AllowToTime"
+      }
+    ]
   },
   {
     "patternId": "Rails_DefaultScope",
-    "title": "Default Scope",
-    "description": "Default Scope",
+    "title": "Avoid use of `default_scope`.",
+    "description": "Avoid use of `default_scope`.",
     "timeToFix": 5
   },
   {
     "patternId": "Rails_Delegate",
-    "title": "Delegate",
-    "description": "Delegate",
-    "timeToFix": 5
+    "title": "Prefer delegate method for delegations.",
+    "description": "Prefer delegate method for delegations.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "EnforceForPrefixed",
+        "description": "EnforceForPrefixed"
+      }
+    ]
   },
   {
     "patternId": "Rails_DelegateAllowBlank",
-    "title": "Delegate Allow Blank",
-    "description": "Delegate Allow Blank",
+    "title": "Do not use allow_blank as an option to delegate.",
+    "description": "Do not use allow_blank as an option to delegate.",
     "timeToFix": 5
   },
   {
     "patternId": "Rails_DeprecatedActiveModelErrorsMethods",
-    "title": "Deprecated Active Model Errors Methods",
-    "description": "Deprecated Active Model Errors Methods",
-    "timeToFix": 5
+    "title": "Avoid manipulating ActiveModel errors hash directly.",
+    "description": "Avoid manipulating ActiveModel errors hash directly.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Severity",
+        "description": "Severity"
+      },
+      {
+        "name": "Safe",
+        "description": "Safe"
+      }
+    ]
   },
   {
     "patternId": "Rails_DotSeparatedKeys",
-    "title": "Dot Separated Keys",
-    "description": "Dot Separated Keys",
+    "title": "Enforces the use of dot-separated keys instead of `:scope` options in `I18n` translation methods.",
+    "description": "Enforces the use of dot-separated keys instead of `:scope` options in `I18n` translation methods.",
     "timeToFix": 5
   },
   {
     "patternId": "Rails_DuplicateAssociation",
-    "title": "Duplicate Association",
-    "description": "Duplicate Association",
-    "timeToFix": 5
+    "title": "Don't repeat associations in a model.",
+    "description": "Don't repeat associations in a model.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Severity",
+        "description": "Severity"
+      }
+    ]
   },
   {
     "patternId": "Rails_DuplicateScope",
-    "title": "Duplicate Scope",
-    "description": "Duplicate Scope",
-    "timeToFix": 5
+    "title": "Multiple scopes share this same where clause.",
+    "description": "Multiple scopes share this same where clause.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Severity",
+        "description": "Severity"
+      }
+    ]
   },
   {
     "patternId": "Rails_DurationArithmetic",
-    "title": "Duration Arithmetic",
-    "description": "Duration Arithmetic",
+    "title": "Do not use duration as arithmetic operand with `Time.current`.",
+    "description": "Do not use duration as arithmetic operand with `Time.current`.",
     "timeToFix": 5
   },
   {
     "patternId": "Rails_DynamicFindBy",
-    "title": "Dynamic Find By",
-    "description": "Dynamic Find By",
-    "timeToFix": 5
+    "title": "Use `find_by` instead of dynamic `find_by_*`.",
+    "description": "Use `find_by` instead of dynamic `find_by_*`.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Safe",
+        "description": "Safe"
+      },
+      {
+        "name": "Whitelist",
+        "description": "Whitelist"
+      },
+      {
+        "name": "AllowedMethods",
+        "description": "AllowedMethods"
+      },
+      {
+        "name": "AllowedReceivers",
+        "description": "AllowedReceivers"
+      }
+    ]
   },
   {
     "patternId": "Rails_EagerEvaluationLogMessage",
-    "title": "Eager Evaluation Log Message",
-    "description": "Eager Evaluation Log Message",
+    "title": "Checks that blocks are used for interpolated strings passed to `Rails.logger.debug`.",
+    "description": "Checks that blocks are used for interpolated strings passed to `Rails.logger.debug`.",
     "timeToFix": 5
   },
   {
     "patternId": "Rails_EnumHash",
-    "title": "Enum Hash",
-    "description": "Enum Hash",
-    "timeToFix": 5
+    "title": "Prefer hash syntax over array syntax when defining enums.",
+    "description": "Prefer hash syntax over array syntax when defining enums.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Include",
+        "description": "Include"
+      }
+    ]
   },
   {
     "patternId": "Rails_EnumSyntax",
-    "title": "Enum Syntax",
-    "description": "Enum Syntax",
-    "timeToFix": 5
+    "title": "Use positional arguments over keyword arguments when defining enums.",
+    "description": "Use positional arguments over keyword arguments when defining enums.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Severity",
+        "description": "Severity"
+      },
+      {
+        "name": "Include",
+        "description": "Include"
+      }
+    ]
   },
   {
     "patternId": "Rails_EnumUniqueness",
-    "title": "Enum Uniqueness",
-    "description": "Enum Uniqueness",
-    "timeToFix": 5
+    "title": "Avoid duplicate integers in hash-syntax `enum` declaration.",
+    "description": "Avoid duplicate integers in hash-syntax `enum` declaration.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Include",
+        "description": "Include"
+      }
+    ]
   },
   {
     "patternId": "Rails_EnvLocal",
-    "title": "Env Local",
-    "description": "Env Local",
+    "title": "Use `Rails.env.local?` instead of `Rails.env.development? || Rails.env.test?`.",
+    "description": "Use `Rails.env.local?` instead of `Rails.env.development? || Rails.env.test?`.",
     "timeToFix": 5
   },
   {
     "patternId": "Rails_EnvironmentComparison",
-    "title": "Environment Comparison",
-    "description": "Environment Comparison",
+    "title": "Favor `Rails.env.production?` over `Rails.env == 'production'`.",
+    "description": "Favor `Rails.env.production?` over `Rails.env == 'production'`.",
     "timeToFix": 5
   },
   {
     "patternId": "Rails_EnvironmentVariableAccess",
-    "title": "Environment Variable Access",
-    "description": "Environment Variable Access",
-    "timeToFix": 5
+    "title": "Do not access `ENV` directly after initialization.",
+    "description": "Do not access `ENV` directly after initialization.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Include",
+        "description": "Include"
+      },
+      {
+        "name": "Exclude",
+        "description": "Exclude"
+      },
+      {
+        "name": "AllowReads",
+        "description": "AllowReads"
+      },
+      {
+        "name": "AllowWrites",
+        "description": "AllowWrites"
+      }
+    ]
   },
   {
     "patternId": "Rails_Exit",
-    "title": "Exit",
-    "description": "Exit",
-    "timeToFix": 5
+    "title": "Favor `fail`, `break`, `return`, etc. over `exit` in application or library code outside of Rake files to avoid exits during unit testing or running in production.",
+    "description": "Favor `fail`, `break`, `return`, etc. over `exit` in application or library code outside of Rake files to avoid exits during unit testing or running in production.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Include",
+        "description": "Include"
+      },
+      {
+        "name": "Exclude",
+        "description": "Exclude"
+      }
+    ]
   },
   {
     "patternId": "Rails_ExpandedDateRange",
-    "title": "Expanded Date Range",
-    "description": "Expanded Date Range",
+    "title": "Checks for expanded date range.",
+    "description": "Checks for expanded date range.",
     "timeToFix": 5
   },
   {
     "patternId": "Rails_FilePath",
-    "title": "File Path",
-    "description": "File Path",
-    "timeToFix": 5
+    "title": "Use `Rails.root.join` for file path joining.",
+    "description": "Use `Rails.root.join` for file path joining.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "EnforcedStyle",
+        "description": "EnforcedStyle"
+      },
+      {
+        "name": "SupportedStyles",
+        "description": "SupportedStyles"
+      }
+    ]
   },
   {
     "patternId": "Rails_FindBy",
-    "title": "Find By",
-    "description": "Find By",
-    "timeToFix": 5
+    "title": "Prefer find_by over where.first.",
+    "description": "Prefer find_by over where.first.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "IgnoreWhereFirst",
+        "description": "IgnoreWhereFirst"
+      }
+    ]
   },
   {
     "patternId": "Rails_FindById",
-    "title": "Find By Id",
-    "description": "Find By Id",
+    "title": "Favor the use of `find` over `where.take!`, `find_by!`, and `find_by_id!` when you need to retrieve a single record by primary key when you expect it to be found.",
+    "description": "Favor the use of `find` over `where.take!`, `find_by!`, and `find_by_id!` when you need to retrieve a single record by primary key when you expect it to be found.",
     "timeToFix": 5
   },
   {
     "patternId": "Rails_FindEach",
-    "title": "Find Each",
-    "description": "Find Each",
-    "timeToFix": 5
+    "title": "Prefer all.find_each over all.each.",
+    "description": "Prefer all.find_each over all.each.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Safe",
+        "description": "Safe"
+      },
+      {
+        "name": "AllowedMethods",
+        "description": "AllowedMethods"
+      },
+      {
+        "name": "AllowedPatterns",
+        "description": "AllowedPatterns"
+      }
+    ]
   },
   {
     "patternId": "Rails_FreezeTime",
-    "title": "Freeze Time",
-    "description": "Freeze Time",
-    "timeToFix": 5
+    "title": "Prefer `freeze_time` over `travel_to` with an argument of the current time.",
+    "description": "Prefer `freeze_time` over `travel_to` with an argument of the current time.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "SafeAutoCorrect",
+        "description": "SafeAutoCorrect"
+      }
+    ]
   },
   {
     "patternId": "Rails_HasAndBelongsToMany",
-    "title": "Has And Belongs To Many",
-    "description": "Has And Belongs To Many",
-    "timeToFix": 5
+    "title": "Prefer has_many :through to has_and_belongs_to_many.",
+    "description": "Prefer has_many :through to has_and_belongs_to_many.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Include",
+        "description": "Include"
+      }
+    ]
   },
   {
     "patternId": "Rails_HasManyOrHasOneDependent",
-    "title": "Has Many Or Has One Dependent",
-    "description": "Has Many Or Has One Dependent",
-    "timeToFix": 5
+    "title": "Define the dependent option to the has_many and has_one associations.",
+    "description": "Define the dependent option to the has_many and has_one associations.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Include",
+        "description": "Include"
+      }
+    ]
   },
   {
     "patternId": "Rails_HelperInstanceVariable",
-    "title": "Helper Instance Variable",
-    "description": "Helper Instance Variable",
-    "timeToFix": 5
+    "title": "Do not use instance variables in helpers.",
+    "description": "Do not use instance variables in helpers.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Include",
+        "description": "Include"
+      }
+    ]
   },
   {
     "patternId": "Rails_HttpPositionalArguments",
-    "title": "Http Positional Arguments",
-    "description": "Http Positional Arguments",
-    "timeToFix": 5
+    "title": "Use keyword arguments instead of positional arguments in http method calls.",
+    "description": "Use keyword arguments instead of positional arguments in http method calls.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Include",
+        "description": "Include"
+      }
+    ]
   },
   {
     "patternId": "Rails_HttpStatus",
-    "title": "Http Status",
-    "description": "Http Status",
-    "timeToFix": 5
+    "title": "Enforces use of symbolic or numeric value to define HTTP status.",
+    "description": "Enforces use of symbolic or numeric value to define HTTP status.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "EnforcedStyle",
+        "description": "EnforcedStyle"
+      },
+      {
+        "name": "SupportedStyles",
+        "description": "SupportedStyles"
+      }
+    ]
   },
   {
     "patternId": "Rails_I18nLazyLookup",
-    "title": "I18n Lazy Lookup",
-    "description": "I18n Lazy Lookup",
-    "timeToFix": 5
+    "title": "Checks for places where I18n \"lazy\" lookup can be used.",
+    "description": "Checks for places where I18n \"lazy\" lookup can be used.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "EnforcedStyle",
+        "description": "EnforcedStyle"
+      },
+      {
+        "name": "SupportedStyles",
+        "description": "SupportedStyles"
+      },
+      {
+        "name": "Include",
+        "description": "Include"
+      }
+    ]
   },
   {
     "patternId": "Rails_I18nLocaleAssignment",
-    "title": "I18n Locale Assignment",
-    "description": "I18n Locale Assignment",
-    "timeToFix": 5
+    "title": "Prefer the usage of `I18n.with_locale` instead of manually updating `I18n.locale` value.",
+    "description": "Prefer the usage of `I18n.with_locale` instead of manually updating `I18n.locale` value.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Include",
+        "description": "Include"
+      }
+    ]
   },
   {
     "patternId": "Rails_I18nLocaleTexts",
-    "title": "I18n Locale Texts",
-    "description": "I18n Locale Texts",
+    "title": "Enforces use of I18n and locale files instead of locale specific strings.",
+    "description": "Enforces use of I18n and locale files instead of locale specific strings.",
     "timeToFix": 5
   },
   {
     "patternId": "Rails_IgnoredColumnsAssignment",
-    "title": "Ignored Columns Assignment",
-    "description": "Ignored Columns Assignment",
-    "timeToFix": 5
+    "title": "Looks for assignments of `ignored_columns` that override previous assignments.",
+    "description": "Looks for assignments of `ignored_columns` that override previous assignments.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "SafeAutoCorrect",
+        "description": "SafeAutoCorrect"
+      }
+    ]
   },
   {
     "patternId": "Rails_IgnoredSkipActionFilterOption",
-    "title": "Ignored Skip Action Filter Option",
-    "description": "Ignored Skip Action Filter Option",
-    "timeToFix": 5
+    "title": "Checks that `if` and `only` (or `except`) are not used together as options of `skip_*` action filter.",
+    "description": "Checks that `if` and `only` (or `except`) are not used together as options of `skip_*` action filter.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Include",
+        "description": "Include"
+      }
+    ]
   },
   {
     "patternId": "Rails_IndexBy",
-    "title": "Index By",
-    "description": "Index By",
+    "title": "Prefer `index_by` over `each_with_object`, `to_h`, or `map`.",
+    "description": "Prefer `index_by` over `each_with_object`, `to_h`, or `map`.",
     "timeToFix": 5
   },
   {
     "patternId": "Rails_IndexWith",
-    "title": "Index With",
-    "description": "Index With",
+    "title": "Prefer `index_with` over `each_with_object`, `to_h`, or `map`.",
+    "description": "Prefer `index_with` over `each_with_object`, `to_h`, or `map`.",
     "timeToFix": 5
   },
   {
     "patternId": "Rails_Inquiry",
-    "title": "Inquiry",
-    "description": "Inquiry",
+    "title": "Prefer Ruby's comparison operators over Active Support's `Array#inquiry` and `String#inquiry`.",
+    "description": "Prefer Ruby's comparison operators over Active Support's `Array#inquiry` and `String#inquiry`.",
     "timeToFix": 5
   },
   {
     "patternId": "Rails_InverseOf",
-    "title": "Inverse Of",
-    "description": "Inverse Of",
-    "timeToFix": 5
+    "title": "Checks for associations where the inverse cannot be determined automatically.",
+    "description": "Checks for associations where the inverse cannot be determined automatically.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "IgnoreScopes",
+        "description": "IgnoreScopes"
+      },
+      {
+        "name": "Include",
+        "description": "Include"
+      }
+    ]
   },
   {
     "patternId": "Rails_LexicallyScopedActionFilter",
-    "title": "Lexically Scoped Action Filter",
-    "description": "Lexically Scoped Action Filter",
-    "timeToFix": 5
+    "title": "Checks that methods specified in the filter's `only` or `except` options are explicitly defined in the class.",
+    "description": "Checks that methods specified in the filter's `only` or `except` options are explicitly defined in the class.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Safe",
+        "description": "Safe"
+      },
+      {
+        "name": "Include",
+        "description": "Include"
+      }
+    ]
   },
   {
     "patternId": "Rails_LinkToBlank",
-    "title": "Link To Blank",
-    "description": "Link To Blank",
+    "title": "Checks that `link_to` with a `target: \"_blank\"` have a `rel: \"noopener\"` option passed to them.",
+    "description": "Checks that `link_to` with a `target: \"_blank\"` have a `rel: \"noopener\"` option passed to them.",
     "timeToFix": 5
   },
   {
     "patternId": "Rails_MailerName",
-    "title": "Mailer Name",
-    "description": "Mailer Name",
-    "timeToFix": 5
+    "title": "Mailer should end with `Mailer` suffix.",
+    "description": "Mailer should end with `Mailer` suffix.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "SafeAutoCorrect",
+        "description": "SafeAutoCorrect"
+      },
+      {
+        "name": "Include",
+        "description": "Include"
+      }
+    ]
   },
   {
     "patternId": "Rails_MatchRoute",
-    "title": "Match Route",
-    "description": "Match Route",
-    "timeToFix": 5
+    "title": "Don't use `match` to define any routes unless there is a need to map multiple request types among [:get, :post, :patch, :put, :delete] to a single action using the `:via` option.",
+    "description": "Don't use `match` to define any routes unless there is a need to map multiple request types among [:get, :post, :patch, :put, :delete] to a single action using the `:via` option.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Include",
+        "description": "Include"
+      }
+    ]
   },
   {
     "patternId": "Rails_MigrationClassName",
-    "title": "Migration Class Name",
-    "description": "Migration Class Name",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "Rails_MultipleRoutePaths",
-    "title": "Multiple Route Paths",
-    "description": "Multiple Route Paths",
-    "timeToFix": 5
+    "title": "The class name of the migration should match its file name.",
+    "description": "The class name of the migration should match its file name.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Include",
+        "description": "Include"
+      }
+    ]
   },
   {
     "patternId": "Rails_NegateInclude",
-    "title": "Negate Include",
-    "description": "Negate Include",
-    "timeToFix": 5
+    "title": "Prefer `collection.exclude?(obj)` over `!collection.include?(obj)`.",
+    "description": "Prefer `collection.exclude?(obj)` over `!collection.include?(obj)`.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Safe",
+        "description": "Safe"
+      }
+    ]
   },
   {
     "patternId": "Rails_NotNullColumn",
-    "title": "Not Null Column",
-    "description": "Not Null Column",
-    "timeToFix": 5
+    "title": "Do not add a NOT NULL column without a default value to existing tables.",
+    "description": "Do not add a NOT NULL column without a default value to existing tables.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Database",
+        "description": "Database"
+      },
+      {
+        "name": "SupportedDatabases",
+        "description": "SupportedDatabases"
+      },
+      {
+        "name": "Include",
+        "description": "Include"
+      }
+    ]
   },
   {
     "patternId": "Rails_OrderById",
-    "title": "Order By Id",
-    "description": "Order By Id",
+    "title": "Do not use the `id` column for ordering. Use a timestamp column to order chronologically.",
+    "description": "Do not use the `id` column for ordering. Use a timestamp column to order chronologically.",
     "timeToFix": 5
   },
   {
     "patternId": "Rails_Output",
-    "title": "Output",
-    "description": "Output",
-    "timeToFix": 5
+    "title": "Checks for calls to puts, print, etc.",
+    "description": "Checks for calls to puts, print, etc.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "SafeAutoCorrect",
+        "description": "SafeAutoCorrect"
+      },
+      {
+        "name": "Include",
+        "description": "Include"
+      }
+    ]
   },
   {
     "patternId": "Rails_OutputSafety",
-    "title": "Output Safety",
-    "description": "Output Safety",
+    "title": "The use of `html_safe` or `raw` may be a security risk.",
+    "description": "The use of `html_safe` or `raw` may be a security risk.",
     "timeToFix": 5
   },
   {
     "patternId": "Rails_Pick",
-    "title": "Pick",
-    "description": "Pick",
-    "timeToFix": 5
+    "title": "Prefer `pick` over `pluck(...).first`.",
+    "description": "Prefer `pick` over `pluck(...).first`.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Safe",
+        "description": "Safe"
+      }
+    ]
   },
   {
     "patternId": "Rails_Pluck",
-    "title": "Pluck",
-    "description": "Pluck",
-    "timeToFix": 5
+    "title": "Prefer `pluck` over `map { ... }`.",
+    "description": "Prefer `pluck` over `map { ... }`.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Safe",
+        "description": "Safe"
+      }
+    ]
   },
   {
     "patternId": "Rails_PluckId",
-    "title": "Pluck Id",
-    "description": "Pluck Id",
-    "timeToFix": 5
+    "title": "Use `ids` instead of `pluck(:id)` or `pluck(primary_key)`.",
+    "description": "Use `ids` instead of `pluck(:id)` or `pluck(primary_key)`.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Safe",
+        "description": "Safe"
+      }
+    ]
   },
   {
     "patternId": "Rails_PluckInWhere",
-    "title": "Pluck In Where",
-    "description": "Pluck In Where",
-    "timeToFix": 5
+    "title": "Use `select` instead of `pluck` in `where` query methods.",
+    "description": "Use `select` instead of `pluck` in `where` query methods.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Safe",
+        "description": "Safe"
+      },
+      {
+        "name": "EnforcedStyle",
+        "description": "EnforcedStyle"
+      },
+      {
+        "name": "SupportedStyles",
+        "description": "SupportedStyles"
+      }
+    ]
   },
   {
     "patternId": "Rails_PluralizationGrammar",
-    "title": "Pluralization Grammar",
-    "description": "Pluralization Grammar",
+    "title": "Checks for incorrect grammar when using methods like `3.day.ago`.",
+    "description": "Checks for incorrect grammar when using methods like `3.day.ago`.",
     "timeToFix": 5
   },
   {
     "patternId": "Rails_Presence",
-    "title": "Presence",
-    "description": "Presence",
+    "title": "Checks code that can be written more easily using `Object#presence` defined by Active Support.",
+    "description": "Checks code that can be written more easily using `Object#presence` defined by Active Support.",
     "timeToFix": 5
   },
   {
     "patternId": "Rails_Present",
-    "title": "Present",
-    "description": "Present",
-    "timeToFix": 5
+    "title": "Enforces use of `present?`.",
+    "description": "Enforces use of `present?`.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "NotNilAndNotEmpty",
+        "description": "NotNilAndNotEmpty"
+      },
+      {
+        "name": "NotBlank",
+        "description": "NotBlank"
+      },
+      {
+        "name": "UnlessBlank",
+        "description": "UnlessBlank"
+      }
+    ]
   },
   {
     "patternId": "Rails_RakeEnvironment",
-    "title": "Rake Environment",
-    "description": "Rake Environment",
-    "timeToFix": 5
+    "title": "Include `:environment` as a dependency for all Rake tasks.",
+    "description": "Include `:environment` as a dependency for all Rake tasks.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Safe",
+        "description": "Safe"
+      },
+      {
+        "name": "Include",
+        "description": "Include"
+      },
+      {
+        "name": "Exclude",
+        "description": "Exclude"
+      }
+    ]
   },
   {
     "patternId": "Rails_ReadWriteAttribute",
-    "title": "Read Write Attribute",
-    "description": "Read Write Attribute",
-    "timeToFix": 5
+    "title": "Checks for read_attribute(:attr) and write_attribute(:attr, val).",
+    "description": "Checks for read_attribute(:attr) and write_attribute(:attr, val).",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Include",
+        "description": "Include"
+      }
+    ]
   },
   {
     "patternId": "Rails_RedundantActiveRecordAllMethod",
-    "title": "Redundant Active Record All Method",
-    "description": "Redundant Active Record All Method",
-    "timeToFix": 5
+    "title": "Detect redundant `all` used as a receiver for Active Record query methods.",
+    "description": "Detect redundant `all` used as a receiver for Active Record query methods.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Safe",
+        "description": "Safe"
+      },
+      {
+        "name": "AllowedReceivers",
+        "description": "AllowedReceivers"
+      }
+    ]
   },
   {
     "patternId": "Rails_RedundantAllowNil",
-    "title": "Redundant Allow Nil",
-    "description": "Redundant Allow Nil",
-    "timeToFix": 5
+    "title": "Finds redundant use of `allow_nil` when `allow_blank` is set to certain values in model validations.",
+    "description": "Finds redundant use of `allow_nil` when `allow_blank` is set to certain values in model validations.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Include",
+        "description": "Include"
+      }
+    ]
   },
   {
     "patternId": "Rails_RedundantForeignKey",
-    "title": "Redundant Foreign Key",
-    "description": "Redundant Foreign Key",
+    "title": "Checks for associations where the `:foreign_key` option is redundant.",
+    "description": "Checks for associations where the `:foreign_key` option is redundant.",
     "timeToFix": 5
   },
   {
     "patternId": "Rails_RedundantPresenceValidationOnBelongsTo",
-    "title": "Redundant Presence Validation On Belongs To",
-    "description": "Redundant Presence Validation On Belongs To",
-    "timeToFix": 5
+    "title": "Checks for redundant presence validation on belongs_to association.",
+    "description": "Checks for redundant presence validation on belongs_to association.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "SafeAutoCorrect",
+        "description": "SafeAutoCorrect"
+      }
+    ]
   },
   {
     "patternId": "Rails_RedundantReceiverInWithOptions",
-    "title": "Redundant Receiver In With Options",
-    "description": "Redundant Receiver In With Options",
+    "title": "Checks for redundant receiver in `with_options`.",
+    "description": "Checks for redundant receiver in `with_options`.",
     "timeToFix": 5
   },
   {
     "patternId": "Rails_RedundantTravelBack",
-    "title": "Redundant Travel Back",
-    "description": "Redundant Travel Back",
-    "timeToFix": 5
+    "title": "Checks for redundant `travel_back` calls.",
+    "description": "Checks for redundant `travel_back` calls.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Include",
+        "description": "Include"
+      }
+    ]
   },
   {
     "patternId": "Rails_ReflectionClassName",
-    "title": "Reflection Class Name",
-    "description": "Reflection Class Name",
-    "timeToFix": 5
+    "title": "Use a string for `class_name` option value in the definition of a reflection.",
+    "description": "Use a string for `class_name` option value in the definition of a reflection.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Safe",
+        "description": "Safe"
+      }
+    ]
   },
   {
     "patternId": "Rails_RefuteMethods",
-    "title": "Refute Methods",
-    "description": "Refute Methods",
-    "timeToFix": 5
+    "title": "Use `assert_not` methods instead of `refute` methods.",
+    "description": "Use `assert_not` methods instead of `refute` methods.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "EnforcedStyle",
+        "description": "EnforcedStyle"
+      },
+      {
+        "name": "SupportedStyles",
+        "description": "SupportedStyles"
+      },
+      {
+        "name": "Include",
+        "description": "Include"
+      }
+    ]
   },
   {
     "patternId": "Rails_RelativeDateConstant",
-    "title": "Relative Date Constant",
-    "description": "Relative Date Constant",
-    "timeToFix": 5
+    "title": "Do not assign relative date to constants.",
+    "description": "Do not assign relative date to constants.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "SafeAutoCorrect",
+        "description": "SafeAutoCorrect"
+      }
+    ]
   },
   {
     "patternId": "Rails_RenderInline",
-    "title": "Render Inline",
-    "description": "Render Inline",
+    "title": "Prefer using a template over inline rendering.",
+    "description": "Prefer using a template over inline rendering.",
     "timeToFix": 5
   },
   {
     "patternId": "Rails_RenderPlainText",
-    "title": "Render Plain Text",
-    "description": "Render Plain Text",
-    "timeToFix": 5
+    "title": "Prefer `render plain:` over `render text:`.",
+    "description": "Prefer `render plain:` over `render text:`.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "ContentTypeCompatibility",
+        "description": "ContentTypeCompatibility"
+      }
+    ]
   },
   {
     "patternId": "Rails_RequestReferer",
-    "title": "Request Referer",
-    "description": "Request Referer",
-    "timeToFix": 5
+    "title": "Use consistent syntax for request.referer.",
+    "description": "Use consistent syntax for request.referer.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "EnforcedStyle",
+        "description": "EnforcedStyle"
+      },
+      {
+        "name": "SupportedStyles",
+        "description": "SupportedStyles"
+      }
+    ]
   },
   {
     "patternId": "Rails_RequireDependency",
-    "title": "Require Dependency",
-    "description": "Require Dependency",
+    "title": "Do not use `require_dependency` when running in Zeitwerk mode. `require_dependency` is for autoloading in classic mode.",
+    "description": "Do not use `require_dependency` when running in Zeitwerk mode. `require_dependency` is for autoloading in classic mode.",
     "timeToFix": 5
   },
   {
     "patternId": "Rails_ResponseParsedBody",
-    "title": "Response Parsed Body",
-    "description": "Response Parsed Body",
-    "timeToFix": 5
+    "title": "Prefer `response.parsed_body` to custom parsing logic for `response.body`.",
+    "description": "Prefer `response.parsed_body` to custom parsing logic for `response.body`.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Safe",
+        "description": "Safe"
+      },
+      {
+        "name": "Include",
+        "description": "Include"
+      }
+    ]
   },
   {
     "patternId": "Rails_ReversibleMigration",
-    "title": "Reversible Migration",
-    "description": "Reversible Migration",
-    "timeToFix": 5
+    "title": "Checks whether the change method of the migration file is reversible.",
+    "description": "Checks whether the change method of the migration file is reversible.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Include",
+        "description": "Include"
+      }
+    ]
   },
   {
     "patternId": "Rails_ReversibleMigrationMethodDefinition",
-    "title": "Reversible Migration Method Definition",
-    "description": "Reversible Migration Method Definition",
-    "timeToFix": 5
+    "title": "Checks whether the migration implements either a `change` method or both an `up` and a `down` method.",
+    "description": "Checks whether the migration implements either a `change` method or both an `up` and a `down` method.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Include",
+        "description": "Include"
+      }
+    ]
   },
   {
     "patternId": "Rails_RootJoinChain",
-    "title": "Root Join Chain",
-    "description": "Root Join Chain",
+    "title": "Use a single `#join` instead of chaining on `Rails.root` or `Rails.public_path`.",
+    "description": "Use a single `#join` instead of chaining on `Rails.root` or `Rails.public_path`.",
     "timeToFix": 5
   },
   {
     "patternId": "Rails_RootPathnameMethods",
-    "title": "Root Pathname Methods",
-    "description": "Root Pathname Methods",
-    "timeToFix": 5
+    "title": "Use `Rails.root` IO methods instead of passing it to `File`.",
+    "description": "Use `Rails.root` IO methods instead of passing it to `File`.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "SafeAutoCorrect",
+        "description": "SafeAutoCorrect"
+      }
+    ]
   },
   {
     "patternId": "Rails_RootPublicPath",
-    "title": "Root Public Path",
-    "description": "Root Public Path",
+    "title": "Favor `Rails.public_path` over `Rails.root` with `'public'`.",
+    "description": "Favor `Rails.public_path` over `Rails.root` with `'public'`.",
     "timeToFix": 5
   },
   {
     "patternId": "Rails_SafeNavigation",
-    "title": "Safe Navigation",
-    "description": "Safe Navigation",
-    "timeToFix": 5
+    "title": "Use Ruby's safe navigation operator (`&.`) instead of `try!`.",
+    "description": "Use Ruby's safe navigation operator (`&.`) instead of `try!`.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "ConvertTry",
+        "description": "ConvertTry"
+      }
+    ]
   },
   {
     "patternId": "Rails_SafeNavigationWithBlank",
-    "title": "Safe Navigation With Blank",
-    "description": "Safe Navigation With Blank",
-    "timeToFix": 5
+    "title": "Avoid `foo&.blank?` in conditionals.",
+    "description": "Avoid `foo&.blank?` in conditionals.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "SafeAutoCorrect",
+        "description": "SafeAutoCorrect"
+      }
+    ]
   },
   {
     "patternId": "Rails_SaveBang",
-    "title": "Save Bang",
-    "description": "Save Bang",
-    "timeToFix": 5
+    "title": "Identifies possible cases where Active Record save! or related should be used.",
+    "description": "Identifies possible cases where Active Record save! or related should be used.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "AllowImplicitReturn",
+        "description": "AllowImplicitReturn"
+      },
+      {
+        "name": "AllowedReceivers",
+        "description": "AllowedReceivers"
+      },
+      {
+        "name": "SafeAutoCorrect",
+        "description": "SafeAutoCorrect"
+      }
+    ]
   },
   {
     "patternId": "Rails_SchemaComment",
-    "title": "Schema Comment",
-    "description": "Schema Comment",
+    "title": "Enforces the use of the `comment` option when adding a new table or column to the database during a migration.",
+    "description": "Enforces the use of the `comment` option when adding a new table or column to the database during a migration.",
     "timeToFix": 5
   },
   {
     "patternId": "Rails_ScopeArgs",
-    "title": "Scope Args",
-    "description": "Scope Args",
-    "timeToFix": 5
+    "title": "Checks the arguments of ActiveRecord scopes.",
+    "description": "Checks the arguments of ActiveRecord scopes.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Include",
+        "description": "Include"
+      }
+    ]
   },
   {
     "patternId": "Rails_SelectMap",
-    "title": "Select Map",
-    "description": "Select Map",
-    "timeToFix": 5
+    "title": "Checks for uses of `select(:column_name)` with `map(&:column_name)`.",
+    "description": "Checks for uses of `select(:column_name)` with `map(&:column_name)`.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Safe",
+        "description": "Safe"
+      }
+    ]
   },
   {
     "patternId": "Rails_ShortI18n",
-    "title": "Short I18n",
-    "description": "Short I18n",
-    "timeToFix": 5
+    "title": "Use the short form of the I18n methods: `t` instead of `translate` and `l` instead of `localize`.",
+    "description": "Use the short form of the I18n methods: `t` instead of `translate` and `l` instead of `localize`.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "EnforcedStyle",
+        "description": "EnforcedStyle"
+      },
+      {
+        "name": "SupportedStyles",
+        "description": "SupportedStyles"
+      }
+    ]
   },
   {
     "patternId": "Rails_SkipsModelValidations",
-    "title": "Skips Model Validations",
-    "description": "Skips Model Validations",
-    "timeToFix": 5
+    "title": "Use methods that skips model validations with caution. See reference for more information.",
+    "description": "Use methods that skips model validations with caution. See reference for more information.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Safe",
+        "description": "Safe"
+      },
+      {
+        "name": "ForbiddenMethods",
+        "description": "ForbiddenMethods"
+      },
+      {
+        "name": "AllowedMethods",
+        "description": "AllowedMethods"
+      }
+    ]
   },
   {
     "patternId": "Rails_SquishedSQLHeredocs",
-    "title": "Squished S Q L Heredocs",
-    "description": "Squished S Q L Heredocs",
-    "timeToFix": 5
+    "title": "Checks SQL heredocs to use `.squish`.",
+    "description": "Checks SQL heredocs to use `.squish`.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "SafeAutoCorrect",
+        "description": "SafeAutoCorrect"
+      }
+    ]
   },
   {
     "patternId": "Rails_StripHeredoc",
-    "title": "Strip Heredoc",
-    "description": "Strip Heredoc",
+    "title": "Enforces the use of squiggly heredoc over `strip_heredoc`.",
+    "description": "Enforces the use of squiggly heredoc over `strip_heredoc`.",
     "timeToFix": 5
   },
   {
     "patternId": "Rails_TableNameAssignment",
-    "title": "Table Name Assignment",
-    "description": "Table Name Assignment",
-    "timeToFix": 5
+    "title": "Do not use `self.table_name =`. Use Inflections or `table_name_prefix` instead.",
+    "description": "Do not use `self.table_name =`. Use Inflections or `table_name_prefix` instead.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Include",
+        "description": "Include"
+      }
+    ]
   },
   {
     "patternId": "Rails_ThreeStateBooleanColumn",
-    "title": "Three State Boolean Column",
-    "description": "Three State Boolean Column",
-    "timeToFix": 5
+    "title": "Add a default value and a `NOT NULL` constraint to boolean columns.",
+    "description": "Add a default value and a `NOT NULL` constraint to boolean columns.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Include",
+        "description": "Include"
+      }
+    ]
   },
   {
     "patternId": "Rails_TimeZone",
-    "title": "Time Zone",
-    "description": "Time Zone",
-    "timeToFix": 5
+    "title": "Checks the correct usage of time zone aware methods.",
+    "description": "Checks the correct usage of time zone aware methods.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "SafeAutoCorrect",
+        "description": "SafeAutoCorrect"
+      },
+      {
+        "name": "EnforcedStyle",
+        "description": "EnforcedStyle"
+      },
+      {
+        "name": "SupportedStyles",
+        "description": "SupportedStyles"
+      },
+      {
+        "name": "Exclude",
+        "description": "Exclude"
+      }
+    ]
   },
   {
     "patternId": "Rails_TimeZoneAssignment",
-    "title": "Time Zone Assignment",
-    "description": "Time Zone Assignment",
-    "timeToFix": 5
+    "title": "Prefer the usage of `Time.use_zone` instead of manually updating `Time.zone` value.",
+    "description": "Prefer the usage of `Time.use_zone` instead of manually updating `Time.zone` value.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Include",
+        "description": "Include"
+      }
+    ]
   },
   {
     "patternId": "Rails_ToFormattedS",
-    "title": "To Formatted S",
-    "description": "To Formatted S",
-    "timeToFix": 5
+    "title": "Checks for consistent uses of `to_fs` or `to_formatted_s`.",
+    "description": "Checks for consistent uses of `to_fs` or `to_formatted_s`.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "EnforcedStyle",
+        "description": "EnforcedStyle"
+      },
+      {
+        "name": "SupportedStyles",
+        "description": "SupportedStyles"
+      }
+    ]
   },
   {
     "patternId": "Rails_ToSWithArgument",
-    "title": "To S With Argument",
-    "description": "To S With Argument",
-    "timeToFix": 5
+    "title": "Identifies passing any argument to `#to_s`.",
+    "description": "Identifies passing any argument to `#to_s`.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Safe",
+        "description": "Safe"
+      }
+    ]
   },
   {
     "patternId": "Rails_TopLevelHashWithIndifferentAccess",
-    "title": "Top Level Hash With Indifferent Access",
-    "description": "Top Level Hash With Indifferent Access",
-    "timeToFix": 5
+    "title": "Identifies top-level `HashWithIndifferentAccess`.",
+    "description": "Identifies top-level `HashWithIndifferentAccess`.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Severity",
+        "description": "Severity"
+      }
+    ]
   },
   {
     "patternId": "Rails_TransactionExitStatement",
-    "title": "Transaction Exit Statement",
-    "description": "Transaction Exit Statement",
-    "timeToFix": 5
+    "title": "Avoid the usage of `return`, `break` and `throw` in transaction blocks.",
+    "description": "Avoid the usage of `return`, `break` and `throw` in transaction blocks.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "TransactionMethods",
+        "description": "TransactionMethods"
+      }
+    ]
   },
   {
     "patternId": "Rails_UniqBeforePluck",
-    "title": "Uniq Before Pluck",
-    "description": "Uniq Before Pluck",
-    "timeToFix": 5
+    "title": "Prefer the use of uniq or distinct before pluck.",
+    "description": "Prefer the use of uniq or distinct before pluck.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "EnforcedStyle",
+        "description": "EnforcedStyle"
+      },
+      {
+        "name": "SupportedStyles",
+        "description": "SupportedStyles"
+      },
+      {
+        "name": "SafeAutoCorrect",
+        "description": "SafeAutoCorrect"
+      }
+    ]
   },
   {
     "patternId": "Rails_UniqueValidationWithoutIndex",
-    "title": "Unique Validation Without Index",
-    "description": "Unique Validation Without Index",
-    "timeToFix": 5
+    "title": "Uniqueness validation should have a unique index on the database column.",
+    "description": "Uniqueness validation should have a unique index on the database column.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Include",
+        "description": "Include"
+      }
+    ]
   },
   {
     "patternId": "Rails_UnknownEnv",
-    "title": "Unknown Env",
-    "description": "Unknown Env",
-    "timeToFix": 5
+    "title": "Use correct environment name.",
+    "description": "Use correct environment name.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Severity",
+        "description": "Severity"
+      },
+      {
+        "name": "Environments",
+        "description": "Environments"
+      }
+    ]
   },
   {
     "patternId": "Rails_UnusedIgnoredColumns",
-    "title": "Unused Ignored Columns",
-    "description": "Unused Ignored Columns",
-    "timeToFix": 5
+    "title": "Remove a column that does not exist from `ignored_columns`.",
+    "description": "Remove a column that does not exist from `ignored_columns`.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Include",
+        "description": "Include"
+      }
+    ]
   },
   {
     "patternId": "Rails_UnusedRenderContent",
-    "title": "Unused Render Content",
-    "description": "Unused Render Content",
-    "timeToFix": 5
+    "title": "Do not specify body content for a response with a non-content status code.",
+    "description": "Do not specify body content for a response with a non-content status code.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Severity",
+        "description": "Severity"
+      }
+    ]
   },
   {
     "patternId": "Rails_Validation",
-    "title": "Validation",
-    "description": "Validation",
-    "timeToFix": 5
+    "title": "Use validates :attribute, hash of validations.",
+    "description": "Use validates :attribute, hash of validations.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Include",
+        "description": "Include"
+      }
+    ]
   },
   {
     "patternId": "Rails_WhereEquals",
-    "title": "Where Equals",
-    "description": "Where Equals",
-    "timeToFix": 5
+    "title": "Pass conditions to `where` and `where.not` as a hash instead of manually constructing SQL.",
+    "description": "Pass conditions to `where` and `where.not` as a hash instead of manually constructing SQL.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "SafeAutoCorrect",
+        "description": "SafeAutoCorrect"
+      }
+    ]
   },
   {
     "patternId": "Rails_WhereExists",
-    "title": "Where Exists",
-    "description": "Where Exists",
-    "timeToFix": 5
+    "title": "Prefer `exists?(...)` over `where(...).exists?`.",
+    "description": "Prefer `exists?(...)` over `where(...).exists?`.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "SafeAutoCorrect",
+        "description": "SafeAutoCorrect"
+      },
+      {
+        "name": "EnforcedStyle",
+        "description": "EnforcedStyle"
+      },
+      {
+        "name": "SupportedStyles",
+        "description": "SupportedStyles"
+      }
+    ]
   },
   {
     "patternId": "Rails_WhereMissing",
-    "title": "Where Missing",
-    "description": "Where Missing",
+    "title": "Use `where.missing(...)` to find missing relationship records.",
+    "description": "Use `where.missing(...)` to find missing relationship records.",
     "timeToFix": 5
   },
   {
     "patternId": "Rails_WhereNot",
-    "title": "Where Not",
-    "description": "Where Not",
+    "title": "Use `where.not(...)` instead of manually constructing negated SQL in `where`.",
+    "description": "Use `where.not(...)` instead of manually constructing negated SQL in `where`.",
     "timeToFix": 5
   },
   {
     "patternId": "Rails_WhereNotWithMultipleConditions",
-    "title": "Where Not With Multiple Conditions",
-    "description": "Where Not With Multiple Conditions",
-    "timeToFix": 5
+    "title": "Do not use `where.not(...)` with multiple conditions.",
+    "description": "Do not use `where.not(...)` with multiple conditions.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Severity",
+        "description": "Severity"
+      }
+    ]
   },
   {
     "patternId": "Rails_WhereRange",
-    "title": "Where Range",
-    "description": "Where Range",
-    "timeToFix": 5
+    "title": "Use ranges in `where` instead of manually constructing SQL.",
+    "description": "Use ranges in `where` instead of manually constructing SQL.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "SafeAutoCorrect",
+        "description": "SafeAutoCorrect"
+      }
+    ]
   },
   {
     "patternId": "Sorbet_BindingConstantWithoutTypeAlias",

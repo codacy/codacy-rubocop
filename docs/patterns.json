@@ -1,6 +1,6 @@
 {
   "name": "rubocop",
-  "version": "1.74.0",
+  "version": "1.75.1",
   "patterns": [
     {
       "patternId": "Migration_DepartmentName",
@@ -2700,7 +2700,23 @@
         },
         {
           "name": "AllowedMethods",
-          "default": []
+          "default": [
+            "ago",
+            "from_now",
+            "second",
+            "seconds",
+            "minute",
+            "minutes",
+            "hour",
+            "hours",
+            "day",
+            "days",
+            "week",
+            "weeks",
+            "fortnight",
+            "fortnights",
+            "in_milliseconds"
+          ]
         },
         {
           "name": "AllowedPatterns",
@@ -2855,7 +2871,9 @@
             "is_a?",
             "eql?",
             "respond_to?",
-            "equal?"
+            "equal?",
+            "presence",
+            "present?"
           ]
         },
         {
@@ -2984,6 +3002,7 @@
             "present?",
             "blank?",
             "presence",
+            "presence_in",
             "try",
             "try!",
             "in?"
@@ -3904,6 +3923,17 @@
         {
           "name": "AllowedPatterns",
           "default": []
+        },
+        {
+          "name": "ForbiddenIdentifiers",
+          "default": [
+            "__id__",
+            "__send__"
+          ]
+        },
+        {
+          "name": "ForbiddenPatterns",
+          "default": []
         }
       ],
       "enabled": false
@@ -3964,7 +3994,8 @@
           "default": [
             "is_",
             "has_",
-            "have_"
+            "have_",
+            "does_"
           ]
         },
         {
@@ -3972,7 +4003,8 @@
           "default": [
             "is_",
             "has_",
-            "have_"
+            "have_",
+            "does_"
           ]
         },
         {
@@ -4587,7 +4619,9 @@
         },
         {
           "name": "AllowedReceivers",
-          "default": []
+          "default": [
+            "params"
+          ]
         }
       ],
       "enabled": false
@@ -5280,7 +5314,9 @@
         },
         {
           "name": "AllowedMethods",
-          "default": []
+          "default": [
+            "redirect"
+          ]
         },
         {
           "name": "AllowedPatterns",
@@ -5414,6 +5450,18 @@
     },
     {
       "patternId": "Style_HashExcept",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "Safe",
+          "default": "false"
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "Style_HashFetchChain",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [
@@ -5636,7 +5684,7 @@
         },
         {
           "name": "InverseMethods",
-          "default": "{\"!=\": :==, \">\": :<=, \"<=\": :>, \"<\": :>=, \">=\": :<, \"!~\": :=~, zero?: :nonzero?, nonzero?: :zero?, any?: :none?, none?: :any?, even?: :odd?, odd?: :even?}"
+          "default": "{\"!=\": :==, \">\": :<=, \"<=\": :>, \"<\": :>=, \">=\": :<, \"!~\": :=~, zero?: :nonzero?, nonzero?: :zero?, any?: :none?, none?: :any?, even?: :odd?, odd?: :even?, present?: :blank?, blank?: :present?, include?: :exclude?, exclude?: :include?}"
         }
       ],
       "enabled": false
@@ -5668,6 +5716,26 @@
       "patternId": "Style_ItAssignment",
       "level": "Info",
       "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "Style_ItBlockParameter",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "only_numbered_parameters"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": [
+            "only_numbered_parameters",
+            "always",
+            "disallow"
+          ]
+        }
+      ],
       "enabled": false
     },
     {
@@ -6458,6 +6526,10 @@
         {
           "name": "MinBodyLength",
           "default": "3"
+        },
+        {
+          "name": "AllowConsecutiveConditionals",
+          "default": "false"
         },
         {
           "name": "SupportedStyles",
@@ -7463,7 +7535,9 @@
         {
           "name": "AllowedMethods",
           "default": [
-            "define_method"
+            "define_method",
+            "mail",
+            "respond_to"
           ]
         },
         {
@@ -8203,48 +8277,126 @@
       "patternId": "Rails_ActionControllerFlashBeforeRender",
       "level": "Warning",
       "category": "ErrorProne",
-      "enabled": false
-    },
-    {
-      "patternId": "Rails_StrongParametersExpect",
-      "level": "Warning",
-      "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "SafeAutoCorrect",
+          "default": "false"
+        }
+      ],
       "enabled": false
     },
     {
       "patternId": "Rails_ActionControllerTestCase",
       "level": "Warning",
       "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "SafeAutoCorrect",
+          "default": "false"
+        },
+        {
+          "name": "Include",
+          "default": [
+            "**/test/**/*.rb"
+          ]
+        }
+      ],
       "enabled": false
     },
     {
       "patternId": "Rails_ActionFilter",
       "level": "Warning",
       "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "action"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": [
+            "action",
+            "filter"
+          ]
+        },
+        {
+          "name": "Include",
+          "default": [
+            "app/controllers/**/*.rb",
+            "app/mailers/**/*.rb"
+          ]
+        }
+      ],
       "enabled": false
     },
     {
       "patternId": "Rails_ActionOrder",
       "level": "Warning",
       "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "ExpectedOrder",
+          "default": [
+            "index",
+            "show",
+            "new",
+            "edit",
+            "create",
+            "update",
+            "destroy"
+          ]
+        },
+        {
+          "name": "Include",
+          "default": [
+            "app/controllers/**/*.rb"
+          ]
+        }
+      ],
       "enabled": false
     },
     {
       "patternId": "Rails_ActiveRecordAliases",
       "level": "Warning",
       "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "SafeAutoCorrect",
+          "default": "false"
+        }
+      ],
       "enabled": false
     },
     {
       "patternId": "Rails_ActiveRecordCallbacksOrder",
       "level": "Warning",
       "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "Include",
+          "default": [
+            "app/models/**/*.rb"
+          ]
+        }
+      ],
       "enabled": false
     },
     {
       "patternId": "Rails_ActiveRecordOverride",
       "level": "Warning",
       "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "Severity",
+          "default": "warning"
+        },
+        {
+          "name": "Include",
+          "default": [
+            "app/models/**/*.rb"
+          ]
+        }
+      ],
       "enabled": false
     },
     {
@@ -8257,12 +8409,26 @@
       "patternId": "Rails_ActiveSupportOnLoad",
       "level": "Warning",
       "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "SafeAutoCorrect",
+          "default": "false"
+        }
+      ],
       "enabled": false
     },
     {
       "patternId": "Rails_AddColumnIndex",
       "level": "Warning",
       "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "Include",
+          "default": [
+            "db/**/*.rb"
+          ]
+        }
+      ],
       "enabled": false
     },
     {
@@ -8275,42 +8441,94 @@
       "patternId": "Rails_ApplicationController",
       "level": "Warning",
       "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "SafeAutoCorrect",
+          "default": "false"
+        }
+      ],
       "enabled": false
     },
     {
       "patternId": "Rails_ApplicationJob",
       "level": "Warning",
       "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "SafeAutoCorrect",
+          "default": "false"
+        }
+      ],
       "enabled": false
     },
     {
       "patternId": "Rails_ApplicationMailer",
       "level": "Warning",
       "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "SafeAutoCorrect",
+          "default": "false"
+        }
+      ],
       "enabled": false
     },
     {
       "patternId": "Rails_ApplicationRecord",
       "level": "Warning",
       "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "SafeAutoCorrect",
+          "default": "false"
+        },
+        {
+          "name": "Exclude",
+          "default": [
+            "db/**/*.rb"
+          ]
+        }
+      ],
       "enabled": false
     },
     {
       "patternId": "Rails_ArelStar",
       "level": "Warning",
       "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "SafeAutoCorrect",
+          "default": "false"
+        }
+      ],
       "enabled": false
     },
     {
       "patternId": "Rails_AssertNot",
       "level": "Warning",
       "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "Include",
+          "default": [
+            "**/test/**/*"
+          ]
+        }
+      ],
       "enabled": false
     },
     {
       "patternId": "Rails_AttributeDefaultBlockValue",
       "level": "Warning",
       "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "Include",
+          "default": [
+            "app/models/**/*"
+          ]
+        }
+      ],
       "enabled": false
     },
     {
@@ -8323,42 +8541,142 @@
       "patternId": "Rails_Blank",
       "level": "Warning",
       "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "SafeAutoCorrect",
+          "default": "false"
+        },
+        {
+          "name": "NilOrEmpty",
+          "default": "true"
+        },
+        {
+          "name": "NotPresent",
+          "default": "true"
+        },
+        {
+          "name": "UnlessPresent",
+          "default": "true"
+        }
+      ],
       "enabled": false
     },
     {
       "patternId": "Rails_BulkChangeTable",
       "level": "Warning",
       "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "Database",
+          "default": ""
+        },
+        {
+          "name": "SupportedDatabases",
+          "default": [
+            "mysql",
+            "postgresql"
+          ]
+        },
+        {
+          "name": "Include",
+          "default": [
+            "db/**/*.rb"
+          ]
+        }
+      ],
       "enabled": false
     },
     {
       "patternId": "Rails_CompactBlank",
       "level": "Warning",
       "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "Safe",
+          "default": "false"
+        }
+      ],
       "enabled": false
     },
     {
       "patternId": "Rails_ContentTag",
       "level": "Warning",
       "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "Exclude",
+          "default": [
+            "app/models/**/*.rb",
+            "config/**/*.rb"
+          ]
+        }
+      ],
       "enabled": false
     },
     {
       "patternId": "Rails_CreateTableWithTimestamps",
       "level": "Warning",
       "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "Include",
+          "default": [
+            "db/**/*.rb"
+          ]
+        },
+        {
+          "name": "Exclude",
+          "default": [
+            "db/**/*_create_active_storage_tables.active_storage.rb",
+            "db/**/*_create_active_storage_variant_records.active_storage.rb"
+          ]
+        }
+      ],
       "enabled": false
     },
     {
       "patternId": "Rails_DangerousColumnNames",
       "level": "Warning",
       "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "Severity",
+          "default": "warning"
+        },
+        {
+          "name": "Include",
+          "default": [
+            "db/**/*.rb"
+          ]
+        }
+      ],
       "enabled": false
     },
     {
       "patternId": "Rails_Date",
       "level": "Warning",
       "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "SafeAutoCorrect",
+          "default": "false"
+        },
+        {
+          "name": "EnforcedStyle",
+          "default": "flexible"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": [
+            "strict",
+            "flexible"
+          ]
+        },
+        {
+          "name": "AllowToTime",
+          "default": "true"
+        }
+      ],
       "enabled": true
     },
     {
@@ -8371,6 +8689,12 @@
       "patternId": "Rails_Delegate",
       "level": "Warning",
       "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "EnforceForPrefixed",
+          "default": "true"
+        }
+      ],
       "enabled": false
     },
     {
@@ -8383,6 +8707,16 @@
       "patternId": "Rails_DeprecatedActiveModelErrorsMethods",
       "level": "Warning",
       "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "Severity",
+          "default": "warning"
+        },
+        {
+          "name": "Safe",
+          "default": "false"
+        }
+      ],
       "enabled": false
     },
     {
@@ -8395,12 +8729,24 @@
       "patternId": "Rails_DuplicateAssociation",
       "level": "Warning",
       "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "Severity",
+          "default": "warning"
+        }
+      ],
       "enabled": false
     },
     {
       "patternId": "Rails_DuplicateScope",
       "level": "Warning",
       "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "Severity",
+          "default": "warning"
+        }
+      ],
       "enabled": false
     },
     {
@@ -8413,6 +8759,33 @@
       "patternId": "Rails_DynamicFindBy",
       "level": "Warning",
       "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "Safe",
+          "default": "false"
+        },
+        {
+          "name": "Whitelist",
+          "default": [
+            "find_by_sql",
+            "find_by_token_for"
+          ]
+        },
+        {
+          "name": "AllowedMethods",
+          "default": [
+            "find_by_sql",
+            "find_by_token_for"
+          ]
+        },
+        {
+          "name": "AllowedReceivers",
+          "default": [
+            "Gem::Specification",
+            "page"
+          ]
+        }
+      ],
       "enabled": false
     },
     {
@@ -8425,18 +8798,46 @@
       "patternId": "Rails_EnumHash",
       "level": "Warning",
       "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "Include",
+          "default": [
+            "app/models/**/*.rb"
+          ]
+        }
+      ],
       "enabled": false
     },
     {
       "patternId": "Rails_EnumSyntax",
       "level": "Warning",
       "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "Severity",
+          "default": "warning"
+        },
+        {
+          "name": "Include",
+          "default": [
+            "app/models/**/*.rb"
+          ]
+        }
+      ],
       "enabled": false
     },
     {
       "patternId": "Rails_EnumUniqueness",
       "level": "Warning",
       "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "Include",
+          "default": [
+            "app/models/**/*.rb"
+          ]
+        }
+      ],
       "enabled": false
     },
     {
@@ -8455,12 +8856,52 @@
       "patternId": "Rails_EnvironmentVariableAccess",
       "level": "Warning",
       "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "Include",
+          "default": [
+            "app/**/*.rb",
+            "config/initializers/**/*.rb",
+            "lib/**/*.rb"
+          ]
+        },
+        {
+          "name": "Exclude",
+          "default": [
+            "lib/**/*.rake"
+          ]
+        },
+        {
+          "name": "AllowReads",
+          "default": "false"
+        },
+        {
+          "name": "AllowWrites",
+          "default": "false"
+        }
+      ],
       "enabled": false
     },
     {
       "patternId": "Rails_Exit",
       "level": "Warning",
       "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "Include",
+          "default": [
+            "app/**/*.rb",
+            "config/**/*.rb",
+            "lib/**/*.rb"
+          ]
+        },
+        {
+          "name": "Exclude",
+          "default": [
+            "lib/**/*.rake"
+          ]
+        }
+      ],
       "enabled": false
     },
     {
@@ -8473,12 +8914,31 @@
       "patternId": "Rails_FilePath",
       "level": "Warning",
       "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "slashes"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": [
+            "slashes",
+            "arguments"
+          ]
+        }
+      ],
       "enabled": false
     },
     {
       "patternId": "Rails_FindBy",
       "level": "Warning",
       "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "IgnoreWhereFirst",
+          "default": "true"
+        }
+      ],
       "enabled": false
     },
     {
@@ -8491,54 +8951,153 @@
       "patternId": "Rails_FindEach",
       "level": "Warning",
       "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "Safe",
+          "default": "false"
+        },
+        {
+          "name": "AllowedMethods",
+          "default": [
+            "order",
+            "limit",
+            "select",
+            "lock"
+          ]
+        },
+        {
+          "name": "AllowedPatterns",
+          "default": []
+        }
+      ],
       "enabled": false
     },
     {
       "patternId": "Rails_FreezeTime",
       "level": "Warning",
       "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "SafeAutoCorrect",
+          "default": "false"
+        }
+      ],
       "enabled": false
     },
     {
       "patternId": "Rails_HasAndBelongsToMany",
       "level": "Warning",
       "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "Include",
+          "default": [
+            "app/models/**/*.rb"
+          ]
+        }
+      ],
       "enabled": false
     },
     {
       "patternId": "Rails_HasManyOrHasOneDependent",
       "level": "Warning",
       "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "Include",
+          "default": [
+            "app/models/**/*.rb"
+          ]
+        }
+      ],
       "enabled": false
     },
     {
       "patternId": "Rails_HelperInstanceVariable",
       "level": "Warning",
       "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "Include",
+          "default": [
+            "app/helpers/**/*.rb"
+          ]
+        }
+      ],
       "enabled": false
     },
     {
       "patternId": "Rails_HttpPositionalArguments",
       "level": "Warning",
       "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "Include",
+          "default": [
+            "spec/**/*",
+            "test/**/*"
+          ]
+        }
+      ],
       "enabled": false
     },
     {
       "patternId": "Rails_HttpStatus",
       "level": "Warning",
       "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "symbolic"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": [
+            "numeric",
+            "symbolic"
+          ]
+        }
+      ],
       "enabled": false
     },
     {
       "patternId": "Rails_I18nLazyLookup",
       "level": "Warning",
       "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "lazy"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": [
+            "lazy",
+            "explicit"
+          ]
+        },
+        {
+          "name": "Include",
+          "default": [
+            "app/controllers/**/*.rb"
+          ]
+        }
+      ],
       "enabled": false
     },
     {
       "patternId": "Rails_I18nLocaleAssignment",
       "level": "Warning",
       "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "Include",
+          "default": [
+            "spec/**/*.rb",
+            "test/**/*.rb"
+          ]
+        }
+      ],
       "enabled": false
     },
     {
@@ -8551,12 +9110,27 @@
       "patternId": "Rails_IgnoredColumnsAssignment",
       "level": "Warning",
       "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "SafeAutoCorrect",
+          "default": "false"
+        }
+      ],
       "enabled": false
     },
     {
       "patternId": "Rails_IgnoredSkipActionFilterOption",
       "level": "Warning",
       "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "Include",
+          "default": [
+            "app/controllers/**/*.rb",
+            "app/mailers/**/*.rb"
+          ]
+        }
+      ],
       "enabled": false
     },
     {
@@ -8581,12 +9155,37 @@
       "patternId": "Rails_InverseOf",
       "level": "Warning",
       "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "IgnoreScopes",
+          "default": "false"
+        },
+        {
+          "name": "Include",
+          "default": [
+            "app/models/**/*.rb"
+          ]
+        }
+      ],
       "enabled": false
     },
     {
       "patternId": "Rails_LexicallyScopedActionFilter",
       "level": "Warning",
       "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "Safe",
+          "default": "false"
+        },
+        {
+          "name": "Include",
+          "default": [
+            "app/controllers/**/*.rb",
+            "app/mailers/**/*.rb"
+          ]
+        }
+      ],
       "enabled": false
     },
     {
@@ -8599,36 +9198,83 @@
       "patternId": "Rails_MailerName",
       "level": "Warning",
       "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "SafeAutoCorrect",
+          "default": "false"
+        },
+        {
+          "name": "Include",
+          "default": [
+            "app/mailers/**/*.rb"
+          ]
+        }
+      ],
       "enabled": false
     },
     {
       "patternId": "Rails_MatchRoute",
       "level": "Warning",
       "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "Include",
+          "default": [
+            "config/routes.rb",
+            "config/routes/**/*.rb"
+          ]
+        }
+      ],
       "enabled": false
     },
     {
       "patternId": "Rails_MigrationClassName",
       "level": "Warning",
       "category": "ErrorProne",
-      "enabled": false
-    },
-    {
-      "patternId": "Rails_MultipleRoutePaths",
-      "level": "Warning",
-      "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "Include",
+          "default": [
+            "db/**/*.rb"
+          ]
+        }
+      ],
       "enabled": false
     },
     {
       "patternId": "Rails_NegateInclude",
       "level": "Warning",
       "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "Safe",
+          "default": "false"
+        }
+      ],
       "enabled": false
     },
     {
       "patternId": "Rails_NotNullColumn",
       "level": "Warning",
       "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "Database",
+          "default": ""
+        },
+        {
+          "name": "SupportedDatabases",
+          "default": [
+            "mysql"
+          ]
+        },
+        {
+          "name": "Include",
+          "default": [
+            "db/**/*.rb"
+          ]
+        }
+      ],
       "enabled": false
     },
     {
@@ -8641,6 +9287,21 @@
       "patternId": "Rails_Output",
       "level": "Warning",
       "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "SafeAutoCorrect",
+          "default": "false"
+        },
+        {
+          "name": "Include",
+          "default": [
+            "app/**/*.rb",
+            "config/**/*.rb",
+            "db/**/*.rb",
+            "lib/**/*.rb"
+          ]
+        }
+      ],
       "enabled": false
     },
     {
@@ -8653,24 +9314,59 @@
       "patternId": "Rails_Pick",
       "level": "Warning",
       "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "Safe",
+          "default": "false"
+        }
+      ],
       "enabled": false
     },
     {
       "patternId": "Rails_Pluck",
       "level": "Warning",
       "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "Safe",
+          "default": "false"
+        }
+      ],
       "enabled": false
     },
     {
       "patternId": "Rails_PluckId",
       "level": "Warning",
       "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "Safe",
+          "default": "false"
+        }
+      ],
       "enabled": false
     },
     {
       "patternId": "Rails_PluckInWhere",
       "level": "Warning",
       "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "Safe",
+          "default": "false"
+        },
+        {
+          "name": "EnforcedStyle",
+          "default": "conservative"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": [
+            "conservative",
+            "aggressive"
+          ]
+        }
+      ],
       "enabled": false
     },
     {
@@ -8689,30 +9385,92 @@
       "patternId": "Rails_Present",
       "level": "Warning",
       "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "NotNilAndNotEmpty",
+          "default": "true"
+        },
+        {
+          "name": "NotBlank",
+          "default": "true"
+        },
+        {
+          "name": "UnlessBlank",
+          "default": "true"
+        }
+      ],
       "enabled": false
     },
     {
       "patternId": "Rails_RakeEnvironment",
       "level": "Warning",
       "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "Safe",
+          "default": "false"
+        },
+        {
+          "name": "Include",
+          "default": [
+            "**/Rakefile",
+            "**/*.rake"
+          ]
+        },
+        {
+          "name": "Exclude",
+          "default": [
+            "lib/capistrano/tasks/**/*.rake"
+          ]
+        }
+      ],
       "enabled": false
     },
     {
       "patternId": "Rails_ReadWriteAttribute",
       "level": "Warning",
       "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "Include",
+          "default": [
+            "app/models/**/*.rb"
+          ]
+        }
+      ],
       "enabled": false
     },
     {
       "patternId": "Rails_RedundantActiveRecordAllMethod",
       "level": "Warning",
       "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "Safe",
+          "default": "false"
+        },
+        {
+          "name": "AllowedReceivers",
+          "default": [
+            "ActionMailer::Preview",
+            "ActiveSupport::TimeZone"
+          ]
+        }
+      ],
       "enabled": false
     },
     {
       "patternId": "Rails_RedundantAllowNil",
       "level": "Warning",
       "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "Include",
+          "default": [
+            "app/models/**/*.rb"
+          ]
+        }
+      ],
       "enabled": false
     },
     {
@@ -8725,6 +9483,12 @@
       "patternId": "Rails_RedundantPresenceValidationOnBelongsTo",
       "level": "Warning",
       "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "SafeAutoCorrect",
+          "default": "false"
+        }
+      ],
       "enabled": false
     },
     {
@@ -8737,24 +9501,64 @@
       "patternId": "Rails_RedundantTravelBack",
       "level": "Warning",
       "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "Include",
+          "default": [
+            "spec/**/*.rb",
+            "test/**/*.rb"
+          ]
+        }
+      ],
       "enabled": false
     },
     {
       "patternId": "Rails_ReflectionClassName",
       "level": "Warning",
       "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "Safe",
+          "default": "false"
+        }
+      ],
       "enabled": false
     },
     {
       "patternId": "Rails_RefuteMethods",
       "level": "Warning",
       "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "assert_not"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": [
+            "assert_not",
+            "refute"
+          ]
+        },
+        {
+          "name": "Include",
+          "default": [
+            "**/test/**/*"
+          ]
+        }
+      ],
       "enabled": false
     },
     {
       "patternId": "Rails_RelativeDateConstant",
       "level": "Warning",
       "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "SafeAutoCorrect",
+          "default": "false"
+        }
+      ],
       "enabled": false
     },
     {
@@ -8767,12 +9571,31 @@
       "patternId": "Rails_RenderPlainText",
       "level": "Warning",
       "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "ContentTypeCompatibility",
+          "default": "true"
+        }
+      ],
       "enabled": false
     },
     {
       "patternId": "Rails_RequestReferer",
       "level": "Warning",
       "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "referer"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": [
+            "referer",
+            "referrer"
+          ]
+        }
+      ],
       "enabled": false
     },
     {
@@ -8785,18 +9608,49 @@
       "patternId": "Rails_ResponseParsedBody",
       "level": "Warning",
       "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "Safe",
+          "default": "false"
+        },
+        {
+          "name": "Include",
+          "default": [
+            "spec/controllers/**/*.rb",
+            "spec/requests/**/*.rb",
+            "test/controllers/**/*.rb",
+            "test/integration/**/*.rb"
+          ]
+        }
+      ],
       "enabled": false
     },
     {
       "patternId": "Rails_ReversibleMigration",
       "level": "Warning",
       "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "Include",
+          "default": [
+            "db/**/*.rb"
+          ]
+        }
+      ],
       "enabled": false
     },
     {
       "patternId": "Rails_ReversibleMigrationMethodDefinition",
       "level": "Warning",
       "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "Include",
+          "default": [
+            "db/**/*.rb"
+          ]
+        }
+      ],
       "enabled": false
     },
     {
@@ -8809,6 +9663,12 @@
       "patternId": "Rails_RootPathnameMethods",
       "level": "Warning",
       "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "SafeAutoCorrect",
+          "default": "false"
+        }
+      ],
       "enabled": false
     },
     {
@@ -8821,18 +9681,44 @@
       "patternId": "Rails_SafeNavigation",
       "level": "Warning",
       "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "ConvertTry",
+          "default": "false"
+        }
+      ],
       "enabled": false
     },
     {
       "patternId": "Rails_SafeNavigationWithBlank",
       "level": "Warning",
       "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "SafeAutoCorrect",
+          "default": "false"
+        }
+      ],
       "enabled": false
     },
     {
       "patternId": "Rails_SaveBang",
       "level": "Warning",
       "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "AllowImplicitReturn",
+          "default": "true"
+        },
+        {
+          "name": "AllowedReceivers",
+          "default": []
+        },
+        {
+          "name": "SafeAutoCorrect",
+          "default": "false"
+        }
+      ],
       "enabled": false
     },
     {
@@ -8845,30 +9731,96 @@
       "patternId": "Rails_ScopeArgs",
       "level": "Warning",
       "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "Include",
+          "default": [
+            "app/models/**/*.rb"
+          ]
+        }
+      ],
       "enabled": false
     },
     {
       "patternId": "Rails_SelectMap",
       "level": "Warning",
       "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "Safe",
+          "default": "false"
+        }
+      ],
       "enabled": false
     },
     {
       "patternId": "Rails_ShortI18n",
       "level": "Warning",
       "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "conservative"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": [
+            "conservative",
+            "aggressive"
+          ]
+        }
+      ],
       "enabled": false
     },
     {
       "patternId": "Rails_SkipsModelValidations",
       "level": "Warning",
       "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "Safe",
+          "default": "false"
+        },
+        {
+          "name": "ForbiddenMethods",
+          "default": [
+            "decrement!",
+            "decrement_counter",
+            "increment!",
+            "increment_counter",
+            "insert",
+            "insert!",
+            "insert_all",
+            "insert_all!",
+            "toggle!",
+            "touch",
+            "touch_all",
+            "update_all",
+            "update_attribute",
+            "update_column",
+            "update_columns",
+            "update_counters",
+            "upsert",
+            "upsert_all"
+          ]
+        },
+        {
+          "name": "AllowedMethods",
+          "default": []
+        }
+      ],
       "enabled": false
     },
     {
       "patternId": "Rails_SquishedSQLHeredocs",
       "level": "Warning",
       "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "SafeAutoCorrect",
+          "default": "false"
+        }
+      ],
       "enabled": false
     },
     {
@@ -8881,96 +9833,259 @@
       "patternId": "Rails_TableNameAssignment",
       "level": "Warning",
       "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "Include",
+          "default": [
+            "app/models/**/*.rb"
+          ]
+        }
+      ],
       "enabled": false
     },
     {
       "patternId": "Rails_ThreeStateBooleanColumn",
       "level": "Warning",
       "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "Include",
+          "default": [
+            "db/**/*.rb"
+          ]
+        }
+      ],
       "enabled": false
     },
     {
       "patternId": "Rails_TimeZone",
       "level": "Warning",
       "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "SafeAutoCorrect",
+          "default": "false"
+        },
+        {
+          "name": "EnforcedStyle",
+          "default": "flexible"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": [
+            "strict",
+            "flexible"
+          ]
+        },
+        {
+          "name": "Exclude",
+          "default": [
+            "**/*.gemspec"
+          ]
+        }
+      ],
       "enabled": false
     },
     {
       "patternId": "Rails_TimeZoneAssignment",
       "level": "Warning",
       "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "Include",
+          "default": [
+            "spec/**/*.rb",
+            "test/**/*.rb"
+          ]
+        }
+      ],
       "enabled": false
     },
     {
       "patternId": "Rails_ToFormattedS",
       "level": "Warning",
       "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "to_fs"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": [
+            "to_fs",
+            "to_formatted_s"
+          ]
+        }
+      ],
       "enabled": false
     },
     {
       "patternId": "Rails_ToSWithArgument",
       "level": "Warning",
       "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "Safe",
+          "default": "false"
+        }
+      ],
       "enabled": false
     },
     {
       "patternId": "Rails_TopLevelHashWithIndifferentAccess",
       "level": "Warning",
       "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "Severity",
+          "default": "warning"
+        }
+      ],
       "enabled": false
     },
     {
       "patternId": "Rails_TransactionExitStatement",
       "level": "Warning",
       "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "TransactionMethods",
+          "default": []
+        }
+      ],
       "enabled": false
     },
     {
       "patternId": "Rails_UniqBeforePluck",
       "level": "Warning",
       "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "EnforcedStyle",
+          "default": "conservative"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": [
+            "conservative",
+            "aggressive"
+          ]
+        },
+        {
+          "name": "SafeAutoCorrect",
+          "default": "false"
+        }
+      ],
       "enabled": false
     },
     {
       "patternId": "Rails_UniqueValidationWithoutIndex",
       "level": "Warning",
       "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "Include",
+          "default": [
+            "app/models/**/*.rb"
+          ]
+        }
+      ],
       "enabled": false
     },
     {
       "patternId": "Rails_UnknownEnv",
       "level": "Warning",
       "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "Severity",
+          "default": "warning"
+        },
+        {
+          "name": "Environments",
+          "default": [
+            "development",
+            "test",
+            "production"
+          ]
+        }
+      ],
       "enabled": false
     },
     {
       "patternId": "Rails_UnusedIgnoredColumns",
       "level": "Warning",
       "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "Include",
+          "default": [
+            "app/models/**/*.rb"
+          ]
+        }
+      ],
       "enabled": false
     },
     {
       "patternId": "Rails_UnusedRenderContent",
       "level": "Warning",
       "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "Severity",
+          "default": "warning"
+        }
+      ],
       "enabled": false
     },
     {
       "patternId": "Rails_Validation",
       "level": "Warning",
       "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "Include",
+          "default": [
+            "app/models/**/*.rb"
+          ]
+        }
+      ],
       "enabled": false
     },
     {
       "patternId": "Rails_WhereEquals",
       "level": "Warning",
       "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "SafeAutoCorrect",
+          "default": "false"
+        }
+      ],
       "enabled": false
     },
     {
       "patternId": "Rails_WhereExists",
       "level": "Warning",
       "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "SafeAutoCorrect",
+          "default": "false"
+        },
+        {
+          "name": "EnforcedStyle",
+          "default": "exists"
+        },
+        {
+          "name": "SupportedStyles",
+          "default": [
+            "exists",
+            "where"
+          ]
+        }
+      ],
       "enabled": false
     },
     {
@@ -8989,12 +10104,24 @@
       "patternId": "Rails_WhereNotWithMultipleConditions",
       "level": "Warning",
       "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "Severity",
+          "default": "warning"
+        }
+      ],
       "enabled": false
     },
     {
       "patternId": "Rails_WhereRange",
       "level": "Warning",
       "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "SafeAutoCorrect",
+          "default": "false"
+        }
+      ],
       "enabled": false
     },
     {

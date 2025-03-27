@@ -11,10 +11,6 @@ desired.
 
 If you are defining custom transaction methods, you can configure it with `TransactionMethods`.
 
-NOTE: This cop is disabled on Rails >= 7.2 because transactions were restored
-to their historical behavior. In Rails 7.1, the behavior is controlled with
-the config `active_record.commit_transaction_on_non_local_return`.
-
 # Examples
 
 ```ruby
