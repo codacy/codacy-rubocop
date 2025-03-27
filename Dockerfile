@@ -14,7 +14,7 @@ RUN apk add --no-cache ruby ruby-etc ruby-dev ruby-irb ruby-rake ruby-io-console
     libc-dev yaml-dev libpq-dev openjdk17-jre
 
 COPY Gemfile .
-COPY Gemfile.lock . 
+COPY Gemfile.lock .
 
 COPY doc_generation /doc_generator/doc_generation
 COPY scripts /doc_generator/scripts
@@ -42,7 +42,7 @@ COPY --from=doc-generator /doc_generator/docs /docs
 
 RUN adduser --uid 2004 --disabled-password --gecos "" docker
 RUN chown -R docker:docker /usr/local/bundle
-COPY /target/universal/stage/ /workdir/
+COPY target/universal/stage/ /workdir/
 RUN chmod +x /workdir/bin/codacy-rubocop
 USER docker
 WORKDIR /workdir

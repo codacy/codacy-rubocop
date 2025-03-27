@@ -338,6 +338,10 @@
       {
         "name": "IndentationWidth",
         "description": "IndentationWidth"
+      },
+      {
+        "name": "Exclude",
+        "description": "Exclude"
       }
     ]
   },
@@ -358,6 +362,10 @@
       {
         "name": "IndentationWidth",
         "description": "IndentationWidth"
+      },
+      {
+        "name": "Exclude",
+        "description": "Exclude"
       }
     ]
   },
@@ -406,6 +414,10 @@
       {
         "name": "SupportedStylesAlignWith",
         "description": "SupportedStylesAlignWith"
+      },
+      {
+        "name": "Exclude",
+        "description": "Exclude"
       }
     ]
   },
@@ -469,7 +481,13 @@
     "patternId": "Layout_ClosingParenthesisIndentation",
     "title": "Checks the indentation of hanging closing parentheses.",
     "description": "Checks the indentation of hanging closing parentheses.",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Exclude",
+        "description": "Exclude"
+      }
+    ]
   },
   {
     "patternId": "Layout_CommentIndentation",
@@ -555,7 +573,13 @@
     "patternId": "Layout_EmptyLineAfterGuardClause",
     "title": "Add empty line after guard clause.",
     "description": "Add empty line after guard clause.",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Exclude",
+        "description": "Exclude"
+      }
+    ]
   },
   {
     "patternId": "Layout_EmptyLineAfterMagicComment",
@@ -728,6 +752,10 @@
       {
         "name": "Severity",
         "description": "Severity"
+      },
+      {
+        "name": "Exclude",
+        "description": "Exclude"
       }
     ]
   },
@@ -784,6 +812,10 @@
       {
         "name": "IndentationWidth",
         "description": "IndentationWidth"
+      },
+      {
+        "name": "Exclude",
+        "description": "Exclude"
       }
     ]
   },
@@ -804,6 +836,10 @@
       {
         "name": "IndentationWidth",
         "description": "IndentationWidth"
+      },
+      {
+        "name": "Exclude",
+        "description": "Exclude"
       }
     ]
   },
@@ -816,6 +852,10 @@
       {
         "name": "AllowMultilineFinalElement",
         "description": "AllowMultilineFinalElement"
+      },
+      {
+        "name": "Exclude",
+        "description": "Exclude"
       }
     ]
   },
@@ -836,6 +876,10 @@
       {
         "name": "IndentationWidth",
         "description": "IndentationWidth"
+      },
+      {
+        "name": "Exclude",
+        "description": "Exclude"
       }
     ]
   },
@@ -848,6 +892,10 @@
       {
         "name": "AllowMultilineFinalElement",
         "description": "AllowMultilineFinalElement"
+      },
+      {
+        "name": "Exclude",
+        "description": "Exclude"
       }
     ]
   },
@@ -864,6 +912,10 @@
       {
         "name": "AllowedMethods",
         "description": "AllowedMethods"
+      },
+      {
+        "name": "Exclude",
+        "description": "Exclude"
       }
     ]
   },
@@ -896,6 +948,10 @@
       {
         "name": "IndentationWidth",
         "description": "IndentationWidth"
+      },
+      {
+        "name": "Exclude",
+        "description": "Exclude"
       }
     ]
   },
@@ -932,6 +988,10 @@
       {
         "name": "SupportedLastArgumentHashStyles",
         "description": "SupportedLastArgumentHashStyles"
+      },
+      {
+        "name": "Exclude",
+        "description": "Exclude"
       }
     ]
   },
@@ -960,6 +1020,10 @@
       {
         "name": "SupportedStyles",
         "description": "SupportedStyles"
+      },
+      {
+        "name": "Exclude",
+        "description": "Exclude"
       }
     ]
   },
@@ -996,6 +1060,10 @@
       {
         "name": "AllowedPatterns",
         "description": "AllowedPatterns"
+      },
+      {
+        "name": "Exclude",
+        "description": "Exclude"
       }
     ]
   },
@@ -1084,6 +1152,10 @@
       {
         "name": "IndentationWidth",
         "description": "IndentationWidth"
+      },
+      {
+        "name": "Exclude",
+        "description": "Exclude"
       }
     ]
   },
@@ -1120,6 +1192,10 @@
       {
         "name": "SplitStrings",
         "description": "SplitStrings"
+      },
+      {
+        "name": "Exclude",
+        "description": "Exclude"
       }
     ]
   },
@@ -1136,6 +1212,10 @@
       {
         "name": "SupportedStyles",
         "description": "SupportedStyles"
+      },
+      {
+        "name": "Exclude",
+        "description": "Exclude"
       }
     ]
   },
@@ -1168,6 +1248,10 @@
       {
         "name": "SupportedStyles",
         "description": "SupportedStyles"
+      },
+      {
+        "name": "Exclude",
+        "description": "Exclude"
       }
     ]
   },
@@ -1190,6 +1274,10 @@
       {
         "name": "SupportedStyles",
         "description": "SupportedStyles"
+      },
+      {
+        "name": "Exclude",
+        "description": "Exclude"
       }
     ]
   },
@@ -1230,6 +1318,10 @@
       {
         "name": "SupportedStyles",
         "description": "SupportedStyles"
+      },
+      {
+        "name": "Exclude",
+        "description": "Exclude"
       }
     ]
   },
@@ -1250,6 +1342,10 @@
       {
         "name": "IndentationWidth",
         "description": "IndentationWidth"
+      },
+      {
+        "name": "Exclude",
+        "description": "Exclude"
       }
     ]
   },
@@ -1266,6 +1362,10 @@
       {
         "name": "SupportedStyles",
         "description": "SupportedStyles"
+      },
+      {
+        "name": "Exclude",
+        "description": "Exclude"
       }
     ]
   },
@@ -1298,6 +1398,10 @@
       {
         "name": "IndentationWidth",
         "description": "IndentationWidth"
+      },
+      {
+        "name": "Exclude",
+        "description": "Exclude"
       }
     ]
   },
@@ -1318,6 +1422,10 @@
       {
         "name": "IndentationWidth",
         "description": "IndentationWidth"
+      },
+      {
+        "name": "Exclude",
+        "description": "Exclude"
       }
     ]
   },
@@ -1686,6 +1794,10 @@
       {
         "name": "SupportedStyles",
         "description": "SupportedStyles"
+      },
+      {
+        "name": "Exclude",
+        "description": "Exclude"
       }
     ]
   },
@@ -1698,6 +1810,10 @@
       {
         "name": "AllowInHeredoc",
         "description": "AllowInHeredoc"
+      },
+      {
+        "name": "Exclude",
+        "description": "Exclude"
       }
     ]
   },
@@ -2088,6 +2204,10 @@
       {
         "name": "AllowComments",
         "description": "AllowComments"
+      },
+      {
+        "name": "Exclude",
+        "description": "Exclude"
       }
     ]
   },
@@ -2795,7 +2915,13 @@
     "patternId": "Lint_Syntax",
     "title": "Checks for syntax errors.",
     "description": "Checks for syntax errors.",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Exclude",
+        "description": "Exclude"
+      }
+    ]
   },
   {
     "patternId": "Lint_ToEnumArguments",
@@ -2992,6 +3118,10 @@
       {
         "name": "AutoCorrect",
         "description": "AutoCorrect"
+      },
+      {
+        "name": "Exclude",
+        "description": "Exclude"
       }
     ]
   },
@@ -3088,6 +3218,10 @@
       {
         "name": "CheckForMethodsWithNoSideEffects",
         "description": "CheckForMethodsWithNoSideEffects"
+      },
+      {
+        "name": "Exclude",
+        "description": "Exclude"
       }
     ]
   },
@@ -3184,6 +3318,10 @@
       {
         "name": "Max",
         "description": "Max"
+      },
+      {
+        "name": "Exclude",
+        "description": "Exclude"
       }
     ]
   },
@@ -4964,6 +5102,10 @@
       {
         "name": "SafeAutoCorrect",
         "description": "SafeAutoCorrect"
+      },
+      {
+        "name": "Exclude",
+        "description": "Exclude"
       }
     ]
   },
@@ -4983,7 +5125,13 @@
     "patternId": "Style_IfUnlessModifier",
     "title": "Favor modifier if/unless usage when you have a single-line body.",
     "description": "Favor modifier if/unless usage when you have a single-line body.",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Exclude",
+        "description": "Exclude"
+      }
+    ]
   },
   {
     "patternId": "Style_IfUnlessModifierOfIfUnless",
@@ -5709,7 +5857,13 @@
     "patternId": "Style_MultilineTernaryOperator",
     "title": "Avoid multi-line ?: (the ternary operator); use if/unless instead.",
     "description": "Avoid multi-line ?: (the ternary operator); use if/unless instead.",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Exclude",
+        "description": "Exclude"
+      }
+    ]
   },
   {
     "patternId": "Style_MultilineWhenThen",
@@ -5825,7 +5979,13 @@
     "patternId": "Style_NestedTernaryOperator",
     "title": "Use one expression per branch in a ternary operator.",
     "description": "Use one expression per branch in a ternary operator.",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Exclude",
+        "description": "Exclude"
+      }
+    ]
   },
   {
     "patternId": "Style_Next",
@@ -5848,6 +6008,10 @@
       {
         "name": "SupportedStyles",
         "description": "SupportedStyles"
+      },
+      {
+        "name": "Exclude",
+        "description": "Exclude"
       }
     ]
   },
@@ -6057,7 +6221,13 @@
     "patternId": "Style_ParallelAssignment",
     "title": "Check for simple usages of parallel assignment. It will only warn when the number of variables matches on both sides of the assignment.",
     "description": "Check for simple usages of parallel assignment. It will only warn when the number of variables matches on both sides of the assignment.",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Exclude",
+        "description": "Exclude"
+      }
+    ]
   },
   {
     "patternId": "Style_ParenthesesAroundCondition",
@@ -6341,7 +6511,13 @@
     "patternId": "Style_RescueModifier",
     "title": "Avoid using rescue in its modifier form.",
     "description": "Avoid using rescue in its modifier form.",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Exclude",
+        "description": "Exclude"
+      }
+    ]
   },
   {
     "patternId": "Style_RescueStandardError",
@@ -6452,6 +6628,10 @@
       {
         "name": "AllowAsExpressionSeparator",
         "description": "AllowAsExpressionSeparator"
+      },
+      {
+        "name": "Exclude",
+        "description": "Exclude"
       }
     ]
   },
@@ -6828,6 +7008,10 @@
       {
         "name": "SupportedStylesForMultiline",
         "description": "SupportedStylesForMultiline"
+      },
+      {
+        "name": "Exclude",
+        "description": "Exclude"
       }
     ]
   },
@@ -6844,6 +7028,10 @@
       {
         "name": "SupportedStylesForMultiline",
         "description": "SupportedStylesForMultiline"
+      },
+      {
+        "name": "Exclude",
+        "description": "Exclude"
       }
     ]
   },
@@ -6872,6 +7060,10 @@
       {
         "name": "SupportedStylesForMultiline",
         "description": "SupportedStylesForMultiline"
+      },
+      {
+        "name": "Exclude",
+        "description": "Exclude"
       }
     ]
   },
@@ -6965,13 +7157,25 @@
     "patternId": "Style_WhileUntilDo",
     "title": "Checks for redundant do after while or until.",
     "description": "Checks for redundant do after while or until.",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Exclude",
+        "description": "Exclude"
+      }
+    ]
   },
   {
     "patternId": "Style_WhileUntilModifier",
     "title": "Favor modifier while/until usage when you have a single-line body.",
     "description": "Favor modifier while/until usage when you have a single-line body.",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Exclude",
+        "description": "Exclude"
+      }
+    ]
   },
   {
     "patternId": "Style_WordArray",
@@ -10981,6 +11185,118 @@
     "patternId": "Rubycw_Rubycw",
     "title": "Rubycw",
     "description": "Rubycw",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "GitlabSecurity_DeepMunge",
+    "title": "Checks for disabling the deep munge security control.",
+    "description": "Checks for disabling the deep munge security control.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "GitlabSecurity_JsonSerialization",
+    "title": "Checks for `to_json` / `as_json` without whitelisting via `only`.",
+    "description": "Checks for `to_json` / `as_json` without whitelisting via `only`.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "GitlabSecurity_PublicSend",
+    "title": "Checks for the use of `public_send`, `send`, and `__send__` methods.",
+    "description": "Checks for the use of `public_send`, `send`, and `__send__` methods.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "GitlabSecurity_RedirectToParamsUpdate",
+    "title": "Check for use of redirect_to(params.update())",
+    "description": "Check for use of redirect_to(params.update())",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "GitlabSecurity_SendFileParams",
+    "title": "Check for passing of params hash to send_file()",
+    "description": "Check for passing of params hash to send_file()",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "GitlabSecurity_SqlInjection",
+    "title": "Check for SQL Injection in where()",
+    "description": "Check for SQL Injection in where()",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "GitlabSecurity_SystemCommandInjection",
+    "title": "Check for Command Injection in System()",
+    "description": "Check for Command Injection in System()",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Packaging_BundlerSetupInTests",
+    "title": "Bundler Setup In Tests",
+    "description": "Bundler Setup In Tests",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Packaging_GemspecGit",
+    "title": "Gemspec Git",
+    "description": "Gemspec Git",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Packaging_RequireHardcodingLib",
+    "title": "Require Hardcoding Lib",
+    "description": "Require Hardcoding Lib",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Packaging_RequireRelativeHardcodingLib",
+    "title": "Require Relative Hardcoding Lib",
+    "description": "Require Relative Hardcoding Lib",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "PackwerkLite_Privacy",
+    "title": "Privacy",
+    "description": "Privacy",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "PackwerkLite_Dependency",
+    "title": "Dependency",
+    "description": "Dependency",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Packs_RootNamespaceIsPackName",
+    "title": "Root Namespace Is Pack Name",
+    "description": "Root Namespace Is Pack Name",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Packs_TypedPublicApis",
+    "title": "Typed Public Apis",
+    "description": "Typed Public Apis",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Packs_ClassMethodsAsPublicApis",
+    "title": "Class Methods As Public Apis",
+    "description": "Class Methods As Public Apis",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "AcceptableParentClasses",
+        "description": "AcceptableParentClasses"
+      },
+      {
+        "name": "AcceptableMixins",
+        "description": "AcceptableMixins"
+      }
+    ]
+  },
+  {
+    "patternId": "Packs_DocumentedPublicApis",
+    "title": "Documented Public Apis",
+    "description": "Documented Public Apis",
     "timeToFix": 5
   }
 ]

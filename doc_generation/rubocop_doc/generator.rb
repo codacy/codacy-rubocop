@@ -16,7 +16,13 @@ $plugins = ["rubocop-performance",
             "rubocop-mdsol",
             "rubocop-rspec_rails",
             "rubocop-capybara",
-            "rubocop-rubycw"
+            "rubocop-rubycw",
+            "rubocop-gitlab-security",
+            "rubocop-haml",
+            "rubocop-packaging",
+            "rubocop-rubycw",
+            "rubocop-packs",
+            "rubocop-ast"
           ]
 
 # frozen_string_literal: true

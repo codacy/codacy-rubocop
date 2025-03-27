@@ -32,7 +32,13 @@ object Rubocop extends Tool {
       "rubocop-md",
       "rubocop-mdsol",
       "rubocop-rspec_rails",
-      "rubocop-capybara"
+      "rubocop-capybara",
+      "rubocop-gitlab-security",
+      "rubocop-haml",
+      "rubocop-packaging",
+      "rubocop-rubycw",
+      "rubocop-packs",
+      "rubocop-ast"
     )
 
   // Gemfile is analysed

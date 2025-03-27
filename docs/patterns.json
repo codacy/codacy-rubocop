@@ -408,6 +408,12 @@
         {
           "name": "IndentationWidth",
           "default": ""
+        },
+        {
+          "name": "Exclude",
+          "default": [
+            "**/*.haml"
+          ]
         }
       ],
       "enabled": false
@@ -431,6 +437,12 @@
         {
           "name": "IndentationWidth",
           "default": ""
+        },
+        {
+          "name": "Exclude",
+          "default": [
+            "**/*.haml"
+          ]
         }
       ],
       "enabled": false
@@ -485,6 +497,12 @@
             "either",
             "start_of_block",
             "start_of_line"
+          ]
+        },
+        {
+          "name": "Exclude",
+          "default": [
+            "**/*.haml"
           ]
         }
       ],
@@ -561,6 +579,14 @@
       "patternId": "Layout_ClosingParenthesisIndentation",
       "level": "Info",
       "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "Exclude",
+          "default": [
+            "**/*.haml"
+          ]
+        }
+      ],
       "enabled": false
     },
     {
@@ -653,6 +679,14 @@
       "patternId": "Layout_EmptyLineAfterGuardClause",
       "level": "Info",
       "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "Exclude",
+          "default": [
+            "**/*.haml"
+          ]
+        }
+      ],
       "enabled": false
     },
     {
@@ -852,6 +886,12 @@
         {
           "name": "Severity",
           "default": "warning"
+        },
+        {
+          "name": "Exclude",
+          "default": [
+            "**/*.haml"
+          ]
         }
       ],
       "enabled": false
@@ -917,6 +957,12 @@
         {
           "name": "IndentationWidth",
           "default": ""
+        },
+        {
+          "name": "Exclude",
+          "default": [
+            "**/*.haml"
+          ]
         }
       ],
       "enabled": false
@@ -941,6 +987,12 @@
         {
           "name": "IndentationWidth",
           "default": ""
+        },
+        {
+          "name": "Exclude",
+          "default": [
+            "**/*.haml"
+          ]
         }
       ],
       "enabled": false
@@ -953,6 +1005,12 @@
         {
           "name": "AllowMultilineFinalElement",
           "default": "false"
+        },
+        {
+          "name": "Exclude",
+          "default": [
+            "**/*.haml"
+          ]
         }
       ],
       "enabled": false
@@ -977,6 +1035,12 @@
         {
           "name": "IndentationWidth",
           "default": ""
+        },
+        {
+          "name": "Exclude",
+          "default": [
+            "**/*.haml"
+          ]
         }
       ],
       "enabled": false
@@ -989,6 +1053,12 @@
         {
           "name": "AllowMultilineFinalElement",
           "default": "false"
+        },
+        {
+          "name": "Exclude",
+          "default": [
+            "**/*.haml"
+          ]
         }
       ],
       "enabled": false
@@ -1005,6 +1075,12 @@
         {
           "name": "AllowedMethods",
           "default": []
+        },
+        {
+          "name": "Exclude",
+          "default": [
+            "**/*.haml"
+          ]
         }
       ],
       "enabled": false
@@ -1040,6 +1116,12 @@
         {
           "name": "IndentationWidth",
           "default": ""
+        },
+        {
+          "name": "Exclude",
+          "default": [
+            "**/*.haml"
+          ]
         }
       ],
       "enabled": false
@@ -1089,6 +1171,12 @@
             "ignore_implicit",
             "ignore_explicit"
           ]
+        },
+        {
+          "name": "Exclude",
+          "default": [
+            "**/*.haml"
+          ]
         }
       ],
       "enabled": false
@@ -1119,6 +1207,12 @@
           "default": [
             "normal",
             "indented_internal_methods"
+          ]
+        },
+        {
+          "name": "Exclude",
+          "default": [
+            "**/*.haml"
           ]
         }
       ],
@@ -1159,6 +1253,12 @@
         {
           "name": "AllowedPatterns",
           "default": []
+        },
+        {
+          "name": "Exclude",
+          "default": [
+            "**/*.haml"
+          ]
         }
       ],
       "enabled": false
@@ -1256,6 +1356,12 @@
         {
           "name": "IndentationWidth",
           "default": ""
+        },
+        {
+          "name": "Exclude",
+          "default": [
+            "**/*.haml"
+          ]
         }
       ],
       "enabled": false
@@ -1295,6 +1401,12 @@
         {
           "name": "SplitStrings",
           "default": "false"
+        },
+        {
+          "name": "Exclude",
+          "default": [
+            "**/*.haml"
+          ]
         }
       ],
       "enabled": false
@@ -1314,6 +1426,12 @@
             "symmetrical",
             "new_line",
             "same_line"
+          ]
+        },
+        {
+          "name": "Exclude",
+          "default": [
+            "**/*.haml"
           ]
         }
       ],
@@ -1357,6 +1475,12 @@
             "same_line",
             "new_line"
           ]
+        },
+        {
+          "name": "Exclude",
+          "default": [
+            "**/*.haml"
+          ]
         }
       ],
       "enabled": false
@@ -1382,6 +1506,12 @@
             "symmetrical",
             "new_line",
             "same_line"
+          ]
+        },
+        {
+          "name": "Exclude",
+          "default": [
+            "**/*.haml"
           ]
         }
       ],
@@ -1427,6 +1557,12 @@
             "new_line",
             "same_line"
           ]
+        },
+        {
+          "name": "Exclude",
+          "default": [
+            "**/*.haml"
+          ]
         }
       ],
       "enabled": false
@@ -1451,6 +1587,12 @@
         {
           "name": "IndentationWidth",
           "default": ""
+        },
+        {
+          "name": "Exclude",
+          "default": [
+            "**/*.haml"
+          ]
         }
       ],
       "enabled": false
@@ -1470,6 +1612,12 @@
             "symmetrical",
             "new_line",
             "same_line"
+          ]
+        },
+        {
+          "name": "Exclude",
+          "default": [
+            "**/*.haml"
           ]
         }
       ],
@@ -1506,6 +1654,12 @@
         {
           "name": "IndentationWidth",
           "default": ""
+        },
+        {
+          "name": "Exclude",
+          "default": [
+            "**/*.haml"
+          ]
         }
       ],
       "enabled": false
@@ -1529,6 +1683,12 @@
         {
           "name": "IndentationWidth",
           "default": ""
+        },
+        {
+          "name": "Exclude",
+          "default": [
+            "**/*.haml"
+          ]
         }
       ],
       "enabled": false
@@ -1954,6 +2114,12 @@
             "final_newline",
             "final_blank_line"
           ]
+        },
+        {
+          "name": "Exclude",
+          "default": [
+            "**/*.haml"
+          ]
         }
       ],
       "enabled": false
@@ -1966,6 +2132,12 @@
         {
           "name": "AllowInHeredoc",
           "default": "false"
+        },
+        {
+          "name": "Exclude",
+          "default": [
+            "**/*.haml"
+          ]
         }
       ],
       "enabled": false
@@ -2358,6 +2530,12 @@
         {
           "name": "AllowComments",
           "default": "true"
+        },
+        {
+          "name": "Exclude",
+          "default": [
+            "**/*.haml"
+          ]
         }
       ],
       "enabled": false
@@ -3116,6 +3294,14 @@
       "patternId": "Lint_Syntax",
       "level": "Warning",
       "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "Exclude",
+          "default": [
+            "**/*.haml"
+          ]
+        }
+      ],
       "enabled": false
     },
     {
@@ -3318,6 +3504,12 @@
         {
           "name": "AutoCorrect",
           "default": "contextual"
+        },
+        {
+          "name": "Exclude",
+          "default": [
+            "**/*.haml"
+          ]
         }
       ],
       "enabled": true
@@ -3414,6 +3606,12 @@
         {
           "name": "CheckForMethodsWithNoSideEffects",
           "default": "false"
+        },
+        {
+          "name": "Exclude",
+          "default": [
+            "**/*.haml"
+          ]
         }
       ],
       "enabled": false
@@ -3492,7 +3690,8 @@
         {
           "name": "Exclude",
           "default": [
-            "**/*.gemspec"
+            "**/*.gemspec",
+            "**/*.haml"
           ]
         }
       ],
@@ -3514,6 +3713,12 @@
         {
           "name": "Max",
           "default": "3"
+        },
+        {
+          "name": "Exclude",
+          "default": [
+            "**/*.haml"
+          ]
         }
       ],
       "enabled": false
@@ -3731,7 +3936,8 @@
         {
           "name": "Exclude",
           "default": [
-            "Rakefile.rb"
+            "Rakefile.rb",
+            "**/*.haml"
           ]
         },
         {
@@ -5349,7 +5555,8 @@
         {
           "name": "Exclude",
           "default": [
-            "**/*.arb"
+            "**/*.arb",
+            "**/*.haml"
           ]
         }
       ],
@@ -5571,6 +5778,12 @@
         {
           "name": "SafeAutoCorrect",
           "default": "false"
+        },
+        {
+          "name": "Exclude",
+          "default": [
+            "**/*.haml"
+          ]
         }
       ],
       "enabled": false
@@ -5591,6 +5804,14 @@
       "patternId": "Style_IfUnlessModifier",
       "level": "Info",
       "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "Exclude",
+          "default": [
+            "**/*.haml"
+          ]
+        }
+      ],
       "enabled": false
     },
     {
@@ -6367,6 +6588,14 @@
       "patternId": "Style_MultilineTernaryOperator",
       "level": "Info",
       "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "Exclude",
+          "default": [
+            "**/*.haml"
+          ]
+        }
+      ],
       "enabled": true
     },
     {
@@ -6512,6 +6741,14 @@
       "patternId": "Style_NestedTernaryOperator",
       "level": "Info",
       "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "Exclude",
+          "default": [
+            "**/*.haml"
+          ]
+        }
+      ],
       "enabled": true
     },
     {
@@ -6536,6 +6773,12 @@
           "default": [
             "skip_modifier_ifs",
             "always"
+          ]
+        },
+        {
+          "name": "Exclude",
+          "default": [
+            "**/*.haml"
           ]
         }
       ],
@@ -6769,6 +7012,14 @@
       "patternId": "Style_ParallelAssignment",
       "level": "Info",
       "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "Exclude",
+          "default": [
+            "**/*.haml"
+          ]
+        }
+      ],
       "enabled": false
     },
     {
@@ -7072,6 +7323,14 @@
       "patternId": "Style_RescueModifier",
       "level": "Info",
       "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "Exclude",
+          "default": [
+            "**/*.haml"
+          ]
+        }
+      ],
       "enabled": false
     },
     {
@@ -7194,6 +7453,12 @@
         {
           "name": "AllowAsExpressionSeparator",
           "default": "false"
+        },
+        {
+          "name": "Exclude",
+          "default": [
+            "**/*.haml"
+          ]
         }
       ],
       "enabled": false
@@ -7615,6 +7880,12 @@
             "consistent_comma",
             "no_comma"
           ]
+        },
+        {
+          "name": "Exclude",
+          "default": [
+            "**/*.haml"
+          ]
         }
       ],
       "enabled": false
@@ -7635,6 +7906,12 @@
             "consistent_comma",
             "diff_comma",
             "no_comma"
+          ]
+        },
+        {
+          "name": "Exclude",
+          "default": [
+            "**/*.haml"
           ]
         }
       ],
@@ -7668,6 +7945,12 @@
             "consistent_comma",
             "diff_comma",
             "no_comma"
+          ]
+        },
+        {
+          "name": "Exclude",
+          "default": [
+            "**/*.haml"
           ]
         }
       ],
@@ -7784,12 +8067,28 @@
       "patternId": "Style_WhileUntilDo",
       "level": "Info",
       "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "Exclude",
+          "default": [
+            "**/*.haml"
+          ]
+        }
+      ],
       "enabled": false
     },
     {
       "patternId": "Style_WhileUntilModifier",
       "level": "Info",
       "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "Exclude",
+          "default": [
+            "**/*.haml"
+          ]
+        }
+      ],
       "enabled": false
     },
     {
@@ -12107,6 +12406,123 @@
     },
     {
       "patternId": "Rubycw_Rubycw",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "GitlabSecurity_DeepMunge",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "GitlabSecurity_JsonSerialization",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "GitlabSecurity_PublicSend",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "GitlabSecurity_RedirectToParamsUpdate",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "GitlabSecurity_SendFileParams",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "GitlabSecurity_SqlInjection",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "GitlabSecurity_SystemCommandInjection",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "Packaging_BundlerSetupInTests",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "Packaging_GemspecGit",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "Packaging_RequireHardcodingLib",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "Packaging_RequireRelativeHardcodingLib",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "PackwerkLite_Privacy",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "PackwerkLite_Dependency",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "Packs_RootNamespaceIsPackName",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "Packs_TypedPublicApis",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "Packs_ClassMethodsAsPublicApis",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "AcceptableParentClasses",
+          "default": [
+            "T::Enum",
+            "T::Struct",
+            "Struct",
+            "OpenStruct"
+          ]
+        },
+        {
+          "name": "AcceptableMixins",
+          "default": []
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "Packs_DocumentedPublicApis",
       "level": "Info",
       "category": "CodeStyle",
       "enabled": false
