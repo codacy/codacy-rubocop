@@ -131,8 +131,8 @@ GEM
     jbuilder (2.13.0)
       actionview (>= 5.0.0)
       activesupport (>= 5.0.0)
-    json (2.10.2)
-    language_server-protocol (3.17.0.4)
+    json (2.12.2)
+    language_server-protocol (3.17.0.5)
     lint_roller (1.1.0)
     logger (1.7.0)
     loofah (2.24.0)
@@ -179,7 +179,7 @@ GEM
       racc (~> 1.4)
     packs-specification (0.0.10)
       sorbet-runtime
-    parallel (1.26.3)
+    parallel (1.27.0)
     parse_packwerk (0.26.0)
       bigdecimal
       sorbet-runtime
@@ -300,9 +300,9 @@ GEM
       rubocop (~> 1.0)
     rubocop-migrations (0.1.0)
       rubocop (>= 0.42.0)
-    rubocop-minitest (0.37.1)
+    rubocop-minitest (0.38.1)
       lint_roller (~> 1.1)
-      rubocop (>= 1.72.1, < 2.0)
+      rubocop (>= 1.75.0, < 2.0)
       rubocop-ast (>= 1.38.0, < 2.0)
     rubocop-packaging (0.6.0)
       lint_roller (~> 1.1.0)
