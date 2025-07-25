@@ -183,7 +183,7 @@ GEM
     parse_packwerk (0.26.0)
       bigdecimal
       sorbet-runtime
-    parser (3.3.7.3)
+    parser (3.3.9.0)
       ast (~> 2.4.1)
       racc
     pp (0.6.2)
