@@ -155,6 +155,10 @@ module RubocopDoc
           end
         end
       end
+      
+      def self.scantype(cop_data)
+        category(cop_data) == "Security" ? "SAST" : nil
+      end
 
       def self.parameters(cop_data)
         cop_data[:configurable_attributes].map do |key, value|
@@ -173,6 +177,7 @@ module RubocopDoc
                                                level:      level(cop_data),
                                                category:   category(cop_data),
                                                subcategory: subcategory(cop_data),
+                                               scantype:   scantype(cop_data),
                                                parameters: GenerationCommons.parametersFieldValue(parameters(cop_data)),
                                                enabled: default_patterns.include?(patternIdValue)
                                              })

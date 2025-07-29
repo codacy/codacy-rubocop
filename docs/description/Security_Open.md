@@ -28,6 +28,7 @@ URI.parse(something).open
 # good (literal strings)
 open("foo.text")
 URI.open("http://example.com")
+URI.parse(url).open
 ```
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Security/Open)

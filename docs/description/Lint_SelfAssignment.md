@@ -19,7 +19,12 @@ hash['foo'] = hash['bar']
 obj.attr = obj.attr2
 
 # good (method calls possibly can return different results)
-hash[foo] = hash[foo]
+hash[foo] = hash[foo]# good
+foo = foo #: Integer
+foo, bar = foo, bar #: Integer
+Foo = Foo #: Integer
+hash['foo'] = hash['foo'] #: Integer
+obj.attr = obj.attr #: Integer
 ```
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Lint/SelfAssignment)

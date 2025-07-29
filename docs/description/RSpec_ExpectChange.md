@@ -1,8 +1,8 @@
 
 Checks for consistent style of change matcher.
 
-Enforces either passing object and attribute as arguments to the matcher
-or passing a block that reads the attribute value.
+Enforces either passing a receiver and message as method arguments,
+or a block.
 
 This cop can be configured using the `EnforcedStyle` option.
 

@@ -1,12 +1,13 @@
 
 In Ruby 3.1, `Array#intersect?` has been added.
 
-This cop identifies places where `(array1 & array2).any?`
-or `(array1.intersection(array2)).any?` can be replaced by
-`array1.intersect?(array2)`.
+This cop identifies places where:
+* `(array1 & array2).any?`
+* `(array1.intersection(array2)).any?`
+* `array1.any? { |elem| array2.member?(elem) }`
+can be replaced with `array1.intersect?(array2)`.
 
-The `array1.intersect?(array2)` method is faster than
-`(array1 & array2).any?` and is more readable.
+`array1.intersect?(array2)` is faster and more readable.
 
 In cases like the following, compatibility is not ensured,
 so it will not be detected when using block argument.
@@ -33,6 +34,10 @@ only cases where exactly one argument is provided can be replaced with
 array1.intersection(array2).any?
 array1.intersection(array2).empty?
 array1.intersection(array2).none?
+
+# bad
+array1.any? { |elem| array2.member?(elem) }
+array1.none? { |elem| array2.member?(elem) }
 
 # good
 array1.intersect?(array2)

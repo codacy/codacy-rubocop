@@ -7,7 +7,7 @@ literals.
 * `comma`: Requires a comma after the last item in a hash, but only when each item is on its
 own line.
 * `diff_comma`: Requires a comma after the last item in a hash, but only when that item is
-followed by an immediate newline.
+followed by an immediate newline, even if there is an inline comment on the same line.
 * `no_comma`: Does not require a comma after the last item in a hash
 
 # Examples

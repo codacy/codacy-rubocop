@@ -9,9 +9,11 @@ Prefer `equal?` over `==` when comparing `object_id`.
 ```ruby
 # bad
 foo.object_id == bar.object_id
+foo.object_id != baz.object_id
 
 # good
 foo.equal?(bar)
+!foo.equal?(baz)
 ```
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Lint/IdentityComparison)

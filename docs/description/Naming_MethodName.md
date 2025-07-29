@@ -35,11 +35,39 @@ Naming/MethodName:
 def fooBar; end
 
 # good
-def foo_bar; end# bad
+def foo_bar; end
+
+# bad
+define_method :fooBar do
+end
+
+# good
+define_method :foo_bar do
+end
+
+# bad
+Struct.new(:fooBar)
+
+# good
+Struct.new(:foo_bar)# bad
 def foo_bar; end
 
 # good
-def fooBar; end# bad
+def fooBar; end
+
+# bad
+define_method :foo_bar do
+end
+
+# good
+define_method :fooBar do
+end
+
+# bad
+Struct.new(:foo_bar)
+
+# good
+Struct.new(:fooBar)# bad
 def def; end
 def super; end# bad
 def release_v1; end

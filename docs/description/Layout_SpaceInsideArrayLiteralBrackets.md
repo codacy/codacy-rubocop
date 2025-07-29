@@ -2,6 +2,8 @@
 Checks that brackets used for array literals have or don't have
 surrounding space depending on configuration.
 
+Array pattern matching is handled in the same way.
+
 # Examples
 
 ```ruby

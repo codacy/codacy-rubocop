@@ -17,3 +17,6 @@ rubocop-doc.yml
 .bloop
 .vscode
 bin/
+
+#Ignore vscode AI rules
+.github/copilot-instructions.md

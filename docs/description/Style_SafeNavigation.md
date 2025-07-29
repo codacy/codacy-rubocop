@@ -73,6 +73,10 @@ foo.nil? || foo.bar
 foo.baz = bar if foo
 foo.baz + bar if foo
 foo.bar > 2 if foo
+
+foo ? foo[index] : nil    # Ignored `foo&.[](index)` due to unclear readability benefit.
+foo ? foo[idx] = v : nil  # Ignored `foo&.[]=(idx, v)` due to unclear readability benefit.
+foo ? foo * 42 : nil      # Ignored `foo&.*(42)` due to unclear readability benefit.
 ```
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Style/SafeNavigation)

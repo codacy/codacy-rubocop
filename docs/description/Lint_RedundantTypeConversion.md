@@ -23,7 +23,8 @@ Specifically, these cases are detected for each conversion method:
 In all cases, chaining one same `to_*` conversion methods listed above is redundant.
 
 The cop can also register an offense for chaining conversion methods on methods that are
-expected to return a specific type regardless of receiver (eg. `foo.inspect.to_s`).
+expected to return a specific type regardless of receiver (eg. `foo.inspect.to_s` and
+`foo.to_json.to_s`).
 
 # Examples
 
@@ -67,10 +68,12 @@ foo.to_s.to_s
 foo.to_s
 
 # bad - chaining a conversion to a method that is expected to return the same type
-inspect.to_s
+foo.inspect.to_s
+foo.to_json.to_s
 
 # good
-inspect
+foo.inspect
+foo.to_json
 ```
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Lint/RedundantTypeConversion)

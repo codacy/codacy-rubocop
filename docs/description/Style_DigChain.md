@@ -1,5 +1,5 @@
 
-Check for chained `dig` calls that can be collapsed into a single `dig`.
+Checks for chained `dig` calls that can be collapsed into a single `dig`.
 
 # Examples
 
