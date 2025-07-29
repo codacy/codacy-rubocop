@@ -1,9 +1,9 @@
 
 Prevents usage of `"*"` on an Arel::Table column reference.
 
-Using `arel_table["*"]` causes the outputted string to be a literal
-quoted asterisk (e.g. <tt>`my_model`.`*`</tt>). This causes the
-database to look for a column named <tt>`*`</tt> (or `"*"`) as opposed
+Using `arel_table["\*"]` causes the outputted string to be a literal
+quoted asterisk (e.g. `my_model`.`*`). This causes the
+database to look for a column named `\*` (or `"*"`) as opposed
 to expanding the column list as one would likely expect.
 
 # Examples

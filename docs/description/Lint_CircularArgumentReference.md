@@ -2,9 +2,8 @@
 Checks for circular argument references in optional keyword
 arguments and optional ordinal arguments.
 
-This cop mirrors a warning produced by MRI since 2.2.
-
-NOTE: This syntax is no longer valid on Ruby 2.7 or higher.
+NOTE: This syntax was made invalid on Ruby 2.7 - Ruby 3.3 but is allowed
+again since Ruby 3.4.
 
 # Examples
 

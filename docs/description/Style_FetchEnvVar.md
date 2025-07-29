@@ -13,6 +13,16 @@ ENV['X']
 x = ENV['X']
 
 # good
+ENV.fetch('X', nil)
+x = ENV.fetch('X', nil)
+
+# also good
+!ENV['X']
+ENV['X'].some_method # (e.g. `.nil?`)# bad
+ENV['X']
+x = ENV['X']
+
+# good
 ENV.fetch('X')
 x = ENV.fetch('X')
 

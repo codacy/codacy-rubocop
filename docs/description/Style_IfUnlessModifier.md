@@ -19,6 +19,17 @@ if [42] in [x]
 end
 ----
 
+The code `def method_name = body if condition` is considered a bad case by
+`Style/AmbiguousEndlessMethodDefinition` cop. So, to respect the user's intention to use
+an endless method definition in the `if` body, the following code is allowed:
+
+[source,ruby]
+----
+if condition
+  def method_name = body
+end
+----
+
 NOTE: It is allowed when `defined?` argument has an undefined value,
 because using the modifier form causes the following incompatibility:
 

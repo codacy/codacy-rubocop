@@ -23,8 +23,9 @@ def foo() = do_something
 # good
 def foo = do_something
 
-# good (without parentheses it's a syntax error)
+# good - without parentheses it's a syntax error
 def foo() do_something end
+def foo()=do_something
 
 # bad
 def Baz.foo()

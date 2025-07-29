@@ -1,5 +1,5 @@
 
-Check for `if` and `case` statements where each branch is used for
+Checks for `if` and `case` statements where each branch is used for
 both the assignment and comparison of the same variable
 when using the return of the condition can be used instead.
 

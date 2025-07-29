@@ -61,6 +61,9 @@ The supported styles are:
 
 # good
 {foo:, bar:}
+
+# good - allowed to mix syntaxes
+{foo:, bar: baz}
 # bad
 {foo:, bar:}
 

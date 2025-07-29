@@ -71,8 +71,14 @@ method(
 )# bad
 method(1, 2,)
 
+# bad
+object[1, 2,]
+
 # good
 method(1, 2)
+
+# good
+object[1, 2]
 
 # good
 method(

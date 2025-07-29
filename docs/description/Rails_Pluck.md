@@ -5,6 +5,24 @@ Enforces the use of `pluck` over `map`.
 element in an enumerable. When called on an Active Record relation, it
 results in a more efficient query that only selects the necessary key.
 
+NOTE: If the receiver's relation is not loaded and `pluck` is used inside an iteration,
+it may result in N+1 queries because `pluck` queries the database on each iteration.
+This cop ignores offenses for `map/collect` when they are suspected to be part of an iteration
+to prevent such potential issues.
+
+[source,ruby]
+----
+users = User.all
+5.times do
+  users.map { |user| user[:foo] } # Only one query is executed
+end
+
+users = User.all
+5.times do
+  users.pluck(:id) # A query is executed on every iteration
+end
+----
+
 # Examples
 
 ```ruby

@@ -16,6 +16,15 @@ for which to suppress (allow) this cop's check.
 In the example below, the safe navigation operator (`&.`) is unnecessary
 because `NilClass` has methods like `respond_to?` and `is_a?`.
 
+The `InferNonNilReceiver` option specifies whether to look into previous code
+paths to infer if the receiver can't be nil. This check is unsafe because the receiver
+can be redefined between the safe navigation call and previous regular method call.
+It does the inference only in the current scope, e.g. within the same method definition etc.
+
+The `AdditionalNilMethods` option specifies additional custom methods which are
+defined on `NilClass`. When `InferNonNilReceiver` is set, they are used to determine
+whether the receiver can be nil.
+
 # Examples
 
 ```ruby
@@ -24,6 +33,20 @@ CamelCaseConst&.do_something
 
 # good
 CamelCaseConst.do_something
+
+# bad
+foo.to_s&.strip
+foo.to_i&.zero?
+foo.to_f&.zero?
+foo.to_a&.size
+foo.to_h&.size
+
+# good
+foo.to_s.strip
+foo.to_i.zero?
+foo.to_f.zero?
+foo.to_a.size
+foo.to_h.size
 
 # bad
 do_something if attrs&.respond_to?(:[])
@@ -69,7 +92,36 @@ do_something if attrs&.nil_safe_method(:[])
 
 # good
 do_something if attrs.nil_safe_method(:[])
-do_something if attrs&.not_nil_safe_method(:[])
+do_something if attrs&.not_nil_safe_method(:[])# good
+foo.bar
+foo&.baz# bad
+foo.bar
+foo&.baz # would raise on previous line if `foo` is nil
+
+# good
+foo.bar
+foo.baz
+
+# bad
+if foo.condition?
+  foo&.bar
+end
+
+# good
+if foo.condition?
+  foo.bar
+end
+
+# good (different scopes)
+def method1
+  foo.bar
+end
+
+def method2
+  foo&.bar
+end# good
+foo.present?
+foo&.bar
 ```
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Lint/RedundantSafeNavigation)

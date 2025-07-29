@@ -120,6 +120,16 @@ end
 class Foo
   bar :baz
 end
+# good
+puts "Hello world"
+print "Hello world"
+# still enforces parentheses on other methods
+array.delete(e)
+# good
+assert_equal 'test', x
+assert_match(/foo/, bar)
+# still enforces parentheses on other methods
+array.delete(e)
 # bad
 foo.enforce(
   strict: true

@@ -78,4 +78,4 @@ def_node_matcher(:is_even) { |value| }
 def_node_matcher(:even?) { |value| }
 ```
 
-[Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Naming/PredicateName)
+[Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Naming/PredicatePrefix)

@@ -18,7 +18,9 @@ value, it will be wrapped in order to prevent the ambiguity of `1..2.to_a`.
 ```ruby
 # bad
 x || 1..2
+x - 1..2
 (x || 1..2)
+x || 1..y || 2
 1..2.to_a
 
 # good, unambiguous
@@ -32,6 +34,7 @@ a..b
 
 # good, ambiguity removed
 x || (1..2)
+(x - 1)..2
 (x || 1)..2
 (x || 1)..(y || 2)
 (1..2).to_a# good
