@@ -8111,6 +8111,7 @@
       "patternId": "Security_CompoundHash",
       "level": "Error",
       "category": "Security",
+      "scantype": "SAST",
       "parameters": [
         {
           "name": "Safe",
@@ -8124,12 +8125,14 @@
       "level": "Error",
       "category": "Security",
       "subcategory": "InputValidation",
+      "scantype": "SAST",
       "enabled": false
     },
     {
       "patternId": "Security_IoMethods",
       "level": "Error",
       "category": "Security",
+      "scantype": "SAST",
       "parameters": [
         {
           "name": "Safe",
@@ -8143,6 +8146,7 @@
       "level": "Error",
       "category": "Security",
       "subcategory": "InsecureModulesLibraries",
+      "scantype": "SAST",
       "parameters": [
         {
           "name": "References",
@@ -8162,6 +8166,7 @@
       "level": "Error",
       "category": "Security",
       "subcategory": "InsecureModulesLibraries",
+      "scantype": "SAST",
       "parameters": [
         {
           "name": "References",
@@ -8177,6 +8182,7 @@
       "level": "Error",
       "category": "Security",
       "subcategory": "CommandInjection",
+      "scantype": "SAST",
       "parameters": [
         {
           "name": "Safe",
@@ -8190,6 +8196,7 @@
       "level": "Error",
       "category": "Security",
       "subcategory": "InsecureModulesLibraries",
+      "scantype": "SAST",
       "parameters": [
         {
           "name": "References",
