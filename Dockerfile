@@ -9,8 +9,8 @@ ENV GEM_HOME=$GEM_FOLDER
 ENV PATH $GEM_HOME/bin:$GEM_HOME/gems/bin:$PATH
 WORKDIR /doc_generator
 
-RUN apk add --no-cache ruby ruby-dev ruby-rake ruby-io-console \
-    ruby-bigdecimal make gcc ruby-json libstdc++ tzdata bash \
+RUN apk add --no-cache ruby ruby-dev ruby-rake \
+    ruby-bigdecimal make gcc libstdc++ tzdata bash \
     libc-dev yaml-dev libpq-dev openjdk17-jre
 
 COPY Gemfile .
