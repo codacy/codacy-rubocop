@@ -1,6 +1,6 @@
 {
   "name": "rubocop",
-  "version": "1.79.0",
+  "version": "1.79.1",
   "patterns": [
     {
       "patternId": "Migration_DepartmentName",
