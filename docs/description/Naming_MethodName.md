@@ -49,7 +49,13 @@ end
 Struct.new(:fooBar)
 
 # good
-Struct.new(:foo_bar)# bad
+Struct.new(:foo_bar)
+
+# bad
+alias_method :fooBar, :some_method
+
+# good
+alias_method :foo_bar, :some_method# bad
 def foo_bar; end
 
 # good
@@ -67,7 +73,13 @@ end
 Struct.new(:foo_bar)
 
 # good
-Struct.new(:fooBar)# bad
+Struct.new(:fooBar)
+
+# bad
+alias_method :foo_bar, :some_method
+
+# good
+alias_method :fooBar, :some_method# bad
 def def; end
 def super; end# bad
 def release_v1; end
