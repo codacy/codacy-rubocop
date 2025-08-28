@@ -38,8 +38,7 @@ object Rubocop extends Tool {
       "rubocop-packaging",
       "rubocop-rubycw",
       "rubocop-packs",
-      "rubocop-ast",
-      "./ext.rb"
+      "rubocop-ast"
     )
 
   // Gemfile is analysed
