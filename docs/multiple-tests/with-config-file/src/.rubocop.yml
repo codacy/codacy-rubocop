@@ -3,6 +3,7 @@ require:
   - rubocop-rails
   - graphql/rubocop/graphql/default_null_true
   - graphql/rubocop/graphql/default_required_true
+  - ./ext.rb
 
 AllCops:
   Exclude:
