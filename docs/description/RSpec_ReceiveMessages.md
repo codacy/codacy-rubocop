@@ -1,5 +1,5 @@
 
-Checks for multiple messages stubbed on the same object.
+Prefer `receive_messages` over multiple `receive`s on the same object.
 
 # Examples
 

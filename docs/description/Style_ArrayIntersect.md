@@ -6,6 +6,8 @@ This cop identifies places where:
 * `(array1 & array2).any?`
 * `(array1.intersection(array2)).any?`
 * `array1.any? { |elem| array2.member?(elem) }`
+* `(array1 & array2).count > 0`
+* `(array1 & array2).size > 0`
 
 can be replaced with `array1.intersect?(array2)`.
 
@@ -43,6 +45,19 @@ array1.none? { |elem| array2.member?(elem) }
 
 # good
 array1.intersect?(array2)
+!array1.intersect?(array2)
+
+# bad
+(array1 & array2).count > 0
+(array1 & array2).count.positive?
+(array1 & array2).count != 0
+
+(array1 & array2).count == 0
+(array1 & array2).count.zero?
+
+# good
+array1.intersect?(array2)
+
 !array1.intersect?(array2)# good
 (array1 & array2).present?
 (array1 & array2).blank?# bad
