@@ -356,7 +356,7 @@ GEM
       rubocop-ast (>= 1.44.0, < 2.0)
     ruby-progressbar (1.13.0)
     ruby2_keywords (0.0.5)
-    rubyzip (3.1.0)
+    rubyzip (3.1.1)
     safe_yaml (1.0.5)
     sanitize_email (2.0.10)
       mail (~> 2.0)
