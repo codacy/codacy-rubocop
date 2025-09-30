@@ -297,7 +297,7 @@ GEM
     rubocop-i18n (3.2.3)
       lint_roller (~> 1.1)
       rubocop (>= 1.72.1)
-    rubocop-md (2.0.2)
+    rubocop-md (2.0.3)
       lint_roller (~> 1.1)
       rubocop (>= 1.72.1)
     rubocop-mdsol (0.3.0)
