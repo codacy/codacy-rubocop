@@ -187,7 +187,7 @@ GEM
     parser (3.3.9.0)
       ast (~> 2.4.1)
       racc
-    pp (0.6.2)
+    pp (0.6.3)
       prettyprint
     prettier (4.0.4)
       syntax_tree (>= 4.0.1)
