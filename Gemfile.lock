@@ -97,7 +97,7 @@ GEM
     crass (1.0.6)
     dark_finger (0.6.1)
       rubocop (>= 0.51.0)
-    date (3.4.1)
+    date (3.5.1)
     docile (1.4.1)
     drb (2.2.3)
     erb (5.0.2)
@@ -152,7 +152,7 @@ GEM
     mocha (2.7.1)
       ruby2_keywords (>= 0.0.5)
     msgpack (1.8.0)
-    net-imap (0.5.10)
+    net-imap (0.5.15)
       date
       net-protocol
     net-pop (0.1.2)
@@ -413,7 +413,7 @@ GEM
     temple (0.10.4)
     thor (1.4.0)
     tilt (2.6.1)
-    timeout (0.4.3)
+    timeout (0.6.1)
     tsort (0.2.0)
     turbo-rails (2.0.16)
       actionpack (>= 7.1.0)
