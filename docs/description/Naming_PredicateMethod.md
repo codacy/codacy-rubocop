@@ -2,7 +2,7 @@
 Checks that predicate methods end with `?` and non-predicate methods do not.
 
 The names of predicate methods (methods that return a boolean value) should end
-in a question mark. Methods that don't return a boolean, shouldn't
+in a question mark. Methods that don't return a boolean shouldn't
 end in a question mark.
 
 The cop assesses a predicate method as one that returns boolean values. Likewise,
@@ -18,7 +18,7 @@ mode, methods with a question mark will register an offense if any known non-boo
 return values are detected.
 
 The cop also has `AllowedMethods` configuration in order to prevent the cop from
-registering an offense from a method name that does not confirm to the naming
+registering an offense from a method name that does not conform to the naming
 guidelines. By default, `call` is allowed. The cop also has `AllowedPatterns`
 configuration to allow method names by regular expression.
 
@@ -106,12 +106,26 @@ end# bad - the method returns nil in some cases
 def foo?
   return unless bar?
   true
+end# good
+def call
+  foo == bar
+end# good
+def foo?
+  'foo'
 end# bad
 def save!
   true
 end# good
 def save!
   true
+end# good
+def non_predicate_method(num)
+  num.infinite?
+end
+
+# good
+def non_predicate_method(num)
+  num.nonzero?
 end
 ```
 

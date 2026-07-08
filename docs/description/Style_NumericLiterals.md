@@ -1,6 +1,7 @@
 
 Checks for big numeric literals without `_` between groups
-of digits in them.
+of digits in them. Underscores make large numbers easier to
+read by visually separating groups of digits.
 
 Additional allowed patterns can be added by adding regexps to
 the `AllowedPatterns` configuration. All regexps are treated

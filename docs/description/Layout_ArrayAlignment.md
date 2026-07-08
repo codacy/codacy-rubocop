@@ -1,5 +1,5 @@
 
-Check that the elements of a multi-line array literal are
+Checks that the elements of a multi-line array literal are
 aligned.
 
 # Examples

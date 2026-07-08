@@ -10,10 +10,12 @@ NOTE: The second argument to the `assert` method named `message` and `msg` is al
 ```ruby
 # bad
 assert(3, my_list.length)
+assert([], empty_list)
 assert(expected, actual)
 
 # good
 assert_equal(3, my_list.length)
+assert_equal([], empty_list)
 assert_equal(expected, actual)
 assert(foo, 'message')
 assert(foo, message)

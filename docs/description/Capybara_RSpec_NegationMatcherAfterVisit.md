@@ -25,4 +25,4 @@ expect(page).to have_css('a')
 expect(page).not_to have_link('bar')
 ```
 
-[Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Capybara/NegationMatcherAfterVisit)
+[Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Capybara/RSpec/NegationMatcherAfterVisit)

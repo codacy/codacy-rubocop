@@ -8,11 +8,17 @@ the cop treats it as an `if`/`elsif`/`elsif`... and lets all the `when`
 nodes count. In contrast to the CyclomaticComplexity cop, this cop
 considers `else` nodes as adding complexity.
 
+A `case`/`in` branch whose pattern is a simple literal (e.g. `in 1`, `in "red"`, `in 1..10`)
+or a constant/type (e.g. `in Integer`) and has no guard is just as easy to read as a `when`
+branch, so it is discounted the same way. Branches with structural patterns (e.g. array,
+hash, or find patterns), bindings, alternatives, or a guard add the full complexity of
+a decision point.
+
 # Examples
 
 ```ruby
 
-def my_method                   # 1
+def example_1                   # 1
   if cond                       # 1
     case var                    # 2 (0.8 + 4 * 0.2, rounded)
     when 1 then func_one
@@ -24,6 +30,14 @@ def my_method                   # 1
     do_something until a && b   # 2
   end                           # ===
 end                             # 7 complexity points
+
+def example_2                   # 1
+  case color                    # 1 (3 * 0.2, rounded)
+  in "red" then func_red
+  in "blue" then func_blue
+  in "green" then func_green
+  end                           # ===
+end                             # 2 complexity points
 ```
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Metrics/PerceivedComplexity)

@@ -5,12 +5,22 @@ the configuration.
 # Examples
 
 ```ruby
-# good
+# bad
+foo do |bar|
 
+  # ...
+
+end
+
+# good
 foo do |bar|
   # ...
-end# good
+end# bad
+foo do |bar|
+  # ...
+end
 
+# good
 foo do |bar|
 
   # ...

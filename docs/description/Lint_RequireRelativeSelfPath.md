@@ -1,5 +1,5 @@
 
-Checks for uses a file requiring itself with `require_relative`.
+Checks for a file requiring itself with `require_relative`.
 
 # Examples
 

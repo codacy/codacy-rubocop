@@ -7,8 +7,7 @@ values, however using booleans can have unwanted effects. `visible:
 false` does not find just invisible elements, but both visible and
 invisible elements. For expressiveness and clarity, use one of the
 symbol values, `:all`, `:hidden` or `:visible`.
-Read more in
-https://www.rubydoc.info/gems/capybara/Capybara%2FNode%2FFinders:all[the documentation].
+Read more at: https://www.rubydoc.info/gems/capybara/Capybara%2FNode%2FFinders:all
 
 # Examples
 
@@ -24,4 +23,4 @@ expect(page).to have_css('.foo', visible: :all)
 expect(page).to have_link('my link', visible: :hidden)
 ```
 
-[Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Capybara/VisibilityMatcher)
+[Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Capybara/RSpec/VisibilityMatcher)

@@ -1,7 +1,9 @@
 
 Checks for grouping of accessors in `class` and `module` bodies.
-By default it enforces accessors to be placed in grouped declarations,
-but it can be configured to enforce separating them in multiple declarations.
+By default it enforces accessors to be placed in grouped
+declarations, reducing boilerplate. It can also be configured
+to enforce separating them into individual declarations for
+easier diffing and per-attribute documentation.
 
 NOTE: If there is a method call before the accessor method it is always allowed
 as it might be intended like Sorbet.

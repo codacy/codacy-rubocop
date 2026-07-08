@@ -2,11 +2,19 @@
 Checks for constant reassignments.
 
 Emulates Ruby's runtime warning "already initialized constant X"
-when a constant is reassigned in the same file and namespace using the
-`NAME = value` syntax.
+when a constant is reassigned in the same file and namespace.
 
-The cop cannot catch all offenses, like, for example, when a constant
-is reassigned in another file, or when using metaprogramming (`Module#const_set`).
+The cop tracks constants defined via `NAME = value` syntax as well as
+class/module keyword definitions. It detects reassignment when a constant
+is first defined one way and then redefined using the `NAME = value` syntax.
+
+The cop cannot catch all offenses, like, for example, when using metaprogramming
+(`Module#const_set`).
+
+By default the cop also cannot detect reassignment across files.
+When `AllCops/UseProjectIndex` is enabled and the `rubydex` gem is installed,
+the cop additionally consults the project-wide index and reports reassignments
+whose previous definition lives in another file.
 
 The cop only takes into account constants assigned in a "simple" way: directly
 inside class/module definition, or within another constant. Other type of assignments
@@ -33,6 +41,14 @@ module A
   X = :foo
   X = :bar
 end
+
+# bad
+class FooError < StandardError; end
+FooError = Class.new(RuntimeError)
+
+# bad
+module M; end
+M = 1
 
 # good - keep only one assignment
 X = :bar

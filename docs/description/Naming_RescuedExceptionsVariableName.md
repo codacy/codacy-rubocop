@@ -1,5 +1,5 @@
 
-Makes sure that rescued exceptions variables are named as
+Makes sure that rescued exception variables are named as
 expected.
 
 The `PreferredName` config option takes a `String`. It represents

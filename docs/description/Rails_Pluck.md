@@ -23,6 +23,9 @@ users = User.all
 end
 ----
 
+If a method call has no receiver, like `do_something { users.map { |user| user[:foo] }`,
+it is not considered part of an iteration and will be detected.
+
 # Examples
 
 ```ruby

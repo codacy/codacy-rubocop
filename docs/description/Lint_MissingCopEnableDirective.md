@@ -1,14 +1,26 @@
 
 Checks that there is an `# rubocop:enable ...` statement
 after a `# rubocop:disable ...` statement. This will prevent leaving
-cop disables on wide ranges of code, that latter contributors to
+cop disables on wide ranges of code, that later contributors to
 a file wouldn't be aware of.
+
+You can set `MaxRangeSize` to define the maximum number of
+consecutive lines a cop can be disabled for.
+
+- `.inf` any size (default)
+- `0` allows only single-line disables
+- `1` means the maximum allowed is as follows:
+
+[source,ruby]
+----
+# rubocop:disable SomeCop
+a = 1
+# rubocop:enable SomeCop
+----
 
 # Examples
 
 ```ruby
-# Lint/MissingCopEnableDirective:
-#   MaximumRangeSize: .inf
 
 # good
 # rubocop:disable Layout/SpaceAroundOperators
@@ -20,9 +32,7 @@ x= 0
 # bad
 # rubocop:disable Layout/SpaceAroundOperators
 x= 0
-# EOF# Lint/MissingCopEnableDirective:
-#   MaximumRangeSize: 2
-
+# EOF
 # good
 # rubocop:disable Layout/SpaceAroundOperators
 x= 0

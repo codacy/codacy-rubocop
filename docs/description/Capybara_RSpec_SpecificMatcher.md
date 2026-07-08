@@ -24,4 +24,4 @@ expect(page).to have_select
 expect(page).to have_field(with: 'foo')
 ```
 
-[Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Capybara/SpecificMatcher)
+[Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Capybara/RSpec/SpecificMatcher)

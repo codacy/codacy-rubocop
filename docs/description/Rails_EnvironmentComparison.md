@@ -1,5 +1,5 @@
 
-Checks that Rails.env is compared using `.production?`-like
+Checks that `Rails.env` is compared using `.production?`-like
 methods instead of equality against a string or symbol.
 
 # Examples
@@ -7,6 +7,7 @@ methods instead of equality against a string or symbol.
 ```ruby
 # bad
 Rails.env == 'production'
+Rails.env.to_sym == :production
 
 # bad, always returns false
 Rails.env == :test

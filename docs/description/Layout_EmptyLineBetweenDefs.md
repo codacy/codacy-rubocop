@@ -65,25 +65,37 @@ end
 # good
 class ErrorA < BaseError; end
 class ErrorB < BaseError; end
-class ErrorC < BaseError; end
 
 # good
 class ErrorA < BaseError; end
 
 class ErrorB < BaseError; end
 
-class ErrorC < BaseError; end
+# good - DefLikeMacros: [memoize]
+memoize :attribute_a
+memoize :attribute_b
+
+# good
+memoize :attribute_a
+
+memoize :attribute_b
 # bad
 class ErrorA < BaseError; end
 class ErrorB < BaseError; end
-class ErrorC < BaseError; end
 
 # good
 class ErrorA < BaseError; end
 
 class ErrorB < BaseError; end
 
-class ErrorC < BaseError; end
+# bad - DefLikeMacros: [memoize]
+memoize :attribute_a
+memoize :attribute_b
+
+# good
+memoize :attribute_a
+
+memoize :attribute_b
 ```
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Layout/EmptyLineBetweenDefs)

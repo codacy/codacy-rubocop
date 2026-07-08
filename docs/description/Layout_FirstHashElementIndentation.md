@@ -26,10 +26,10 @@ styles are 'consistent' and 'align_braces'. Here are examples:
 # bad
 hash = {
   key: :value
-}
-and_in_a_method_call({
-  no: :difference
-                     })
+       }
+in_a_method_call({
+  foo: :bar
+})
 takes_multi_pairs_hash(x: {
   a: 1,
   b: 2
@@ -40,13 +40,12 @@ takes_multi_pairs_hash(x: {
                        })
 
 # good
-special_inside_parentheses
 hash = {
   key: :value
 }
-but_in_a_method_call({
-                       its_like: :this
-                     })
+in_a_method_call({
+                   foo: :bar
+                 })
 takes_multi_pairs_hash(x: {
                          a: 1,
                          b: 2
@@ -62,17 +61,17 @@ takes_multi_pairs_hash(x: {
 # bad
 hash = {
   key: :value
-}
-but_in_a_method_call({
-                       its_like: :this
-                      })
+       }
+in_a_method_call({
+                  foo: :bar
+                })
 
 # good
 hash = {
   key: :value
 }
-and_in_a_method_call({
-  no: :difference
+in_a_method_call({
+  foo: :bar
 })# The `align_brackets` style enforces that the opening and closing
 # braces are indented to the same position.
 

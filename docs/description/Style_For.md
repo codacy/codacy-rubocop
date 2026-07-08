@@ -4,6 +4,9 @@ preferred alternative is set in the EnforcedStyle configuration
 parameter. An `each` call with a block on a single line is always
 allowed.
 
+NOTE: `each` is preferred in idiomatic Ruby because `for` leaks
+its loop variable into the surrounding scope.
+
 # Examples
 
 ```ruby

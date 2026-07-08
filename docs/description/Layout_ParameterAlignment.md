@@ -1,5 +1,5 @@
 
-Check that the parameters on a multi-line method call or definition are aligned.
+Checks that the parameters on a multi-line method call or definition are aligned.
 
 To set the alignment of the first argument, use the
 `Layout/FirstParameterIndentation` cop.

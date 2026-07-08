@@ -1,6 +1,6 @@
 
-Checks for consistent usage of the `DateTime` class over the
-`Time` class. This cop is disabled by default since these classes,
+Checks for consistent usage of the `Time` class over the
+`DateTime` class. This cop is disabled by default since these classes,
 although highly overlapping, have particularities that make them not
 replaceable in certain situations when dealing with multiple timezones
 and/or DST.

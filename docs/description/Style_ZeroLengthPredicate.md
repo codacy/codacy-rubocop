@@ -5,8 +5,10 @@ by a predicate method, such as `receiver.length == 0`,
 `receiver.length < 1` and `receiver.size == 0` that can be
 replaced by `receiver.empty?` and `!receiver.empty?`.
 
-NOTE: `File`, `Tempfile`, and `StringIO` do not have `empty?`
-so allow `size == 0` and `size.zero?`.
+NOTE: `File`, `Tempfile`, `StringIO`, and `File::Stat` do not have `empty?`
+so allow `size == 0` and `size.zero?`. Note that when a `File::Stat` object
+is stored in a variable (e.g. `stat = File.stat(path); stat.size.zero?`),
+the cop cannot detect the type and may still register a false positive.
 
 # Examples
 

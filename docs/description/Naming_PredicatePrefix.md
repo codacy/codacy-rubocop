@@ -13,7 +13,7 @@ methods which begin with a forbidden prefix are not allowed, even if
 they end with a `?`. These methods should be changed to remove the
 prefix.
 
-When `UseSorbetSigs` set to true (optional), the cop will only report
+When `UseSorbetSigs` is set to true (optional), the cop will only report
 offenses if the method has a Sorbet `sig` with a return type of
 `T::Boolean`. Dynamic methods are not supported with this configuration.
 

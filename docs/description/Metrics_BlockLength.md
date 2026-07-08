@@ -13,7 +13,7 @@ NOTE: This cop does not apply for `Struct` definitions.
 
 NOTE: The `ExcludedMethods` configuration is deprecated and only kept
 for backwards compatibility. Please use `AllowedMethods` and `AllowedPatterns`
-instead. By default, there are no methods to allowed.
+instead. By default, there are no allowed methods.
 
 # Examples
 

@@ -55,6 +55,9 @@ end
 
 # good
 a.nil? || a# good
+num.infinite? ? true : false
+
+# good
 num.nonzero? ? true : false
 ```
 

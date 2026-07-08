@@ -3,7 +3,7 @@ Checks for ambiguous block association with method
 when param passed without parentheses.
 
 This cop can customize allowed methods with `AllowedMethods`.
-By default, there are no methods to allowed.
+By default, there are no allowed methods.
 
 # Examples
 

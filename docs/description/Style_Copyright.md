@@ -1,5 +1,5 @@
 
-Check that a copyright notice was given in each source file.
+Checks that a copyright notice was given in each source file.
 
 The default regexp for an acceptable copyright notice can be found in
 config/default.yml. The default can be changed as follows:

@@ -1,5 +1,7 @@
 
-Checks if usage of %() or %Q() matches configuration.
+Checks if usage of `%()` or `%Q()` matches configuration.
+Consistent use of one style makes the codebase easier
+to read.
 
 # Examples
 

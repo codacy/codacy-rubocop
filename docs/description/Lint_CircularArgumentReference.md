@@ -33,6 +33,26 @@ end
 def cook(dry_ingredients = self.dry_ingredients)
   dry_ingredients.combine
 end
+
+# bad
+def foo(pie = pie = pie)
+  pie.heat_up
+end
+
+# good
+def foo(pie)
+  pie.heat_up
+end
+
+# bad
+def foo(pie = cake = pie)
+  [pie, cake].each(&:heat_up)
+end
+
+# good
+def foo(cake = pie)
+  [pie, cake].each(&:heat_up)
+end
 ```
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Lint/CircularArgumentReference)

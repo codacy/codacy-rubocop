@@ -1,7 +1,7 @@
 
 Looks for uses of Perl-style regexp match
 backreferences and their English versions like
-$1, $2, $&, &+, $MATCH, $PREMATCH, etc.
+$1, $2, $&, $MATCH, $PREMATCH, etc.
 
 # Examples
 

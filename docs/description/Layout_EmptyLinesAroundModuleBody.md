@@ -5,14 +5,28 @@ the configuration.
 # Examples
 
 ```ruby
-# good
+# bad
+module Foo
 
+  def bar
+    # ...
+  end
+
+end
+
+# good
 module Foo
   def bar
     # ...
   end
-end# good
+end# bad
+module Foo
+  def bar
+    # ...
+  end
+end
 
+# good
 module Foo
 
   def bar

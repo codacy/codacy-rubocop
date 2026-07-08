@@ -2,6 +2,14 @@
 Checks whether some constant value isn't a
 mutable literal (e.g. array or hash).
 
+When the `Recursive` option is enabled, mutable literals nested inside
+arrays and hashes are also frozen, so an offense on the outermost
+unfrozen literal will autocorrect every nested mutable literal as well.
+When the outer literal already has `.freeze` appended, the cop descends
+into it and reports each outermost unfrozen literal underneath. The
+option is disabled by default to preserve existing behavior; opt in to
+get strict nested freezing.
+
 Strict mode can be used to freeze all constants, rather than
 just literals.
 Strict mode is considered an experimental feature. It has not been
@@ -39,7 +47,12 @@ CONST = <<~TESTING.freeze
 TESTING
 
 # good
-CONST = Something.new# bad
+CONST = Something.new# good - only the outer container needs to be frozen
+CONST = [{ a: [], b: 'foo' }].freeze# bad - nested mutable literals must be frozen too
+CONST = [{ a: [], b: 'foo' }].freeze
+
+# good
+CONST = [{ a: [].freeze, b: 'foo'.freeze }.freeze].freeze# bad
 CONST = Something.new
 
 # bad

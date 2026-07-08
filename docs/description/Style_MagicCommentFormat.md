@@ -6,7 +6,7 @@ both magic comment directives and values.
 Required capitalization can be set with the `DirectiveCapitalization` and
 `ValueCapitalization` configuration keys.
 
-NOTE: If one of these configuration is set to nil, any capitalization is allowed.
+NOTE: If one of these configurations is set to nil, any capitalization is allowed.
 
 # Examples
 

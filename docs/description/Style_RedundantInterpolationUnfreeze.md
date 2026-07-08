@@ -13,6 +13,9 @@ unfreezing them redundant.
 # bad
 "#{foo} bar".dup
 
+# bad
+String.new("#{foo} bar")
+
 # good
 "#{foo} bar"
 ```
