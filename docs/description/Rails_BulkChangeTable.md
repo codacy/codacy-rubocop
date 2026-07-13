@@ -34,7 +34,9 @@ def change
 
   # ALTER TABLE `users` ADD `name` varchar(255) NOT NULL,
   #                     ADD `nickname` varchar(255)
-end# bad
+end
+
+# bad
 def change
   change_table :users do |t|
     t.string :name, null: false

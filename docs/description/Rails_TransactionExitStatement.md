@@ -53,7 +53,9 @@ end
 ApplicationRecord.transaction do
   # Commit
   next if user.active?
-end# bad
+end
+
+# bad
 CustomModel.custom_transaction do
   return if user.active?
 end

@@ -9,7 +9,9 @@ Checks for consistent uses of `request.referer` or
 request.referrer
 
 # good
-request.referer# bad
+request.referer
+
+# bad
 request.referer
 
 # good

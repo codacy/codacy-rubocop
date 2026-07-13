@@ -21,7 +21,9 @@ SITES = {
   'america'   => 'http://us.example.com',
   'australia' => 'http://au.example.com'
 }
-SITES[country]# good
+SITES[country]
+
+# good
 case country
 when 'europe'
   'http://eu.example.com'

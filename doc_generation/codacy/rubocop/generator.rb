@@ -104,7 +104,7 @@ module RubocopDoc
 
     end
 
-    module PattersJSON
+    module PatternsJSON
       @baseDir
       def self.generate_json_file(hash)
         patternsFilePath = File.join(@baseDir,"/docs/patterns.json")
@@ -252,5 +252,5 @@ default_patterns = [
 ]
 
 RubocopDoc::Codacy::Markdown.run(baseDir)
-RubocopDoc::Codacy::PattersJSON.run(default_patterns, baseDir)
+RubocopDoc::Codacy::PatternsJSON.run(default_patterns, baseDir)
 RubocopDoc::Codacy::DescriptionJSON.run(baseDir)

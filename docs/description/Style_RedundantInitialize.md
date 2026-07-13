@@ -80,10 +80,14 @@ end
 # good (changes the parameter requirements)
 def initialize(...)
 end
+
+
 # good
 def initialize
   # Overriding to negate superclass `initialize` method.
 end
+
+
 # bad
 def initialize
   # Overriding to negate superclass `initialize` method.

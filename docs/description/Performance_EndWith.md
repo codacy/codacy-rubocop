@@ -18,6 +18,8 @@ for receiver is multiline string.
 
 # good
 'abc'.end_with?('bc')
+
+
 # good
 'abc'.match?(/bc$/)
 /bc$/.match?('abc')
@@ -25,6 +27,8 @@ for receiver is multiline string.
 /bc$/ =~ 'abc'
 'abc'.match(/bc$/)
 /bc$/.match('abc')
+
+
 # bad
 'abc'.match?(/bc$/)
 /bc$/.match?('abc')

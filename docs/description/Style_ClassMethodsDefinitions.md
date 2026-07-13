@@ -37,7 +37,9 @@ class SomeClass
       # ...
     end
   end
-end# bad
+end
+
+# bad
 class SomeClass
   def self.class_method
     # ...

@@ -28,12 +28,16 @@ puts sprintf('%10s', 'foo')
 puts '%10s' % 'foo'
 
 # good
-puts format('%10s', 'foo')# bad
+puts format('%10s', 'foo')
+
+# bad
 puts format('%10s', 'foo')
 puts '%10s' % 'foo'
 
 # good
-puts sprintf('%10s', 'foo')# bad
+puts sprintf('%10s', 'foo')
+
+# bad
 puts format('%10s', 'foo')
 puts sprintf('%10s', 'foo')
 

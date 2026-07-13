@@ -25,7 +25,9 @@ class LoginController < ApplicationController
 
   def logout
   end
-end# bad
+end
+
+# bad
 module FooMixin
   extend ActiveSupport::Concern
 
@@ -45,7 +47,9 @@ module FooMixin
   def foo
     # something
   end
-endclass ContentController < ApplicationController
+end
+
+class ContentController < ApplicationController
   def update
     @content.update(content_attributes)
   end

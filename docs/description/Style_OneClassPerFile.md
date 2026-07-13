@@ -53,7 +53,9 @@ module Foo
 
   class Baz
   end
-end# good
+end
+
+# good
 class Foo
 end
 

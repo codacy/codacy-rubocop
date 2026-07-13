@@ -19,7 +19,9 @@ File.join(Rails.root, 'app/models/goober')
 "#{Rails.root}/app/models/goober"
 
 # good
-Rails.root.join('app/models/goober').to_s# bad
+Rails.root.join('app/models/goober').to_s
+
+# bad
 Rails.root.join('app/models/goober')
 
 # good

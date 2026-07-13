@@ -30,7 +30,9 @@ end
 def some_method(some_var)
   some_var
   do_something
-end# bad
+end
+
+# bad
 def some_method(some_array)
   some_array.sort
   do_something(some_array)

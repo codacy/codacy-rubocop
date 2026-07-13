@@ -17,10 +17,14 @@ RUBY
 # good
 <<~RUBY
   something
-RUBY# good
+RUBY
+
+# good
 <<-RUBY.squish
     something
-RUBY# bad
+RUBY
+
+# bad
 <<-RUBY.squish
     something
 RUBY

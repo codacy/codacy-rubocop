@@ -12,7 +12,9 @@ not by this cop.
 
 # good
 {}.each { |x, y| puts x }
-->(x, y) { puts x }# bad
+->(x, y) { puts x }
+
+# bad
 {}.each { |x,  y| puts x }
 ->(x,  y) { puts x }
 

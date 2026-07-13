@@ -22,11 +22,15 @@ expect { run }.to change(Foo, :bar)
 expect { run }.to change(foo, :baz)
 # also good when there are arguments or chained method calls
 expect { run }.to change { Foo.bar(:count) }
-expect { run }.to change { user.reload.name }# bad
+expect { run }.to change { user.reload.name }
+
+# bad
 expect { run }.to change(Foo, :bar)
 
 # good
-expect { run }.to change { Foo.bar }# bad
+expect { run }.to change { Foo.bar }
+
+# bad
 expect { run }.to change(Foo, :bar).and not_change { Foo.baz }
 
 # good

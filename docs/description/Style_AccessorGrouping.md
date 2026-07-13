@@ -36,7 +36,9 @@ class Foo
 
   may_be_intended_annotation :baz
   attr_reader :baz
-end# bad
+end
+
+# bad
 class Foo
   attr_reader :bar, :baz
 end

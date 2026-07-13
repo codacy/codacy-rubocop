@@ -42,12 +42,16 @@ if condition
   do_something
 elsif other_condition
   do_something_else
-end# good
+end
+
+# good
 if condition
   do_something
 elsif other_condition
   # noop
-end# bad
+end
+
+# bad
 if condition
   do_something
 elsif other_condition

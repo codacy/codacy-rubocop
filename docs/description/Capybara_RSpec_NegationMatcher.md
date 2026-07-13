@@ -10,7 +10,9 @@ expect(page).not_to have_css('a')
 
 # good
 expect(page).to have_no_selector 'a'
-expect(page).to have_no_css('a')# bad
+expect(page).to have_no_css('a')
+
+# bad
 expect(page).to have_no_selector 'a'
 expect(page).to have_no_css('a')
 

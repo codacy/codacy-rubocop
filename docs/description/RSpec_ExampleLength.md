@@ -28,6 +28,8 @@ it do
   result = service.call
   expect(result).to be(true)
 end
+
+
 it do
   array = [         # +1
     1,

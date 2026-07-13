@@ -10,6 +10,8 @@ the '#{}' interpolation string as this makes it hard to translate the strings.
 
 t("status.#{status_string}")
 t("status." + "accepted")
+
+
 # good
 
 t("status.accepted")

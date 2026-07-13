@@ -48,7 +48,9 @@ bar << if foo
        else
          some_other_method
          2
-       end# bad
+       end
+
+# bad
 bar = if foo
         1
       else

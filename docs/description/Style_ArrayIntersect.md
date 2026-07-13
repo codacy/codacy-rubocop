@@ -58,9 +58,13 @@ array1.intersect?(array2)
 # good
 array1.intersect?(array2)
 
-!array1.intersect?(array2)# good
+!array1.intersect?(array2)
+
+# good
 (array1 & array2).present?
-(array1 & array2).blank?# bad
+(array1 & array2).blank?
+
+# bad
 (array1 & array2).present?
 (array1 & array2).blank?
 

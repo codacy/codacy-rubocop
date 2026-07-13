@@ -25,7 +25,9 @@ def a
 end
 
 def b
-end# checks for empty lines between class definitions.
+end
+
+# checks for empty lines between class definitions.
 
 # bad
 class A
@@ -43,7 +45,9 @@ class B
 end
 
 def b
-end# checks for empty lines between module definitions.
+end
+
+# checks for empty lines between module definitions.
 
 # bad
 module A
@@ -62,6 +66,8 @@ end
 
 def b
 end
+
+
 # good
 class ErrorA < BaseError; end
 class ErrorB < BaseError; end
@@ -79,6 +85,8 @@ memoize :attribute_b
 memoize :attribute_a
 
 memoize :attribute_b
+
+
 # bad
 class ErrorA < BaseError; end
 class ErrorB < BaseError; end

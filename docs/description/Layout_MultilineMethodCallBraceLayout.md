@@ -43,7 +43,9 @@ foo(a,
 foo(
   a,
   b
-)# bad
+)
+
+# bad
 foo(
   a,
   b)
@@ -61,7 +63,9 @@ foo(a,
 foo(
   a,
   b
-)# bad
+)
+
+# bad
 foo(a,
   b
 )

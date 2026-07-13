@@ -19,7 +19,9 @@ class Foo
   def bar
     # ...
   end
-end# bad
+end
+
+# bad
 class Foo
   def bar
     # ...
@@ -33,7 +35,9 @@ class Foo
     # ...
   end
 
-end# good
+end
+
+# good
 
 class Foo
   class Bar
@@ -41,19 +45,25 @@ class Foo
     # ...
 
   end
-end# good
+end
+
+# good
 class Foo
 
   def bar; end
 
-end# good
+end
+
+# good
 
 class Foo
 
   def bar
     # ...
   end
-end# good
+end
+
+# good
 
 class Foo
   def bar

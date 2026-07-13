@@ -13,8 +13,12 @@ If you also want to detect `where.first`, you can set `IgnoreWhereFirst` to fals
 User.where(name: 'Bruce').take
 
 # good
-User.find_by(name: 'Bruce')# good
-User.where(name: 'Bruce').first# bad
+User.find_by(name: 'Bruce')
+
+# good
+User.where(name: 'Bruce').first
+
+# bad
 User.where(name: 'Bruce').first
 ```
 

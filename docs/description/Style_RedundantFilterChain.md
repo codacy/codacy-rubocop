@@ -20,11 +20,15 @@ arr.none? { |x| x > 1 }
 
 # good
 relation.select(:name).any?
-arr.select { |x| x > 1 }.any?(&:odd?)# good
+arr.select { |x| x > 1 }.any?(&:odd?)
+
+# good
 arr.select { |x| x > 1 }.many?
 
 # good
-arr.select { |x| x > 1 }.present?# bad
+arr.select { |x| x > 1 }.present?
+
+# bad
 arr.select { |x| x > 1 }.many?
 
 # good

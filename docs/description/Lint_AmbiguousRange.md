@@ -37,9 +37,13 @@ x || (1..2)
 (x - 1)..2
 (x || 1)..2
 (x || 1)..(y || 2)
-(1..2).to_a# good
+(1..2).to_a
+
+# good
 a.foo..b.bar
-(a.foo)..(b.bar)# bad
+(a.foo)..(b.bar)
+
+# bad
 a.foo..b.bar
 
 # good

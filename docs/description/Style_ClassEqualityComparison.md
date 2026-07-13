@@ -14,7 +14,9 @@ var.class.eql?(Date)
 var.class.name == 'Date'
 
 # good
-var.instance_of?(Date)# good
+var.instance_of?(Date)
+
+# good
 def ==(other)
   self.class == other.class && name == other.name
 end
@@ -25,10 +27,14 @@ end
 
 def eql?(other)
   self.class.eql?(other.class) && name.eql?(other.name)
-end# bad
+end
+
+# bad
 def eq(other)
   self.class.eq(other.class) && name.eq(other.name)
-end# good
+end
+
+# good
 def eq(other)
   self.class.eq(other.class) && name.eq(other.name)
 end

@@ -29,6 +29,8 @@ end
 [1, 2, 3].each do |_num|
   do_something # not using `_num`
 end
+
+
 # good
 
 query(:sales) do |_id:, revenue:, cost:|

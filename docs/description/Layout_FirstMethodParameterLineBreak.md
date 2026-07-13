@@ -24,6 +24,8 @@ def method foo,
     bar
   do_something
 end
+
+
 # bad
 def method(foo, bar, baz = {
   :a => "b",
@@ -38,6 +40,8 @@ def method(
 })
   do_something
 end
+
+
 # good
 def method(foo, bar, baz = {
   :a => "b",

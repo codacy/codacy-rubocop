@@ -16,7 +16,9 @@ foo = {{ a: 1 } => { b: { c: 2 }}}
 
 # good
 h = { a: 1, b: 2 }
-foo = { { a: 1 } => { b: { c: 2 } } }# The `no_space` style enforces that hash literals have
+foo = { { a: 1 } => { b: { c: 2 } } }
+
+# The `no_space` style enforces that hash literals have
 # no surrounding space.
 
 # bad
@@ -25,7 +27,9 @@ foo = {{ a: 1 } => { b: { c: 2 }}}
 
 # good
 h = {a: 1, b: 2}
-foo = {{a: 1} => {b: {c: 2}}}# The `compact` style normally requires a space inside
+foo = {{a: 1} => {b: {c: 2}}}
+
+# The `compact` style normally requires a space inside
 # hash braces, with the exception that successive left
 # braces or right braces are collapsed together in nested hashes.
 
@@ -35,7 +39,9 @@ foo = { { a: 1 } => { b: { c: 2 } } }
 
 # good
 h = { a: { b: 2 }}
-foo = {{ a: 1 } => { b: { c: 2 }}}# The `no_space` EnforcedStyleForEmptyBraces style enforces that
+foo = {{ a: 1 } => { b: { c: 2 }}}
+
+# The `no_space` EnforcedStyleForEmptyBraces style enforces that
 # empty hash braces do not contain spaces.
 
 # bad
@@ -47,7 +53,9 @@ baz = {
 # good
 foo = {}
 bar = {}
-baz = {}# The `space` EnforcedStyleForEmptyBraces style enforces that
+baz = {}
+
+# The `space` EnforcedStyleForEmptyBraces style enforces that
 # empty hash braces contain space.
 
 # bad

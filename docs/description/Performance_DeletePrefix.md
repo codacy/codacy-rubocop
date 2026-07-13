@@ -24,11 +24,15 @@ str.sub!(/\Aprefix/, '')
 # good
 str.delete_prefix('prefix')
 str.delete_prefix!('prefix')
+
+
 # good
 str.gsub(/^prefix/, '')
 str.gsub!(/^prefix/, '')
 str.sub(/^prefix/, '')
 str.sub!(/^prefix/, '')
+
+
 # bad
 str.gsub(/^prefix/, '')
 str.gsub!(/^prefix/, '')

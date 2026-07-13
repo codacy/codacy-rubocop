@@ -11,7 +11,9 @@ expect(foo).to be_invalid
 expect(foo).not_to be_valid
 
 # good (with method chain)
-expect(foo).to be_invalid.and be_odd# bad
+expect(foo).to be_invalid.and be_odd
+
+# bad
 expect(foo).not_to be_valid
 
 # good

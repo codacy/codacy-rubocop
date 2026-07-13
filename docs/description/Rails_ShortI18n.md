@@ -18,11 +18,15 @@ I18n.localize Time.now
 
 # good
 I18n.t :key
-I18n.l Time.now# good
+I18n.l Time.now
+
+# good
 translate :key
 localize Time.now
 t :key
-l Time.now# bad
+l Time.now
+
+# bad
 translate :key
 localize Time.now
 

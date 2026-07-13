@@ -39,7 +39,9 @@ method(
 method(
   1,
   2,
-)# bad
+)
+
+# bad
 method(1, 2,)
 
 # good
@@ -71,7 +73,9 @@ method(
 method(
   1,
   2,
-)# bad
+)
+
+# bad
 method(1, 2,)
 
 # good
@@ -110,7 +114,9 @@ object[1, 2,
 
 # good
 object[1, 2,
-       3, 4]# bad
+       3, 4]
+
+# bad
 method(1, 2,)
 
 # bad

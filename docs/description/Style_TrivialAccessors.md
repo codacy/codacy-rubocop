@@ -27,31 +27,45 @@ attr_writer :bar
 
 class << self
   attr_reader :baz
-end# good
+end
+
+# good
 def name
   @other_name
-end# bad
+end
+
+# bad
 def name
   @other_name
-end# good
+end
+
+# good
 def foo?
   @foo
-end# bad
+end
+
+# bad
 def foo?
   @foo
 end
 
 # good
-attr_reader :foo# good
+attr_reader :foo
+
+# good
 def on_exception(action)
   @on_exception=action
-end# bad
+end
+
+# bad
 def on_exception(action)
   @on_exception=action
 end
 
 # good
-attr_writer :on_exception# bad
+attr_writer :on_exception
+
+# bad
 def self.foo
   @foo
 end
@@ -59,10 +73,14 @@ end
 # good
 class << self
   attr_reader :foo
-end# good
+end
+
+# good
 def self.foo
   @foo
-end# good
+end
+
+# good
 def allowed_method
   @foo
 end

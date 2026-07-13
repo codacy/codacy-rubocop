@@ -12,6 +12,8 @@ Check GetText.supported_decorators for a list of decorators that can be used.
 
 _("result is #{this_is_the_result}")
 n_("a string" + "a string with a #{float_value}")
+
+
 # good
 
 _("result is %{detail}" % {detail: message})

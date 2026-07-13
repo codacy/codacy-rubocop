@@ -12,8 +12,12 @@ render text: 'Ruby!', content_type: 'text/plain'
 render plain: 'Ruby!'
 
 # good - explicit MIME type not to `text/plain`
-render text: 'Ruby!', content_type: 'text/html'# good - sets MIME type to `text/html`
-render text: 'Ruby!'# bad - sets MIME type to `text/html`
+render text: 'Ruby!', content_type: 'text/html'
+
+# good - sets MIME type to `text/html`
+render text: 'Ruby!'
+
+# bad - sets MIME type to `text/html`
 render text: 'Ruby!'
 ```
 

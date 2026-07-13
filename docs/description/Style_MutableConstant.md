@@ -47,12 +47,18 @@ CONST = <<~TESTING.freeze
 TESTING
 
 # good
-CONST = Something.new# good - only the outer container needs to be frozen
-CONST = [{ a: [], b: 'foo' }].freeze# bad - nested mutable literals must be frozen too
+CONST = Something.new
+
+# good - only the outer container needs to be frozen
+CONST = [{ a: [], b: 'foo' }].freeze
+
+# bad - nested mutable literals must be frozen too
 CONST = [{ a: [], b: 'foo' }].freeze
 
 # good
-CONST = [{ a: [].freeze, b: 'foo'.freeze }.freeze].freeze# bad
+CONST = [{ a: [].freeze, b: 'foo'.freeze }.freeze].freeze
+
+# bad
 CONST = Something.new
 
 # bad
@@ -70,7 +76,9 @@ CONST = Struct.new do
   def foo
     puts 1
   end
-end.freeze# Magic comment - shareable_constant_value: literal
+end.freeze
+
+# Magic comment - shareable_constant_value: literal
 
 # bad
 CONST = [1, 2, 3]

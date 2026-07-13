@@ -19,12 +19,16 @@ str.end_with?(var1) || str.end_with?(var2)
 str.start_with?("a", Some::CONST)
 str.start_with?("a", "b", "c")
 !str.start_with?(foo, bar)
-str.end_with?(var1, var2)# good
+str.end_with?(var1, var2)
+
+# good
 str.starts_with?("a", "b") || str.starts_with?("c")
 str.ends_with?(var1) || str.ends_with?(var2)
 
 str.starts_with?("a", "b", "c")
-str.ends_with?(var1, var2)# bad
+str.ends_with?(var1, var2)
+
+# bad
 str.starts_with?("a", "b") || str.starts_with?("c")
 str.ends_with?(var1) || str.ends_with?(var2)
 

@@ -54,7 +54,9 @@ else
 end
 
 # good
-a.nil? || a# good
+a.nil? || a
+
+# good
 num.infinite? ? true : false
 
 # good

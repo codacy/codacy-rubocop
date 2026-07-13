@@ -16,6 +16,8 @@ do_something
 allow(foo).to receive(:bar) # or use instance_spy
 do_something
 expect(foo).to have_received(:bar)
+
+
 # bad
 allow(foo).to receive(:bar)
 do_something

@@ -53,7 +53,9 @@ takes_multi_pairs_hash(x: {
                        y: {
                          c: 1,
                          d: 2
-                       })# The `consistent` style enforces that the first key in a hash
+                       })
+
+# The `consistent` style enforces that the first key in a hash
 # literal where the opening brace and the first key are on
 # separate lines is indented the same as a hash literal which is not
 # defined inside a method call.
@@ -72,7 +74,9 @@ hash = {
 }
 in_a_method_call({
   foo: :bar
-})# The `align_brackets` style enforces that the opening and closing
+})
+
+# The `align_brackets` style enforces that the opening and closing
 # braces are indented to the same position.
 
 # bad

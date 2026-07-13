@@ -14,17 +14,23 @@ a.to_f / b.to_f
 
 # good
 a.to_f / b
-a / b.to_f# bad
+a / b.to_f
+
+# bad
 a / b.to_f
 a.to_f / b.to_f
 
 # good
-a.to_f / b# bad
+a.to_f / b
+
+# bad
 a.to_f / b
 a.to_f / b.to_f
 
 # good
-a / b.to_f# bad
+a / b.to_f
+
+# bad
 a / b.to_f
 a.to_f / b
 a.to_f / b.to_f

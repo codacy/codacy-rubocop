@@ -10,7 +10,9 @@ end
 
 # good
 it 'has excessive spacing' do
-end# bad
+end
+
+# bad
 context '  when a condition   is met  ' do
 end
 

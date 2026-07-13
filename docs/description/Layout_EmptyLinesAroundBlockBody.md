@@ -15,7 +15,9 @@ end
 # good
 foo do |bar|
   # ...
-end# bad
+end
+
+# bad
 foo do |bar|
   # ...
 end

@@ -27,10 +27,14 @@ starts on a separate line.
     bar
   )
 ]
+
+
 # bad
 [a, b, foo(
   bar
 )]
+
+
 # good
 [a, b, foo(
   bar

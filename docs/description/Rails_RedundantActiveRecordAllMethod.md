@@ -20,7 +20,9 @@ user.articles.all.order(:created_at)
 User.find(id)
 User.order(:created_at)
 users.where(id: ids)
-user.articles.order(:created_at)# good
+user.articles.order(:created_at)
+
+# good
 ActionMailer::Preview.all.first
 ActiveSupport::TimeZone.all.first
 ```

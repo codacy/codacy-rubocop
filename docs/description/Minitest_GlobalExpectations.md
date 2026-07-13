@@ -21,7 +21,9 @@ expect { musts }.must_raise TypeError
 
 value(musts).must_equal expected_musts
 value(wonts).wont_match expected_wonts
-value { musts }.must_raise TypeError# bad
+value { musts }.must_raise TypeError
+
+# bad
 musts.must_equal expected_musts
 wonts.wont_match expected_wonts
 musts.must_raise TypeError
@@ -37,7 +39,9 @@ value { musts }.must_raise TypeError
 # good
 _(musts).must_equal expected_musts
 _(wonts).wont_match expected_wonts
-_ { musts }.must_raise TypeError# bad
+_ { musts }.must_raise TypeError
+
+# bad
 musts.must_equal expected_musts
 wonts.wont_match expected_wonts
 musts.must_raise TypeError
@@ -53,7 +57,9 @@ value { musts }.must_raise TypeError
 # good
 expect(musts).must_equal expected_musts
 expect(wonts).wont_match expected_wonts
-expect { musts }.must_raise TypeError# bad
+expect { musts }.must_raise TypeError
+
+# bad
 musts.must_equal expected_musts
 wonts.wont_match expected_wonts
 musts.must_raise TypeError

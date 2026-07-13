@@ -12,6 +12,8 @@ build :login
 # good
 create(:user)
 build(:login)
+
+
 # bad
 create(:user)
 build(:login)
@@ -29,6 +31,8 @@ build(
   :user,
   name: 'foo'
 )
+
+
 # bad - with `EnforcedStyle: require_parentheses`
 FactoryBot.create :user
 build :user
@@ -36,6 +40,8 @@ build :user
 # good - with `EnforcedStyle: require_parentheses`
 FactoryBot.create(:user)
 build(:user)
+
+
 # bad - with `EnforcedStyle: require_parentheses`
 FactoryBot.create :user
 FactoryBot.build :user

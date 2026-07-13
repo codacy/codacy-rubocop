@@ -20,7 +20,9 @@ end
 # good
 [1, 2].each do |a|
   puts a if a == 1
-end# With `always` all conditions at the end of an iteration needs to be
+end
+
+# With `always` all conditions at the end of an iteration needs to be
 # replaced by next - with `skip_modifier_ifs` the modifier if like
 # this one are ignored: `[1, 2].each { |a| puts a if a == 1 }`
 
@@ -40,7 +42,9 @@ end
 [1, 2].each do |a|
   next unless a == 1
   puts a
-end# bad
+end
+
+# bad
 [1, 2].each do |a|
   if a == 1
     puts a
@@ -57,7 +61,9 @@ end
   end
   next unless a == 2
   puts a
-end# good
+end
+
+# good
 [1, 2].each do |a|
   if a == 1
     puts a

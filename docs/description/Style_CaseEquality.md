@@ -22,14 +22,22 @@ This potentially incompatible transformation is handled by `Performance/RegexpMa
 (1..100) === 7
 
 # good
-(1..100).include?(7)# bad
+(1..100).include?(7)
+
+# bad
 Array === something
 
 # good
-something.is_a?(Array)# good
+something.is_a?(Array)
+
+# good
 Array === something
-something.is_a?(Array)# bad
-self.class === something# good
+something.is_a?(Array)
+
+# bad
+self.class === something
+
+# good
 self.class === something
 ```
 

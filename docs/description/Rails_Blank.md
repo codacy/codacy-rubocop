@@ -17,13 +17,17 @@ foo.nil? || foo.empty?
 foo == nil || foo.empty?
 
 # good
-foo.blank?# Converts usages of `!present?` to `blank?`
+foo.blank?
+
+# Converts usages of `!present?` to `blank?`
 
 # bad
 !foo.present?
 
 # good
-foo.blank?# Converts usages of `unless present?` to `if blank?`
+foo.blank?
+
+# Converts usages of `unless present?` to `if blank?`
 
 # bad
 something unless foo.present?

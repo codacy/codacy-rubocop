@@ -26,13 +26,21 @@ when 'a', 'b', 'c' then foo
 end
 
 # accepted (but consider `case` as above)
-foo if a == b.lightweight || a == b.heavyweight# good
-foo if a == b.lightweight || a == b.heavyweight# bad
 foo if a == b.lightweight || a == b.heavyweight
 
 # good
-foo if [b.lightweight, b.heavyweight].include?(a)# bad
-foo if a == 'a' || a == 'b'# good
+foo if a == b.lightweight || a == b.heavyweight
+
+# bad
+foo if a == b.lightweight || a == b.heavyweight
+
+# good
+foo if [b.lightweight, b.heavyweight].include?(a)
+
+# bad
+foo if a == 'a' || a == 'b'
+
+# good
 foo if a == 'a' || a == 'b'
 ```
 

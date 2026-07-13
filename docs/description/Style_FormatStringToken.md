@@ -37,37 +37,55 @@ format('%s', 'Hello')
 
 # good
 format('%<greeting>s', greeting: 'Hello')
+
+
 # bad
 format('%<greeting>s', greeting: 'Hello')
 format('%s', 'Hello')
 
 # good
 format('%{greeting}', greeting: 'Hello')
+
+
 # bad
 format('%<greeting>s', greeting: 'Hello')
 format('%{greeting}', greeting: 'Hello')
 
 # good
 format('%s', 'Hello')
+
+
 # bad
 format('%06d', 10)
 format('%s %s.', 'Hello', 'world')
 
 # good
 format('%<number>06d', number: 10)
+
+
 # bad
 format('%s %s.', 'Hello', 'world')
 
 # good
 format('%06d', 10)
+
+
 # bad
 redirect('foo/%{bar_id}')
+
+
 # good
 redirect('foo/%{bar_id}')
+
+
 # bad
 redirect('foo/%{bar_id}')
+
+
 # good
 redirect('foo/%{bar_id}')
+
+
 # bad
 "%{greeting}"
 foo("%{greeting}")
@@ -83,6 +101,8 @@ format("%<greeting>s", greeting: 'Hello')
 printf("%<greeting>s", greeting: 'Hello')
 sprintf("%<greeting>s", greeting: 'Hello')
 "%<greeting>s" % { greeting: 'Hello' }
+
+
 # good
 "%{greeting}"
 foo("%{greeting}")

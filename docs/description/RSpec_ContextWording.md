@@ -23,7 +23,9 @@ with `AllowedPatterns`. By default, there are no checking by pattern.
 #     - without
 #     - if
 #     - unless
-#     - for# bad
+#     - for
+
+# bad
 context 'the display name not present' do
   # ...
 end
@@ -32,10 +34,14 @@ end
 context 'when the display name is not present' do
   # ...
 end
+
+
 # .rubocop.yml
 # RSpec/ContextWording:
 #   AllowedPatterns:
-#     - とき$# bad
+#     - とき$
+
+# bad
 context '条件を満たす' do
   # ...
 end

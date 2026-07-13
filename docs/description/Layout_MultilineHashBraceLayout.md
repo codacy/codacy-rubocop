@@ -43,7 +43,9 @@ line as the last element of the hash.
 {
   a: 1,
   b: 2
-}# bad
+}
+
+# bad
 {
   a: 1,
   b: 2 }
@@ -61,7 +63,9 @@ line as the last element of the hash.
 {
   a: 1,
   b: 2
-}# bad
+}
+
+# bad
 { a: 1,
   b: 2
 }

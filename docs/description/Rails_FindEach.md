@@ -8,8 +8,12 @@ Identifies usages of `all.each` and change them to use `all.find_each` instead.
 User.all.each
 
 # good
-User.all.find_each# good
-User.order(:foo).each# good
+User.all.find_each
+
+# good
+User.order(:foo).each
+
+# good
 User.order(:foo).each
 ```
 

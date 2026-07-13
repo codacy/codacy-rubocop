@@ -16,17 +16,27 @@ Method definitions and method calls are not affected by this cop.
 fooBar = 1
 
 # good
-foo_bar = 1# bad
+foo_bar = 1
+
+# bad
 foo_bar = 1
 
 # good
-fooBar = 1# good (with EnforcedStyle: snake_case)
-fooBar = 1# good (with EnforcedStyle: camelCase)
-release_v1 = true# bad (in all cases)
+fooBar = 1
+
+# good (with EnforcedStyle: snake_case)
+fooBar = 1
+
+# good (with EnforcedStyle: camelCase)
+release_v1 = true
+
+# bad (in all cases)
 fooBar = 1
 @fooBar = 1
 @@fooBar = 1
-$fooBar = 1# bad (in all cases)
+$fooBar = 1
+
+# bad (in all cases)
 release_v1 = true
 @release_v1 = true
 @@release_v1 = true

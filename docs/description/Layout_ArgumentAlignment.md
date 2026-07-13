@@ -26,7 +26,9 @@ foo(
   :bar,
     :baz,
     key: value
-)# good
+)
+
+# good
 
 foo :bar,
   :baz,

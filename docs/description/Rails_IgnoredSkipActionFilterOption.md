@@ -19,7 +19,9 @@ end
 class MyPageController < ApplicationController
   skip_before_action :login_required,
     if: -> { trusted_origin? && action_name == "show" }
-end# bad
+end
+
+# bad
 class MyPageController < ApplicationController
   skip_before_action :login_required,
     except: :admin, if: :trusted_origin?

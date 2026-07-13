@@ -31,7 +31,9 @@ User::Login
 ::User
 
 # good
-::User::Login# Restrict this cop to only being concerned about certain constants
+::User::Login
+
+# Restrict this cop to only being concerned about certain constants
 
 # bad
 Login
@@ -40,7 +42,9 @@ Login
 ::Login
 
 # good
-User::Login# Restrict this cop not being concerned about certain constants
+User::Login
+
+# Restrict this cop not being concerned about certain constants
 
 # bad
 User

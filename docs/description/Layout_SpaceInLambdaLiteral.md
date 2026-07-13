@@ -9,7 +9,9 @@ parenthesis (`(`) in lambda literals.
 a = -> (x, y) { x + y }
 
 # good
-a = ->(x, y) { x + y }# bad
+a = ->(x, y) { x + y }
+
+# bad
 a = ->(x, y) { x + y }
 
 # good

@@ -13,7 +13,9 @@ preceding text by exactly one space (default) or zero spaces.
 # good
 'a' \
 'b' \
-'c'# bad
+'c'
+
+# bad
 'a' \
 'b'  \
 'c'

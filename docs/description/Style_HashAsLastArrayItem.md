@@ -23,7 +23,9 @@ regardless of `EnforcedStyle`.
 [one: 1, two: 2]
 
 # good
-[{ one: 1, two: 2 }]# bad
+[{ one: 1, two: 2 }]
+
+# bad
 [1, 2, { one: 1, two: 2 }]
 
 # good

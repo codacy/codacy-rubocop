@@ -38,10 +38,14 @@ def test
   elsif y
   else
   end
-end# bad
+end
+
+# bad
 def test
   return x, y
-end# good
+end
+
+# good
 def test
   return x, y
 end

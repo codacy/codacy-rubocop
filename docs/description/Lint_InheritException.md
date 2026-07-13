@@ -16,7 +16,9 @@ C = Class.new(Exception)
 
 class C < StandardError; end
 
-C = Class.new(StandardError)# bad
+C = Class.new(StandardError)
+
+# bad
 
 class C < Exception; end
 

@@ -10,7 +10,9 @@ Check for excessive model creation in a list.
 create_list(:merge_request, 1000, state: :opened)
 
 # good
-create_list(:merge_request, 10, state: :opened)# We do not allow more than 20 items to be created
+create_list(:merge_request, 10, state: :opened)
+
+# We do not allow more than 20 items to be created
 
 # bad
 create_list(:merge_request, 1000, state: :opened)

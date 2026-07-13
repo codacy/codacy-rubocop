@@ -19,12 +19,16 @@ hash['foo'] = hash['bar']
 obj.attr = obj.attr2
 
 # good (method calls possibly can return different results)
-hash[foo] = hash[foo]# bad
+hash[foo] = hash[foo]
+
+# bad
 foo = foo #: Integer
 foo, bar = foo, bar #: Integer
 Foo = Foo #: Integer
 hash['foo'] = hash['foo'] #: Integer
-obj.attr = obj.attr #: Integer# good
+obj.attr = obj.attr #: Integer
+
+# good
 foo = foo #: Integer
 foo, bar = foo, bar #: Integer
 Foo = Foo #: Integer

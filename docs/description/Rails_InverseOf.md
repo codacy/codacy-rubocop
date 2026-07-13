@@ -21,7 +21,9 @@ end
 
 class Post < ApplicationRecord
   belongs_to :blog
-end# bad
+end
+
+# bad
 class Blog < ApplicationRecord
   has_many :posts, -> { order(published_at: :desc) }
 end
@@ -58,7 +60,9 @@ class Blog < ApplicationRecord
   has_many(:posts,
            -> { order(published_at: :desc) },
            inverse_of: false)
-end# bad
+end
+
+# bad
 class Picture < ApplicationRecord
   belongs_to :imageable, polymorphic: true
 end
@@ -82,7 +86,9 @@ end
 
 class Product < ApplicationRecord
   has_many :pictures, as: :imageable, inverse_of: :imageable
-end# bad
+end
+
+# bad
 # However, RuboCop can not detect this pattern...
 class Physician < ApplicationRecord
   has_many :appointments
@@ -113,10 +119,14 @@ end
 class Patient < ApplicationRecord
   has_many :appointments
   has_many :physicians, through: :appointments
-end# bad
+end
+
+# bad
 class Blog < ApplicationRecord
   has_many :posts, -> { order(published_at: :desc) }
-end# good
+end
+
+# good
 class Blog < ApplicationRecord
   has_many :posts, -> { order(published_at: :desc) }
 end

@@ -18,7 +18,9 @@ a.blank? ? nil : a
 !a.blank? ? a : nil
 
 # good
-a.presence# bad
+a.presence
+
+# bad
 a.present? ? a : b
 
 # bad
@@ -31,7 +33,9 @@ a.blank? ? b : a
 !a.blank? ? a : b
 
 # good
-a.presence || b# bad
+a.presence || b
+
+# bad
 a.present? ? a.foo : nil
 
 # bad

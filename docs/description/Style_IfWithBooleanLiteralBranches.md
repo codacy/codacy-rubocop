@@ -46,7 +46,9 @@ else
 end
 
 # good (but potentially an unsafe correction)
-foo.do_something?# good
+foo.do_something?
+
+# good
 num.infinite? ? true : false
 
 # good

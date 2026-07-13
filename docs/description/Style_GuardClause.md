@@ -59,7 +59,9 @@ end
 # also good
 define_method(:test) do
   work if something
-end# bad
+end
+
+# bad
 def test
   if foo?
     work
@@ -68,7 +70,9 @@ def test
   if bar?  # <- reports an offense
     work
   end
-end# good
+end
+
+# good
 def test
   if foo?
     work

@@ -48,12 +48,16 @@ end
 def save_user
   return user.save
 end
+
+
 # good
 users.each { |u| u.save }
 
 def save_user
   user.save
 end
+
+
 # bad
 users.each { |u| u.save }
 def save_user
@@ -70,6 +74,8 @@ end
 def save_user
   return user.save
 end
+
+
 # bad
 merchant.create
 customers.builder.save

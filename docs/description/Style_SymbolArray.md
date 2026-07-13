@@ -27,7 +27,9 @@ array of 2 or fewer elements.
 %i[foo \[ \]]
 
 # bad (contains () with spaces)
-%i(foo \( \))# good
+%i(foo \( \))
+
+# good
 [:foo, :bar, :baz]
 
 # bad

@@ -20,16 +20,22 @@ let(:item2) { create(:item) }
 # good
 
 let(:visible_item) { create(:item, visible: true) }
-let(:invisible_item) { create(:item, visible: false) }# bad
+let(:invisible_item) { create(:item, visible: false) }
+
+# bad
 let(:item_1) { create(:item) }
 let(:item_2) { create(:item) }
 let(:item_3) { create(:item) }
 
 # good
 let(:item_1) { create(:item) }
-let(:item_2) { create(:item) }# good
+let(:item_2) { create(:item) }
+
+# good
 let(:item_1) { create(:item) }
-let(:item_2) { create(:item) }# good
+let(:item_2) { create(:item) }
+
+# good
 let(:item_1) { create(:item) }
 let(:item_2) { create(:item) }
 ```

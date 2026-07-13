@@ -21,7 +21,9 @@ class A
   def test
     puts 'hello'
   end
-end# bad
+end
+
+# bad
 value = (
 foo - bar
 )
@@ -29,7 +31,9 @@ foo - bar
 # good
 value = (
   foo - bar
-)# bad
+)
+
+# bad
 module A
 class B
   def test
@@ -45,11 +49,15 @@ class B
     puts 'hello'
   end
 end
-end# good
+end
+
+# good
 records.uniq { |el| el[:profile_id] }
        .map do |message|
   SomeJob.perform_later(message[:id])
-end# good
+end
+
+# good
 records.uniq { |el| el[:profile_id] }
        .map do |message|
          SomeJob.perform_later(message[:id])

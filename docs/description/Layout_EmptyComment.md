@@ -16,7 +16,9 @@ end
 # Description of `Foo` class.
 #
 class Foo
-end# good
+end
+
+# good
 
 def foo
 end
@@ -24,7 +26,9 @@ end
 #################
 
 def bar
-end# bad
+end
+
+# bad
 
 def foo
 end
@@ -32,13 +36,17 @@ end
 #################
 
 def bar
-end# good
+end
+
+# good
 
 #
 # Description of `Foo` class.
 #
 class Foo
-end# bad
+end
+
+# bad
 
 #
 # Description of `Foo` class.

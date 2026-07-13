@@ -32,7 +32,9 @@ begin
   # do something
 rescue MyException => _e
   # do something
-end# bad
+end
+
+# bad
 begin
   # do something
 rescue MyException => e

@@ -19,7 +19,9 @@ to prevent interference between the autocorrection of the two cops.
 foo != nil && !foo.empty?
 
 # good
-foo.present?# Converts usages of `!blank?` to `present?`
+foo.present?
+
+# Converts usages of `!blank?` to `present?`
 
 # bad
 !foo.blank?
@@ -28,7 +30,9 @@ foo.present?# Converts usages of `!blank?` to `present?`
 not foo.blank?
 
 # good
-foo.present?# Converts usages of `unless blank?` to `if present?`
+foo.present?
+
+# Converts usages of `unless blank?` to `if present?`
 
 # bad
 something unless foo.blank?

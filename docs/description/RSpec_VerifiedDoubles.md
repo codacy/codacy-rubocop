@@ -27,7 +27,9 @@ end
 # good
 let(:foo) do
   object_double("some object", method_name: 'returned value')
-end# good
+end
+
+# good
 let(:foo) do
   double(method_name: 'returned value')
 end
@@ -35,7 +37,9 @@ end
 # good
 let(:foo) do
   double
-end# bad
+end
+
+# bad
 let(:foo) do
   double(method_name: 'returned value')
 end
@@ -43,10 +47,14 @@ end
 # bad
 let(:foo) do
   double
-end# bad
+end
+
+# bad
 let(:foo) do
   double(:foo)
-end# good
+end
+
+# good
 let(:foo) do
   double(:foo)
 end

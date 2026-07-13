@@ -44,6 +44,8 @@ a = { foo: 1, bar: 2,
 # good
 a = { foo: 1, bar: 2,
       baz: 3, qux: 4, }
+
+
 # bad
 a = { foo: 1, bar: 2, }
 
@@ -77,6 +79,8 @@ a = {
   foo: 1,
   bar: 2,
 }
+
+
 # bad
 a = { foo: 1, bar: 2, }
 
@@ -107,6 +111,8 @@ a = { foo: 1, bar: 2,
 # good
 a = { foo: 1, bar: 2,
       baz: 3, qux: 4 }
+
+
 # bad
 a = { foo: 1, bar: 2, }
 

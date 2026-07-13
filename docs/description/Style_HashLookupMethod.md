@@ -21,11 +21,15 @@ hash[key]
 hash.fetch(key, default)
 
 # good - fetch with block is allowed
-hash.fetch(key) { default }# bad
+hash.fetch(key) { default }
+
+# bad
 hash[key]
 
 # good
-hash.fetch(key)# good
+hash.fetch(key)
+
+# good
 Rails.cache.fetch(name, options) { block }
 ```
 

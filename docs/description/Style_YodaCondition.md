@@ -20,13 +20,17 @@ foo <= 42
 bar > 10
 CONST == 99
 "#{interpolation}" == foo
-/#{interpolation}/ == foo# bad
+/#{interpolation}/ == foo
+
+# bad
 99 == foo
 "bar" != foo
 
 # good
 99 >= foo
-3 < a && a < 5# bad
+3 < a && a < 5
+
+# bad
 foo == 99
 foo == "bar"
 foo <= 42
@@ -36,7 +40,9 @@ bar > 10
 99 == foo
 "bar" != foo
 42 >= foo
-10 < bar# bad
+10 < bar
+
+# bad
 99 >= foo
 3 < a && a < 5
 

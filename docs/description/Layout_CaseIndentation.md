@@ -40,7 +40,9 @@ in pattern
   x * 2
 else
   y / 3
-end# if EndAlignment is set to other style such as
+end
+
+# if EndAlignment is set to other style such as
 # start_of_line (as shown below), then *when* alignment
 # configuration does have an effect.
 
@@ -72,7 +74,9 @@ a = case n
       x * 2
     else
       y / 3
-end# bad
+end
+
+# bad
 a = case n
     when 0
       x * 2

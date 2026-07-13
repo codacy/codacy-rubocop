@@ -17,6 +17,8 @@ multi-line array.
 
 # good
 [:a, :b]
+
+
 # bad
 a = b,
     c
@@ -25,6 +27,8 @@ a = b,
 a =
   b,
   c
+
+
 # good
 a = b,
     c
@@ -32,6 +36,8 @@ a = b,
 a =
   b,
   c
+
+
 # bad
 [ :a, {
   :b => :c
@@ -42,6 +48,8 @@ a =
   :a, {
   :b => :c
 }]
+
+
 # good
 [:a, {
   :b => :c

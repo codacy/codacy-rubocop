@@ -33,7 +33,9 @@ return unless a && b && c
 return unless a || b || c
 return unless a and b and c
 return unless a or b or c
-return unless a?# bad
+return unless a?
+
+# bad
 return unless a || b
 return unless a && b
 return unless a or b

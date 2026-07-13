@@ -21,7 +21,9 @@ end
 
 class UserType < BaseType
   graphql_name 'User'
-end# good
+end
+
+# good
 
 class UserType < BaseType
   graphql_name 'User'

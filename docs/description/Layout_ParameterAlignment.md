@@ -34,7 +34,9 @@ def foo(
   bar,
      baz)
   123
-end# good
+end
+
+# good
 
 def foo(bar,
   baz)

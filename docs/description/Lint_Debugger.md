@@ -55,11 +55,15 @@ end
 def some_method
   do_something
 end
+
+
 # bad (ok during development)
 
 def some_method
   my_debugger
 end
+
+
 # bad (ok during development)
 
 require 'my_debugger/start'

@@ -24,7 +24,9 @@ def change
   create_table :users do |t|
     t.string :name
   end
-end# drop_table
+end
+
+# drop_table
 
 # bad
 def change
@@ -36,7 +38,9 @@ def change
   drop_table :users do |t|
     t.string :name
   end
-end# change_column_default
+end
+
+# change_column_default
 
 # bad
 def change
@@ -46,7 +50,9 @@ end
 # good
 def change
   change_column_default(:posts, :state, from: nil, to: "draft")
-end# remove_column
+end
+
+# remove_column
 
 # bad
 def change
@@ -56,7 +62,9 @@ end
 # good
 def change
   remove_column(:suppliers, :qualification, :string)
-end# remove_foreign_key
+end
+
+# remove_foreign_key
 
 # bad
 def change
@@ -71,7 +79,9 @@ end
 # good
 def change
   remove_foreign_key :accounts, to_table: :branches
-end# change_table
+end
+
+# change_table
 
 # bad
 def change
@@ -87,7 +97,9 @@ def change
   change_table :users do |t|
     t.string :name
   end
-end# remove_columns
+end
+
+# remove_columns
 
 # bad
 def change
@@ -111,7 +123,9 @@ end
 # good (Rails >= 6.1, see https://github.com/rails/rails/pull/36589)
 def change
   remove_columns :users, :name, :email, type: :string
-end# remove_index
+end
+
+# remove_index
 
 # bad
 def change

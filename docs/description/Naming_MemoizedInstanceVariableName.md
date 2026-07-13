@@ -57,7 +57,9 @@ end
 define_method(:foo) do
   return @foo if defined?(@foo)
   @foo = calculate_expensive_thing
-end# bad
+end
+
+# bad
 def foo
   @something ||= calculate_expensive_thing
 end
@@ -96,7 +98,9 @@ end
 define_method(:foo) do
   return @_foo if defined?(@_foo)
   @_foo = calculate_expensive_thing
-end# bad
+end
+
+# bad
 def foo
   @something ||= calculate_expensive_thing
 end

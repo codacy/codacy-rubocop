@@ -43,7 +43,9 @@ line as the last element of the array.
 [
   :a,
   :b
-]# bad
+]
+
+# bad
 [
   :a,
   :b ]
@@ -61,7 +63,9 @@ line as the last element of the array.
 [
   :a,
   :b
-]# bad
+]
+
+# bad
 [ :a,
   :b
 ]

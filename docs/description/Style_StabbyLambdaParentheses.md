@@ -9,7 +9,9 @@ There are two different styles. Defaults to `require_parentheses`.
 ->a,b,c { a + b + c }
 
 # good
-->(a,b,c) { a + b + c}# bad
+->(a,b,c) { a + b + c}
+
+# bad
 ->(a,b,c) { a + b + c }
 
 # good

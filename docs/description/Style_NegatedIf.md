@@ -29,7 +29,9 @@ bar if !foo
 
 # good
 
-bar unless foo# enforces `unless` for just `prefix` conditionals
+bar unless foo
+
+# enforces `unless` for just `prefix` conditionals
 
 # bad
 
@@ -45,7 +47,9 @@ end
 
 # good
 
-bar if !foo# enforces `unless` for just `postfix` conditionals
+bar if !foo
+
+# enforces `unless` for just `postfix` conditionals
 
 # bad
 

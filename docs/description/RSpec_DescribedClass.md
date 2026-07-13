@@ -29,13 +29,19 @@ end
 # good
 describe MyClass do
   subject { described_class.do_something }
-end# good
+end
+
+# good
 describe MyClass do
   subject { MyClass::CONSTANT }
-end# bad
+end
+
+# bad
 describe MyClass do
   subject { MyClass::CONSTANT }
-end# bad
+end
+
+# bad
 describe MyClass do
   subject { described_class.do_something }
 end
@@ -43,7 +49,9 @@ end
 # good
 describe MyClass do
   subject { MyClass.do_something }
-end# spec/controllers/.rubocop.yml
+end
+
+# spec/controllers/.rubocop.yml
 # RSpec/DescribedClass:
 #   SkipBlocks: true
 

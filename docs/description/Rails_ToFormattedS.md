@@ -11,6 +11,8 @@ time.to_formatted_s(:db)
 
 # good
 time.to_fs(:db)
+
+
 # bad
 time.to_fs(:db)
 

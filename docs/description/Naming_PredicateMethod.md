@@ -102,23 +102,35 @@ end
 # ok - return type is not known
 def foo
   bar?
-end# bad - the method returns nil in some cases
+end
+
+# bad - the method returns nil in some cases
 def foo?
   return unless bar?
   true
-end# good
+end
+
+# good
 def call
   foo == bar
-end# good
+end
+
+# good
 def foo?
   'foo'
-end# bad
+end
+
+# bad
 def save!
   true
-end# good
+end
+
+# good
 def save!
   true
-end# good
+end
+
+# good
 def non_predicate_method(num)
   num.infinite?
 end

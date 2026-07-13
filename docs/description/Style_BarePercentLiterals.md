@@ -12,7 +12,9 @@ to read.
 
 # good
 %(He said: "#{greeting}")
-%{She said: 'Hi'}# bad
+%{She said: 'Hi'}
+
+# bad
 %|He said: "#{greeting}"|
 %/She said: 'Hi'/
 

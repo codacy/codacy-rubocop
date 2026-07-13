@@ -23,7 +23,9 @@ hash.select! { |k, v| !v.nil? }
 hash.filter! { |k, v| !v.nil? }
 
 # good
-hash.compact!# good
+hash.compact!
+
+# good
 params.reject(&:nil?)
 ```
 

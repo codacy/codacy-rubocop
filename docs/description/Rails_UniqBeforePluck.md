@@ -21,7 +21,9 @@ ActiveRecord::Associations::CollectionProxy.
 Album.pluck(:band_name).uniq
 
 # good
-Album.distinct.pluck(:band_name)# bad - redundantly fetches duplicate values
+Album.distinct.pluck(:band_name)
+
+# bad - redundantly fetches duplicate values
 Album.pluck(:band_name).uniq
 
 # bad - redundantly fetches duplicate values

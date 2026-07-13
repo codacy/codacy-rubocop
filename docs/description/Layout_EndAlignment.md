@@ -35,7 +35,9 @@ variable = if true
 
 variable =
   if true
-  end# bad
+  end
+
+# bad
 
 variable = if true
     end
@@ -47,7 +49,9 @@ end
 
 variable =
   if true
-  end# bad
+  end
+
+# bad
 
 variable = if true
     end

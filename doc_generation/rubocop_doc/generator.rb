@@ -99,13 +99,13 @@ module RubocopDocs
 
     def examples_description
       return '' unless yard_object
-      return '' if yard_object.tags('example').empty?
-      result = "```ruby\n".dup
-      yard_object.tags('example').map do |x|
-        result << x.text
-      end
-      result << "\n```\n"
-      result
+      
+      example_tags = yard_object.tags('example')
+      return '' if example_tags.empty?
+      
+      examples_text = example_tags.map(&:text).join("\n\n")
+      
+      "```ruby\n#{examples_text}\n```\n"
     end
 
     def as_json

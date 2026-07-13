@@ -74,12 +74,16 @@ class MyClass
   def non_duplicated_delegated_method_name
   end
 end
+
+
 # good
 def foo
   1
 end
 
 delegate :foo, to: :bar
+
+
 # bad
 def foo
   1

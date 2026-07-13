@@ -36,6 +36,8 @@ end
 def foo(&)
   bar(&)
 end
+
+
 # bad
 def foo(&)
   bar(&)

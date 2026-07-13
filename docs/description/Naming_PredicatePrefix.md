@@ -32,7 +32,9 @@ end
 # When ForbiddenPrefixes: []
 # good
 def is_even?(value)
-end# bad
+end
+
+# bad
 def seems_to_be_even(value)
 end
 
@@ -44,12 +46,18 @@ end
 # When ForbiddenPrefixes: []
 # good
 def seems_to_be_even?(value)
-end# Despite starting with the `is_` prefix, this method is allowed
+end
+
+# Despite starting with the `is_` prefix, this method is allowed
 # good
 def is_a?(value)
-end# good
+end
+
+# good
 def is_even?(value)
-end# bad
+end
+
+# bad
 sig { returns(String) }
 def is_this_thing_on
   "yes"
@@ -59,7 +67,9 @@ end
 sig { returns(String) }
 def is_this_thing_on?
   "yes"
-end# bad
+end
+
+# bad
 sig { returns(T::Boolean) }
 def odd(value)
 end
@@ -67,11 +77,15 @@ end
 # good
 sig { returns(T::Boolean) }
 def odd?(value)
-end# bad
+end
+
+# bad
 define_method(:is_even) { |value| }
 
 # good
-define_method(:even?) { |value| }# bad
+define_method(:even?) { |value| }
+
+# bad
 def_node_matcher(:is_even) { |value| }
 
 # good

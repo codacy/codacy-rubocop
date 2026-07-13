@@ -104,14 +104,20 @@ foo.to_s
 self&.foo
 
 # good
-self.foo# bad
+self.foo
+
+# bad
 do_something if attrs&.nil_safe_method(:[])
 
 # good
 do_something if attrs.nil_safe_method(:[])
-do_something if attrs&.not_nil_safe_method(:[])# good
+do_something if attrs&.not_nil_safe_method(:[])
+
+# good
 foo.bar
-foo&.baz# bad
+foo&.baz
+
+# bad
 foo.bar
 foo&.baz # would raise on previous line if `foo` is nil
 
@@ -136,7 +142,9 @@ end
 
 def method2
   foo&.bar
-end# good
+end
+
+# good
 foo.present?
 foo&.bar
 ```

@@ -32,7 +32,9 @@ puts $PROCESS_ID # or $PID
 puts $CHILD_STATUS
 puts $LAST_MATCH_INFO
 puts $IGNORECASE
-puts $ARGV # or ARGV# good
+puts $ARGV # or ARGV
+
+# good
 puts $:
 puts $"
 puts $0
@@ -51,6 +53,8 @@ puts $?
 puts $~
 puts $=
 puts $*
+
+
 # good
 # Like `use_perl_names` but allows builtin global vars.
 puts $LOAD_PATH

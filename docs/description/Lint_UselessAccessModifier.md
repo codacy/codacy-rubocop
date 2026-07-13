@@ -88,7 +88,9 @@ class Foo
 
   define_method(:method2) do
   end
-end# Lint/UselessAccessModifier:
+end
+
+# Lint/UselessAccessModifier:
 #   ContextCreatingMethods:
 #     - concerning
 
@@ -110,7 +112,9 @@ class Foo
 
   def some_other_private_method
   end
-end# Lint/UselessAccessModifier:
+end
+
+# Lint/UselessAccessModifier:
 #   MethodCreatingMethods:
 #     - delegate
 

@@ -25,6 +25,8 @@ end
 Gem::Specification.new do |spec|
   spec.add_development_dependency 'parser', '>= 2.3.3.1', '< 3.0'
 end
+
+
 # bad
 Gem::Specification.new do |spec|
   spec.add_dependency 'parser', '>= 2.3.3.1', '< 3.0'

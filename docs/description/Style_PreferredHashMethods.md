@@ -14,7 +14,9 @@ Hash#has_value?
 
 # good
 Hash#key?
-Hash#value?# bad
+Hash#value?
+
+# bad
 Hash#key?
 Hash#value?
 

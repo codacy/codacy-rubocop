@@ -16,7 +16,9 @@ array = [ a, [ b, c ]]
 
 # good
 array = [a, b, c, d]
-array = [a, [b, c]]# The `space` style enforces that array literals have
+array = [a, [b, c]]
+
+# The `space` style enforces that array literals have
 # surrounding space.
 
 # bad
@@ -25,7 +27,9 @@ array = [ a, [ b, c ]]
 
 # good
 array = [ a, b, c, d ]
-array = [ a, [ b, c ] ]# The `compact` style normally requires a space inside
+array = [ a, [ b, c ] ]
+
+# The `compact` style normally requires a space inside
 # array brackets, with the exception that successive left
 # or right brackets are collapsed together in nested arrays.
 
@@ -41,7 +45,9 @@ array = [
 array = [ a, b, c, d ]
 array = [ a, [ b, c ]]
 array = [[ a ],
-  [ b, c ]]# The `no_space` EnforcedStyleForEmptyBrackets style enforces that
+  [ b, c ]]
+
+# The `no_space` EnforcedStyleForEmptyBrackets style enforces that
 # empty array brackets do not contain spaces.
 
 # bad
@@ -50,7 +56,9 @@ bar = [     ]
 
 # good
 foo = []
-bar = []# The `space` EnforcedStyleForEmptyBrackets style enforces that
+bar = []
+
+# The `space` EnforcedStyleForEmptyBrackets style enforces that
 # empty array brackets contain exactly one space.
 
 # bad

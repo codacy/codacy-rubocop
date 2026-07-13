@@ -17,7 +17,9 @@ end
 
 # good
 def foo
-end# good
+end
+
+# good
 # rubocop:disable Metrics/AbcSize
 def foo
 end

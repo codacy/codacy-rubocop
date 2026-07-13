@@ -27,7 +27,9 @@ end
 class Foo
   class Bar
   end
-end# bad
+end
+
+# bad
 class Foo
   class Bar
   end

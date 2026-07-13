@@ -42,7 +42,9 @@ array of 2 or fewer elements.
   ['one', 'One'],
   ['two', 'Two'],
   ['forty two', 'Forty Two']
-]# good
+]
+
+# good
 ['foo', 'bar', 'baz']
 
 # bad

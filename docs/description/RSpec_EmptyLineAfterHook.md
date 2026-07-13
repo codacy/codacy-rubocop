@@ -28,7 +28,9 @@ it { does_something }
 around { |test| test.run }
 after { do_something }
 
-it { does_something }# rubocop.yml
+it { does_something }
+
+# rubocop.yml
 # RSpec/EmptyLineAfterHook:
 #   AllowConsecutiveOneLiners: false
 

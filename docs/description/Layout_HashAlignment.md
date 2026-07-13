@@ -34,7 +34,9 @@ passing a list of styles to EnforcedHashRocketStyle and EnforcedColonStyle.
 {
   :foo => bar,
   :ba => baz
-}# bad
+}
+
+# bad
 {
   :foo => bar,
   :ba => baz
@@ -48,7 +50,9 @@ passing a list of styles to EnforcedHashRocketStyle and EnforcedColonStyle.
 {
   :foo => bar,
    :ba => baz
-}# bad
+}
+
+# bad
 {
   :foo => bar,
    :ba => baz
@@ -58,7 +62,9 @@ passing a list of styles to EnforcedHashRocketStyle and EnforcedColonStyle.
 {
   :foo => bar,
   :ba  => baz
-}# bad
+}
+
+# bad
 {
   foo: bar,
    ba: baz
@@ -72,7 +78,9 @@ passing a list of styles to EnforcedHashRocketStyle and EnforcedColonStyle.
 {
   foo: bar,
   ba: baz
-}# bad
+}
+
+# bad
 {
   foo: bar,
   ba: baz
@@ -82,7 +90,9 @@ passing a list of styles to EnforcedHashRocketStyle and EnforcedColonStyle.
 {
   foo: bar,
    ba: baz
-}# bad
+}
+
+# bad
 {
   foo: bar,
   ba: baz
@@ -92,7 +102,9 @@ passing a list of styles to EnforcedHashRocketStyle and EnforcedColonStyle.
 {
   foo: bar,
   ba:  baz
-}# Inspect both implicit and explicit hashes.
+}
+
+# Inspect both implicit and explicit hashes.
 
 # bad
 do_something(foo: 1,
@@ -120,7 +132,9 @@ do_something({foo: 1,
 do_something({
   foo: 1,
   bar: 2
-})# Ignore both implicit and explicit hashes.
+})
+
+# Ignore both implicit and explicit hashes.
 
 # good
 do_something(foo: 1,
@@ -128,7 +142,9 @@ do_something(foo: 1,
 
 # good
 do_something({foo: 1,
-  bar: 2})# Ignore only implicit hashes.
+  bar: 2})
+
+# Ignore only implicit hashes.
 
 # bad
 do_something({foo: 1,
@@ -136,7 +152,9 @@ do_something({foo: 1,
 
 # good
 do_something(foo: 1,
-  bar: 2)# Ignore only explicit hashes.
+  bar: 2)
+
+# Ignore only explicit hashes.
 
 # bad
 do_something(foo: 1,

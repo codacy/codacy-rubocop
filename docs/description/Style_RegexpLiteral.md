@@ -31,7 +31,9 @@ regex = /
   foo
   (bar)
   (baz)
-/x# bad
+/x
+
+# bad
 snake_case = /^[\dA-Z_]+$/
 
 # bad
@@ -49,7 +51,9 @@ regex = %r{
   foo
   (bar)
   (baz)
-}x# bad
+}x
+
+# bad
 snake_case = %r{^[\dA-Z_]+$}
 
 # bad
@@ -67,14 +71,18 @@ regex = %r{
   foo
   (bar)
   (baz)
-}x# If `false`, the cop will always recommend using `%r` if one or more
+}x
+
+# If `false`, the cop will always recommend using `%r` if one or more
 # slashes are found in the regexp string.
 
 # bad
 x =~ /home\//
 
 # good
-x =~ %r{home/}# good
+x =~ %r{home/}
+
+# good
 x =~ /home\//
 ```
 

@@ -33,7 +33,9 @@ email_with_name = format('%s <%s>', user.name, user.email)
 
 # accepted, line-end concatenation
 name = 'First' +
-  'Last'# bad
+  'Last'
+
+# bad
 'Hello' + user.name
 
 # good

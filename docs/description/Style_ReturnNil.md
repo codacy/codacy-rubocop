@@ -18,7 +18,9 @@ end
 # good
 def foo(arg)
   return if arg
-end# bad
+end
+
+# bad
 def foo(arg)
   return if arg
 end

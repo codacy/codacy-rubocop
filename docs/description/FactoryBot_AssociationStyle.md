@@ -22,7 +22,9 @@ end
 # good
 factory :post do
   user factory: %i[user author]
-end# bad
+end
+
+# bad
 factory :post do
   user
 end

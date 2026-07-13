@@ -10,7 +10,9 @@ something.
 
 # good
 something
-  .method# bad
+  .method
+
+# bad
 something
   .method
 

@@ -26,7 +26,9 @@ bar.baz > 0
 # good
 foo.zero?
 foo.negative?
-bar.baz.positive?# bad
+bar.baz.positive?
+
+# bad
 foo.zero?
 foo.negative?
 bar.baz.positive?
@@ -34,18 +36,26 @@ bar.baz.positive?
 # good
 foo == 0
 0 > foo
-bar.baz > 0# bad
+bar.baz > 0
+
+# bad
 foo == 0
 0 > foo
-bar.baz > 0# good
+bar.baz > 0
+
+# good
 foo == 0
 
 # bad
 0 > foo
-bar.baz > 0# bad
+bar.baz > 0
+
+# bad
 foo.zero?
 foo.negative?
-bar.baz.positive?# good
+bar.baz.positive?
+
+# good
 # bad
 foo.zero?
 

@@ -22,7 +22,9 @@ def foo
   [1, 2, 3].each do |n|
     puts n
   end
-end# bad
+end
+
+# bad
 def foo
   [1, 2, 3].each do |n|
     puts n

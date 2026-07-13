@@ -16,7 +16,9 @@ def some_method(
 first_param,
 second_param)
   123
-end# The first parameter should always be indented one step more than the
+end
+
+# The first parameter should always be indented one step more than the
 # preceding line.
 
 # good
@@ -24,7 +26,9 @@ def some_method(
   first_param,
 second_param)
   123
-end# The first parameter should always be indented one step more than the
+end
+
+# The first parameter should always be indented one step more than the
 # opening parenthesis.
 
 # good

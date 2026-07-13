@@ -26,7 +26,9 @@ RSpec.shared_examples 'only examples here' do
 
   it 'does y' do
   end
-end# bad
+end
+
+# bad
 RSpec.shared_examples 'only setup here' do
   subject(:foo) { :bar }
 
@@ -46,7 +48,9 @@ RSpec.shared_context 'only setup here' do
   before do
     something
   end
-end# bad - shared_context with examples is flagged
+end
+
+# bad - shared_context with examples is flagged
 RSpec.shared_context 'setup and examples' do
   let(:foo) { :bar }
 

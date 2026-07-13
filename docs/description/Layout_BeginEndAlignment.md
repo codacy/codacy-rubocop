@@ -23,7 +23,9 @@ foo ||= begin
 # good
 foo ||= begin
   do_something
-end# bad
+end
+
+# bad
 foo ||= begin
   do_something
 end

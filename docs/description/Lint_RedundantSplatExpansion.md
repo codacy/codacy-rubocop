@@ -55,8 +55,12 @@ when 1, 2, 3
 else
   baz
 end
+
+
 # good
 do_something(*%w[foo bar baz])
+
+
 # bad
 do_something(*%w[foo bar baz])
 ```

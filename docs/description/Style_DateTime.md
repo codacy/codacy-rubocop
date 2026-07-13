@@ -23,11 +23,15 @@ Time.iso8601('2016-06-29')
 
 # good - uses `DateTime` with start argument for historical date
 DateTime.iso8601('1751-04-23', Date::ENGLAND)
+
+
 # bad - coerces to `DateTime`
 something.to_datetime
 
 # good - coerces to `Time`
 something.to_time
+
+
 # good
 something.to_datetime
 

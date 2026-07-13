@@ -20,6 +20,8 @@ class Foo
 
   def baz; end
 end
+
+
 # bad
 class Foo
   def bar; end

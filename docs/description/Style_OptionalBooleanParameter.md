@@ -20,7 +20,9 @@ end
 # good
 def some_method(bar: false)
   puts bar
-end# good
+end
+
+# good
 def some_method(bar = false)
   puts bar
 end

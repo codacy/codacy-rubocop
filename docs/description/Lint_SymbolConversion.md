@@ -26,6 +26,8 @@ all keys to be quoted).
 :underscored_symbol
 :'hyphenated-string'
 :"string_#{interpolation}"
+
+
 # bad
 {
   'a': 1,
@@ -39,6 +41,8 @@ all keys to be quoted).
   b: 2,
   'c-d': 3
 }
+
+
 # bad
 {
   a: 1,

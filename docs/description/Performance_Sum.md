@@ -17,7 +17,9 @@ in some Enumerable object can be replaced by `Enumerable#sum` method.
 [1, 2, 3].sum
 [1, 2, 3].sum(10)
 [1, 2, 3].sum { |elem| elem ** 2 }
-[1, 2, 3].sum(10, &:count)# bad
+[1, 2, 3].sum(10, &:count)
+
+# bad
 [1, 2, 3].reduce(10, :+)
 [1, 2, 3].map { |elem| elem ** 2 }.sum
 [1, 2, 3].collect(&:count).sum(10)

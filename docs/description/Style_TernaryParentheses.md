@@ -20,7 +20,9 @@ foo = (bar && baz) ? a : b
 # good
 foo = bar? ? a : b
 foo = bar.baz? ? a : b
-foo = bar && baz ? a : b# bad
+foo = bar && baz ? a : b
+
+# bad
 foo = bar? ? a : b
 foo = bar.baz? ? a : b
 foo = bar && baz ? a : b
@@ -28,7 +30,9 @@ foo = bar && baz ? a : b
 # good
 foo = (bar?) ? a : b
 foo = (bar.baz?) ? a : b
-foo = (bar && baz) ? a : b# bad
+foo = (bar && baz) ? a : b
+
+# bad
 foo = (bar?) ? a : b
 foo = (bar.baz?) ? a : b
 foo = bar && baz ? a : b
@@ -36,8 +40,12 @@ foo = bar && baz ? a : b
 # good
 foo = bar? ? a : b
 foo = bar.baz? ? a : b
-foo = (bar && baz) ? a : b# good
-foo = (bar = baz) ? a : b# bad
+foo = (bar && baz) ? a : b
+
+# good
+foo = (bar = baz) ? a : b
+
+# bad
 foo = (bar = baz) ? a : b
 ```
 

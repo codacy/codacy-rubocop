@@ -17,8 +17,12 @@ baz = 3;
 # good
 foo = 1
 bar = 2
-baz = 3# bad
-foo = 1; bar = 2# good
+baz = 3
+
+# bad
+foo = 1; bar = 2
+
+# good
 foo = 1; bar = 2
 ```
 

@@ -8910,9 +8910,21 @@
     "timeToFix": 5
   },
   {
+    "patternId": "Sorbet_RedundantTLet",
+    "title": "Redundant T Let",
+    "description": "Redundant T Let",
+    "timeToFix": 5
+  },
+  {
     "patternId": "Sorbet_RedundantExtendTSig",
     "title": "Redundant Extend T Sig",
     "description": "Redundant Extend T Sig",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Sorbet_RedundantTLetForLiteral",
+    "title": "Redundant T Let For Literal",
+    "description": "Redundant T Let For Literal",
     "timeToFix": 5
   },
   {

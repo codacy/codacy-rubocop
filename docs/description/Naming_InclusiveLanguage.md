@@ -32,25 +32,33 @@ suggestions, the best suggestion cannot be identified and will not be autocorrec
 whitelist_users = %w(user1 user1)
 
 # good
-allowlist_users = %w(user1 user2)# Suggest replacing master in an instance variable name with main, primary, or leader
+allowlist_users = %w(user1 user2)
+
+# Suggest replacing master in an instance variable name with main, primary, or leader
 
 # bad
 @master_node = 'node1.example.com'
 
 # good
-@primary_node = 'node1.example.com'# Identify problematic terms using a Regexp
+@primary_node = 'node1.example.com'
+
+# Identify problematic terms using a Regexp
 
 # bad
 white_list = %w(user1 user2)
 
 # good
-allow_list = %w(user1 user2)# Specify allowed uses of the flagged term as a string or regexp.
+allow_list = %w(user1 user2)
+
+# Specify allowed uses of the flagged term as a string or regexp.
 
 # bad
 # They had a masters
 
 # good
-# They had a master's degree# Specify that only terms that are full matches will be flagged.
+# They had a master's degree
+
+# Specify that only terms that are full matches will be flagged.
 
 # bad
 Slave

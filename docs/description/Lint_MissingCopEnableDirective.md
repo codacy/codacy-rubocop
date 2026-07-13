@@ -33,6 +33,8 @@ x= 0
 # rubocop:disable Layout/SpaceAroundOperators
 x= 0
 # EOF
+
+
 # good
 # rubocop:disable Layout/SpaceAroundOperators
 x= 0

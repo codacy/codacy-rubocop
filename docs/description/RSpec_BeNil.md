@@ -13,7 +13,9 @@ This cop can be configured using the `EnforcedStyle` option
 expect(foo).to be(nil)
 
 # good
-expect(foo).to be_nil# bad
+expect(foo).to be_nil
+
+# bad
 expect(foo).to be_nil
 
 # good

@@ -12,7 +12,9 @@ end
 # good
 it '...' do
   expect(false).not_to be_true
-end# bad
+end
+
+# bad
 it '...' do
   expect(false).not_to be_true
 end

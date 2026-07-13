@@ -9802,7 +9802,19 @@
       "enabled": false
     },
     {
+      "patternId": "Sorbet_RedundantTLet",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
       "patternId": "Sorbet_RedundantExtendTSig",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "Sorbet_RedundantTLetForLiteral",
       "level": "Info",
       "category": "CodeStyle",
       "enabled": false

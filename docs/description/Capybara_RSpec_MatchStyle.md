@@ -10,7 +10,9 @@ expect(page.find(:css, 'first')
 
 # good
 expect(page.find(:css, 'first')
-  .matches_style?(display: 'block')).to be true# bad
+  .matches_style?(display: 'block')).to be true
+
+# bad
 expect(page).to have_style(display: 'block')
 
 # good

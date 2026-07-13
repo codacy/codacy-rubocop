@@ -14,7 +14,9 @@ foo ||= (
 foo ||= begin
   bar
   baz
-end# bad
+end
+
+# bad
 foo ||= begin
   bar
   baz

@@ -24,9 +24,15 @@ foo unless bar || baz
 
 if x > 10
 elsif x < 3
-end# good
-foo unless (bar = baz)# bad
-foo unless (bar = baz)# bad
+end
+
+# good
+foo unless (bar = baz)
+
+# bad
+foo unless (bar = baz)
+
+# bad
 if (x > 10 &&
    y > 10)
 end
@@ -34,7 +40,9 @@ end
 # good
  if x > 10 &&
     y > 10
- end# good
+ end
+
+# good
 if (x > 10 &&
    y > 10)
 end

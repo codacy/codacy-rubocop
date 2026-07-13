@@ -21,8 +21,12 @@ def @table.columns; super; end
 # good
 def self.resource_class=(klass); end
 def @table.columns; end
-def some_method() = body# good
-def no_op; end# bad
+def some_method() = body
+
+# good
+def no_op; end
+
+# bad
 def no_op; end
 ```
 

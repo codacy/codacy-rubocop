@@ -12,7 +12,9 @@ Checks for usage of the %Q() syntax when %q() would do.
 
 # good
 %q[Mix the foo into the baz]
-%q(They all said: 'Hooray!')# The `upper_case_q` style requires the sole use of `%Q`.
+%q(They all said: 'Hooray!')
+
+# The `upper_case_q` style requires the sole use of `%Q`.
 # bad
 %q/Mix the foo into the baz./
 %q{They all said: 'Hooray!'}

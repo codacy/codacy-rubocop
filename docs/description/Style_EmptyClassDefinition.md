@@ -31,7 +31,9 @@ class FooError < StandardError; end
 
 # good
 class FooError < StandardError
-end# bad
+end
+
+# bad
 class FooError < StandardError
 end
 
@@ -39,7 +41,9 @@ end
 class FooError < StandardError; end
 
 # good
-FooError = Class.new(StandardError)# good - allowed regardless of EnforcedStyle
+FooError = Class.new(StandardError)
+
+# good - allowed regardless of EnforcedStyle
 FooError = Class.new(StandardError)
 
 # good - allowed regardless of EnforcedStyle

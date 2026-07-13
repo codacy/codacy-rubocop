@@ -24,11 +24,15 @@ str.sub!(/suffix\z/, '')
 # good
 str.delete_suffix('suffix')
 str.delete_suffix!('suffix')
+
+
 # good
 str.gsub(/suffix$/, '')
 str.gsub!(/suffix$/, '')
 str.sub(/suffix$/, '')
 str.sub!(/suffix$/, '')
+
+
 # bad
 str.gsub(/suffix$/, '')
 str.gsub!(/suffix$/, '')

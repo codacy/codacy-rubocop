@@ -30,6 +30,8 @@ begin
 rescue
   handle_exception
 end
+
+
 # good
 def some_method
   do_something
@@ -43,6 +45,8 @@ begin
 rescue
   # do nothing
 end
+
+
 # bad
 def some_method
   do_something
@@ -56,6 +60,8 @@ begin
 rescue
   # do nothing
 end
+
+
 # good
 def some_method
   do_something
@@ -72,6 +78,8 @@ end
 
 # good
 do_something rescue nil
+
+
 # bad
 def some_method
   do_something

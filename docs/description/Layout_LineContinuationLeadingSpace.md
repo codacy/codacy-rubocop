@@ -20,7 +20,9 @@ instead of trailing spaces.
 
 # good
 'this text is too ' \
-'long'# bad
+'long'
+
+# bad
 'this text contains a lot of               ' \
 'spaces'
 

@@ -19,7 +19,9 @@ module Foo
   def bar
     # ...
   end
-end# bad
+end
+
+# bad
 module Foo
   def bar
     # ...
@@ -33,7 +35,9 @@ module Foo
     # ...
   end
 
-end# good
+end
+
+# good
 
 module Foo
   module Bar
@@ -41,7 +45,9 @@ module Foo
     # ...
 
   end
-end# good
+end
+
+# good
 module Foo
 
   def bar; end

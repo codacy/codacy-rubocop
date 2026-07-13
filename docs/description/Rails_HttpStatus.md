@@ -21,7 +21,9 @@ render plain: 'foo/bar', status: :not_modified
 redirect_to root_url, status: :moved_permanently
 head :ok
 assert_response :ok
-assert_redirected_to '/some/path', status: :moved_permanently# bad
+assert_redirected_to '/some/path', status: :moved_permanently
+
+# bad
 render :foo, status: :ok
 render json: { foo: 'bar' }, status: :not_found
 render plain: 'foo/bar', status: :not_modified

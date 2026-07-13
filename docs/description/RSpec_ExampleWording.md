@@ -20,13 +20,17 @@ end
 
 # good
 it 'finds nothing' do
-end# bad
+end
+
+# bad
 it 'it does things' do
 end
 
 # good
 it 'does things' do
-end# bad
+end
+
+# bad
 it 'works' do
 end
 

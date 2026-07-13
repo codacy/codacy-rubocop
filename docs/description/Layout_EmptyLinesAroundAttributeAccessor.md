@@ -24,12 +24,16 @@ attr_writer :baz
 attr :qux
 
 def do_something
-end# good
+end
+
+# good
 attr_accessor :foo
 alias :foo? :foo
 
 def do_something
-end# bad
+end
+
+# bad
 attr_accessor :foo
 alias :foo? :foo
 
@@ -42,7 +46,9 @@ attr_accessor :foo
 alias :foo? :foo
 
 def do_something
-end# good
+end
+
+# good
 attr_accessor :foo
 private :foo
 

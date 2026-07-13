@@ -19,7 +19,9 @@ alias_method :bar, :foo
 alias :bar :foo
 
 # good
-alias bar foo# bad
+alias bar foo
+
+# bad
 alias :bar :foo
 alias bar foo
 

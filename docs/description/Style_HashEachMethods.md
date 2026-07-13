@@ -20,7 +20,9 @@ hash.values.each { |v| p v }
 hash.each { |unused_key, v| p v }
 
 # good
-hash.each_value { |v| p v }# good
+hash.each_value { |v| p v }
+
+# good
 execute(sql).keys.each { |v| p v }
 execute(sql).values.each { |v| p v }
 ```

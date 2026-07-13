@@ -14,6 +14,8 @@ end
 # good
 if x.nil?
 end
+
+
 # bad
 if x.nil?
 end

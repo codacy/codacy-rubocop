@@ -48,25 +48,33 @@ def foo
     def bar
     end
   end
-end# bad
+end
+
+# bad
 def do_something
   has_many :articles do
     def find_or_create_by_name(name)
     end
   end
-end# bad
+end
+
+# bad
 def do_something
   has_many :articles do
     def find_or_create_by_name(name)
     end
   end
-end# bad
+end
+
+# bad
 def foo(obj)
   obj.do_baz do
     def bar
     end
   end
-end# good
+end
+
+# good
 def foo(obj)
   obj.do_baz do
     def bar

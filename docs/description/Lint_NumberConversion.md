@@ -38,14 +38,24 @@ Rational('1/3')
 ['1', '2', '3'].map { |i| Integer(i, 10) }
 foo.try { |i| Float(i) }
 bar.send { |i| Complex(i) }
+
+
 # bad
 10.minutes.to_i
+
+
 # good
 10.minutes.to_i
+
+
 # bad
 10.minutes.to_i
+
+
 # good
 10.minutes.to_i
+
+
 # good
 Time.now.to_datetime.to_i
 ```

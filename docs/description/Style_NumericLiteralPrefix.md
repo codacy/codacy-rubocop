@@ -22,7 +22,9 @@ num = 0d1234
 num = 0o1234
 num = 0x12AB
 num = 0b10101
-num = 1234# bad
+num = 1234
+
+# bad
 num = 0o1234
 num = 0O1234
 

@@ -33,7 +33,9 @@ foo.bar
 foo.bar
   .each do
     baz
-end# bad
+end
+
+# bad
 
 foo.bar
   .each do
@@ -45,7 +47,9 @@ foo.bar
 foo.bar
   .each do
     baz
-  end# bad
+  end
+
+# bad
 
 foo.bar
   .each do

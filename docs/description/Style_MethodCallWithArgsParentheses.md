@@ -86,6 +86,8 @@ puts 'test'
 
 # okay with `^assert` listed in `AllowedPatterns`
 assert_equal 'test', x
+
+
 # bad
 array.delete(e)
 
@@ -115,24 +117,34 @@ yield path, File.basename(path)
 if meets(criteria:, action:)
   safe_action(action) || dangerous_action(action)
 end
+
+
 # good
 class Foo
   bar :baz
 end
+
+
 # bad
 class Foo
   bar :baz
 end
+
+
 # good
 puts "Hello world"
 print "Hello world"
 # still enforces parentheses on other methods
 array.delete(e)
+
+
 # good
 assert_equal 'test', x
 assert_match(/foo/, bar)
 # still enforces parentheses on other methods
 array.delete(e)
+
+
 # bad
 assert_equal 'test', x
 refute_nil value
@@ -140,6 +152,8 @@ refute_nil value
 # good
 assert_equal('test', x)
 refute_nil(value)
+
+
 # bad
 foo.enforce(
   strict: true
@@ -148,6 +162,8 @@ foo.enforce(
 # good
 foo.enforce \
   strict: true
+
+
 # good
 foo.enforce(
   strict: true
@@ -156,31 +172,43 @@ foo.enforce(
 # good
 foo.enforce \
   strict: true
+
+
 # bad
 foo().bar(1)
 
 # good
 foo().bar 1
+
+
 # good
 foo().bar(1)
 
 # good
 foo().bar 1
+
+
 # bad
 Array(1)
 
 # good
 Array 1
+
+
 # good
 Array(1)
 
 # good
 Array 1
+
+
 # bad
 "#{t('this.is.bad')}"
 
 # good
 "#{t 'this.is.better'}"
+
+
 # good
 "#{t('this.is.good')}"
 

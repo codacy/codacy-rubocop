@@ -38,7 +38,9 @@ def foo(descriptive_var_name,
         another_descriptive_var_name,
         last_descriptive_var_name)
   do_something
-end# The `require_no_parentheses` style requires method definitions
+end
+
+# The `require_no_parentheses` style requires method definitions
 # to never use parentheses
 
 # bad
@@ -61,7 +63,9 @@ def foo descriptive_var_name,
         another_descriptive_var_name,
         last_descriptive_var_name
   do_something
-end# The `require_no_parentheses_except_multiline` style prefers no
+end
+
+# The `require_no_parentheses_except_multiline` style prefers no
 # parentheses when method definition arguments fit on single line,
 # but prefers parentheses when arguments span multiple lines.
 

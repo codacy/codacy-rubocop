@@ -28,11 +28,15 @@ if foo
   bar
 else
   baz
-end# bad
+end
+
+# bad
 if cond then run else dont end
 
 # good
-cond ? run : dont# bad
+cond ? run : dont
+
+# bad
 if cond then run else dont end
 
 # good

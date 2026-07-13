@@ -17,7 +17,9 @@ f = ->(x) do
 f = ->(x) { x }
 f = lambda do |x|
       x
-    end# bad
+    end
+
+# bad
 f = ->(x) { x }
 f = ->(x) do
       x
@@ -27,7 +29,9 @@ f = ->(x) do
 f = lambda { |x| x }
 f = lambda do |x|
       x
-    end# bad
+    end
+
+# bad
 f = lambda { |x| x }
 f = lambda do |x|
       x

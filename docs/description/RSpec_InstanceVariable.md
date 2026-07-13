@@ -19,7 +19,9 @@ end
 describe MyClass do
   let(:foo) { [] }
   it { expect(foo).to be_empty }
-end# rubocop.yml
+end
+
+# rubocop.yml
 # RSpec/InstanceVariable:
 #   AssignmentOnly: true
 

@@ -21,16 +21,22 @@ expect(foo).to match_style(bar: 'baz')
 expect(foo).to match_xpath(bar: 'baz')
 
 # also good - It checks "true" strictly.
-expect(foo.matches_style?(bar: 'baz')).to be(true)# bad
+expect(foo.matches_style?(bar: 'baz')).to be(true)
+
+# bad
 expect(foo.matches_style?(bar: 'baz')).to be_truthy
 expect(foo.matches_style?(bar: 'baz')).to be(true)
 
 # good
-expect(foo).to match_style(bar: 'baz')# bad
+expect(foo).to match_style(bar: 'baz')
+
+# bad
 expect(foo).to match_style(bar: 'baz')
 
 # good - the above code is rewritten to it by this cop
-expect(foo.matches_style?(bar: 'baz')).to be(true)# bad
+expect(foo.matches_style?(bar: 'baz')).to be(true)
+
+# bad
 expect(foo).to match_style(bar: 'baz')
 
 # good - the above code is rewritten to it by this cop

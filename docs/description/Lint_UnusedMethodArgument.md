@@ -12,17 +12,27 @@ end
 # good
 def some_method(used, _unused, _unused_but_allowed)
   puts used
-end# bad
+end
+
+# bad
 def do_something(used, unused: 42)
   used
-end# good
+end
+
+# good
 def do_something(used, unused: 42)
   used
-end# good
+end
+
+# good
 def do_something(unused)
-end# bad
+end
+
+# bad
 def do_something(unused)
-end# with default value of `NotImplementedExceptions: ['NotImplementedError']`
+end
+
+# with default value of `NotImplementedExceptions: ['NotImplementedError']`
 
 # good
 def do_something(unused)
@@ -31,12 +41,16 @@ end
 
 def do_something_else(unused)
   fail "TODO"
-end# with `NotImplementedExceptions: ['AbstractMethodError']`
+end
+
+# with `NotImplementedExceptions: ['AbstractMethodError']`
 
 # good
 def do_something(unused)
   raise AbstractMethodError
-end# bad
+end
+
+# bad
 def do_something(unused)
   raise NotImplementedError
 end
