@@ -11,7 +11,9 @@ and supports the `--auto-gen-config` flag.
 it { should be_truthy }
 
 # good
-it { is_expected.to be_truthy }# bad
+it { is_expected.to be_truthy }
+
+# bad
 it { is_expected.to be_truthy }
 
 # good

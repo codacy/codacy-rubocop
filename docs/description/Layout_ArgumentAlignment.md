@@ -1,5 +1,5 @@
 
-Check that the arguments on a multi-line method call are aligned.
+Checks that the arguments on a multi-line method call are aligned.
 
 # Examples
 
@@ -26,7 +26,9 @@ foo(
   :bar,
     :baz,
     key: value
-)# good
+)
+
+# good
 
 foo :bar,
   :baz,

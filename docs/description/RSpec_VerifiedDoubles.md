@@ -6,17 +6,57 @@ Prefer using verifying doubles over normal doubles.
 ```ruby
 # bad
 let(:foo) do
-  double(method_name: 'returned value')
+  double("ClassName", method_name: 'returned value')
 end
 
 # bad
 let(:foo) do
-  double("ClassName", method_name: 'returned value')
+  spy("ClassName", method_name: 'returned value')
 end
 
 # good
 let(:foo) do
   instance_double("ClassName", method_name: 'returned value')
+end
+
+# good
+let(:foo) do
+  class_double("ClassName", method_name: 'returned value')
+end
+
+# good
+let(:foo) do
+  object_double("some object", method_name: 'returned value')
+end
+
+# good
+let(:foo) do
+  double(method_name: 'returned value')
+end
+
+# good
+let(:foo) do
+  double
+end
+
+# bad
+let(:foo) do
+  double(method_name: 'returned value')
+end
+
+# bad
+let(:foo) do
+  double
+end
+
+# bad
+let(:foo) do
+  double(:foo)
+end
+
+# good
+let(:foo) do
+  double(:foo)
 end
 ```
 

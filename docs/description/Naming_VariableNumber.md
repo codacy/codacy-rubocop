@@ -24,7 +24,9 @@ variable1 = 1
 
 def some_method1; end
 
-def some_method1(arg1); end# bad
+def some_method1(arg1); end
+
+# bad
 :some_sym1
 variable1 = 1
 
@@ -38,7 +40,9 @@ variable_1 = 1
 
 def some_method_1; end
 
-def some_method_1(arg_1); end# bad
+def some_method_1(arg_1); end
+
+# bad
 :some_sym1
 :some_sym_1
 
@@ -66,12 +70,24 @@ def some_method_one; end
 def some_methodone(argone); end
 def some_methodone(arg_one); end
 
-# In the following examples, we assume `EnforcedStyle: normalcase` (default).# bad
-def some_method_1; end# good
-def some_method_1; end# bad
-:some_sym_1# good
-:some_sym_1# good
-expect(Open3).to receive(:capture3)# good
+# In the following examples, we assume `EnforcedStyle: normalcase` (default).
+
+# bad
+def some_method_1; end
+
+# good
+def some_method_1; end
+
+# bad
+:some_sym_1
+
+# good
+:some_sym_1
+
+# good
+expect(Open3).to receive(:capture3)
+
+# good
 :some_sym_v1
 ```
 

@@ -35,7 +35,9 @@ begin
   foo
 rescue StandardError, SecurityError
   bar
-end# `implicit` will enforce using `rescue` instead of
+end
+
+# `implicit` will enforce using `rescue` instead of
 # `rescue StandardError`.
 
 # bad

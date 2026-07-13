@@ -13,13 +13,17 @@ create(:user)
 build :user, username: "NAME"
 
 # good - namespaced models
-create('users/internal')# bad
+create('users/internal')
+
+# bad
 create(:user)
 build :user, username: "NAME"
 
 # good
 create('user')
 build "user", username: "NAME"
+
+
 # bad - with `EnforcedStyle: symbol`
 FactoryBot.create('user')
 create('user')
@@ -27,6 +31,8 @@ create('user')
 # good - with `EnforcedStyle: symbol`
 FactoryBot.create(:user)
 create(:user)
+
+
 # bad - with `EnforcedStyle: symbol`
 FactoryBot.create(:user)
 FactoryBot.build "user", username: "NAME"

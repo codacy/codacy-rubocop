@@ -1,6 +1,8 @@
 
 Checks for methods invoked via the `::` operator instead
-of the `.` operator (like `FileUtils::rmdir` instead of `FileUtils.rmdir`).
+of the `.` operator (like `FileUtils::rmdir` instead of
+`FileUtils.rmdir`). The `::` operator is conventionally used to
+reference constants, so using it for method calls can be misleading.
 
 # Examples
 

@@ -21,7 +21,9 @@ end if condition_a
 # good
 if condition_a && condition_b
   do_something
-end# bad
+end
+
+# bad
 if condition_a
   do_something if condition_b
 end
@@ -29,7 +31,9 @@ end
 # bad
 if condition_b
   do_something
-end if condition_a# good
+end if condition_a
+
+# good
 if condition_a
   do_something if condition_b
 end

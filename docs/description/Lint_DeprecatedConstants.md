@@ -10,7 +10,7 @@ alternative value as `Alternative`. And you can set the deprecated version as
       Alternative: 'alternative_value'
       DeprecatedVersion: 'deprecated_version'
 
-By default, `NIL`, `TRUE`, `FALSE`, `Net::HTTPServerException, `Random::DEFAULT`,
+By default, `NIL`, `TRUE`, `FALSE`, `Net::HTTPServerException`, `Random::DEFAULT`,
 `Struct::Group`, and `Struct::Passwd` are configured.
 
 # Examples

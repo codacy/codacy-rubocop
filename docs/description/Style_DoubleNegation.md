@@ -17,7 +17,9 @@ this is rarely a problem in practice.
 !!something
 
 # good
-!something.nil?# good
+!something.nil?
+
+# good
 def foo?
   !!return_value
 end
@@ -28,7 +30,9 @@ end
 
 define_singleton_method :foo? do
   !!return_value
-end# bad
+end
+
+# bad
 def foo?
   !!return_value
 end

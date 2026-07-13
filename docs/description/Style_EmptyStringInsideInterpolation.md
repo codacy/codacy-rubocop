@@ -20,7 +20,9 @@ RuboCop can't detect that, so we only check inside of string interpolation.
 "#{condition ? '' : 'foo'}"
 
 # good
-"#{'foo' unless condition}"# bad
+"#{'foo' unless condition}"
+
+# bad
 "#{'foo' if condition}"
 
 # good

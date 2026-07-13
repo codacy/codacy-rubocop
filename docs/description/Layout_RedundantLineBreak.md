@@ -27,10 +27,14 @@ things
   .join('-')
 
 # good
-things.select { |thing| thing.cond? }.join('-')# good
+things.select { |thing| thing.cond? }.join('-')
+
+# good
 foo(a) do |x|
   puts x
-end# bad
+end
+
+# bad
 foo(a) do |x|
   puts x
 end

@@ -1,7 +1,10 @@
 
 Checks for non-ascii (non-English) characters
-in comments. You could set an array of allowed non-ascii chars in
-`AllowedChars` attribute (copyright notice "©" by default).
+in comments. Non-ascii characters can cause issues with
+portability and encoding across different environments
+and editors. You could set an array of allowed non-ascii
+chars in `AllowedChars` attribute (copyright notice "©"
+by default).
 
 # Examples
 

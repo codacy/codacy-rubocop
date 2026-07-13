@@ -34,6 +34,8 @@ end
 def do_something(foo)
   puts foo
 end
+
+
 # bad
 def do_something(foo)
   foo = 42
@@ -44,6 +46,8 @@ def do_something(foo)
   foo = super
   bar
 end
+
+
 # good
 def do_something(foo)
   foo = 42

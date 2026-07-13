@@ -15,7 +15,8 @@ Below are the features that each `TargetRubyVersion` targets.
   * 2.2+ ... Add `rational` and `complex` above
   * 2.7+ ... Add `ruby2_keywords` above
   * 3.1+ ... Add `fiber` above
-  * 3.2+ ... `set`
+  * 3.2+ ... Add `set` above
+  * 4.0+ ... Add `pathname` above
 
 This cop target those features.
 

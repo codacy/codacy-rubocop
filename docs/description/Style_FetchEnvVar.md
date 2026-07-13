@@ -18,7 +18,9 @@ x = ENV.fetch('X', nil)
 
 # also good
 !ENV['X']
-ENV['X'].some_method # (e.g. `.nil?`)# bad
+ENV['X'].some_method # (e.g. `.nil?`)
+
+# bad
 ENV['X']
 x = ENV['X']
 

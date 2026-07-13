@@ -11,7 +11,7 @@ Each construct will be counted as one line regardless of its actual size.
 NOTE: The `ExcludedMethods` and `IgnoredMethods` configuration is
 deprecated and only kept for backwards compatibility.
 Please use `AllowedMethods` and `AllowedPatterns` instead.
-By default, there are no methods to allowed.
+By default, there are no allowed methods.
 
 # Examples
 

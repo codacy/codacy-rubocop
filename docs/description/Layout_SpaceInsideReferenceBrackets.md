@@ -14,7 +14,9 @@ array[ index ]
 
 # good
 hash[:key]
-array[index]# The `space` style enforces that reference brackets have
+array[index]
+
+# The `space` style enforces that reference brackets have
 # surrounding space.
 
 # bad
@@ -23,7 +25,9 @@ array[index]
 
 # good
 hash[ :key ]
-array[ index ]# The `no_space` EnforcedStyleForEmptyBrackets style enforces that
+array[ index ]
+
+# The `no_space` EnforcedStyleForEmptyBrackets style enforces that
 # empty reference brackets do not contain spaces.
 
 # bad
@@ -33,7 +37,9 @@ foo[
 ]
 
 # good
-foo[]# The `space` EnforcedStyleForEmptyBrackets style enforces that
+foo[]
+
+# The `space` EnforcedStyleForEmptyBrackets style enforces that
 # empty reference brackets contain exactly one space.
 
 # bad

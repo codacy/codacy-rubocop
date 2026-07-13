@@ -26,7 +26,9 @@ things.map { |thing|
 things.map do |thing|
   something = thing.some_method
   process(something)
-end# Prefer `do...end` over `{...}` for procedural blocks.
+end
+
+# Prefer `do...end` over `{...}` for procedural blocks.
 
 # return value is used/assigned
 # bad
@@ -82,7 +84,9 @@ collection.each do |element| puts element end
 collection.each { |element| puts element }
 
 # also good
-collection.each do |element| puts element end# bad
+collection.each do |element| puts element end
+
+# bad
 words.each do |word|
   word.flip.flop
 end.join("-")
@@ -90,7 +94,9 @@ end.join("-")
 # good
 words.each { |word|
   word.flip.flop
-}.join("-")# bad
+}.join("-")
+
+# bad
 words.each do |word|
   word.flip.flop
 end
@@ -99,6 +105,8 @@ end
 words.each { |word|
   word.flip.flop
 }
+
+
 # Methods listed in the BracesRequiredMethods list, such as 'sig'
 # in this example, will require `{...}` braces. This option takes
 # precedence over all other configurations except AllowedMethods.
@@ -122,6 +130,8 @@ sig {
 def bar(foo)
   puts foo
 end
+
+
 # good
 foo = lambda do |x|
   puts "Hello, #{x}"
@@ -130,11 +140,15 @@ end
 foo = lambda do |x|
   x * 100
 end
+
+
 # bad
 things.map { |thing|
   something = thing.some_method
   process(something)
 }
+
+
 # good
 things.map { |thing|
   something = thing.some_method

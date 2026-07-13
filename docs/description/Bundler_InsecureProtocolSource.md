@@ -25,8 +25,12 @@ source :rubyforge
 
 # good
 source 'https://rubygems.org' # strongly recommended
+
+
 # good
 source 'http://rubygems.org' # use only if HTTPS is unavailable
+
+
 # bad
 source 'http://rubygems.org'
 ```

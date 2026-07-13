@@ -22,12 +22,16 @@ create_list :user, 3
 3.times { |n| create :user, age: n }
 
 # good - contains a method call, may return different values
-3.times { create :user, age: rand }# bad
+3.times { create :user, age: rand }
+
+# bad
 create_list :user, 3
 [create(:user), create(:user), create(:user)]
 
 # good
 3.times.map { create :user }
+
+
 # bad - with `EnforcedStyle: create_list`
 3.times { FactoryBot.create :user }
 3.times { create :user }
@@ -35,6 +39,8 @@ create_list :user, 3
 # good - with `EnforcedStyle: create_list`
 FactoryBot.create_list :user, 3
 create_list :user, 3
+
+
 # bad - with `EnforcedStyle: create_list`
 3.times { FactoryBot.create :user }
 

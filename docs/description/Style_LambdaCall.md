@@ -8,7 +8,9 @@ Checks for use of the lambda.(args) syntax.
 lambda.(x, y)
 
 # good
-lambda.call(x, y)# bad
+lambda.call(x, y)
+
+# bad
 lambda.call(x, y)
 
 # good

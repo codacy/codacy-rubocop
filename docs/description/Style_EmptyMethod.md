@@ -28,7 +28,9 @@ def foo(bar)
   # baz
 end
 
-def self.foo(bar); end# bad
+def self.foo(bar); end
+
+# bad
 def foo(bar); end
 
 def self.foo(bar); end

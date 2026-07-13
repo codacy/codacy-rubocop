@@ -10,7 +10,9 @@ var.kind_of?(Integer)
 
 # good
 var.is_a?(Date)
-var.is_a?(Integer)# bad
+var.is_a?(Integer)
+
+# bad
 var.is_a?(Time)
 var.is_a?(String)
 

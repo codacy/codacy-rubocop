@@ -10,7 +10,9 @@ let('user_name') { 'Adam' }
 
 # good
 subject(:user) { create_user }
-let(:user_name) { 'Adam' }# bad
+let(:user_name) { 'Adam' }
+
+# bad
 subject(:user) { create_user }
 let(:user_name) { 'Adam' }
 

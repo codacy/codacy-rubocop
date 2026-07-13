@@ -10,10 +10,14 @@ calling `Dir.chdir` with block will be allowed.
 Dir.chdir("/var/run")
 
 # bad
-FileUtils.chdir("/var/run")# good
+FileUtils.chdir("/var/run")
+
+# good
 Dir.chdir("/var/run") do
   puts Dir.pwd
-end# bad
+end
+
+# bad
 Dir.chdir("/var/run") do
   puts Dir.pwd
 end

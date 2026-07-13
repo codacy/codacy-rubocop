@@ -19,7 +19,9 @@ private def foo
 # good
 
 private def foo
-end# bad
+end
+
+# bad
 
 private def foo
             end

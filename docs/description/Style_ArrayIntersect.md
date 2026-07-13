@@ -41,7 +41,7 @@ array1.intersection(array2).none?
 
 # bad
 array1.any? { |elem| array2.member?(elem) }
-array1.none? { |elem| array2.member?(elem) }
+array1.none? { |elem| array2.include?(elem) }
 
 # good
 array1.intersect?(array2)
@@ -58,9 +58,13 @@ array1.intersect?(array2)
 # good
 array1.intersect?(array2)
 
-!array1.intersect?(array2)# good
+!array1.intersect?(array2)
+
+# good
 (array1 & array2).present?
-(array1 & array2).blank?# bad
+(array1 & array2).blank?
+
+# bad
 (array1 & array2).present?
 (array1 & array2).blank?
 

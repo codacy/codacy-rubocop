@@ -64,19 +64,25 @@ begin
   do_something
 rescue FooError, BarError
   handle_error
-end# good
+end
+
+# good
 case size
 when "small" then 100
 when "medium" then 250
 when "large" then 1000
 else 250
-end# good
+end
+
+# good
 case size
 when "small" then SMALL_SIZE
 when "medium" then MEDIUM_SIZE
 when "large" then LARGE_SIZE
 else MEDIUM_SIZE
-end# good
+end
+
+# good
 if foo
   do_foo
 elsif bar

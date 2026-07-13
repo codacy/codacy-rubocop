@@ -12,7 +12,9 @@ This cop does not support autocorrection in the case of
 describe 'Something', a: true
 
 # good
-describe 'Something', :a# bad
+describe 'Something', :a
+
+# bad
 describe 'Something', :a
 
 # good

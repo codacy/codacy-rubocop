@@ -29,11 +29,15 @@ end
 it do
   expect(a?).to be(true)
 end
+
+
 # .rubocop.yml
 # RSpec/NoExpectationExample:
 #   AllowedPatterns:
 #     - ^expect_
-#     - ^assert_# bad
+#     - ^assert_
+
+# bad
 it do
   not_expect_something
 end

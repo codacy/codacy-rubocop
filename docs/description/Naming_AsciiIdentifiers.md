@@ -32,11 +32,15 @@ height = 10
 params[:عرض_gteq] # Arabic character (non-ascii)
 
 # good
-params[:width_gteq]# bad
+params[:width_gteq]
+
+# bad
 class Foö
 end
 
-FOÖ = "foo"# good
+FOÖ = "foo"
+
+# good
 class Foö
 end
 

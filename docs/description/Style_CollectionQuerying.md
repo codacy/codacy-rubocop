@@ -39,8 +39,12 @@ x.none?
 # bad
 x.count == 1
 x.one?
+
+
 # good
 x.count > 1
+
+
 # bad
 x.count > 1
 

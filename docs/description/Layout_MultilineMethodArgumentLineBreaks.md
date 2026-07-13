@@ -28,6 +28,8 @@ foo(
 
 # good
 foo(a, b, c)
+
+
 # bad
 foo(a, b,
   c
@@ -48,6 +50,8 @@ foo(
     foo: "bar",
   }
 )
+
+
 # bad
 foo(a, b,
   c

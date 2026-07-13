@@ -23,7 +23,9 @@ class Account < ApplicationRecord
     has_many :invoices
     has_many :expenses
   end
-end# bad
+end
+
+# bad
 with_options options: false do |merger|
   merger.invoke(merger.something)
 end

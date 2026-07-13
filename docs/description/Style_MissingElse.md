@@ -35,7 +35,9 @@ when condition
   statement
 else
   # the content of `else` branch will be determined by Style/EmptyElse
-end# warn when an `if` expression is missing an `else` branch.
+end
+
+# warn when an `if` expression is missing an `else` branch.
 
 # bad
 if condition
@@ -61,7 +63,9 @@ when condition
   statement
 else
   # the content of `else` branch will be determined by Style/EmptyElse
-end# warn when a `case` expression is missing an `else` branch.
+end
+
+# warn when a `case` expression is missing an `else` branch.
 
 # bad
 case var

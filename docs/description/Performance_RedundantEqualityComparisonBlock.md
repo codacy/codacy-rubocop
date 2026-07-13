@@ -28,9 +28,13 @@ items.all? { |item| item.kind_of?(Klass) }
 # good
 items.all?(pattern)
 items.all?(Klass)
+
+
 # good
 items.all? { |item| item =~ pattern }
 items.all? { |item| item.match?(pattern) }
+
+
 # bad
 items.all? { |item| item =~ pattern }
 items.all? { |item| item.match?(pattern) }

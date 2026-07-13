@@ -17,6 +17,27 @@ multi-line array.
 
 # good
 [:a, :b]
+
+
+# bad
+a = b,
+    c
+
+# good
+a =
+  b,
+  c
+
+
+# good
+a = b,
+    c
+
+a =
+  b,
+  c
+
+
 # bad
 [ :a, {
   :b => :c
@@ -27,6 +48,8 @@ multi-line array.
   :a, {
   :b => :c
 }]
+
+
 # good
 [:a, {
   :b => :c

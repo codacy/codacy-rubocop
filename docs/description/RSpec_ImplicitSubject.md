@@ -15,7 +15,9 @@ end
 it { is_expected.to be_truthy }
 it do
   expect(subject).to be_truthy
-end# bad
+end
+
+# bad
 it do
   foo = 1
   is_expected.to be_truthy
@@ -28,11 +30,15 @@ it do
 end
 it do
   is_expected.to be_truthy
-end# bad
+end
+
+# bad
 it { is_expected.to be_truthy }
 
 # good
-it { expect(subject).to be_truthy }# bad
+it { expect(subject).to be_truthy }
+
+# bad
 it { expect(subject).to be_truthy }
 
 # good

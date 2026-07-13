@@ -55,6 +55,22 @@ do_something if attrs&.respond_to?(:[])
 do_something if attrs.respond_to?(:[])
 
 # bad
+foo&.bar ? foo&.bar.baz : qux
+
+# good
+foo&.bar ? foo.bar.baz : qux
+
+# bad
+if foo&.bar
+  foo&.bar.baz
+end
+
+# good
+if foo&.bar
+  foo.bar.baz
+end
+
+# bad
 while node&.is_a?(BeginNode)
   node = node.parent
 end
@@ -64,8 +80,9 @@ while node.is_a?(BeginNode)
   node = node.parent
 end
 
-# good - without `&.` this will always return `true`
+# good - without `&.` this changes the return value for `nil`
 foo&.respond_to?(:to_a)
+foo&.respond_to?(:class)
 
 # bad - for `nil`s conversion methods return default values for the type
 foo&.to_h || {}
@@ -87,14 +104,20 @@ foo.to_s
 self&.foo
 
 # good
-self.foo# bad
+self.foo
+
+# bad
 do_something if attrs&.nil_safe_method(:[])
 
 # good
 do_something if attrs.nil_safe_method(:[])
-do_something if attrs&.not_nil_safe_method(:[])# good
+do_something if attrs&.not_nil_safe_method(:[])
+
+# good
 foo.bar
-foo&.baz# bad
+foo&.baz
+
+# bad
 foo.bar
 foo&.baz # would raise on previous line if `foo` is nil
 
@@ -119,7 +142,9 @@ end
 
 def method2
   foo&.bar
-end# good
+end
+
+# good
 foo.present?
 foo&.bar
 ```

@@ -23,7 +23,9 @@ for numbers in the code (eg 1.2e4). Different styles are supported:
 1e7
 3e3
 1.17e6
-3.14# Enforces using multiple of 3 exponents,
+3.14
+
+# Enforces using multiple of 3 exponents,
 # mantissa should be between 0.1 (inclusive) and 1000 (exclusive)
 
 # bad
@@ -36,7 +38,9 @@ for numbers in the code (eg 1.2e4). Different styles are supported:
 32e6
 10e3
 1.2e6
-1.232e9# Enforces the mantissa to have no decimal part and no
+1.232e9
+
+# Enforces the mantissa to have no decimal part and no
 # trailing zeroes.
 
 # bad

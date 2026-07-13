@@ -42,13 +42,17 @@ end
 private
 def bar
   foo.bar
-end# bad
+end
+
+# bad
 def foo_bar
   foo.bar
 end
 
 # good
-delegate :bar, to: :foo, prefix: true# good
+delegate :bar, to: :foo, prefix: true
+
+# good
 def foo_bar
   foo.bar
 end

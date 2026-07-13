@@ -13,7 +13,9 @@ end
 # good
 def some_method(arg1 = :default, arg2 = nil, arg3 = [])
   # do something...
-end# bad
+end
+
+# bad
 def some_method(arg1 = :default, arg2 = nil, arg3 = [])
   # do something...
 end

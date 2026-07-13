@@ -20,7 +20,9 @@ foo.try(:bar) { |e| e.baz }
 
 foo&.bar
 foo&.bar(baz)
-foo&.bar { |e| e.baz }# bad
+foo&.bar { |e| e.baz }
+
+# bad
 foo.try!(:bar)
 foo.try!(:bar, baz)
 foo.try!(:bar) { |e| e.baz }

@@ -12,7 +12,9 @@ Project contains gems.rb and gems.locked files
 Project contains Gemfile and gems.locked file
 
 # good
-Project contains Gemfile and Gemfile.lock# bad
+Project contains Gemfile and Gemfile.lock
+
+# bad
 Project contains Gemfile and Gemfile.lock files
 
 # bad

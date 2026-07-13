@@ -28,6 +28,9 @@ array.reject { |x| /regexp/.match?(x) }
 array.reject { |x| x =~ /regexp/ }
 array.reject { |x| /regexp/ =~ x }
 
+# bad (negative form)
+array.reject { |x| !x.match? /regexp/ }
+
 # good
 array.grep(regexp)
 array.grep_v(regexp)

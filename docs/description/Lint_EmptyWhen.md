@@ -19,6 +19,8 @@ when foo
 when bar
   nil
 end
+
+
 # good
 case condition
 when foo
@@ -26,6 +28,8 @@ when foo
 when bar
   # noop
 end
+
+
 # bad
 case condition
 when foo

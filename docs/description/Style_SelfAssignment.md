@@ -1,5 +1,5 @@
 
-Enforces the use the shorthand for self-assignment.
+Enforces the use of the shorthand for self-assignment.
 
 # Examples
 

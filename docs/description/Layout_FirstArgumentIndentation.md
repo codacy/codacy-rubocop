@@ -33,7 +33,9 @@ second_param)
 
 some_method nested_call(
 nested_first_param),
-second_param# Same as `special_for_inner_method_call` except that the special rule
+second_param
+
+# Same as `special_for_inner_method_call` except that the special rule
 # only applies if the outer method call encloses its arguments in
 # parentheses.
 
@@ -57,7 +59,9 @@ second_param)
 
 some_method nested_call(
   nested_first_param),
-second_param# The first argument should always be indented one step more than the
+second_param
+
+# The first argument should always be indented one step more than the
 # preceding line.
 
 # good
@@ -80,7 +84,9 @@ second_param)
 
 some_method nested_call(
   nested_first_param),
-second_param# The first argument should always be indented one level relative to
+second_param
+
+# The first argument should always be indented one level relative to
 # the parent that is receiving the argument
 
 # good
@@ -103,7 +109,9 @@ second_param)
 
 some_method nested_call(
               nested_first_param),
-second_params# The first argument should normally be indented one step more than
+second_params
+
+# The first argument should normally be indented one step more than
 # the preceding line, but if it's an argument for a method call that
 # is itself an argument in a method call, then the inner argument
 # should be indented relative to the inner method.

@@ -18,6 +18,21 @@ RUBY
 <<~RUBY
   something
 RUBY
+
+# good
+<<-RUBY.squish
+    something
+RUBY
+
+# bad
+<<-RUBY.squish
+    something
+RUBY
+
+# good
+<<~RUBY.squish
+  something
+RUBY
 ```
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Layout/HeredocIndentation)

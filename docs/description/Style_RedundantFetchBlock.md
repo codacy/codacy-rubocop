@@ -22,7 +22,9 @@ hash.fetch(:key, 5)
 hash.fetch(:key, true)
 hash.fetch(:key, nil)
 array.fetch(5, :value)
-ENV.fetch(:key, 'value')# bad
+ENV.fetch(:key, 'value')
+
+# bad
 ENV.fetch(:key) { VALUE }
 
 # good

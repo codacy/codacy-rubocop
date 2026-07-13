@@ -25,7 +25,9 @@ def a
 end
 
 def b
-end# checks for empty lines between class definitions.
+end
+
+# checks for empty lines between class definitions.
 
 # bad
 class A
@@ -43,7 +45,9 @@ class B
 end
 
 def b
-end# checks for empty lines between module definitions.
+end
+
+# checks for empty lines between module definitions.
 
 # bad
 module A
@@ -62,28 +66,44 @@ end
 
 def b
 end
-# good
-class ErrorA < BaseError; end
-class ErrorB < BaseError; end
-class ErrorC < BaseError; end
+
 
 # good
 class ErrorA < BaseError; end
+class ErrorB < BaseError; end
+
+# good
+class ErrorA < BaseError; end
 
 class ErrorB < BaseError; end
 
-class ErrorC < BaseError; end
+# good - DefLikeMacros: [memoize]
+memoize :attribute_a
+memoize :attribute_b
+
+# good
+memoize :attribute_a
+
+memoize :attribute_b
+
+
 # bad
 class ErrorA < BaseError; end
 class ErrorB < BaseError; end
-class ErrorC < BaseError; end
 
 # good
 class ErrorA < BaseError; end
 
 class ErrorB < BaseError; end
 
-class ErrorC < BaseError; end
+# bad - DefLikeMacros: [memoize]
+memoize :attribute_a
+memoize :attribute_b
+
+# good
+memoize :attribute_a
+
+memoize :attribute_b
 ```
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Layout/EmptyLineBetweenDefs)

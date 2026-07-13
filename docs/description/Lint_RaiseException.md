@@ -21,7 +21,9 @@ raise Exception.new('Error message here')
 
 # good
 raise StandardError, 'Error message here'
-raise MyError.new, 'Error message here'# bad - `Foo` is not an allowed implicit namespace
+raise MyError.new, 'Error message here'
+
+# bad - `Foo` is not an allowed implicit namespace
 module Foo
   def self.foo
     raise Exception # This is qualified to `Foo::Exception`.

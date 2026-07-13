@@ -33,7 +33,9 @@ end
 
 class << obj
   attr_reader :bar
-end# bad
+end
+
+# bad
 class Foo
   # TODO: implement later
 end
@@ -46,7 +48,9 @@ end
 
 class << obj
   # TODO: implement later
-end# good
+end
+
+# good
 class Foo
   # TODO: implement later
 end

@@ -43,17 +43,6 @@ raise 'exception' if something
 ok
 
 # bad
-if something
-  foo || raise('exception')
-else
-  ok
-end
-
-# good
-foo || raise('exception') if something
-ok
-
-# bad
 define_method(:test) do
   if something
     work
@@ -70,7 +59,9 @@ end
 # also good
 define_method(:test) do
   work if something
-end# bad
+end
+
+# bad
 def test
   if foo?
     work
@@ -79,7 +70,9 @@ def test
   if bar?  # <- reports an offense
     work
   end
-end# good
+end
+
+# good
 def test
   if foo?
     work

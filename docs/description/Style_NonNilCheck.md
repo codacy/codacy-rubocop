@@ -27,9 +27,13 @@ end
 # good
 def signed_in?
   !current_user.nil?
-end# good
+end
+
+# good
 if !x.nil?
-end# bad
+end
+
+# bad
 if !x.nil?
 end
 ```

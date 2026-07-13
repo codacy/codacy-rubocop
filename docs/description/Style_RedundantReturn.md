@@ -1,5 +1,7 @@
 
-Checks for redundant `return` expressions.
+Checks for redundant `return` expressions. Ruby methods
+implicitly return the value of the last evaluated expression,
+so an explicit `return` at the end of a method body is unnecessary.
 
 # Examples
 
@@ -36,10 +38,14 @@ def test
   elsif y
   else
   end
-end# bad
+end
+
+# bad
 def test
   return x, y
-end# good
+end
+
+# good
 def test
   return x, y
 end

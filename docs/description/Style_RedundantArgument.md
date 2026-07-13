@@ -25,6 +25,7 @@ array.join('')
 array.sum(0)
 exit(true)
 exit!(false)
+string.to_i(10)
 string.split(" ")
 "first\nsecond".split(" ")
 string.chomp("\n")
@@ -37,6 +38,7 @@ array.join
 array.sum
 exit
 exit!
+string.to_i
 string.split
 "first second".split
 string.chomp

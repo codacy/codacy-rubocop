@@ -27,7 +27,9 @@ raise MyKwArgError.new(key1: val1, key2: val2)
 
 # With `AllowedCompactTypes` set to ['MyWrappedError']
 raise MyWrappedError.new(obj)
-raise MyWrappedError.new(obj), 'message'# bad
+raise MyWrappedError.new(obj), 'message'
+
+# bad
 raise StandardError, 'message'
 raise RuntimeError, arg1, arg2, arg3
 

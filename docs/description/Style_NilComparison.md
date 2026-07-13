@@ -1,8 +1,7 @@
 
 Checks for comparison of something with nil using `==` and
-`nil?`.
-
-Supported styles are: predicate, comparison.
+`nil?`. Enforcing a consistent style (either the `nil?`
+predicate or `==` comparison) improves readability.
 
 # Examples
 
@@ -15,6 +14,8 @@ end
 # good
 if x.nil?
 end
+
+
 # bad
 if x.nil?
 end

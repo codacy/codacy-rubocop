@@ -20,7 +20,9 @@ it { is_expected.to have_http_status :ok }
 it { is_expected.to have_http_status :not_found }
 it { is_expected.to have_http_status :forbidden }
 it { is_expected.to have_http_status :success }
-it { is_expected.to have_http_status :error }# bad
+it { is_expected.to have_http_status :error }
+
+# bad
 it { is_expected.to have_http_status :ok }
 it { is_expected.to have_http_status :not_found }
 it { is_expected.to have_http_status "forbidden" }
@@ -30,7 +32,9 @@ it { is_expected.to have_http_status 200 }
 it { is_expected.to have_http_status 404 }
 it { is_expected.to have_http_status 403 }
 it { is_expected.to have_http_status :success }
-it { is_expected.to have_http_status :error }# bad
+it { is_expected.to have_http_status :error }
+
+# bad
 it { is_expected.to have_http_status :ok }
 it { is_expected.to have_http_status :not_found }
 it { is_expected.to have_http_status "forbidden" }
@@ -42,7 +46,9 @@ it { is_expected.to have_http_status "403" }
 it { is_expected.to be_ok }
 it { is_expected.to be_not_found }
 it { is_expected.to have_http_status :success }
-it { is_expected.to have_http_status :error }# bad
+it { is_expected.to have_http_status :error }
+
+# bad
 it { is_expected.to have_http_status :oki_doki }
 
 # good

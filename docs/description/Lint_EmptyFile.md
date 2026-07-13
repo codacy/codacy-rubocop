@@ -8,8 +8,12 @@ Enforces that Ruby source files are not empty.
 # Empty file
 
 # good
-# File containing non commented source lines# good
-# File consisting only of comments# bad
+# File containing non commented source lines
+
+# good
+# File consisting only of comments
+
+# bad
 # File consisting only of comments
 ```
 

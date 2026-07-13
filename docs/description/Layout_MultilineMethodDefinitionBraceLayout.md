@@ -47,7 +47,9 @@ def foo(
   a,
   b
 )
-end# bad
+end
+
+# bad
 def foo(
   a,
   b)
@@ -69,7 +71,9 @@ def foo(
   a,
   b
 )
-end# bad
+end
+
+# bad
 def foo(a,
   b
 )

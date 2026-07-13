@@ -13,7 +13,9 @@ Checks if uses of quotes match the configured preference.
 'No special symbols'
 'No string interpolation'
 'Just text'
-"Wait! What's #{this}!"# bad
+"Wait! What's #{this}!"
+
+# bad
 'Just some text'
 'No special chars or interpolation'
 

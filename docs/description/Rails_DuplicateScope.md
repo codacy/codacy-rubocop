@@ -1,5 +1,5 @@
 
-Checks for multiple scopes in a model that have the same `where` clause. This
+Checks for multiple scopes in a model that have the same expression. This
 often means you copy/pasted a scope, updated the name, and forgot to change the condition.
 
 # Examples

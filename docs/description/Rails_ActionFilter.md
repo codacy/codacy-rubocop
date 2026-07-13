@@ -18,7 +18,9 @@ skip_after_filter :do_stuff
 # good
 after_action :do_stuff
 append_around_action :do_stuff
-skip_after_action :do_stuff# bad
+skip_after_action :do_stuff
+
+# bad
 after_action :do_stuff
 append_around_action :do_stuff
 skip_after_action :do_stuff

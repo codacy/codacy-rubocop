@@ -25,11 +25,15 @@ obj.public_send(:method_name)
 obj.public_send('method_name')
 
 # good
-obj.method_name# good
+obj.method_name
+
+# good
 obj.send(:method_name)
 obj.send('method_name')
 obj.__send__(:method_name)
-obj.__send__('method_name')# bad
+obj.__send__('method_name')
+
+# bad
 obj.send(:method_name)
 obj.send('method_name')
 obj.__send__(:method_name)

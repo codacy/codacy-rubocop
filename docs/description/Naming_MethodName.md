@@ -55,7 +55,9 @@ Struct.new(:foo_bar)
 alias_method :fooBar, :some_method
 
 # good
-alias_method :foo_bar, :some_method# bad
+alias_method :foo_bar, :some_method
+
+# bad
 def foo_bar; end
 
 # good
@@ -79,9 +81,13 @@ Struct.new(:fooBar)
 alias_method :foo_bar, :some_method
 
 # good
-alias_method :fooBar, :some_method# bad
+alias_method :fooBar, :some_method
+
+# bad
 def def; end
-def super; end# bad
+def super; end
+
+# bad
 def release_v1; end
 def api_gen1; end
 ```

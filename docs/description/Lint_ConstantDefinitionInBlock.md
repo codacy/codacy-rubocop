@@ -46,7 +46,9 @@ module M
   included do
     const_set(:LIST, [])
   end
-end# good
+end
+
+# good
 
 # `enums` for Typed Enums via `T::Enum` in Sorbet.
 # https://sorbet.org/docs/tenum

@@ -62,7 +62,9 @@ class A
 
   def bar
   end
-end# bad
+end
+
+# bad
 class A
   def test
     puts 'hello'

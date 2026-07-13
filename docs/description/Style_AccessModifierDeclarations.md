@@ -35,7 +35,9 @@ class Foo
   def bar; end
   def baz; end
 
-end# bad
+end
+
+# bad
 class Foo
 
   private
@@ -51,7 +53,9 @@ class Foo
   private def bar; end
   private def baz; end
 
-end# good
+end
+
+# good
 class Foo
 
   private :bar, :baz
@@ -59,7 +63,9 @@ class Foo
   private *METHOD_NAMES
   private *private_methods
 
-end# bad
+end
+
+# bad
 class Foo
 
   private :bar, :baz
@@ -67,7 +73,9 @@ class Foo
   private *METHOD_NAMES
   private *private_methods
 
-end# good
+end
+
+# good
 class Foo
 
   public attr_reader :bar
@@ -81,7 +89,9 @@ class Foo
 
   def private_method; end
 
-end# bad
+end
+
+# bad
 class Foo
 
   public attr_reader :bar
@@ -89,14 +99,18 @@ class Foo
   private attr_accessor :qux
   private attr :quux
 
-end# good
+end
+
+# good
 class Foo
 
   public alias_method :bar, :foo
   protected alias_method :baz, :foo
   private alias_method :qux, :foo
 
-end# bad
+end
+
+# bad
 class Foo
 
   public alias_method :bar, :foo

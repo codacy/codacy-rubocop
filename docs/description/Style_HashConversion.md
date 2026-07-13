@@ -19,8 +19,12 @@ ary.to_h
 Hash[key1, value1, key2, value2]
 
 # good
-{key1 => value1, key2 => value2}# good
-Hash[*ary]# bad
+{key1 => value1, key2 => value2}
+
+# good
+Hash[*ary]
+
+# bad
 Hash[*ary]
 ```
 

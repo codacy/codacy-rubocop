@@ -1,5 +1,5 @@
 
-Check that certain constants are fully qualified.
+Checks that certain constants are fully qualified.
 
 This is not enabled by default because it would mark a lot of offenses
 unnecessarily.
@@ -9,12 +9,12 @@ the code that uses the gem. Enable this cop without using `Only`/`Ignore`
 
 Large projects will over time end up with one or two constant names that
 are problematic because of a conflict with a library or just internally
-using the same name a namespace and a class. To avoid too many unnecessary
-offenses, Enable this cop with `Only: [The, Constant, Names, Causing, Issues]`
+using the same name for a namespace and a class. To avoid too many unnecessary
+offenses, enable this cop with `Only: [The, Constant, Names, Causing, Issues]`
 
-NOTE: `Style/RedundantConstantBase` cop is disabled if this cop is enabled to prevent
-conflicting rules. Because it respects user configurations that want to enable
-this cop which is disabled by default.
+NOTE: `Style/RedundantConstantBase` cop is disabled if this cop is enabled,
+to prevent conflicting rules. This is because it respects user configurations
+that want to enable this cop which is disabled by default.
 
 # Examples
 
@@ -31,7 +31,9 @@ User::Login
 ::User
 
 # good
-::User::Login# Restrict this cop to only being concerned about certain constants
+::User::Login
+
+# Restrict this cop to only being concerned about certain constants
 
 # bad
 Login
@@ -40,7 +42,9 @@ Login
 ::Login
 
 # good
-User::Login# Restrict this cop not being concerned about certain constants
+User::Login
+
+# Restrict this cop not being concerned about certain constants
 
 # bad
 User

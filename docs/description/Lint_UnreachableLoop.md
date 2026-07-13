@@ -76,6 +76,8 @@ end
 
 # bad
 2.times { raise ArgumentError }
+
+
 # good
 exactly(2).times { raise StandardError }
 ```

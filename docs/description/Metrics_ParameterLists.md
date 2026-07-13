@@ -30,9 +30,13 @@ This can be configured using the `MaxOptionalParameters` config option.
 ```ruby
 # good
 def foo(a, b, c = 1)
-end# bad
+end
+
+# bad
 def foo(a, b, c = 1)
-end# counts keyword args towards the maximum
+end
+
+# counts keyword args towards the maximum
 
 # bad (assuming Max is 3)
 def foo(a, b, c, d: 1)
@@ -40,13 +44,19 @@ end
 
 # good (assuming Max is 3)
 def foo(a, b, c: 1)
-end# don't count keyword args towards the maximum
+end
+
+# don't count keyword args towards the maximum
 
 # good (assuming Max is 3)
 def foo(a, b, c, d: 1)
-end# good
+end
+
+# good
 def foo(a = 1, b = 2, c = 3)
-end# bad
+end
+
+# bad
 def foo(a = 1, b = 2, c = 3)
 end
 ```

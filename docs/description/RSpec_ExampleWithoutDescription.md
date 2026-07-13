@@ -18,7 +18,9 @@ This cop can be configured using the `EnforcedStyle` option
 specify do
   result = service.call
   expect(result).to be(true)
-end# bad
+end
+
+# bad
 it('') { is_expected.to be_good }
 specify '' do
   result = service.call
@@ -30,7 +32,9 @@ it { is_expected.to be_good }
 specify do
   result = service.call
   expect(result).to be(true)
-end# bad
+end
+
+# bad
 it('') { is_expected.to be_good }
 it do
   result = service.call
@@ -38,7 +42,9 @@ it do
 end
 
 # good
-it { is_expected.to be_good }# bad
+it { is_expected.to be_good }
+
+# bad
 it { is_expected.to be_good }
 it do
   result = service.call

@@ -40,7 +40,9 @@ end
 # good
 class Model
   @var = Something.new
-end# bad
+end
+
+# bad
 class Model
   @var = Something.new
 end

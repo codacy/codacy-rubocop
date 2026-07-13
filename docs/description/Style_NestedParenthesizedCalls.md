@@ -13,7 +13,9 @@ These are customizable with `AllowedMethods` option.
 method1(method2(arg))
 
 # bad
-method1(method2 arg)# good
+method1(method2 arg)
+
+# good
 method1(foo arg)
 ```
 

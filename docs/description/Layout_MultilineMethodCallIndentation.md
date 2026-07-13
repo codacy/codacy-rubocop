@@ -20,12 +20,16 @@ end
 # good
 Thing.a
      .b
-     .c# good
+     .c
+
+# good
 while myvariable
   .b
 
   # do something
-end# good
+end
+
+# good
 while myvariable
         .a
         .b

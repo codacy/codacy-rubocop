@@ -25,7 +25,9 @@ x.fetch(key, default_value)
 Array.new(size, default_value)
 
 # good - keyword arguments aren't registered as offenses
-x.fetch(key, keyword: :arg) { block_value }# good
+x.fetch(key, keyword: :arg) { block_value }
+
+# good
 Rails.cache.fetch(name, options) { block }
 ```
 

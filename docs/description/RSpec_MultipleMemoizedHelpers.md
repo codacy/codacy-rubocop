@@ -51,7 +51,9 @@ describe MyClass do
     let(:quux) { [] }
     let(:quuz) { {} }
   end
-end# rubocop.yml
+end
+
+# rubocop.yml
 # RSpec/MultipleMemoizedHelpers:
 #   AllowSubject: false
 
@@ -63,7 +65,9 @@ describe MyClass do
   let!(:baz) { [] }
   let(:qux) { [] }
   let(:quux) { [] }
-end# rubocop.yml
+end
+
+# rubocop.yml
 # RSpec/MultipleMemoizedHelpers:
 #   Max: 1
 

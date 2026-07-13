@@ -70,7 +70,9 @@ class ClassWithNoParent
   def initialize
     do_something
   end
-end# good
+end
+
+# good
 class MyConcreteClass < MyAbstractClass
   def initialize
     do_something

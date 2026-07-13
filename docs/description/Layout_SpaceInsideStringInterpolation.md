@@ -8,7 +8,9 @@ Checks for whitespace within string interpolations.
    var = "This is the #{ space } example"
 
 # good
-   var = "This is the #{no_space} example"# bad
+   var = "This is the #{no_space} example"
+
+# bad
    var = "This is the #{no_space} example"
 
 # good

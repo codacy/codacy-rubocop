@@ -13,6 +13,8 @@ end
 let(:foo) do
   instance_double(ClassName, method_name: 'returned_value')
 end
+
+
 # good
 let(:foo) do
   instance_double(@klass, method_name: 'returned_value')

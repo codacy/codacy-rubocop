@@ -16,7 +16,9 @@ end
 class Plumbus
   private
   def smooth; end
-end# bad
+end
+
+# bad
 class Plumbus
   private
   def smooth; end

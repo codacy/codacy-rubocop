@@ -1,5 +1,7 @@
 
-Checks if usage of %() or %Q() matches configuration.
+Checks if usage of `%()` or `%Q()` matches configuration.
+Consistent use of one style makes the codebase easier
+to read.
 
 # Examples
 
@@ -10,7 +12,9 @@ Checks if usage of %() or %Q() matches configuration.
 
 # good
 %(He said: "#{greeting}")
-%{She said: 'Hi'}# bad
+%{She said: 'Hi'}
+
+# bad
 %|He said: "#{greeting}"|
 %/She said: 'Hi'/
 

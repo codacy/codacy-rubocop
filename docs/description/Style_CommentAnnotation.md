@@ -36,7 +36,9 @@ annotation.
 # Optimize does not work
 
 # good
-# OPTIMIZE: does not work# bad
+# OPTIMIZE: does not work
+
+# bad
 # TODO: make better
 
 # good

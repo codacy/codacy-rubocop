@@ -5,17 +5,20 @@ method calls containing arguments.
 In the default style (require_parentheses), macro methods are allowed.
 Additional methods can be added to the `AllowedMethods` or
 `AllowedPatterns` list. These options are valid only in the default
-style. Macros can be included by either setting `IgnoreMacros` to false
-or adding specific macros to the `IncludedMacros` list.
+style. Macros can be included by either setting `IgnoreMacros` to false,
+adding specific macros to the `IncludedMacros` list, or using
+`IncludedMacroPatterns` for pattern-based matching.
 
 Precedence of options is as follows:
 
 1. `AllowedMethods`
 2. `AllowedPatterns`
 3. `IncludedMacros`
+4. `IncludedMacroPatterns`
 
-If a method is listed in both `IncludedMacros` and `AllowedMethods`,
-then the latter takes precedence (that is, the method is allowed).
+If a method is listed in both `IncludedMacros`/`IncludedMacroPatterns`
+and `AllowedMethods`, then the latter takes precedence (that is, the
+method is allowed).
 
 In the alternative style (omit_parentheses), there are three additional
 options.
@@ -83,6 +86,8 @@ puts 'test'
 
 # okay with `^assert` listed in `AllowedPatterns`
 assert_equal 'test', x
+
+
 # bad
 array.delete(e)
 
@@ -112,24 +117,43 @@ yield path, File.basename(path)
 if meets(criteria:, action:)
   safe_action(action) || dangerous_action(action)
 end
+
+
 # good
 class Foo
   bar :baz
 end
+
+
 # bad
 class Foo
   bar :baz
 end
+
+
 # good
 puts "Hello world"
 print "Hello world"
 # still enforces parentheses on other methods
 array.delete(e)
+
+
 # good
 assert_equal 'test', x
 assert_match(/foo/, bar)
 # still enforces parentheses on other methods
 array.delete(e)
+
+
+# bad
+assert_equal 'test', x
+refute_nil value
+
+# good
+assert_equal('test', x)
+refute_nil(value)
+
+
 # bad
 foo.enforce(
   strict: true
@@ -138,6 +162,8 @@ foo.enforce(
 # good
 foo.enforce \
   strict: true
+
+
 # good
 foo.enforce(
   strict: true
@@ -146,31 +172,43 @@ foo.enforce(
 # good
 foo.enforce \
   strict: true
+
+
 # bad
 foo().bar(1)
 
 # good
 foo().bar 1
+
+
 # good
 foo().bar(1)
 
 # good
 foo().bar 1
+
+
 # bad
 Array(1)
 
 # good
 Array 1
+
+
 # good
 Array(1)
 
 # good
 Array 1
+
+
 # bad
 "#{t('this.is.bad')}"
 
 # good
 "#{t 'this.is.better'}"
+
+
 # good
 "#{t('this.is.good')}"
 

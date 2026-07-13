@@ -1,7 +1,7 @@
 
 In math and Python, we can use `x < y < z` style comparison to compare
-multiple value. However, we can't use the comparison in Ruby. However,
-the comparison is not syntax error. This cop checks the bad usage of
+multiple values. However, we can't use the comparison in Ruby. However,
+the comparison is not a syntax error. This cop checks the bad usage of
 comparison operators.
 
 # Examples

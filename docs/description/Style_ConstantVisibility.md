@@ -22,18 +22,22 @@ class Foo
 
   BAZ = 43
   public_constant :BAZ
-end# bad
+end
+
+# bad
 class Foo
-  MyClass = Struct.new()
+  MyClass = Struct.new
 end
 
 # good
 class Foo
-  MyClass = Struct.new()
+  MyClass = Struct.new
   public_constant :MyClass
-end# good
+end
+
+# good
 class Foo
-  MyClass = Struct.new()
+  MyClass = Struct.new
 end
 ```
 

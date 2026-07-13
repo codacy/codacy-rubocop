@@ -19,5 +19,6 @@ You can configure the placeholders used by changing the following options:
 * `ParameterTypePlaceholder`: placeholders used for parameter types (default: 'T.untyped')
 * `ReturnTypePlaceholder`: placeholders used for return types (default: 'T.untyped')
 * `Style`: signature style to enforce - 'sig' for sig blocks, 'rbs' for RBS comments, 'both' to allow either (default: 'sig')
+* `AutocorrectStyle`: signature style to use when autocorrecting - 'sig' for sig blocks, 'rbs' for RBS comments (default: 'sig'). Only used when `Style` is 'both'.
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Sorbet/EnforceSignatures)

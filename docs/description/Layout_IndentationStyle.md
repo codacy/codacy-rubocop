@@ -15,7 +15,9 @@ end
 # This example uses spaces to indent bar.
 def foo
   bar
-end# bad
+end
+
+# bad
 # This example uses spaces to indent bar.
 def foo
   bar

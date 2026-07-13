@@ -15,11 +15,15 @@ gem 'rubocop'
 # good
 gem 'rubocop'
 
-gem 'rspec'# good
+gem 'rspec'
+
+# good
 # For code quality
 gem 'rubocop'
 # For tests
-gem 'rspec'# bad
+gem 'rspec'
+
+# bad
 # For code quality
 gem 'rubocop'
 # For tests

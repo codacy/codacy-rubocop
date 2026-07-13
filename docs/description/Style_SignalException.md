@@ -33,7 +33,9 @@ rescue Exception
   # handle it
 end
 
-Kernel.raise# The `only_fail` style enforces the sole use of `fail`.
+Kernel.raise
+
+# The `only_fail` style enforces the sole use of `fail`.
 # bad
 begin
   raise
@@ -62,7 +64,9 @@ rescue Exception
   # handle it
 end
 
-Kernel.fail# The `semantic` style enforces the use of `fail` to signal an
+Kernel.fail
+
+# The `semantic` style enforces the use of `fail` to signal an
 # exception, then will use `raise` to trigger an offense after
 # it has been rescued.
 # bad

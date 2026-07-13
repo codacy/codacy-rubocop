@@ -24,7 +24,9 @@ class UserType < BaseType
   def last_name
     object.contact_data.last_name
   end
-end# good
+end
+
+# good
 
 class UserType < BaseType
   field :first_name, String, null: true

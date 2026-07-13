@@ -37,7 +37,9 @@ module Test
   class << self
     # ...
   end
-end# bad
+end
+
+# bad
 module Test
   module_function
   # ...
@@ -54,7 +56,9 @@ module Test
   class << self
     # ...
   end
-end# bad
+end
+
+# bad
 module Test
   module_function
   # ...

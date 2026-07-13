@@ -13,12 +13,20 @@ be configured to allow either reads or writes if required.
 Rails.application.config.foo
 Rails.application.config.x.foo.bar
 Rails.application.secrets.foo
-Rails.application.config.foo = "bar"# bad
+Rails.application.config.foo = "bar"
+
+# bad
 ENV["FOO"]
-ENV.fetch("FOO")# good
+ENV.fetch("FOO")
+
+# good
 ENV["FOO"]
-ENV.fetch("FOO")# bad
-ENV["FOO"] = "bar"# good
+ENV.fetch("FOO")
+
+# bad
+ENV["FOO"] = "bar"
+
+# good
 ENV["FOO"] = "bar"
 ```
 

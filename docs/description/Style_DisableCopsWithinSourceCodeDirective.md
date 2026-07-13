@@ -1,6 +1,6 @@
 
 Detects comments to enable/disable RuboCop.
-This is useful if want to make sure that every RuboCop error gets fixed
+This is useful if you want to make sure that every RuboCop error gets fixed
 and not quickly disabled with a comment.
 
 Specific cops can be allowed with the `AllowedCops` configuration. Note that
@@ -17,7 +17,9 @@ end
 
 # good
 def foo
-end# good
+end
+
+# good
 # rubocop:disable Metrics/AbcSize
 def foo
 end

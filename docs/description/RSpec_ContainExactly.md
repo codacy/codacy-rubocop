@@ -10,10 +10,13 @@ This cop checks for the following:
 
 ```ruby
 # bad
-it { is_expected.to contain_exactly(*array1, *array2) }
+it { is_expected.to contain_exactly(*array) }
 
 # good
-it { is_expected.to match_array(array1 + array2) }
+it { is_expected.to match_array(array) }
+
+# good
+it { is_expected.to contain_exactly(*array1, *array2) }
 
 # good
 it { is_expected.to contain_exactly(content, *array) }

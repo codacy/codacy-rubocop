@@ -19,7 +19,9 @@ user.posts.where(published: true).exists?
 # good
 User.exists?(name: 'john')
 User.where('length(name) > 10').exists?
-user.posts.exists?(published: true)# bad
+user.posts.exists?(published: true)
+
+# bad
 User.exists?(name: 'john')
 User.exists?(['name = ?', 'john'])
 user.posts.exists?(published: true)

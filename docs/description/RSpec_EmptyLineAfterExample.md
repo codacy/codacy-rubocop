@@ -25,7 +25,9 @@ end
 RSpec.describe Foo do
   it { one }
   it { two }
-end# rubocop.yml
+end
+
+# rubocop.yml
 # RSpec/EmptyLineAfterExample:
 #   AllowConsecutiveOneLiners: false
 

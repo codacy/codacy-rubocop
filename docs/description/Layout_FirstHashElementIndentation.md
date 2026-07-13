@@ -26,10 +26,10 @@ styles are 'consistent' and 'align_braces'. Here are examples:
 # bad
 hash = {
   key: :value
-}
-and_in_a_method_call({
-  no: :difference
-                     })
+       }
+in_a_method_call({
+  foo: :bar
+})
 takes_multi_pairs_hash(x: {
   a: 1,
   b: 2
@@ -40,13 +40,12 @@ takes_multi_pairs_hash(x: {
                        })
 
 # good
-special_inside_parentheses
 hash = {
   key: :value
 }
-but_in_a_method_call({
-                       its_like: :this
-                     })
+in_a_method_call({
+                   foo: :bar
+                 })
 takes_multi_pairs_hash(x: {
                          a: 1,
                          b: 2
@@ -54,7 +53,9 @@ takes_multi_pairs_hash(x: {
                        y: {
                          c: 1,
                          d: 2
-                       })# The `consistent` style enforces that the first key in a hash
+                       })
+
+# The `consistent` style enforces that the first key in a hash
 # literal where the opening brace and the first key are on
 # separate lines is indented the same as a hash literal which is not
 # defined inside a method call.
@@ -62,18 +63,20 @@ takes_multi_pairs_hash(x: {
 # bad
 hash = {
   key: :value
-}
-but_in_a_method_call({
-                       its_like: :this
-                      })
+       }
+in_a_method_call({
+                  foo: :bar
+                })
 
 # good
 hash = {
   key: :value
 }
-and_in_a_method_call({
-  no: :difference
-})# The `align_brackets` style enforces that the opening and closing
+in_a_method_call({
+  foo: :bar
+})
+
+# The `align_brackets` style enforces that the opening and closing
 # braces are indented to the same position.
 
 # bad

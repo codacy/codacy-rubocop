@@ -42,12 +42,16 @@ def foo?
   else
     true
   end
-end# good
+end
+
+# good
 def foo?
   return if condition
 
   do_something?
-end# good
+end
+
+# good
 def foo?
   return if condition
 

@@ -19,13 +19,23 @@ The compact style is only forced for classes/modules with one child.
 # Examples
 
 ```ruby
+# bad
+class Foo::Bar
+end
+
 # good
-# have each child on its own line
 class Foo
   class Bar
   end
-end# good
-# combine definitions as much as possible
+end
+
+# bad
+class Foo
+  class Bar
+  end
+end
+
+# good
 class Foo::Bar
 end
 ```

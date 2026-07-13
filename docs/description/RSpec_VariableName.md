@@ -13,17 +13,23 @@ let(:userName2) { 'Adam' }
 
 # good
 subject(:user_name_1) { 'Adam' }
-let(:user_name_2) { 'Adam' }# bad
+let(:user_name_2) { 'Adam' }
+
+# bad
 subject(:user_name_1) { 'Adam' }
 let(:user_name_2) { 'Adam' }
 
 # good
 subject(:userName1) { 'Adam' }
-let(:userName2) { 'Adam' }# rubocop.yml
+let(:userName2) { 'Adam' }
+
+# rubocop.yml
 # RSpec/VariableName:
 #   EnforcedStyle: snake_case
 #   AllowedPatterns:
-#     - ^userFood# okay because it matches the `^userFood` regex in `AllowedPatterns`
+#     - ^userFood
+
+# okay because it matches the `^userFood` regex in `AllowedPatterns`
 subject(:userFood_1) { 'spaghetti' }
 let(:userFood_2) { 'fettuccine' }
 ```

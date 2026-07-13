@@ -20,7 +20,9 @@ folders = `find . -type d`.split
 `
   ln -s foo.example.yml foo.example
   ln -s bar.example.yml bar.example
-`# bad
+`
+
+# bad
 folders = %x(find . -type d).split
 
 # bad
@@ -36,7 +38,9 @@ folders = `find . -type d`.split
 %x(
   ln -s foo.example.yml foo.example
   ln -s bar.example.yml bar.example
-)# bad
+)
+
+# bad
 folders = `find . -type d`.split
 
 # bad
@@ -52,14 +56,18 @@ folders = %x(find . -type d).split
 %x(
   ln -s foo.example.yml foo.example
   ln -s bar.example.yml bar.example
-)# If `false`, the cop will always recommend using `%x` if one or more
+)
+
+# If `false`, the cop will always recommend using `%x` if one or more
 # backticks are found in the command string.
 
 # bad
 `echo \`ls\``
 
 # good
-%x(echo `ls`)# good
+%x(echo `ls`)
+
+# good
 `echo \`ls\``
 ```
 

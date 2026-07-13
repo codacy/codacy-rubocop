@@ -57,6 +57,8 @@ end
 module Namespace
   extend Foo
 end
+
+
 # good
 module A
   module ClassMethods

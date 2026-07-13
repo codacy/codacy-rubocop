@@ -18,7 +18,9 @@ expect(Foo).to receive(:bar) { "baz" }
 allow(Foo).to receive(:bar).and_return("baz")
 expect(Foo).to receive(:bar).and_return("baz")
 # also good as the returned value is dynamic
-allow(Foo).to receive(:bar) { bar.baz }# bad
+allow(Foo).to receive(:bar) { bar.baz }
+
+# bad
 allow(Foo).to receive(:bar).and_return("baz")
 expect(Foo).to receive(:bar).and_return("baz")
 

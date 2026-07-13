@@ -35,7 +35,9 @@ expect { run }
   .and not_change(Foo, :baz)
 expect { run }
   .to not_change { Foo.bar }
-  .and not_change { Foo.baz }# bad (support autocorrection to good case)
+  .and not_change { Foo.baz }
+
+# bad (support autocorrection to good case)
 expect { run }
   .to change(Foo, :bar).by(0)
   .and change(Foo, :baz).by(0)

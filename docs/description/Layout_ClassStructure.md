@@ -45,7 +45,7 @@ You can configure the following order:
      - private_methods
 ----
 
-Instead of putting all literals in the expected order, is also
+Instead of putting all literals in the expected order, it is also
 possible to group categories of macros. Visibility levels are handled
 automatically.
 

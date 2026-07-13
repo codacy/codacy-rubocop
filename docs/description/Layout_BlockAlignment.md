@@ -14,6 +14,10 @@ start of the line where the expression started.
 `either` (which is the default) : the `end` is allowed to be in either
 location. The autocorrect will default to `start_of_line`.
 
+When the `do` or `{` appears on a continuation line of multiline
+method arguments, the start of the line where the method is called
+is used as the alignment target instead of that continuation line.
+
 # Examples
 
 ```ruby
@@ -29,7 +33,9 @@ foo.bar
 foo.bar
   .each do
     baz
-end# bad
+end
+
+# bad
 
 foo.bar
   .each do
@@ -41,7 +47,9 @@ foo.bar
 foo.bar
   .each do
     baz
-  end# bad
+  end
+
+# bad
 
 foo.bar
   .each do

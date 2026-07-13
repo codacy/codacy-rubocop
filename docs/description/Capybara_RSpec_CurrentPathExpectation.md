@@ -25,4 +25,4 @@ expect(page).to have_current_path('/callback', ignore_query: true)
 expect(page).to match(variable)
 ```
 
-[Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Capybara/CurrentPathExpectation)
+[Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Capybara/RSpec/CurrentPathExpectation)

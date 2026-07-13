@@ -28,6 +28,8 @@ modify the receiver.
 
 # good
 {foo: 1, bar: 2, baz: 3}.slice(:bar)
+
+
 # good
 {foo: 1, bar: 2, baz: 3}.select {|k, v| !%i[bar].exclude?(k) }
 {foo: 1, bar: 2, baz: 3}.reject {|k, v| %i[bar].exclude?(k) }
@@ -35,6 +37,8 @@ modify the receiver.
 # good
 {foo: 1, bar: 2, baz: 3}.select {|k, v| k.in?(%i[bar]) }
 {foo: 1, bar: 2, baz: 3}.reject {|k, v| !k.in?(%i[bar]) }
+
+
 # bad
 {foo: 1, bar: 2, baz: 3}.select {|k, v| !%i[bar].exclude?(k) }
 {foo: 1, bar: 2, baz: 3}.reject {|k, v| %i[bar].exclude?(k) }

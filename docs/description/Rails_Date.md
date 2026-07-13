@@ -29,15 +29,21 @@ Time.zone.today
 Time.zone.today - 1.day
 Date.current
 Date.yesterday
-date.in_time_zone# bad
+date.in_time_zone
+
+# bad
 Date.current
 Date.yesterday
 Date.today
 
 # good
 Time.zone.today
-Time.zone.today - 1.day# good
-date.to_time# bad
+Time.zone.today - 1.day
+
+# good
+date.to_time
+
+# bad
 date.to_time
 ```
 

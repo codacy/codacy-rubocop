@@ -30,7 +30,9 @@ class BooksController < ApplicationController
     # ...
     redirect_to books_url, notice: t('.success')
   end
-end# bad
+end
+
+# bad
 class BooksController < ApplicationController
   def create
     # ...

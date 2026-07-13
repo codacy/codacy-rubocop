@@ -28,7 +28,9 @@ describe SomeClass do
     stub_const('OtherClass', Struct.new)
     stub_const('CONSTANT_HERE', 'I only exist during this example')
   end
-end# bad
+end
+
+# bad
 describe SomeClass do
   class FooClass < described_class
     def double_that
@@ -63,7 +65,9 @@ describe SomeClass do
   end
 
   it { expect(FooClass.new.double_that).to eq(4) }
-end# bad
+end
+
+# bad
 describe SomeClass do
   module SomeModule
     class SomeClass

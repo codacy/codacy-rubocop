@@ -1,6 +1,6 @@
 
 Checks for space between the name of a receiver and a left
-brackets.
+bracket.
 
 # Examples
 

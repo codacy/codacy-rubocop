@@ -19,7 +19,9 @@ symbol = :"Tests #{success ? 'PASS' : 'FAIL'}"
 heredoc = <<~TEXT
   Tests #{success ? 'PASS' : 'FAIL'}
 TEXT
-regexp = /Tests #{success ? 'PASS' : 'FAIL'}/# bad
+regexp = /Tests #{success ? 'PASS' : 'FAIL'}/
+
+# bad
 string = "Tests #{success ? 'PASS' : 'FAIL'}"
 symbol = :"Tests #{success ? 'PASS' : 'FAIL'}"
 heredoc = <<~TEXT

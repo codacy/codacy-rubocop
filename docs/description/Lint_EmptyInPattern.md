@@ -19,6 +19,8 @@ in [a]
 in [a, b]
   nil
 end
+
+
 # good
 case condition
 in [a]
@@ -26,6 +28,8 @@ in [a]
 in [a, b]
   # noop
 end
+
+
 # bad
 case condition
 in [a]

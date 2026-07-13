@@ -1,5 +1,5 @@
 
-Makes sure that rescued exceptions variables are named as
+Makes sure that rescued exception variables are named as
 expected.
 
 The `PreferredName` config option takes a `String`. It represents
@@ -32,7 +32,9 @@ begin
   # do something
 rescue MyException => _e
   # do something
-end# bad
+end
+
+# bad
 begin
   # do something
 rescue MyException => e

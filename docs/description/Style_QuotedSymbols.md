@@ -18,7 +18,9 @@ style to use for symbols that require quotes.
 # good
 :'abc-def'
 :"#{str}"
-:"a\'b"# bad
+:"a\'b"
+
+# bad
 :'abc-def'
 
 # good

@@ -18,6 +18,8 @@ method(
   # ignored
   method foo, bar,
     baz
+
+
 # bad
 method(foo, bar, {
   baz: "a",
@@ -30,6 +32,8 @@ method(
   baz: "a",
   qux: "b",
 })
+
+
 # bad
 method(foo,
   bar,
@@ -54,6 +58,8 @@ method(
     qux: "b",
   }
 )
+
+
 # good
 some_method(foo, bar,
   baz)

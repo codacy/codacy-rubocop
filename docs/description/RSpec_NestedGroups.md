@@ -49,7 +49,9 @@ context 'using some feature as an admin' do
 
   it 'blah blah'
   it 'yada yada'
-end# bad
+end
+
+# bad
 describe Foo do
   context 'foo' do
     context 'bar' do
@@ -57,7 +59,9 @@ describe Foo do
       end
     end
   end
-end# bad
+end
+
+# bad
 describe Foo do
   context 'foo' do
     context 'bar' do # flagged by rubocop
@@ -65,12 +69,16 @@ describe Foo do
       end
     end
   end
-enddescribe Foo do # <-- nested groups 1
+end
+
+describe Foo do # <-- nested groups 1
   context 'foo' do # <-- nested groups 2
     context 'bar' do # <-- nested groups 3
     end
   end
-enddescribe Foo do # <-- nested groups 1
+end
+
+describe Foo do # <-- nested groups 1
   path '/foo' do # <-- nested groups 1 (not counted)
     context 'bar' do # <-- nested groups 2
     end

@@ -18,10 +18,14 @@ end
 # good
 if some_var == value
   do_something
-end# good
+end
+
+# good
 if (some_var = value)
   do_something
-end# bad
+end
+
+# bad
 if (some_var = value)
   do_something
 end

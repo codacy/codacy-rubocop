@@ -10,7 +10,9 @@ expect(last_response.code).to eq("200")
 
 # good
 expect(response).to have_http_status(200)
-expect(last_response).to have_http_status(200)# bad
+expect(last_response).to have_http_status(200)
+
+# bad
 expect(foo_response.status).to be(200)
 
 # good

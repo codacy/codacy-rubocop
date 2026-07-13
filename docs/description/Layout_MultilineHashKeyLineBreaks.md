@@ -26,10 +26,14 @@ starts on a separate line.
     c: 3,
   }
 }
+
+
 # bad
 { a: 1, b: {
   c: 3,
 }}
+
+
 # good
 { a: 1, b: {
   c: 3,

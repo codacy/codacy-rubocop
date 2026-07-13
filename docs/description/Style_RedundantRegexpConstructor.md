@@ -1,6 +1,6 @@
 
-Checks for the instantiation of regexp using redundant `Regexp.new` or `Regexp.compile`.
-Autocorrect replaces to regexp literal which is the simplest and fastest.
+Checks for the instantiation of a regexp using a redundant `Regexp.new` or `Regexp.compile`.
+Autocorrect replaces it with a regexp literal which is the simplest and fastest.
 
 # Examples
 

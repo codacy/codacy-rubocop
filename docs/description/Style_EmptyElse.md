@@ -30,7 +30,9 @@ end
 # good
 if condition
   statement
-end# warn only on empty else
+end
+
+# warn only on empty else
 
 # bad
 if condition
@@ -55,7 +57,9 @@ end
 # good
 if condition
   statement
-end# warn on else with nil in it
+end
+
+# warn on else with nil in it
 
 # bad
 if condition
@@ -81,6 +85,8 @@ end
 if condition
   statement
 end
+
+
 # bad
 if condition
   statement
@@ -95,6 +101,8 @@ if condition
 else
   # something comment
 end
+
+
 # good
 if condition
   statement

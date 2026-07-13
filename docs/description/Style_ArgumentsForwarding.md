@@ -57,7 +57,9 @@ end
 # good
 def foo(...)
   bar(...)
-end# bad
+end
+
+# bad
 def foo(*args, **kwargs, &block)
   args_only(*args)
   kwargs_only(**kwargs)
@@ -69,19 +71,25 @@ def foo(*, **, &)
   args_only(*)
   kwargs_only(**)
   block_only(&)
-end# good
+end
+
+# good
 def foo(*args, **kwargs, &block)
   args_only(*args)
   kwargs_only(**kwargs)
   block_only(&block)
-end# good
+end
+
+# good
 def foo(*args)
   bar(*args)
 end
 
 def foo(**kwargs)
   bar(**kwargs)
-end# bad
+end
+
+# bad
 # The following code can replace the arguments with `...`,
 # but it will change the behavior. Because `...` forwards block also.
 def foo(*args)
@@ -90,7 +98,9 @@ end
 
 def foo(**kwargs)
   bar(**kwargs)
-end# bad
+end
+
+# bad
 def foo(*args)
   bar(*args)
 end
@@ -98,7 +108,9 @@ end
 # good
 def foo(*)
   bar(*)
-end# bad
+end
+
+# bad
 def foo(**kwargs)
   bar(**kwargs)
 end
@@ -106,7 +118,9 @@ end
 # good
 def foo(**)
   bar(**)
-end# bad - But it is good with `EnforcedStyle: explicit` set for `Naming/BlockForwarding`.
+end
+
+# bad - But it is good with `EnforcedStyle: explicit` set for `Naming/BlockForwarding`.
 def foo(&block)
   bar(&block)
 end

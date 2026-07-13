@@ -1,6 +1,7 @@
 
-Checks for uses of Proc.new where Kernel#proc
-would be more appropriate.
+Checks for uses of `Proc.new` where `Kernel#proc`
+would be more appropriate. `proc` is the shorter and
+more idiomatic way to create procs in Ruby.
 
 # Examples
 

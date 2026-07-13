@@ -22,7 +22,9 @@ end
 # good
 before do
   # ...
-end# bad
+end
+
+# bad
 before(:example) do
   # ...
 end
@@ -35,7 +37,9 @@ end
 # good
 before(:each) do
   # ...
-end# bad
+end
+
+# bad
 before(:each) do
   # ...
 end

@@ -1,6 +1,11 @@
 
 Looks for uses of Perl-style global variables.
-Correcting to global variables in the 'English' library
+Perl-style global variables like `$;` or `$/` are cryptic
+and hard to understand without consulting documentation.
+The `English` library provides descriptive aliases like
+`$FIELD_SEPARATOR` and `$INPUT_RECORD_SEPARATOR`.
+
+Correcting to global variables in the `English` library
 will add a require statement to the top of the file if
 enabled by RequireEnglish config.
 
@@ -27,7 +32,9 @@ puts $PROCESS_ID # or $PID
 puts $CHILD_STATUS
 puts $LAST_MATCH_INFO
 puts $IGNORECASE
-puts $ARGV # or ARGV# good
+puts $ARGV # or ARGV
+
+# good
 puts $:
 puts $"
 puts $0
@@ -46,6 +53,8 @@ puts $?
 puts $~
 puts $=
 puts $*
+
+
 # good
 # Like `use_perl_names` but allows builtin global vars.
 puts $LOAD_PATH

@@ -10,7 +10,9 @@ expect(object).to be_a_kind_of(String)
 
 # good
 expect(object).to be_a(String)
-expect(object).to be_an(String)# bad
+expect(object).to be_an(String)
+
+# bad
 expect(object).to be_a(String)
 expect(object).to be_an(String)
 

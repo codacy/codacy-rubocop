@@ -13,6 +13,8 @@ check for all possible sprintf formats.
 _("result is %s" % ["value"])
 n_("a string" + "a string with a %-3.1f" % [size])
 N_("a string" + "a string with a %04d" % [size])
+
+
 # good
 
 _("result is %{detail}" % {detail: message})

@@ -14,8 +14,12 @@ as in `0.times { it() }`, following `Lint/ItWithoutArgumentsInBlock` cop.
 object.some_method()
 
 # good
-object.some_method# bad
-object.foo()# good
+object.some_method
+
+# bad
+object.foo()
+
+# good
 object.foo()
 ```
 

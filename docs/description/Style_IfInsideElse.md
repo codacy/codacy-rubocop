@@ -24,7 +24,9 @@ elsif condition_b
   action_b
 else
   action_c
-end# bad
+end
+
+# bad
 if condition_a
   action_a
 else
@@ -36,7 +38,9 @@ if condition_a
   action_a
 elsif condition_b
   action_b
-end# good
+end
+
+# good
 if condition_a
   action_a
 else

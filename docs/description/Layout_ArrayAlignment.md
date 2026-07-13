@@ -1,5 +1,5 @@
 
-Check that the elements of a multi-line array literal are
+Checks that the elements of a multi-line array literal are
 aligned.
 
 # Examples
@@ -19,7 +19,9 @@ array = [1, 2, 3,
   4, 5, 6]
 array = ['run',
      'forrest',
-     'run']# good
+     'run']
+
+# good
 
 array = [1, 2, 3,
   4, 5, 6]

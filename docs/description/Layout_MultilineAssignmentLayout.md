@@ -22,10 +22,14 @@ foo =
     compute
   rescue => e
     nil
-  end# good
+  end
+
+# good
 foo = if expression
   'bar'
-end# good
+end
+
+# good
 foo =
   if expression
     'bar'
@@ -35,7 +39,9 @@ foo =
 foo =
   [1].map do |i|
     i + 1
-  end# good
+  end
+
+# good
 foo = if expression
   'bar'
 end

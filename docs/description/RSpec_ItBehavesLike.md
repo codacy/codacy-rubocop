@@ -8,7 +8,9 @@ Checks that only one `it_behaves_like` style is used.
 it_should_behave_like 'a foo'
 
 # good
-it_behaves_like 'a foo'# bad
+it_behaves_like 'a foo'
+
+# bad
 it_behaves_like 'a foo'
 
 # good

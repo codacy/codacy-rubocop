@@ -13,7 +13,9 @@ collection.each do
 end
 
 # good
-collection.each { puts _1 }# bad
+collection.each { puts _1 }
+
+# bad
 collection.each { puts _1 }
 
 # good

@@ -24,7 +24,9 @@ gem 'rubocop', branch: 'feature-branch'
 gem 'rubocop', ref: '74b5bfbb2c4b6fd6cdbbc7254bd7084b36e0c85b'
 
 # good
-gem 'rubocop', tag: 'v1.17.0'# good
+gem 'rubocop', tag: 'v1.17.0'
+
+# good
 gem 'rubocop'
 
 # bad

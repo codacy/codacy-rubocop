@@ -12,6 +12,12 @@ enumerator = [1, 2, 3].filter
 enumerator.each { |item| item >= 2 } #=> [2, 3]
 ----
 
+NOTE: Return values in assignment method definitions such as `def foo=(arg)` are
+detected because they are in a void context. However, autocorrection does not remove
+the return value, as that would change behavior. In such cases, whether to remove
+the return value or rename the method to something more appropriate should be left to
+the user.
+
 # Examples
 
 ```ruby
@@ -24,7 +30,9 @@ end
 def some_method(some_var)
   some_var
   do_something
-end# bad
+end
+
+# bad
 def some_method(some_array)
   some_array.sort
   do_something(some_array)

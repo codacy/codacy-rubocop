@@ -13,7 +13,9 @@ foo.map{ |a|
 # good
 foo.map { |a|
   a.bar.to_s
-}# bad
+}
+
+# bad
 foo.map { |a|
   a.bar.to_s
 }
@@ -21,11 +23,15 @@ foo.map { |a|
 # good
 foo.map{ |a|
   a.bar.to_s
-}# bad
+}
+
+# bad
 7.times{}
 
 # good
-7.times {}# bad
+7.times {}
+
+# bad
 7.times {}
 
 # good

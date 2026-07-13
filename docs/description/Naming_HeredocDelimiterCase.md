@@ -13,7 +13,9 @@ sql
 # good
 <<-SQL
   SELECT * FROM foo
-SQL# bad
+SQL
+
+# bad
 <<-SQL
   SELECT * FROM foo
 SQL

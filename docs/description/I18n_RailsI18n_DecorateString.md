@@ -12,19 +12,27 @@ There are several options for configuration.
 # bad
 
 "Result is bad."
+
+
 # good
 
 t("result_is_good")
-I18n.t("result_is_good")# OK
+I18n.t("result_is_good")
 
-raise "Some string sentence"# bad
+# OK
+
+raise "Some string sentence"
+
+# bad
 
 "Result is bad."
 
 # good
 
 t("result_is_good")
-I18n.t("result_is_good")# bad
+I18n.t("result_is_good")
+
+# bad
 
 "Result is bad"   # Contains a capital to start
 "result is bad."  # Ends in punctuation
@@ -32,7 +40,9 @@ I18n.t("result_is_good")# bad
 # good
 
 t("result_is_good")
-I18n.t("result_is_good")# bad
+I18n.t("result_is_good")
+
+# bad
 
 "result is bad"   # A series of words
 
@@ -40,6 +50,8 @@ I18n.t("result_is_good")# bad
 
 t("result_is_good")
 I18n.t("result_is_good")
+
+
 # bad
 
 "only-this-text"

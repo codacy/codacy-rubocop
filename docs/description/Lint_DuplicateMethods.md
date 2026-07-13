@@ -53,12 +53,37 @@ alias_method :foo, :foo
 def foo
   1
 end
+
+# bad
+class MyClass
+  extend Forwardable
+
+  # or with: `def_instance_delegator`, `def_delegators`, `def_instance_delegators`
+  def_delegator :delegation_target, :delegated_method_name
+
+  def delegated_method_name
+  end
+end
+
+# good
+class MyClass
+  extend Forwardable
+
+  def_delegator :delegation_target, :delegated_method_name
+
+  def non_duplicated_delegated_method_name
+  end
+end
+
+
 # good
 def foo
   1
 end
 
 delegate :foo, to: :bar
+
+
 # bad
 def foo
   1

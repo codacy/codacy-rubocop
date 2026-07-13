@@ -38,24 +38,32 @@ The supported styles are:
 # good
 {a: 2, b: 1}
 {:c => 2, 'd' => 2} # acceptable since 'd' isn't a symbol
-{d: 1, 'e' => 2} # technically not forbidden# bad
+{d: 1, 'e' => 2} # technically not forbidden
+
+# bad
 {a: 1, b: 2}
 {c: 1, 'd' => 5}
 
 # good
-{:a => 1, :b => 2}# bad
+{:a => 1, :b => 2}
+
+# bad
 {:a => 1, b: 2}
 {c: 1, 'd' => 2}
 
 # good
 {:a => 1, :b => 2}
-{c: 1, d: 2}# bad
+{c: 1, d: 2}
+
+# bad
 {:a => 1, :b => 2}
 {c: 2, 'd' => 3} # should just use hash rockets
 
 # good
 {a: 1, b: 2}
 {:c => 3, 'd' => 4}
+
+
 # bad
 {foo: foo, bar: bar}
 
@@ -64,11 +72,15 @@ The supported styles are:
 
 # good - allowed to mix syntaxes
 {foo:, bar: baz}
+
+
 # bad
 {foo:, bar:}
 
 # good
 {foo: foo, bar: bar}
+
+
 # good
 {foo: foo, bar: bar}
 
@@ -77,6 +89,8 @@ The supported styles are:
 
 # good
 {foo:, bar:}
+
+
 # bad - `foo` and `bar` values can be omitted
 {foo: foo, bar: bar}
 
@@ -91,6 +105,8 @@ The supported styles are:
 
 # good - can't omit `baz`
 {foo: foo, bar: baz}
+
+
 # good - `foo` and `bar` values can be omitted, but they are consistent, so it's accepted
 {foo: foo, bar: bar}
 

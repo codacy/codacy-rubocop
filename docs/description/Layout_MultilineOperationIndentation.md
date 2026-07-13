@@ -23,7 +23,9 @@ if a +
    b
   something &&
     something_else
-end# bad
+end
+
+# bad
 if a +
    b
   something &&

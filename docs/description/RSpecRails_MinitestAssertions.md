@@ -16,6 +16,7 @@ assert_nil a
 refute_empty(b)
 assert_true(a)
 assert_false(a)
+assert_response :ok
 
 # good
 expect(b).to eq(a)
@@ -26,6 +27,7 @@ expect(a).to eq(nil)
 expect(a).not_to be_empty
 expect(a).to be(true)
 expect(a).to be(false)
+expect(response).to have_http_status(:ok)
 ```
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/RSpecRails/MinitestAssertions)

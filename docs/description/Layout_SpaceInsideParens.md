@@ -14,7 +14,9 @@ f( )
 # good
 f(3)
 g = (a + 3)
-f()# The `space` style enforces that parentheses have a space at the
+f()
+
+# The `space` style enforces that parentheses have a space at the
 # beginning and end.
 # Note: Empty parentheses should not have spaces.
 
@@ -26,7 +28,9 @@ y( )
 # good
 f( 3 )
 g = ( a + 3 )
-y()# The `compact` style enforces that parentheses have a space at the
+y()
+
+# The `compact` style enforces that parentheses have a space at the
 # beginning with the exception that successive parentheses are allowed.
 # Note: Empty parentheses should not have spaces.
 

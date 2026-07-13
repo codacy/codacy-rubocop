@@ -25,6 +25,8 @@ write_attribute(:attr, val)
 # good
 x = self[:attr]
 self[:attr] = val
+
+
 # good
 def foo
   bar || read_attribute(:foo)

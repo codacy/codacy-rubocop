@@ -1,6 +1,8 @@
 
 Checks for multiple expressions placed on the same line.
 It also checks for lines terminated with a semicolon.
+In idiomatic Ruby, each expression should be on its own line
+for readability.
 
 This cop has `AllowAsExpressionSeparator` configuration option.
 It allows `;` to separate several expressions on the same line.
@@ -15,8 +17,12 @@ baz = 3;
 # good
 foo = 1
 bar = 2
-baz = 3# bad
-foo = 1; bar = 2# good
+baz = 3
+
+# bad
+foo = 1; bar = 2
+
+# good
 foo = 1; bar = 2
 ```
 

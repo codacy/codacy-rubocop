@@ -25,7 +25,9 @@ gem "foo"
 
 # good (with AllowedGems: ["bar"])
 # example.gemspec
-s.add_development_dependency "bar"# Specify runtime dependencies in your gemspec,
+s.add_development_dependency "bar"
+
+# Specify runtime dependencies in your gemspec,
 # but all other dependencies in your Gemfile.
 #
 # Identical to `EnforcedStyle: Gemfile`, but with a different error message.
@@ -45,7 +47,9 @@ gem "foo"
 
 # good (with AllowedGems: ["bar"])
 # example.gemspec
-s.add_development_dependency "bar"# Specify all dependencies in your gemspec.
+s.add_development_dependency "bar"
+
+# Specify all dependencies in your gemspec.
 
 # bad
 # Gemfile

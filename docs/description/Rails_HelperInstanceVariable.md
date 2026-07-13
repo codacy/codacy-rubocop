@@ -9,7 +9,7 @@ If it seems awkward to explicitly pass in each dependent
 variable, consider moving the behavior elsewhere, for
 example to a model, decorator or presenter.
 
-Provided that a class inherits `ActionView::Helpers::FormBuilder`,
+Provided that an instance variable belongs to a class,
 an offense will not be registered.
 
 # Examples
@@ -26,8 +26,16 @@ def welcome_message(user)
 end
 
 # good
-class MyFormBuilder < ActionView::Helpers::FormBuilder
-  @template.do_something
+module ButtonHelper
+  class Welcome
+    def initialize(text:)
+      @text = text
+    end
+  end
+
+  def welcome(**)
+    render Welcome.new(**)
+  end
 end
 ```
 

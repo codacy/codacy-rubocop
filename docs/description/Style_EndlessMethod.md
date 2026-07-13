@@ -41,7 +41,9 @@ def my_method
   x.foo
    .bar
    .baz
-end# good
+end
+
+# good
 def my_method
   x
 end
@@ -59,7 +61,9 @@ def my_method
   x.foo
    .bar
    .baz
-end# bad
+end
+
+# bad
 def my_method = x
 
 # bad
@@ -77,7 +81,9 @@ def my_method
   x.foo
    .bar
    .baz
-end# bad
+end
+
+# bad
 def my_method
   x
 end
@@ -95,7 +101,9 @@ def my_method
   x.foo
    .bar
    .baz
-end# bad
+end
+
+# bad
 def my_method
   x
 end

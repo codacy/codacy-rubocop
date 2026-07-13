@@ -35,7 +35,9 @@ end
 
 module Bar
   # ...
-end# The `never` will enforce that the frozen string literal comment does
+end
+
+# The `never` will enforce that the frozen string literal comment does
 # not exist in a file.
 # bad
 # frozen_string_literal: true
@@ -47,7 +49,9 @@ end
 # good
 module Baz
   # ...
-end# The `always_true` style enforces that the frozen string literal
+end
+
+# The `always_true` style enforces that the frozen string literal
 # comment is set to `true`. This is a stricter option than `always`
 # and forces projects to use frozen string literals.
 # bad

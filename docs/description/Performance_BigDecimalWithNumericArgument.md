@@ -5,6 +5,11 @@ Initializing from String is faster than from Float for BigDecimal.
 Also identifies places where an integer string argument to BigDecimal should be converted to
 an integer. Initializing from Integer is faster than from String for BigDecimal.
 
+NOTE: This cop is disabled by default because the performance of initializing with a String
+and Number differ between versions. Additionally, performance depends on the size of the Number,
+and if it is an Integer or a Float. Since this is very specific to `bigdecimal` internals,
+suggestions from this cop are not unlikely to result in code that performs worse than before.
+
 # Examples
 
 ```ruby

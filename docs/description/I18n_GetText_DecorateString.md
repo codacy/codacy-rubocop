@@ -10,6 +10,8 @@ and sentence punctuation at the end)
 # bad
 
 "Result is bad."
+
+
 # good
 
 _("Result is good.")

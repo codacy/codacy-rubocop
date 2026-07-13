@@ -1,5 +1,7 @@
 
 Enforces the consistent usage of `%`-literal delimiters.
+Using consistent delimiters across the codebase reduces
+cognitive load when reading `%`-literals.
 
 Specify the 'default' key to set all preferred delimiters at once. You
 can continue to specify individual preferred delimiters to override the

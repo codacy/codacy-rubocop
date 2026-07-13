@@ -15,7 +15,9 @@ end
 class Foo
   include Qox
   include Bar
-end# bad
+end
+
+# bad
 class Foo
   extend Bar
   extend Qox

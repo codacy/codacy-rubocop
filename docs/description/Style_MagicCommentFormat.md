@@ -6,7 +6,7 @@ both magic comment directives and values.
 Required capitalization can be set with the `DirectiveCapitalization` and
 `ValueCapitalization` configuration keys.
 
-NOTE: If one of these configuration is set to nil, any capitalization is allowed.
+NOTE: If one of these configurations is set to nil, any capitalization is allowed.
 
 # Examples
 
@@ -25,7 +25,9 @@ end
 
 module Bar
   # ...
-end# The `kebab_case` style will enforce that the frozen string literal
+end
+
+# The `kebab_case` style will enforce that the frozen string literal
 # comment is written in kebab case. (Words separated by hyphens)
 # bad
 # frozen_string_literal: true
@@ -39,33 +41,45 @@ end
 
 module Baz
   # ...
-end# bad
+end
+
+# bad
 # FROZEN-STRING-LITERAL: true
 
 # good
-# frozen-string-literal: true# bad
+# frozen-string-literal: true
+
+# bad
 # frozen-string-literal: true
 
 # good
-# FROZEN-STRING-LITERAL: true# any capitalization is accepted
+# FROZEN-STRING-LITERAL: true
+
+# any capitalization is accepted
 
 # good
 # frozen-string-literal: true
 
 # good
-# FROZEN-STRING-LITERAL: true# any capitalization is accepted
+# FROZEN-STRING-LITERAL: true
+
+# any capitalization is accepted
 
 # good
 # frozen-string-literal: true
 
 # good
-# frozen-string-literal: TRUE# when a value is not given, any capitalization is accepted
+# frozen-string-literal: TRUE
+
+# when a value is not given, any capitalization is accepted
 
 # bad
 # frozen-string-literal: TRUE
 
 # good
-# frozen-string-literal: TRUE# bad
+# frozen-string-literal: TRUE
+
+# bad
 # frozen-string-literal: true
 
 # good

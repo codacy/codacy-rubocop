@@ -13,7 +13,9 @@ Ignores Rails and Aruba `type` metadata by default.
 #   IgnoredMetadata:
 #     type:
 #       - request
-#       - controller# bad
+#       - controller
+
+# bad
 describe 'Do something' do
 end
 

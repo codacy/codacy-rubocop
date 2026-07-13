@@ -3,6 +3,9 @@ Checks for division with integers coerced to floats.
 It is recommended to either always use `fdiv` or coerce one side only.
 This cop also provides other options for code consistency.
 
+For `Regexp.last_match` and nth reference (e.g., `$1`), it assumes that the value
+is a string matched by a regular expression, and allows conversion with `#to_f`.
+
 # Examples
 
 ```ruby
@@ -11,17 +14,23 @@ a.to_f / b.to_f
 
 # good
 a.to_f / b
-a / b.to_f# bad
+a / b.to_f
+
+# bad
 a / b.to_f
 a.to_f / b.to_f
 
 # good
-a.to_f / b# bad
+a.to_f / b
+
+# bad
 a.to_f / b
 a.to_f / b.to_f
 
 # good
-a / b.to_f# bad
+a / b.to_f
+
+# bad
 a / b.to_f
 a.to_f / b
 a.to_f / b.to_f

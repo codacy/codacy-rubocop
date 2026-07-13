@@ -39,14 +39,18 @@ gem 'foo'
 # good
 
 # Helpers for the foo things.
-gem 'foo'# bad
+gem 'foo'
+
+# bad
 
 gem 'foo', '< 2.1'
 
 # good
 
 # Version 2.1 introduces breaking change baz
-gem 'foo', '< 2.1'# bad
+gem 'foo', '< 2.1'
+
+# bad
 
 gem 'foo', '< 2.1'
 
@@ -55,7 +59,9 @@ gem 'foo', '< 2.1'
 gem 'foo', '>= 1.0'
 
 # Version 2.1 introduces breaking change baz
-gem 'foo', '< 2.1'# bad
+gem 'foo', '< 2.1'
+
+# bad
 
 gem 'foo', github: 'some_account/some_fork_of_foo'
 

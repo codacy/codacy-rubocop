@@ -28,12 +28,20 @@ end
 
 define_method(:foo) do |_bar|
   puts :baz
-end# good
-do_something { |unused| }# bad
-do_something { |unused| }# bad
+end
+
+# good
+do_something { |unused| }
+
+# bad
+do_something { |unused| }
+
+# bad
 do_something do |unused: 42|
   foo
-end# good
+end
+
+# good
 do_something do |unused: 42|
   foo
 end

@@ -13,6 +13,8 @@ expect(foo).to receive(:bar)
 
 # good
 allow(foo).to receive(:bar)
+
+
 # bad
 allow(foo).to receive(:bar)
 

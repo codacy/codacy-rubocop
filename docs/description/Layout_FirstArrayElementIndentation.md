@@ -40,7 +40,9 @@ array = [
 ]
 but_in_a_method_call([
                        :its_like_this
-                     ])# The `consistent` style enforces that the first element in an array
+                     ])
+
+# The `consistent` style enforces that the first element in an array
 # literal where the opening bracket and the first element are on
 # separate lines is indented the same as an array literal which is not
 # defined inside a method call.
@@ -59,7 +61,9 @@ array = [
 ]
 and_in_a_method_call([
   :no_difference
-])# The `align_brackets` style enforces that the opening and closing
+])
+
+# The `align_brackets` style enforces that the opening and closing
 # brackets are indented to the same position.
 
 # bad

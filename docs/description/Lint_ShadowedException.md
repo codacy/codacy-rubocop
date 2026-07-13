@@ -1,5 +1,5 @@
 
-Checks for a rescued exception that get shadowed by a
+Checks for a rescued exception that gets shadowed by a
 less specific exception being rescued before a more specific
 exception is rescued.
 

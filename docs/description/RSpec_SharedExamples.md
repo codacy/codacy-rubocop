@@ -20,7 +20,9 @@ it_behaves_like 'foo bar baz'
 it_should_behave_like 'foo bar baz'
 shared_examples 'foo bar baz'
 shared_examples_for 'foo bar baz'
-include_examples 'foo bar baz'# bad
+include_examples 'foo bar baz'
+
+# bad
 it_behaves_like 'foo bar baz'
 it_should_behave_like 'foo bar baz'
 shared_examples 'foo bar baz'

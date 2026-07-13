@@ -48,7 +48,9 @@ end
 # Documentation
 def foo.bar
   puts baz
-end# good
+end
+
+# good
 class Foo
   protected
   def do_something
@@ -59,7 +61,9 @@ class Foo
   private
   def do_something
   end
-end# bad
+end
+
+# bad
 class Foo
   protected
   def do_something
@@ -86,6 +90,8 @@ class Foo
   def do_something
   end
 end
+
+
 # good
 class Foo
   def method_missing(name, *args)

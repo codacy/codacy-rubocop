@@ -29,7 +29,9 @@ def some_method
   'x' \
     'y' \
     'z'
-end# bad
+end
+
+# bad
 puts 'x' \
   'y'
 
@@ -45,7 +47,9 @@ puts 'x' \
 my_hash = {
   first: 'a message' \
          'in two parts'
-}# bad
+}
+
+# bad
 result = 'x' \
          'y'
 

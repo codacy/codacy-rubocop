@@ -26,7 +26,9 @@ when :invalid
   report_invalid
 else
   final_action
-end# good
+end
+
+# good
 if status == :active
   perform_action
 elsif status == :inactive || status == :hibernating

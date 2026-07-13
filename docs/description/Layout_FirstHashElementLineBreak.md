@@ -20,10 +20,14 @@ multi-line hash.
   a: 1, b: {
   c: 3
 }}
+
+
 # bad
 { a: 1, b: {
   c: 3
 }}
+
+
 # bad
 { a: 1,
   b: {

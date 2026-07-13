@@ -38,7 +38,9 @@ RSpec.describe User do
   subject(:user) { described_class.new }
 
   it { is_expected.to be_valid }
-end# bad
+end
+
+# bad
 RSpec.describe User do
   subject(:user) { described_class.new }
 

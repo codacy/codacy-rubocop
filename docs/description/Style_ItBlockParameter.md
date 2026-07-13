@@ -22,17 +22,23 @@ block { do_something(_1) }
 
 # good
 block { do_something(it) }
-block { |named_param| do_something(named_param) }# bad
+block { |named_param| do_something(named_param) }
+
+# bad
 block { do_something(_1) }
 
 # good
 block { do_something(it) }
-block { |named_param| do_something(named_param) }# bad
+block { |named_param| do_something(named_param) }
+
+# bad
 block { do_something(_1) }
 block { |named_param| do_something(named_param) }
 
 # good
-block { do_something(it) }# bad
+block { do_something(it) }
+
+# bad
 block { do_something(it) }
 
 # good

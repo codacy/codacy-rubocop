@@ -18,7 +18,9 @@ foo.save and return
 
 # good
 if foo && bar
-end# bad
+end
+
+# bad
 foo.save and return
 
 # bad

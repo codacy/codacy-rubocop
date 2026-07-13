@@ -17,7 +17,9 @@ expect(pattern).to eq(/foo/)
 expect(name).to eq("John")
 
 # bad (not supported autocorrection)
+expect(42).to be_even
 expect(false).to eq(true)
+expect("user").to be_present
 ```
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/RSpec/ExpectActual)

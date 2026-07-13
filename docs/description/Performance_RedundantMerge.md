@@ -12,7 +12,9 @@ hash.merge!({'key' => 'value'})
 
 # good
 hash[:a] = 1
-hash['key'] = 'value'# bad
+hash['key'] = 'value'
+
+# bad
 hash.merge!(a: 1, b: 2)
 
 # good

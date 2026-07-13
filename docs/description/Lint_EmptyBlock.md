@@ -16,17 +16,23 @@ applies to procs.
 items.each { |item| }
 
 # good
-items.each { |item| puts item }# good
+items.each { |item| puts item }
+
+# good
 items.each do |item|
   # TODO: implement later (inner comment)
 end
 
-items.each { |item| } # TODO: implement later (inline comment)# bad
+items.each { |item| } # TODO: implement later (inline comment)
+
+# bad
 items.each do |item|
   # TODO: implement later (inner comment)
 end
 
-items.each { |item| } # TODO: implement later (inline comment)# good
+items.each { |item| } # TODO: implement later (inline comment)
+
+# good
 allow(subject).to receive(:callable).and_return(-> {})
 
 placeholder = lambda do
@@ -35,7 +41,9 @@ end
 
 proc { }
 
-Proc.new { }# bad
+Proc.new { }
+
+# bad
 allow(subject).to receive(:callable).and_return(-> {})
 
 placeholder = lambda do

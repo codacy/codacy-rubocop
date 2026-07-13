@@ -24,10 +24,14 @@ Time.zone.now
 Time.zone.parse('2015-03-02T19:05:37')
 Time.zone.parse('2015-03-02T19:05:37Z') # Respect ISO 8601 format with timezone specifier.
 Time.parse('2015-03-02T19:05:37Z') # Also respects ISO 8601
-'2015-03-02T19:05:37Z'.to_time # Also respects ISO 8601# `flexible` allows usage of `in_time_zone` instead of `zone`.
+'2015-03-02T19:05:37Z'.to_time # Also respects ISO 8601
+
+# `flexible` allows usage of `in_time_zone` instead of `zone`.
 
 # good
-Time.at(timestamp).in_time_zone# `strict` means that `Time` should be used with `zone`.
+Time.at(timestamp).in_time_zone
+
+# `strict` means that `Time` should be used with `zone`.
 
 # bad
 Time.at(timestamp).in_time_zone

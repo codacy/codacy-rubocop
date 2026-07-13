@@ -15,12 +15,16 @@ expect(foo.something?).to be_truthy
 expect(foo).to be_something
 
 # also good - It checks "true" strictly.
-expect(foo.something?).to be(true)# bad
+expect(foo.something?).to be(true)
+
+# bad
 expect(foo.something?).to be_truthy
 expect(foo.something?).to be(true)
 
 # good
-expect(foo).to be_something# bad
+expect(foo).to be_something
+
+# bad
 expect(foo).to be_something
 
 # good - the above code is rewritten to it by this cop
@@ -35,7 +39,9 @@ expect(foo)
 # good
 expect(foo.something?(<<~TEXT)).to be(true)
   bar
-TEXT# bad
+TEXT
+
+# bad
 expect(foo).to be_something
 
 # good - the above code is rewritten to it by this cop
