@@ -21,7 +21,6 @@ $plugins = ["rubocop-performance",
             "rubocop-haml",
             "rubocop-packaging",
             "rubocop-packs",
-            "rubocop-ast",
             "rubocop-shopify"
           ]
 

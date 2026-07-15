@@ -18,27 +18,27 @@ import scala.util.{Failure, Properties, Success, Try}
 object Rubocop extends Tool {
   private val plugins: List[String] =
     List(
-      "rubocop-performance",
-      "rubocop-rails",
-      "rubocop-sorbet",
-      "rubocop-graphql",
-      "rubocop-thread_safety",
-      "rubocop-minitest",
-      "rubocop-rake",
-      "rubocop-rspec",
-      "rubocop-i18n",
-      "rubocop-faker",
-      "rubocop-factory_bot",
-      "rubocop-md",
-      "rubocop-mdsol",
-      "rubocop-rspec_rails",
-      "rubocop-capybara",
-      "rubocop-gitlab-security",
-      "rubocop-haml",
-      "rubocop-packaging",
-      "rubocop-rubycw",
-      "rubocop-packs",
-      "rubocop-ast"
+            "rubocop-performance",
+            "rubocop-rails", 
+            "rubocop-sorbet", 
+            "rubocop-graphql", 
+            "rubocop-thread_safety",
+            "rubocop-minitest",
+            "rubocop-rake",
+            "rubocop-rspec",
+            "rubocop-i18n",
+            "rubocop-faker",
+            "rubocop-factory_bot",
+            "rubocop-md",
+            "rubocop-mdsol",
+            "rubocop-rspec_rails",
+            "rubocop-capybara",
+            "rubocop-rubycw",
+            "rubocop-gitlab-security",
+            "rubocop-haml",
+            "rubocop-packaging",
+            "rubocop-packs",
+            "rubocop-shopify"
     )
 
   // Gemfile is analysed

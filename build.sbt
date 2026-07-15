@@ -1,6 +1,6 @@
 name := "codacy-rubocop"
 
-scalaVersion := "2.13.16"
+scalaVersion := "2.13.18"
 
 libraryDependencies ++= Seq(
   "org.scala-lang.modules" %% "scala-xml" % "2.4.0",

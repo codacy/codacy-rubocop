@@ -40,7 +40,6 @@ gem "yard"
 gem "rake"
 gem "graphql"
 gem "sorbet-runtime"
-#gem "standard-rails" conflict with rubocop-rails
 gem "rollbar"
 gem "sprockets-rails"
 gem "sqlite3"
