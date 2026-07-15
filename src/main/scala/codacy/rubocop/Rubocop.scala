@@ -159,7 +159,7 @@ object Rubocop extends Tool {
 
     val ymlRequires =
       s"""
-         |require:
+         |plugins:
          |${plugins.map(plugin => s"  - $plugin").mkString(System.lineSeparator())}
          |""".stripMargin
 

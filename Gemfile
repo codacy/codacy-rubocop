@@ -6,7 +6,7 @@ git_source(:github) do |repo_name|
 end
 
 # default gems
-gem 'rubocop-thread_safety'
+gem "rubocop-thread_safety"
 gem "rubocop-performance"
 gem 'rubocop-rails'
 gem "rubocop-sorbet"
@@ -40,7 +40,7 @@ gem "yard"
 gem "rake"
 gem "graphql"
 gem "sorbet-runtime"
-gem "standard-rails"
+#gem "standard-rails" conflict with rubocop-rails
 gem "rollbar"
 gem "sprockets-rails"
 gem "sqlite3"

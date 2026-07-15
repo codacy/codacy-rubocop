@@ -45,6 +45,28 @@ class PostsController < ApplicationController
 end
 
 # bad
+class PostsController < ApplicationController
+  def update
+    # ...
+    redirect_back_or_to root_path, alert: "Failed to update!"
+  end
+end
+
+# good
+# config/locales/en.yml
+# en:
+#   posts:
+#     update:
+#       failure: "Failed to update!"
+
+class PostsController < ApplicationController
+  def update
+    # ...
+    redirect_back_or_to root_path, alert: t(".failure")
+  end
+end
+
+# bad
 class UserMailer < ApplicationMailer
   def welcome(user)
     mail(to: user.email, subject: "Welcome to My Awesome Site")

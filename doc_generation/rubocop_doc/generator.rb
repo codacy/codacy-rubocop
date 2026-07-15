@@ -20,9 +20,9 @@ $plugins = ["rubocop-performance",
             "rubocop-gitlab-security",
             "rubocop-haml",
             "rubocop-packaging",
-            "rubocop-rubycw",
             "rubocop-packs",
-            "rubocop-ast"
+            "rubocop-ast",
+            "rubocop-shopify"
           ]
 
 # frozen_string_literal: true

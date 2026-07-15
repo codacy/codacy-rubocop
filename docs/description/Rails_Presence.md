@@ -58,7 +58,12 @@ a[:key] = value if a.present?
 
 # good
 a.present? ? a > 1 : nil
+
+# good
 a <= 0 if a.present?
+
+# good
+a << "bar" if a.present?
 ```
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Rails/Presence)
