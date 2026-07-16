@@ -37,10 +37,10 @@ object Rubocop extends Tool {
       "rubocop-packaging",
       "rubocop-shopify"
     )
-  
+
   // legacy requires that are used to support old versions of packages that don't support plugins
   private val legacyRequires: List[String] =
-   List("rubocop-mdsol", "rubocop-gitlab-security","rubocop-packs")
+    List("rubocop-mdsol", "rubocop-gitlab-security", "rubocop-packs")
 
   // Gemfile is analysed
   private val filesToIgnore: Set[String] =
