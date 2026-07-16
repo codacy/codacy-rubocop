@@ -10730,5 +10730,11 @@
     "title": "Documented Public Apis",
     "description": "Documented Public Apis",
     "timeToFix": 5
+  },
+  {
+    "patternId": "Lint_NoReturnInMemoization",
+    "title": "No Return In Memoization",
+    "description": "No Return In Memoization",
+    "timeToFix": 5
   }
 ]
