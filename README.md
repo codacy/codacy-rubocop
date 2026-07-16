@@ -13,7 +13,7 @@ You can create the docker by doing:
 
 ```
 sbt universal:stage
-docker build -t codacy-rubocops .
+docker build -t codacy-rubocop .
 ```
 
 The docker is ran with the following command:

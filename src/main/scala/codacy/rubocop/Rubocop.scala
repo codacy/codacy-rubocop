@@ -30,16 +30,17 @@ object Rubocop extends Tool {
       "rubocop-faker",
       "rubocop-factory_bot",
       "rubocop-md",
-      "rubocop-mdsol",
       "rubocop-rspec_rails",
       "rubocop-capybara",
       "rubocop-rubycw",
-      "rubocop-gitlab-security",
       "rubocop-haml",
       "rubocop-packaging",
-      "rubocop-packs",
       "rubocop-shopify"
     )
+  
+  // legacy requires that are used to support old versions of packages that don't support plugins
+  private val legacyRequires: List[String] =
+   List("rubocop-mdsol", "rubocop-gitlab-security","rubocop-packs")
 
   // Gemfile is analysed
   private val filesToIgnore: Set[String] =
@@ -159,9 +160,11 @@ object Rubocop extends Tool {
 
     val ymlRequires =
       s"""
-         |plugins:
-         |${plugins.map(plugin => s"  - $plugin").mkString(System.lineSeparator())}
-         |""".stripMargin
+        |plugins:
+        |${plugins.map(plugin => s"  - $plugin").mkString(System.lineSeparator())}
+        |require:
+        |${legacyRequires.map(req => s"  - $req").mkString(System.lineSeparator())}
+        |""".stripMargin
 
     val ymlConfiguration =
       s"""

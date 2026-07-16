@@ -2,11 +2,11 @@ ARG GEM_FOLDER="/usr/local/bundle"
 
 ARG BASE_IMAGE=ruby:4.0.6-alpine3.24
 
-FROM $BASE_IMAGE as doc-generator
+FROM $BASE_IMAGE AS doc-generator
 
 ARG GEM_FOLDER
 ENV GEM_HOME=$GEM_FOLDER
-ENV PATH $GEM_HOME/bin:$GEM_HOME/gems/bin:$PATH
+ENV PATH=$GEM_HOME/bin:$GEM_HOME/gems/bin:$PATH
 WORKDIR /doc_generator
 
 RUN apk add --no-cache ruby ruby-dev ruby-rake \
@@ -31,7 +31,7 @@ FROM $BASE_IMAGE
 
 ARG GEM_FOLDER
 ENV GEM_HOME=$GEM_FOLDER
-ENV PATH $GEM_HOME/bin:$GEM_HOME/gems/bin:$PATH
+ENV PATH=$GEM_HOME/bin:$GEM_HOME/gems/bin:$PATH
 
 RUN apk add --no-cache ruby ruby-dev ruby-rake ruby-bigdecimal \ 
     openjdk17-jre \
