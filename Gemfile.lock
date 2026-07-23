@@ -189,7 +189,7 @@ GEM
     parse_packwerk (0.27.0)
       bigdecimal
       sorbet-runtime
-    parser (3.3.11.1)
+    parser (3.3.12.0)
       ast (~> 2.4.1)
       racc
     pp (0.6.4)
@@ -583,7 +583,7 @@ CHECKSUMS
   packs-specification (0.0.11) sha256=2b6ba6e0dd79af599796d4c8203234ce9a626bca42cb36fcceeac3d95731c86d
   parallel (2.1.0) sha256=b35258865c2e31134c5ecb708beaaf6772adf9d5efae28e93e99260877b09356
   parse_packwerk (0.27.0) sha256=3d69a1b182aa3a3cc9bb179780346467e773deb40cf91380188ac6ca332622da
-  parser (3.3.11.1) sha256=d17ace7aabe3e72c3cc94043714be27cc6f852f104d81aa284c2281aecc65d54
+  parser (3.3.12.0) sha256=21a6d7f755d5a24dfbdc6e6b772e4e879a52e7631a88bc5a3a134606052c9828
   pp (0.6.4) sha256=dfcb0fce700c41456265922884f9fe195d7fbb0674a3578e6c0f69588e82b570
   prettier (4.0.4) sha256=713110c77675de802806b4e09b4b7783e497689db3e8a991f812aa78f4835bc5
   prettier_print (1.2.1) sha256=a72838b5f23facff21f90a5423cdcdda19e4271092b41f4ea7f50b83929e6ff9
