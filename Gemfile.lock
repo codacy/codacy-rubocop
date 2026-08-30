@@ -311,7 +311,7 @@ GEM
       rubocop (~> 1.50)
     rubocop-migrations (0.1.0)
       rubocop (>= 0.42.0)
-    rubocop-minitest (0.39.1)
+    rubocop-minitest (0.40.0)
       lint_roller (~> 1.1)
       rubocop (>= 1.75.0, < 2.0)
       rubocop-ast (>= 1.38.0, < 2.0)
@@ -623,7 +623,7 @@ CHECKSUMS
   rubocop-md (2.0.4) sha256=0d076b6b5e99dea2ddc928c4bd702497decb9a8400da7808091e02ebcafcfb93
   rubocop-mdsol (0.4.0) sha256=de76bef465e9cd202f2235042af880bd15f70c7327919a0c9bc5aa2b25264f9a
   rubocop-migrations (0.1.0) sha256=7b77a9e71bc18bb738108d22242fd92d152cc170a2bc20369cdf57118191fa2a
-  rubocop-minitest (0.39.1) sha256=998398d6da4026d297f0f9bf709a1eac5f2b6947c24431f94af08138510cf7ed
+  rubocop-minitest (0.40.0) sha256=353c698199115f12151144cf0b5a96f69bb9d77b660cf6536df2c4250c672a9d
   rubocop-packaging (0.6.0) sha256=fb92bd0fb48e6f8cdb1648d2249b0cd51c2497dcc87340132d22f01edbf558a7
   rubocop-packs (0.0.45) sha256=94ca3a538161c87375ed98569dea982a3f62aa105751542c15e01126a33a4b97
   rubocop-performance (1.26.1) sha256=cd19b936ff196df85829d264b522fd4f98b6c89ad271fa52744a8c11b8f71834
