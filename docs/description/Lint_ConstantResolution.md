@@ -16,6 +16,12 @@ NOTE: `Style/RedundantConstantBase` cop is disabled if this cop is enabled,
 to prevent conflicting rules. This is because it respects user configurations
 that want to enable this cop which is disabled by default.
 
+When `AllCops/UseProjectIndex` is enabled and the `rubydex` gem is
+installed, only genuinely ambiguous constants are reported: those
+that resolve to a different declaration through the surrounding
+nesting than they would fully qualified. This makes the cop practical
+to enable without `Only`/`Ignore` lists.
+
 # Examples
 
 ```ruby

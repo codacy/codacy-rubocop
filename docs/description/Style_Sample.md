@@ -3,6 +3,10 @@ Identifies usages of `shuffle.first`,
 `shuffle.last`, and `shuffle[]` and change them to use
 `sample` instead.
 
+NOTE: An offense involving a `random:` argument is registered but not autocorrected:
+`shuffle` and `sample` consume the given generator differently, so for a seeded generator
+the correction would select different elements.
+
 # Examples
 
 ```ruby

@@ -1,5 +1,6 @@
 
 Disallows using `T.bind` anywhere.
+Set `AutocorrectToRBS: true` to replace supported calls with RBS inline comments.
 
 # Examples
 

@@ -3,6 +3,11 @@ Looks for error classes inheriting from `Exception`.
 It is configurable to suggest using either `StandardError` (default) or
 `RuntimeError` instead.
 
+When `AllCops/UseProjectIndex` is enabled and the `rubydex` gem is
+installed, indirect inheritance is also detected: a class whose parent
+(defined anywhere in the project) ultimately inherits from `Exception`
+is reported, without autocorrection.
+
 # Examples
 
 ```ruby

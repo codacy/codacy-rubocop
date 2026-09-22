@@ -28,6 +28,15 @@ baz
 foo = "1"
 # rubocop:enable all
 baz
+
+# bad
+foo = 1
+# rubocop:pop
+
+# good
+# rubocop:push -Style/StringLiterals
+foo = "1"
+# rubocop:pop
 ```
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Lint/RedundantCopEnableDirective)

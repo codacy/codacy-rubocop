@@ -24,6 +24,11 @@ delegator.respond_to?(:upcase) # => false
 delegator.upcase # => FOO
 ----
 
+When `AllCops/UseProjectIndex` is enabled and the `rubydex` gem is
+installed, `respond_to_missing?` defined in another definition of the
+same class or module (e.g. a reopening in another file) also
+satisfies the check.
+
 # Examples
 
 ```ruby

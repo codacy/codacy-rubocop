@@ -1,5 +1,6 @@
 
 Disallows using `T.absurd` anywhere.
+Set `AutocorrectToRBS: true` to replace supported calls with RBS inline comments.
 
 # Examples
 
@@ -9,7 +10,7 @@ Disallows using `T.absurd` anywhere.
 T.absurd(foo)
 
 # good
-x #: absurd
+foo #: absurd
 ```
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Sorbet/ForbidTAbsurd)

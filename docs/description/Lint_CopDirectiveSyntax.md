@@ -19,12 +19,11 @@ A comment can be added to the directive by prefixing it with `--`.
 # good
 # rubocop:disable all
 
-# bad
+# bad - only the first directive takes effect
 # rubocop:disable Layout/LineLength # rubocop:disable Style/Encoding
 
 # good
-# rubocop:disable Layout/LineLength
-# rubocop:disable Style/Encoding
+# rubocop:disable Layout/LineLength, Style/Encoding
 
 # bad
 # rubocop:wrongmode Layout/LineLength
@@ -37,6 +36,18 @@ A comment can be added to the directive by prefixing it with `--`.
 
 # good
 # rubocop:disable Layout/LineLength -- comment
+
+# bad
+# rucocop:disable Layout/LineLength
+
+# good
+# rubocop:disable Layout/LineLength
+
+# bad
+# rubocop:disable Layout/LineLenght
+
+# good
+# rubocop:disable Layout/LineLength
 ```
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Lint/CopDirectiveSyntax)

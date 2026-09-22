@@ -27,6 +27,11 @@ class User < ApplicationRecord
   attribute :roles, :string, array: true, default: -> { [] }
 end
 
+# good
+class User < ApplicationRecord
+  attribute :roles, :string, array: true, default: [].freeze
+end
+
 # bad
 class User < ApplicationRecord
   attribute :configuration, default: {}
