@@ -10,6 +10,11 @@ NOTE: This cop is disabled if `Lint/ConstantResolution` cop is enabled,
 to prevent conflicting rules. This is because it respects user configurations
 that want to enable `Lint/ConstantResolution` cop which is disabled by default.
 
+When `AllCops/UseProjectIndex` is enabled and the `rubydex` gem is
+installed, a leading `::` inside a namespace is also reported when the
+constant provably resolves to the same declaration with and without
+the base, i.e. nothing in the surrounding nesting shadows it.
+
 # Examples
 
 ```ruby

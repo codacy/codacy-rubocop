@@ -12,12 +12,12 @@ Dir.chdir("/var/run")
 # bad
 FileUtils.chdir("/var/run")
 
-# good
+# bad
 Dir.chdir("/var/run") do
   puts Dir.pwd
 end
 
-# bad
+# good
 Dir.chdir("/var/run") do
   puts Dir.pwd
 end

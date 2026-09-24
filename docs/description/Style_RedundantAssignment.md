@@ -1,6 +1,9 @@
 
 Checks for redundant assignment before returning.
 
+When there are comments between the assignment and reference,
+the cop will report an offense but it will not autocorrect.
+
 # Examples
 
 ```ruby

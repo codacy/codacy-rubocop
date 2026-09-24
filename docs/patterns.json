@@ -1,13 +1,7 @@
 {
   "name": "rubocop",
-  "version": "1.88.2",
+  "version": "1.91.0",
   "patterns": [
-    {
-      "patternId": "Migration_DepartmentName",
-      "level": "Info",
-      "category": "CodeStyle",
-      "enabled": false
-    },
     {
       "patternId": "Bundler_DuplicatedGem",
       "level": "Info",
@@ -571,6 +565,7 @@
             "initializer",
             "public_methods",
             "protected_methods",
+            "private_class_methods",
             "private_methods"
           ]
         }
@@ -695,6 +690,12 @@
       "patternId": "Layout_EmptyLineAfterMagicComment",
       "level": "Info",
       "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "NumberOfEmptyLines",
+          "default": "1"
+        }
+      ],
       "enabled": false
     },
     {
@@ -1265,6 +1266,10 @@
         },
         {
           "name": "AllowSteepAnnotation",
+          "default": "false"
+        },
+        {
+          "name": "AllowYARDCommentBlockSeparator",
           "default": "false"
         }
       ],
@@ -2112,6 +2117,12 @@
       "enabled": true
     },
     {
+      "patternId": "Lint_ArgumentMismatch",
+      "level": "Warning",
+      "category": "ErrorProne",
+      "enabled": false
+    },
+    {
       "patternId": "Lint_ArrayLiteralInRegexp",
       "level": "Warning",
       "category": "ErrorProne",
@@ -2270,6 +2281,12 @@
       "enabled": false
     },
     {
+      "patternId": "Lint_DeprecatedReference",
+      "level": "Warning",
+      "category": "ErrorProne",
+      "enabled": false
+    },
+    {
       "patternId": "Lint_DisjunctiveAssignmentInConstructor",
       "level": "Warning",
       "category": "ErrorProne",
@@ -2335,6 +2352,18 @@
       "patternId": "Lint_DuplicateMethods",
       "level": "Warning",
       "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "DelegatingMethods",
+          "default": [
+            "delegate"
+          ]
+        },
+        {
+          "name": "AllowedCrossFilePaths",
+          "default": []
+        }
+      ],
       "enabled": true
     },
     {
@@ -2677,6 +2706,18 @@
       "enabled": true
     },
     {
+      "patternId": "Lint_MisplacedMagicComment",
+      "level": "Warning",
+      "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "SafeAutoCorrect",
+          "default": "false"
+        }
+      ],
+      "enabled": false
+    },
+    {
       "patternId": "Lint_MissingCopEnableDirective",
       "level": "Warning",
       "category": "ErrorProne",
@@ -2722,6 +2763,26 @@
       "patternId": "Lint_MultipleComparison",
       "level": "Warning",
       "category": "ErrorProne",
+      "enabled": false
+    },
+    {
+      "patternId": "Lint_NameTypo",
+      "level": "Warning",
+      "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "CheckConstants",
+          "default": "true"
+        },
+        {
+          "name": "CheckMethods",
+          "default": "true"
+        },
+        {
+          "name": "AllowedNames",
+          "default": []
+        }
+      ],
       "enabled": false
     },
     {
@@ -3107,6 +3168,10 @@
       "category": "ErrorProne",
       "parameters": [
         {
+          "name": "SafeAutoCorrect",
+          "default": "false"
+        },
+        {
           "name": "AllowedMethods",
           "default": [
             "present?",
@@ -3176,6 +3241,12 @@
     },
     {
       "patternId": "Lint_StructNewOverride",
+      "level": "Warning",
+      "category": "ErrorProne",
+      "enabled": false
+    },
+    {
+      "patternId": "Lint_SuperArgumentMismatch",
       "level": "Warning",
       "category": "ErrorProne",
       "enabled": false
@@ -3398,6 +3469,22 @@
         }
       ],
       "enabled": true
+    },
+    {
+      "patternId": "Lint_UnusedPrivateMethod",
+      "level": "Warning",
+      "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "AllowedNames",
+          "default": []
+        },
+        {
+          "name": "AllowedPatterns",
+          "default": []
+        }
+      ],
+      "enabled": false
     },
     {
       "patternId": "Lint_UriEscapeUnescape",
@@ -3796,6 +3883,12 @@
           "default": "8"
         }
       ],
+      "enabled": false
+    },
+    {
+      "patternId": "Migration_DepartmentName",
+      "level": "Info",
+      "category": "CodeStyle",
       "enabled": false
     },
     {
@@ -4315,6 +4408,111 @@
         {
           "name": "AllowedPatterns",
           "default": []
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "Security_CompoundHash",
+      "level": "Error",
+      "category": "Security",
+      "scantype": "SAST",
+      "parameters": [
+        {
+          "name": "Safe",
+          "default": "false"
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "Security_Eval",
+      "level": "Error",
+      "category": "Security",
+      "subcategory": "InputValidation",
+      "scantype": "SAST",
+      "enabled": false
+    },
+    {
+      "patternId": "Security_IoMethods",
+      "level": "Error",
+      "category": "Security",
+      "scantype": "SAST",
+      "parameters": [
+        {
+          "name": "Safe",
+          "default": "false"
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "Security_JSONLoad",
+      "level": "Error",
+      "category": "Security",
+      "subcategory": "InsecureModulesLibraries",
+      "scantype": "SAST",
+      "parameters": [
+        {
+          "name": "References",
+          "default": [
+            "https://ruby-doc.org/stdlib-2.7.0/libdoc/json/rdoc/JSON.html#method-i-load",
+            "https://bugs.ruby-lang.org/issues/19528"
+          ]
+        },
+        {
+          "name": "SafeAutoCorrect",
+          "default": "false"
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "Security_MarshalLoad",
+      "level": "Error",
+      "category": "Security",
+      "subcategory": "InsecureModulesLibraries",
+      "scantype": "SAST",
+      "parameters": [
+        {
+          "name": "References",
+          "default": [
+            "https://ruby-doc.org/core-2.7.0/Marshal.html#module-Marshal-label-Security+considerations"
+          ]
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "Security_Open",
+      "level": "Error",
+      "category": "Security",
+      "subcategory": "CommandInjection",
+      "scantype": "SAST",
+      "parameters": [
+        {
+          "name": "Safe",
+          "default": "false"
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "Security_YAMLLoad",
+      "level": "Error",
+      "category": "Security",
+      "subcategory": "InsecureModulesLibraries",
+      "scantype": "SAST",
+      "parameters": [
+        {
+          "name": "References",
+          "default": [
+            "https://ruby-doc.org/stdlib-2.7.0/libdoc/yaml/rdoc/YAML.html#module-YAML-label-Security"
+          ]
+        },
+        {
+          "name": "SafeAutoCorrect",
+          "default": "false"
         }
       ],
       "enabled": false
@@ -5109,12 +5307,36 @@
       "enabled": false
     },
     {
+      "patternId": "Style_DirectiveScope",
+      "level": "Info",
+      "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "SafeAutoCorrect",
+          "default": "false"
+        }
+      ],
+      "enabled": false
+    },
+    {
       "patternId": "Style_DisableCopsWithinSourceCodeDirective",
       "level": "Info",
       "category": "CodeStyle",
       "parameters": [
         {
           "name": "AllowedCops",
+          "default": []
+        },
+        {
+          "name": "DisallowedCops",
+          "default": []
+        },
+        {
+          "name": "AllowWithReason",
+          "default": "false"
+        },
+        {
+          "name": "AllowedDirectives",
           "default": []
         }
       ],
@@ -5164,12 +5386,6 @@
     },
     {
       "patternId": "Style_DocumentDynamicEvalDefinition",
-      "level": "Info",
-      "category": "CodeStyle",
-      "enabled": false
-    },
-    {
-      "patternId": "Style_DoubleCopDisableDirective",
       "level": "Info",
       "category": "CodeStyle",
       "enabled": false
@@ -8103,6 +8319,12 @@
       "enabled": false
     },
     {
+      "patternId": "Style_TimeNow",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
       "patternId": "Style_TopLevelMethodDefinition",
       "level": "Info",
       "category": "CodeStyle",
@@ -8413,111 +8635,6 @@
       "parameters": [
         {
           "name": "Safe",
-          "default": "false"
-        }
-      ],
-      "enabled": false
-    },
-    {
-      "patternId": "Security_CompoundHash",
-      "level": "Error",
-      "category": "Security",
-      "scantype": "SAST",
-      "parameters": [
-        {
-          "name": "Safe",
-          "default": "false"
-        }
-      ],
-      "enabled": false
-    },
-    {
-      "patternId": "Security_Eval",
-      "level": "Error",
-      "category": "Security",
-      "subcategory": "InputValidation",
-      "scantype": "SAST",
-      "enabled": false
-    },
-    {
-      "patternId": "Security_IoMethods",
-      "level": "Error",
-      "category": "Security",
-      "scantype": "SAST",
-      "parameters": [
-        {
-          "name": "Safe",
-          "default": "false"
-        }
-      ],
-      "enabled": false
-    },
-    {
-      "patternId": "Security_JSONLoad",
-      "level": "Error",
-      "category": "Security",
-      "subcategory": "InsecureModulesLibraries",
-      "scantype": "SAST",
-      "parameters": [
-        {
-          "name": "References",
-          "default": [
-            "https://ruby-doc.org/stdlib-2.7.0/libdoc/json/rdoc/JSON.html#method-i-load",
-            "https://bugs.ruby-lang.org/issues/19528"
-          ]
-        },
-        {
-          "name": "SafeAutoCorrect",
-          "default": "false"
-        }
-      ],
-      "enabled": false
-    },
-    {
-      "patternId": "Security_MarshalLoad",
-      "level": "Error",
-      "category": "Security",
-      "subcategory": "InsecureModulesLibraries",
-      "scantype": "SAST",
-      "parameters": [
-        {
-          "name": "References",
-          "default": [
-            "https://ruby-doc.org/core-2.7.0/Marshal.html#module-Marshal-label-Security+considerations"
-          ]
-        }
-      ],
-      "enabled": false
-    },
-    {
-      "patternId": "Security_Open",
-      "level": "Error",
-      "category": "Security",
-      "subcategory": "CommandInjection",
-      "scantype": "SAST",
-      "parameters": [
-        {
-          "name": "Safe",
-          "default": "false"
-        }
-      ],
-      "enabled": false
-    },
-    {
-      "patternId": "Security_YAMLLoad",
-      "level": "Error",
-      "category": "Security",
-      "subcategory": "InsecureModulesLibraries",
-      "scantype": "SAST",
-      "parameters": [
-        {
-          "name": "References",
-          "default": [
-            "https://ruby-doc.org/stdlib-2.7.0/libdoc/yaml/rdoc/YAML.html#module-YAML-label-Security"
-          ]
-        },
-        {
-          "name": "SafeAutoCorrect",
           "default": "false"
         }
       ],
@@ -9742,6 +9859,12 @@
       "enabled": false
     },
     {
+      "patternId": "Sorbet_ForbidTBindInAssignment",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
       "patternId": "Sorbet_ForbidTCast",
       "level": "Info",
       "category": "CodeStyle",
@@ -9827,6 +9950,12 @@
     },
     {
       "patternId": "Sorbet_SelectByIsA",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "Sorbet_StructPropName",
       "level": "Info",
       "category": "CodeStyle",
       "enabled": false
@@ -9934,6 +10063,12 @@
       "enabled": false
     },
     {
+      "patternId": "Sorbet_SetterReturnType",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
       "patternId": "Sorbet_SignatureBuildOrder",
       "level": "Info",
       "category": "CodeStyle",
@@ -10036,6 +10171,18 @@
       "enabled": false
     },
     {
+      "patternId": "GraphQL_DefaultForOptionalArgument",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "GraphQL_DisallowedTypes",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
       "patternId": "GraphQL_ExtractInputType",
       "level": "Info",
       "category": "CodeStyle",
@@ -10108,6 +10255,12 @@
       "enabled": false
     },
     {
+      "patternId": "GraphQL_MethodShadowedByResolverMethod",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
       "patternId": "GraphQL_MultipleFieldDefinitions",
       "level": "Info",
       "category": "CodeStyle",
@@ -10115,6 +10268,12 @@
     },
     {
       "patternId": "GraphQL_NotAuthorizedNodeType",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "GraphQL_NullabilityMismatch",
       "level": "Info",
       "category": "CodeStyle",
       "enabled": false
@@ -10162,6 +10321,18 @@
       "enabled": false
     },
     {
+      "patternId": "GraphQL_UselessMethodOption",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "ThreadSafety_ActiveSupportCallbacks",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
       "patternId": "ThreadSafety_ClassInstanceVariable",
       "level": "Info",
       "category": "CodeStyle",
@@ -10192,7 +10363,25 @@
       "enabled": false
     },
     {
+      "patternId": "ThreadSafety_EnvMutation",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
       "patternId": "ThreadSafety_RackMiddlewareInstanceVariable",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "ThreadSafety_MethodRedefinition",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "ThreadSafety_LazySynchronizationPrimitive",
       "level": "Info",
       "category": "CodeStyle",
       "enabled": false
@@ -11632,6 +11821,12 @@
       "patternId": "Lint_NoReturnInMemoization",
       "level": "Warning",
       "category": "ErrorProne",
+      "enabled": false
+    },
+    {
+      "patternId": "Style_ProcCaseWhen",
+      "level": "Info",
+      "category": "CodeStyle",
       "enabled": false
     }
   ]

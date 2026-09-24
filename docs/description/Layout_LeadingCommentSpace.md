@@ -87,6 +87,22 @@ name = 'John'      #: String
 end
 
 name = 'John'      #: String
+
+
+# bad
+
+# Copyright (c) Example Corp
+#-
+class Client
+end
+
+
+# good
+
+# Copyright (c) Example Corp
+#-
+class Client
+end
 ```
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Layout/LeadingCommentSpace)

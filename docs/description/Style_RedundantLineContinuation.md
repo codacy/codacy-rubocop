@@ -1,10 +1,13 @@
 
 Checks for redundant line continuation.
 
-This cop marks a line continuation as redundant if removing the backslash
-does not result in a syntax error.
-However, a backslash at the end of a comment or
-for string concatenation is not redundant and is not considered an offense.
+A line continuation is redundant when removing the backslash does not
+change how the program parses: the source is reparsed without the
+backslash and the resulting AST is compared to the original. Only
+backslashes that are pure noise are reported; backslashes that are
+significant — inside strings, for string concatenation, before an
+operator or argument that would otherwise start a new statement, and
+so on — are left alone, as are backslashes in comments.
 
 # Examples
 

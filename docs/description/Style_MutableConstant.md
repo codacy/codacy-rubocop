@@ -78,6 +78,9 @@ CONST = Struct.new do
   end
 end.freeze
 
+# good - `Data.define` declares an immutable value type
+CONST = Data.define(:foo, :bar)
+
 # Magic comment - shareable_constant_value: literal
 
 # bad

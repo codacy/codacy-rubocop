@@ -1,11 +1,5 @@
 [
   {
-    "patternId": "Migration_DepartmentName",
-    "title": "Checks that cop names in `rubocop:disable` (etc.) comments are given with a department name.",
-    "description": "Checks that cop names in `rubocop:disable` (etc.) comments are given with a department name.",
-    "timeToFix": 5
-  },
-  {
     "patternId": "Bundler_DuplicatedGem",
     "title": "Checks for duplicate gem entries in Gemfile.",
     "description": "Checks for duplicate gem entries in Gemfile.",
@@ -591,7 +585,13 @@
     "patternId": "Layout_EmptyLineAfterMagicComment",
     "title": "Add an empty line after magic comments to separate them from code.",
     "description": "Add an empty line after magic comments to separate them from code.",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "NumberOfEmptyLines",
+        "description": "NumberOfEmptyLines"
+      }
+    ]
   },
   {
     "patternId": "Layout_EmptyLineAfterMultilineCondition",
@@ -1088,6 +1088,10 @@
       {
         "name": "AllowSteepAnnotation",
         "description": "AllowSteepAnnotation"
+      },
+      {
+        "name": "AllowYARDCommentBlockSeparator",
+        "description": "AllowYARDCommentBlockSeparator"
       }
     ]
   },
@@ -1828,6 +1832,12 @@
     "timeToFix": 5
   },
   {
+    "patternId": "Lint_ArgumentMismatch",
+    "title": "Checks for calls that pass the wrong number of positional arguments to a method, using the project index.",
+    "description": "Checks for calls that pass the wrong number of positional arguments to a method, using the project index.",
+    "timeToFix": 5
+  },
+  {
     "patternId": "Lint_ArrayLiteralInRegexp",
     "title": "Checks for an array literal interpolated inside a regexp.",
     "description": "Checks for an array literal interpolated inside a regexp.",
@@ -1984,6 +1994,12 @@
     "timeToFix": 5
   },
   {
+    "patternId": "Lint_DeprecatedReference",
+    "title": "Checks for references to methods and constants documented as deprecated with a YARD `@deprecated` tag. Requires `AllCops/UseProjectIndex` to be enabled.",
+    "description": "Checks for references to methods and constants documented as deprecated with a YARD `@deprecated` tag. Requires `AllCops/UseProjectIndex` to be enabled.",
+    "timeToFix": 5
+  },
+  {
     "patternId": "Lint_DisjunctiveAssignmentInConstructor",
     "title": "In constructor, plain assignment is preferred over disjunctive.",
     "description": "In constructor, plain assignment is preferred over disjunctive.",
@@ -2049,7 +2065,17 @@
     "patternId": "Lint_DuplicateMethods",
     "title": "Checks for duplicate method definitions.",
     "description": "Checks for duplicate method definitions.",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "DelegatingMethods",
+        "description": "DelegatingMethods"
+      },
+      {
+        "name": "AllowedCrossFilePaths",
+        "description": "AllowedCrossFilePaths"
+      }
+    ]
   },
   {
     "patternId": "Lint_DuplicateRegexpCharacterClassElement",
@@ -2386,6 +2412,18 @@
     ]
   },
   {
+    "patternId": "Lint_MisplacedMagicComment",
+    "title": "Checks for magic comments placed where Ruby silently ignores them.",
+    "description": "Checks for magic comments placed where Ruby silently ignores them.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "SafeAutoCorrect",
+        "description": "SafeAutoCorrect"
+      }
+    ]
+  },
+  {
     "patternId": "Lint_MissingCopEnableDirective",
     "title": "Checks for a `# rubocop:enable` after `# rubocop:disable`.",
     "description": "Checks for a `# rubocop:enable` after `# rubocop:disable`.",
@@ -2432,6 +2470,26 @@
     "title": "Use `&&` operator to compare multiple values.",
     "description": "Use `&&` operator to compare multiple values.",
     "timeToFix": 5
+  },
+  {
+    "patternId": "Lint_NameTypo",
+    "title": "Checks for probable typos in constant and method names, using the project index.",
+    "description": "Checks for probable typos in constant and method names, using the project index.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "CheckConstants",
+        "description": "CheckConstants"
+      },
+      {
+        "name": "CheckMethods",
+        "description": "CheckMethods"
+      },
+      {
+        "name": "AllowedNames",
+        "description": "AllowedNames"
+      }
+    ]
   },
   {
     "patternId": "Lint_NestedMethodDefinition",
@@ -2794,6 +2852,10 @@
     "timeToFix": 5,
     "parameters": [
       {
+        "name": "SafeAutoCorrect",
+        "description": "SafeAutoCorrect"
+      },
+      {
         "name": "AllowedMethods",
         "description": "AllowedMethods"
       }
@@ -2857,6 +2919,12 @@
     "patternId": "Lint_StructNewOverride",
     "title": "Disallow overriding the `Struct` built-in methods via `Struct.new`.",
     "description": "Disallow overriding the `Struct` built-in methods via `Struct.new`.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Lint_SuperArgumentMismatch",
+    "title": "Checks for `super` calls that pass the wrong number of positional arguments to the overridden implementation, using the project index.",
+    "description": "Checks for `super` calls that pass the wrong number of positional arguments to the overridden implementation, using the project index.",
     "timeToFix": 5
   },
   {
@@ -3066,6 +3134,22 @@
       {
         "name": "NotImplementedExceptions",
         "description": "NotImplementedExceptions"
+      }
+    ]
+  },
+  {
+    "patternId": "Lint_UnusedPrivateMethod",
+    "title": "Checks for private instance methods that are not referenced anywhere in the project. Requires `AllCops/UseProjectIndex` to be enabled.",
+    "description": "Checks for private instance methods that are not referenced anywhere in the project. Requires `AllCops/UseProjectIndex` to be enabled.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "AllowedNames",
+        "description": "AllowedNames"
+      },
+      {
+        "name": "AllowedPatterns",
+        "description": "AllowedPatterns"
       }
     ]
   },
@@ -3462,6 +3546,12 @@
     ]
   },
   {
+    "patternId": "Migration_DepartmentName",
+    "title": "Checks that cop names in `rubocop:disable` (etc.) comments are given with a department name.",
+    "description": "Checks that cop names in `rubocop:disable` (etc.) comments are given with a department name.",
+    "timeToFix": 5
+  },
+  {
     "patternId": "Naming_AccessorMethodName",
     "title": "Checks the naming of accessor methods for get_/set_.",
     "description": "Checks the naming of accessor methods for get_/set_.",
@@ -3856,6 +3946,92 @@
       {
         "name": "AllowedPatterns",
         "description": "AllowedPatterns"
+      }
+    ]
+  },
+  {
+    "patternId": "Security_CompoundHash",
+    "title": "Checks for `hash` implementations that combine values manually instead of delegating to `Array#hash`.",
+    "description": "Checks for `hash` implementations that combine values manually instead of delegating to `Array#hash`.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Safe",
+        "description": "Safe"
+      }
+    ]
+  },
+  {
+    "patternId": "Security_Eval",
+    "title": "Checks for the use of `Kernel#eval` and `Binding#eval` with dynamic arguments.",
+    "description": "Checks for the use of `Kernel#eval` and `Binding#eval` with dynamic arguments.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Security_IoMethods",
+    "title": "Checks for the first argument to `IO.read`, `IO.binread`, `IO.write`, `IO.binwrite`, `IO.foreach`, and `IO.readlines`.",
+    "description": "Checks for the first argument to `IO.read`, `IO.binread`, `IO.write`, `IO.binwrite`, `IO.foreach`, and `IO.readlines`.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Safe",
+        "description": "Safe"
+      }
+    ]
+  },
+  {
+    "patternId": "Security_JSONLoad",
+    "title": "Prefer usage of `JSON.parse` over `JSON.load` due to potential security issues. See reference for more information.",
+    "description": "Prefer usage of `JSON.parse` over `JSON.load` due to potential security issues. See reference for more information.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "References",
+        "description": "References"
+      },
+      {
+        "name": "SafeAutoCorrect",
+        "description": "SafeAutoCorrect"
+      }
+    ]
+  },
+  {
+    "patternId": "Security_MarshalLoad",
+    "title": "Avoid using of `Marshal.load` or `Marshal.restore` due to potential security issues. See reference for more information.",
+    "description": "Avoid using of `Marshal.load` or `Marshal.restore` due to potential security issues. See reference for more information.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "References",
+        "description": "References"
+      }
+    ]
+  },
+  {
+    "patternId": "Security_Open",
+    "title": "Checks for the use of `Kernel#open` and `URI.open` with dynamic data.",
+    "description": "Checks for the use of `Kernel#open` and `URI.open` with dynamic data.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Safe",
+        "description": "Safe"
+      }
+    ]
+  },
+  {
+    "patternId": "Security_YAMLLoad",
+    "title": "Prefer usage of `YAML.safe_load` over `YAML.load` due to potential security issues. See reference for more information.",
+    "description": "Prefer usage of `YAML.safe_load` over `YAML.load` due to potential security issues. See reference for more information.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "References",
+        "description": "References"
+      },
+      {
+        "name": "SafeAutoCorrect",
+        "description": "SafeAutoCorrect"
       }
     ]
   },
@@ -4554,6 +4730,18 @@
     "timeToFix": 5
   },
   {
+    "patternId": "Style_DirectiveScope",
+    "title": "Checks for directive scopes that can be expressed with the tighter `disable-next` form.",
+    "description": "Checks for directive scopes that can be expressed with the tighter `disable-next` form.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "SafeAutoCorrect",
+        "description": "SafeAutoCorrect"
+      }
+    ]
+  },
+  {
     "patternId": "Style_DisableCopsWithinSourceCodeDirective",
     "title": "Forbids disabling/enabling cops within source code.",
     "description": "Forbids disabling/enabling cops within source code.",
@@ -4562,6 +4750,18 @@
       {
         "name": "AllowedCops",
         "description": "AllowedCops"
+      },
+      {
+        "name": "DisallowedCops",
+        "description": "DisallowedCops"
+      },
+      {
+        "name": "AllowWithReason",
+        "description": "AllowWithReason"
+      },
+      {
+        "name": "AllowedDirectives",
+        "description": "AllowedDirectives"
       }
     ]
   },
@@ -4605,12 +4805,6 @@
     "patternId": "Style_DocumentDynamicEvalDefinition",
     "title": "When using `class_eval` (or other `eval`) with string interpolation, add a comment block showing its appearance if interpolated.",
     "description": "When using `class_eval` (or other `eval`) with string interpolation, add a comment block showing its appearance if interpolated.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "Style_DoubleCopDisableDirective",
-    "title": "Checks for double rubocop:disable comments on a single line.",
-    "description": "Checks for double rubocop:disable comments on a single line.",
     "timeToFix": 5
   },
   {
@@ -7282,6 +7476,12 @@
     ]
   },
   {
+    "patternId": "Style_TimeNow",
+    "title": "Prefer `Time.now` over `Time.new` when retrieving the current system time.",
+    "description": "Prefer `Time.now` over `Time.new` when retrieving the current system time.",
+    "timeToFix": 5
+  },
+  {
     "patternId": "Style_TopLevelMethodDefinition",
     "title": "Looks for top-level method definitions.",
     "description": "Looks for top-level method definitions.",
@@ -7542,92 +7742,6 @@
       {
         "name": "Safe",
         "description": "Safe"
-      }
-    ]
-  },
-  {
-    "patternId": "Security_CompoundHash",
-    "title": "Checks for `hash` implementations that combine values manually instead of delegating to `Array#hash`.",
-    "description": "Checks for `hash` implementations that combine values manually instead of delegating to `Array#hash`.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Safe",
-        "description": "Safe"
-      }
-    ]
-  },
-  {
-    "patternId": "Security_Eval",
-    "title": "Checks for the use of `Kernel#eval` and `Binding#eval` with dynamic arguments.",
-    "description": "Checks for the use of `Kernel#eval` and `Binding#eval` with dynamic arguments.",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "Security_IoMethods",
-    "title": "Checks for the first argument to `IO.read`, `IO.binread`, `IO.write`, `IO.binwrite`, `IO.foreach`, and `IO.readlines`.",
-    "description": "Checks for the first argument to `IO.read`, `IO.binread`, `IO.write`, `IO.binwrite`, `IO.foreach`, and `IO.readlines`.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Safe",
-        "description": "Safe"
-      }
-    ]
-  },
-  {
-    "patternId": "Security_JSONLoad",
-    "title": "Prefer usage of `JSON.parse` over `JSON.load` due to potential security issues. See reference for more information.",
-    "description": "Prefer usage of `JSON.parse` over `JSON.load` due to potential security issues. See reference for more information.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "References",
-        "description": "References"
-      },
-      {
-        "name": "SafeAutoCorrect",
-        "description": "SafeAutoCorrect"
-      }
-    ]
-  },
-  {
-    "patternId": "Security_MarshalLoad",
-    "title": "Avoid using of `Marshal.load` or `Marshal.restore` due to potential security issues. See reference for more information.",
-    "description": "Avoid using of `Marshal.load` or `Marshal.restore` due to potential security issues. See reference for more information.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "References",
-        "description": "References"
-      }
-    ]
-  },
-  {
-    "patternId": "Security_Open",
-    "title": "Checks for the use of `Kernel#open` and `URI.open` with dynamic data.",
-    "description": "Checks for the use of `Kernel#open` and `URI.open` with dynamic data.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "Safe",
-        "description": "Safe"
-      }
-    ]
-  },
-  {
-    "patternId": "Security_YAMLLoad",
-    "title": "Prefer usage of `YAML.safe_load` over `YAML.load` due to potential security issues. See reference for more information.",
-    "description": "Prefer usage of `YAML.safe_load` over `YAML.load` due to potential security issues. See reference for more information.",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "References",
-        "description": "References"
-      },
-      {
-        "name": "SafeAutoCorrect",
-        "description": "SafeAutoCorrect"
       }
     ]
   },
@@ -8850,6 +8964,12 @@
     "timeToFix": 5
   },
   {
+    "patternId": "Sorbet_ForbidTBindInAssignment",
+    "title": "Forbid T Bind In Assignment",
+    "description": "Forbid T Bind In Assignment",
+    "timeToFix": 5
+  },
+  {
     "patternId": "Sorbet_ForbidTCast",
     "title": "Forbid T Cast",
     "description": "Forbid T Cast",
@@ -8937,6 +9057,12 @@
     "patternId": "Sorbet_SelectByIsA",
     "title": "Select By Is A",
     "description": "Select By Is A",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Sorbet_StructPropName",
+    "title": "Struct Prop Name",
+    "description": "Struct Prop Name",
     "timeToFix": 5
   },
   {
@@ -9042,6 +9168,12 @@
     "timeToFix": 5
   },
   {
+    "patternId": "Sorbet_SetterReturnType",
+    "title": "Setter Return Type",
+    "description": "Setter Return Type",
+    "timeToFix": 5
+  },
+  {
     "patternId": "Sorbet_SignatureBuildOrder",
     "title": "Signature Build Order",
     "description": "Signature Build Order",
@@ -9144,6 +9276,18 @@
     "timeToFix": 5
   },
   {
+    "patternId": "GraphQL_DefaultForOptionalArgument",
+    "title": "Default For Optional Argument",
+    "description": "Default For Optional Argument",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "GraphQL_DisallowedTypes",
+    "title": "Disallowed Types",
+    "description": "Disallowed Types",
+    "timeToFix": 5
+  },
+  {
     "patternId": "GraphQL_ExtractInputType",
     "title": "Extract Input Type",
     "description": "Extract Input Type",
@@ -9216,6 +9360,12 @@
     "timeToFix": 5
   },
   {
+    "patternId": "GraphQL_MethodShadowedByResolverMethod",
+    "title": "Method Shadowed By Resolver Method",
+    "description": "Method Shadowed By Resolver Method",
+    "timeToFix": 5
+  },
+  {
     "patternId": "GraphQL_MultipleFieldDefinitions",
     "title": "Multiple Field Definitions",
     "description": "Multiple Field Definitions",
@@ -9225,6 +9375,12 @@
     "patternId": "GraphQL_NotAuthorizedNodeType",
     "title": "Not Authorized Node Type",
     "description": "Not Authorized Node Type",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "GraphQL_NullabilityMismatch",
+    "title": "Nullability Mismatch",
+    "description": "Nullability Mismatch",
     "timeToFix": 5
   },
   {
@@ -9270,6 +9426,18 @@
     "timeToFix": 5
   },
   {
+    "patternId": "GraphQL_UselessMethodOption",
+    "title": "Useless Method Option",
+    "description": "Useless Method Option",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "ThreadSafety_ActiveSupportCallbacks",
+    "title": "Active Support Callbacks",
+    "description": "Active Support Callbacks",
+    "timeToFix": 5
+  },
+  {
     "patternId": "ThreadSafety_ClassInstanceVariable",
     "title": "Class Instance Variable",
     "description": "Class Instance Variable",
@@ -9300,9 +9468,27 @@
     "timeToFix": 5
   },
   {
+    "patternId": "ThreadSafety_EnvMutation",
+    "title": "Env Mutation",
+    "description": "Env Mutation",
+    "timeToFix": 5
+  },
+  {
     "patternId": "ThreadSafety_RackMiddlewareInstanceVariable",
     "title": "Rack Middleware Instance Variable",
     "description": "Rack Middleware Instance Variable",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "ThreadSafety_MethodRedefinition",
+    "title": "Method Redefinition",
+    "description": "Method Redefinition",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "ThreadSafety_LazySynchronizationPrimitive",
+    "title": "Lazy Synchronization Primitive",
+    "description": "Lazy Synchronization Primitive",
     "timeToFix": 5
   },
   {
@@ -10735,6 +10921,12 @@
     "patternId": "Lint_NoReturnInMemoization",
     "title": "No Return In Memoization",
     "description": "No Return In Memoization",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Style_ProcCaseWhen",
+    "title": "Proc Case When",
+    "description": "Proc Case When",
     "timeToFix": 5
   }
 ]

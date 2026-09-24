@@ -12,11 +12,14 @@ enumerator = [1, 2, 3].filter
 enumerator.each { |item| item >= 2 } #=> [2, 3]
 ----
 
-NOTE: Return values in assignment method definitions such as `def foo=(arg)` are
-detected because they are in a void context. However, autocorrection does not remove
-the return value, as that would change behavior. In such cases, whether to remove
-the return value or rename the method to something more appropriate should be left to
-the user.
+NOTE: The last expression in an assignment method definition such as `def foo=(arg)`
+is not flagged. Ruby discards it (the method returns its argument), but the method can
+still be called directly and its return value relied upon, so flagging it would be a
+false positive for this lint.
+
+NOTE: A constant used in a void context is flagged but not autocorrected, since
+referencing a constant can trigger autoloading side effects (e.g. forcing a file to
+load before a monkey-patch), so removing it may change behavior.
 
 # Examples
 

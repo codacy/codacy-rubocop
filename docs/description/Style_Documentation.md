@@ -9,6 +9,11 @@ The documentation requirement is annulled if the class or module has
 a `#:nodoc:` comment next to it. Likewise, `#:nodoc: all` does the
 same for all its children.
 
+When `AllCops/UseProjectIndex` is enabled and the `rubydex` gem is
+installed, a reopened class or module is not reported when any of its
+other definition sites (in the same or another file) carries a
+documentation comment.
+
 # Examples
 
 ```ruby

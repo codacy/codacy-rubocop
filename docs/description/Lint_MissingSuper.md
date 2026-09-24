@@ -17,6 +17,13 @@ not meant to be called with `super`. In those cases, you can use the
 `AllowedParentClasses` option to specify which classes should be allowed
 *in addition to* `Object` and `BasicObject`.
 
+When `AllCops/UseProjectIndex` is enabled and the `rubydex` gem is installed,
+the constructor check additionally consults the project-wide index: if the
+class' entire ancestry is resolvable and no ancestor defines `initialize`,
+no offense is registered, since `super` would only reach the no-op
+`Object#initialize`. Classes whose ancestry contains an unresolvable
+superclass or mixin (e.g. one defined in a gem) are still reported.
+
 # Examples
 
 ```ruby

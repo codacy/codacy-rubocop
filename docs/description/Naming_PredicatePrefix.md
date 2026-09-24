@@ -17,6 +17,11 @@ When `UseSorbetSigs` is set to true (optional), the cop will only report
 offenses if the method has a Sorbet `sig` with a return type of
 `T::Boolean`. Dynamic methods are not supported with this configuration.
 
+When `AllCops/UseProjectIndex` is enabled and the `rubydex` gem is
+installed, methods that override a method defined by an ancestor
+elsewhere in the project are not reported, since renaming an override
+breaks the inherited contract.
+
 # Examples
 
 ```ruby

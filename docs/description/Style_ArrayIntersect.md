@@ -26,6 +26,11 @@ NOTE: Although `Array#intersection` can take zero or multiple arguments,
 only cases where exactly one argument is provided can be replaced with
 `Array#intersect?` and are handled by this cop.
 
+NOTE: In the block form, `include?` is only detected when its receiver is
+an array literal, because `include?` is defined with different semantics
+on many non-array classes (e.g. `String#include?` checks for substrings).
+`member?` does not have this restriction.
+
 # Examples
 
 ```ruby
@@ -41,7 +46,7 @@ array1.intersection(array2).none?
 
 # bad
 array1.any? { |elem| array2.member?(elem) }
-array1.none? { |elem| array2.include?(elem) }
+array1.none? { |elem| [1, 2].include?(elem) }
 
 # good
 array1.intersect?(array2)

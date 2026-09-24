@@ -7,6 +7,11 @@ when the methods match the expected arity for getters and setters respectively.
 Getters (`get_attribute`) must have no arguments to be registered,
 and setters (`set_attribute(value)`) must have exactly one.
 
+When `AllCops/UseProjectIndex` is enabled and the `rubydex` gem is
+installed, methods that override a method defined by an ancestor
+elsewhere in the project are not reported, since renaming an override
+breaks the inherited contract.
+
 # Examples
 
 ```ruby

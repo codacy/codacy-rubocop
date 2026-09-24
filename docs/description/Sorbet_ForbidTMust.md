@@ -1,5 +1,6 @@
 
 Disallows using `T.must` anywhere.
+Set `AutocorrectToRBS: true` to replace supported calls with RBS inline comments.
 
 # Examples
 

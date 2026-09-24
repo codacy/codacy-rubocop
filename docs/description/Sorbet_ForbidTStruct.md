@@ -31,6 +31,28 @@ class MyStruct
 
   def some_method; end
 end
+
+
+# bad
+class MyStruct < T::Struct
+  const :foo, String
+  prop :bar, T.nilable(Integer), default: 0
+end
+
+# good
+class MyStruct
+  #: String
+  attr_reader :foo
+
+  #: Integer?
+  attr_accessor :bar
+
+  #: (foo: String, ?bar: Integer?) -> void
+  def initialize(foo:, bar: 0)
+    @foo = foo
+    @bar = bar
+  end
+end
 ```
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Sorbet/ForbidTStruct)

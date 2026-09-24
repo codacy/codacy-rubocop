@@ -3,6 +3,11 @@ Checks for places where classes with only class methods can be
 replaced with a module. Classes should be used only when it makes sense to create
 instances out of them.
 
+When `AllCops/UseProjectIndex` is enabled and the `rubydex` gem is
+installed, classes that are subclassed anywhere in the project are
+not reported, since converting them to modules would break their
+subclasses.
+
 # Examples
 
 ```ruby
