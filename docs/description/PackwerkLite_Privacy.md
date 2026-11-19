@@ -1,5 +1,5 @@
 
-This cop helps ensure that packs are using public API of other systems
+This cop helps ensure that packs are using the public API of other systems
 The following examples assume this basic setup.
 
 # Examples

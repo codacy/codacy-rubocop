@@ -51,6 +51,18 @@ end
 
 class Types::UserType < ApplicationType
 end
+
+# good - only `Object` exactly, or with a `Base` prefix, is a recognized
+# object base, so a plain Ruby `ValueObject` is not mistaken for one
+
+class Money < ValueObject
+end
+
+# bad - every base whose name ends in `Object` is now treated as a GraphQL
+# base, which suits an app whose bases carry a domain prefix
+
+class Types::UserType < PermissionedObject
+end
 ```
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/GraphQL/ObjectDescription)

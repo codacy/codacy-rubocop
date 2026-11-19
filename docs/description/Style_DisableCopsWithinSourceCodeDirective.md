@@ -27,7 +27,8 @@ With `AllowWithReason` set to `true`, a disable directive carrying
 a `--` trailing justification comment is allowed, so a team can require
 every disable to be documented instead of banning them outright. Enable
 directives are not checked in this mode, since they end a suppression
-rather than start one.
+rather than start one. Offenses in this mode are not autocorrected,
+since only a human can supply the missing justification.
 
 This cop cannot be disabled via directive comments when it is explicitly
 enabled with `Enabled: true`. This prevents users from bypassing the cop

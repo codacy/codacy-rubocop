@@ -24,11 +24,6 @@ end
 RSpec.describe User, type: :common do
 end
 
-# .rubocop.yml
-# RSpecRails/InferredSpecType:
-#   Inferences:
-#     services: service
-
 # bad
 # spec/services/user_spec.rb
 RSpec.describe User, type: :service do

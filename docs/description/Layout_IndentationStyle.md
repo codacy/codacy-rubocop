@@ -2,6 +2,9 @@
 Checks that the indentation method is consistent.
 Either tabs only or spaces only are used for indentation.
 
+With `EnforcedStyle: tabs`, spaces that follow the indenting tabs are
+taken to be alignment rather than indentation, and are left alone.
+
 # Examples
 
 ```ruby

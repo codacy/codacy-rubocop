@@ -23,11 +23,18 @@ hash.fetch(key, default)
 # good - fetch with block is allowed
 hash.fetch(key) { default }
 
+# good - `ENV.fetch` is left to `Style/FetchEnvVar` when it is enabled
+ENV.fetch(key)
+
 # bad
 hash[key]
 
 # good
 hash.fetch(key)
+
+# good - `Array[]` and `Hash[]` are constructors
+Array[element]
+Hash[pairs]
 
 # good
 Rails.cache.fetch(name, options) { block }
