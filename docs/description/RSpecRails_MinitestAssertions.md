@@ -1,8 +1,8 @@
 
-Check if using Minitest-like matchers.
+Detects Minitest-like matchers.
 
-Check the use of minitest-like matchers
-starting with `assert_` or `refute_`.
+Detects the use of Minitest-like matchers
+(those starting with `assert_` or `refute_`).
 
 # Examples
 
@@ -17,6 +17,7 @@ refute_empty(b)
 assert_true(a)
 assert_false(a)
 assert_response :ok
+assert_redirected_to '/users'
 
 # good
 expect(b).to eq(a)
@@ -28,6 +29,7 @@ expect(a).not_to be_empty
 expect(a).to be(true)
 expect(a).to be(false)
 expect(response).to have_http_status(:ok)
+expect(response).to redirect_to('/users')
 ```
 
 [Source](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/RSpecRails/MinitestAssertions)

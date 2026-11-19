@@ -3,7 +3,8 @@ Checks for multi-line ternary op expressions.
 
 NOTE: `return if ... else ... end` is syntax error. If `return` is used before
 multiline ternary operator expression, it will be autocorrected to single-line
-ternary operator. The same is true for `break`, `next`, and method call.
+ternary operator. The same is true for `break`, `next`, `yield`, `super`,
+`defined?` without parentheses, and method call.
 
 # Examples
 

@@ -6425,7 +6425,13 @@
     "patternId": "Style_NegativeArrayIndex",
     "title": "Use negative array indices instead of calculating array length minus a value. Also handles range patterns with length calculations. Recognizes preserving methods and their combinations, allowing safe replacement when the receiver matches.",
     "description": "Use negative array indices instead of calculating array length minus a value. Also handles range patterns with length calculations. Recognizes preserving methods and their combinations, allowing safe replacement when the receiver matches.",
-    "timeToFix": 5
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "Safe",
+        "description": "Safe"
+      }
+    ]
   },
   {
     "patternId": "Style_NestedFileDirname",
@@ -8928,6 +8934,18 @@
     "timeToFix": 5
   },
   {
+    "patternId": "Sorbet_ForbidTAssertType",
+    "title": "Forbid T Assert Type",
+    "description": "Forbid T Assert Type",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Sorbet_ForbidTCollectionInstantiation",
+    "title": "Forbid T Collection Instantiation",
+    "description": "Forbid T Collection Instantiation",
+    "timeToFix": 5
+  },
+  {
     "patternId": "Sorbet_ForbidTypeAliasedShapes",
     "title": "Forbid Type Aliased Shapes",
     "description": "Forbid Type Aliased Shapes",
@@ -10650,6 +10668,12 @@
     "timeToFix": 5
   },
   {
+    "patternId": "Markdown_Syntax",
+    "title": "Syntax",
+    "description": "Syntax",
+    "timeToFix": 5
+  },
+  {
     "patternId": "Mdsol_LogWithData",
     "title": "Favor the `logger.<level>_with_data` method for structured logging.",
     "description": "Favor the `logger.<level>_with_data` method for structured logging.",
@@ -10665,6 +10689,12 @@
     "patternId": "RSpecRails_AvoidSetupHook",
     "title": "Avoid Setup Hook",
     "description": "Avoid Setup Hook",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "RSpecRails_FileFixture",
+    "title": "File Fixture",
+    "description": "File Fixture",
     "timeToFix": 5
   },
   {
@@ -10704,6 +10734,12 @@
     "timeToFix": 5
   },
   {
+    "patternId": "RSpecRails_ReceivePerformLater",
+    "title": "Receive Perform Later",
+    "description": "Receive Perform Later",
+    "timeToFix": 5
+  },
+  {
     "patternId": "RSpecRails_TravelAround",
     "title": "Travel Around",
     "description": "Travel Around",
@@ -10711,6 +10747,18 @@
   },
   {
     "patternId": "Capybara_RSpec_CurrentPathExpectation",
+    "title": "R Spec",
+    "description": "R Spec",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Capybara_RSpec_CurrentUrlExpectation",
+    "title": "R Spec",
+    "description": "R Spec",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Capybara_RSpec_FindElementValueEq",
     "title": "R Spec",
     "description": "R Spec",
     "timeToFix": 5
@@ -10764,6 +10812,18 @@
     "timeToFix": 5
   },
   {
+    "patternId": "Capybara_AbsoluteXPathInElementScope",
+    "title": "Absolute X Path In Element Scope",
+    "description": "Absolute X Path In Element Scope",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Capybara_AlwaysTrueCountQuery",
+    "title": "Always True Count Query",
+    "description": "Always True Count Query",
+    "timeToFix": 5
+  },
+  {
     "patternId": "Capybara_AmbiguousClick",
     "title": "Ambiguous Click",
     "description": "Ambiguous Click",
@@ -10776,9 +10836,33 @@
     "timeToFix": 5
   },
   {
+    "patternId": "Capybara_ChainedFind",
+    "title": "Chained Find",
+    "description": "Chained Find",
+    "timeToFix": 5
+  },
+  {
     "patternId": "Capybara_FindAllFirst",
     "title": "Find All First",
     "description": "Find All First",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Capybara_IgnoredQueryOption",
+    "title": "Ignored Query Option",
+    "description": "Ignored Query Option",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Capybara_ModalMethodWithoutBlock",
+    "title": "Modal Method Without Block",
+    "description": "Modal Method Without Block",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Capybara_NativeAttribute",
+    "title": "Native Attribute",
+    "description": "Native Attribute",
     "timeToFix": 5
   },
   {
@@ -10797,6 +10881,18 @@
     "patternId": "Capybara_SpecificFinders",
     "title": "Specific Finders",
     "description": "Specific Finders",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Capybara_UnorderedWindowAccess",
+    "title": "Unordered Window Access",
+    "description": "Unordered Window Access",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "Capybara_VisibilityOption",
+    "title": "Visibility Option",
+    "description": "Visibility Option",
     "timeToFix": 5
   },
   {
@@ -10899,17 +10995,7 @@
     "patternId": "Packs_ClassMethodsAsPublicApis",
     "title": "Class Methods As Public Apis",
     "description": "Class Methods As Public Apis",
-    "timeToFix": 5,
-    "parameters": [
-      {
-        "name": "AcceptableParentClasses",
-        "description": "AcceptableParentClasses"
-      },
-      {
-        "name": "AcceptableMixins",
-        "description": "AcceptableMixins"
-      }
-    ]
+    "timeToFix": 5
   },
   {
     "patternId": "Packs_DocumentedPublicApis",

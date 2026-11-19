@@ -11,6 +11,10 @@ NOTE: When concatenation between two strings is broken over multiple
 lines, this cop does not register an offense; instead,
 `Style/LineEndConcatenation` will pick up the offense if enabled.
 
+This cop does not register an offense for concatenation with a heredoc
+either, because interpolating the heredoc into a string literal would not
+make the code easier to read.
+
 Two modes are supported:
 1. `aggressive` style checks and corrects all occurrences of `+` where
 either the left or right side of `+` is a string literal.
@@ -34,6 +38,11 @@ email_with_name = format('%s <%s>', user.name, user.email)
 # accepted, line-end concatenation
 name = 'First' +
   'Last'
+
+# accepted, concatenation with a heredoc
+'Hello' + <<~TEXT
+  world
+TEXT
 
 # bad
 'Hello' + user.name

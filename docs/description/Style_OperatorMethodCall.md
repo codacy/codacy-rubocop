@@ -1,7 +1,10 @@
 
 Checks for redundant dot before operator method call.
 The target operator methods are `|`, `^`, `&`, ``<=>``, `==`, `===`, `=~`, `>`, `>=`, `<`,
-``<=``, `<<`, `>>`, `+`, `-`, `*`, `/`, `%`, `**`, `~`, `!`, `!=`, and `!~`.
+``<=``, `<<`, `>>`, `+`, `-`, `*`, `/`, `%`, `**`, `!=`, and `!~`.
+
+`!` and `~` are not targeted because they have no binary operator form,
+so `foo.! bar` cannot be written as `foo ! bar`, which means `foo(!bar)`.
 
 # Examples
 

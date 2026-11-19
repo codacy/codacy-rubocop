@@ -3,7 +3,7 @@ Checks for uses of the case equality operator (`===`).
 The `===` operator has different behavior depending on the
 receiver and its use outside of `case`/`when` is confusing.
 Prefer more explicit alternatives like `is_a?`, `include?`,
-or `match?`.
+`cover?`, or `match?`.
 
 If `AllowOnConstant` option is enabled, the cop will ignore violations when the receiver of
 the case equality operator is a constant.
@@ -20,9 +20,11 @@ This potentially incompatible transformation is handled by `Performance/RegexpMa
 ```ruby
 # bad
 (1..100) === 7
+('a'..'z') === char
 
 # good
 (1..100).include?(7)
+('a'..'z').cover?(char)
 
 # bad
 Array === something

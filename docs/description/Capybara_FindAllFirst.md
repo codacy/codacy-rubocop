@@ -8,8 +8,6 @@ Enforces use of `first` instead of `all` with `first` or `[0]`.
 # bad
 all('a').first
 all('a')[0]
-find('a', match: :first)
-all('a', match: :first)
 
 # good
 first('a')

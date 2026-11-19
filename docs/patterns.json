@@ -1,6 +1,6 @@
 {
   "name": "rubocop",
-  "version": "1.91.0",
+  "version": "1.92.3",
   "patterns": [
     {
       "patternId": "Bundler_DuplicatedGem",
@@ -7152,6 +7152,12 @@
       "patternId": "Style_NegativeArrayIndex",
       "level": "Info",
       "category": "CodeStyle",
+      "parameters": [
+        {
+          "name": "Safe",
+          "default": "false"
+        }
+      ],
       "enabled": false
     },
     {
@@ -9823,6 +9829,18 @@
       "enabled": false
     },
     {
+      "patternId": "Sorbet_ForbidTAssertType",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "Sorbet_ForbidTCollectionInstantiation",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
       "patternId": "Sorbet_ForbidTypeAliasedShapes",
       "level": "Info",
       "category": "CodeStyle",
@@ -11545,6 +11563,12 @@
       "enabled": false
     },
     {
+      "patternId": "Markdown_Syntax",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
       "patternId": "Mdsol_LogWithData",
       "level": "Info",
       "category": "CodeStyle",
@@ -11558,6 +11582,12 @@
     },
     {
       "patternId": "RSpecRails_AvoidSetupHook",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "RSpecRails_FileFixture",
       "level": "Info",
       "category": "CodeStyle",
       "enabled": false
@@ -11599,6 +11629,12 @@
       "enabled": false
     },
     {
+      "patternId": "RSpecRails_ReceivePerformLater",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
       "patternId": "RSpecRails_TravelAround",
       "level": "Info",
       "category": "CodeStyle",
@@ -11606,6 +11642,18 @@
     },
     {
       "patternId": "Capybara_RSpec_CurrentPathExpectation",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "Capybara_RSpec_CurrentUrlExpectation",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "Capybara_RSpec_FindElementValueEq",
       "level": "Info",
       "category": "CodeStyle",
       "enabled": false
@@ -11659,6 +11707,18 @@
       "enabled": false
     },
     {
+      "patternId": "Capybara_AbsoluteXPathInElementScope",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "Capybara_AlwaysTrueCountQuery",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
       "patternId": "Capybara_AmbiguousClick",
       "level": "Info",
       "category": "CodeStyle",
@@ -11671,7 +11731,31 @@
       "enabled": false
     },
     {
+      "patternId": "Capybara_ChainedFind",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
       "patternId": "Capybara_FindAllFirst",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "Capybara_IgnoredQueryOption",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "Capybara_ModalMethodWithoutBlock",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "Capybara_NativeAttribute",
       "level": "Info",
       "category": "CodeStyle",
       "enabled": false
@@ -11690,6 +11774,18 @@
     },
     {
       "patternId": "Capybara_SpecificFinders",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "Capybara_UnorderedWindowAccess",
+      "level": "Info",
+      "category": "CodeStyle",
+      "enabled": false
+    },
+    {
+      "patternId": "Capybara_VisibilityOption",
       "level": "Info",
       "category": "CodeStyle",
       "enabled": false
@@ -11794,21 +11890,6 @@
       "patternId": "Packs_ClassMethodsAsPublicApis",
       "level": "Info",
       "category": "CodeStyle",
-      "parameters": [
-        {
-          "name": "AcceptableParentClasses",
-          "default": [
-            "T::Enum",
-            "T::Struct",
-            "Struct",
-            "OpenStruct"
-          ]
-        },
-        {
-          "name": "AcceptableMixins",
-          "default": []
-        }
-      ],
       "enabled": false
     },
     {

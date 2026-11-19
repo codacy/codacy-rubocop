@@ -1,5 +1,5 @@
 
-Checks that tests use RSpec `before` hook over Rails `setup` method.
+Checks that tests use RSpec `before` instead of Rails `setup`.
 
 # Examples
 
